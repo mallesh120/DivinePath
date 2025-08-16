@@ -1,0 +1,92 @@
+.detail-page {
+  padding: 40px 20px;
+  min-height: calc(100vh - 80px - 80px); /* Full height minus navbar and padding */
+}
+
+.detail-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ffd700; /* Gold accent border */
+}
+
+.detail-image-container {
+  flex: 1; /* Take up 1 part of the space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.detail-content {
+  flex: 2; /* Take up 2 parts of the space, making it wider */
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-title {
+  font-size: 3.5rem;
+  color: #000080; /* Deep Blue */
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.detail-long-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.detail-mantra-container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #e0f7fa; /* Light blue accent */
+  border-left: 5px solid #ff9933; /* Saffron accent */
+  border-radius: 8px;
+}
+
+.mantra-title {
+  margin-top: 0;
+  color: #000080;
+}
+
+.mantra-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 0;
+}
+
+.back-link {
+  margin-top: auto; /* Pushes the link to the bottom */
+  padding-top: 20px;
+  color: #ff6600;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .detail-container {
+    flex-direction: column;
+  }
+}
+
+.god-not-found {
+  text-align: center;
+  padding: 50px;
+}
