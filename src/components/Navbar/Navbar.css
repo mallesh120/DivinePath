@@ -1,0 +1,46 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000080; /* Deep Blue */
+  padding: 0 40px;
+  height: 80px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand a {
+  color: #ffd700; /* Gold accent */
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin-left: 30px;
+}
+
+.navbar-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  background-color: rgba(255, 153, 51, 0.2); /* Saffron highlight on hover */
+}
+
+/* Style for the currently active link */
+.navbar-links a.active-link {
+  background-color: #ff9933; /* Saffron */
+  color: #000080; /* Deep Blue */
+}

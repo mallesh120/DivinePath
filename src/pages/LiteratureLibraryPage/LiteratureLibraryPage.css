@@ -1,0 +1,10 @@
+.library-page {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.library-title {
+  font-size: 3rem;
+  color: #000080; /* Deep Blue */
+  margin-bottom: 20px;
+}
