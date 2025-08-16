@@ -1,5 +1,0 @@
-/* This ensures our card doesn't look like a standard blue, underlined link */
-.literature-card-link {
-  text-decoration: none;
-  color: inherit;
-}
