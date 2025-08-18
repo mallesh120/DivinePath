@@ -1,68 +1,14 @@
 .panchangam-widget {
   position: fixed;
-  top: 64px;  /* Adjust this to match your navbar height */
+  top: 80px;
   right: 0;
-  width: 300px;
+  width: calc(100% - 1250px);
   background-color: #000080;
   color: white;
-  padding: 20px;
+  padding: 12px 20px;  /* Reduced vertical padding */
   z-index: 100;
-  border-radius: 0 0 0 8px;  /* Rounded corner on bottom left */
   box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.panchangam-title {
-  font-size: 1.8rem;
-  color: white;
-  margin-bottom: 30px;
-  padding-bottom: 10px;
-  font-weight: normal;
-}
-
-.panchangam-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;  /* Reduced gap slightly to fit more items */
-}
-
-.panchangam-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 0;  /* Slightly reduced padding */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Add a different style for the muhurta timings */
-.panchangam-item.muhurta {
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 8px;
-  border-radius: 4px;
-}
-
-/* Add a separator between regular times and muhurtas */
-.panchangam-separator {
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.2);
-  margin: 10px 0;
-}
-
-.panchangam-label {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1.2rem;
-  font-weight: normal;
-}
-
-.panchangam-value {
-  color: white;
-  font-size: 1.2rem;
-  font-weight: normal;
-  text-align: right;
-}
-
-/* Background pattern */
-.panchangam-widget {
-  background: #000080 url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20L0 20L0 0L20 0L20 20L40 20L40 40L20 40L20 20' fill='%231a1a8f' fill-opacity='0.2'/%3E%3C/svg%3E");
+  background: #000080 url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20L0 20L0 0L20 0L20 20L40 20L40 40L20 40L20 20' fill='%231a1a8f' fill-opacity='0.2'/%3E%3C/svg%3E");
   background-size: 20px 20px;
 }
 
@@ -70,40 +16,101 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 12px;
 }
 
 .panchangam-toggle {
-  background: none;
+  background: transparent;
   border: none;
-  font-size: 24px;
-  cursor: pointer;
   color: white;
-  padding: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s, transform 0.2s;
 }
 
-/* Adjust content height to fit content */
+.panchangam-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.panchangam-toggle:active {
+  transform: scale(0.95);
+}idget {
+  position: fixed;
+  top: 80px;
+  right: 0;
+  width: calc(100% - 1255px);
+  background-color: #000080;
+  color: white;
+  padding: 12px 20px;  /* Reduced vertical padding */
+  z-index: 100;
+  box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.2);
+  background: #000080 url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20L0 20L0 0L20 0L20 20L40 20L40 40L20 40L20 20' fill='%231a1a8f' fill-opacity='0.2'/%3E%3C/svg%3E");
+  background-size: 20px 20px;
+}
+
+.panchangam-title {
+  font-size: 1rem;  /* Slightly smaller title */
+  color: white;
+  margin-bottom: 12px;  /* Reduced margin */
+  padding-bottom: 8px;  /* Reduced padding */
+  font-weight: normal;
+  text-align: left;
+}
+
 .panchangam-grid {
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;  /* Reduced gap between items */
+}
+
+.panchangam-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;  /* Reduced vertical padding */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.panchangam-label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;  /* Slightly smaller font */
+  font-weight: normal;
+  min-width: 120px;
+  padding-right: 20px;
+}
+
+.panchangam-value {
+  color: white;
+  font-size: 0.8rem;  /* Slightly smaller font */
+  font-weight: normal;
+  text-align: right;
+  flex: 1;
+}
+
+.panchangam-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;  /* Remove padding from last item */
 }
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .panchangam-widget {
     width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 0;
+    padding: 10px 15px;  /* Even more compact on mobile */
   }
-}
-
-.panchangam-item:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-}
-
-/* Remove the full-height styling and let it size to content */
-.panchangam-widget {
-  height: auto;
-  max-height: calc(100vh - 80px); /* Prevents overflow on small screens */
-  overflow-y: auto;
+  
+  .panchangam-title {
+    font-size: 1.5rem;
+  }
+  
+  .panchangam-label,
+  .panchangam-value {
+    font-size: 1rem;
+  }
 }

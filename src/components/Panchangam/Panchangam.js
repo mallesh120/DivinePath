@@ -92,6 +92,16 @@ const Panchangam = () => {
 
     const panchangam = getPanchangam(today, observer);
 
+    const formatTime = (date) => {
+      if (!(date instanceof Date)) return 'N/A';
+      return date.toLocaleTimeString('en-US', {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: true,
+        timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone
+      });
+    };
+
     const getRahuKalam = (sunrise, sunset) => {
       if (!(sunrise instanceof Date) || !(sunset instanceof Date)) {
         return { start: 'N/A', end: 'N/A' };
@@ -134,38 +144,85 @@ const Panchangam = () => {
 
     // Calculate Yamagandam (approximately)
     const getYamagandam = (sunrise, sunset) => {
-      const duration = (sunset - sunrise) / 8;
+      if (!(sunrise instanceof Date) || !(sunset instanceof Date)) {
+        return { start: 'N/A', end: 'N/A' };
+      }
+
+      // Get total daylight duration in milliseconds
+      const daylightDuration = sunset.getTime() - sunrise.getTime();
+      // Each part is 1/8th of daylight
+      const partDuration = daylightDuration / 8;
+
+      // Yamagandam periods (0-based index for days)
       const yamaPeriods = {
-        0: 1, // Sunday - 1st period
-        1: 6, // Monday - 6th period
-        2: 4, // Tuesday - 4th period
-        3: 2, // Wednesday - 2nd period
-        4: 7, // Thursday - 7th period
-        5: 5, // Friday - 5th period
-        6: 3  // Saturday - 3rd period
+        0: 4, // Sunday - 5th part (1:30 PM - 3:00 PM)
+        1: 3, // Monday - 4th part (12:00 PM - 1:30 PM)
+        2: 2, // Tuesday - 3rd part (10:30 AM - 12:00 PM)
+        3: 1, // Wednesday - 2nd part (9:00 AM - 10:30 AM)
+        4: 0, // Thursday - 1st part (7:30 AM - 9:00 AM)
+        5: 6, // Friday - 7th part (4:30 PM - 6:00 PM)
+        6: 5  // Saturday - 6th part (3:00 PM - 4:30 PM)
       };
-      
-      const period = yamaPeriods[panchangam.vara];
-      const start = new Date(sunrise.getTime() + (duration * (period - 1)));
-      const end = new Date(sunrise.getTime() + (duration * period));
-      
+
+      const dayOfWeek = panchangam.vara;
+      const yamaPart = yamaPeriods[dayOfWeek];
+
+      // Calculate start and end times
+      const yamaStart = new Date(sunrise.getTime() + (yamaPart * partDuration));
+      const yamaEnd = new Date(yamaStart.getTime() + partDuration);
+
+      // Format times
+      const options = { 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        hour12: true,
+        timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone
+      };
+
       return {
-        start: start.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true }),
-        end: end.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })
+        start: yamaStart.toLocaleTimeString('en-US', options),
+        end: yamaEnd.toLocaleTimeString('en-US', options)
       };
     };
 
     // Calculate Durmuhurtham (approximately)
     const getDurmuhurtham = (sunrise, sunset) => {
-      // Simplified calculation - actual calculation would be more complex
-      const duration = (sunset - sunrise) / 15; // Day divided into 15 muhurtas
-      const start = new Date(sunrise.getTime() + (duration * 6)); // Example period
-      const end = new Date(start.getTime() + duration);
+      if (!(sunrise instanceof Date) || !(sunset instanceof Date)) {
+        return { periods: ['N/A'] };
+      }
+
+      const dayOfWeek = panchangam.vara;
       
-      return {
-        start: start.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true }),
-        end: end.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })
-      };
+      if (dayOfWeek === 0) { // Sunday
+        // 136 minutes before sunset (2 hours and 16 minutes)
+        const durmuhurthamDuration = 136 * 60 * 1000; // 136 minutes in milliseconds
+        const startTime = new Date(sunset.getTime() - durmuhurthamDuration);
+        
+        console.log('Durmuhurtham calculation for Sunday:', {
+          sunset: sunset.toLocaleTimeString(),
+          duration: '136 minutes',
+          startTime: startTime.toLocaleTimeString()
+        });
+
+        return {
+          periods: [`${formatTime(startTime)} - ${formatTime(sunset)}`]
+        };
+      } else {
+        // For other days - two periods remain the same
+        const muhurtaDuration = 48 * 60 * 1000; // 48 minutes for regular muhurta
+        const firstPeriodStart = new Date(sunrise.getTime() + (muhurtaDuration * 4));
+        const firstPeriodEnd = new Date(sunrise.getTime() + (muhurtaDuration * 6));
+        
+        const secondPeriodStart = new Date(sunrise.getTime() + (muhurtaDuration * 12));
+        const secondPeriodEnd = new Date(sunrise.getTime() + (muhurtaDuration * 14));
+
+        return {
+          periods: [
+            `${formatTime(firstPeriodStart)} - ${formatTime(firstPeriodEnd)}`,
+            `${formatTime(secondPeriodStart)} - ${formatTime(secondPeriodEnd)}`
+          ]
+        };
+      }
     };
 
     // Get Rahu Kalam times
@@ -175,31 +232,23 @@ const Panchangam = () => {
     console.log('Day:', panchangam.vara);
     console.log('Sunrise:', panchangam.sunrise);
     console.log('Sunset:', panchangam.sunset);
-    console.log('Rahu Kalam:', rahuKalam);      const yamagandam = getYamagandam(panchangam.sunrise, panchangam.sunset);
+    console.log('Rahu Kalam:', rahuKalam); 
+    
+    const yamagandam = getYamagandam(panchangam.sunrise, panchangam.sunset);
+    console.log('Yamagandam:', yamagandam);
     const durmuhurtham = getDurmuhurtham(panchangam.sunrise, panchangam.sunset);
+    console.log('Durmuhurtham:', durmuhurtham);
 
     const formattedData = {
       location: placeName,
       day: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][panchangam.vara] || 'N/A',
       tithi: tithiNames[panchangam.tithi - 1] || 'N/A',
       nakshatra: nakshatraNames[panchangam.nakshatra - 1] || 'N/A',
-      sunrise: panchangam.sunrise instanceof Date 
-        ? panchangam.sunrise.toLocaleTimeString('en-US', { 
-            hour: '2-digit', 
-            minute: '2-digit', 
-            hour12: true 
-          })
-        : 'N/A',
-      sunset: panchangam.sunset instanceof Date
-        ? panchangam.sunset.toLocaleTimeString('en-US', { 
-            hour: '2-digit', 
-            minute: '2-digit', 
-            hour12: true 
-          })
-        : 'N/A',
+      sunrise: formatTime(panchangam.sunrise),
+      sunset: formatTime(panchangam.sunset),
       rahuKalam: `${rahuKalam.start} - ${rahuKalam.end}`,
       yamagandam: `${yamagandam.start} - ${yamagandam.end}`,
-      durmuhurtham: `${durmuhurtham.start} - ${durmuhurtham.end}`
+      durmuhurtham: durmuhurtham.periods.join(' and ')
     };
 
     return (
