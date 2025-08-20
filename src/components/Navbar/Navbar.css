@@ -1,18 +1,42 @@
+:root {
+  --background-color: #fcf9f3;
+  --text-primary: #4a4a4a;
+  --accent-primary: #4a90e2;
+  --accent-secondary: #f5a623;
+  --card-background: #ffffff;
+  --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000080; /* Deep Blue */
-  padding: 0 40px;
+  padding: 0 50px; /* Increased padding for more breathing room */
   height: 80px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: sticky; /* Make the navbar stick to the top */
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+
+  /* Modern glassmorphism effect */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* The blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Subtle bottom border */
 }
 
 .navbar-brand a {
-  color: #ffd700; /* Gold accent */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
   font-size: 1.8rem;
-  font-weight: bold;
+  color: var(--accent-primary);
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand a:hover {
+  color: var(--accent-secondary);
 }
 
 .navbar-links {
@@ -20,27 +44,48 @@
   display: flex;
   margin: 0;
   padding: 0;
+  gap: 20px; /* Use gap for spacing between links */
 }
 
 .navbar-links li {
-  margin-left: 30px;
+  /* margin-left is no longer needed with gap */
 }
 
 .navbar-links a {
-  color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-primary);
   text-decoration: none;
-  font-size: 1.2rem;
-  padding: 10px 15px;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
+  padding: 10px 5px; /* Adjust padding for the underline effect */
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Underline effect for links */
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--accent-primary);
+  transition: width 0.3s ease-in-out;
 }
 
 .navbar-links a:hover {
-  background-color: rgba(255, 153, 51, 0.2); /* Saffron highlight on hover */
+  color: var(--accent-primary);
 }
 
 /* Style for the currently active link */
 .navbar-links a.active-link {
-  background-color: #ff9933; /* Saffron */
-  color: #000080; /* Deep Blue */
+  color: var(--accent-primary);
+  font-weight: 700;
+}
+
+.navbar-links a:hover::after,
+.navbar-links a.active-link::after {
+  width: 100%;
 }

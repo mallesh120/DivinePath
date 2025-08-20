@@ -1,10 +1,6 @@
-.library-page {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.library-title {
-  font-size: 3rem;
-  color: #000080; /* Deep Blue */
-  margin-bottom: 20px;
-}
+/*
+  The styles from this file have been removed.
+  We are now using the shared, modern styles from 'GodsGalleryPage.css'
+  to ensure a consistent design across the application. The component now
+  uses classes like 'gallery-page', 'gallery-title', and 'gallery-grid'.
+*/

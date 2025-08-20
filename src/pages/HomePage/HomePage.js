@@ -18,12 +18,6 @@ const HomePage = () => {
 
   return (
     <div className="home-page">
-      <div className="home-hero">
-        <h1 className="home-title">Divine Path</h1>
-        <p className="home-subtitle">
-          Your daily companion for exploring Sanatana Dharma.
-        </p>
-      </div>
 
       <Panchangam />
 

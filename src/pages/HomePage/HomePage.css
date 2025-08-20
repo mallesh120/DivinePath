@@ -1,41 +1,87 @@
+/* We're adding a root element to define our new, lighter color palette */
+:root {
+  --background-color: #fcf9f3; /* A soft, warm off-white */
+  --text-primary: #4a4a4a; /* A gentle dark gray instead of black */
+  --accent-primary: #4a90e2; /* A calming, modern blue */
+  --accent-secondary: #f5a623; /* A softer, marigold-like orange */
+  --card-background: #ffffff;
+  --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  --card-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* We'll apply the background color and a fade-in animation to the whole page */
 .home-page {
-  /* We removed the fixed height to allow the page to grow */
+  background-color: var(--background-color);
   padding: 40px 20px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .home-hero {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 80px; /* Increased space for a more open feel */
 }
 
 .home-title {
-  font-size: 3.5rem;
-  color: #000080; /* Deep Blue */
+  /* Applying the new font and colors */
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--accent-primary);
 }
 
 .home-subtitle {
-  font-size: 1.5rem;
-  color: #ff6600; /* Saffron/Orange */
-  margin-top: -10px;
+  /* Applying the new font and colors */
+  font-family: 'Lato', sans-serif;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-top: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* New styles for our dashboard layout */
 .featured-section {
   display: flex;
   justify-content: center;
   gap: 50px;
-  flex-wrap: wrap; /* Allows items to stack on smaller screens */
+  flex-wrap: wrap;
   max-width: 900px;
   margin: 0 auto;
 }
 
 .featured-item {
-  flex-basis: 350px; /* Gives a base width to each item */
+  flex-basis: 350px;
+  /* Adding a subtle transition to the cards for a smoother feel on hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* We'll make the cards lift up slightly when the user interacts with them */
+.featured-item:hover {
+  transform: translateY(-8px);
+}
+
+.featured-item .god-card, 
+.featured-item .literature-card {
+  /* Making sure our existing cards use the new shadow variables */
+  box-shadow: var(--card-shadow);
+}
+
+.featured-item:hover .god-card,
+.featured-item:hover .literature-card {
+  box-shadow: var(--card-shadow-hover);
 }
 
 .featured-title {
-  font-size: 2rem;
-  color: #581845; /* Deep purple from our literature card */
+  /* Applying the new font and colors */
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
   text-align: center;
   margin-bottom: 20px;
 }

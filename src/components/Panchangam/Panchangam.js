@@ -79,7 +79,13 @@ const Panchangam = () => {
   }, []);
 
   if (loading) {
-    return <div className="panchangam-widget">Loading location data...</div>;
+    return (
+      <div className="panchangam-floating-widget">
+        <button className="panchangam-toggle-button">
+          Today's Panchangam
+        </button>
+      </div>
+    );
   }
 
   try {
@@ -102,142 +108,59 @@ const Panchangam = () => {
       });
     };
 
-    const getRahuKalam = (sunrise, sunset) => {
-      if (!(sunrise instanceof Date) || !(sunset instanceof Date)) {
-        return { start: 'N/A', end: 'N/A' };
-      }
-
-      // Get total daylight duration in milliseconds
+    const calculateYamagandam = (sunrise, sunset, dayOfWeek) => {
+      if (!sunrise || !sunset) return 'N/A';
       const daylightDuration = sunset.getTime() - sunrise.getTime();
-      // Each part is 1/8th of daylight
       const partDuration = daylightDuration / 8;
-      const rahuPeriods = {
-        0: 7, // Sunday - 8th part
-        1: 1, // Monday - 2nd part
-        2: 4, // Tuesday - 5th part
-        3: 2, // Wednesday - 3rd part
-        4: 5, // Thursday - 6th part
-        5: 3, // Friday - 4th part
-        6: 0  // Saturday - 1st part
-      };
-
-      const dayOfWeek = panchangam.vara;
-      const rahuPart = rahuPeriods[dayOfWeek];
-      
-      // Calculate start and end times
-      const rahuStart = new Date(sunrise.getTime() + (rahuPart * partDuration));
-      const rahuEnd = new Date(rahuStart.getTime() + partDuration);
-
-      // Format times
-      const options = { 
-        hour: '2-digit', 
-        minute: '2-digit', 
-        hour12: true,
-        timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone
-      };
-
-      return {
-        start: rahuStart.toLocaleTimeString('en-US', options),
-        end: rahuEnd.toLocaleTimeString('en-US', options)
-      };
-    };
-
-    // Calculate Yamagandam (approximately)
-    const getYamagandam = (sunrise, sunset) => {
-      if (!(sunrise instanceof Date) || !(sunset instanceof Date)) {
-        return { start: 'N/A', end: 'N/A' };
-      }
-
-      // Get total daylight duration in milliseconds
-      const daylightDuration = sunset.getTime() - sunrise.getTime();
-      // Each part is 1/8th of daylight
-      const partDuration = daylightDuration / 8;
-
-      // Yamagandam periods (0-based index for days)
-      const yamaPeriods = {
-        0: 4, // Sunday - 5th part (1:30 PM - 3:00 PM)
-        1: 3, // Monday - 4th part (12:00 PM - 1:30 PM)
-        2: 2, // Tuesday - 3rd part (10:30 AM - 12:00 PM)
-        3: 1, // Wednesday - 2nd part (9:00 AM - 10:30 AM)
-        4: 0, // Thursday - 1st part (7:30 AM - 9:00 AM)
-        5: 6, // Friday - 7th part (4:30 PM - 6:00 PM)
-        6: 5  // Saturday - 6th part (3:00 PM - 4:30 PM)
-      };
-
-      const dayOfWeek = panchangam.vara;
+      const yamaPeriods = { 0: 4, 1: 3, 2: 2, 3: 1, 4: 0, 5: 6, 6: 5 }; // Sunday:0 to Saturday:6
       const yamaPart = yamaPeriods[dayOfWeek];
-
-      // Calculate start and end times
-      const yamaStart = new Date(sunrise.getTime() + (yamaPart * partDuration));
-      const yamaEnd = new Date(yamaStart.getTime() + partDuration);
-
-      // Format times
-      const options = { 
-        hour: '2-digit', 
-        minute: '2-digit', 
-        hour12: true,
-        timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone
-      };
-
-      return {
-        start: yamaStart.toLocaleTimeString('en-US', options),
-        end: yamaEnd.toLocaleTimeString('en-US', options)
-      };
+      const startTime = new Date(sunrise.getTime() + (yamaPart * partDuration));
+      const endTime = new Date(startTime.getTime() + partDuration);
+      return `${formatTime(startTime)} - ${formatTime(endTime)}`;
     };
 
-    // Calculate Durmuhurtham (approximately)
-    const getDurmuhurtham = (sunrise, sunset) => {
-      if (!(sunrise instanceof Date) || !(sunset instanceof Date)) {
-        return { periods: ['N/A'] };
-      }
 
-      const dayOfWeek = panchangam.vara;
-      
-      if (dayOfWeek === 0) { // Sunday
-        // 136 minutes before sunset (2 hours and 16 minutes)
-        const durmuhurthamDuration = 136 * 60 * 1000; // 136 minutes in milliseconds
-        const startTime = new Date(sunset.getTime() - durmuhurthamDuration);
-        
-        console.log('Durmuhurtham calculation for Sunday:', {
-          sunset: sunset.toLocaleTimeString(),
-          duration: '136 minutes',
-          startTime: startTime.toLocaleTimeString()
-        });
-
-        return {
-          periods: [`${formatTime(startTime)} - ${formatTime(sunset)}`]
-        };
-      } else {
-        // For other days - two periods remain the same
-        const muhurtaDuration = 48 * 60 * 1000; // 48 minutes for regular muhurta
-        const firstPeriodStart = new Date(sunrise.getTime() + (muhurtaDuration * 4));
-        const firstPeriodEnd = new Date(sunrise.getTime() + (muhurtaDuration * 6));
-        
-        const secondPeriodStart = new Date(sunrise.getTime() + (muhurtaDuration * 12));
-        const secondPeriodEnd = new Date(sunrise.getTime() + (muhurtaDuration * 14));
-
-        return {
-          periods: [
-            `${formatTime(firstPeriodStart)} - ${formatTime(firstPeriodEnd)}`,
-            `${formatTime(secondPeriodStart)} - ${formatTime(secondPeriodEnd)}`
-          ]
-        };
-      }
+    // --- Manual Calculation for Durmuhurtham ---
+  const calculateDurmuhurtham = (sunrise, dayOfWeek) => {
+    if (!sunrise) return 'N/A';
+    const muhurtaDuration = (24 * 60) / 30 * 60 * 1000; // 48 minutes
+    const durmuhurthamPeriods = {
+      0: [8, 9],   // Sunday
+      1: [4, 12],  // Monday
+      2: [3, 7],   // Tuesday
+      3: [4, 5],   // Wednesday
+      4: [2, 10],  // Thursday
+      5: [1, 3],   // Friday
+      6: [0, 14],  // Saturday
     };
+    const periods = durmuhurthamPeriods[dayOfWeek];
+    const startTime1 = new Date(sunrise.getTime() + (periods[0] * muhurtaDuration));
+    const endTime1 = new Date(startTime1.getTime() + muhurtaDuration);
+    // Some days have a second period
+    if (dayOfWeek !== 0 && dayOfWeek !== 3) {
+      const startTime2 = new Date(sunrise.getTime() + (periods[1] * muhurtaDuration));
+      const endTime2 = new Date(startTime2.getTime() + muhurtaDuration);
+      return `${formatTime(startTime1)} - ${formatTime(endTime1)}, ${formatTime(startTime2)} - ${formatTime(endTime2)}`;
+    }
+    return `${formatTime(startTime1)} - ${formatTime(endTime1)}`;
+  };
 
-    // Get Rahu Kalam times
-    const rahuKalam = getRahuKalam(panchangam.sunrise, panchangam.sunset);
 
-    // Debug logging to verify calculations
-    console.log('Day:', panchangam.vara);
-    console.log('Sunrise:', panchangam.sunrise);
-    console.log('Sunset:', panchangam.sunset);
-    console.log('Rahu Kalam:', rahuKalam); 
+    // // Get Rahu Kalam times
+    const rahuKalamStart = panchangam.rahuKalamStart;
+    const rahuKalamEnd = panchangam.rahuKalamEnd;
+
+    // // Debug logging to verify calculations
+    // console.log('Day:', panchangam.vara);
+    // console.log('Sunrise:', panchangam.sunrise);
+    // console.log('Sunset:', panchangam.sunset);
+    // console.log('Rahu Kalam:', rahuKalam); 
     
-    const yamagandam = getYamagandam(panchangam.sunrise, panchangam.sunset);
-    console.log('Yamagandam:', yamagandam);
-    const durmuhurtham = getDurmuhurtham(panchangam.sunrise, panchangam.sunset);
-    console.log('Durmuhurtham:', durmuhurtham);
+    // const yamagandam = getYamagandam(panchangam.sunrise, panchangam.sunset);
+
+    // console.log('Yamagandam:', yamagandam);
+    // const durmuhurtham = getDurmuhurtham(panchangam.sunrise, panchangam.sunset);
+    // console.log('Durmuhurtham:', durmuhurtham);
 
     const formattedData = {
       location: placeName,
@@ -246,35 +169,31 @@ const Panchangam = () => {
       nakshatra: nakshatraNames[panchangam.nakshatra - 1] || 'N/A',
       sunrise: formatTime(panchangam.sunrise),
       sunset: formatTime(panchangam.sunset),
-      rahuKalam: `${rahuKalam.start} - ${rahuKalam.end}`,
-      yamagandam: `${yamagandam.start} - ${yamagandam.end}`,
-      durmuhurtham: durmuhurtham.periods.join(' and ')
+      rahuKalam: `${rahuKalamStart.toLocaleTimeString()} - ${rahuKalamEnd.toLocaleTimeString()}`,
+      yamagandam: calculateYamagandam(panchangam.sunrise, panchangam.sunset, panchangam.vara),
+      durmuhurtham: calculateDurmuhurtham(panchangam.sunrise, panchangam.vara)
     };
 
     return (
-      <div className={`panchangam-widget ${isMinimized ? 'minimized' : ''}`}>
-        <div className="panchangam-header">
+      <div className={`panchangam-floating-widget ${!isMinimized ? 'open' : ''}`}>
+                <button 
+          className="panchangam-toggle-button"
+          onClick={() => setIsMinimized(!isMinimized)}
+        >
+          {isMinimized ? "Today's Panchangam" : '×'}
+        </button>
+        <div className="panchangam-content">
           <h2 className="panchangam-title">Today's Panchangam</h2>
-          <button 
-            className="panchangam-toggle"
-            onClick={() => setIsMinimized(!isMinimized)}
-          >
-            {isMinimized ? '↓' : '↑'}
-          </button>
+          {error && <div className="panchangam-error">{error}</div>}
+          <div className="panchangam-grid">
+            {Object.entries(formattedData).map(([key, value]) => (
+              <div key={key} className="panchangam-item">
+                <span className="panchangam-label">{key.charAt(0).toUpperCase() + key.slice(1)}</span>
+                <span className="panchangam-value">{value}</span>
+              </div>
+            ))}
+          </div>
         </div>
-        {!isMinimized && (
-          <>
-            {error && <div className="panchangam-error">{error}</div>}
-            <div className="panchangam-grid">
-              {Object.entries(formattedData).map(([key, value]) => (
-                <div key={key} className="panchangam-item">
-                  <span className="panchangam-label">{key.charAt(0).toUpperCase() + key.slice(1)}</span>
-                  <span className="panchangam-value">{value}</span>
-                </div>
-              ))}
-            </div>
-          </>
-        )}
       </div>
     );
   } catch (error) {

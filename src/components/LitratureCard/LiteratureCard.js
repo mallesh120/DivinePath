@@ -12,13 +12,13 @@ const LiteratureCard = ({ story }) => {
   return (
     <Link to={path} className="literature-card-link">
       <div className="literature-card">
-        <div className="lit-card-image-container">
-          <img src={story.imageUrl} alt={story.title} className="lit-card-image" />
+        <div className="literature-card-image-container">
+          <img src={story.imageUrl} alt={story.title} className="literature-card-image" />
         </div>
-        <div className="lit-card-content">
-          <h3 className="lit-card-title">{story.title}</h3>
+        <div className="literature-card-content">
+          <h3 className="literature-card-title">{story.title}</h3>
           {/* Ensure the story object has a summary property */}
-          <p className="lit-card-summary">{story.summary}</p>
+          <p className="literature-card-summary">{story.summary}</p>
         </div>
       </div>
     </Link>

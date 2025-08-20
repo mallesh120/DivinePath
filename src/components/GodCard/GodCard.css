@@ -1,44 +1,54 @@
 /* Styling for the GodCard component */
 .god-card {
-  background-color: #ffffff;
+  /* Using CSS variables for consistency with the rest of the app */
+  background-color: var(--card-background);
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--card-shadow);
   overflow: hidden; /* Ensures the image corners are rounded */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   cursor: pointer;
-  border: 2px solid #ff9933; /* Saffron-inspired border */
+  border: 1px solid #e0e0e0; /* A more subtle default border */
+  display: flex; /* Using flexbox for better content alignment */
+  flex-direction: column;
+  height: 100%; /* Ensure cards in a row are the same height */
 }
 
 .god-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  border-color: var(--accent-secondary); /* Highlight with accent color on hover */
 }
 
 .god-card-image-container {
   width: 100%;
   height: 200px;
-  background-color: #e0f7fa; /* A light blue placeholder background */
+  /* A subtle gradient background looks more modern */
+  background: linear-gradient(135deg, #e0f7fa 0%, #f0f4f8 100%);
 }
 
 .god-card-image {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Ensures the image covers the area without distortion */
+  object-fit: contain; /* 'contain' is good for showing the full deity. 'cover' would crop but fill the space. */
+  padding: 10px; /* Add some padding so the image doesn't touch the edges */
 }
 
 .god-card-content {
   padding: 20px;
   text-align: center;
+  flex-grow: 1; /* Allows content to fill the remaining space */
 }
 
 .god-card-title {
   font-size: 1.5rem;
-  color: #000080; /* Deep blue for text */
+  color: var(--text-primary); /* Using variable for consistency */
   margin-top: 0;
   margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif; /* Using a more modern font */
 }
 
 .god-card-description {
   font-size: 1rem;
-  color: #333;
+  color: #666; /* A slightly lighter text color for the description */
+  line-height: 1.5;
 }
