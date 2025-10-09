@@ -1,0 +1,46 @@
+/* src/App.css */
+.App {
+    text-align: center;
+}
+
+.App-header {
+    background-color: #ff6347; /* Tomato color for the header */
+    padding: 20px;
+    color: white;
+    border-bottom: 5px solid #ff4500; /* Orange-red border */
+}
+
+.App-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: white;
+}
+
+main {
+    padding: 20px;
+}
+
+.gods-gallery, .books-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.god-card, .book-card {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.god-card:hover, .book-card:hover {
+    transform: translateY(-10px);
+}
+
+.god-card h3, .book-card h4 {
+    color: #cd5c5c; /* Indian red */
+}

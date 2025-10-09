@@ -1,0 +1,21 @@
+/* src/index.css */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff; /* Light blue background */
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Georgia', serif;
+  color: #d2691e; /* Chocolate color for headings */
+}
+
+a {
+  text-decoration: none;
+  color: #8a2be2; /* Blue-violet for links */
+}
+
+a:hover {
+  color: #ff4500; /* Orange-red on hover */
+}
