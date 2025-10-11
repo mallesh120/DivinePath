@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 
 // Import Pages and Components
@@ -15,25 +15,23 @@ import RamayanaTOCPage from './pages/RamayanaPage/RamayanaTOCPage';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/gods" element={<GodsGalleryPage />} />
-          <Route path="/gods/:godId" element={<GodDetailPage />} />
-          <Route path="/library" element={<LiteratureLibraryPage />} />
-          {/* This route is for standard literature like the Mahabharata */}
-          <Route path="/library/:storyId" element={<LiteratureDetailPage />} />
+    <div className="App">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/gods" element={<GodsGalleryPage />} />
+        <Route path="/gods/:godId" element={<GodDetailPage />} />
+        <Route path="/library" element={<LiteratureLibraryPage />} />
+        {/* This route is for standard literature like the Mahabharata */}
+        <Route path="/library/:storyId" element={<LiteratureDetailPage />} />
 
-          {/* This is our new route for the Ramayana Table of Contents */}
+        {/* This is our new route for the Ramayana Table of Contents */}
           <Route path="/library/ramayana/:storyId" element={<RamayanaTOCPage />} />
-          
-          {/* This is the updated story player route */}
-          <Route path="/story/:storyId/:kandaIndex" element={<StoryPlayerPage />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+
+        {/* This is the updated story player route */}
+        <Route path="/story/:storyId/:kandaIndex" element={<StoryPlayerPage />} />
+      </Routes>
+    </div>
   );
 }
 
