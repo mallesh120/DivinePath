@@ -80,14 +80,24 @@ export const usePanchangam = () => {
     if (loading || !location) return;
 
     try {
-      const today = new Date();
+      const now = new Date();
+      // To get the correct Sunrise and Sunset for the current civil day, we must pass the start of the day (Midnight).
+      // If we pass 'now' (e.g. 10 AM), the library returns the NEXT Sunrise (tomorrow) and current/next Sunset,
+      // which invalidates day length calculations.
+      const todayStart = new Date(now);
+      todayStart.setHours(0, 0, 0, 0);
+
       const observer = new Observer(
         location.latitude,
         location.longitude,
         location.elevation
       );
 
-      const panchangam = getPanchangam(today, observer);
+      // Fetch panchangam for timings (Sunrise/Sunset/Vara based on civil day start)
+      const panchangamDay = getPanchangam(todayStart, observer);
+
+      // Fetch panchangam for current Tithi/Nakshatra (based on current moment)
+      const panchangamNow = getPanchangam(now, observer);
 
       const formatTime = (date) => {
         if (!(date instanceof Date)) return 'N/A';
@@ -103,6 +113,10 @@ export const usePanchangam = () => {
       const calculateTimeRange = (sunrise, sunset, startPartIndex, durationParts = 1, totalParts = 8) => {
         if (!sunrise || !sunset) return 'N/A';
         const dayLength = sunset.getTime() - sunrise.getTime();
+
+        // Safety check for invalid day length (e.g. if sunrise is tomorrow)
+        if (dayLength <= 0) return 'Calculation Error';
+
         const partLength = dayLength / totalParts;
 
         const startTime = new Date(sunrise.getTime() + (startPartIndex * partLength));
@@ -113,9 +127,6 @@ export const usePanchangam = () => {
 
       // Rahu Kalam: 8th part of the day (Sunday starts at index 7, etc.)
       const calculateRahuKalam = (sunrise, sunset, dayOfWeek) => {
-        // Indices (0-7) for Rahu Kalam start time
-        // Sun: 7 (4:30-6:00), Mon: 1 (7:30-9:00), Tue: 6 (3:00-4:30), Wed: 4 (12:00-1:30)
-        // Thu: 5 (1:30-3:00), Fri: 3 (10:30-12:00), Sat: 2 (9:00-10:30)
         const rahuIndices = { 0: 7, 1: 1, 2: 6, 3: 4, 4: 5, 5: 3, 6: 2 };
         const index = rahuIndices[dayOfWeek];
         return calculateTimeRange(sunrise, sunset, index, 1, 8);
@@ -123,18 +134,20 @@ export const usePanchangam = () => {
 
       // Yamagandam: 8th part of the day
       const calculateYamagandam = (sunrise, sunset, dayOfWeek) => {
-        // Indices (0-7) for Yamagandam start time
-        // Sun: 4, Mon: 3, Tue: 2, Wed: 1, Thu: 0, Fri: 6, Sat: 5
         const yamaIndices = { 0: 4, 1: 3, 2: 2, 3: 1, 4: 0, 5: 6, 6: 5 };
         const index = yamaIndices[dayOfWeek];
         return calculateTimeRange(sunrise, sunset, index, 1, 8);
       };
 
+      // Gulikai Kalam: 8th part of the day
+      const calculateGulikaiKalam = (sunrise, sunset, dayOfWeek) => {
+        const gulikaiIndices = { 0: 6, 1: 5, 2: 4, 3: 3, 4: 2, 5: 1, 6: 0 };
+        const index = gulikaiIndices[dayOfWeek];
+        return calculateTimeRange(sunrise, sunset, index, 1, 8);
+      };
+
       // Durmuhurtham: 15 parts of the day (Muhurthas)
       const calculateDurmuhurtham = (sunrise, sunset, dayOfWeek) => {
-        // Indices (0-14) for Durmuhurtham start time
-        // Sun: 13 (14th), Mon: 8 (9th), Tue: 3 (4th), Wed: 7 (8th)
-        // Thu: 5 (6th) & 12 (13th), Fri: 3 (4th) & 8 (9th), Sat: 1 (2nd)
         const durmuhurthamIndices = {
           0: [13],
           1: [8],
@@ -151,15 +164,16 @@ export const usePanchangam = () => {
       };
 
       const formattedData = {
-        location: placeName,
-        day: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][panchangam.vara] || 'N/A',
-        tithi: tithiNames[panchangam.tithi - 1] || 'N/A',
-        nakshatra: nakshatraNames[panchangam.nakshatra - 1] || 'N/A',
-        sunrise: formatTime(panchangam.sunrise),
-        sunset: formatTime(panchangam.sunset),
-        rahuKalam: calculateRahuKalam(panchangam.sunrise, panchangam.sunset, panchangam.vara),
-        yamagandam: calculateYamagandam(panchangam.sunrise, panchangam.sunset, panchangam.vara),
-        durmuhurtham: calculateDurmuhurtham(panchangam.sunrise, panchangam.sunset, panchangam.vara)
+        "Location": placeName,
+        "Day": ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][panchangamDay.vara] || 'N/A',
+        "Tithi": tithiNames[panchangamNow.tithi - 1] || 'N/A',
+        "Nakshatra": nakshatraNames[panchangamNow.nakshatra - 1] || 'N/A',
+        "Sunrise": formatTime(panchangamDay.sunrise),
+        "Sunset": formatTime(panchangamDay.sunset),
+        "Rahu Kalam": calculateRahuKalam(panchangamDay.sunrise, panchangamDay.sunset, panchangamDay.vara),
+        "Yamagandam": calculateYamagandam(panchangamDay.sunrise, panchangamDay.sunset, panchangamDay.vara),
+        "Gulikai Kalam": calculateGulikaiKalam(panchangamDay.sunrise, panchangamDay.sunset, panchangamDay.vara),
+        "Durmuhurtham": calculateDurmuhurtham(panchangamDay.sunrise, panchangamDay.sunset, panchangamDay.vara)
       };
 
       setPanchangamData(formattedData);
