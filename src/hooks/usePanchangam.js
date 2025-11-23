@@ -99,43 +99,56 @@ export const usePanchangam = () => {
         });
       };
 
-      const calculateYamagandam = (sunrise, sunset, dayOfWeek) => {
+      // Helper to calculate a time range based on parts of the day
+      const calculateTimeRange = (sunrise, sunset, startPartIndex, durationParts = 1, totalParts = 8) => {
         if (!sunrise || !sunset) return 'N/A';
-        const daylightDuration = sunset.getTime() - sunrise.getTime();
-        const partDuration = daylightDuration / 8;
-        const yamaPeriods = { 0: 4, 1: 3, 2: 2, 3: 1, 4: 0, 5: 6, 6: 5 }; // Sunday:0 to Saturday:6
-        const yamaPart = yamaPeriods[dayOfWeek];
-        const startTime = new Date(sunrise.getTime() + (yamaPart * partDuration));
-        const endTime = new Date(startTime.getTime() + partDuration);
+        const dayLength = sunset.getTime() - sunrise.getTime();
+        const partLength = dayLength / totalParts;
+
+        const startTime = new Date(sunrise.getTime() + (startPartIndex * partLength));
+        const endTime = new Date(startTime.getTime() + (durationParts * partLength));
+
         return `${formatTime(startTime)} - ${formatTime(endTime)}`;
       };
 
-      const calculateDurmuhurtham = (sunrise, dayOfWeek) => {
-        if (!sunrise) return 'N/A';
-        const muhurtaDuration = (24 * 60) / 30 * 60 * 1000; // 48 minutes
-        const durmuhurthamPeriods = {
-          0: [8, 9],   // Sunday
-          1: [4, 12],  // Monday
-          2: [3, 7],   // Tuesday
-          3: [4, 5],   // Wednesday
-          4: [2, 10],  // Thursday
-          5: [1, 3],   // Friday
-          6: [0, 14],  // Saturday
-        };
-        const periods = durmuhurthamPeriods[dayOfWeek];
-        const startTime1 = new Date(sunrise.getTime() + (periods[0] * muhurtaDuration));
-        const endTime1 = new Date(startTime1.getTime() + muhurtaDuration);
-
-        if (dayOfWeek !== 0 && dayOfWeek !== 3) {
-          const startTime2 = new Date(sunrise.getTime() + (periods[1] * muhurtaDuration));
-          const endTime2 = new Date(startTime2.getTime() + muhurtaDuration);
-          return `${formatTime(startTime1)} - ${formatTime(endTime1)}, ${formatTime(startTime2)} - ${formatTime(endTime2)}`;
-        }
-        return `${formatTime(startTime1)} - ${formatTime(endTime1)}`;
+      // Rahu Kalam: 8th part of the day (Sunday starts at index 7, etc.)
+      const calculateRahuKalam = (sunrise, sunset, dayOfWeek) => {
+        // Indices (0-7) for Rahu Kalam start time
+        // Sun: 7 (4:30-6:00), Mon: 1 (7:30-9:00), Tue: 6 (3:00-4:30), Wed: 4 (12:00-1:30)
+        // Thu: 5 (1:30-3:00), Fri: 3 (10:30-12:00), Sat: 2 (9:00-10:30)
+        const rahuIndices = { 0: 7, 1: 1, 2: 6, 3: 4, 4: 5, 5: 3, 6: 2 };
+        const index = rahuIndices[dayOfWeek];
+        return calculateTimeRange(sunrise, sunset, index, 1, 8);
       };
 
-      const rahuKalamStart = panchangam.rahuKalamStart;
-      const rahuKalamEnd = panchangam.rahuKalamEnd;
+      // Yamagandam: 8th part of the day
+      const calculateYamagandam = (sunrise, sunset, dayOfWeek) => {
+        // Indices (0-7) for Yamagandam start time
+        // Sun: 4, Mon: 3, Tue: 2, Wed: 1, Thu: 0, Fri: 6, Sat: 5
+        const yamaIndices = { 0: 4, 1: 3, 2: 2, 3: 1, 4: 0, 5: 6, 6: 5 };
+        const index = yamaIndices[dayOfWeek];
+        return calculateTimeRange(sunrise, sunset, index, 1, 8);
+      };
+
+      // Durmuhurtham: 15 parts of the day (Muhurthas)
+      const calculateDurmuhurtham = (sunrise, sunset, dayOfWeek) => {
+        // Indices (0-14) for Durmuhurtham start time
+        // Sun: 13 (14th), Mon: 8 (9th), Tue: 3 (4th), Wed: 7 (8th)
+        // Thu: 5 (6th) & 12 (13th), Fri: 3 (4th) & 8 (9th), Sat: 1 (2nd)
+        const durmuhurthamIndices = {
+          0: [13],
+          1: [8],
+          2: [3],
+          3: [7],
+          4: [5, 12],
+          5: [3, 8],
+          6: [1]
+        };
+
+        const indices = durmuhurthamIndices[dayOfWeek];
+        const ranges = indices.map(index => calculateTimeRange(sunrise, sunset, index, 1, 15));
+        return ranges.join(', ');
+      };
 
       const formattedData = {
         location: placeName,
@@ -144,9 +157,9 @@ export const usePanchangam = () => {
         nakshatra: nakshatraNames[panchangam.nakshatra - 1] || 'N/A',
         sunrise: formatTime(panchangam.sunrise),
         sunset: formatTime(panchangam.sunset),
-        rahuKalam: `${rahuKalamStart.toLocaleTimeString()} - ${rahuKalamEnd.toLocaleTimeString()}`,
+        rahuKalam: calculateRahuKalam(panchangam.sunrise, panchangam.sunset, panchangam.vara),
         yamagandam: calculateYamagandam(panchangam.sunrise, panchangam.sunset, panchangam.vara),
-        durmuhurtham: calculateDurmuhurtham(panchangam.sunrise, panchangam.vara)
+        durmuhurtham: calculateDurmuhurtham(panchangam.sunrise, panchangam.sunset, panchangam.vara)
       };
 
       setPanchangamData(formattedData);
