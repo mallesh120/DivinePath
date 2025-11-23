@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 
 // Import Pages and Components
@@ -15,8 +15,6 @@ import StoryPlayerPage from './pages/StoryPlayerPage/StoryPlayerPage'; // Import
 import RamayanaTOCPage from './pages/RamayanaPage/RamayanaTOCPage';
 
 function App() {
-  const location = useLocation();
-
   return (
     <div className="App">
       <Navbar />
