@@ -6,7 +6,6 @@ import { godsData } from '../../data/godsData';
 import { literatureData } from '../../data/literature';
 import GodCard from '../../components/GodCard/GodCard';
 import LiteratureCard from '../../components/LitratureCard/LiteratureCard';
-import Panchangam from '../../components/Panchangam/Panchangam';
 
 // Helper function to get a random item from an array
 const getRandomItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
@@ -18,8 +17,6 @@ const HomePage = () => {
 
   return (
     <div className="home-page">
-
-      <Panchangam />
 
       {/* 3. Create the featured content section */}
       <div className="featured-section">

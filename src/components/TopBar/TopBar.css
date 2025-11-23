@@ -1,0 +1,39 @@
+.top-bar {
+  background-color: #f8f1e5;
+  color: #5d4037;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-family: 'Merriweather', serif;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #d7ccc8;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.top-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-bar-label {
+  font-weight: bold;
+  color: #8d6e63;
+}
+
+.top-bar-value {
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .top-bar {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+
+  .top-bar-item {
+    justify-content: center;
+  }
+}

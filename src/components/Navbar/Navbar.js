@@ -28,6 +28,11 @@ const Navbar = () => {
             Literature
           </NavLink>
         </li>
+        <li>
+          <NavLink to="/panchangam" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            Panchangam
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
