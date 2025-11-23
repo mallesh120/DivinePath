@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 
 // Import Pages and Components
@@ -10,17 +10,13 @@ import GodDetailPage from './pages/GodDetailPage/GodDetailPage';
 import LiteratureDetailPage from './pages/LiteratureDetailPage/LiteratureDetailPage'; // 1. Import the new page
 import PanchangamPage from './pages/PanchangamPage/PanchangamPage';
 import Navbar from './components/Navbar/Navbar';
-import TopBar from './components/TopBar/TopBar';
 import './App.css';
 import StoryPlayerPage from './pages/StoryPlayerPage/StoryPlayerPage'; // Import the new page
 import RamayanaTOCPage from './pages/RamayanaPage/RamayanaTOCPage';
 
 function App() {
-  const location = useLocation();
-
   return (
     <div className="App">
-      {location.pathname === '/' && <TopBar />}
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
