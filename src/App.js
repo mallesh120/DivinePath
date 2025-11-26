@@ -13,26 +13,29 @@ import Navbar from './components/Navbar/Navbar';
 import './App.css';
 import StoryPlayerPage from './pages/StoryPlayerPage/StoryPlayerPage'; // Import the new page
 import RamayanaTOCPage from './pages/RamayanaPage/RamayanaTOCPage';
+import SidebarLayout from './components/SidebarLayout/SidebarLayout';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/gods" element={<GodsGalleryPage />} />
-        <Route path="/gods/:godId" element={<GodDetailPage />} />
-        <Route path="/library" element={<LiteratureLibraryPage />} />
-        <Route path="/panchangam" element={<PanchangamPage />} />
-        {/* This route is for standard literature like the Mahabharata */}
-        <Route path="/library/:storyId" element={<LiteratureDetailPage />} />
+      <SidebarLayout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/gods" element={<GodsGalleryPage />} />
+          <Route path="/gods/:godId" element={<GodDetailPage />} />
+          <Route path="/library" element={<LiteratureLibraryPage />} />
+          <Route path="/panchangam" element={<PanchangamPage />} />
+          {/* This route is for standard literature like the Mahabharata */}
+          <Route path="/library/:storyId" element={<LiteratureDetailPage />} />
 
-        {/* This is our new route for the Ramayana Table of Contents */}
+          {/* This is our new route for the Ramayana Table of Contents */}
           <Route path="/library/ramayana/:storyId" element={<RamayanaTOCPage />} />
 
-        {/* This is the updated story player route */}
-        <Route path="/story/:storyId/:kandaIndex" element={<StoryPlayerPage />} />
-      </Routes>
+          {/* This is the updated story player route */}
+          <Route path="/story/:storyId/:kandaIndex" element={<StoryPlayerPage />} />
+        </Routes>
+      </SidebarLayout>
     </div>
   );
 }
