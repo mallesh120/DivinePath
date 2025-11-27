@@ -3,7 +3,7 @@
 This directory contains audio recordings of mantras for each deity.
 
 ## Auto-Generate Audio Files (FREE!)
-
+npm run generate-mantras
 We've created a script to automatically generate all mantra audio files using free text-to-speech:
 
 ### Quick Start:
