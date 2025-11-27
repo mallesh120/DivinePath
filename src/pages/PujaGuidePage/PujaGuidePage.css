@@ -227,11 +227,51 @@
   gap: 25px;
 }
 
-.steps-navigation {
+.step-progress-bar {
   background: white;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 10px;
+}
+
+.progress-indicator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 15px;
+}
+
+.current-step-info {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ff9933;
+}
+
+.step-title-inline {
+  font-size: 0.95rem;
+  color: #666;
+  font-weight: 500;
+  text-align: right;
+}
+
+.mini-progress-bar {
+  height: 8px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.mini-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff9933 0%, #ffaa33 100%);
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.steps-navigation {
+  display: none; /* Hidden - using progress bar instead */
 }
 
 .steps-list {
@@ -508,30 +548,32 @@
   display: flex;
   justify-content: space-between;
   gap: 15px;
-  margin-top: 30px;
+  margin-top: 40px;
   padding-top: 30px;
   border-top: 2px solid #f0f0f0;
 }
 
 .nav-btn {
   flex: 1;
-  padding: 14px 28px;
-  font-size: 1.05rem;
+  padding: 16px 32px;
+  font-size: 1.1rem;
   font-weight: 600;
   border: none;
-  border-radius: 25px;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .prev-btn {
-  background: #f8f9fa;
-  color: #333;
+  background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+  color: white;
 }
 
 .prev-btn:hover:not(:disabled) {
-  background: #e8e9ea;
-  transform: translateX(-3px);
+  background: linear-gradient(135deg, #5a6268 0%, #495057 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .next-btn {
@@ -540,13 +582,15 @@
 }
 
 .next-btn:hover:not(:disabled) {
-  transform: translateX(3px);
-  box-shadow: 0 6px 20px rgba(255, 153, 51, 0.3);
+  background: linear-gradient(135deg, #ffaa33 0%, #ffbb44 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 153, 51, 0.3);
 }
 
 .nav-btn:disabled {
-  opacity: 0.5;
+  opacity: 0.4;
   cursor: not-allowed;
+  box-shadow: none;
 }
 
 .reset-btn {
@@ -702,12 +746,14 @@
     font-size: 1.5rem;
   }
 
-  .steps-list {
+  .progress-indicator {
     flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 
-  .step-nav-item {
-    min-width: 100%;
+  .step-title-inline {
+    text-align: left;
   }
 
   .step-navigation-buttons {

@@ -242,24 +242,22 @@ const PujaGuidePage = () => {
         </div>
 
         <div className="guide-main">
-          <div className="steps-navigation">
-            <div className="steps-list">
-              {puja.steps.map((step, idx) => (
-                <div
-                  key={step.stepNumber}
-                  className={`step-nav-item ${idx === currentStep ? 'active' : ''} ${completedSteps.includes(step.stepNumber) ? 'completed' : ''}`}
-                  onClick={() => setCurrentStep(idx)}
-                >
-                  <div className="step-number">
-                    {completedSteps.includes(step.stepNumber) ? '✓' : step.stepNumber}
-                  </div>
-                  <div className="step-title-short">{step.title}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-
           <div className="current-step-content">
+            <div className="step-progress-bar">
+              <div className="progress-indicator">
+                <span className="current-step-info">
+                  Step {currentStepData.stepNumber} of {puja.steps.length}
+                </span>
+                <span className="step-title-inline">{currentStepData.title}</span>
+              </div>
+              <div className="mini-progress-bar">
+                <div 
+                  className="mini-progress-fill" 
+                  style={{ width: `${((currentStep + 1) / puja.steps.length) * 100}%` }}
+                ></div>
+              </div>
+            </div>
+
             <div className="step-header">
               <div className="step-number-large">Step {currentStepData.stepNumber}</div>
               <h2 className="step-title">{currentStepData.title}</h2>
