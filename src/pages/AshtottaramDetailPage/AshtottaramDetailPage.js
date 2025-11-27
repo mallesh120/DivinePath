@@ -228,13 +228,6 @@ const AshtottaramDetailPage = () => {
                   <div className="name-row mantra-row">
                     <span className="name-label">Mantra (English):</span>
                     <span className="name-text mantra english-mantra">{name.mantra}</span>
-                    <button
-                      className={`audio-btn ${isPlayingAudio && currentPlayingIndex === `${index}-mantra` ? 'playing' : ''}`}
-                      onClick={() => speakText(name.mantra, `${index}-mantra`)}
-                      title="Listen to pronunciation"
-                    >
-                      {isPlayingAudio && currentPlayingIndex === `${index}-mantra` ? '⏸️' : '🔊'}
-                    </button>
                   </div>
                 )}
                 {filterView === 'all' && (
