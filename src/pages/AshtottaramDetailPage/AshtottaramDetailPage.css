@@ -285,10 +285,20 @@
 .mantra {
   font-size: 1.1rem;
   font-weight: 500;
-  color: #2e7d32;
-  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
   padding: 8px 15px;
   border-radius: 8px;
+}
+
+.sanskrit-mantra {
+  color: #c62828;
+  background: linear-gradient(135deg, #ffebee, #ffcdd2);
+  border-left: 4px solid #c62828;
+  font-size: 1.2rem;
+}
+
+.english-mantra {
+  color: #2e7d32;
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
   border-left: 4px solid #2e7d32;
 }
 

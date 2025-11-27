@@ -86,7 +86,8 @@ const AshtottaramDetailPage = () => {
       name.sanskrit.toLowerCase().includes(searchLower) ||
       name.transliteration.toLowerCase().includes(searchLower) ||
       name.meaning.toLowerCase().includes(searchLower) ||
-      (name.mantra && name.mantra.toLowerCase().includes(searchLower))
+      (name.mantra && name.mantra.toLowerCase().includes(searchLower)) ||
+      (name.mantraSanskrit && name.mantraSanskrit.toLowerCase().includes(searchLower))
     );
   });
 
@@ -212,8 +213,21 @@ const AshtottaramDetailPage = () => {
                 )}
                 {filterView === 'all' && name.mantra && (
                   <div className="name-row mantra-row">
-                    <span className="name-label">Mantra:</span>
-                    <span className="name-text mantra">{name.mantra}</span>
+                    <span className="name-label">Mantra (Sanskrit):</span>
+                    <span className="name-text mantra sanskrit-mantra">{name.mantraSanskrit}</span>
+                    <button
+                      className={`audio-btn ${isPlayingAudio && currentPlayingIndex === `${index}-mantra-sanskrit` ? 'playing' : ''}`}
+                      onClick={() => speakText(name.mantraSanskrit, `${index}-mantra-sanskrit`)}
+                      title="Listen to pronunciation"
+                    >
+                      {isPlayingAudio && currentPlayingIndex === `${index}-mantra-sanskrit` ? '⏸️' : '🔊'}
+                    </button>
+                  </div>
+                )}
+                {filterView === 'all' && name.mantra && (
+                  <div className="name-row mantra-row">
+                    <span className="name-label">Mantra (English):</span>
+                    <span className="name-text mantra english-mantra">{name.mantra}</span>
                     <button
                       className={`audio-btn ${isPlayingAudio && currentPlayingIndex === `${index}-mantra` ? 'playing' : ''}`}
                       onClick={() => speakText(name.mantra, `${index}-mantra`)}
