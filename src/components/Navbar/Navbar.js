@@ -29,6 +29,11 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
+          <NavLink to="/festivals" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            Festivals
+          </NavLink>
+        </li>
+        <li>
           <NavLink to="/panchangam" className={({ isActive }) => (isActive ? 'active-link' : '')}>
             Panchangam
           </NavLink>
