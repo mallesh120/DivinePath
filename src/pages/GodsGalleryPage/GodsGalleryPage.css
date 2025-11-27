@@ -32,9 +32,9 @@
 
 .trimurti-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 40px;
-  max-width: 1400px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -55,7 +55,7 @@
 
 .trimurti-card-image-container {
   position: relative;
-  height: 350px;
+  height: 250px;
   overflow: hidden;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
@@ -414,6 +414,13 @@
 }
 
 /* Responsive Design */
+@media (max-width: 968px) {
+  .trimurti-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
 @media (max-width: 768px) {
   .section-title {
     font-size: 2rem;
@@ -421,6 +428,10 @@
 
   .section-subtitle {
     font-size: 1rem;
+  }
+
+  .trimurti-grid {
+    grid-template-columns: 1fr;
   }
 
   .gods-grid {

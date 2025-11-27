@@ -87,11 +87,19 @@ const GodsGalleryPage = () => {
         </div>
       </div>
 
+      {/* View All Gods Button */}
+      <div className="view-all-section">
+        <button className="view-all-gods-btn" onClick={handleViewAll}>
+          <span>Explore Complete Pantheon</span>
+          <span className="view-all-count">{godsData.length}+ Deities</span>
+        </button>
+      </div>
+
       {/* Major Deities Section */}
       <div className="gallery-section">
         <div className="section-header">
           <h2 className="section-title">Major Deities</h2>
-          <p className="section-subtitle">The most revered and worshipped gods in Hinduism</p>
+          <p className="section-subtitle">Discover the prominent deities of Hindu tradition</p>
         </div>
 
         <div className="gods-grid">
@@ -140,14 +148,6 @@ const GodsGalleryPage = () => {
           </button>
         </div>
       )}
-
-      {/* View All Gods Button */}
-      <div className="view-all-section">
-        <button className="view-all-gods-btn" onClick={handleViewAll}>
-          <span>Explore Complete Pantheon</span>
-          <span className="view-all-count">{godsData.length}+ Deities</span>
-        </button>
-      </div>
     </div>
   );
 };
