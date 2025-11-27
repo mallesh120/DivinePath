@@ -1,0 +1,57 @@
+/* Using the same root variables for a consistent theme */
+:root {
+  --background-color: #fcf9f3;
+  --text-primary: #4a4a4a;
+  --accent-primary: #4a90e2;
+  --card-background: #ffffff;
+  --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.shloka-widget {
+  background-color: var(--card-background);
+  color: var(--text-primary);
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 900px;
+  margin: 60px auto;
+  box-shadow: var(--card-shadow);
+  border: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.shloka-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--accent-primary);
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.shloka-content {
+  font-family: 'Lato', sans-serif;
+}
+
+.sanskrit-text {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  white-space: pre-wrap; /* This respects the newlines in our data */
+  line-height: 1.8;
+}
+
+.transliteration-text {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #888;
+  white-space: pre-wrap;
+  margin-top: 20px;
+}
+
+.meaning-text {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: 1px solid #eee;
+  line-height: 1.7;
+}

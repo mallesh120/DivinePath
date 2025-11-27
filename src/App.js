@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 // Import Pages and Components
 import HomePage from './pages/HomePage/HomePage';
 import GodsGalleryPage from './pages/GodsGalleryPage/GodsGalleryPage';
+import AllGodsGalleryPage from './pages/AllGodsGalleryPage/AllGodsGalleryPage';
 import LiteratureLibraryPage from './pages/LiteratureLibraryPage/LiteratureLibraryPage';
 import GodDetailPage from './pages/GodDetailPage/GodDetailPage';
 import LiteratureDetailPage from './pages/LiteratureDetailPage/LiteratureDetailPage'; // 1. Import the new page
@@ -25,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/gods" element={<GodsGalleryPage />} />
+          <Route path="/gods/all" element={<AllGodsGalleryPage />} />
           <Route path="/gods/:godId" element={<GodDetailPage />} />
           <Route path="/library" element={<LiteratureLibraryPage />} />
           <Route path="/festivals" element={<FestivalsPage />} />

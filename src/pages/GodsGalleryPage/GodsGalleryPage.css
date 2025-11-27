@@ -204,3 +204,240 @@
     font-size: 1.7rem;
   }
 }
+
+/* Gallery Sections */
+.gallery-section {
+  margin-bottom: 80px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #000080;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Gods Grid (Major Deities) */
+.gods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.god-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border: 3px solid #e0f7fa;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.god-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  border-color: #ffd700;
+}
+
+.god-card-image-container {
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(135deg, #e0f7fa 0%, #fff5e6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.god-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.god-card:hover .god-card-image {
+  transform: scale(1.05);
+}
+
+.god-card-content {
+  padding: 20px;
+}
+
+.god-card-name {
+  font-size: 1.6rem;
+  color: #000080;
+  margin: 0 0 12px;
+  font-weight: 700;
+}
+
+.god-card-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+/* Dashavatar Preview Section */
+.dashavatar-section {
+  background: linear-gradient(135deg, #fffbf0 0%, #fff 100%);
+  padding: 60px 20px;
+  border-radius: 30px;
+  margin-bottom: 60px;
+}
+
+.avatars-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.avatar-preview-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  border: 2px solid #e0f7fa;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.avatar-preview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  border-color: #ffd700;
+}
+
+.avatar-number {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.avatar-preview-name {
+  font-size: 1.3rem;
+  color: #000080;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.avatar-preview-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #666;
+  margin: 0;
+}
+
+.view-all-avatars-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(156, 39, 176, 0.3);
+}
+
+.view-all-avatars-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(156, 39, 176, 0.4);
+}
+
+/* View All Gods Section */
+.view-all-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #e0f7fa 0%, #fff5e6 100%);
+  border-radius: 30px;
+  margin-bottom: 40px;
+}
+
+.view-all-gods-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 30px 60px;
+  background: linear-gradient(135deg, #ff9933 0%, #ff6600 100%);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 30px rgba(255, 102, 0, 0.3);
+}
+
+.view-all-gods-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(255, 102, 0, 0.4);
+}
+
+.view-all-count {
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .gods-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .avatars-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashavatar-section {
+    padding: 40px 15px;
+  }
+
+  .view-all-gods-btn {
+    padding: 25px 40px;
+    font-size: 1.2rem;
+  }
+}

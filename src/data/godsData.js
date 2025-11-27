@@ -5,6 +5,18 @@ import brahmaImage from '../assets/images/Gods/brahma.png';
 import lakshmiImage from '../assets/images/Gods/lakshmi.png';
 import parvatiImage from '../assets/images/Gods/parvati.png';
 import saraswatiImage from '../assets/images/Gods/saraswati.png';
+import hanumanImage from '../assets/images/Gods/hanuman.png';
+import durgaImage from '../assets/images/Gods/durga.png';
+import kaliImage from '../assets/images/Gods/kali.png';
+import krishnaImage from '../assets/images/Gods/krishna.png';
+import ramaImage from '../assets/images/Gods/rama.png';
+import suryaImage from '../assets/images/Gods/surya.png';
+import chandraImage from '../assets/images/Gods/chandra.png';
+import indraImage from '../assets/images/Gods/indra.png';
+import agniImage from '../assets/images/Gods/agni.png';
+import kartikeyaImage from '../assets/images/Gods/kartikeya.png';
+import kuberaImage from '../assets/images/Gods/kubera.png';
+import yamaImage from '../assets/images/Gods/yama.png';
 
 // The Holy Trinity (Trimurti)
 export const trimurtiData = [
@@ -134,7 +146,8 @@ export const trimurtiData = [
         id: 'kartikeya',
         name: "Kartikeya",
         relation: "Son",
-        description: "God of war and victory"
+        description: "God of war and victory",
+        imageUrl: kartikeyaImage
       }
     ],
     avatars: [
@@ -217,6 +230,153 @@ export const godsData = [
     longDescription: "Saraswati is the Hindu goddess of knowledge, music, art, speech, wisdom, and learning. She is a part of the trinity of Saraswati, Lakshmi, and Parvati.",
     mantra: "Om Aim Saraswatyai Namah",
     imageUrl: saraswatiImage,
-    parent: "Brahma"
+    parent: "Brahma",
+    category: "Goddess"
+  },
+  {
+    id: 8,
+    name: "Hanuman",
+    description: "The monkey god, symbol of devotion, strength, and loyalty.",
+    longDescription: "Hanuman is the divine vanara (monkey) companion of Lord Rama. He is revered as a symbol of physical strength, perseverance, devotion, and dedication. He is considered an avatar of Shiva.",
+    mantra: "Om Hanumate Namah",
+    imageUrl: hanumanImage,
+    category: "Major Deity",
+    parent: "Shiva"
+  },
+  {
+    id: 9,
+    name: "Durga",
+    description: "The fierce warrior goddess who combats evil and demonic forces.",
+    longDescription: "Durga is a principal form of the Goddess, also known as Devi and Shakti. She is the warrior form of Parvati, created to defeat demons and protect the cosmos. She rides a lion or tiger and has eight to ten arms carrying weapons.",
+    mantra: "Om Dum Durgayei Namaha",
+    imageUrl: durgaImage,
+    category: "Goddess",
+    parent: "Shiva"
+  },
+  {
+    id: 10,
+    name: "Kali",
+    description: "The fierce form of the Divine Mother associated with time and change.",
+    longDescription: "Kali is the fierce aspect of Parvati. She is the goddess of time, change, power, and destruction. Despite her fearsome appearance, she is considered the loving mother goddess who protects her devotees.",
+    mantra: "Om Krim Kalikaye Namah",
+    imageUrl: kaliImage,
+    category: "Goddess",
+    parent: "Shiva"
+  },
+  {
+    id: 11,
+    name: "Krishna",
+    description: "The eighth avatar of Vishnu, teacher of the Bhagavad Gita.",
+    longDescription: "Krishna is a major deity in Hinduism. He is worshipped as the eighth avatar of Vishnu and also as the supreme God in his own right. He is the god of protection, compassion, tenderness, and love.",
+    mantra: "Om Klim Krishnaya Namah",
+    imageUrl: krishnaImage,
+    category: "Major Deity",
+    parent: "Vishnu"
+  },
+  {
+    id: 12,
+    name: "Rama",
+    description: "The seventh avatar of Vishnu, hero of the Ramayana.",
+    longDescription: "Rama is the seventh avatar of Vishnu and is considered the ideal man and king. His life and journey is one of adherence to dharma despite harsh tests and obstacles. The Ramayana narrates his story.",
+    mantra: "Om Shri Ramaya Namah",
+    imageUrl: ramaImage,
+    category: "Major Deity",
+    parent: "Vishnu"
+  },
+  {
+    id: 13,
+    name: "Surya",
+    description: "The Sun God, source of light and energy.",
+    longDescription: "Surya is the solar deity in Hinduism. He is considered the creator of the universe and the source of all life. He is one of the Navagraha (nine planetary deities).",
+    mantra: "Om Suryaya Namah",
+    imageUrl: suryaImage,
+    category: "Navagraha"
+  },
+  {
+    id: 14,
+    name: "Chandra",
+    description: "The Moon God, controller of emotions and mind.",
+    longDescription: "Chandra is the lunar deity in Hinduism. He is associated with the mind, emotions, and fertility. He is one of the Navagraha (nine planetary deities).",
+    mantra: "Om Chandraya Namah",
+    imageUrl: chandraImage,
+    category: "Navagraha"
+  },
+  {
+    id: 15,
+    name: "Indra",
+    description: "The King of Gods and ruler of heaven.",
+    longDescription: "Indra is the king of the gods (Devas) and heaven (Svarga) in Hindu mythology. He is the god of rain, thunderstorms, and war. He wields the Vajra (thunderbolt).",
+    mantra: "Om Indraya Namah",
+    imageUrl: indraImage,
+    category: "Vedic God"
+  },
+  {
+    id: 16,
+    name: "Agni",
+    description: "The Fire God, messenger between humans and gods.",
+    longDescription: "Agni is the Hindu god of fire. He accepts sacrifices made by humans and carries them to the gods. He is one of the most important Vedic deities.",
+    mantra: "Om Agnaye Namah",
+    imageUrl: agniImage,
+    category: "Vedic God"
+  },
+  {
+    id: 17,
+    name: "Kartikeya",
+    description: "The God of war and victory, son of Shiva and Parvati.",
+    longDescription: "Kartikeya, also known as Murugan, Skanda, and Subrahmanya, is the Hindu god of war. He is the commander of the army of the gods and was created to defeat the demon Tarakasura.",
+    mantra: "Om Saravanabhavaya Namah",
+    imageUrl: kartikeyaImage,
+    category: "Major Deity",
+    parent: "Shiva"
+  },
+  {
+    id: 18,
+    name: "Kubera",
+    description: "The God of wealth and prosperity.",
+    longDescription: "Kubera is the Lord of wealth and the god-king of the semi-divine Yakshas. He is the guardian of the North direction and is often depicted as a dwarf with a large belly.",
+    mantra: "Om Shreem Hreem Kleem Shreem Kleem Kuberaya Namah",
+    imageUrl: kuberaImage,
+    category: "Other"
+  },
+  {
+    id: 19,
+    name: "Yama",
+    description: "The God of death and justice.",
+    longDescription: "Yama is the god of death and the king of ancestors. He judges the dead and assigns them their due punishment or reward based on their karma.",
+    mantra: "Om Suryaputraya Vidmahe Mahakalaya Dhimahi Tanno Yama Prachodayat",
+    imageUrl: yamaImage,
+    category: "Other"
   },
 ];
+
+// Category definitions for filtering
+export const godCategories = [
+  { id: 'all', name: 'All Gods', description: 'Complete Hindu pantheon' },
+  { id: 'trinity', name: 'Holy Trinity', description: 'Brahma, Vishnu, Shiva' },
+  { id: 'major', name: 'Major Deities', description: 'Most worshipped gods' },
+  { id: 'goddess', name: 'Goddesses', description: 'Divine feminine power' },
+  { id: 'navagraha', name: 'Navagraha', description: 'Nine planetary deities' },
+  { id: 'vedic', name: 'Vedic Gods', description: 'Ancient Vedic deities' },
+  { id: 'other', name: 'Other Deities', description: 'Additional divine beings' }
+];
+
+// Helper functions
+export const getGodsByCategory = (category) => {
+  if (category === 'all') return godsData;
+  if (category === 'trinity') return godsData.filter(g => g.trinity);
+  if (category === 'major') return godsData.filter(g => g.category === 'Major Deity');
+  if (category === 'goddess') return godsData.filter(g => g.category === 'Goddess');
+  if (category === 'navagraha') return godsData.filter(g => g.category === 'Navagraha');
+  if (category === 'vedic') return godsData.filter(g => g.category === 'Vedic God');
+  if (category === 'other') return godsData.filter(g => g.category === 'Other');
+  return godsData;
+};
+
+export const searchGods = (query) => {
+  const lowerQuery = query.toLowerCase();
+  return godsData.filter(god => 
+    god.name.toLowerCase().includes(lowerQuery) ||
+    god.description.toLowerCase().includes(lowerQuery) ||
+    god.longDescription.toLowerCase().includes(lowerQuery)
+  );
+};

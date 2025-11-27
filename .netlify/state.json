@@ -1,0 +1,20 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "South Lyon",
+			"country": {
+				"code": "US",
+				"name": "United States"
+			},
+			"subdivision": {
+				"code": "MI",
+				"name": "Michigan"
+			},
+			"timezone": "America/Detroit",
+			"latitude": 42.4557,
+			"longitude": -83.6542,
+			"postalCode": "48178"
+		},
+		"timestamp": 1756532769479
+	}
+}
