@@ -1,20 +1,18 @@
 .adsense-widget-container {
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
-  padding: 10px;
+  /* Removed debug background and borders for production */
   text-align: center;
-  min-height: 250px;
+  min-height: 250px; /* Pre-allocates space to reduce Cumulative Layout Shift (CLS) */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Align to top */
   align-items: center;
-  border-radius: 8px;
 }
 
 .ad-label {
-  font-size: 0.8rem;
-  color: #888;
+  font-size: 0.7rem;
+  color: #ccc; /* Very subtle text color */
   margin-bottom: 5px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-family: var(--font-body, sans-serif);
 }

@@ -12,14 +12,13 @@ const AdSenseWidget = () => {
 
   return (
     <div className="adsense-widget-container">
-        <p className="ad-label">Advertisement</p>
+        <div className="ad-label">Advertisement</div>
         <ins className="adsbygoogle"
              style={{ display: 'block' }}
              data-ad-client="ca-pub-2625225850696115"
              data-ad-slot="9130931310"
              data-ad-format="auto"
-             data-full-width-responsive="true"
-             data-adtest="on"></ins>
+             data-full-width-responsive="true"></ins>
     </div>
   );
 };
