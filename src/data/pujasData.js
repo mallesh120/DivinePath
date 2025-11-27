@@ -91,7 +91,12 @@ export const pujasData = [
         duration: '3 minutes',
         image: null,
         tips: ['Visualize Lord Ganesha\'s presence', 'Maintain focus and devotion'],
-        mantra: 'Om Gam Ganapataye Namaha'
+        mantra: {
+          sanskrit: 'ॐ गं गणपतये नमः',
+          transliteration: 'Om Gam Ganapataye Namaha',
+          meaning: 'Salutations to Lord Ganesha, the remover of obstacles',
+          repetitions: 11
+        }
       },
       {
         stepNumber: 3,
@@ -100,7 +105,12 @@ export const pujasData = [
         duration: '2 minutes',
         image: null,
         tips: ['Use clean water', 'Sprinkle gently around the idol'],
-        mantra: 'Om Achyutaya Namaha, Om Anantaya Namaha, Om Govindaya Namaha'
+        mantra: {
+          sanskrit: 'ॐ अच्युताय नमः । ॐ अनन्ताय नमः । ॐ गोविन्दाय नमः',
+          transliteration: 'Om Achyutaya Namaha, Om Anantaya Namaha, Om Govindaya Namaha',
+          meaning: 'Salutations to the infallible one, salutations to the infinite one, salutations to the protector of all',
+          repetitions: 3
+        }
       },
       {
         stepNumber: 4,
@@ -109,7 +119,12 @@ export const pujasData = [
         duration: '3 minutes',
         image: null,
         tips: ['Apply with ring finger', 'Use fresh kumkum and chandan'],
-        mantra: 'Om Ganadhyakshaya Namaha'
+        mantra: {
+          sanskrit: 'ॐ गणाध्यक्षाय नमः',
+          transliteration: 'Om Ganadhyakshaya Namaha',
+          meaning: 'Salutations to the Lord of all groups and assemblies',
+          repetitions: 1
+        }
       },
       {
         stepNumber: 5,
@@ -118,7 +133,12 @@ export const pujasData = [
         duration: '5 minutes',
         image: null,
         tips: ['Offer flowers at the feet of the deity', 'Durva grass is very auspicious for Ganesha'],
-        mantra: 'Om Vakratundaya Namaha, Om Ekadantaya Namaha, Om Lambhodaraya Namaha'
+        mantra: {
+          sanskrit: 'ॐ वक्रतुण्डाय नमः । ॐ एकदन्ताय नमः । ॐ लम्बोदराय नमः',
+          transliteration: 'Om Vakratundaya Namaha, Om Ekadantaya Namaha, Om Lambhodaraya Namaha',
+          meaning: 'Salutations to the curved-trunk Lord, salutations to the one-tusked Lord, salutations to the large-bellied Lord',
+          repetitions: 21
+        }
       },
       {
         stepNumber: 6,
@@ -127,7 +147,12 @@ export const pujasData = [
         duration: '3 minutes',
         image: null,
         tips: ['Modak is Ganesha\'s favorite', 'Offer with both hands'],
-        mantra: 'Om Gajananaya Namaha'
+        mantra: {
+          sanskrit: 'ॐ गजाननाय नमः',
+          transliteration: 'Om Gajananaya Namaha',
+          meaning: 'Salutations to the elephant-faced Lord',
+          repetitions: 1
+        }
       },
       {
         stepNumber: 7,
@@ -136,7 +161,12 @@ export const pujasData = [
         duration: '5 minutes',
         image: null,
         tips: ['Perform 3, 5, or 7 circles', 'Sing or play Ganesha Aarti'],
-        mantra: 'Jai Ganesh Jai Ganesh Jai Ganesh Deva, Mata Jaki Parvati Pita Mahadeva'
+        mantra: {
+          sanskrit: 'जय गणेश जय गणेश जय गणेश देवा। माता जाकी पार्वती पिता महादेवा॥',
+          transliteration: 'Jai Ganesh Jai Ganesh Jai Ganesh Deva, Mata Jaki Parvati Pita Mahadeva',
+          meaning: 'Victory to Lord Ganesha, whose mother is Parvati and father is Mahadeva (Shiva)',
+          repetitions: 'Duration of aarti'
+        }
       },
       {
         stepNumber: 8,
@@ -145,7 +175,12 @@ export const pujasData = [
         duration: '5 minutes',
         image: null,
         tips: ['Speak from your heart', 'Express gratitude'],
-        mantra: 'Vakratunda Mahakaya Suryakoti Samaprabha, Nirvighnam Kuru Me Deva Sarva Karyeshu Sarvada'
+        mantra: {
+          sanskrit: 'वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ। निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥',
+          transliteration: 'Vakratunda Mahakaya Suryakoti Samaprabha, Nirvighnam Kuru Me Deva Sarva Karyeshu Sarvada',
+          meaning: 'O Lord with curved trunk and massive body, brilliant as millions of suns, please remove all obstacles from my endeavors always',
+          repetitions: 1
+        }
       },
       {
         stepNumber: 9,
@@ -154,7 +189,12 @@ export const pujasData = [
         duration: '2 minutes',
         image: null,
         tips: ['Keep deity to your right', 'Maintain reverence'],
-        mantra: 'Om Gam Ganapataye Namaha'
+        mantra: {
+          sanskrit: 'ॐ गं गणपतये नमः',
+          transliteration: 'Om Gam Ganapataye Namaha',
+          meaning: 'Salutations to Lord Ganesha',
+          repetitions: 3
+        }
       },
       {
         stepNumber: 10,
@@ -163,7 +203,12 @@ export const pujasData = [
         duration: '3 minutes',
         image: null,
         tips: ['Share prasad with everyone', 'Keep some for yourself'],
-        mantra: 'Om Kshama Prarthana - Om Gajananaya Namaha'
+        mantra: {
+          sanskrit: 'ॐ क्षमा प्रार्थना । ॐ गजाननाय नमः',
+          transliteration: 'Om Kshama Prarthana, Om Gajananaya Namaha',
+          meaning: 'O Lord, please forgive any errors in this worship. Salutations to the elephant-faced Lord',
+          repetitions: 1
+        }
       }
     ],
 
@@ -295,7 +340,12 @@ export const pujasData = [
         description: 'Light ghee diyas in the puja room and around the house, especially at the entrance and corners. Light at least 5 lamps for Lakshmi.',
         duration: '5 minutes',
         tips: ['Use ghee for best results', 'Keep lamps lit throughout the puja'],
-        mantra: 'Om Shreem Mahalakshmyai Namaha'
+        mantra: {
+          sanskrit: 'ॐ श्रीं महालक्ष्म्यै नमः',
+          transliteration: 'Om Shreem Mahalakshmyai Namaha',
+          meaning: 'Salutations to Goddess Mahalakshmi, the great goddess of wealth and prosperity',
+          repetitions: 5
+        }
       },
       {
         stepNumber: 4,
@@ -303,7 +353,12 @@ export const pujasData = [
         description: 'First worship Lord Ganesha for obstacle removal. Offer flowers, kumkum, and chandan to Ganesha.',
         duration: '5 minutes',
         tips: ['Always invoke Ganesha first', 'Offer modak if available'],
-        mantra: 'Om Gam Ganapataye Namaha'
+        mantra: {
+          sanskrit: 'ॐ गं गणपतये नमः',
+          transliteration: 'Om Gam Ganapataye Namaha',
+          meaning: 'Salutations to Lord Ganesha, the remover of obstacles',
+          repetitions: 11
+        }
       },
       {
         stepNumber: 5,
@@ -311,7 +366,12 @@ export const pujasData = [
         description: 'Invoke Goddess Lakshmi by chanting her mantras. Invite her to be present and bless your home.',
         duration: '5 minutes',
         tips: ['Visualize golden light', 'Feel her divine presence'],
-        mantra: 'Om Shreem Hreem Shreem Kamale Kamalalaye Prasida Prasida'
+        mantra: {
+          sanskrit: 'ॐ श्रीं ह्रीं श्रीं कमले कमलालये प्रसीद प्रसीद',
+          transliteration: 'Om Shreem Hreem Shreem Kamale Kamalalaye Prasida Prasida',
+          meaning: 'O Goddess Lakshmi who resides in the lotus, please be pleased and grant your blessings',
+          repetitions: 11
+        }
       },
       {
         stepNumber: 6,
@@ -319,7 +379,12 @@ export const pujasData = [
         description: 'Perform abhishekam (ritual bathing) of Lakshmi idol with panchamrit. Gently pour panchamrit over the idol.',
         duration: '5 minutes',
         tips: ['Perform only if you have a metal idol', 'Wipe gently with clean cloth after'],
-        mantra: 'Om Mahalakshmyai Namaha'
+        mantra: {
+          sanskrit: 'ॐ महालक्ष्म्यै नमः',
+          transliteration: 'Om Mahalakshmyai Namaha',
+          meaning: 'Salutations to the great Goddess Lakshmi',
+          repetitions: 5
+        }
       },
       {
         stepNumber: 7,
@@ -327,7 +392,12 @@ export const pujasData = [
         description: 'Apply kumkum and chandan. Offer lotus flowers or red/yellow flowers while chanting Lakshmi\'s 108 names or mantras.',
         duration: '8 minutes',
         tips: ['Offer flowers with devotion', 'Red and yellow are auspicious colors for Lakshmi'],
-        mantra: 'Om Shreem Mahalakshmyai Namaha (108 times)'
+        mantra: {
+          sanskrit: 'ॐ श्रीं महालक्ष्म्यै नमः',
+          transliteration: 'Om Shreem Mahalakshmyai Namaha',
+          meaning: 'Salutations to Goddess Mahalakshmi',
+          repetitions: 108
+        }
       },
       {
         stepNumber: 8,
@@ -335,7 +405,12 @@ export const pujasData = [
         description: 'Offer kheer, fruits, sweets, and other food items to the goddess. Sprinkle water around the offerings.',
         duration: '5 minutes',
         tips: ['Offer with love and devotion', 'Include variety of sweets'],
-        mantra: 'Om Annapurnayai Namaha'
+        mantra: {
+          sanskrit: 'ॐ अन्नपूर्णायै नमः',
+          transliteration: 'Om Annapurnayai Namaha',
+          meaning: 'Salutations to Goddess Annapurna, the provider of nourishment',
+          repetitions: 1
+        }
       },
       {
         stepNumber: 9,
@@ -343,7 +418,12 @@ export const pujasData = [
         description: 'Perform aarti with camphor or ghee lamp. Sing Lakshmi Aarti while ringing the bell. Circle the lamp in clockwise direction.',
         duration: '7 minutes',
         tips: ['Sing or play recorded aarti', 'Family members can join'],
-        mantra: 'Om Jai Lakshmi Mata, Maiya Jai Lakshmi Mata...'
+        mantra: {
+          sanskrit: 'ॐ जय लक्ष्मी माता। मैया जय लक्ष्मी माता॥',
+          transliteration: 'Om Jai Lakshmi Mata, Maiya Jai Lakshmi Mata',
+          meaning: 'Victory to Mother Lakshmi, O Divine Mother Lakshmi',
+          repetitions: 'Duration of aarti'
+        }
       },
       {
         stepNumber: 10,
@@ -351,7 +431,12 @@ export const pujasData = [
         description: 'Offer flowers with folded hands. Pray for prosperity, health, and happiness for your family.',
         duration: '3 minutes',
         tips: ['Pray from heart', 'Include wishes for others too'],
-        mantra: 'Mahalakshmi Ashtakam or personal prayers'
+        mantra: {
+          sanskrit: 'महालक्ष्मी अष्टकम्',
+          transliteration: 'Mahalakshmi Ashtakam or personal prayers',
+          meaning: 'Eight verses in praise of Goddess Mahalakshmi',
+          repetitions: 1
+        }
       },
       {
         stepNumber: 11,
@@ -359,7 +444,12 @@ export const pujasData = [
         description: 'Place your account books, business records, or wallet at Lakshmi\'s feet for blessings. Touch them to the idol.',
         duration: '2 minutes',
         tips: ['Symbolic gesture for business prosperity', 'Keep them overnight if possible'],
-        mantra: 'Om Shreem Hreem Shreem'
+        mantra: {
+          sanskrit: 'ॐ श्रीं ह्रीं श्रीं',
+          transliteration: 'Om Shreem Hreem Shreem',
+          meaning: 'Sacred beej mantras for prosperity and divine energy',
+          repetitions: 3
+        }
       },
       {
         stepNumber: 12,
@@ -367,7 +457,12 @@ export const pujasData = [
         description: 'Seek forgiveness for errors. Distribute prasad. Keep the lamps lit as long as possible. Ideally keep them burning till late night.',
         duration: '5 minutes',
         tips: ['Share prasad with all', 'Keep altar clean'],
-        mantra: 'Om Shanti Shanti Shanti'
+        mantra: {
+          sanskrit: 'ॐ शान्ति शान्ति शान्तिः',
+          transliteration: 'Om Shanti Shanti Shanti',
+          meaning: 'Om Peace Peace Peace - May peace prevail',
+          repetitions: 3
+        }
       }
     ],
 
@@ -485,7 +580,12 @@ export const pujasData = [
         description: 'Set up the kalash (water pot) with mango leaves and coconut. Place it on a mound of rice. This represents the presence of divine energies.',
         duration: '5 minutes',
         tips: ['Tie red thread around kalash', 'Fill with clean water'],
-        mantra: 'Om Varunaaya Namaha'
+        mantra: {
+          sanskrit: 'ॐ वरुणाय नमः',
+          transliteration: 'Om Varunaaya Namaha',
+          meaning: 'Salutations to Lord Varuna, the deity of water',
+          repetitions: 1
+        }
       },
       {
         stepNumber: 3,
@@ -493,7 +593,12 @@ export const pujasData = [
         description: 'Invoke Lord Ganesha first. Offer flowers, kumkum, and prayers for obstacle-free puja.',
         duration: '5 minutes',
         tips: ['Always begin with Ganesha worship', 'Keep it brief'],
-        mantra: 'Om Gam Ganapataye Namaha'
+        mantra: {
+          sanskrit: 'ॐ गं गणपतये नमः',
+          transliteration: 'Om Gam Ganapataye Namaha',
+          meaning: 'Salutations to Lord Ganesha',
+          repetitions: 11
+        }
       },
       {
         stepNumber: 4,
@@ -501,7 +606,12 @@ export const pujasData = [
         description: 'Take water in your right hand, state your name, gotra (if known), and purpose of the puja. Make your intention clear.',
         duration: '3 minutes',
         tips: ['State your wish clearly', 'Speak with conviction'],
-        mantra: 'Sankalp mantra from priest or book'
+        mantra: {
+          sanskrit: 'सङ्कल्प मन्त्र',
+          transliteration: 'Sankalp mantra as per tradition',
+          meaning: 'I take this vow to perform Satyanarayan Puja for [state purpose]',
+          repetitions: 1
+        }
       },
       {
         stepNumber: 5,
@@ -509,7 +619,12 @@ export const pujasData = [
         description: 'Invoke Lord Satyanarayan by chanting mantras. Place the idol or picture and offer your respects.',
         duration: '5 minutes',
         tips: ['Visualize Lord Vishnu', 'Feel divine presence'],
-        mantra: 'Om Namo Bhagavate Vasudevaya'
+        mantra: {
+          sanskrit: 'ॐ नमो भगवते वासुदेवाय',
+          transliteration: 'Om Namo Bhagavate Vasudevaya',
+          meaning: 'Salutations to Lord Vasudeva (Vishnu), the Supreme Being',
+          repetitions: 108
+        }
       },
       {
         stepNumber: 6,
@@ -517,7 +632,12 @@ export const pujasData = [
         description: 'Perform 16-step worship including offering water, flowers, kumkum, chandan, clothes, sacred thread, incense, lamp, and food.',
         duration: '20 minutes',
         tips: ['Follow traditional sequence', 'Offer each item with mantra'],
-        mantra: 'Various mantras for each offering'
+        mantra: {
+          sanskrit: 'विविध उपचार मन्त्र',
+          transliteration: 'Various mantras for each of the 16 offerings',
+          meaning: 'Specific mantras accompany each offering in the traditional 16-step worship',
+          repetitions: 'One for each offering'
+        }
       },
       {
         stepNumber: 7,
@@ -533,7 +653,12 @@ export const pujasData = [
         description: 'While Katha is being read, someone can prepare the prasad. Mix cooked chana dal with ghee, sugar, cardamom, and dry fruits.',
         duration: '20 minutes',
         tips: ['Cook dal until soft', 'Add generous ghee', 'Keep warm'],
-        mantra: 'Om Namo Narayanaya'
+        mantra: {
+          sanskrit: 'ॐ नमो नारायणाय',
+          transliteration: 'Om Namo Narayanaya',
+          meaning: 'Salutations to Lord Narayana (Vishnu)',
+          repetitions: 'While preparing'
+        }
       },
       {
         stepNumber: 9,
@@ -541,7 +666,12 @@ export const pujasData = [
         description: 'After Katha, offer the prepared prasad to Lord Satyanarayan. Place it in front of the deity with devotion.',
         duration: '5 minutes',
         tips: ['Offer with both hands', 'Include fruits and bananas'],
-        mantra: 'Om Satyanarayanaya Namaha'
+        mantra: {
+          sanskrit: 'ॐ सत्यनारायणाय नमः',
+          transliteration: 'Om Satyanarayanaya Namaha',
+          meaning: 'Salutations to Lord Satyanarayan, the embodiment of truth',
+          repetitions: 1
+        }
       },
       {
         stepNumber: 10,
@@ -549,7 +679,12 @@ export const pujasData = [
         description: 'Perform aarti with ghee lamp and camphor. Sing Satyanarayan Aarti while ringing the bell.',
         duration: '10 minutes',
         tips: ['Everyone should stand for aarti', 'Sing with devotion'],
-        mantra: 'Jai Lakshmi Ramana...'
+        mantra: {
+          sanskrit: 'जय लक्ष्मी रमणा',
+          transliteration: 'Jai Lakshmi Ramana (Vishnu Aarti)',
+          meaning: 'Victory to the consort of Lakshmi (Lord Vishnu)',
+          repetitions: 'Duration of aarti'
+        }
       },
       {
         stepNumber: 11,
@@ -557,7 +692,12 @@ export const pujasData = [
         description: 'Perform pradakshina (circumambulation) and bow down to seek blessings.',
         duration: '5 minutes',
         tips: ['Circle 3 times clockwise', 'Touch feet of deity if idol'],
-        mantra: 'Om Namo Narayanaya'
+        mantra: {
+          sanskrit: 'ॐ नमो नारायणाय',
+          transliteration: 'Om Namo Narayanaya',
+          meaning: 'Salutations to Lord Narayana',
+          repetitions: 3
+        }
       },
       {
         stepNumber: 12,

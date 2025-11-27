@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getPujaById } from '../../data/pujasData';
 import MaterialsChecklist from '../../components/MaterialsChecklist/MaterialsChecklist';
-import usePanchangam from '../../hooks/usePanchangam';
+import { usePanchangam } from '../../hooks/usePanchangam';
 import './PujaGuidePage.css';
 
 const PujaGuidePage = () => {
