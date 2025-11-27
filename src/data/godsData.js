@@ -175,8 +175,18 @@ export const godsData = [
     description: "The elephant-headed god of beginnings, wisdom, and the remover of obstacles.",
     longDescription: "Ganesha is one of the most worshipped deities in the Hindu pantheon. His elephant head symbolizes wisdom and his large belly represents generosity and acceptance. He is invoked before the start of any new venture to ensure its success. He is the son of Shiva and Parvati.",
     mantra: "Om Gam Ganapataye Namaha",
+    mantraAudio: "/audio/mantras/ganesha.mp3",
     imageUrl: ganeshaImage,
-    parent: "Shiva"
+    parent: "Shiva",
+    imageGallery: [ganeshaImage],
+    festivals: [
+      { name: "Ganesh Chaturthi", date: "Aug-Sep", description: "10-day festival celebrating Ganesha's birth" },
+      { name: "Ganesh Jayanti", date: "Jan-Feb", description: "Birthday celebration in Magha month" }
+    ],
+    relatedStories: [
+      { title: "Birth of Ganesha", epic: "Shiva Purana", link: "/literature/puranas/shiva" },
+      { title: "Ganesha and the Moon", epic: "Puranas", link: "/literature/puranas" }
+    ]
   },
   {
     id: 2,
@@ -184,8 +194,18 @@ export const godsData = [
     description: "One of the principal deities, known as the destroyer and transformer.",
     longDescription: "Shiva, part of the Hindu Trinity, is a complex deity who represents destruction for the purpose of re-creation. He is often depicted in deep meditation or dancing the Tandava. His followers are called Shaivites.",
     mantra: "Om Namah Shivaya",
+    mantraAudio: "/audio/mantras/shiva.mp3",
     imageUrl: shivaImage,
-    trinity: true
+    trinity: true,
+    imageGallery: [shivaImage],
+    festivals: [
+      { name: "Maha Shivaratri", date: "Feb-Mar", description: "The great night of Shiva, most important Shiva festival" },
+      { name: "Shravan Somvar", date: "July-Aug", description: "Mondays in the holy month of Shravan" }
+    ],
+    relatedStories: [
+      { title: "Samudra Manthan", epic: "Puranas", link: "/literature/puranas" },
+      { title: "Marriage of Shiva and Parvati", epic: "Shiva Purana", link: "/literature/puranas/shiva" }
+    ]
   },
   {
     id: 3,
@@ -193,8 +213,18 @@ export const godsData = [
     description: "The preserver and protector of the universe. He returns to earth to restore balance.",
     longDescription: "Vishnu is the central god in Vaishnavism and another member of the Hindu Trinity. He is believed to have incarnated in various forms, known as avatars (like Rama and Krishna), to vanquish evil and uphold cosmic order.",
     mantra: "Om Namo Bhagavate Vasudevaya",
+    mantraAudio: "/audio/mantras/vishnu.mp3",
     imageUrl: vishnuImage,
-    trinity: true
+    trinity: true,
+    imageGallery: [vishnuImage],
+    festivals: [
+      { name: "Vaikunta Ekadashi", date: "Dec-Jan", description: "Most important Vishnu festival" },
+      { name: "Vishnu Jayanti", date: "March-April", description: "Appearance day of Lord Vishnu" }
+    ],
+    relatedStories: [
+      { title: "Dashavatara Stories", epic: "Puranas", link: "/literature/puranas" },
+      { title: "Vishnu's Cosmic Sleep", epic: "Vishnu Purana", link: "/literature/puranas/vishnu" }
+    ]
   },
   {
     id: 4,
@@ -202,8 +232,17 @@ export const godsData = [
     description: "The creator god in the Hindu Trinity, responsible for the creation of the universe.",
     longDescription: "Brahma is the creator of the universe and all beings. He is depicted with four heads, representing the four Vedas, and is the source of all knowledge. He is the consort of Saraswati, the goddess of knowledge.",
     mantra: "Om Namo Rajo Gushe Srishti Sthithou Palayithou",
+    mantraAudio: "/audio/mantras/brahma.mp3",
     imageUrl: brahmaImage,
-    trinity: true
+    trinity: true,
+    imageGallery: [brahmaImage],
+    festivals: [
+      { name: "Brahma Jayanti", date: "Oct-Nov", description: "Birthday of Lord Brahma on Kartik Purnima" }
+    ],
+    relatedStories: [
+      { title: "Creation of the Universe", epic: "Brahma Purana", link: "/literature/puranas" },
+      { title: "Why Brahma is Not Worshipped", epic: "Puranas", link: "/literature/puranas" }
+    ]
   },
   {
     id: 5,
@@ -211,8 +250,18 @@ export const godsData = [
     description: "The goddess of wealth, fortune, and prosperity. She is the consort of Vishnu.",
     longDescription: "Lakshmi is the goddess of wealth, fortune, and prosperity. She is the wife and active energy of Vishnu. Her four hands represent the four goals of human life: dharma, kama, artha, and moksha.",
     mantra: "Om Shreem Hreem Shreem Kamale Kamalalaye Praseed Praseed",
+    mantraAudio: "/audio/mantras/lakshmi.mp3",
     imageUrl: lakshmiImage,
-    parent: "Vishnu"
+    parent: "Vishnu",
+    imageGallery: [lakshmiImage],
+    festivals: [
+      { name: "Diwali", date: "Oct-Nov", description: "Festival of lights celebrating Lakshmi" },
+      { name: "Varalakshmi Vratam", date: "July-Aug", description: "Special worship day for married women" }
+    ],
+    relatedStories: [
+      { title: "Birth from Ocean of Milk", epic: "Puranas", link: "/literature/puranas" },
+      { title: "Lakshmi and Vishnu", epic: "Vishnu Purana", link: "/literature/puranas/vishnu" }
+    ]
   },
   {
     id: 6,
@@ -220,8 +269,18 @@ export const godsData = [
     description: "The goddess of fertility, love, and devotion. She is the consort of Shiva.",
     longDescription: "Parvati is the wife of Shiva and the mother of Ganesha and Kartikeya. She represents the gentle and nurturing aspect of the divine feminine energy.",
     mantra: "Sarva Mangala Mangalye Sive Sarvartha Sadhike Saranye Trayambike Gauri Narayani Namostute",
+    mantraAudio: "/audio/mantras/parvati.mp3",
     imageUrl: parvatiImage,
-    parent: "Shiva"
+    parent: "Shiva",
+    imageGallery: [parvatiImage, durgaImage, kaliImage],
+    festivals: [
+      { name: "Teej", date: "July-Aug", description: "Festival celebrating marital bliss" },
+      { name: "Gauri Tritiya", date: "April-May", description: "Worship of Goddess Gauri" }
+    ],
+    relatedStories: [
+      { title: "Parvati's Penance for Shiva", epic: "Shiva Purana", link: "/literature/puranas/shiva" },
+      { title: "Birth of Ganesha", epic: "Puranas", link: "/literature/puranas" }
+    ]
   },
   {
     id: 7,
@@ -229,9 +288,19 @@ export const godsData = [
     description: "The goddess of knowledge, music, art, wisdom, and learning. She is the consort of Brahma.",
     longDescription: "Saraswati is the Hindu goddess of knowledge, music, art, speech, wisdom, and learning. She is a part of the trinity of Saraswati, Lakshmi, and Parvati.",
     mantra: "Om Aim Saraswatyai Namah",
+    mantraAudio: "/audio/mantras/saraswati.mp3",
     imageUrl: saraswatiImage,
     parent: "Brahma",
-    category: "Goddess"
+    category: "Goddess",
+    imageGallery: [saraswatiImage],
+    festivals: [
+      { name: "Vasant Panchami", date: "Jan-Feb", description: "Spring festival celebrating knowledge and arts" },
+      { name: "Saraswati Puja", date: "Jan-Feb", description: "Worship of the goddess of learning" }
+    ],
+    relatedStories: [
+      { title: "Saraswati and the Vedas", epic: "Brahma Purana", link: "/literature/puranas" },
+      { title: "Origin of Saraswati River", epic: "Puranas", link: "/literature/puranas" }
+    ]
   },
   {
     id: 8,
@@ -239,9 +308,20 @@ export const godsData = [
     description: "The monkey god, symbol of devotion, strength, and loyalty.",
     longDescription: "Hanuman is the divine vanara (monkey) companion of Lord Rama. He is revered as a symbol of physical strength, perseverance, devotion, and dedication. He is considered an avatar of Shiva.",
     mantra: "Om Hanumate Namah",
+    mantraAudio: "/audio/mantras/hanuman.mp3",
     imageUrl: hanumanImage,
     category: "Major Deity",
-    parent: "Shiva"
+    parent: "Shiva",
+    imageGallery: [hanumanImage],
+    festivals: [
+      { name: "Hanuman Jayanti", date: "March-April", description: "Birthday celebration of Hanuman" },
+      { name: "Hanuman Chalisa Recitation", date: "Every Tuesday", description: "Weekly devotional practice" }
+    ],
+    relatedStories: [
+      { title: "Hanuman Meets Rama", epic: "Ramayana", link: "/literature/ramayana/kishkindha" },
+      { title: "Hanuman Brings Sanjeevani", epic: "Ramayana", link: "/literature/ramayana/yuddha" },
+      { title: "Hanuman Crosses the Ocean", epic: "Ramayana", link: "/literature/ramayana/sundara" }
+    ]
   },
   {
     id: 9,
@@ -249,9 +329,19 @@ export const godsData = [
     description: "The fierce warrior goddess who combats evil and demonic forces.",
     longDescription: "Durga is a principal form of the Goddess, also known as Devi and Shakti. She is the warrior form of Parvati, created to defeat demons and protect the cosmos. She rides a lion or tiger and has eight to ten arms carrying weapons.",
     mantra: "Om Dum Durgayei Namaha",
+    mantraAudio: "/audio/mantras/durga.mp3",
     imageUrl: durgaImage,
     category: "Goddess",
-    parent: "Shiva"
+    parent: "Shiva",
+    imageGallery: [durgaImage, parvatiImage],
+    festivals: [
+      { name: "Durga Puja", date: "Sep-Oct", description: "Nine-day festival celebrating victory of good over evil" },
+      { name: "Navaratri", date: "Sep-Oct", description: "Nine nights of Goddess worship" }
+    ],
+    relatedStories: [
+      { title: "Slaying of Mahishasura", epic: "Devi Mahatmya", link: "/literature/puranas" },
+      { title: "Birth of Durga", epic: "Devi Bhagavata Purana", link: "/literature/puranas" }
+    ]
   },
   {
     id: 10,
@@ -259,9 +349,19 @@ export const godsData = [
     description: "The fierce form of the Divine Mother associated with time and change.",
     longDescription: "Kali is the fierce aspect of Parvati. She is the goddess of time, change, power, and destruction. Despite her fearsome appearance, she is considered the loving mother goddess who protects her devotees.",
     mantra: "Om Krim Kalikaye Namah",
+    mantraAudio: "/audio/mantras/kali.mp3",
     imageUrl: kaliImage,
     category: "Goddess",
-    parent: "Shiva"
+    parent: "Shiva",
+    imageGallery: [kaliImage, parvatiImage],
+    festivals: [
+      { name: "Kali Puja", date: "Oct-Nov", description: "Celebrated on new moon night of Diwali" },
+      { name: "Kali Jayanti", date: "Nov-Dec", description: "Appearance day of Goddess Kali" }
+    ],
+    relatedStories: [
+      { title: "Kali and Shiva", epic: "Puranas", link: "/literature/puranas" },
+      { title: "Slaying of Raktabija", epic: "Devi Mahatmya", link: "/literature/puranas" }
+    ]
   },
   {
     id: 11,
@@ -269,9 +369,20 @@ export const godsData = [
     description: "The eighth avatar of Vishnu, teacher of the Bhagavad Gita.",
     longDescription: "Krishna is a major deity in Hinduism. He is worshipped as the eighth avatar of Vishnu and also as the supreme God in his own right. He is the god of protection, compassion, tenderness, and love.",
     mantra: "Om Klim Krishnaya Namah",
+    mantraAudio: "/audio/mantras/krishna.mp3",
     imageUrl: krishnaImage,
     category: "Major Deity",
-    parent: "Vishnu"
+    parent: "Vishnu",
+    imageGallery: [krishnaImage, vishnuImage],
+    festivals: [
+      { name: "Krishna Janmashtami", date: "Aug-Sep", description: "Birthday celebration of Lord Krishna" },
+      { name: "Holi", date: "Feb-Mar", description: "Festival of colors associated with Krishna" }
+    ],
+    relatedStories: [
+      { title: "Birth of Krishna", epic: "Bhagavata Purana", link: "/literature/puranas" },
+      { title: "Krishna and Arjuna", epic: "Mahabharata", link: "/literature/mahabharata" },
+      { title: "Lifting Govardhan Hill", epic: "Bhagavata Purana", link: "/literature/puranas" }
+    ]
   },
   {
     id: 12,
@@ -279,9 +390,20 @@ export const godsData = [
     description: "The seventh avatar of Vishnu, hero of the Ramayana.",
     longDescription: "Rama is the seventh avatar of Vishnu and is considered the ideal man and king. His life and journey is one of adherence to dharma despite harsh tests and obstacles. The Ramayana narrates his story.",
     mantra: "Om Shri Ramaya Namah",
+    mantraAudio: "/audio/mantras/rama.mp3",
     imageUrl: ramaImage,
     category: "Major Deity",
-    parent: "Vishnu"
+    parent: "Vishnu",
+    imageGallery: [ramaImage, vishnuImage],
+    festivals: [
+      { name: "Ram Navami", date: "March-April", description: "Birthday of Lord Rama" },
+      { name: "Dussehra", date: "Sep-Oct", description: "Celebrates Rama's victory over Ravana" }
+    ],
+    relatedStories: [
+      { title: "Birth and Childhood", epic: "Ramayana", link: "/literature/ramayana/bala" },
+      { title: "Exile and Sita's Abduction", epic: "Ramayana", link: "/literature/ramayana/aranya" },
+      { title: "War with Ravana", epic: "Ramayana", link: "/literature/ramayana/yuddha" }
+    ]
   },
   {
     id: 13,
@@ -289,8 +411,19 @@ export const godsData = [
     description: "The Sun God, source of light and energy.",
     longDescription: "Surya is the solar deity in Hinduism. He is considered the creator of the universe and the source of all life. He is one of the Navagraha (nine planetary deities).",
     mantra: "Om Suryaya Namah",
+    mantraAudio: "/audio/mantras/surya.mp3",
     imageUrl: suryaImage,
-    category: "Navagraha"
+    category: "Navagraha",
+    imageGallery: [suryaImage],
+    festivals: [
+      { name: "Makar Sankranti", date: "January 14", description: "Sun's transition to Capricorn" },
+      { name: "Chhath Puja", date: "Oct-Nov", description: "Worship of Sun God for prosperity" },
+      { name: "Ratha Saptami", date: "Jan-Feb", description: "Surya's birthday celebration" }
+    ],
+    relatedStories: [
+      { title: "Surya and Karna", epic: "Mahabharata", link: "/literature/mahabharata" },
+      { title: "Surya's Chariot", epic: "Puranas", link: "/literature/puranas" }
+    ]
   },
   {
     id: 14,
@@ -298,8 +431,18 @@ export const godsData = [
     description: "The Moon God, controller of emotions and mind.",
     longDescription: "Chandra is the lunar deity in Hinduism. He is associated with the mind, emotions, and fertility. He is one of the Navagraha (nine planetary deities).",
     mantra: "Om Chandraya Namah",
+    mantraAudio: "/audio/mantras/chandra.mp3",
     imageUrl: chandraImage,
-    category: "Navagraha"
+    category: "Navagraha",
+    imageGallery: [chandraImage],
+    festivals: [
+      { name: "Sharad Purnima", date: "Oct-Nov", description: "Full moon night when moon rays have healing properties" },
+      { name: "Karva Chauth", date: "Oct-Nov", description: "Women fast for husband's longevity, break fast seeing moon" }
+    ],
+    relatedStories: [
+      { title: "Chandra's Curse", epic: "Puranas", link: "/literature/puranas" },
+      { title: "Moon's 27 Wives", epic: "Puranas", link: "/literature/puranas" }
+    ]
   },
   {
     id: 15,
@@ -307,8 +450,17 @@ export const godsData = [
     description: "The King of Gods and ruler of heaven.",
     longDescription: "Indra is the king of the gods (Devas) and heaven (Svarga) in Hindu mythology. He is the god of rain, thunderstorms, and war. He wields the Vajra (thunderbolt).",
     mantra: "Om Indraya Namah",
+    mantraAudio: "/audio/mantras/indra.mp3",
     imageUrl: indraImage,
-    category: "Vedic God"
+    category: "Vedic God",
+    imageGallery: [indraImage],
+    festivals: [
+      { name: "Indra Jatra", date: "Aug-Sep", description: "Festival honoring Indra, especially in Nepal" }
+    ],
+    relatedStories: [
+      { title: "Indra and Vritra", epic: "Rig Veda", link: "/literature/vedas" },
+      { title: "Indra's Pride", epic: "Bhagavata Purana", link: "/literature/puranas" }
+    ]
   },
   {
     id: 16,
@@ -316,8 +468,18 @@ export const godsData = [
     description: "The Fire God, messenger between humans and gods.",
     longDescription: "Agni is the Hindu god of fire. He accepts sacrifices made by humans and carries them to the gods. He is one of the most important Vedic deities.",
     mantra: "Om Agnaye Namah",
+    mantraAudio: "/audio/mantras/agni.mp3",
     imageUrl: agniImage,
-    category: "Vedic God"
+    category: "Vedic God",
+    imageGallery: [agniImage],
+    festivals: [
+      { name: "Holi", date: "Feb-Mar", description: "Holika Dahan involves worship of Agni" },
+      { name: "Agni Nakshatra", date: "Various", description: "Worship during fire-related auspicious days" }
+    ],
+    relatedStories: [
+      { title: "Agni in Vedic Rituals", epic: "Rig Veda", link: "/literature/vedas" },
+      { title: "Birth of Agni", epic: "Puranas", link: "/literature/puranas" }
+    ]
   },
   {
     id: 17,
@@ -325,9 +487,19 @@ export const godsData = [
     description: "The God of war and victory, son of Shiva and Parvati.",
     longDescription: "Kartikeya, also known as Murugan, Skanda, and Subrahmanya, is the Hindu god of war. He is the commander of the army of the gods and was created to defeat the demon Tarakasura.",
     mantra: "Om Saravanabhavaya Namah",
+    mantraAudio: "/audio/mantras/kartikeya.mp3",
     imageUrl: kartikeyaImage,
     category: "Major Deity",
-    parent: "Shiva"
+    parent: "Shiva",
+    imageGallery: [kartikeyaImage],
+    festivals: [
+      { name: "Skanda Shashti", date: "Oct-Nov", description: "Six-day festival celebrating victory over demons" },
+      { name: "Thaipusam", date: "Jan-Feb", description: "Tamil festival honoring Murugan" }
+    ],
+    relatedStories: [
+      { title: "Birth of Kartikeya", epic: "Shiva Purana", link: "/literature/puranas/shiva" },
+      { title: "Slaying of Tarakasura", epic: "Skanda Purana", link: "/literature/puranas" }
+    ]
   },
   {
     id: 18,
@@ -335,8 +507,18 @@ export const godsData = [
     description: "The God of wealth and prosperity.",
     longDescription: "Kubera is the Lord of wealth and the god-king of the semi-divine Yakshas. He is the guardian of the North direction and is often depicted as a dwarf with a large belly.",
     mantra: "Om Shreem Hreem Kleem Shreem Kleem Kuberaya Namah",
+    mantraAudio: "/audio/mantras/kubera.mp3",
     imageUrl: kuberaImage,
-    category: "Other"
+    category: "Other",
+    imageGallery: [kuberaImage],
+    festivals: [
+      { name: "Dhanteras", date: "Oct-Nov", description: "Worship of wealth deities including Kubera" },
+      { name: "Akshaya Tritiya", date: "April-May", description: "Auspicious day for wealth and prosperity" }
+    ],
+    relatedStories: [
+      { title: "Kubera and Ravana", epic: "Ramayana", link: "/literature/ramayana" },
+      { title: "Kubera's Wealth", epic: "Puranas", link: "/literature/puranas" }
+    ]
   },
   {
     id: 19,
@@ -344,8 +526,18 @@ export const godsData = [
     description: "The God of death and justice.",
     longDescription: "Yama is the god of death and the king of ancestors. He judges the dead and assigns them their due punishment or reward based on their karma.",
     mantra: "Om Suryaputraya Vidmahe Mahakalaya Dhimahi Tanno Yama Prachodayat",
+    mantraAudio: "/audio/mantras/yama.mp3",
     imageUrl: yamaImage,
-    category: "Other"
+    category: "Other",
+    imageGallery: [yamaImage],
+    festivals: [
+      { name: "Yama Dwitiya", date: "Oct-Nov", description: "Bhai Dooj - brother-sister festival" },
+      { name: "Naraka Chaturdashi", date: "Oct-Nov", description: "Remembrance of Yama and ancestors" }
+    ],
+    relatedStories: [
+      { title: "Savitri and Satyavan", epic: "Mahabharata", link: "/literature/mahabharata" },
+      { title: "Yama and Nachiketa", epic: "Katha Upanishad", link: "/literature/upanishads" }
+    ]
   },
 ];
 
