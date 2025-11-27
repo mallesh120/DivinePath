@@ -1,4 +1,7 @@
-// Festival dates for 2025 (based on Hindu lunar calendar)
+import { generateFestivalDatesForYear } from '../utils/hinduCalendar';
+
+// Festival dates for 2025-2026 (based on Hindu lunar calendar)
+// This will be used as both static data and templates for calculation
 export const festivalsData = [
   {
     id: 'diwali',
@@ -816,3 +819,65 @@ export const getTodaysFestivals = () => {
 export const getFestivalById = (id) => {
   return festivalsData.find(festival => festival.id === id);
 };
+
+/**
+ * Generate festivals dynamically for a specific year using Hindu calendar calculations
+ */
+export const generateFestivalsForYear = (year) => {
+  const calculatedDates = generateFestivalDatesForYear(year);
+  const generatedFestivals = [];
+  
+  // Map of festival IDs to their calculated date keys
+  const festivalDateMap = {
+    'diwali': 'diwali',
+    'holi': 'holi',
+    'navaratri': 'navratri',
+    'dussehra': 'dussehra',
+    'janmashtami': 'janmashtami',
+    'ganesh-chaturthi': 'ganeshChaturthi',
+    'maha-shivaratri': 'mahaShivaratri',
+    'raksha-bandhan': 'rakshaBandhan',
+    'guru-purnima': 'guruPurnima',
+    'ram-navami': 'ramNavami'
+  };
+  
+  // Find templates for calculable festivals and update their dates
+  festivalsData.forEach(template => {
+    const dateKey = festivalDateMap[template.id];
+    if (dateKey && calculatedDates[dateKey]) {
+      const { date, endDate } = calculatedDates[dateKey];
+      const festivalDate = new Date(date);
+      const monthName = festivalDate.toLocaleString('en-US', { month: 'long' });
+      
+      generatedFestivals.push({
+        ...template,
+        date,
+        endDate,
+        month: monthName,
+        year
+      });
+    }
+  });
+  
+  return generatedFestivals;
+};
+
+/**
+ * Get all festivals including dynamically generated ones for multiple years
+ */
+export const getAllFestivalsWithCalculated = (startYear = 2025, endYear = 2035) => {
+  const allFestivals = [...festivalsData];
+  
+  // Generate festivals for years not in the static data
+  for (let year = startYear; year <= endYear; year++) {
+    const yearExists = festivalsData.some(f => f.date && f.date.startsWith(year.toString()));
+    
+    if (!yearExists) {
+      const generatedForYear = generateFestivalsForYear(year);
+      allFestivals.push(...generatedForYear);
+    }
+  }
+  
+  return sortFestivalsByDate(allFestivals);
+};
+

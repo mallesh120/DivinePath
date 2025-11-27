@@ -1,5 +1,5 @@
-import React, { useState, useMemo, useEffect } from 'react';
-import { festivalsData, sortFestivalsByDate } from '../../data/festivalsData';
+import React, { useState, useMemo } from 'react';
+import { sortFestivalsByDate, getAllFestivalsWithCalculated } from '../../data/festivalsData';
 import FestivalCard from '../../components/FestivalCard/FestivalCard';
 import './FestivalsPage.css';
 
@@ -12,11 +12,14 @@ const FestivalsPage = () => {
   const [calendarMonth, setCalendarMonth] = useState(new Date().getMonth());
   const [selectedDate, setSelectedDate] = useState(null);
 
+  // Get all festivals including calculated ones for 2025-2035
+  const allFestivals = useMemo(() => getAllFestivalsWithCalculated(2025, 2035), []);
+
   // Create a map of festivals by date for calendar display
   const festivalsByDate = useMemo(() => {
     const dateMap = {};
     
-    festivalsData.forEach(festival => {
+    allFestivals.forEach(festival => {
       if (festival.date) {
         const startDate = new Date(festival.date);
         const endDate = festival.endDate ? new Date(festival.endDate) : startDate;
@@ -38,17 +41,17 @@ const FestivalsPage = () => {
     });
     
     return dateMap;
-  }, []);
+  }, [allFestivals]);
 
   // Get unique categories and months
   const categories = useMemo(() => {
-    const cats = ['all', ...new Set(festivalsData.map(f => f.category))];
+    const cats = ['all', ...new Set(allFestivals.map(f => f.category))];
     return cats;
-  }, []);
+  }, [allFestivals]);
 
   const months = useMemo(() => {
     const monthSet = new Set();
-    festivalsData.forEach(f => {
+    allFestivals.forEach(f => {
       // Extract individual months from strings like "October/November"
       f.month.split('/').forEach(m => monthSet.add(m.trim()));
     });
@@ -57,11 +60,11 @@ const FestivalsPage = () => {
                          'July', 'August', 'September', 'October', 'November', 'December'];
       return monthOrder.indexOf(a) - monthOrder.indexOf(b);
     })];
-  }, []);
+  }, [allFestivals]);
 
   // Filter and sort festivals based on selected criteria
   const filteredFestivals = useMemo(() => {
-    let filtered = festivalsData.filter(festival => {
+    let filtered = allFestivals.filter(festival => {
       const categoryMatch = selectedCategory === 'all' || festival.category === selectedCategory;
       const monthMatch = selectedMonth === 'all' || festival.month.includes(selectedMonth);
       return categoryMatch && monthMatch;
@@ -75,7 +78,7 @@ const FestivalsPage = () => {
     }
 
     return filtered;
-  }, [selectedCategory, selectedMonth, sortBy]);
+  }, [selectedCategory, selectedMonth, sortBy, allFestivals]);
 
   return (
     <div className="festivals-page">
@@ -273,7 +276,7 @@ const CalendarView = ({ year, month, onYearChange, onMonthChange, festivalsByDat
             value={year}
             onChange={(e) => onYearChange(Number(e.target.value))}
           >
-            {Array.from({ length: 10 }, (_, i) => new Date().getFullYear() + i).map(y => (
+            {Array.from({ length: 11 }, (_, i) => 2025 + i).map(y => (
               <option key={y} value={y}>{y}</option>
             ))}
           </select>
