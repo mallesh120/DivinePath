@@ -364,6 +364,59 @@
   gap: 15px;
 }
 
+.mantra-text-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.audio-btn {
+  background: linear-gradient(135deg, #ff9933 0%, #ff6b35 100%);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(255, 153, 51, 0.3);
+}
+
+.audio-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 153, 51, 0.4);
+  background: linear-gradient(135deg, #ff6b35 0%, #ff9933 100%);
+}
+
+.audio-btn:active {
+  transform: translateY(0);
+}
+
+.audio-btn.playing {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.audio-btn.playing:hover {
+  background: linear-gradient(135deg, #45a049 0%, #4CAF50 100%);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
 .mantra-sanskrit {
   font-size: 1.3rem;
   font-weight: 600;
@@ -657,5 +710,22 @@
 
   .nav-btn {
     width: 100%;
+  }
+
+  .mantra-text-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .audio-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mantra-sanskrit,
+  .mantra-transliteration,
+  .mantra-meaning {
+    font-size: 1rem;
   }
 }
