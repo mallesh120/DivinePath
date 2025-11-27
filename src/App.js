@@ -9,6 +9,8 @@ import LiteratureLibraryPage from './pages/LiteratureLibraryPage/LiteratureLibra
 import GodDetailPage from './pages/GodDetailPage/GodDetailPage';
 import LiteratureDetailPage from './pages/LiteratureDetailPage/LiteratureDetailPage'; // 1. Import the new page
 import PanchangamPage from './pages/PanchangamPage/PanchangamPage';
+import FestivalsPage from './pages/FestivalsPage/FestivalsPage';
+import FestivalDetailPage from './pages/FestivalDetailPage/FestivalDetailPage';
 import Navbar from './components/Navbar/Navbar';
 import './App.css';
 import StoryPlayerPage from './pages/StoryPlayerPage/StoryPlayerPage'; // Import the new page
@@ -25,6 +27,8 @@ function App() {
           <Route path="/gods" element={<GodsGalleryPage />} />
           <Route path="/gods/:godId" element={<GodDetailPage />} />
           <Route path="/library" element={<LiteratureLibraryPage />} />
+          <Route path="/festivals" element={<FestivalsPage />} />
+          <Route path="/festivals/:festivalId" element={<FestivalDetailPage />} />
           <Route path="/panchangam" element={<PanchangamPage />} />
           {/* This route is for standard literature like the Mahabharata */}
           <Route path="/library/:storyId" element={<LiteratureDetailPage />} />

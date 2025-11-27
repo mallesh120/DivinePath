@@ -1,0 +1,141 @@
+.festivals-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.festivals-page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.festivals-page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.festivals-page-subtitle {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.festivals-filters {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.festival-filter-label {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.festival-filter-select {
+  padding: 10px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #2c3e50;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 180px;
+}
+
+.festival-filter-select:hover {
+  border-color: #667eea;
+}
+
+.festival-filter-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.festivals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.festivals-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #7f8c8d;
+}
+
+.festivals-empty-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.festivals-empty-text {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.festivals-empty-subtext {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+.festivals-count {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+.festivals-count-number {
+  font-weight: 700;
+  color: #667eea;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .festivals-page-title {
+    font-size: 2rem;
+  }
+
+  .festivals-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .festival-filter-select {
+    width: 100%;
+  }
+
+  .festivals-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .festivals-page {
+    padding: 20px 15px;
+  }
+
+  .festivals-page-title {
+    font-size: 1.75rem;
+  }
+
+  .festivals-page-subtitle {
+    font-size: 1rem;
+  }
+}

@@ -48,16 +48,22 @@
 .featured-section {
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 30px;
   flex-wrap: wrap;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .featured-item {
-  flex-basis: 350px;
+  flex: 0 1 350px;
   /* Adding a subtle transition to the cards for a smoother feel on hover */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-item.featured-festival {
+  flex: 1 1 100%;
+  max-width: 100%;
+  margin-top: 20px;
 }
 
 /* We'll make the cards lift up slightly when the user interacts with them */
@@ -66,13 +72,15 @@
 }
 
 .featured-item .god-card, 
-.featured-item .literature-card {
+.featured-item .literature-card,
+.featured-item .festival-card {
   /* Making sure our existing cards use the new shadow variables */
   box-shadow: var(--card-shadow);
 }
 
 .featured-item:hover .god-card,
-.featured-item:hover .literature-card {
+.featured-item:hover .literature-card,
+.featured-item:hover .festival-card {
   box-shadow: var(--card-shadow-hover);
 }
 
@@ -84,4 +92,25 @@
   color: var(--text-primary);
   text-align: center;
   margin-bottom: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .featured-section {
+    max-width: 100%;
+    gap: 20px;
+  }
+
+  .featured-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .featured-item.featured-festival {
+    margin-top: 10px;
+  }
+
+  .featured-title {
+    font-size: 1.5rem;
+  }
 }
