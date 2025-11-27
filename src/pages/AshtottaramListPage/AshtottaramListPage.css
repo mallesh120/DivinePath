@@ -1,0 +1,337 @@
+.ashtottaram-list-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #fef5e7, #ffffff);
+}
+
+/* Hero Section */
+.ashtottaram-hero {
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  color: white;
+  padding: 80px 20px 60px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ashtottaram-hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ashtottaram-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+}
+
+.ashtottaram-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  opacity: 0.95;
+  font-weight: 500;
+}
+
+.ashtottaram-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.9;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Content Section */
+.ashtottaram-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Filter Section */
+.filter-section {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.filter-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 12px 30px;
+  border: 2px solid #ff6b35;
+  background: white;
+  color: #ff6b35;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: #fff5f0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+/* Ashtottaram Grid */
+.ashtottaram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+/* Ashtottaram Card */
+.ashtottaram-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ashtottaram-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.ashtottaram-card-image {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.ashtottaram-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.ashtottaram-card:hover .ashtottaram-card-image img {
+  transform: scale(1.1);
+}
+
+.ashtottaram-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ashtottaram-card:hover .ashtottaram-overlay {
+  opacity: 1;
+}
+
+.view-names-btn {
+  background: white;
+  color: #ff6b35;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transform: translateY(10px);
+  transition: transform 0.3s ease;
+}
+
+.ashtottaram-card:hover .view-names-btn {
+  transform: translateY(0);
+}
+
+.ashtottaram-card-content {
+  padding: 25px;
+}
+
+.ashtottaram-card-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 700;
+}
+
+.ashtottaram-card-title {
+  font-size: 1rem;
+  color: #ff6b35;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.ashtottaram-card-desc {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.ashtottaram-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.names-count {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: #888;
+  font-weight: 500;
+}
+
+.names-count svg {
+  color: #ff6b35;
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Info Section */
+.ashtottaram-info-section {
+  margin-top: 80px;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.ashtottaram-info-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: #333;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.ashtottaram-info-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #ff6b35, #f7931e);
+  border-radius: 2px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.info-card {
+  background: linear-gradient(135deg, #fff5f0, #ffffff);
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid #ffe8dc;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.15);
+  border-color: #ffd4c0;
+}
+
+.info-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #ff6b35;
+  font-weight: 700;
+}
+
+.info-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ashtottaram-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .ashtottaram-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .ashtottaram-description {
+    font-size: 1rem;
+  }
+
+  .ashtottaram-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .filter-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-btn {
+    width: 100%;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ashtottaram-info-section {
+    padding: 40px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ashtottaram-hero {
+    padding: 60px 15px 40px;
+  }
+
+  .ashtottaram-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .ashtottaram-card-image {
+    height: 200px;
+  }
+
+  .ashtottaram-info-section h2 {
+    font-size: 1.8rem;
+  }
+}

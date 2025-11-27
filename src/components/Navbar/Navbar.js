@@ -39,6 +39,11 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
+          <NavLink to="/ashtottaram" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            108 Names
+          </NavLink>
+        </li>
+        <li>
           <NavLink to="/panchangam" className={({ isActive }) => (isActive ? 'active-link' : '')}>
             Panchangam
           </NavLink>
