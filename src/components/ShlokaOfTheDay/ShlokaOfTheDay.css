@@ -2,56 +2,164 @@
 :root {
   --background-color: #fcf9f3;
   --text-primary: #4a4a4a;
-  --accent-primary: #4a90e2;
+  --accent-primary: #ff6600;
+  --accent-secondary: #4a90e2;
   --card-background: #ffffff;
   --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .shloka-widget {
-  background-color: var(--card-background);
+  background: linear-gradient(135deg, #fff9f0 0%, #ffffff 100%);
   color: var(--text-primary);
-  padding: 25px;
-  border-radius: 15px;
+  padding: 30px;
+  border-radius: 20px;
   max-width: 900px;
   margin: 60px auto;
-  box-shadow: var(--card-shadow);
-  border: 1px solid #e0e0e0;
-  text-align: center;
+  box-shadow: 0 8px 30px rgba(255, 102, 0, 0.1);
+  border: 2px solid rgba(255, 102, 0, 0.1);
+}
+
+.shloka-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(255, 102, 0, 0.2);
 }
 
 .shloka-title {
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--accent-primary);
-  margin-top: 0;
-  margin-bottom: 25px;
+  margin: 0;
+}
+
+.shloka-source {
+  font-size: 0.9rem;
+  color: #888;
+  font-style: italic;
+  background: rgba(255, 102, 0, 0.1);
+  padding: 5px 15px;
+  border-radius: 20px;
 }
 
 .shloka-content {
   font-family: 'Lato', sans-serif;
+  text-align: left;
 }
 
 .sanskrit-text {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: var(--text-primary);
-  white-space: pre-wrap; /* This respects the newlines in our data */
-  line-height: 1.8;
+  white-space: pre-wrap;
+  line-height: 2;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: rgba(255, 102, 0, 0.05);
+  border-radius: 10px;
+  border-left: 4px solid var(--accent-primary);
+}
+
+.section-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.transliteration-section,
+.translation-section,
+.meaning-section,
+.explanation-section {
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 10px;
+  background: #fafafa;
 }
 
 .transliteration-text {
   font-size: 1.1rem;
   font-style: italic;
-  color: #888;
+  color: #666;
   white-space: pre-wrap;
-  margin-top: 20px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.translation-text {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  line-height: 1.8;
+  margin: 0;
+  font-weight: 500;
 }
 
 .meaning-text {
   font-size: 1.1rem;
   color: var(--text-primary);
-  margin-top: 25px;
-  padding-top: 25px;
-  border-top: 1px solid #eee;
   line-height: 1.7;
+  margin: 0;
+}
+
+.explanation-text {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.show-more-btn {
+  margin-top: 25px;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, var(--accent-primary) 0%, #ff8833 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.show-more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 102, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .shloka-widget {
+    padding: 20px;
+    margin: 30px 15px;
+  }
+
+  .shloka-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .shloka-title {
+    font-size: 1.5rem;
+  }
+
+  .sanskrit-text {
+    font-size: 1.3rem;
+  }
+
+  .transliteration-text,
+  .translation-text,
+  .meaning-text {
+    font-size: 1rem;
+  }
 }

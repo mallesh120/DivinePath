@@ -8,15 +8,16 @@ import GodsGalleryPage from './pages/GodsGalleryPage/GodsGalleryPage';
 import AllGodsGalleryPage from './pages/AllGodsGalleryPage/AllGodsGalleryPage';
 import LiteratureLibraryPage from './pages/LiteratureLibraryPage/LiteratureLibraryPage';
 import GodDetailPage from './pages/GodDetailPage/GodDetailPage';
-import LiteratureDetailPage from './pages/LiteratureDetailPage/LiteratureDetailPage'; // 1. Import the new page
+import LiteratureDetailPage from './pages/LiteratureDetailPage/LiteratureDetailPage';
 import PanchangamPage from './pages/PanchangamPage/PanchangamPage';
 import FestivalsPage from './pages/FestivalsPage/FestivalsPage';
 import FestivalDetailPage from './pages/FestivalDetailPage/FestivalDetailPage';
 import Navbar from './components/Navbar/Navbar';
 import './App.css';
-import StoryPlayerPage from './pages/StoryPlayerPage/StoryPlayerPage'; // Import the new page
+import StoryPlayerPage from './pages/StoryPlayerPage/StoryPlayerPage';
 import RamayanaTOCPage from './pages/RamayanaPage/RamayanaTOCPage';
 import SidebarLayout from './components/SidebarLayout/SidebarLayout';
+import DailyDevotionalPage from './pages/DailyDevotionalPage/DailyDevotionalPage';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/festivals" element={<FestivalsPage />} />
           <Route path="/festivals/:festivalId" element={<FestivalDetailPage />} />
           <Route path="/panchangam" element={<PanchangamPage />} />
+          <Route path="/devotional" element={<DailyDevotionalPage />} />
           {/* This route is for standard literature like the Mahabharata */}
           <Route path="/library/:storyId" element={<LiteratureDetailPage />} />
 
