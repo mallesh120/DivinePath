@@ -16,18 +16,22 @@ const HomePage = () => {
   // 2. Use state to select a random god, story, and next upcoming festival
   const [featuredGod] = useState(getRandomItem(godsData));
   const [featuredStory] = useState(getRandomItem(literatureData));
-  const [featuredFestival] = useState(() => {
-    const upcoming = getUpcomingFestivals(1);
-    if (upcoming.length > 0) {
-      return upcoming[0];
-    }
-    // If no upcoming festivals, get all festivals sorted by date and return first one
-    const allSorted = sortFestivalsByDate(festivalsData);
-    return allSorted[0];
-  });
+  
+  // Get next 3 upcoming festivals
+  const upcomingFestivals = getUpcomingFestivals(3);
+  const festivalsToShow = upcomingFestivals.length > 0 
+    ? upcomingFestivals 
+    : sortFestivalsByDate(festivalsData).slice(0, 3);
 
   return (
     <div className="home-page">
+      {/* Hero Section */}
+      <div className="home-hero">
+        <h1 className="home-title">🕉️ Welcome to Divine Path</h1>
+        <p className="home-subtitle">
+          Explore the sacred wisdom, festivals, and divine stories of Hinduism
+        </p>
+      </div>
 
       {/* 3. Create the featured content section */}
       <div className="featured-section">
@@ -39,9 +43,20 @@ const HomePage = () => {
           <h2 className="featured-title">Featured Story</h2>
           <LiteratureCard story={featuredStory} />
         </div>
-        <div className="featured-item featured-festival">
-          <h2 className="featured-title">Upcoming Festival</h2>
-          <FestivalCard festival={featuredFestival} compact={true} />
+      </div>
+
+      {/* Upcoming Festivals Section */}
+      <div className="upcoming-festivals-section">
+        <div className="section-header">
+          <h2 className="section-title">📅 Upcoming Festivals</h2>
+          <a href="/festivals" className="view-all-link">
+            View All Festivals →
+          </a>
+        </div>
+        <div className="upcoming-festivals-grid">
+          {festivalsToShow.map(festival => (
+            <FestivalCard key={festival.id} festival={festival} compact={true} />
+          ))}
         </div>
       </div>
     </div>
