@@ -1,67 +1,206 @@
 .gallery-page {
   padding: 40px 50px;
   background-color: var(--background-color);
-  min-height: calc(100vh - 80px); /* Full height minus navbar */
+  min-height: calc(100vh - 80px);
 }
 
 .gallery-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  gap: 20px;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .gallery-title {
   font-family: 'Poppins', sans-serif;
-  font-size: 2.8rem;
-  color: var(--text-primary);
-  margin: 0;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.search-container {
+.gallery-subtitle {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.trimurti-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.trimurti-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
   position: relative;
 }
 
-.search-bar {
-  font-family: 'Lato', sans-serif;
-  font-size: 1rem;
-  padding: 12px 20px 12px 40px; /* Add padding for the icon */
-  width: 300px;
-  border-radius: 30px; /* Pill shape */
-  border: 1px solid #ddd;
-  background-color: var(--card-background);
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+.trimurti-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
-.search-bar:focus {
-  outline: none;
-  border-color: var(--accent-primary);
-  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+.trimurti-card-image-container {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-/* We can add a search icon using a pseudo-element */
-.search-container::before {
-  content: '🔍'; /* Or use an SVG icon for better quality */
+.trimurti-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.trimurti-card:hover .trimurti-card-image {
+  transform: scale(1.05);
+}
+
+.trimurti-card-overlay {
   position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #aaa;
-  font-size: 1rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
+.trimurti-card:hover .trimurti-card-overlay {
+  opacity: 1;
 }
 
-.no-results-message {
-  text-align: center;
+.view-details-text {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+.trimurti-card-content {
+  padding: 30px;
+}
+
+.trimurti-card-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 5px 0;
+}
+
+.trimurti-card-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  color: #667eea;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.trimurti-card-role {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.trimurti-card-description {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.trimurti-card-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.stat-icon {
   font-size: 1.2rem;
-  color: var(--text-primary);
-  padding: 50px;
+}
+
+.stat-label {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.stat-value {
+  color: #667eea;
+  font-weight: 600;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .trimurti-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-page {
+    padding: 30px 20px;
+  }
+
+  .gallery-title {
+    font-size: 2.2rem;
+  }
+
+  .gallery-subtitle {
+    font-size: 1rem;
+  }
+
+  .trimurti-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .trimurti-card-image-container {
+    height: 300px;
+  }
+  
+  .trimurti-card-content {
+    padding: 20px;
+  }
+
+  .trimurti-card-name {
+    font-size: 1.7rem;
+  }
 }

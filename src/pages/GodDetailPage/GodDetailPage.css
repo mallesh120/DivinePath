@@ -1,8 +1,162 @@
 .detail-page {
-  padding: 40px 20px;
-  min-height: calc(100vh - 80px - 80px); /* Full height minus navbar and padding */
+  padding: 20px;
+  min-height: calc(100vh - 80px - 80px);
+  background: linear-gradient(to bottom, #fffbf0 0%, #fff 100%);
 }
 
+/* Back link at top */
+.back-link-top {
+  display: inline-flex;
+  align-items: center;
+  color: #ff6600;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 30px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.back-link-top:hover {
+  color: #ff9933;
+  transform: translateX(-5px);
+}
+
+/* Hero Section for Trinity */
+.detail-hero {
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  display: flex;
+  gap: 50px;
+  background: white;
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border: 3px solid #ffd700;
+  position: relative;
+  overflow: hidden;
+}
+
+.detail-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #ff9933, #ffd700, #ff9933);
+}
+
+.detail-image-container {
+  flex: 0 0 350px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.detail-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border: 3px solid #ffd700;
+}
+
+.detail-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.detail-title {
+  font-size: 4rem;
+  color: #000080;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.detail-subtitle {
+  font-size: 1.4rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.detail-role-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff9933 0%, #ff6600 100%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+  width: fit-content;
+}
+
+.detail-long-description {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.detail-symbols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.symbol-tag {
+  background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+  color: #000080;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  border: 2px solid #80deea;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.symbol-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 128, 128, 0.2);
+}
+
+.detail-mantra-container {
+  margin-top: 30px;
+  padding: 25px 30px;
+  background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+  border-left: 6px solid #ff9933;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(255, 153, 51, 0.15);
+}
+
+.mantra-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #000080;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.mantra-text {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 0;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+/* Regular god container (non-Trinity) */
 .detail-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -12,63 +166,11 @@
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ffd700; /* Gold accent border */
-}
-
-.detail-image-container {
-  flex: 1; /* Take up 1 part of the space */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.detail-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 15px;
-}
-
-.detail-content {
-  flex: 2; /* Take up 2 parts of the space, making it wider */
-  display: flex;
-  flex-direction: column;
-}
-
-.detail-title {
-  font-size: 3.5rem;
-  color: #000080; /* Deep Blue */
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-
-.detail-long-description {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #333;
-}
-
-.detail-mantra-container {
-  margin-top: 30px;
-  padding: 20px;
-  background-color: #e0f7fa; /* Light blue accent */
-  border-left: 5px solid #ff9933; /* Saffron accent */
-  border-radius: 8px;
-}
-
-.mantra-title {
-  margin-top: 0;
-  color: #000080;
-}
-
-.mantra-text {
-  font-size: 1.2rem;
-  font-style: italic;
-  color: #333;
-  margin-bottom: 0;
+  border: 1px solid #ffd700;
 }
 
 .back-link {
-  margin-top: auto; /* Pushes the link to the bottom */
+  margin-top: auto;
   padding-top: 20px;
   color: #ff6600;
   text-decoration: none;
@@ -79,11 +181,284 @@
   text-decoration: underline;
 }
 
-/* For smaller screens */
+/* Divine Family Container - New Layout */
+.divine-family-container {
+  max-width: 1200px;
+  margin: 50px auto 60px;
+}
+
+/* Main Consort Card */
+.main-consort-card {
+  display: flex;
+  gap: 40px;
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border: 3px solid #ffd700;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-consort-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff9933, #ffd700, #ff9933);
+}
+
+.consort-image-container {
+  flex: 0 0 300px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.consort-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border: 3px solid #ffd700;
+}
+
+.consort-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.consort-name {
+  font-size: 2.5rem;
+  color: #000080;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.consort-title {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff9933 0%, #ff6600 100%);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  width: fit-content;
+  box-shadow: 0 3px 10px rgba(255, 102, 0, 0.3);
+}
+
+.consort-description {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.consort-symbols {
+  margin-bottom: 20px;
+}
+
+.consort-symbols strong {
+  color: #000080;
+  font-size: 1.05rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.symbols-list-small {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.symbol-tag-small {
+  background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+  color: #000080;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  border: 2px solid #80deea;
+  font-weight: 500;
+}
+
+.consort-mantra {
+  background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+  padding: 15px 20px;
+  border-radius: 12px;
+  border-left: 4px solid #ff9933;
+}
+
+.consort-mantra strong {
+  color: #000080;
+  font-size: 1.05rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Related Deities Grid (Family + Avatars) */
+.related-deities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.deity-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border: 3px solid #e0f7fa;
+  transition: all 0.3s ease;
+}
+
+.deity-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-color: #ffd700;
+}
+
+.deity-image-wrapper {
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(135deg, #e0f7fa 0%, #fff5e6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid #ffd700;
+  overflow: hidden;
+}
+
+.deity-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.deity-card:hover .deity-image {
+  transform: scale(1.05);
+}
+
+.deity-info {
+  padding: 20px;
+}
+
+.deity-name {
+  font-size: 1.5rem;
+  color: #000080;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.deity-badge {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.family-badge {
+  background: linear-gradient(135deg, #ff9933 0%, #ff6600 100%);
+  color: white;
+  box-shadow: 0 3px 10px rgba(255, 102, 0, 0.3);
+}
+
+.avatar-badge {
+  background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+  color: white;
+  box-shadow: 0 3px 10px rgba(156, 39, 176, 0.3);
+}
+
+.deity-description {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #555;
+  margin: 0;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
+  .detail-hero,
   .detail-container {
     flex-direction: column;
+    padding: 30px 25px;
+    gap: 30px;
   }
+
+  .detail-image-container {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .detail-title {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
+  .detail-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .detail-role-badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .detail-long-description {
+    text-align: center;
+  }
+
+  .detail-symbols {
+    justify-content: center;
+  }
+
+  .main-consort-card {
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  .consort-image-container {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .consort-name {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .consort-title {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .consort-description {
+    text-align: center;
+  }
+
+  .related-deities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.god-not-found {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.2rem;
+  color: #666;
 }
 
 .god-not-found {
