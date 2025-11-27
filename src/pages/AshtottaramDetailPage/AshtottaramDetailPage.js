@@ -85,7 +85,8 @@ const AshtottaramDetailPage = () => {
     return (
       name.sanskrit.toLowerCase().includes(searchLower) ||
       name.transliteration.toLowerCase().includes(searchLower) ||
-      name.meaning.toLowerCase().includes(searchLower)
+      name.meaning.toLowerCase().includes(searchLower) ||
+      (name.mantra && name.mantra.toLowerCase().includes(searchLower))
     );
   });
 
@@ -181,7 +182,7 @@ const AshtottaramDetailPage = () => {
         <div className="names-list">
           {filteredNames.map((name, index) => (
             <div key={index} className="name-card">
-              <div className="name-number">{index + 1}</div>
+              <div className="name-number">{name.number || index + 1}</div>
               <div className="name-content">
                 {(filterView === 'all' || filterView === 'sanskrit') && (
                   <div className="name-row sanskrit-row">
@@ -199,13 +200,26 @@ const AshtottaramDetailPage = () => {
                 {(filterView === 'all' || filterView === 'transliteration') && (
                   <div className="name-row">
                     <span className="name-label">Transliteration:</span>
-                    <span className="name-text">Om {name.transliteration} Namaha</span>
+                    <span className="name-text">{name.transliteration}</span>
                     <button
                       className={`audio-btn ${isPlayingAudio && currentPlayingIndex === `${index}-trans` ? 'playing' : ''}`}
-                      onClick={() => speakText(`Om ${name.transliteration} Namaha`, `${index}-trans`)}
+                      onClick={() => speakText(name.transliteration, `${index}-trans`)}
                       title="Listen to pronunciation"
                     >
                       {isPlayingAudio && currentPlayingIndex === `${index}-trans` ? '⏸️' : '🔊'}
+                    </button>
+                  </div>
+                )}
+                {filterView === 'all' && name.mantra && (
+                  <div className="name-row mantra-row">
+                    <span className="name-label">Mantra:</span>
+                    <span className="name-text mantra">{name.mantra}</span>
+                    <button
+                      className={`audio-btn ${isPlayingAudio && currentPlayingIndex === `${index}-mantra` ? 'playing' : ''}`}
+                      onClick={() => speakText(name.mantra, `${index}-mantra`)}
+                      title="Listen to pronunciation"
+                    >
+                      {isPlayingAudio && currentPlayingIndex === `${index}-mantra` ? '⏸️' : '🔊'}
                     </button>
                   </div>
                 )}
