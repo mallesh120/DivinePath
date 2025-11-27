@@ -1,8 +1,6 @@
 .puja-guide-page {
   min-height: 100vh;
   background: linear-gradient(135deg, #fff9e6 0%, #fffef7 100%);
-  overflow-x: hidden;
-  width: 100%;
 }
 
 .puja-guide-header {
@@ -115,8 +113,6 @@
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 30px;
-  overflow-x: hidden;
-  box-sizing: border-box;
 }
 
 .guide-sidebar {
@@ -310,9 +306,6 @@
   border-radius: 15px;
   padding: 40px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  overflow-x: hidden;
-  box-sizing: border-box;
-  max-width: 100%;
 }
 
 .step-header {
@@ -357,9 +350,6 @@
   padding: 25px;
   border-radius: 12px;
   margin: 30px 0;
-  overflow-x: hidden;
-  max-width: 100%;
-  box-sizing: border-box;
 }
 
 .mantra-title {
