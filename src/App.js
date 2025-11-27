@@ -13,6 +13,7 @@ import PanchangamPage from './pages/PanchangamPage/PanchangamPage';
 import FestivalsPage from './pages/FestivalsPage/FestivalsPage';
 import FestivalDetailPage from './pages/FestivalDetailPage/FestivalDetailPage';
 import Navbar from './components/Navbar/Navbar';
+import PanchangamTopBar from './components/PanchangamTopBar/PanchangamTopBar';
 import './App.css';
 import StoryPlayerPage from './pages/StoryPlayerPage/StoryPlayerPage';
 import RamayanaTOCPage from './pages/RamayanaPage/RamayanaTOCPage';
@@ -22,6 +23,7 @@ import DailyDevotionalPage from './pages/DailyDevotionalPage/DailyDevotionalPage
 function App() {
   return (
     <div className="App">
+      <PanchangamTopBar />
       <Navbar />
       <SidebarLayout>
         <Routes>

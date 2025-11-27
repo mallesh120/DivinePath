@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { usePanchangam } from '../../hooks/usePanchangam';
 import './DailyHoroscope.css';
 
@@ -88,11 +89,10 @@ const DailyHoroscope = () => {
   return (
     <div className="horoscope-widget">
       <div className="horoscope-header">
-        <h2 className="horoscope-title">🌟 Daily Guidance from Panchangam</h2>
-        <div className="horoscope-meta">
-          <span className="horoscope-location">📍 {panchangamData?.meta?.location}</span>
-          <span className="horoscope-day">📅 {panchangamData?.meta?.day}</span>
-        </div>
+        <h2 className="horoscope-title">🌟 Daily Spiritual Guidance</h2>
+        <Link to="/panchangam" className="view-full-panchangam">
+          View Full Panchangam →
+        </Link>
       </div>
 
       <div className="horoscope-content">
@@ -132,57 +132,21 @@ const DailyHoroscope = () => {
           </div>
         </div>
 
-        <div className="timings-section">
-          <h3 className="section-heading">🕉️ Auspicious Times</h3>
-          <div className="timings-grid">
-            {Object.entries(panchangamData?.auspicious || {}).map(([name, time]) => (
-              <div key={name} className="timing-item auspicious">
-                <span className="timing-name">{name}</span>
-                <span className="timing-value">{time}</span>
-              </div>
-            ))}
-          </div>
-
-          <h3 className="section-heading">⚠️ Avoid These Times</h3>
-          <div className="timings-grid">
-            {Object.entries(panchangamData?.inauspicious || {}).map(([name, time]) => (
-              <div key={name} className="timing-item inauspicious">
-                <span className="timing-name">{name}</span>
-                <span className="timing-value">{time}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="solar-info">
-          <div className="solar-item">
-            <span className="solar-icon">🌅</span>
-            <div>
-              <p className="solar-label">Sunrise</p>
-              <p className="solar-value">{panchangamData?.solarLunar?.Sunrise}</p>
+        <div className="timings-highlight">
+          <h3 className="timings-highlight-title">🕉️ Today's Key Timings</h3>
+          <div className="timings-compact">
+            <div className="timing-compact-item auspicious">
+              <span className="timing-compact-label">Best Time:</span>
+              <span className="timing-compact-value">{Object.values(panchangamData?.auspicious || {})[0]}</span>
+            </div>
+            <div className="timing-compact-item inauspicious">
+              <span className="timing-compact-label">Avoid:</span>
+              <span className="timing-compact-value">{Object.values(panchangamData?.inauspicious || {})[0]}</span>
             </div>
           </div>
-          <div className="solar-item">
-            <span className="solar-icon">🌇</span>
-            <div>
-              <p className="solar-label">Sunset</p>
-              <p className="solar-value">{panchangamData?.solarLunar?.Sunset}</p>
-            </div>
-          </div>
-          <div className="solar-item">
-            <span className="solar-icon">🌔</span>
-            <div>
-              <p className="solar-label">Moonrise</p>
-              <p className="solar-value">{panchangamData?.solarLunar?.Moonrise}</p>
-            </div>
-          </div>
-          <div className="solar-item">
-            <span className="solar-icon">🌘</span>
-            <div>
-              <p className="solar-label">Moonset</p>
-              <p className="solar-value">{panchangamData?.solarLunar?.Moonset}</p>
-            </div>
-          </div>
+          <p className="timings-note">
+            For complete auspicious & inauspicious timings, <Link to="/panchangam">view full Panchangam</Link>
+          </p>
         </div>
       </div>
     </div>
