@@ -10,48 +10,35 @@ const FestivalsPage = () => {
   const [viewMode, setViewMode] = useState('list'); // 'list' or 'calendar'
   const [calendarYear, setCalendarYear] = useState(new Date().getFullYear());
   const [calendarMonth, setCalendarMonth] = useState(new Date().getMonth());
-  const [apiFestivals, setApiFestivals] = useState({});
-  const [loadingYears, setLoadingYears] = useState({});
   const [selectedDate, setSelectedDate] = useState(null);
 
-  // Fetch festivals for a specific year from API
-  const fetchFestivalsForYear = async (year) => {
-    if (apiFestivals[year] || loadingYears[year]) return;
-
-    setLoadingYears(prev => ({ ...prev, [year]: true }));
-
-    try {
-      const response = await fetch(
-        `https://divinepath.netlify.app/.netlify/functions/panchangam?date=${year}-01-01`
-      );
-      const data = await response.json();
-      
-      // Store the festivals data for this year
-      setApiFestivals(prev => ({
-        ...prev,
-        [year]: data // Store full year data
-      }));
-    } catch (error) {
-      console.error(`Error fetching festivals for ${year}:`, error);
-    } finally {
-      setLoadingYears(prev => ({ ...prev, [year]: false }));
-    }
-  };
-
-  // Load festivals for current year and next 10 years on mount
-  useEffect(() => {
-    const currentYear = new Date().getFullYear();
-    for (let i = 0; i < 10; i++) {
-      fetchFestivalsForYear(currentYear + i);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  // Create a map of festivals by date for calendar display
+  const festivalsByDate = useMemo(() => {
+    const dateMap = {};
+    
+    festivalsData.forEach(festival => {
+      if (festival.date) {
+        const startDate = new Date(festival.date);
+        const endDate = festival.endDate ? new Date(festival.endDate) : startDate;
+        
+        // Add festival to all dates in its range
+        let currentDate = new Date(startDate);
+        while (currentDate <= endDate) {
+          const dateKey = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(currentDate.getDate()).padStart(2, '0')}`;
+          
+          if (!dateMap[dateKey]) {
+            dateMap[dateKey] = [];
+          }
+          dateMap[dateKey].push(festival);
+          
+          // Move to next day
+          currentDate.setDate(currentDate.getDate() + 1);
+        }
+      }
+    });
+    
+    return dateMap;
   }, []);
-
-  // Load additional years when calendar month changes
-  useEffect(() => {
-    fetchFestivalsForYear(calendarYear);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [calendarYear]);
 
   // Get unique categories and months
   const categories = useMemo(() => {
@@ -181,7 +168,7 @@ const FestivalsPage = () => {
           month={calendarMonth}
           onYearChange={setCalendarYear}
           onMonthChange={setCalendarMonth}
-          apiFestivals={apiFestivals}
+          festivalsByDate={festivalsByDate}
           selectedDate={selectedDate}
           onDateSelect={setSelectedDate}
         />
@@ -191,15 +178,12 @@ const FestivalsPage = () => {
 };
 
 // Calendar View Component
-const CalendarView = ({ year, month, onYearChange, onMonthChange, apiFestivals, selectedDate, onDateSelect }) => {
+const CalendarView = ({ year, month, onYearChange, onMonthChange, festivalsByDate, selectedDate, onDateSelect }) => {
   const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December'];
   
   const daysInMonth = new Date(year, month + 1, 0).getDate();
   const firstDayOfMonth = new Date(year, month, 1).getDay();
-  
-  // Get festivals for the current month
-  const monthFestivals = apiFestivals[year] || {};
   
   const goToPreviousMonth = () => {
     if (month === 0) {
@@ -221,7 +205,7 @@ const CalendarView = ({ year, month, onYearChange, onMonthChange, apiFestivals, 
   
   const getFestivalsForDate = (day) => {
     const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-    return monthFestivals[dateStr] || [];
+    return festivalsByDate[dateStr] || [];
   };
   
   const handleDateClick = (day) => {
