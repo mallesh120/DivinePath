@@ -38,6 +38,11 @@ const Navbar = () => {
             Panchangam
           </NavLink>
         </li>
+        <li>
+          <NavLink to="/devotional" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            Daily Devotional
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

@@ -1,0 +1,158 @@
+.story-widget {
+  background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 30px auto;
+  box-shadow: 0 8px 30px rgba(74, 144, 226, 0.1);
+  border: 2px solid rgba(74, 144, 226, 0.1);
+}
+
+.story-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(74, 144, 226, 0.2);
+}
+
+.story-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #4a90e2;
+  margin: 0;
+}
+
+.story-category {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  background: rgba(74, 144, 226, 0.1);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.story-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 20px 0 15px 0;
+  line-height: 1.4;
+}
+
+.story-excerpt {
+  font-size: 1.1rem;
+  color: #555;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: rgba(74, 144, 226, 0.05);
+  border-left: 4px solid #4a90e2;
+  border-radius: 5px;
+}
+
+.story-content {
+  margin: 25px 0;
+}
+
+.story-paragraph {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.story-moral {
+  margin: 30px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #fff9e6 0%, #fffef7 100%);
+  border-radius: 12px;
+  border-left: 5px solid #ffa500;
+}
+
+.moral-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ff8c00;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 10px 0;
+}
+
+.moral-text {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.7;
+  margin: 0;
+  font-weight: 500;
+}
+
+.story-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.story-tag {
+  background: linear-gradient(135deg, #4a90e2 0%, #5ba3f5 100%);
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
+}
+
+.read-more-btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #4a90e2 0%, #5ba3f5 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.read-more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+}
+
+@media (max-width: 768px) {
+  .story-widget {
+    padding: 20px;
+    margin: 20px 15px;
+  }
+
+  .story-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .story-title {
+    font-size: 1.5rem;
+  }
+
+  .story-name {
+    font-size: 1.2rem;
+  }
+
+  .story-paragraph {
+    font-size: 1rem;
+  }
+}

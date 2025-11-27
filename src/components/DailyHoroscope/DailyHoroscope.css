@@ -1,0 +1,234 @@
+.horoscope-widget {
+  background: linear-gradient(135deg, #fef6e4 0%, #ffffff 100%);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 30px auto;
+  box-shadow: 0 8px 30px rgba(255, 193, 7, 0.15);
+  border: 2px solid rgba(255, 193, 7, 0.2);
+}
+
+.horoscope-header {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(255, 193, 7, 0.3);
+}
+
+.horoscope-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #f57c00;
+  margin: 0 0 15px 0;
+}
+
+.horoscope-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.horoscope-location,
+.horoscope-day {
+  font-size: 0.95rem;
+  color: #666;
+  background: rgba(255, 193, 7, 0.1);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.horoscope-loading,
+.horoscope-error {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.horoscope-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.cosmic-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #ffc107;
+}
+
+.info-icon {
+  font-size: 2.5rem;
+}
+
+.info-details {
+  flex: 1;
+}
+
+.info-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #f57c00;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 5px 0;
+}
+
+.info-value {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.info-time {
+  font-size: 0.85rem;
+  color: #888;
+  font-style: italic;
+}
+
+.guidance-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.guidance-card {
+  padding: 20px;
+  background: linear-gradient(135deg, #fff8e1 0%, #ffffff 100%);
+  border-radius: 12px;
+  border-left: 4px solid #ff9800;
+}
+
+.guidance-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f57c00;
+  margin: 0 0 10px 0;
+}
+
+.guidance-text {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.timings-section {
+  margin-top: 10px;
+}
+
+.section-heading {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #f57c00;
+  margin: 20px 0 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.timings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.timing-item {
+  padding: 12px 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timing-item.auspicious {
+  background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+  border-left: 3px solid #4caf50;
+}
+
+.timing-item.inauspicious {
+  background: linear-gradient(135deg, #ffebee 0%, #fff3e0 100%);
+  border-left: 3px solid #f44336;
+}
+
+.timing-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.timing-value {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.solar-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 20px;
+  background: rgba(255, 193, 7, 0.05);
+  border-radius: 12px;
+}
+
+.solar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.solar-icon {
+  font-size: 2rem;
+}
+
+.solar-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #f57c00;
+  margin: 0;
+}
+
+.solar-value {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .horoscope-widget {
+    padding: 20px;
+    margin: 20px 15px;
+  }
+
+  .horoscope-title {
+    font-size: 1.5rem;
+  }
+
+  .cosmic-info,
+  .guidance-section,
+  .timings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solar-info {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
