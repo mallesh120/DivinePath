@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { festivalsData, sortFestivalsByDate } from '../../data/festivalsData';
 import FestivalCard from '../../components/FestivalCard/FestivalCard';
 import './FestivalsPage.css';
@@ -7,6 +7,51 @@ const FestivalsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedMonth, setSelectedMonth] = useState('all');
   const [sortBy, setSortBy] = useState('date'); // 'date' or 'name'
+  const [viewMode, setViewMode] = useState('list'); // 'list' or 'calendar'
+  const [calendarYear, setCalendarYear] = useState(new Date().getFullYear());
+  const [calendarMonth, setCalendarMonth] = useState(new Date().getMonth());
+  const [apiFestivals, setApiFestivals] = useState({});
+  const [loadingYears, setLoadingYears] = useState({});
+  const [selectedDate, setSelectedDate] = useState(null);
+
+  // Fetch festivals for a specific year from API
+  const fetchFestivalsForYear = async (year) => {
+    if (apiFestivals[year] || loadingYears[year]) return;
+
+    setLoadingYears(prev => ({ ...prev, [year]: true }));
+
+    try {
+      const response = await fetch(
+        `https://divinepath.netlify.app/.netlify/functions/panchangam?date=${year}-01-01`
+      );
+      const data = await response.json();
+      
+      // Store the festivals data for this year
+      setApiFestivals(prev => ({
+        ...prev,
+        [year]: data // Store full year data
+      }));
+    } catch (error) {
+      console.error(`Error fetching festivals for ${year}:`, error);
+    } finally {
+      setLoadingYears(prev => ({ ...prev, [year]: false }));
+    }
+  };
+
+  // Load festivals for current year and next 10 years on mount
+  useEffect(() => {
+    const currentYear = new Date().getFullYear();
+    for (let i = 0; i < 10; i++) {
+      fetchFestivalsForYear(currentYear + i);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Load additional years when calendar month changes
+  useEffect(() => {
+    fetchFestivalsForYear(calendarYear);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [calendarYear]);
 
   // Get unique categories and months
   const categories = useMemo(() => {
@@ -48,7 +93,7 @@ const FestivalsPage = () => {
   return (
     <div className="festivals-page">
       <div className="festivals-page-header">
-        <h1 className="festivals-page-title">Hindu Festivals 2025</h1>
+        <h1 className="festivals-page-title">Hindu Festivals</h1>
         <p className="festivals-page-subtitle">
           Explore the rich tapestry of Hindu festivals celebrating devotion, tradition, 
           and the eternal cycle of seasons. Each festival carries deep spiritual significance 
@@ -56,63 +101,231 @@ const FestivalsPage = () => {
         </p>
       </div>
 
-      <div className="festivals-filters">
-        <span className="festival-filter-label">Filter & Sort:</span>
-        
-        <select
-          className="festival-filter-select"
-          value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
+      {/* View Mode Toggle */}
+      <div className="view-mode-toggle">
+        <button 
+          className={`view-mode-btn ${viewMode === 'list' ? 'active' : ''}`}
+          onClick={() => setViewMode('list')}
         >
-          {categories.map(cat => (
-            <option key={cat} value={cat}>
-              {cat === 'all' ? 'All Categories' : cat}
-            </option>
-          ))}
-        </select>
-
-        <select
-          className="festival-filter-select"
-          value={selectedMonth}
-          onChange={(e) => setSelectedMonth(e.target.value)}
+          📋 List View
+        </button>
+        <button 
+          className={`view-mode-btn ${viewMode === 'calendar' ? 'active' : ''}`}
+          onClick={() => setViewMode('calendar')}
         >
-          {months.map(month => (
-            <option key={month} value={month}>
-              {month === 'all' ? 'All Months' : month}
-            </option>
-          ))}
-        </select>
-
-        <select
-          className="festival-filter-select"
-          value={sortBy}
-          onChange={(e) => setSortBy(e.target.value)}
-        >
-          <option value="date">Sort by Date</option>
-          <option value="name">Sort by Name</option>
-        </select>
+          📅 Calendar View
+        </button>
       </div>
 
-      {filteredFestivals.length > 0 && (
-        <div className="festivals-count">
-          Showing <span className="festivals-count-number">{filteredFestivals.length}</span> festival
-          {filteredFestivals.length !== 1 ? 's' : ''}
-        </div>
-      )}
+      {viewMode === 'list' ? (
+        <>
+          <div className="festivals-filters">
+            <span className="festival-filter-label">Filter & Sort:</span>
+            
+            <select
+              className="festival-filter-select"
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+            >
+              {categories.map(cat => (
+                <option key={cat} value={cat}>
+                  {cat === 'all' ? 'All Categories' : cat}
+                </option>
+              ))}
+            </select>
 
-      {filteredFestivals.length > 0 ? (
-        <div className="festivals-grid">
-          {filteredFestivals.map(festival => (
-            <FestivalCard key={festival.id} festival={festival} />
-          ))}
-        </div>
+            <select
+              className="festival-filter-select"
+              value={selectedMonth}
+              onChange={(e) => setSelectedMonth(e.target.value)}
+            >
+              {months.map(month => (
+                <option key={month} value={month}>
+                  {month === 'all' ? 'All Months' : month}
+                </option>
+              ))}
+            </select>
+
+            <select
+              className="festival-filter-select"
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+            >
+              <option value="date">Sort by Date</option>
+              <option value="name">Sort by Name</option>
+            </select>
+          </div>
+
+          {filteredFestivals.length > 0 && (
+            <div className="festivals-count">
+              Showing <span className="festivals-count-number">{filteredFestivals.length}</span> festival
+              {filteredFestivals.length !== 1 ? 's' : ''}
+            </div>
+          )}
+
+          <div className="festivals-grid">
+            {filteredFestivals.map(festival => (
+              <FestivalCard key={festival.id} festival={festival} />
+            ))}
+          </div>
+
+          {filteredFestivals.length === 0 && (
+            <div className="no-festivals">
+              <p>No festivals found matching your criteria.</p>
+            </div>
+          )}
+        </>
       ) : (
-        <div className="festivals-empty">
-          <div className="festivals-empty-icon">🎭</div>
-          <p className="festivals-empty-text">No festivals found</p>
-          <p className="festivals-empty-subtext">
-            Try adjusting your filters to see more festivals
-          </p>
+        <CalendarView 
+          year={calendarYear}
+          month={calendarMonth}
+          onYearChange={setCalendarYear}
+          onMonthChange={setCalendarMonth}
+          apiFestivals={apiFestivals}
+          selectedDate={selectedDate}
+          onDateSelect={setSelectedDate}
+        />
+      )}
+    </div>
+  );
+};
+
+// Calendar View Component
+const CalendarView = ({ year, month, onYearChange, onMonthChange, apiFestivals, selectedDate, onDateSelect }) => {
+  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'];
+  
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const firstDayOfMonth = new Date(year, month, 1).getDay();
+  
+  // Get festivals for the current month
+  const monthFestivals = apiFestivals[year] || {};
+  
+  const goToPreviousMonth = () => {
+    if (month === 0) {
+      onMonthChange(11);
+      onYearChange(year - 1);
+    } else {
+      onMonthChange(month - 1);
+    }
+  };
+  
+  const goToNextMonth = () => {
+    if (month === 11) {
+      onMonthChange(0);
+      onYearChange(year + 1);
+    } else {
+      onMonthChange(month + 1);
+    }
+  };
+  
+  const getFestivalsForDate = (day) => {
+    const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+    return monthFestivals[dateStr] || [];
+  };
+  
+  const handleDateClick = (day) => {
+    const festivals = getFestivalsForDate(day);
+    if (festivals.length > 0) {
+      onDateSelect({ day, month, year, festivals });
+    }
+  };
+  
+  // Generate calendar days
+  const calendarDays = [];
+  
+  // Empty cells for days before month starts
+  for (let i = 0; i < firstDayOfMonth; i++) {
+    calendarDays.push(<div key={`empty-${i}`} className="calendar-day empty"></div>);
+  }
+  
+  // Days of the month
+  for (let day = 1; day <= daysInMonth; day++) {
+    const festivals = getFestivalsForDate(day);
+    const isToday = day === new Date().getDate() && 
+                    month === new Date().getMonth() && 
+                    year === new Date().getFullYear();
+    const hasFestival = festivals.length > 0;
+    
+    calendarDays.push(
+      <div
+        key={day}
+        className={`calendar-day ${isToday ? 'today' : ''} ${hasFestival ? 'has-festival' : ''}`}
+        onClick={() => handleDateClick(day)}
+      >
+        <div className="calendar-day-number">{day}</div>
+        {hasFestival && (
+          <div className="calendar-day-festivals">
+            {festivals.slice(0, 2).map((festival, idx) => (
+              <div key={idx} className="calendar-festival-dot" title={festival.name}>
+                •
+              </div>
+            ))}
+            {festivals.length > 2 && <div className="calendar-festival-more">+{festivals.length - 2}</div>}
+          </div>
+        )}
+      </div>
+    );
+  }
+  
+  return (
+    <div className="calendar-container">
+      <div className="calendar-header">
+        <button className="calendar-nav-btn" onClick={goToPreviousMonth}>
+          ← Previous
+        </button>
+        <div className="calendar-header-title">
+          <select 
+            className="calendar-month-select"
+            value={month}
+            onChange={(e) => onMonthChange(Number(e.target.value))}
+          >
+            {monthNames.map((name, idx) => (
+              <option key={idx} value={idx}>{name}</option>
+            ))}
+          </select>
+          <select 
+            className="calendar-year-select"
+            value={year}
+            onChange={(e) => onYearChange(Number(e.target.value))}
+          >
+            {Array.from({ length: 10 }, (_, i) => new Date().getFullYear() + i).map(y => (
+              <option key={y} value={y}>{y}</option>
+            ))}
+          </select>
+        </div>
+        <button className="calendar-nav-btn" onClick={goToNextMonth}>
+          Next →
+        </button>
+      </div>
+      
+      <div className="calendar-weekdays">
+        {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
+          <div key={day} className="calendar-weekday">{day}</div>
+        ))}
+      </div>
+      
+      <div className="calendar-grid">
+        {calendarDays}
+      </div>
+      
+      {selectedDate && (
+        <div className="calendar-festival-details">
+          <h3>Festivals on {monthNames[selectedDate.month]} {selectedDate.day}, {selectedDate.year}</h3>
+          <div className="calendar-festival-list">
+            {selectedDate.festivals.map((festival, idx) => (
+              <div key={idx} className="calendar-festival-item">
+                <strong>{festival.name}</strong>
+                {festival.description && <p>{festival.description}</p>}
+              </div>
+            ))}
+          </div>
+          <button 
+            className="calendar-close-details"
+            onClick={() => onDateSelect(null)}
+          >
+            Close
+          </button>
         </div>
       )}
     </div>
