@@ -43,6 +43,18 @@ const FestivalsPage = () => {
     return dateMap;
   }, [allFestivals]);
 
+  // Get min and max years from festival data
+  const { minYear, maxYear } = useMemo(() => {
+    const years = allFestivals
+      .filter(f => f.date)
+      .map(f => new Date(f.date).getFullYear());
+    
+    return {
+      minYear: Math.min(...years),
+      maxYear: Math.max(...years)
+    };
+  }, [allFestivals]);
+
   // Get unique categories and months
   const categories = useMemo(() => {
     const cats = ['all', ...new Set(allFestivals.map(f => f.category))];
@@ -174,6 +186,8 @@ const FestivalsPage = () => {
           festivalsByDate={festivalsByDate}
           selectedDate={selectedDate}
           onDateSelect={setSelectedDate}
+          minYear={minYear}
+          maxYear={maxYear}
         />
       )}
     </div>
@@ -181,7 +195,7 @@ const FestivalsPage = () => {
 };
 
 // Calendar View Component
-const CalendarView = ({ year, month, onYearChange, onMonthChange, festivalsByDate, selectedDate, onDateSelect }) => {
+const CalendarView = ({ year, month, onYearChange, onMonthChange, festivalsByDate, selectedDate, onDateSelect, minYear, maxYear }) => {
   const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December'];
   
@@ -276,7 +290,7 @@ const CalendarView = ({ year, month, onYearChange, onMonthChange, festivalsByDat
             value={year}
             onChange={(e) => onYearChange(Number(e.target.value))}
           >
-            {Array.from({ length: 11 }, (_, i) => 2025 + i).map(y => (
+            {Array.from({ length: maxYear - minYear + 1 }, (_, i) => minYear + i).map(y => (
               <option key={y} value={y}>{y}</option>
             ))}
           </select>
