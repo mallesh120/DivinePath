@@ -2,6 +2,40 @@
 
 This directory contains audio recordings of mantras for each deity.
 
+## Auto-Generate Audio Files (FREE!)
+
+We've created a script to automatically generate all mantra audio files using free text-to-speech:
+
+### Quick Start:
+```bash
+# Generate all 19 mantra files
+node scripts/generate-mantras.js
+```
+
+### For MP3 format (recommended):
+1. Install ffmpeg first:
+   ```bash
+   # macOS
+   brew install ffmpeg
+   
+   # Ubuntu/Debian
+   sudo apt-get install ffmpeg
+   
+   # Windows (use Chocolatey)
+   choco install ffmpeg
+   ```
+
+2. Run the generator:
+   ```bash
+   node scripts/generate-mantras.js
+   ```
+
+### What it does:
+- ✅ Generates audio for all 19 deity mantras
+- ✅ Uses macOS "say" command (Mac) or Google TTS (other OS)
+- ✅ Free, no API key needed
+- ✅ Outputs MP3 files (with ffmpeg) or AIFF files (without)
+
 ## Required Audio Files:
 - ganesha.mp3
 - shiva.mp3
