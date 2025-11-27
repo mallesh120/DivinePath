@@ -1,0 +1,209 @@
+.materials-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.checklist-header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.progress-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.progress-count {
+  font-weight: 600;
+  color: #333;
+}
+
+.progress-percent {
+  font-weight: 700;
+  color: #ff9933;
+  font-size: 1.1rem;
+}
+
+.progress-bar-mini {
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill-mini {
+  height: 100%;
+  background: linear-gradient(90deg, #2ed573 0%, #7bed9f 100%);
+  transition: width 0.4s ease;
+}
+
+.checklist-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.check-all-btn {
+  background: #e8f8f5;
+  color: #2ed573;
+}
+
+.check-all-btn:hover:not(:disabled) {
+  background: #2ed573;
+  color: white;
+}
+
+.uncheck-all-btn {
+  background: #fff5f5;
+  color: #ff4757;
+}
+
+.uncheck-all-btn:hover:not(:disabled) {
+  background: #ff4757;
+  color: white;
+}
+
+.action-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.materials-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.material-category {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.category-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.category-icon {
+  font-size: 1.2rem;
+}
+
+.materials-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.material-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.material-item:hover {
+  background: #f0f4ff;
+  border-color: #ff9933;
+}
+
+.material-item.checked {
+  background: #e8f8f5;
+  border-color: #2ed573;
+}
+
+.material-item.checked .material-name {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.material-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  flex-shrink: 0;
+  accent-color: #2ed573;
+}
+
+.material-name {
+  flex: 1;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.completion-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  background: linear-gradient(135deg, #e8f8f5 0%, #d1f5e8 100%);
+  border-radius: 10px;
+  border: 2px solid #2ed573;
+  animation: fadeInScale 0.5s ease;
+}
+
+.completion-icon {
+  font-size: 1.5rem;
+  animation: sparkle 1s infinite;
+}
+
+.completion-text {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2ed573;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}

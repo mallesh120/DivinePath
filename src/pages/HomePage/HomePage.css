@@ -144,6 +144,22 @@
   gap: 25px;
 }
 
+/* Puja Guide Section */
+.puja-guide-section {
+  max-width: 1200px;
+  margin: 60px auto 40px auto;
+  padding: 40px 20px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+}
+
+.puja-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .featured-section {
@@ -174,6 +190,11 @@
   }
 
   .upcoming-festivals-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .puja-guide-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }

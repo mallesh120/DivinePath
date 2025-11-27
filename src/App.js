@@ -12,6 +12,8 @@ import LiteratureDetailPage from './pages/LiteratureDetailPage/LiteratureDetailP
 import PanchangamPage from './pages/PanchangamPage/PanchangamPage';
 import FestivalsPage from './pages/FestivalsPage/FestivalsPage';
 import FestivalDetailPage from './pages/FestivalDetailPage/FestivalDetailPage';
+import PujaListPage from './pages/PujaListPage/PujaListPage';
+import PujaGuidePage from './pages/PujaGuidePage/PujaGuidePage';
 import Navbar from './components/Navbar/Navbar';
 import PanchangamTopBar from './components/PanchangamTopBar/PanchangamTopBar';
 import './App.css';
@@ -36,6 +38,8 @@ function App() {
           <Route path="/festivals/:festivalId" element={<FestivalDetailPage />} />
           <Route path="/panchangam" element={<PanchangamPage />} />
           <Route path="/devotional" element={<DailyDevotionalPage />} />
+          <Route path="/pujas" element={<PujaListPage />} />
+          <Route path="/puja/:pujaId" element={<PujaGuidePage />} />
           {/* This route is for standard literature like the Mahabharata */}
           <Route path="/library/:storyId" element={<LiteratureDetailPage />} />
 

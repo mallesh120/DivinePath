@@ -5,9 +5,11 @@ import './HomePage.css';
 import { godsData } from '../../data/godsData';
 import { literatureData } from '../../data/literature';
 import { getUpcomingFestivals, festivalsData, sortFestivalsByDate } from '../../data/festivalsData';
+import { pujasData } from '../../data/pujasData';
 import GodCard from '../../components/GodCard/GodCard';
 import LiteratureCard from '../../components/LitratureCard/LiteratureCard';
 import FestivalCard from '../../components/FestivalCard/FestivalCard';
+import PujaCard from '../../components/PujaCard/PujaCard';
 
 // Helper function to get a random item from an array
 const getRandomItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
@@ -22,6 +24,11 @@ const HomePage = () => {
   const festivalsToShow = upcomingFestivals.length > 0 
     ? upcomingFestivals 
     : sortFestivalsByDate(festivalsData).slice(0, 3);
+  
+  // Get popular pujas (Ganesh and Lakshmi)
+  const popularPujas = pujasData.filter(puja => 
+    puja.id === 'ganesh-puja' || puja.id === 'lakshmi-puja'
+  );
 
   return (
     <div className="home-page">
@@ -56,6 +63,21 @@ const HomePage = () => {
         <div className="upcoming-festivals-grid">
           {festivalsToShow.map(festival => (
             <FestivalCard key={festival.id} festival={festival} compact={true} />
+          ))}
+        </div>
+      </div>
+
+      {/* Puja Guide Section */}
+      <div className="puja-guide-section">
+        <div className="section-header">
+          <h2 className="section-title">🪔 Popular Puja Guides</h2>
+          <a href="/pujas" className="view-all-link">
+            View All Pujas →
+          </a>
+        </div>
+        <div className="puja-guide-grid">
+          {popularPujas.map(puja => (
+            <PujaCard key={puja.id} puja={puja} />
           ))}
         </div>
       </div>
