@@ -83,9 +83,38 @@ function findLunarPhaseDate(year, month, phase) {
 }
 
 /**
- * Calculate Diwali date (Kartik Amavasya - New Moon in October/November)
+ * Adjust date for timezone - festival dates can shift by location
+ * @param {Date} date - The base date calculated in UTC
+ * @param {number} longitude - User's longitude for timezone estimation
  */
-export function calculateDiwali(year) {
+function adjustForTimezone(date, longitude = 77.2090) {
+  // Rough timezone offset based on longitude (15 degrees per hour)
+  // This accounts for the fact that lunar events happen at specific times,
+  // and that time translates to different calendar dates in different timezones
+  const timezoneOffset = Math.round(longitude / 15); // Hours from UTC
+  const localOffset = new Date().getTimezoneOffset() / -60; // User's actual timezone
+  
+  // If there's a significant difference (>6 hours), the date might shift
+  const hourDiff = Math.abs(timezoneOffset - localOffset);
+  
+  // For locations far from India, dates might shift by 1 day
+  if (hourDiff > 6) {
+    const adjustedDate = new Date(date);
+    if (longitude < 0) { // Western hemisphere
+      adjustedDate.setDate(adjustedDate.getDate() - 1);
+    }
+    return adjustedDate;
+  }
+  
+  return date;
+}
+
+/**
+ * Calculate Diwali date (Kartik Amavasya - New Moon in October/November)
+ * @param {number} year - Year to calculate for
+ * @param {object} location - Optional location object with longitude
+ */
+export function calculateDiwali(year, location = null) {
   // Diwali occurs on the new moon between mid-October and mid-November
   let day = findLunarPhaseDate(year, 10, 'new'); // Try October first
   
@@ -94,11 +123,13 @@ export function calculateDiwali(year) {
     const novDay = findLunarPhaseDate(year, 11, 'new');
     if (novDay < 20) {
       day = novDay;
-      return new Date(year, 10, day); // November (month 10)
+      const date = new Date(year, 10, day); // November (month 10)
+      return location ? adjustForTimezone(date, location.longitude) : date;
     }
   }
   
-  return new Date(year, 9, day); // October (month 9)
+  const date = new Date(year, 9, day); // October (month 9)
+  return location ? adjustForTimezone(date, location.longitude) : date;
 }
 
 /**
@@ -277,9 +308,9 @@ function formatDate(date) {
  * @param {object} location - Location object with latitude/longitude (optional)
  */
 export function generateFestivalDatesForYear(year, location = null) {
-  // Apply timezone offset if location is provided
-  // For now, the calculations are universal, but can be adjusted based on location
-  const diwali = calculateDiwali(year);
+  // Pass location to Diwali which has timezone adjustment
+  // Other festivals can be updated similarly as needed
+  const diwali = calculateDiwali(year, location);
   const navratri = calculateNavratri(year);
   const dussehra = calculateDussehra(year);
   

@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { sortFestivalsByDate, getAllFestivalsWithCalculated } from '../../data/festivalsData';
 import FestivalCard from '../../components/FestivalCard/FestivalCard';
-import { getLocationForFestivals, INDIAN_CITIES, setUserLocation } from '../../utils/locationService';
+import { getLocationForFestivals, WORLD_CITIES, setUserLocation } from '../../utils/locationService';
 import './FestivalsPage.css';
 
 const FestivalsPage = () => {
@@ -108,13 +108,13 @@ const FestivalsPage = () => {
   }, [selectedCategory, selectedMonth, sortBy, allFestivals]);
 
   const handleLocationChange = async (city) => {
-    const selectedCity = INDIAN_CITIES.find(c => c.name === city);
+    const selectedCity = WORLD_CITIES.find(c => c.name === city);
     if (selectedCity) {
       const location = setUserLocation(
         selectedCity.latitude,
         selectedCity.longitude,
         selectedCity.name,
-        'India'
+        selectedCity.country
       );
       setUserLocationState(location);
       setShowLocationPicker(false);
@@ -136,7 +136,7 @@ const FestivalsPage = () => {
           <div className="location-display">
             <span className="location-icon">📍</span>
             <span className="location-text">
-              Showing festivals for: <strong>{userLocation.city}</strong>
+              Showing festivals for: <strong>{userLocation.city}, {userLocation.country}</strong>
             </span>
             <button 
               className="change-location-btn"
@@ -150,19 +150,34 @@ const FestivalsPage = () => {
         {/* Location Picker Dropdown */}
         {showLocationPicker && (
           <div className="location-picker">
-            <h3>Select Your City</h3>
-            <div className="city-grid">
-              {INDIAN_CITIES.map(city => (
-                <button
-                  key={city.name}
-                  className={`city-option ${userLocation?.city === city.name ? 'selected' : ''}`}
-                  onClick={() => handleLocationChange(city.name)}
-                >
-                  {city.name}
-                  <span className="city-region">{city.region}</span>
-                </button>
-              ))}
-            </div>
+            <h3>Select Your City Worldwide</h3>
+            <p className="location-picker-subtitle">
+              Festival dates are calculated based on your location's timezone
+            </p>
+            
+            {/* Group cities by region */}
+            {['India', 'Americas', 'Europe', 'Asia-Pacific', 'Middle East', 'South Asia', 'Africa'].map(region => {
+              const regionCities = WORLD_CITIES.filter(city => city.region === region);
+              if (regionCities.length === 0) return null;
+              
+              return (
+                <div key={region} className="city-region-group">
+                  <h4 className="region-heading">{region}</h4>
+                  <div className="city-grid">
+                    {regionCities.map(city => (
+                      <button
+                        key={city.name}
+                        className={`city-option ${userLocation?.city === city.name ? 'selected' : ''}`}
+                        onClick={() => handleLocationChange(city.name)}
+                      >
+                        {city.name}
+                        <span className="city-country">{city.country}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         )}
       </div>
