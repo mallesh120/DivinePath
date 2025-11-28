@@ -1,6 +1,7 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { sortFestivalsByDate, getAllFestivalsWithCalculated } from '../../data/festivalsData';
 import FestivalCard from '../../components/FestivalCard/FestivalCard';
+import { getLocationForFestivals, INDIAN_CITIES, setUserLocation } from '../../utils/locationService';
 import './FestivalsPage.css';
 
 const FestivalsPage = () => {
@@ -11,9 +12,23 @@ const FestivalsPage = () => {
   const [calendarYear, setCalendarYear] = useState(new Date().getFullYear());
   const [calendarMonth, setCalendarMonth] = useState(new Date().getMonth());
   const [selectedDate, setSelectedDate] = useState(null);
+  const [userLocation, setUserLocationState] = useState(null);
+  const [showLocationPicker, setShowLocationPicker] = useState(false);
 
-  // Get all festivals including calculated ones for 2025-2035
-  const allFestivals = useMemo(() => getAllFestivalsWithCalculated(2025, 2035), []);
+  // Get user location on mount
+  useEffect(() => {
+    const loadLocation = async () => {
+      const location = await getLocationForFestivals();
+      setUserLocationState(location);
+    };
+    loadLocation();
+  }, []);
+
+  // Get all festivals including calculated ones for 2020-2120
+  const allFestivals = useMemo(() => 
+    getAllFestivalsWithCalculated(2020, 2120, userLocation), 
+    [userLocation]
+  );
 
   // Create a map of festivals by date for calendar display
   const festivalsByDate = useMemo(() => {
@@ -92,6 +107,20 @@ const FestivalsPage = () => {
     return filtered;
   }, [selectedCategory, selectedMonth, sortBy, allFestivals]);
 
+  const handleLocationChange = async (city) => {
+    const selectedCity = INDIAN_CITIES.find(c => c.name === city);
+    if (selectedCity) {
+      const location = setUserLocation(
+        selectedCity.latitude,
+        selectedCity.longitude,
+        selectedCity.name,
+        'India'
+      );
+      setUserLocationState(location);
+      setShowLocationPicker(false);
+    }
+  };
+
   return (
     <div className="festivals-page">
       <div className="festivals-page-header">
@@ -101,6 +130,41 @@ const FestivalsPage = () => {
           and the eternal cycle of seasons. Each festival carries deep spiritual significance 
           and brings communities together in celebration.
         </p>
+        
+        {/* Location Display */}
+        {userLocation && (
+          <div className="location-display">
+            <span className="location-icon">📍</span>
+            <span className="location-text">
+              Showing festivals for: <strong>{userLocation.city}</strong>
+            </span>
+            <button 
+              className="change-location-btn"
+              onClick={() => setShowLocationPicker(!showLocationPicker)}
+            >
+              Change Location
+            </button>
+          </div>
+        )}
+        
+        {/* Location Picker Dropdown */}
+        {showLocationPicker && (
+          <div className="location-picker">
+            <h3>Select Your City</h3>
+            <div className="city-grid">
+              {INDIAN_CITIES.map(city => (
+                <button
+                  key={city.name}
+                  className={`city-option ${userLocation?.city === city.name ? 'selected' : ''}`}
+                  onClick={() => handleLocationChange(city.name)}
+                >
+                  {city.name}
+                  <span className="city-region">{city.region}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
       {/* View Mode Toggle */}

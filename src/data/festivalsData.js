@@ -822,9 +822,11 @@ export const getFestivalById = (id) => {
 
 /**
  * Generate festivals dynamically for a specific year using Hindu calendar calculations
+ * @param {number} year - Year to generate festivals for
+ * @param {object} location - Location object with latitude/longitude (optional)
  */
-export const generateFestivalsForYear = (year) => {
-  const calculatedDates = generateFestivalDatesForYear(year);
+export const generateFestivalsForYear = (year, location = null) => {
+  const calculatedDates = generateFestivalDatesForYear(year, location);
   const generatedFestivals = [];
   
   // Map of festival IDs to their calculated date keys
@@ -864,8 +866,11 @@ export const generateFestivalsForYear = (year) => {
 
 /**
  * Get all festivals including dynamically generated ones for multiple years
+ * @param {number} startYear - Start year
+ * @param {number} endYear - End year
+ * @param {object} location - Location object with latitude/longitude (optional)
  */
-export const getAllFestivalsWithCalculated = (startYear = 2025, endYear = 2035) => {
+export const getAllFestivalsWithCalculated = (startYear = 2025, endYear = 2035, location = null) => {
   const allFestivals = [...festivalsData];
   
   // Generate festivals for years not in the static data
@@ -873,7 +878,7 @@ export const getAllFestivalsWithCalculated = (startYear = 2025, endYear = 2035) 
     const yearExists = festivalsData.some(f => f.date && f.date.startsWith(year.toString()));
     
     if (!yearExists) {
-      const generatedForYear = generateFestivalsForYear(year);
+      const generatedForYear = generateFestivalsForYear(year, location);
       allFestivals.push(...generatedForYear);
     }
   }

@@ -273,8 +273,12 @@ function formatDate(date) {
 
 /**
  * Generate all Hindu festival dates for a given year
+ * @param {number} year - The year to calculate festivals for
+ * @param {object} location - Location object with latitude/longitude (optional)
  */
-export function generateFestivalDatesForYear(year) {
+export function generateFestivalDatesForYear(year, location = null) {
+  // Apply timezone offset if location is provided
+  // For now, the calculations are universal, but can be adjusted based on location
   const diwali = calculateDiwali(year);
   const navratri = calculateNavratri(year);
   const dussehra = calculateDussehra(year);
