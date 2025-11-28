@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { godsData, trimurtiData } from '../../data/godsData';
+import { ashtottaramData } from '../../data/ashtottaramData';
 import ImageGallery from '../../components/ImageGallery/ImageGallery';
 import './GodDetailPage.css';
 
@@ -24,6 +25,9 @@ const GodDetailPage = () => {
       </div>
     );
   }
+
+  // Get ashtottaram data if available
+  const ashtottaram = ashtottaramData[godId] || ashtottaramData[god.id];
 
   return (
     <div className="detail-page">
@@ -83,6 +87,32 @@ const GodDetailPage = () => {
                     <p className="festival-description">{festival.description}</p>
                   </div>
                 ))}
+              </div>
+            </div>
+          )}
+
+          {/* Ashtottaram Section */}
+          {ashtottaram && (
+            <div className="ashtottaram-section">
+              <h2 className="section-title">108 Names (Ashtottara Shatanamavali)</h2>
+              <div className="ashtottaram-preview">
+                <p className="ashtottaram-description">{ashtottaram.description}</p>
+                <div className="ashtottaram-sample">
+                  <h4>Sample Names:</h4>
+                  <div className="sample-names-grid">
+                    {ashtottaram.names.slice(0, 6).map((name, index) => (
+                      <div key={index} className="sample-name-card">
+                        <div className="sample-number">{name.number}</div>
+                        <div className="sample-name-sanskrit">{name.sanskrit}</div>
+                        <div className="sample-name-transliteration">{name.transliteration}</div>
+                        <div className="sample-name-meaning">{name.meaning}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <Link to={`/ashtottaram/${ashtottaram.id}`} className="view-all-names-btn">
+                  View All 108 Names with Audio →
+                </Link>
               </div>
             </div>
           )}
@@ -216,6 +246,32 @@ const GodDetailPage = () => {
                     <p className="festival-description">{festival.description}</p>
                   </div>
                 ))}
+              </div>
+            </div>
+          )}
+
+          {/* Ashtottaram Section */}
+          {ashtottaram && (
+            <div className="ashtottaram-section">
+              <h2 className="section-title">108 Names (Ashtottara Shatanamavali)</h2>
+              <div className="ashtottaram-preview">
+                <p className="ashtottaram-description">{ashtottaram.description}</p>
+                <div className="ashtottaram-sample">
+                  <h4>Sample Names:</h4>
+                  <div className="sample-names-grid">
+                    {ashtottaram.names.slice(0, 6).map((name, index) => (
+                      <div key={index} className="sample-name-card">
+                        <div className="sample-number">{name.number}</div>
+                        <div className="sample-name-sanskrit">{name.sanskrit}</div>
+                        <div className="sample-name-transliteration">{name.transliteration}</div>
+                        <div className="sample-name-meaning">{name.meaning}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <Link to={`/ashtottaram/${ashtottaram.id}`} className="view-all-names-btn">
+                  View All 108 Names with Audio →
+                </Link>
               </div>
             </div>
           )}

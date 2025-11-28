@@ -56,9 +56,14 @@ const HomePage = () => {
       <div className="upcoming-festivals-section">
         <div className="section-header">
           <h2 className="section-title">📅 Upcoming Festivals</h2>
-          <a href="/festivals" className="view-all-link">
-            View All Festivals →
-          </a>
+          <div className="section-links">
+            <a href="/festivals" className="view-all-link">
+              View Festivals →
+            </a>
+            <a href="/festivals" className="view-all-link">
+              All Festivals →
+            </a>
+          </div>
         </div>
         <div className="upcoming-festivals-grid">
           {festivalsToShow.map(festival => (
