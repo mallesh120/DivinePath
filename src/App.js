@@ -22,7 +22,6 @@ import './App.css';
 import StoryPlayerPage from './pages/StoryPlayerPage/StoryPlayerPage';
 import RamayanaTOCPage from './pages/RamayanaPage/RamayanaTOCPage';
 import SidebarLayout from './components/SidebarLayout/SidebarLayout';
-import DailyDevotionalPage from './pages/DailyDevotionalPage/DailyDevotionalPage';
 
 function App() {
   return (
@@ -39,7 +38,6 @@ function App() {
           <Route path="/festivals" element={<FestivalsPage />} />
           <Route path="/festivals/:festivalId" element={<FestivalDetailPage />} />
           <Route path="/calendar" element={<HinduCalendarPage />} />
-          <Route path="/devotional" element={<DailyDevotionalPage />} />
           <Route path="/pujas" element={<PujaListPage />} />
           <Route path="/puja/:pujaId" element={<PujaGuidePage />} />
           <Route path="/ashtottaram" element={<AshtottaramListPage />} />
