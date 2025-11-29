@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './HomePage.css';
 
 // 1. Import our data and card components
@@ -57,12 +58,12 @@ const HomePage = () => {
         <div className="section-header">
           <h2 className="section-title">📅 Upcoming Festivals</h2>
           <div className="section-links">
-            <a href="/festivals" className="view-all-link">
+            <Link to="/festivals" className="view-all-link">
               View Festivals →
-            </a>
-            <a href="/festivals" className="view-all-link">
+            </Link>
+            <Link to="/festivals" className="view-all-link">
               All Festivals →
-            </a>
+            </Link>
           </div>
         </div>
         <div className="upcoming-festivals-grid">
@@ -76,9 +77,9 @@ const HomePage = () => {
       <div className="puja-guide-section">
         <div className="section-header">
           <h2 className="section-title">🪔 Popular Puja Guides</h2>
-          <a href="/pujas" className="view-all-link">
+          <Link to="/pujas" className="view-all-link">
             View All Pujas →
-          </a>
+          </Link>
         </div>
         <div className="puja-guide-grid">
           {popularPujas.map(puja => (

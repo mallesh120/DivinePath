@@ -7,6 +7,7 @@ import './FestivalsPage.css';
 const FestivalsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedMonth, setSelectedMonth] = useState('all');
+  const [selectedYear, setSelectedYear] = useState(new Date().getFullYear()); // Add year filter
   const [sortBy, setSortBy] = useState('date'); // 'date' or 'name'
   const [viewMode, setViewMode] = useState('list'); // 'list' or 'calendar'
   const [calendarYear, setCalendarYear] = useState(new Date().getFullYear());
@@ -89,12 +90,24 @@ const FestivalsPage = () => {
     })];
   }, [allFestivals]);
 
+  // Get available years from festival data
+  const availableYears = useMemo(() => {
+    const years = new Set();
+    allFestivals.forEach(f => {
+      if (f.date) {
+        years.add(new Date(f.date).getFullYear());
+      }
+    });
+    return Array.from(years).sort((a, b) => a - b);
+  }, [allFestivals]);
+
   // Filter and sort festivals based on selected criteria
   const filteredFestivals = useMemo(() => {
     let filtered = allFestivals.filter(festival => {
       const categoryMatch = selectedCategory === 'all' || festival.category === selectedCategory;
       const monthMatch = selectedMonth === 'all' || festival.month.includes(selectedMonth);
-      return categoryMatch && monthMatch;
+      const yearMatch = !festival.date || new Date(festival.date).getFullYear() === selectedYear;
+      return categoryMatch && monthMatch && yearMatch;
     });
 
     // Sort festivals
@@ -105,7 +118,7 @@ const FestivalsPage = () => {
     }
 
     return filtered;
-  }, [selectedCategory, selectedMonth, sortBy, allFestivals]);
+  }, [selectedCategory, selectedMonth, selectedYear, sortBy, allFestivals]);
 
   const handleLocationChange = async (city) => {
     const selectedCity = WORLD_CITIES.find(c => c.name === city);
@@ -205,6 +218,18 @@ const FestivalsPage = () => {
             
             <select
               className="festival-filter-select"
+              value={selectedYear}
+              onChange={(e) => setSelectedYear(Number(e.target.value))}
+            >
+              {availableYears.map(year => (
+                <option key={year} value={year}>
+                  {year}
+                </option>
+              ))}
+            </select>
+
+            <select
+              className="festival-filter-select"
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
             >
@@ -240,7 +265,7 @@ const FestivalsPage = () => {
           {filteredFestivals.length > 0 && (
             <div className="festivals-count">
               Showing <span className="festivals-count-number">{filteredFestivals.length}</span> festival
-              {filteredFestivals.length !== 1 ? 's' : ''}
+              {filteredFestivals.length !== 1 ? 's' : ''} for {selectedYear}
             </div>
           )}
 
