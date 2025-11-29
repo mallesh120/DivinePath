@@ -9,9 +9,9 @@ import AllGodsGalleryPage from './pages/AllGodsGalleryPage/AllGodsGalleryPage';
 import LiteratureLibraryPage from './pages/LiteratureLibraryPage/LiteratureLibraryPage';
 import GodDetailPage from './pages/GodDetailPage/GodDetailPage';
 import LiteratureDetailPage from './pages/LiteratureDetailPage/LiteratureDetailPage';
-import PanchangamPage from './pages/PanchangamPage/PanchangamPage';
 import FestivalsPage from './pages/FestivalsPage/FestivalsPage';
 import FestivalDetailPage from './pages/FestivalDetailPage/FestivalDetailPage';
+import HinduCalendarPage from './pages/HinduCalendarPage/HinduCalendarPage';
 import PujaListPage from './pages/PujaListPage/PujaListPage';
 import PujaGuidePage from './pages/PujaGuidePage/PujaGuidePage';
 import AshtottaramListPage from './pages/AshtottaramListPage/AshtottaramListPage';
@@ -38,7 +38,7 @@ function App() {
           <Route path="/library" element={<LiteratureLibraryPage />} />
           <Route path="/festivals" element={<FestivalsPage />} />
           <Route path="/festivals/:festivalId" element={<FestivalDetailPage />} />
-          <Route path="/panchangam" element={<PanchangamPage />} />
+          <Route path="/calendar" element={<HinduCalendarPage />} />
           <Route path="/devotional" element={<DailyDevotionalPage />} />
           <Route path="/pujas" element={<PujaListPage />} />
           <Route path="/puja/:pujaId" element={<PujaGuidePage />} />

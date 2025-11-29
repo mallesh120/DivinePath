@@ -90,7 +90,7 @@ const DailyHoroscope = () => {
     <div className="horoscope-widget">
       <div className="horoscope-header">
         <h2 className="horoscope-title">🌟 Daily Spiritual Guidance</h2>
-        <Link to="/panchangam" className="view-full-panchangam">
+        <Link to="/calendar" className="view-full-panchangam">
           View Full Panchangam →
         </Link>
       </div>
@@ -145,7 +145,7 @@ const DailyHoroscope = () => {
             </div>
           </div>
           <p className="timings-note">
-            For complete auspicious & inauspicious timings, <Link to="/panchangam">view full Panchangam</Link>
+            For complete auspicious & inauspicious timings, <Link to="/calendar">view full Panchangam</Link>
           </p>
         </div>
       </div>
