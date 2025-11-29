@@ -13,6 +13,10 @@ const HinduCalendarPage = () => {
   const [calendarMonth, setCalendarMonth] = useState(currentDate.getMonth());
   const [selectedDate, setSelectedDate] = useState(null);
   const [showTodayPanchangam, setShowTodayPanchangam] = useState(true);
+  const [viewMode, setViewMode] = useState('detailed'); // 'detailed' or 'compact'
+  const [filterMode, setFilterMode] = useState('all'); // 'all', 'festivals', 'auspicious', 'fasting'
+  const [searchQuery, setSearchQuery] = useState('');
+  const [showDatePicker, setShowDatePicker] = useState(false);
 
   // Get today's full Panchangam data
   const { loading: panchangamLoading, error: panchangamError, panchangamData } = usePanchangam();
@@ -39,6 +43,73 @@ const HinduCalendarPage = () => {
     });
     return grouped;
   }, [allFestivals]);
+
+  // Calculate month statistics
+  const monthStats = useMemo(() => {
+    const daysInMonth = new Date(calendarYear, calendarMonth + 1, 0).getDate();
+    let auspiciousDays = 0;
+    let festivalsCount = 0;
+    let ekadashiDates = [];
+
+    for (let day = 1; day <= daysInMonth; day++) {
+      const panchang = calculateBasicPanchang(calendarYear, calendarMonth, day);
+      if (panchang.auspiciousness >= 4) auspiciousDays++;
+      if (panchang.isEkadashi) ekadashiDates.push(day);
+      
+      const dateStr = `${calendarYear}-${String(calendarMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+      if (festivalsByDate[dateStr]) {
+        festivalsCount += festivalsByDate[dateStr].length;
+      }
+    }
+
+    return { auspiciousDays, festivalsCount, ekadashiDates };
+  }, [calendarYear, calendarMonth, festivalsByDate]);
+
+  // Get Hindu month information
+  const getHinduMonthInfo = () => {
+    const panchang = calculateBasicPanchang(calendarYear, calendarMonth, 15);
+    return {
+      hinduMonth: panchang.hinduMonth || 'N/A',
+      paksha: panchang.paksha || 'N/A'
+    };
+  };
+
+  const hinduMonthInfo = getHinduMonthInfo();
+
+  // Jump to today
+  const jumpToToday = () => {
+    setCalendarYear(currentDate.getFullYear());
+    setCalendarMonth(currentDate.getMonth());
+    setSelectedDate(null);
+  };
+
+  // Jump to specific date
+  const jumpToDate = (dateStr) => {
+    const date = new Date(dateStr);
+    setCalendarYear(date.getFullYear());
+    setCalendarMonth(date.getMonth());
+    setShowDatePicker(false);
+  };
+
+  // Filter festivals based on search
+  const filteredFestivals = useMemo(() => {
+    if (!searchQuery.trim()) return festivalsByDate;
+    
+    const query = searchQuery.toLowerCase();
+    const filtered = {};
+    
+    Object.entries(festivalsByDate).forEach(([date, festivals]) => {
+      const matchingFestivals = festivals.filter(f => 
+        f.name.toLowerCase().includes(query) ||
+        (f.description && f.description.toLowerCase().includes(query))
+      );
+      if (matchingFestivals.length > 0) {
+        filtered[date] = matchingFestivals;
+      }
+    });
+    
+    return filtered;
+  }, [festivalsByDate, searchQuery]);
 
   return (
     <div className="hindu-calendar-page">
@@ -148,17 +219,149 @@ const HinduCalendarPage = () => {
         </button>
       )}
 
+      {/* Calendar Controls & Stats */}
+      <div className="calendar-controls">
+        <div className="calendar-stats-row">
+          <div className="hindu-month-display">
+            <span className="hindu-month-label">Hindu Month:</span>
+            <span className="hindu-month-value">{hinduMonthInfo.hinduMonth}</span>
+            <span className="paksha-badge">{hinduMonthInfo.paksha}</span>
+          </div>
+          
+          <div className="month-stats">
+            <div className="stat-item">
+              <span className="stat-icon">✨</span>
+              <span className="stat-value">{monthStats.auspiciousDays}</span>
+              <span className="stat-label">Auspicious Days</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-icon">🎉</span>
+              <span className="stat-value">{monthStats.festivalsCount}</span>
+              <span className="stat-label">Festivals</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-icon">⚡</span>
+              <span className="stat-value">{monthStats.ekadashiDates.length}</span>
+              <span className="stat-label">Ekadashi</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="calendar-action-bar">
+          <div className="quick-actions">
+            <button 
+              className="action-btn jump-today-btn"
+              onClick={jumpToToday}
+              title="Jump to current month"
+            >
+              📍 Today
+            </button>
+            
+            <div className="date-picker-wrapper">
+              <button 
+                className="action-btn"
+                onClick={() => setShowDatePicker(!showDatePicker)}
+                title="Jump to specific date"
+              >
+                📅 Go to Date
+              </button>
+              {showDatePicker && (
+                <div className="date-picker-dropdown">
+                  <input
+                    type="date"
+                    className="date-picker-input"
+                    onChange={(e) => jumpToDate(e.target.value)}
+                    min={`${minYear}-01-01`}
+                    max={`${maxYear}-12-31`}
+                  />
+                </div>
+              )}
+            </div>
+
+            <div className="view-mode-toggle">
+              <button
+                className={`view-btn ${viewMode === 'detailed' ? 'active' : ''}`}
+                onClick={() => setViewMode('detailed')}
+                title="Detailed view"
+              >
+                📋 Detailed
+              </button>
+              <button
+                className={`view-btn ${viewMode === 'compact' ? 'active' : ''}`}
+                onClick={() => setViewMode('compact')}
+                title="Compact view"
+              >
+                📱 Compact
+              </button>
+            </div>
+          </div>
+
+          <div className="search-and-filter">
+            <div className="search-bar">
+              <span className="search-icon">🔍</span>
+              <input
+                type="text"
+                placeholder="Search festivals..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="search-input"
+              />
+              {searchQuery && (
+                <button
+                  className="clear-search"
+                  onClick={() => setSearchQuery('')}
+                >
+                  ✕
+                </button>
+              )}
+            </div>
+
+            <div className="filter-buttons">
+              <button
+                className={`filter-btn ${filterMode === 'all' ? 'active' : ''}`}
+                onClick={() => setFilterMode('all')}
+              >
+                All
+              </button>
+              <button
+                className={`filter-btn ${filterMode === 'festivals' ? 'active' : ''}`}
+                onClick={() => setFilterMode('festivals')}
+                title="Show only days with festivals"
+              >
+                🎉 Festivals
+              </button>
+              <button
+                className={`filter-btn ${filterMode === 'auspicious' ? 'active' : ''}`}
+                onClick={() => setFilterMode('auspicious')}
+                title="Show only highly auspicious days"
+              >
+                ✨ Auspicious
+              </button>
+              <button
+                className={`filter-btn ${filterMode === 'fasting' ? 'active' : ''}`}
+                onClick={() => setFilterMode('fasting')}
+                title="Show only Ekadashi and fasting days"
+              >
+                ⚡ Fasting
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <CalendarView 
         year={calendarYear}
         month={calendarMonth}
         onYearChange={setCalendarYear}
         onMonthChange={setCalendarMonth}
-        festivalsByDate={festivalsByDate}
+        festivalsByDate={searchQuery ? filteredFestivals : festivalsByDate}
         selectedDate={selectedDate}
         onDateSelect={setSelectedDate}
         minYear={minYear}
         maxYear={maxYear}
         onFestivalClick={(festivalId) => navigate(`/festivals/${festivalId}`)}
+        viewMode={viewMode}
+        filterMode={filterMode}
       />
 
       {/* Legend for Calendar Symbols */}
@@ -245,7 +448,7 @@ const HinduCalendarPage = () => {
 };
 
 // CalendarView Component
-const CalendarView = ({ year, month, onYearChange, onMonthChange, festivalsByDate, selectedDate, onDateSelect, minYear, maxYear, onFestivalClick }) => {
+const CalendarView = ({ year, month, onYearChange, onMonthChange, festivalsByDate, selectedDate, onDateSelect, minYear, maxYear, onFestivalClick, viewMode, filterMode }) => {
   const monthNames = [
     'January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December'
@@ -301,6 +504,11 @@ const CalendarView = ({ year, month, onYearChange, onMonthChange, festivalsByDat
     // Calculate panchang data for this date
     const panchangInfo = calculateBasicPanchang(year, month, day);
     
+    // Apply filters
+    if (filterMode === 'festivals' && !hasFestival) continue;
+    if (filterMode === 'auspicious' && panchangInfo.auspiciousness < 4) continue;
+    if (filterMode === 'fasting' && !panchangInfo.isEkadashi && !panchangInfo.isAshtami) continue;
+    
     // Determine special day classes
     let specialClass = '';
     let specialBadge = null;
@@ -330,7 +538,7 @@ const CalendarView = ({ year, month, onYearChange, onMonthChange, festivalsByDat
     calendarDays.push(
       <div
         key={day}
-        className={`calendar-day ${isToday ? 'today' : ''} ${hasFestival ? 'has-festival' : ''} ${specialClass} ${auspiciousClass}`}
+        className={`calendar-day ${viewMode} ${isToday ? 'today' : ''} ${hasFestival ? 'has-festival' : ''} ${specialClass} ${auspiciousClass}`}
         onClick={() => handleDateClick(day)}
       >
         <div className="calendar-day-header">
@@ -338,39 +546,51 @@ const CalendarView = ({ year, month, onYearChange, onMonthChange, festivalsByDat
           {specialBadge}
         </div>
         
-        {/* Moon phase indicator */}
-        <div className="moon-phase-indicator" title={`${panchangInfo.moonPhase} - ${panchangInfo.moonIllumination}%`}>
-          <div className="moon-icon" style={{
-            background: `linear-gradient(90deg, #ffd700 ${panchangInfo.moonIllumination}%, transparent ${panchangInfo.moonIllumination}%)`
-          }}>🌙</div>
-        </div>
-        
-        {/* Hindu calendar info */}
-        <div className="calendar-panchang-info">
-          <div className="panchang-tithi" title={`Tithi: ${panchangInfo.tithi} (${panchangInfo.paksha})`}>
-            {panchangInfo.tithi}
-          </div>
-          <div className="panchang-nakshatra" title={`Nakshatra: ${panchangInfo.nakshatra}`}>
-            {panchangInfo.nakshatra}
-          </div>
-          <div className="panchang-yoga" title={`Yoga: ${panchangInfo.yoga}`}>
-            {panchangInfo.yoga}
-          </div>
-        </div>
-        
-        {/* Auspiciousness stars */}
-        <div className="auspiciousness-rating" title={`Auspiciousness: ${panchangInfo.auspiciousness}/5`}>
-          {'⭐'.repeat(panchangInfo.auspiciousness)}
-        </div>
+        {viewMode === 'detailed' && (
+          <>
+            {/* Moon phase indicator */}
+            <div className="moon-phase-indicator" title={`${panchangInfo.moonPhase} - ${panchangInfo.moonIllumination}%`}>
+              <div className="moon-icon" style={{
+                background: `linear-gradient(90deg, #ffd700 ${panchangInfo.moonIllumination}%, transparent ${panchangInfo.moonIllumination}%)`
+              }}>🌙</div>
+            </div>
+            
+            {/* Hindu calendar info */}
+            <div className="calendar-panchang-info">
+              <div className="panchang-tithi" title={`Tithi: ${panchangInfo.tithi} (${panchangInfo.paksha})`}>
+                {panchangInfo.tithi}
+              </div>
+              <div className="panchang-nakshatra" title={`Nakshatra: ${panchangInfo.nakshatra}`}>
+                {panchangInfo.nakshatra}
+              </div>
+              <div className="panchang-yoga" title={`Yoga: ${panchangInfo.yoga}`}>
+                {panchangInfo.yoga}
+              </div>
+            </div>
+            
+            {/* Auspiciousness stars */}
+            <div className="auspiciousness-rating" title={`Auspiciousness: ${panchangInfo.auspiciousness}/5`}>
+              {'⭐'.repeat(panchangInfo.auspiciousness)}
+            </div>
+          </>
+        )}
         
         {hasFestival && (
           <div className="calendar-day-festivals">
-            {festivals.slice(0, 2).map((festival, idx) => (
-              <div key={idx} className="calendar-festival-dot" title={festival.name}>
-                •
+            {viewMode === 'detailed' ? (
+              <>
+                {festivals.slice(0, 2).map((festival, idx) => (
+                  <div key={idx} className="calendar-festival-dot" title={festival.name}>
+                    •
+                  </div>
+                ))}
+                {festivals.length > 2 && <div className="calendar-festival-more">+{festivals.length - 2}</div>}
+              </>
+            ) : (
+              <div className="compact-festival-indicator" title={festivals.map(f => f.name).join(', ')}>
+                🎉
               </div>
-            ))}
-            {festivals.length > 2 && <div className="calendar-festival-more">+{festivals.length - 2}</div>}
+            )}
           </div>
         )}
       </div>
