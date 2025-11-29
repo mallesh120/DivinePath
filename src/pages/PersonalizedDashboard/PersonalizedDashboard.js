@@ -6,6 +6,7 @@ import './PersonalizedDashboard.css';
 
 const PersonalizedDashboard = () => {
   const [userName, setUserName] = useState('');
+  const [isEditingName, setIsEditingName] = useState(false);
   const [userGoals, setUserGoals] = useState({
     dailyPrayer: false,
     readScripture: false,
@@ -89,6 +90,17 @@ const PersonalizedDashboard = () => {
     }
   };
 
+  const handleNameKeyPress = (e) => {
+    if (e.key === 'Enter' && userName.trim()) {
+      setIsEditingName(false);
+      e.target.blur();
+    }
+  };
+
+  const handleEditName = () => {
+    setIsEditingName(true);
+  };
+
   return (
     <div className="personalized-dashboard">
       {/* Welcome Header */}
@@ -96,16 +108,23 @@ const PersonalizedDashboard = () => {
         <div className="hero-content">
           <h1 className="hero-greeting">
             🙏 Namaste{userName ? `, ${userName}` : ''}!
+            {userName && !isEditingName && (
+              <button className="edit-name-btn" onClick={handleEditName}>✏️</button>
+            )}
           </h1>
-          <div className="name-input-container">
-            <input
-              type="text"
-              placeholder="Enter your name..."
-              value={userName}
-              onChange={handleNameChange}
-              className="name-input"
-            />
-          </div>
+          {(!userName || isEditingName) && (
+            <div className="name-input-container">
+              <input
+                type="text"
+                placeholder="Enter your name..."
+                value={userName}
+                onChange={handleNameChange}
+                onKeyPress={handleNameKeyPress}
+                className="name-input"
+                autoFocus={isEditingName}
+              />
+            </div>
+          )}
           <p className="hero-date">{currentDate}</p>
           {streak > 0 && (
             <div className="streak-badge">
