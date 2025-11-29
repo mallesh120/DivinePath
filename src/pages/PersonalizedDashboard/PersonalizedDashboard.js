@@ -97,17 +97,15 @@ const PersonalizedDashboard = () => {
           <h1 className="hero-greeting">
             🙏 Namaste{userName ? `, ${userName}` : ''}!
           </h1>
-          {!userName && (
-            <div className="name-input-container">
-              <input
-                type="text"
-                placeholder="Enter your name..."
-                value={userName}
-                onChange={handleNameChange}
-                className="name-input"
-              />
-            </div>
-          )}
+          <div className="name-input-container">
+            <input
+              type="text"
+              placeholder="Enter your name..."
+              value={userName}
+              onChange={handleNameChange}
+              className="name-input"
+            />
+          </div>
           <p className="hero-date">{currentDate}</p>
           {streak > 0 && (
             <div className="streak-badge">
