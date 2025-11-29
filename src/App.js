@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 
 // Import Pages and Components
+import PersonalizedDashboard from './pages/PersonalizedDashboard/PersonalizedDashboard';
 import HomePage from './pages/HomePage/HomePage';
 import GodsGalleryPage from './pages/GodsGalleryPage/GodsGalleryPage';
 import AllGodsGalleryPage from './pages/AllGodsGalleryPage/AllGodsGalleryPage';
@@ -17,7 +18,6 @@ import PujaGuidePage from './pages/PujaGuidePage/PujaGuidePage';
 import AshtottaramListPage from './pages/AshtottaramListPage/AshtottaramListPage';
 import AshtottaramDetailPage from './pages/AshtottaramDetailPage/AshtottaramDetailPage';
 import Navbar from './components/Navbar/Navbar';
-import PanchangamTopBar from './components/PanchangamTopBar/PanchangamTopBar';
 import './App.css';
 import StoryPlayerPage from './pages/StoryPlayerPage/StoryPlayerPage';
 import RamayanaTOCPage from './pages/RamayanaPage/RamayanaTOCPage';
@@ -28,11 +28,11 @@ import PuranaPage from './pages/PuranaPage/PuranaPage';
 function App() {
   return (
     <div className="App">
-      <PanchangamTopBar />
       <Navbar />
       <SidebarLayout>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<PersonalizedDashboard />} />
+          <Route path="/devotional" element={<HomePage />} />
           <Route path="/gods" element={<GodsGalleryPage />} />
           <Route path="/gods/all" element={<AllGodsGalleryPage />} />
           <Route path="/gods/:godId" element={<GodDetailPage />} />
