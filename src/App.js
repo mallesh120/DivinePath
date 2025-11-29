@@ -18,7 +18,6 @@ import PujaGuidePage from './pages/PujaGuidePage/PujaGuidePage';
 import AshtottaramListPage from './pages/AshtottaramListPage/AshtottaramListPage';
 import AshtottaramDetailPage from './pages/AshtottaramDetailPage/AshtottaramDetailPage';
 import Navbar from './components/Navbar/Navbar';
-import PanchangamTopBar from './components/PanchangamTopBar/PanchangamTopBar';
 import './App.css';
 import StoryPlayerPage from './pages/StoryPlayerPage/StoryPlayerPage';
 import RamayanaTOCPage from './pages/RamayanaPage/RamayanaTOCPage';
@@ -29,7 +28,6 @@ import PuranaPage from './pages/PuranaPage/PuranaPage';
 function App() {
   return (
     <div className="App">
-      <PanchangamTopBar />
       <Navbar />
       <SidebarLayout>
         <Routes>
