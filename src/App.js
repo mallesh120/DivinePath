@@ -22,6 +22,8 @@ import './App.css';
 import StoryPlayerPage from './pages/StoryPlayerPage/StoryPlayerPage';
 import RamayanaTOCPage from './pages/RamayanaPage/RamayanaTOCPage';
 import SidebarLayout from './components/SidebarLayout/SidebarLayout';
+import BhagavadGitaPage from './pages/BhagavadGitaPage/BhagavadGitaPage';
+import PuranaPage from './pages/PuranaPage/PuranaPage';
 
 function App() {
   return (
@@ -44,6 +46,12 @@ function App() {
           <Route path="/ashtottaram/:deityId" element={<AshtottaramDetailPage />} />
           {/* This route is for standard literature like the Mahabharata */}
           <Route path="/library/:storyId" element={<LiteratureDetailPage />} />
+
+          {/* Route for Bhagavad Gita (scripture type) */}
+          <Route path="/library/scripture/:storyId" element={<BhagavadGitaPage />} />
+
+          {/* Route for Puranas */}
+          <Route path="/library/purana/:storyId" element={<PuranaPage />} />
 
           {/* This is our new route for the Ramayana Table of Contents */}
           <Route path="/library/ramayana/:storyId" element={<RamayanaTOCPage />} />
