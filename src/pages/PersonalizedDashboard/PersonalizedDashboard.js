@@ -16,7 +16,7 @@ const PersonalizedDashboard = () => {
   const [upcomingFestivals, setUpcomingFestivals] = useState([]);
   const [fastingSchedule, setFastingSchedule] = useState([]);
   
-  const { panchangam, loading: panchangamLoading } = usePanchangam();
+  const { panchangamData, loading: panchangamLoading } = usePanchangam();
   
   const currentDate = new Date().toLocaleDateString('en-US', {
     weekday: 'long',
@@ -81,9 +81,11 @@ const PersonalizedDashboard = () => {
     localStorage.setItem('userGoals', JSON.stringify(updatedGoals));
   };
 
-  const handleNameSave = () => {
-    if (userName.trim()) {
-      localStorage.setItem('userName', userName);
+  const handleNameChange = (e) => {
+    const newName = e.target.value;
+    setUserName(newName);
+    if (newName.trim()) {
+      localStorage.setItem('userName', newName);
     }
   };
 
@@ -101,8 +103,7 @@ const PersonalizedDashboard = () => {
                 type="text"
                 placeholder="Enter your name..."
                 value={userName}
-                onChange={(e) => setUserName(e.target.value)}
-                onBlur={handleNameSave}
+                onChange={handleNameChange}
                 className="name-input"
               />
             </div>
@@ -122,31 +123,31 @@ const PersonalizedDashboard = () => {
           <h2 className="card-title">📅 Today's Panchangam</h2>
           {panchangamLoading ? (
             <p>Loading Panchangam...</p>
-          ) : panchangam ? (
+          ) : panchangamData ? (
             <div className="panchangam-grid">
               <div className="panchangam-item">
                 <span className="panchangam-label">Tithi:</span>
-                <span className="panchangam-value">{panchangam.tithi?.name || 'N/A'}</span>
+                <span className="panchangam-value">{panchangamData.almanac?.Tithi?.name || 'N/A'}</span>
               </div>
               <div className="panchangam-item">
                 <span className="panchangam-label">Nakshatra:</span>
-                <span className="panchangam-value">{panchangam.nakshatra?.name || 'N/A'}</span>
+                <span className="panchangam-value">{panchangamData.almanac?.Nakshatra?.name || 'N/A'}</span>
               </div>
               <div className="panchangam-item">
                 <span className="panchangam-label">Yoga:</span>
-                <span className="panchangam-value">{panchangam.yoga?.name || 'N/A'}</span>
+                <span className="panchangam-value">{panchangamData.almanac?.Yoga?.name || 'N/A'}</span>
               </div>
               <div className="panchangam-item">
                 <span className="panchangam-label">Karana:</span>
-                <span className="panchangam-value">{panchangam.karana?.name || 'N/A'}</span>
+                <span className="panchangam-value">{panchangamData.almanac?.Karana?.name || 'N/A'}</span>
               </div>
               <div className="panchangam-item">
                 <span className="panchangam-label">Sunrise:</span>
-                <span className="panchangam-value">{panchangam.sunrise || 'N/A'}</span>
+                <span className="panchangam-value">{panchangamData.solarLunar?.Sunrise || 'N/A'}</span>
               </div>
               <div className="panchangam-item">
                 <span className="panchangam-label">Sunset:</span>
-                <span className="panchangam-value">{panchangam.sunset || 'N/A'}</span>
+                <span className="panchangam-value">{panchangamData.solarLunar?.Sunset || 'N/A'}</span>
               </div>
             </div>
           ) : (
