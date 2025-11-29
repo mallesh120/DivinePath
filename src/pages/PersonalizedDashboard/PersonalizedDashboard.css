@@ -1,0 +1,456 @@
+.personalized-dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+/* Hero Section */
+.dashboard-hero {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  border-radius: 20px;
+  padding: 40px 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.hero-greeting {
+  font-size: 2.5rem;
+  color: white;
+  margin: 0 0 15px 0;
+  font-weight: 700;
+}
+
+.name-input-container {
+  margin: 15px 0;
+}
+
+.name-input {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-align: center;
+  width: 300px;
+  max-width: 90%;
+}
+
+.name-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-date {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 10px 0;
+}
+
+.streak-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+/* Card Styles */
+.dashboard-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-size: 1.6rem;
+  color: #333;
+  margin: 0 0 20px 0;
+  font-weight: 700;
+}
+
+/* Panchangam Card */
+.panchangam-card {
+  grid-column: span 2;
+}
+
+.panchangam-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.panchangam-item {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.panchangam-label {
+  font-weight: 600;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.panchangam-value {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.view-full-link {
+  display: inline-block;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 15px;
+  transition: transform 0.3s ease;
+}
+
+.view-full-link:hover {
+  transform: translateX(5px);
+  color: #764ba2;
+}
+
+/* Goals Card */
+.goals-card {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.goals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.goal-item {
+  background: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.goal-item:hover {
+  border-color: #667eea;
+  transform: translateX(5px);
+}
+
+.goal-item.completed {
+  background: linear-gradient(135deg, #c3f0c3 0%, #a8e6a8 100%);
+}
+
+.goal-checkbox {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.goal-item.completed .goal-checkbox {
+  color: #4caf50;
+}
+
+.goal-text {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Japa Counter */
+.japa-counter {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.japa-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0 0 15px 0;
+}
+
+.japa-display {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #667eea;
+  margin: 15px 0;
+}
+
+.japa-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px 5px;
+}
+
+.japa-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.japa-reset {
+  background: #f0f0f0;
+  color: #666;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px 5px;
+}
+
+.japa-reset:hover {
+  background: #e0e0e0;
+}
+
+/* Shloka Card */
+.shloka-card {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+/* Festivals Card */
+.festivals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.festival-item {
+  background: linear-gradient(135deg, #fff5e6 0%, #ffe0b2 100%);
+  padding: 15px 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.festival-info h3 {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.festival-date {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.festival-countdown {
+  text-align: center;
+}
+
+.countdown-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff6b6b;
+}
+
+.countdown-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Fasting Card */
+.fasting-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fasting-item {
+  background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+  padding: 15px 20px;
+  border-radius: 12px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.fasting-day {
+  background: #00acc1;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: 700;
+  min-width: 80px;
+  text-align: center;
+}
+
+.fasting-details h3 {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.fasting-description {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Quick Actions */
+.quick-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.quick-action-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.quick-action-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.action-icon {
+  font-size: 2.5rem;
+}
+
+.action-label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Progress Card */
+.progress-card {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #fa8bff 0%, #2bd2ff 90%, #2bff88 100%);
+}
+
+.progress-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.stat-item {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #667eea;
+  margin: 10px 0;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+  }
+
+  .panchangam-card,
+  .shloka-card,
+  .progress-card {
+    grid-column: span 1;
+  }
+
+  .panchangam-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-greeting {
+    font-size: 1.8rem;
+  }
+
+  .dashboard-card {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .panchangam-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-actions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-stats {
+    grid-template-columns: 1fr;
+  }
+}
