@@ -1,91 +1,99 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import ShlokaOfTheDay from '../../components/ShlokaOfTheDay/ShlokaOfTheDay';
+import StoryOfTheDay from '../../components/StoryOfTheDay/StoryOfTheDay';
+import DailyHoroscope from '../../components/DailyHoroscope/DailyHoroscope';
+import DevotionalAudio from '../../components/DevotionalAudio/DevotionalAudio';
 import './HomePage.css';
 
-// 1. Import our data and card components
-import { godsData } from '../../data/godsData';
-import { literatureData } from '../../data/literature';
-import { getUpcomingFestivals, festivalsData, sortFestivalsByDate } from '../../data/festivalsData';
-import { pujasData } from '../../data/pujasData';
-import GodCard from '../../components/GodCard/GodCard';
-import LiteratureCard from '../../components/LitratureCard/LiteratureCard';
-import FestivalCard from '../../components/FestivalCard/FestivalCard';
-import PujaCard from '../../components/PujaCard/PujaCard';
-
-// Helper function to get a random item from an array
-const getRandomItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
-
 const HomePage = () => {
-  // 2. Use state to select a random god, story, and next upcoming festival
-  const [featuredGod] = useState(getRandomItem(godsData));
-  const [featuredStory] = useState(getRandomItem(literatureData));
-  
-  // Get next 3 upcoming festivals
-  const upcomingFestivals = getUpcomingFestivals(3);
-  const festivalsToShow = upcomingFestivals.length > 0 
-    ? upcomingFestivals 
-    : sortFestivalsByDate(festivalsData).slice(0, 3);
-  
-  // Get popular pujas (Ganesh and Lakshmi)
-  const popularPujas = pujasData.filter(puja => 
-    puja.id === 'ganesh-puja' || puja.id === 'lakshmi-puja'
-  );
+  const currentDate = new Date().toLocaleDateString('en-US', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
 
   return (
     <div className="home-page">
-      {/* Hero Section */}
-      <div className="home-hero">
-        <h1 className="home-title">🕉️ Welcome to Divine Path</h1>
-        <p className="home-subtitle">
-          Explore the sacred wisdom, festivals, and divine stories of Hinduism
-        </p>
-      </div>
-
-      {/* 3. Create the featured content section */}
-      <div className="featured-section">
-        <div className="featured-item">
-          <h2 className="featured-title">Featured God</h2>
-          <GodCard god={featuredGod} />
-        </div>
-        <div className="featured-item">
-          <h2 className="featured-title">Featured Story</h2>
-          <LiteratureCard story={featuredStory} />
+      <div className="devotional-hero">
+        <div className="hero-content">
+          <h1 className="hero-title">🕉️ Daily Devotional</h1>
+          <p className="hero-subtitle">
+            Your spiritual companion for daily wisdom, guidance, and devotion
+          </p>
+          <p className="hero-date">{currentDate}</p>
         </div>
       </div>
 
-      {/* Upcoming Festivals Section */}
-      <div className="upcoming-festivals-section">
-        <div className="section-header">
-          <h2 className="section-title">📅 Upcoming Festivals</h2>
-          <div className="section-links">
-            <Link to="/festivals" className="view-all-link">
-              View Festivals →
-            </Link>
-            <Link to="/festivals" className="view-all-link">
-              All Festivals →
-            </Link>
+      <div className="devotional-container">
+        {/* Shloka of the Day */}
+        <section className="devotional-section">
+          <ShlokaOfTheDay />
+        </section>
+
+        {/* Story of the Day */}
+        <section className="devotional-section">
+          <StoryOfTheDay />
+        </section>
+
+        {/* Daily Horoscope */}
+        <section className="devotional-section">
+          <DailyHoroscope />
+        </section>
+
+        {/* Devotional Audio */}
+        <section className="devotional-section">
+          <DevotionalAudio />
+        </section>
+
+        {/* Daily Practice Tips */}
+        <section className="devotional-section">
+          <div className="practice-tips-widget">
+            <h2 className="tips-title">✨ Daily Spiritual Practices</h2>
+            <div className="tips-grid">
+              <div className="tip-card">
+                <span className="tip-icon">🌅</span>
+                <h3 className="tip-title">Morning</h3>
+                <ul className="tip-list">
+                  <li>Wake up during Brahma Muhurta</li>
+                  <li>Practice gratitude meditation</li>
+                  <li>Chant your chosen mantra</li>
+                  <li>Read today's shloka</li>
+                </ul>
+              </div>
+              <div className="tip-card">
+                <span className="tip-icon">☀️</span>
+                <h3 className="tip-title">Daytime</h3>
+                <ul className="tip-list">
+                  <li>Practice mindful breathing</li>
+                  <li>Offer food before eating</li>
+                  <li>Do good deeds selflessly</li>
+                  <li>Maintain positive thoughts</li>
+                </ul>
+              </div>
+              <div className="tip-card">
+                <span className="tip-icon">🌙</span>
+                <h3 className="tip-title">Evening</h3>
+                <ul className="tip-list">
+                  <li>Light a lamp (diya)</li>
+                  <li>Evening prayers and aarti</li>
+                  <li>Reflect on the day's learnings</li>
+                  <li>Practice forgiveness</li>
+                </ul>
+              </div>
+              <div className="tip-card">
+                <span className="tip-icon">🌃</span>
+                <h3 className="tip-title">Night</h3>
+                <ul className="tip-list">
+                  <li>Peaceful meditation</li>
+                  <li>Read sacred texts</li>
+                  <li>Practice gratitude journaling</li>
+                  <li>Sleep with positive affirmations</li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="upcoming-festivals-grid">
-          {festivalsToShow.map(festival => (
-            <FestivalCard key={festival.id} festival={festival} compact={true} />
-          ))}
-        </div>
-      </div>
-
-      {/* Puja Guide Section */}
-      <div className="puja-guide-section">
-        <div className="section-header">
-          <h2 className="section-title">🪔 Popular Puja Guides</h2>
-          <Link to="/pujas" className="view-all-link">
-            View All Pujas →
-          </Link>
-        </div>
-        <div className="puja-guide-grid">
-          {popularPujas.map(puja => (
-            <PujaCard key={puja.id} puja={puja} />
-          ))}
-        </div>
+        </section>
       </div>
     </div>
   );
