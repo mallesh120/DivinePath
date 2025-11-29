@@ -343,6 +343,127 @@
   box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 }
 
+/* Calendar Legend */
+.calendar-legend {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+  border: 2px solid #667eea;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+}
+
+.legend-title {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.legend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.legend-section {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.legend-section h4 {
+  color: #667eea;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #667eea;
+}
+
+.legend-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #2c3e50;
+}
+
+.legend-icon {
+  font-size: 1.3rem;
+  min-width: 30px;
+  text-align: center;
+}
+
+.legend-icon.orange-dot {
+  color: #ff6b35;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.legend-color {
+  padding: 4px 12px;
+  border-radius: 5px;
+  font-weight: 600;
+  min-width: 80px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.legend-color.tithi-color {
+  background: #667eea;
+  color: white;
+}
+
+.legend-color.nakshatra-color {
+  background: #764ba2;
+  color: white;
+  font-style: italic;
+}
+
+.legend-color.yoga-color {
+  background: #43a047;
+  color: white;
+}
+
+.legend-box {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  border: 2px solid;
+}
+
+.legend-box.festival-box {
+  background: linear-gradient(135deg, #fff8f0 0%, #ffe4cc 100%);
+  border-color: #ff6b35;
+}
+
+.legend-box.today-box {
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+  border-color: #ff6b35;
+}
+
+.legend-box.auspicious-box {
+  background: white;
+  border-color: #4caf50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+}
+
+.legend-text {
+  flex: 1;
+  line-height: 1.4;
+}
+
 .calendar-weekdays {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -369,7 +490,7 @@
   aspect-ratio: 1;
   border: 2px solid #e0e0e0;
   border-radius: 10px;
-  padding: 10px;
+  padding: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -378,6 +499,7 @@
   transition: all 0.3s ease;
   background: white;
   position: relative;
+  overflow: hidden;
 }
 
 .calendar-day.empty {
@@ -403,32 +525,95 @@
   border-color: #ff6b35;
 }
 
+/* Special day styles */
+.calendar-day.special-ekadashi {
+  border-color: #9c27b0;
+  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+}
+
+.calendar-day.special-purnima {
+  border-color: #ffd700;
+  background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%);
+}
+
+.calendar-day.special-amavasya {
+  border-color: #424242;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+}
+
+.calendar-day.special-pradosham {
+  border-color: #ff5722;
+  background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+}
+
+.calendar-day.special-chaturthi {
+  border-color: #ff9800;
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+}
+
+/* Auspiciousness styles */
+.calendar-day.highly-auspicious {
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+}
+
+.calendar-day.low-auspicious {
+  opacity: 0.9;
+}
+
+/* Calendar day header with number and badge */
+.calendar-day-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 3px;
+}
+
 .calendar-day-number {
   font-size: 1rem;
   font-weight: 600;
   color: #2c3e50;
-  margin-bottom: 5px;
+}
+
+.special-badge {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* Moon phase indicator */
+.moon-phase-indicator {
+  margin: 3px 0;
+}
+
+.moon-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+  border-radius: 50%;
+  padding: 2px;
 }
 
 /* Panchang (Hindu Calendar) Info */
 .calendar-panchang-info {
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   color: #5a5a5a;
   text-align: center;
-  line-height: 1.3;
+  line-height: 1.2;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  margin: 4px 0;
+  gap: 1px;
+  margin: 2px 0;
+  width: 100%;
 }
 
 .panchang-tithi,
-.panchang-nakshatra {
+.panchang-nakshatra,
+.panchang-yoga {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
+  padding: 1px 2px;
 }
 
 .panchang-tithi {
@@ -441,13 +626,25 @@
   font-style: italic;
 }
 
+.panchang-yoga {
+  color: #43a047;
+  font-size: 0.55rem;
+}
+
+/* Auspiciousness rating */
+.auspiciousness-rating {
+  font-size: 0.6rem;
+  margin: 2px 0;
+  line-height: 1;
+}
+
 .calendar-day-festivals {
   display: flex;
   gap: 3px;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: auto;
+  margin-top: 2px;
 }
 
 .calendar-festival-dot {
@@ -471,18 +668,119 @@
   background: linear-gradient(135deg, #fff8f0 0%, #ffe4cc 100%);
   border-radius: 15px;
   border: 2px solid #ff6b35;
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
 .calendar-festival-details h3 {
   color: #2c3e50;
   margin-bottom: 20px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .calendar-festival-details h4 {
   color: #667eea;
-  margin: 20px 0 10px 0;
+  margin: 20px 0 15px 0;
   font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Day Overview Section */
+.day-overview-section {
+  margin-bottom: 25px;
+  padding: 20px;
+  background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
+  border-radius: 12px;
+  border: 2px solid #5c6bc0;
+}
+
+.auspiciousness-display {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.auspiciousness-label {
+  font-weight: 700;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.auspiciousness-stars {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.auspiciousness-text {
+  padding: 5px 15px;
+  background: white;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #667eea;
+}
+
+.best-for-section {
+  padding: 12px;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.best-for-section strong {
+  color: #667eea;
+  margin-right: 8px;
+}
+
+.special-indicators {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.special-tag {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ekadashi-tag {
+  background: linear-gradient(135deg, #9c27b0 0%, #ba68c8 100%);
+  color: white;
+}
+
+.purnima-tag {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  color: #333;
+}
+
+.amavasya-tag {
+  background: linear-gradient(135deg, #424242 0%, #757575 100%);
+  color: white;
+}
+
+.pradosham-tag {
+  background: linear-gradient(135deg, #ff5722 0%, #ff8a65 100%);
+  color: white;
+}
+
+.chaturthi-tag {
+  background: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%);
+  color: white;
+}
+
+.ashtami-tag {
+  background: linear-gradient(135deg, #00bcd4 0%, #4dd0e1 100%);
+  color: white;
 }
 
 /* Panchang Details Section */
@@ -501,8 +799,8 @@
 
 .panchang-details-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
 }
 
 .panchang-detail-item {
@@ -510,6 +808,58 @@
   background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
   border-radius: 8px;
   border-left: 3px solid #667eea;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.panchang-detail-item.time-item {
+  border-left-color: #43a047;
+}
+
+.panchang-detail-item.warning {
+  border-left-color: #f44336;
+  background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+}
+
+.panchang-detail-item strong {
+  color: #667eea;
+  display: block;
+  font-size: 0.9rem;
+}
+
+.panchang-detail-item span {
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.time-warning {
+  margin-top: 10px;
+  padding: 10px;
+  background: #fff3e0;
+  border-radius: 8px;
+  border-left: 3px solid #ff9800;
+}
+
+.time-warning small {
+  color: #e65100;
+  font-weight: 600;
+}
+
+/* Moon Phase Visual */
+.moon-phase-visual {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.moon-display {
+  display: inline-block;
+  font-size: 3rem;
+  padding: 15px;
+  border-radius: 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
 }
 
 .panchang-detail-item strong {
@@ -577,11 +927,112 @@
   }
 
   .calendar-day-number {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 
   .calendar-weekday {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     padding: 5px;
+  }
+  
+  .calendar-panchang-info {
+    font-size: 0.55rem;
+  }
+  
+  .panchang-yoga {
+    display: none; /* Hide yoga on mobile for space */
+  }
+  
+  .auspiciousness-rating {
+    font-size: 0.5rem;
+  }
+  
+  .moon-icon {
+    font-size: 1rem;
+  }
+  
+  .special-badge {
+    font-size: 0.85rem;
+  }
+  
+  /* Legend responsive */
+  .calendar-legend {
+    padding: 15px;
+  }
+  
+  .legend-title {
+    font-size: 1.2rem;
+  }
+  
+  .legend-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .legend-section {
+    padding: 12px;
+  }
+  
+  .legend-section h4 {
+    font-size: 0.95rem;
+  }
+  
+  .legend-item {
+    font-size: 0.85rem;
+    gap: 8px;
+  }
+  
+  .legend-icon {
+    font-size: 1.1rem;
+    min-width: 25px;
+  }
+  
+  .calendar-festival-details {
+    padding: 15px;
+    max-height: 70vh;
+  }
+  
+  .panchang-details-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .auspiciousness-display {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .special-indicators {
+    flex-direction: column;
+  }
+  
+  .calendar-festival-details h3 {
+    font-size: 1.2rem;
+  }
+  
+  .calendar-festival-details h4 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-day {
+    padding: 4px;
+  }
+  
+  .calendar-day-number {
+    font-size: 0.75rem;
+  }
+  
+  .calendar-panchang-info {
+    font-size: 0.5rem;
+    gap: 1px;
+  }
+  
+  .auspiciousness-rating {
+    display: none; /* Hide stars on very small screens */
+  }
+  
+  .panchang-nakshatra {
+    display: none; /* Show only tithi on very small screens */
   }
 }

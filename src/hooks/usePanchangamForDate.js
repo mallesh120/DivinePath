@@ -62,15 +62,18 @@ export const calculateBasicPanchang = (year, month, day) => {
   const dayOfYear = Math.floor((date - new Date(year, 0, 0)) / 86400000);
   
   // Approximate tithi (lunar day) - 30 tithis per lunar month
-  const tithi = ((dayOfYear % 30) + 1);
+  const tithiIndex = ((dayOfYear % 30));
   const tithiNames = [
     'Pratipada', 'Dwitiya', 'Tritiya', 'Chaturthi', 'Panchami',
     'Shashthi', 'Saptami', 'Ashtami', 'Navami', 'Dashami',
-    'Ekadashi', 'Dwadashi', 'Trayodashi', 'Chaturdashi', 'Purnima/Amavasya'
+    'Ekadashi', 'Dwadashi', 'Trayodashi', 'Chaturdashi', 'Purnima',
+    'Pratipada', 'Dwitiya', 'Tritiya', 'Chaturthi', 'Panchami',
+    'Shashthi', 'Saptami', 'Ashtami', 'Navami', 'Dashami',
+    'Ekadashi', 'Dwadashi', 'Trayodashi', 'Chaturdashi', 'Amavasya'
   ];
   
   // Approximate nakshatra (27 nakshatras)
-  const nakshatra = (dayOfYear % 27);
+  const nakshatraIndex = (dayOfYear % 27);
   const nakshatraNames = [
     'Ashwini', 'Bharani', 'Krittika', 'Rohini', 'Mrigashira',
     'Ardra', 'Punarvasu', 'Pushya', 'Ashlesha', 'Magha',
@@ -80,14 +83,134 @@ export const calculateBasicPanchang = (year, month, day) => {
     'Uttara Bhadrapada', 'Revati'
   ];
   
+  // Approximate yoga (27 yogas)
+  const yogaIndex = (dayOfYear % 27);
+  const yogaNames = [
+    'Vishkambha', 'Priti', 'Ayushman', 'Saubhagya', 'Shobhana',
+    'Atiganda', 'Sukarman', 'Dhriti', 'Shula', 'Ganda',
+    'Vriddhi', 'Dhruva', 'Vyaghata', 'Harshana', 'Vajra',
+    'Siddhi', 'Vyatipata', 'Variyan', 'Parigha', 'Shiva',
+    'Siddha', 'Sadhya', 'Shubha', 'Shukla', 'Brahma',
+    'Indra', 'Vaidhriti'
+  ];
+  
+  // Approximate karana (11 karanas, repeating)
+  const karanaIndex = (dayOfYear % 11);
+  const karanaNames = [
+    'Bava', 'Balava', 'Kaulava', 'Taitila', 'Garaja',
+    'Vanija', 'Vishti', 'Shakuni', 'Chatushpada', 'Naga', 'Kimstughna'
+  ];
+  
   // Day of week
   const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const vara = weekdays[date.getDay()];
   
+  // Hindu months (approximate)
+  const hinduMonths = [
+    'Chaitra', 'Vaishakha', 'Jyeshtha', 'Ashadha', 'Shravana', 'Bhadrapada',
+    'Ashwin', 'Kartik', 'Margashirsha', 'Pausha', 'Magha', 'Phalguna'
+  ];
+  const hinduMonth = hinduMonths[month];
+  
+  // Rashi (Moon sign) - approximate
+  const rashiIndex = Math.floor((dayOfYear % 360) / 30);
+  const rashiNames = [
+    'Mesha (Aries)', 'Vrishabha (Taurus)', 'Mithuna (Gemini)', 
+    'Karka (Cancer)', 'Simha (Leo)', 'Kanya (Virgo)',
+    'Tula (Libra)', 'Vrishchika (Scorpio)', 'Dhanu (Sagittarius)',
+    'Makara (Capricorn)', 'Kumbha (Aquarius)', 'Meena (Pisces)'
+  ];
+  
+  // Calculate moon phase percentage
+  const moonPhase = tithiIndex <= 14 ? 'Waxing' : 'Waning';
+  const moonIllumination = tithiIndex <= 15 
+    ? Math.round((tithiIndex / 15) * 100)
+    : Math.round(((30 - tithiIndex) / 15) * 100);
+  
+  // Special days
+  const tithi = tithiNames[tithiIndex];
+  const isEkadashi = tithi === 'Ekadashi';
+  const isPurnima = tithi === 'Purnima';
+  const isAmavasya = tithi === 'Amavasya';
+  const isPradosham = tithi === 'Trayodashi';
+  const isChaturthi = tithi === 'Chaturthi';
+  const isAshtami = tithi === 'Ashtami';
+  
+  // Paksha
+  const paksha = tithiIndex < 15 ? 'Shukla Paksha' : 'Krishna Paksha';
+  
+  // Calculate sunrise and sunset (approximate based on latitude)
+  const sunriseHour = 6; // Simplified - would need proper calculation
+  const sunsetHour = 18;
+  
+  // Calculate Rahu Kala (inauspicious period)
+  const rahuKalaDuration = 1.5; // 1.5 hours
+  const dayOfWeek = date.getDay();
+  const rahuKalaStart = [16.5, 7.5, 15, 12, 13.5, 10.5, 9][dayOfWeek]; // Approximate times
+  
+  // Auspiciousness score (1-5 stars)
+  let auspiciousness = 3; // Default neutral
+  
+  // Boost for good nakshatras
+  const goodNakshatras = ['Ashwini', 'Rohini', 'Pushya', 'Hasta', 'Revati', 'Shravana', 'Uttara Phalguni'];
+  if (goodNakshatras.includes(nakshatraNames[nakshatraIndex])) auspiciousness += 1;
+  
+  // Boost for good yogas
+  const goodYogas = ['Ayushman', 'Siddhi', 'Siddha', 'Sadhya', 'Shubha', 'Dhruva', 'Harshana'];
+  if (goodYogas.includes(yogaNames[yogaIndex])) auspiciousness += 0.5;
+  
+  // Reduce for bad yogas
+  const badYogas = ['Vyaghata', 'Vyatipata', 'Vaidhriti', 'Parigha'];
+  if (badYogas.includes(yogaNames[yogaIndex])) auspiciousness -= 1;
+  
+  // Special days boost
+  if (isPurnima || isAmavasya) auspiciousness += 0.5;
+  
+  auspiciousness = Math.max(1, Math.min(5, auspiciousness)); // Clamp between 1-5
+  
+  // Determine day suitability
+  let bestFor = [];
+  if (auspiciousness >= 4) {
+    bestFor = ['New Beginnings', 'Marriage', 'Business', 'Travel'];
+  } else if (auspiciousness >= 3) {
+    bestFor = ['Routine Work', 'Studies', 'Family Activities'];
+  } else {
+    bestFor = ['Spiritual Practice', 'Introspection', 'Planning'];
+  }
+  
   return {
-    tithi: tithiNames[Math.floor(tithi / 2) % 15],
-    nakshatra: nakshatraNames[nakshatra],
+    // Basic info
+    tithi: tithi,
+    tithiIndex: (tithiIndex % 15) + 1,
+    nakshatra: nakshatraNames[nakshatraIndex],
+    yoga: yogaNames[yogaIndex],
+    karana: karanaNames[karanaIndex],
     vara: vara,
-    paksha: tithi <= 15 ? 'Shukla Paksha' : 'Krishna Paksha'
+    paksha: paksha,
+    
+    // Extended info
+    hinduMonth: hinduMonth,
+    rashi: rashiNames[rashiIndex],
+    
+    // Moon phase
+    moonPhase: moonPhase,
+    moonIllumination: moonIllumination,
+    
+    // Special days
+    isEkadashi: isEkadashi,
+    isPurnima: isPurnima,
+    isAmavasya: isAmavasya,
+    isPradosham: isPradosham,
+    isChaturthi: isChaturthi,
+    isAshtami: isAshtami,
+    
+    // Times (approximate)
+    sunrise: `${sunriseHour}:00 AM`,
+    sunset: `${sunsetHour}:00 PM`,
+    rahuKala: `${Math.floor(rahuKalaStart)}:${String(Math.round((rahuKalaStart % 1) * 60)).padStart(2, '0')} - ${Math.floor(rahuKalaStart + rahuKalaDuration)}:${String(Math.round(((rahuKalaStart + rahuKalaDuration) % 1) * 60)).padStart(2, '0')}`,
+    
+    // Auspiciousness
+    auspiciousness: Math.round(auspiciousness),
+    bestFor: bestFor
   };
 };

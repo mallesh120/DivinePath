@@ -283,17 +283,117 @@ const FestivalsPage = () => {
           )}
         </>
       ) : (
-        <CalendarView 
-          year={calendarYear}
-          month={calendarMonth}
-          onYearChange={setCalendarYear}
-          onMonthChange={setCalendarMonth}
-          festivalsByDate={festivalsByDate}
-          selectedDate={selectedDate}
-          onDateSelect={setSelectedDate}
-          minYear={minYear}
-          maxYear={maxYear}
-        />
+        <>
+          {/* Legend for Calendar Symbols */}
+          <div className="calendar-legend">
+            <h3 className="legend-title">📖 Calendar Legend</h3>
+            <div className="legend-grid">
+              <div className="legend-section">
+                <h4>Special Days</h4>
+                <div className="legend-items">
+                  <div className="legend-item">
+                    <span className="legend-icon">⚡</span>
+                    <span className="legend-text">Ekadashi (Fasting Day)</span>
+                  </div>
+                  <div className="legend-item">
+                    <span className="legend-icon">🌕</span>
+                    <span className="legend-text">Purnima (Full Moon)</span>
+                  </div>
+                  <div className="legend-item">
+                    <span className="legend-icon">🌑</span>
+                    <span className="legend-text">Amavasya (New Moon)</span>
+                  </div>
+                  <div className="legend-item">
+                    <span className="legend-icon">🔥</span>
+                    <span className="legend-text">Pradosham</span>
+                  </div>
+                  <div className="legend-item">
+                    <span className="legend-icon">🙏</span>
+                    <span className="legend-text">Chaturthi (Ganesh Day)</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="legend-section">
+                <h4>Panchang Elements</h4>
+                <div className="legend-items">
+                  <div className="legend-item">
+                    <span className="legend-color tithi-color">Purple</span>
+                    <span className="legend-text">Tithi (Lunar Day)</span>
+                  </div>
+                  <div className="legend-item">
+                    <span className="legend-color nakshatra-color">Italic Purple</span>
+                    <span className="legend-text">Nakshatra (Constellation)</span>
+                  </div>
+                  <div className="legend-item">
+                    <span className="legend-color yoga-color">Green</span>
+                    <span className="legend-text">Yoga (Sun-Moon Combination)</span>
+                  </div>
+                  <div className="legend-item">
+                    <span className="legend-icon">🌙</span>
+                    <span className="legend-text">Moon Phase & Illumination</span>
+                  </div>
+                  <div className="legend-item">
+                    <span className="legend-icon">⭐</span>
+                    <span className="legend-text">Auspiciousness Rating (1-5 stars)</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="legend-section">
+                <h4>Festival Indicators</h4>
+                <div className="legend-items">
+                  <div className="legend-item">
+                    <span className="legend-icon orange-dot">•</span>
+                    <span className="legend-text">Festival on this day</span>
+                  </div>
+                  <div className="legend-item">
+                    <div className="legend-box festival-box"></div>
+                    <span className="legend-text">Day with festivals</span>
+                  </div>
+                  <div className="legend-item">
+                    <div className="legend-box today-box"></div>
+                    <span className="legend-text">Today's date</span>
+                  </div>
+                  <div className="legend-item">
+                    <div className="legend-box auspicious-box"></div>
+                    <span className="legend-text">Highly auspicious day</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="legend-section">
+                <h4>How to Use</h4>
+                <div className="legend-items">
+                  <div className="legend-item">
+                    <span className="legend-text">• Click any date to see full Panchang details</span>
+                  </div>
+                  <div className="legend-item">
+                    <span className="legend-text">• Hover over elements for more information</span>
+                  </div>
+                  <div className="legend-item">
+                    <span className="legend-text">• ⚠️ Avoid Rahu Kala for new beginnings</span>
+                  </div>
+                  <div className="legend-item">
+                    <span className="legend-text">• Higher stars = More auspicious day</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <CalendarView 
+            year={calendarYear}
+            month={calendarMonth}
+            onYearChange={setCalendarYear}
+            onMonthChange={setCalendarMonth}
+            festivalsByDate={festivalsByDate}
+            selectedDate={selectedDate}
+            onDateSelect={setSelectedDate}
+            minYear={minYear}
+            maxYear={maxYear}
+          />
+        </>
       )}
     </div>
   );
@@ -355,22 +455,66 @@ const CalendarView = ({ year, month, onYearChange, onMonthChange, festivalsByDat
     // Calculate panchang data for this date
     const panchangInfo = calculateBasicPanchang(year, month, day);
     
+    // Determine special day classes
+    let specialClass = '';
+    let specialBadge = null;
+    
+    if (panchangInfo.isPurnima) {
+      specialClass = 'special-purnima';
+      specialBadge = <span className="special-badge purnima-badge" title="Purnima (Full Moon)">🌕</span>;
+    } else if (panchangInfo.isAmavasya) {
+      specialClass = 'special-amavasya';
+      specialBadge = <span className="special-badge amavasya-badge" title="Amavasya (New Moon)">🌑</span>;
+    } else if (panchangInfo.isEkadashi) {
+      specialClass = 'special-ekadashi';
+      specialBadge = <span className="special-badge ekadashi-badge" title="Ekadashi (Fasting Day)">⚡</span>;
+    } else if (panchangInfo.isPradosham) {
+      specialClass = 'special-pradosham';
+      specialBadge = <span className="special-badge pradosham-badge" title="Pradosham">🔥</span>;
+    } else if (panchangInfo.isChaturthi) {
+      specialClass = 'special-chaturthi';
+      specialBadge = <span className="special-badge chaturthi-badge" title="Chaturthi (Ganesh)">🙏</span>;
+    }
+    
+    // Auspiciousness class
+    const auspiciousClass = 
+      panchangInfo.auspiciousness >= 4 ? 'highly-auspicious' :
+      panchangInfo.auspiciousness <= 2 ? 'low-auspicious' : '';
+    
     calendarDays.push(
       <div
         key={day}
-        className={`calendar-day ${isToday ? 'today' : ''} ${hasFestival ? 'has-festival' : ''}`}
+        className={`calendar-day ${isToday ? 'today' : ''} ${hasFestival ? 'has-festival' : ''} ${specialClass} ${auspiciousClass}`}
         onClick={() => handleDateClick(day)}
       >
-        <div className="calendar-day-number">{day}</div>
+        <div className="calendar-day-header">
+          <div className="calendar-day-number">{day}</div>
+          {specialBadge}
+        </div>
+        
+        {/* Moon phase indicator */}
+        <div className="moon-phase-indicator" title={`${panchangInfo.moonPhase} - ${panchangInfo.moonIllumination}%`}>
+          <div className="moon-icon" style={{
+            background: `linear-gradient(90deg, #ffd700 ${panchangInfo.moonIllumination}%, transparent ${panchangInfo.moonIllumination}%)`
+          }}>🌙</div>
+        </div>
         
         {/* Hindu calendar info */}
         <div className="calendar-panchang-info">
-          <div className="panchang-tithi" title={`Tithi: ${panchangInfo.tithi}`}>
+          <div className="panchang-tithi" title={`Tithi: ${panchangInfo.tithi} (${panchangInfo.paksha})`}>
             {panchangInfo.tithi}
           </div>
           <div className="panchang-nakshatra" title={`Nakshatra: ${panchangInfo.nakshatra}`}>
             {panchangInfo.nakshatra}
           </div>
+          <div className="panchang-yoga" title={`Yoga: ${panchangInfo.yoga}`}>
+            {panchangInfo.yoga}
+          </div>
+        </div>
+        
+        {/* Auspiciousness stars */}
+        <div className="auspiciousness-rating" title={`Auspiciousness: ${panchangInfo.auspiciousness}/5`}>
+          {'⭐'.repeat(panchangInfo.auspiciousness)}
         </div>
         
         {hasFestival && (
@@ -434,40 +578,132 @@ const CalendarView = ({ year, month, onYearChange, onMonthChange, festivalsByDat
             {monthNames[selectedDate.month]} {selectedDate.day}, {selectedDate.year}
           </h3>
           
-          {/* Hindu Calendar Details */}
-          <div className="panchang-details-section">
-            <h4>Hindu Calendar (Panchang)</h4>
-            <div className="panchang-details-grid">
-              {(() => {
-                const panchang = calculateBasicPanchang(
-                  selectedDate.year, 
-                  selectedDate.month, 
-                  selectedDate.day
-                );
-                return (
-                  <>
+          {(() => {
+            const panchang = calculateBasicPanchang(
+              selectedDate.year, 
+              selectedDate.month, 
+              selectedDate.day
+            );
+            
+            return (
+              <>
+                {/* Auspiciousness Overview */}
+                <div className="day-overview-section">
+                  <div className="auspiciousness-display">
+                    <span className="auspiciousness-label">Day Quality:</span>
+                    <span className="auspiciousness-stars">
+                      {'⭐'.repeat(panchang.auspiciousness)}
+                      {'☆'.repeat(5 - panchang.auspiciousness)}
+                    </span>
+                    <span className="auspiciousness-text">
+                      {panchang.auspiciousness >= 4 ? 'Highly Auspicious' :
+                       panchang.auspiciousness >= 3 ? 'Moderately Auspicious' :
+                       'Less Auspicious'}
+                    </span>
+                  </div>
+                  {panchang.bestFor.length > 0 && (
+                    <div className="best-for-section">
+                      <strong>Best For:</strong> {panchang.bestFor.join(', ')}
+                    </div>
+                  )}
+                  
+                  {/* Special Day Indicators */}
+                  <div className="special-indicators">
+                    {panchang.isEkadashi && <span className="special-tag ekadashi-tag">🌟 Ekadashi (Fasting Day)</span>}
+                    {panchang.isPurnima && <span className="special-tag purnima-tag">🌕 Purnima (Full Moon)</span>}
+                    {panchang.isAmavasya && <span className="special-tag amavasya-tag">🌑 Amavasya (New Moon)</span>}
+                    {panchang.isPradosham && <span className="special-tag pradosham-tag">🔥 Pradosham</span>}
+                    {panchang.isChaturthi && <span className="special-tag chaturthi-tag">🙏 Chaturthi (Ganesh Day)</span>}
+                    {panchang.isAshtami && <span className="special-tag ashtami-tag">✨ Ashtami</span>}
+                  </div>
+                </div>
+                
+                {/* Basic Panchang Details */}
+                <div className="panchang-details-section">
+                  <h4>📅 Panchang Elements</h4>
+                  <div className="panchang-details-grid">
                     <div className="panchang-detail-item">
-                      <strong>Tithi:</strong> {panchang.tithi}
+                      <strong>Tithi:</strong> 
+                      <span>{panchang.tithi} ({panchang.tithiIndex}/15)</span>
                     </div>
                     <div className="panchang-detail-item">
-                      <strong>Nakshatra:</strong> {panchang.nakshatra}
+                      <strong>Nakshatra:</strong> 
+                      <span>{panchang.nakshatra}</span>
                     </div>
                     <div className="panchang-detail-item">
-                      <strong>Vara (Day):</strong> {panchang.vara}
+                      <strong>Yoga:</strong> 
+                      <span>{panchang.yoga}</span>
                     </div>
                     <div className="panchang-detail-item">
-                      <strong>Paksha:</strong> {panchang.paksha}
+                      <strong>Karana:</strong> 
+                      <span>{panchang.karana}</span>
                     </div>
-                  </>
-                );
-              })()}
-            </div>
-          </div>
+                    <div className="panchang-detail-item">
+                      <strong>Vara (Day):</strong> 
+                      <span>{panchang.vara}</span>
+                    </div>
+                    <div className="panchang-detail-item">
+                      <strong>Paksha:</strong> 
+                      <span>{panchang.paksha}</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Moon Phase & Hindu Month */}
+                <div className="panchang-details-section">
+                  <h4>🌙 Lunar Details</h4>
+                  <div className="panchang-details-grid">
+                    <div className="panchang-detail-item">
+                      <strong>Moon Phase:</strong> 
+                      <span>{panchang.moonPhase} ({panchang.moonIllumination}%)</span>
+                    </div>
+                    <div className="panchang-detail-item">
+                      <strong>Hindu Month:</strong> 
+                      <span>{panchang.hinduMonth}</span>
+                    </div>
+                    <div className="panchang-detail-item">
+                      <strong>Rashi (Moon Sign):</strong> 
+                      <span>{panchang.rashi}</span>
+                    </div>
+                  </div>
+                  <div className="moon-phase-visual">
+                    <div className="moon-display" style={{
+                      background: `linear-gradient(90deg, #ffd700 ${panchang.moonIllumination}%, #333 ${panchang.moonIllumination}%)`
+                    }}>
+                      {panchang.isPurnima ? '🌕' : panchang.isAmavasya ? '🌑' : '🌙'}
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Time Details */}
+                <div className="panchang-details-section">
+                  <h4>⏰ Important Times</h4>
+                  <div className="panchang-details-grid">
+                    <div className="panchang-detail-item time-item">
+                      <strong>Sunrise:</strong> 
+                      <span>{panchang.sunrise}</span>
+                    </div>
+                    <div className="panchang-detail-item time-item">
+                      <strong>Sunset:</strong> 
+                      <span>{panchang.sunset}</span>
+                    </div>
+                    <div className="panchang-detail-item time-item warning">
+                      <strong>⚠️ Rahu Kala:</strong> 
+                      <span>{panchang.rahuKala}</span>
+                    </div>
+                  </div>
+                  <div className="time-warning">
+                    <small>⚠️ Avoid starting important activities during Rahu Kala</small>
+                  </div>
+                </div>
+              </>
+            );
+          })()}
           
           {/* Festivals on this day */}
           {selectedDate.festivals.length > 0 && (
-            <>
-              <h4>Festivals</h4>
+            <div className="panchang-details-section">
+              <h4>🎉 Festivals</h4>
               <div className="calendar-festival-list">
                 {selectedDate.festivals.map((festival, idx) => (
                   <div key={idx} className="calendar-festival-item">
@@ -476,7 +712,7 @@ const CalendarView = ({ year, month, onYearChange, onMonthChange, festivalsByDat
                   </div>
                 ))}
               </div>
-            </>
+            </div>
           )}
           
           <button 
