@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { sortFestivalsByDate, getAllFestivalsWithCalculated } from '../../data/festivalsData';
 import FestivalCard from '../../components/FestivalCard/FestivalCard';
 import { getLocationForFestivals, WORLD_CITIES, setUserLocation } from '../../utils/locationService';
+import { calculateBasicPanchang } from '../../hooks/usePanchangamForDate';
 import './FestivalsPage.css';
 
 const FestivalsPage = () => {
@@ -331,9 +332,8 @@ const CalendarView = ({ year, month, onYearChange, onMonthChange, festivalsByDat
   
   const handleDateClick = (day) => {
     const festivals = getFestivalsForDate(day);
-    if (festivals.length > 0) {
-      onDateSelect({ day, month, year, festivals });
-    }
+    // Allow clicking on any date to see panchang details
+    onDateSelect({ day, month, year, festivals });
   };
   
   // Generate calendar days
@@ -352,6 +352,9 @@ const CalendarView = ({ year, month, onYearChange, onMonthChange, festivalsByDat
                     year === new Date().getFullYear();
     const hasFestival = festivals.length > 0;
     
+    // Calculate panchang data for this date
+    const panchangInfo = calculateBasicPanchang(year, month, day);
+    
     calendarDays.push(
       <div
         key={day}
@@ -359,6 +362,17 @@ const CalendarView = ({ year, month, onYearChange, onMonthChange, festivalsByDat
         onClick={() => handleDateClick(day)}
       >
         <div className="calendar-day-number">{day}</div>
+        
+        {/* Hindu calendar info */}
+        <div className="calendar-panchang-info">
+          <div className="panchang-tithi" title={`Tithi: ${panchangInfo.tithi}`}>
+            {panchangInfo.tithi}
+          </div>
+          <div className="panchang-nakshatra" title={`Nakshatra: ${panchangInfo.nakshatra}`}>
+            {panchangInfo.nakshatra}
+          </div>
+        </div>
+        
         {hasFestival && (
           <div className="calendar-day-festivals">
             {festivals.slice(0, 2).map((festival, idx) => (
@@ -416,15 +430,55 @@ const CalendarView = ({ year, month, onYearChange, onMonthChange, festivalsByDat
       
       {selectedDate && (
         <div className="calendar-festival-details">
-          <h3>Festivals on {monthNames[selectedDate.month]} {selectedDate.day}, {selectedDate.year}</h3>
-          <div className="calendar-festival-list">
-            {selectedDate.festivals.map((festival, idx) => (
-              <div key={idx} className="calendar-festival-item">
-                <strong>{festival.name}</strong>
-                {festival.description && <p>{festival.description}</p>}
-              </div>
-            ))}
+          <h3>
+            {monthNames[selectedDate.month]} {selectedDate.day}, {selectedDate.year}
+          </h3>
+          
+          {/* Hindu Calendar Details */}
+          <div className="panchang-details-section">
+            <h4>Hindu Calendar (Panchang)</h4>
+            <div className="panchang-details-grid">
+              {(() => {
+                const panchang = calculateBasicPanchang(
+                  selectedDate.year, 
+                  selectedDate.month, 
+                  selectedDate.day
+                );
+                return (
+                  <>
+                    <div className="panchang-detail-item">
+                      <strong>Tithi:</strong> {panchang.tithi}
+                    </div>
+                    <div className="panchang-detail-item">
+                      <strong>Nakshatra:</strong> {panchang.nakshatra}
+                    </div>
+                    <div className="panchang-detail-item">
+                      <strong>Vara (Day):</strong> {panchang.vara}
+                    </div>
+                    <div className="panchang-detail-item">
+                      <strong>Paksha:</strong> {panchang.paksha}
+                    </div>
+                  </>
+                );
+              })()}
+            </div>
           </div>
+          
+          {/* Festivals on this day */}
+          {selectedDate.festivals.length > 0 && (
+            <>
+              <h4>Festivals</h4>
+              <div className="calendar-festival-list">
+                {selectedDate.festivals.map((festival, idx) => (
+                  <div key={idx} className="calendar-festival-item">
+                    <strong>{festival.name}</strong>
+                    {festival.description && <p>{festival.description}</p>}
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+          
           <button 
             className="calendar-close-details"
             onClick={() => onDateSelect(null)}
