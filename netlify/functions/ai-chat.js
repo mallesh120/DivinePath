@@ -19,6 +19,22 @@ exports.handler = async (event, context) => {
       };
     }
 
+    // Check if API key exists
+    if (!process.env.GEMINI_API_KEY) {
+      console.error('GEMINI_API_KEY not found in environment variables');
+      return {
+        statusCode: 500,
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+        },
+        body: JSON.stringify({ 
+          error: 'API key not configured. Please set GEMINI_API_KEY environment variable.',
+          success: false
+        })
+      };
+    }
+
     // Initialize Gemini AI
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
@@ -91,12 +107,18 @@ exports.handler = async (event, context) => {
 
   } catch (error) {
     console.error('AI Error:', error);
+    console.error('Error details:', error.message, error.stack);
     
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+      },
       body: JSON.stringify({ 
         error: 'Failed to generate AI response',
-        details: error.message 
+        details: error.message,
+        success: false
       })
     };
   }
