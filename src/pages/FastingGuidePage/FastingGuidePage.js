@@ -74,23 +74,23 @@ function FastingGuidePage() {
 
               <div className="detail-section">
                 <h4>🍽️ Fasting Rules</h4>
-                <p>{dayData.fastingRules}</p>
+                <p>{dayData.duration}</p>
               </div>
 
               <div className="detail-section">
                 <h4>✅ Foods to Eat</h4>
                 <div className="food-list">
-                  {dayData.foodsToEat.map((food, index) => (
+                  {dayData.toEat.map((food, index) => (
                     <span key={index} className="food-tag allowed">{food}</span>
                   ))}
                 </div>
               </div>
 
-              {dayData.foodsToAvoid && dayData.foodsToAvoid.length > 0 && (
+              {dayData.toAvoid && dayData.toAvoid.length > 0 && (
                 <div className="detail-section">
                   <h4>❌ Foods to Avoid</h4>
                   <div className="food-list">
-                    {dayData.foodsToAvoid.map((food, index) => (
+                    {dayData.toAvoid.map((food, index) => (
                       <span key={index} className="food-tag avoid">{food}</span>
                     ))}
                   </div>
@@ -99,7 +99,7 @@ function FastingGuidePage() {
 
               <div className="detail-section benefits">
                 <h4>🌟 Benefits</h4>
-                <p>{dayData.benefits}</p>
+                <p>{Array.isArray(dayData.benefits) ? dayData.benefits.join(', ') : dayData.benefits}</p>
               </div>
             </div>
           </div>
@@ -190,17 +190,17 @@ function FastingGuidePage() {
         <div className="special-grid">
           {specialFasts.map((fast) => (
             <div
-              key={fast.festival}
-              className={`special-card ${selectedSpecial === fast.festival ? 'selected' : ''}`}
-              onClick={() => handleSpecialSelect(fast.festival)}
+              key={fast.name}
+              className={`special-card ${selectedSpecial === fast.name ? 'selected' : ''}`}
+              onClick={() => handleSpecialSelect(fast.name)}
             >
               <div className="special-icon">
-                {fast.festival === 'Maha Shivaratri' ? '🔱' :
-                 fast.festival === 'Karva Chauth' ? '🌙' :
-                 fast.festival === 'Navaratri' ? '🪔' : '🦚'}
+                {fast.name === 'Maha Shivaratri' ? '🔱' :
+                 fast.name === 'Karwa Chauth' ? '🌙' :
+                 fast.name === 'Navratri (9 days)' ? '🪔' : '🦚'}
               </div>
-              <h3>{fast.festival}</h3>
-              <p>{fast.significance}</p>
+              <h3>{fast.name}</h3>
+              <p>{fast.deity}</p>
             </div>
           ))}
         </div>
@@ -209,6 +209,8 @@ function FastingGuidePage() {
           <div className="special-details">
             {(() => {
               const specialData = getSpecialFastDetails(selectedSpecial);
+              if (!specialData) return null;
+              
               return (
                 <>
                   <div className="details-header">

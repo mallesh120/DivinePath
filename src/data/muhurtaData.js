@@ -207,3 +207,36 @@ export const generateSampleMuhurtaDates = (eventType) => {
   
   return sampleDates;
 };
+
+// Helper function for MuhurtaFinderPage - wraps existing functionality
+export const getMuhurtaRecommendation = (panchangamData, eventType) => {
+  if (!panchangamData) {
+    return {
+      status: 'unavailable',
+      score: 0,
+      favorableFactors: [],
+      unfavorableFactors: ['Panchangam data not available'],
+      recommendations: ['Please check your internet connection and try again']
+    };
+  }
+
+  const score = calculateMuhurtaScore(eventType.id, panchangamData, new Date());
+  const recommendations = getMuhurtaRecommendations(eventType.id, score, {
+    nakshatra: panchangamData.almanac?.Nakshatra?.name,
+    tithi: panchangamData.almanac?.Tithi?.name,
+    day: panchangamData.day
+  });
+
+  // Determine status based on score
+  let status = 'avoid';
+  if (score >= 70) status = 'auspicious';
+  else if (score >= 50) status = 'moderate';
+
+  return {
+    status,
+    score,
+    favorableFactors: recommendations.favorableFactors || [],
+    unfavorableFactors: recommendations.unfavorableFactors || [],
+    recommendations: recommendations.suggestions || []
+  };
+};

@@ -190,3 +190,36 @@ export const isTodayEkadashi = (panchangamData) => {
   const tithi = panchangamData.almanac.Tithi?.name || '';
   return tithi.toLowerCase().includes('ekadashi');
 };
+
+// Helper function for FastingGuidePage
+export const getFastingRulesForDay = (dayName) => {
+  return fastingDays.weekly.find(day => day.day === dayName);
+};
+
+// Get Ekadashi details
+export const getEkadashiDetails = () => {
+  return {
+    festival: 'Ekadashi',
+    frequency: fastingDays.ekadashi.significance,
+    fastingRules: fastingDays.ekadashi.duration,
+    foodsToAvoid: fastingDays.ekadashi.toAvoid,
+    foodsAllowed: fastingDays.ekadashi.toEat,
+    breakingFast: 'Next day morning after sunrise (Dwadashi)',
+    benefits: fastingDays.ekadashi.benefits.join(', ')
+  };
+};
+
+// Get special fast details by festival name
+export const getSpecialFastDetails = (festivalName) => {
+  const fast = fastingDays.special.find(f => f.name === festivalName);
+  if (!fast) return null;
+  
+  return {
+    festival: fast.name,
+    significance: fast.deity,
+    fastingRules: fast.duration,
+    whatToEat: fast.toEat,
+    whatToAvoid: fast.toAvoid,
+    specialNotes: fast.specialty
+  };
+};
