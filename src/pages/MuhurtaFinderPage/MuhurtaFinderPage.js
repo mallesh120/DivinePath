@@ -20,6 +20,7 @@ function MuhurtaFinderPage() {
     eventLocation: ''
   });
   const [showCalculations, setShowCalculations] = useState(false);
+  const [calculationMode, setCalculationMode] = useState('check'); // 'check' or 'find'
 
   const handleEventSelect = (event) => {
     setSelectedEvent(event);
@@ -40,19 +41,10 @@ function MuhurtaFinderPage() {
           Tithi: { name: 'Panchami' },
           Yoga: { name: 'Siddha' }
         },
-        day: new Date(selectedDate).toLocaleDateString('en-US', { weekday: 'long' })
+        day: new Date(selectedDate + 'T00:00:00').toLocaleDateString('en-US', { weekday: 'long' })
       };
       const result = getMuhurtaRecommendation(dataToUse, selectedEvent, selectedDate, userDetails);
       setRecommendation(result);
-    }
-  };
-
-  const getStatusColor = (status) => {
-    switch (status) {
-      case 'auspicious': return '#4CAF50';
-      case 'moderate': return '#FF9800';
-      case 'avoid': return '#F44336';
-      default: return '#757575';
     }
   };
 
@@ -149,47 +141,96 @@ function MuhurtaFinderPage() {
             </div>
           </div>
 
+          {/* Calculation Mode Toggle */}
+          <div className="mode-toggle-section">
+            <h3>Choose Calculation Mode</h3>
+            <div className="mode-toggle-buttons">
+              <button
+                className={`mode-button ${calculationMode === 'check' ? 'active' : ''}`}
+                onClick={() => setCalculationMode('check')}
+              >
+                <span className="mode-icon">📊</span>
+                <span className="mode-title">General Date Check</span>
+                <span className="mode-desc">Quick muhurta score without personal details</span>
+              </button>
+              <button
+                className={`mode-button ${calculationMode === 'checkPersonal' ? 'active' : ''}`}
+                onClick={() => setCalculationMode('checkPersonal')}
+              >
+                <span className="mode-icon">👤</span>
+                <span className="mode-title">Personalized Date Check</span>
+                <span className="mode-desc">Get score with your birth chart compatibility</span>
+              </button>
+              <button
+                className={`mode-button ${calculationMode === 'find' ? 'active' : ''}`}
+                onClick={() => setCalculationMode('find')}
+              >
+                <span className="mode-icon">🔍</span>
+                <span className="mode-title">Find Best Dates</span>
+                <span className="mode-desc">Discover the most auspicious upcoming dates</span>
+              </button>
+            </div>
+          </div>
+
           {/* User Details Form */}
           <div className="muhurta-calculator-form">
-            <h3>📋 Enter Details for Personalized Muhurta</h3>
-            <p className="form-subtitle">Provide your birth details and event date for accurate auspicious time calculation</p>
+            <h3>📋 {
+              calculationMode === 'check' ? 'Check Date Score' :
+              calculationMode === 'checkPersonal' ? 'Personalized Date Analysis' :
+              'Enter Details for Personalized Muhurta'
+            }</h3>
+            <p className="form-subtitle">
+              {calculationMode === 'check' 
+                ? 'Select a date to see its general muhurta score based on Panchangam'
+                : calculationMode === 'checkPersonal'
+                ? 'Provide your birth details for personalized compatibility analysis'
+                : 'Provide your birth details and event date for accurate auspicious time calculation'}
+            </p>
             
             <div className="form-grid">
-              <div className="form-group">
-                <label>📅 Your Birth Date</label>
-                <input
-                  type="date"
-                  value={userDetails.birthDate}
-                  onChange={(e) => handleUserDetailsChange('birthDate', e.target.value)}
-                  placeholder="Select date"
-                />
-                <small>Used for birth chart compatibility</small>
-              </div>
+              {(calculationMode === 'find' || calculationMode === 'checkPersonal') && (
+                <>
+                  <div className="form-group">
+                    <label>📅 Your Birth Date</label>
+                    <input
+                      type="date"
+                      value={userDetails.birthDate}
+                      onChange={(e) => handleUserDetailsChange('birthDate', e.target.value)}
+                      placeholder="Select date"
+                    />
+                    <small>Used for birth chart compatibility</small>
+                  </div>
+
+                  <div className="form-group">
+                    <label>🕐 Birth Time</label>
+                    <input
+                      type="time"
+                      value={userDetails.birthTime}
+                      onChange={(e) => handleUserDetailsChange('birthTime', e.target.value)}
+                      placeholder="HH:MM"
+                    />
+                    <small>24-hour format (e.g., 14:30)</small>
+                  </div>
+
+                  <div className="form-group">
+                    <label>📍 Birth Place</label>
+                    <input
+                      type="text"
+                      value={userDetails.birthPlace}
+                      onChange={(e) => handleUserDetailsChange('birthPlace', e.target.value)}
+                      placeholder="City, State"
+                    />
+                    <small>For accurate planetary positions</small>
+                  </div>
+                </>
+              )}
 
               <div className="form-group">
-                <label>🕐 Birth Time</label>
-                <input
-                  type="time"
-                  value={userDetails.birthTime}
-                  onChange={(e) => handleUserDetailsChange('birthTime', e.target.value)}
-                  placeholder="HH:MM"
-                />
-                <small>24-hour format (e.g., 14:30)</small>
-              </div>
-
-              <div className="form-group">
-                <label>📍 Birth Place</label>
-                <input
-                  type="text"
-                  value={userDetails.birthPlace}
-                  onChange={(e) => handleUserDetailsChange('birthPlace', e.target.value)}
-                  placeholder="City, State"
-                />
-                <small>For accurate planetary positions</small>
-              </div>
-
-              <div className="form-group">
-                <label>🗓️ Proposed Event Date</label>
+                <label>🗓️ {
+                  calculationMode === 'check' ? 'Date to Check' :
+                  calculationMode === 'checkPersonal' ? 'Date to Analyze' :
+                  'Proposed Event Date'
+                }</label>
                 <input
                   type="date"
                   value={selectedDate}
@@ -197,19 +238,25 @@ function MuhurtaFinderPage() {
                   min={new Date().toISOString().split('T')[0]}
                   placeholder="Select event date"
                 />
-                <small>Date you want to check</small>
+                <small>{
+                  calculationMode === 'check' ? 'Select any date to check its general score' :
+                  calculationMode === 'checkPersonal' ? 'Select date for personalized analysis' :
+                  'Date you want to check'
+                }</small>
               </div>
 
-              <div className="form-group">
-                <label>📌 Event Location</label>
-                <input
-                  type="text"
-                  value={userDetails.eventLocation}
-                  onChange={(e) => handleUserDetailsChange('eventLocation', e.target.value)}
-                  placeholder="City, State"
-                />
-                <small>Where the event will take place</small>
-              </div>
+              {calculationMode === 'find' && (
+                <div className="form-group">
+                  <label>📌 Event Location</label>
+                  <input
+                    type="text"
+                    value={userDetails.eventLocation}
+                    onChange={(e) => handleUserDetailsChange('eventLocation', e.target.value)}
+                    placeholder="City, State"
+                  />
+                  <small>Where the event will take place</small>
+                </div>
+              )}
             </div>
 
             <button 
@@ -217,8 +264,15 @@ function MuhurtaFinderPage() {
               onClick={handleCalculateMuhurta}
               disabled={!selectedDate}
             >
-              <span className="button-icon">🔮</span>
-              Calculate Auspicious Times
+              <span className="button-icon">{
+                calculationMode === 'check' ? '📊' :
+                calculationMode === 'checkPersonal' ? '👤' : '🔮'
+              }</span>
+              {
+                calculationMode === 'check' ? 'Check General Score' :
+                calculationMode === 'checkPersonal' ? 'Analyze with Birth Chart' :
+                'Calculate Auspicious Times'
+              }
             </button>
           </div>
 
@@ -240,7 +294,7 @@ function MuhurtaFinderPage() {
               <div className="recommendation-header">
                 <h3>Muhurta Analysis for {selectedEvent.name}</h3>
                 <div className="date-info">
-                  {selectedDate && new Date(selectedDate).toLocaleDateString('en-IN', {
+                  {selectedDate && new Date(selectedDate + 'T00:00:00').toLocaleDateString('en-IN', {
                     weekday: 'long',
                     year: 'numeric',
                     month: 'long',
@@ -249,21 +303,69 @@ function MuhurtaFinderPage() {
                 </div>
               </div>
 
-              <div 
-                className="status-badge"
-                style={{ backgroundColor: getStatusColor(recommendation.status) }}
-              >
-                <span className="status-icon">{getStatusIcon(recommendation.status)}</span>
-                <span className="status-text">
-                  {recommendation.status === 'auspicious' ? 'Highly Auspicious' :
-                   recommendation.status === 'moderate' ? 'Moderately Favorable' :
-                   'Not Recommended'}
-                </span>
-                <span className="status-score">{recommendation.score}/100</span>
+              {/* Enhanced Score Display */}
+              <div className="score-display-section">
+                <h3>Date Analysis Results</h3>
+                <div className="score-content-grid">
+                  <div className="score-meter-container">
+                    <div className="score-circle">
+                      <svg className="score-circle-svg" viewBox="0 0 200 200">
+                        <circle
+                          className="score-circle-bg"
+                          cx="100"
+                          cy="100"
+                          r="85"
+                        />
+                        <circle
+                          className={`score-circle-fill ${recommendation.status}`}
+                          cx="100"
+                          cy="100"
+                          r="85"
+                          strokeDasharray={`${(recommendation.score / 100) * 534} 534`}
+                        />
+                      </svg>
+                      <div className="score-text-overlay">
+                        <div className="score-number">{recommendation.score}</div>
+                        <div className="score-outof">/100</div>
+                      </div>
+                    </div>
+                    <div className={`score-status-text ${recommendation.status}`}>
+                      {getStatusIcon(recommendation.status)} {' '}
+                      {recommendation.status === 'auspicious' ? 'Highly Auspicious' :
+                       recommendation.status === 'moderate' ? 'Moderately Favorable' :
+                       'Not Recommended'}
+                    </div>
+                  </div>
+
+                  <div className="score-breakdown">
+                    <h4>Score Breakdown</h4>
+                    <div className="breakdown-bars">
+                      {recommendation.scoreBreakdown && recommendation.scoreBreakdown.map((item, index) => (
+                        <div key={index} className="breakdown-item">
+                          <div className="breakdown-header">
+                            <span className="breakdown-label">{item.factor}</span>
+                            <span className={`breakdown-points ${item.points >= 0 ? 'positive' : 'negative'}`}>
+                              {item.points >= 0 ? '+' : ''}{item.points}
+                            </span>
+                          </div>
+                          <div className="breakdown-bar-container">
+                            <div 
+                              className="breakdown-bar-fill" 
+                              style={{ 
+                                width: `${Math.abs(item.points)}%`,
+                                backgroundColor: item.points >= 0 ? '#4CAF50' : '#F44336'
+                              }}
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div className="panchangam-details">
-                <h4>Today's Panchangam</h4>
+                <h4>Panchangam Details</h4>
                 <div className="panchangam-grid">
                   <div className="pancha-item">
                     <span className="pancha-label">Tithi:</span>
