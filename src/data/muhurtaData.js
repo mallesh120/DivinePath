@@ -3,14 +3,70 @@ import { usePanchangam } from '../hooks/usePanchangam';
 
 // Event types for Muhurta
 export const muhurtaEventTypes = [
-  { id: 'wedding', name: 'Wedding/Marriage', icon: '💑', duration: '3-4 hours' },
-  { id: 'housewarming', name: 'Griha Pravesh (Housewarming)', icon: '🏠', duration: '2-3 hours' },
-  { id: 'vehicle', name: 'Vehicle Purchase', icon: '🚗', duration: '1-2 hours' },
-  { id: 'business', name: 'Business Start', icon: '💼', duration: '1-2 hours' },
-  { id: 'education', name: 'Education Start (Vidyarambham)', icon: '📚', duration: '1 hour' },
-  { id: 'travel', name: 'Travel/Journey', icon: '✈️', duration: 'Departure time' },
-  { id: 'naming', name: 'Naming Ceremony', icon: '👶', duration: '1-2 hours' },
-  { id: 'thread', name: 'Thread Ceremony (Upanayana)', icon: '🔱', duration: '3-4 hours' }
+  { 
+    id: 'wedding', 
+    name: 'Wedding/Marriage', 
+    icon: '💑', 
+    duration: '3-4 hours',
+    description: 'Marriage ceremony and related rituals',
+    considerations: ['Avoid Rahu Kaal and Yamaganda', 'Consider birth charts of bride and groom', 'Choose favorable month and season']
+  },
+  { 
+    id: 'housewarming', 
+    name: 'Griha Pravesh (Housewarming)', 
+    icon: '🏠', 
+    duration: '2-3 hours',
+    description: 'First entry into new home',
+    considerations: ['Avoid inauspicious days', 'Perform puja before entry', 'Choose morning muhurta']
+  },
+  { 
+    id: 'vehicle', 
+    name: 'Vehicle Purchase', 
+    icon: '🚗', 
+    duration: '1-2 hours',
+    description: 'Buying or taking delivery of new vehicle',
+    considerations: ['Choose auspicious nakshatra', 'Avoid Saturdays for two-wheelers', 'Perform vehicle puja']
+  },
+  { 
+    id: 'business', 
+    name: 'Business Start', 
+    icon: '💼', 
+    duration: '1-2 hours',
+    description: 'Opening new business or office',
+    considerations: ['Choose Thursday or Wednesday', 'Morning muhurta preferred', 'Perform Ganesh puja']
+  },
+  { 
+    id: 'education', 
+    name: 'Education Start (Vidyarambham)', 
+    icon: '📚', 
+    duration: '1 hour',
+    description: 'Beginning formal education',
+    considerations: ['Avoid inauspicious nakshatras', 'Morning hours preferred', 'Seek blessings of Saraswati']
+  },
+  { 
+    id: 'travel', 
+    name: 'Travel/Journey', 
+    icon: '✈️', 
+    duration: 'Departure time',
+    description: 'Starting a journey or pilgrimage',
+    considerations: ['Check direction-based auspicious days', 'Avoid Rahu Kaal', 'Prefer early morning departure']
+  },
+  { 
+    id: 'naming', 
+    name: 'Naming Ceremony', 
+    icon: '👶', 
+    duration: '1-2 hours',
+    description: 'Formal naming of newborn child',
+    considerations: ['Usually performed on 11th or 12th day', 'Consider birth nakshatra', 'Choose name based on nakshatra']
+  },
+  { 
+    id: 'thread', 
+    name: 'Thread Ceremony (Upanayana)', 
+    icon: '🔱', 
+    duration: '3-4 hours',
+    description: 'Sacred thread ceremony for boys',
+    considerations: ['Odd years of age preferred', 'Avoid inauspicious months', 'Consult family priest for exact muhurta']
+  }
 ];
 
 // Favorable months for different events
