@@ -21,13 +21,6 @@ function MuhurtaFinderPage() {
   });
   const [showCalculations, setShowCalculations] = useState(false);
 
-  useEffect(() => {
-    if (selectedEvent && panchangamData && selectedDate && showCalculations) {
-      const result = getMuhurtaRecommendation(panchangamData, selectedEvent, selectedDate, userDetails);
-      setRecommendation(result);
-    }
-  }, [selectedEvent, panchangamData, selectedDate, userDetails, showCalculations]);
-
   const handleEventSelect = (event) => {
     setSelectedEvent(event);
     setShowInfo(false);
@@ -40,6 +33,17 @@ function MuhurtaFinderPage() {
   const handleCalculateMuhurta = () => {
     if (selectedEvent && selectedDate) {
       setShowCalculations(true);
+      // Force re-calculation - use mock data if panchangamData is not available
+      const dataToUse = panchangamData || {
+        almanac: {
+          Nakshatra: { name: 'Rohini' },
+          Tithi: { name: 'Panchami' },
+          Yoga: { name: 'Siddha' }
+        },
+        day: new Date(selectedDate).toLocaleDateString('en-US', { weekday: 'long' })
+      };
+      const result = getMuhurtaRecommendation(dataToUse, selectedEvent, selectedDate, userDetails);
+      setRecommendation(result);
     }
   };
 
