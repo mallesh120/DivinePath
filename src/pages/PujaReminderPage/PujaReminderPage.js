@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { usePanchangam } from '../../hooks/usePanchangam';
 import {
   deityDays,
   pujaTypes,
@@ -10,7 +9,6 @@ import {
   saveReminderSettings,
   loadReminderSettings,
   defaultReminderSettings,
-  shouldShowReminder,
   sendPujaReminder,
   getPujaStreak,
   markPujaCompleted,
@@ -19,7 +17,6 @@ import {
 import './PujaReminderPage.css';
 
 function PujaReminderPage() {
-  const { data: panchangamData } = usePanchangam();
   const [settings, setSettings] = useState(defaultReminderSettings);
   const [notificationPermission, setNotificationPermission] = useState('default');
   const [streak, setStreak] = useState(0);

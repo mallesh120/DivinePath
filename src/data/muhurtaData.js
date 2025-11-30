@@ -1,5 +1,4 @@
 // Muhurta (Auspicious Time) data and calculations
-import { usePanchangam } from '../hooks/usePanchangam';
 
 // Event types for Muhurta
 export const muhurtaEventTypes = [
@@ -187,8 +186,6 @@ export const calculateMuhurtaScore = (eventType, panchangamData, selectedDate) =
 // Calculate Rahu Kaal timing based on day of week
 export const calculateRahuKaal = (date, sunrise = "06:00", sunset = "18:00") => {
   const dayIndex = new Date(date).getDay(); // 0=Sunday, 1=Monday, etc.
-  const dayLength = 12 * 60; // Approximate 12 hours in minutes
-  const rahuKaalDuration = 90; // 1.5 hours = 90 minutes
   
   // Rahu Kaal occurs at different times each day
   const rahuKaalStart = {
@@ -281,7 +278,6 @@ export const calculateAuspiciousTimeWindows = (date, eventType) => {
   });
   
   // Early Morning (6:00-9:00 AM) - avoiding Rahu Kaal for specific days
-  const rahuKaal = calculateRahuKaal(date);
   const dayIndex = new Date(date).getDay();
   
   if (dayIndex !== 1 && dayIndex !== 6) { // Not Monday or Saturday
@@ -361,9 +357,6 @@ export const getMuhurtaRecommendations = (eventType, score, factors) => {
 
 // Sample muhurta dates (for next 90 days)
 export const generateSampleMuhurtaDates = (eventType) => {
-  const dates = [];
-  const today = new Date();
-  
   // This is a simplified version - in production, integrate with real Panchangam calculations
   const sampleDates = [
     { date: '2025-12-15', score: 85, factors: ['Favorable Nakshatra', 'Good Tithi', 'Thursday'] },

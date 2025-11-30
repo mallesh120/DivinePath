@@ -21,7 +21,7 @@ function FestivalCountdownPage() {
     if (festivals.length > 0 && !selectedFestival) {
       setSelectedFestival(festivals[0]);
     }
-  }, []);
+  }, [selectedFestival]);
 
   useEffect(() => {
     if (selectedFestival) {

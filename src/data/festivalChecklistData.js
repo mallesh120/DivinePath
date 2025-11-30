@@ -216,7 +216,6 @@ export const majorFestivals = [
 // Get festivals for next 90 days
 export const getUpcomingFestivals = () => {
   const today = new Date();
-  const threeMonthsLater = new Date(today.getTime() + 90 * 24 * 60 * 60 * 1000);
   
   return majorFestivals
     .map(festival => {
