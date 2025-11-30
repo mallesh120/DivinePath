@@ -1,3 +1,10 @@
 node_modules
 src/.DS_Store
 .DS_Store
+
+# Environment variables (contains API keys)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

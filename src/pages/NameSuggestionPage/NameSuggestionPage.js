@@ -204,8 +204,40 @@ const NameSuggestionPage = () => {
     });
   };
 
-  const handleSearch = () => {
+  const handleSearch = async () => {
     setShowResults(true);
+    
+    // Build prompt based on filters
+    const filterCriteria = [];
+    if (filters.gender !== 'All') filterCriteria.push(`Gender: ${filters.gender}`);
+    if (filters.nakshatra !== 'All') filterCriteria.push(`Nakshatra: ${filters.nakshatra}`);
+    if (filters.deity !== 'All') filterCriteria.push(`Associated with deity: ${filters.deity}`);
+    if (filters.startingLetter) filterCriteria.push(`Starting with letter: ${filters.startingLetter.toUpperCase()}`);
+    
+    const prompt = `Suggest 8 meaningful Hindu names with the following criteria:\n${filterCriteria.join('\n')}\n\nFor each name, provide:\n- Name\n- Meaning\n- Brief significance/description\n- Associated deity (if any)`;
+    
+    try {
+      const response = await fetch('/.netlify/functions/ai-chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          prompt: prompt,
+          featureType: 'name-suggestion'
+        })
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        // Store AI response in a state variable that can be displayed
+        // For now, we'll still show filtered results but log AI suggestions
+        console.log('AI Name Suggestions:', data.response);
+      }
+    } catch (error) {
+      console.error('Error getting AI name suggestions:', error);
+    }
   };
 
   const filteredNames = showResults ? filterNames() : [];

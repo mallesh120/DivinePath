@@ -118,17 +118,50 @@ const DreamInterpretationPage = () => {
     }
   };
 
-  const handleAnalyze = () => {
+  const handleAnalyze = async () => {
     if (dreamText.trim() === '') return;
 
     setIsAnalyzing(true);
 
-    // Simulate AI processing
-    setTimeout(() => {
-      const result = interpretDream(dreamText);
-      setInterpretation(result);
+    try {
+      const response = await fetch('/.netlify/functions/ai-chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          prompt: `I had this dream: ${dreamText}\n\nPlease interpret this dream from a Hindu spiritual perspective.`,
+          featureType: 'dream-interpretation'
+        })
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        const result = {
+          mainInterpretation: data.response,
+          spiritualSignificance: 'Based on Hindu dream interpretation traditions',
+          scriptureReference: 'Various Hindu texts on dream symbolism',
+          symbolsFound: [],
+          recommendations: []
+        };
+        setInterpretation(result);
+      } else {
+        throw new Error(data.error || 'Failed to interpret dream');
+      }
+    } catch (error) {
+      console.error('Error analyzing dream:', error);
+      const errorResult = {
+        mainInterpretation: '🙏 Unable to interpret your dream at this moment. Please try again shortly.',
+        spiritualSignificance: '',
+        scriptureReference: '',
+        symbolsFound: [],
+        recommendations: []
+      };
+      setInterpretation(errorResult);
+    } finally {
       setIsAnalyzing(false);
-    }, 2000);
+    }
   };
 
   const handleSymbolClick = (symbol) => {

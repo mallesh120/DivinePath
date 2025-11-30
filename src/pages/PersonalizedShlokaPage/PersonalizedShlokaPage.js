@@ -133,19 +133,53 @@ const PersonalizedShlokaPage = () => {
     }
   };
 
-  const handleGetShloka = () => {
+  const handleGetShloka = async () => {
     if (situation.trim() === '' && selectedEmotion === '') {
       return;
     }
 
     setIsAnalyzing(true);
 
-    setTimeout(() => {
+    try {
+      const prompt = `I'm feeling ${selectedEmotion} and my current situation is: ${situation}\n\nPlease provide a relevant Sanskrit shloka with:\n1. The shloka in Sanskrit\n2. Transliteration\n3. English translation\n4. Why it's relevant to my situation\n5. Source scripture\n6. 2-3 practical ways to apply this wisdom`;
+      
+      const response = await fetch('/.netlify/functions/ai-chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          prompt: prompt,
+          featureType: 'personalized-shloka'
+        })
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        // Create a simple structure from AI response
+        const aiShloka = {
+          shloka: data.response.split('\n')[0] || data.response.substring(0, 200),
+          transliteration: '',
+          meaning: data.response,
+          context: `Generated for: ${selectedEmotion} mood`,
+          source: 'Hindu Scriptures',
+          application: situation,
+          practices: []
+        };
+        setRecommendations(aiShloka);
+      } else {
+        throw new Error(data.error || 'Failed to generate shloka');
+      }
+    } catch (error) {
+      console.error('Error generating shloka:', error);
+      // Fallback to hardcoded
       const emotion = selectedEmotion || 'peaceful';
       const shloka = shlokaDatabase[emotion] || shlokaDatabase.peaceful;
       setRecommendations(shloka);
+    } finally {
       setIsAnalyzing(false);
-    }, 1500);
+    }
   };
 
   const playAudio = () => {

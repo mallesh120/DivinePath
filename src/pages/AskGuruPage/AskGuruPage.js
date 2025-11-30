@@ -83,7 +83,7 @@ const AskGuruPage = () => {
     }
   };
 
-  const handleSendMessage = () => {
+  const handleSendMessage = async () => {
     if (inputMessage.trim() === '') return;
 
     // Add user message
@@ -95,23 +95,48 @@ const AskGuruPage = () => {
     };
 
     setMessages(prev => [...prev, userMsg]);
+    const currentQuestion = inputMessage;
     setInputMessage('');
     setIsTyping(true);
 
-    // Simulate AI response delay
-    setTimeout(() => {
-      const response = getGuruResponse(inputMessage);
-      const guruMsg = {
+    try {
+      // Call Netlify serverless function
+      const response = await fetch('/.netlify/functions/ai-chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          prompt: currentQuestion,
+          featureType: 'ask-guru'
+        })
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        const guruMsg = {
+          id: messages.length + 2,
+          type: 'guru',
+          text: data.response,
+          timestamp: new Date()
+        };
+        setMessages(prev => [...prev, guruMsg]);
+      } else {
+        throw new Error(data.error || 'Failed to get response');
+      }
+    } catch (error) {
+      console.error('Error calling AI:', error);
+      const errorMsg = {
         id: messages.length + 2,
         type: 'guru',
-        text: response.text,
-        scripture: response.scripture,
+        text: '🙏 My apologies, I am having trouble connecting to divine wisdom at this moment. Please try again in a few moments.',
         timestamp: new Date()
       };
-
-      setMessages(prev => [...prev, guruMsg]);
+      setMessages(prev => [...prev, errorMsg]);
+    } finally {
       setIsTyping(false);
-    }, 1500);
+    }
   };
 
   const handleTopicClick = (topic) => {
