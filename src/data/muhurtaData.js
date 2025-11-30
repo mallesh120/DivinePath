@@ -127,21 +127,25 @@ export const calculateMuhurtaScore = (eventType, panchangamData, selectedDate) =
   let score = 50; // Base score
   const dayName = new Date(selectedDate).toLocaleDateString('en-US', { weekday: 'long' });
   
-  if (!panchangamData) return { score: 0, factors: ['Panchangam data unavailable'] };
+  if (!panchangamData) return { score: 0, factors: [], breakdown: [] };
   
   const factors = [];
+  const breakdown = [];
   
   // Check Nakshatra
   const nakshatra = panchangamData.almanac?.Nakshatra?.name || '';
   if (favorableNakshatras[eventType]?.includes(nakshatra)) {
     score += 15;
     factors.push(`✓ Favorable Nakshatra: ${nakshatra}`);
+    breakdown.push({ factor: `Nakshatra: ${nakshatra}`, points: 15 });
   } else if (favorableNakshatras.general?.includes(nakshatra)) {
     score += 10;
     factors.push(`✓ Good Nakshatra: ${nakshatra}`);
+    breakdown.push({ factor: `Nakshatra: ${nakshatra}`, points: 10 });
   } else {
     score -= 10;
     factors.push(`⚠ Nakshatra ${nakshatra} is not ideal`);
+    breakdown.push({ factor: `Nakshatra: ${nakshatra}`, points: -10 });
   }
   
   // Check Tithi
@@ -149,24 +153,30 @@ export const calculateMuhurtaScore = (eventType, panchangamData, selectedDate) =
   if (favorableTithis[eventType]?.includes(tithi)) {
     score += 15;
     factors.push(`✓ Favorable Tithi: ${tithi}`);
+    breakdown.push({ factor: `Tithi: ${tithi}`, points: 15 });
   } else if (favorableTithis.general?.includes(tithi)) {
     score += 10;
     factors.push(`✓ Good Tithi: ${tithi}`);
+    breakdown.push({ factor: `Tithi: ${tithi}`, points: 10 });
   } else {
     score -= 10;
     factors.push(`⚠ Tithi ${tithi} is not ideal`);
+    breakdown.push({ factor: `Tithi: ${tithi}`, points: -10 });
   }
   
   // Check day of week
   if (favorableDays[eventType]?.includes(dayName)) {
     score += 10;
     factors.push(`✓ Favorable day: ${dayName}`);
+    breakdown.push({ factor: `Day: ${dayName}`, points: 10 });
   } else if (favorableDays.general?.includes(dayName)) {
     score += 5;
     factors.push(`✓ Acceptable day: ${dayName}`);
+    breakdown.push({ factor: `Day: ${dayName}`, points: 5 });
   } else {
     score -= 5;
     factors.push(`⚠ ${dayName} is not ideal`);
+    breakdown.push({ factor: `Day: ${dayName}`, points: -5 });
   }
   
   // Check Yoga
@@ -175,12 +185,18 @@ export const calculateMuhurtaScore = (eventType, panchangamData, selectedDate) =
   if (auspiciousYogas.includes(yoga)) {
     score += 10;
     factors.push(`✓ Auspicious Yoga: ${yoga}`);
+    breakdown.push({ factor: `Yoga: ${yoga}`, points: 10 });
+  } else {
+    breakdown.push({ factor: `Yoga: ${yoga}`, points: 0 });
   }
+  
+  // Add base score to breakdown
+  breakdown.unshift({ factor: 'Base Score', points: 50 });
   
   // Cap score between 0-100
   score = Math.max(0, Math.min(100, score));
   
-  return { score, factors };
+  return { score, factors, breakdown };
 };
 
 // Calculate Rahu Kaal timing based on day of week
@@ -388,6 +404,7 @@ export const getMuhurtaRecommendation = (panchangamData, eventType, selectedDate
   const scoreResult = calculateMuhurtaScore(eventType.id, panchangamData, dateToAnalyze);
   const score = scoreResult.score;
   const factors = scoreResult.factors || [];
+  const scoreBreakdown = scoreResult.breakdown || [];
   
   // Separate favorable and unfavorable factors
   const favorableFactors = factors.filter(f => f.startsWith('✓'));
@@ -430,6 +447,7 @@ export const getMuhurtaRecommendation = (panchangamData, eventType, selectedDate
   return {
     status,
     score,
+    scoreBreakdown,
     favorableFactors,
     unfavorableFactors,
     recommendations: [...recommendationTexts, ...userRecommendations],
