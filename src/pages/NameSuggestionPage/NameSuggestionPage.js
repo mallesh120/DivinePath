@@ -252,23 +252,34 @@ POPULARITY: [High/Medium/Low]
       if (data.success && data.response) {
         // Parse the AI response into name objects
         const parsedNames = parseAINameResponse(data.response);
-        setAiNames(parsedNames);
+        if (parsedNames && parsedNames.length > 0) {
+          setAiNames(parsedNames);
+        } else {
+          // If parsing fails, use filtered hardcoded names as fallback
+          console.log('AI response parsing failed, using fallback names');
+          setAiNames([]); // This will trigger fallback to filterNames()
+        }
       } else {
-        setError('Unable to get name suggestions. Please try again.');
+        setError('Unable to get name suggestions. Showing default results.');
+        setAiNames([]); // Trigger fallback
       }
     } catch (error) {
       console.error('Error getting AI name suggestions:', error);
-      setError('Connection error. Please check your internet connection.');
+      setError('Connection error. Showing default results.');
+      setAiNames([]); // Trigger fallback
     } finally {
       setIsLoading(false);
     }
   };
 
   const parseAINameResponse = (response) => {
+    console.log('Parsing AI response:', response);
     const names = [];
     const nameBlocks = response.split('---').filter(block => block.trim());
     
-    nameBlocks.forEach(block => {
+    console.log('Found name blocks:', nameBlocks.length);
+    
+    nameBlocks.forEach((block, index) => {
       const lines = block.split('\n').filter(line => line.trim());
       const nameObj = {
         name: '',
@@ -299,10 +310,14 @@ POPULARITY: [High/Medium/Low]
       });
       
       if (nameObj.name && nameObj.meaning) {
+        console.log('Parsed name object:', nameObj);
         names.push(nameObj);
+      } else {
+        console.log('Skipping incomplete name object at block', index);
       }
     });
     
+    console.log('Total parsed names:', names.length);
     return names.length > 0 ? names : null;
   };
 
