@@ -221,19 +221,20 @@ const NameSuggestionPage = () => {
     if (filters.startingLetter) filterCriteria.push(`Starting with letter: ${filters.startingLetter.toUpperCase()}`);
     
     const criteriaText = filterCriteria.length > 0 ? filterCriteria.join(', ') : 'Any criteria';
-    const prompt = `Suggest 8-10 meaningful Hindu baby names with these criteria: ${criteriaText}
+    const prompt = `Suggest 12 meaningful Hindu baby names with these criteria: ${criteriaText}
 
-For each name, provide in this exact format:
+For each name, provide in this EXACT format (including the separators):
 NAME: [name]
 GENDER: [Boy/Girl]
 MEANING: [meaning]
 ORIGIN: Sanskrit
-NAKSHATRA: [appropriate nakshatra]
-DEITY: [associated deity]
-DESCRIPTION: [brief spiritual significance]
+NAKSHATRA: [appropriate nakshatra from the 27 nakshatras]
+DEITY: [associated deity - Shiva/Vishnu/Krishna/Rama/Ganesha/Durga/Lakshmi/Saraswati/Hanuman/Surya/Chandra]
+DESCRIPTION: [one line spiritual significance]
 POPULARITY: [High/Medium/Low]
+---
 
----`;
+Please provide exactly 12 names separated by "---" markers.`;
     
     try {
       const response = await fetch('/.netlify/functions/ai-chat', {
@@ -275,7 +276,14 @@ POPULARITY: [High/Medium/Low]
   const parseAINameResponse = (response) => {
     console.log('Parsing AI response:', response);
     const names = [];
-    const nameBlocks = response.split('---').filter(block => block.trim());
+    
+    // Try splitting by --- first
+    let nameBlocks = response.split('---').filter(block => block.trim());
+    
+    // If no --- separators found, try splitting by double newlines
+    if (nameBlocks.length <= 1) {
+      nameBlocks = response.split('\n\n').filter(block => block.trim());
+    }
     
     console.log('Found name blocks:', nameBlocks.length);
     
@@ -294,14 +302,17 @@ POPULARITY: [High/Medium/Low]
       };
       
       lines.forEach(line => {
-        const [key, ...valueParts] = line.split(':');
-        const value = valueParts.join(':').trim();
+        // Handle various formats: "KEY: value", "**KEY:** value", "KEY - value", etc.
+        const colonMatch = line.match(/^\*?\*?(NAME|GENDER|MEANING|ORIGIN|NAKSHATRA|DEITY|DESCRIPTION|POPULARITY)\*?\*?\s*[:\-]\s*(.+)/i);
         
-        if (key && value) {
-          const cleanKey = key.trim().toUpperCase();
+        if (colonMatch) {
+          const cleanKey = colonMatch[1].trim().toUpperCase();
+          const value = colonMatch[2].trim().replace(/^\*\*|\*\*$/g, ''); // Remove markdown bold
+          
           if (cleanKey === 'NAME') nameObj.name = value;
           else if (cleanKey === 'GENDER') nameObj.gender = value;
           else if (cleanKey === 'MEANING') nameObj.meaning = value;
+          else if (cleanKey === 'ORIGIN') nameObj.origin = value;
           else if (cleanKey === 'NAKSHATRA') nameObj.nakshatra = value;
           else if (cleanKey === 'DEITY') nameObj.deity = value;
           else if (cleanKey === 'DESCRIPTION') nameObj.description = value;
@@ -313,7 +324,7 @@ POPULARITY: [High/Medium/Low]
         console.log('Parsed name object:', nameObj);
         names.push(nameObj);
       } else {
-        console.log('Skipping incomplete name object at block', index);
+        console.log('Skipping incomplete name object at block', index, nameObj);
       }
     });
     
