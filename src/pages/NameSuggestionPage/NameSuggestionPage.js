@@ -9,6 +9,9 @@ const NameSuggestionPage = () => {
     startingLetter: ''
   });
   const [showResults, setShowResults] = useState(false);
+  const [aiNames, setAiNames] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const nakshatras = [
     'All', 'Ashwini', 'Bharani', 'Krittika', 'Rohini', 'Mrigashira', 'Ardra',
@@ -206,6 +209,9 @@ const NameSuggestionPage = () => {
 
   const handleSearch = async () => {
     setShowResults(true);
+    setIsLoading(true);
+    setError(null);
+    setAiNames([]);
     
     // Build prompt based on filters
     const filterCriteria = [];
@@ -214,7 +220,20 @@ const NameSuggestionPage = () => {
     if (filters.deity !== 'All') filterCriteria.push(`Associated with deity: ${filters.deity}`);
     if (filters.startingLetter) filterCriteria.push(`Starting with letter: ${filters.startingLetter.toUpperCase()}`);
     
-    const prompt = `Suggest 8 meaningful Hindu names with the following criteria:\n${filterCriteria.join('\n')}\n\nFor each name, provide:\n- Name\n- Meaning\n- Brief significance/description\n- Associated deity (if any)`;
+    const criteriaText = filterCriteria.length > 0 ? filterCriteria.join(', ') : 'Any criteria';
+    const prompt = `Suggest 8-10 meaningful Hindu baby names with these criteria: ${criteriaText}
+
+For each name, provide in this exact format:
+NAME: [name]
+GENDER: [Boy/Girl]
+MEANING: [meaning]
+ORIGIN: Sanskrit
+NAKSHATRA: [appropriate nakshatra]
+DEITY: [associated deity]
+DESCRIPTION: [brief spiritual significance]
+POPULARITY: [High/Medium/Low]
+
+---`;
     
     try {
       const response = await fetch('/.netlify/functions/ai-chat', {
@@ -230,17 +249,64 @@ const NameSuggestionPage = () => {
 
       const data = await response.json();
 
-      if (data.success) {
-        // Store AI response in a state variable that can be displayed
-        // For now, we'll still show filtered results but log AI suggestions
-        console.log('AI Name Suggestions:', data.response);
+      if (data.success && data.response) {
+        // Parse the AI response into name objects
+        const parsedNames = parseAINameResponse(data.response);
+        setAiNames(parsedNames);
+      } else {
+        setError('Unable to get name suggestions. Please try again.');
       }
     } catch (error) {
       console.error('Error getting AI name suggestions:', error);
+      setError('Connection error. Please check your internet connection.');
+    } finally {
+      setIsLoading(false);
     }
   };
 
-  const filteredNames = showResults ? filterNames() : [];
+  const parseAINameResponse = (response) => {
+    const names = [];
+    const nameBlocks = response.split('---').filter(block => block.trim());
+    
+    nameBlocks.forEach(block => {
+      const lines = block.split('\n').filter(line => line.trim());
+      const nameObj = {
+        name: '',
+        gender: 'Boy',
+        meaning: '',
+        origin: 'Sanskrit',
+        nakshatra: '',
+        deity: '',
+        description: '',
+        popularity: 'Medium',
+        numerology: Math.floor(Math.random() * 9) + 1
+      };
+      
+      lines.forEach(line => {
+        const [key, ...valueParts] = line.split(':');
+        const value = valueParts.join(':').trim();
+        
+        if (key && value) {
+          const cleanKey = key.trim().toUpperCase();
+          if (cleanKey === 'NAME') nameObj.name = value;
+          else if (cleanKey === 'GENDER') nameObj.gender = value;
+          else if (cleanKey === 'MEANING') nameObj.meaning = value;
+          else if (cleanKey === 'NAKSHATRA') nameObj.nakshatra = value;
+          else if (cleanKey === 'DEITY') nameObj.deity = value;
+          else if (cleanKey === 'DESCRIPTION') nameObj.description = value;
+          else if (cleanKey === 'POPULARITY') nameObj.popularity = value;
+        }
+      });
+      
+      if (nameObj.name && nameObj.meaning) {
+        names.push(nameObj);
+      }
+    });
+    
+    return names.length > 0 ? names : null;
+  };
+
+  const filteredNames = showResults ? (aiNames.length > 0 ? aiNames : filterNames()) : [];
 
   return (
     <div className="name-suggestion-page">
@@ -322,7 +388,13 @@ const NameSuggestionPage = () => {
         </div>
 
         <div className="results-section">
-          {!showResults ? (
+          {isLoading ? (
+            <div className="loading-state">
+              <div className="loading-spinner"></div>
+              <h3>Finding perfect names for you...</h3>
+              <p>Consulting ancient scriptures and Vedic wisdom...</p>
+            </div>
+          ) : !showResults ? (
             <div className="no-results-placeholder">
               <div className="placeholder-icon">👶</div>
               <h3>Ready to Find the Perfect Name?</h3>
@@ -343,7 +415,12 @@ const NameSuggestionPage = () => {
             <div className="no-results">
               <div className="no-results-icon">😔</div>
               <h3>No Names Found</h3>
-              <p>Try adjusting your filters to see more results.</p>
+              <p>{error || 'Try adjusting your filters to see more results.'}</p>
+              {error && (
+                <button onClick={handleSearch} className="retry-btn">
+                  Try Again
+                </button>
+              )}
             </div>
           ) : (
             <div className="names-grid">
