@@ -27,6 +27,11 @@ const StoryPlayerPage = lazy(() => import('./pages/StoryPlayerPage/StoryPlayerPa
 const RamayanaTOCPage = lazy(() => import('./pages/RamayanaPage/RamayanaTOCPage'));
 const BhagavadGitaPage = lazy(() => import('./pages/BhagavadGitaPage/BhagavadGitaPage'));
 const PuranaPage = lazy(() => import('./pages/PuranaPage/PuranaPage'));
+const AIFeaturesPage = lazy(() => import('./pages/AIFeaturesPage/AIFeaturesPage'));
+const AskGuruPage = lazy(() => import('./pages/AskGuruPage/AskGuruPage'));
+const DreamInterpretationPage = lazy(() => import('./pages/DreamInterpretationPage/DreamInterpretationPage'));
+const NameSuggestionPage = lazy(() => import('./pages/NameSuggestionPage/NameSuggestionPage'));
+const PersonalizedShlokaPage = lazy(() => import('./pages/PersonalizedShlokaPage/PersonalizedShlokaPage'));
 
 // Loading fallback component
 const LoadingFallback = () => (
@@ -82,6 +87,13 @@ function App() {
             <Route path="/fasting-guide" element={<FastingGuidePage />} />
             <Route path="/festival-countdown" element={<FestivalCountdownPage />} />
             <Route path="/puja-reminders" element={<PujaReminderPage />} />
+
+            {/* AI-Powered Features Routes */}
+            <Route path="/ai" element={<AIFeaturesPage />} />
+            <Route path="/ai/ask-guru" element={<AskGuruPage />} />
+            <Route path="/ai/dream-interpretation" element={<DreamInterpretationPage />} />
+            <Route path="/ai/name-suggestion" element={<NameSuggestionPage />} />
+            <Route path="/ai/personalized-shloka" element={<PersonalizedShlokaPage />} />
           </Routes>
         </Suspense>
       </SidebarLayout>

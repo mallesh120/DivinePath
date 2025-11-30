@@ -48,6 +48,11 @@ const Navbar = () => {
             108 Names
           </NavLink>
         </li>
+        <li>
+          <NavLink to="/ai" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            AI Features
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
