@@ -125,7 +125,7 @@ export const periodsToAvoid = [
 // Calculate Muhurta score (0-100)
 export const calculateMuhurtaScore = (eventType, panchangamData, selectedDate) => {
   let score = 50; // Base score
-  const dayName = new Date(selectedDate).toLocaleDateString('en-US', { weekday: 'long' });
+  const dayName = new Date(selectedDate + 'T00:00:00').toLocaleDateString('en-US', { weekday: 'long' });
   
   if (!panchangamData) return { score: 0, factors: [], breakdown: [] };
   
@@ -400,7 +400,7 @@ export const getMuhurtaRecommendation = (panchangamData, eventType, selectedDate
     };
   }
 
-  const dateToAnalyze = selectedDate ? new Date(selectedDate) : new Date();
+  const dateToAnalyze = selectedDate ? new Date(selectedDate + 'T00:00:00') : new Date();
   const scoreResult = calculateMuhurtaScore(eventType.id, panchangamData, dateToAnalyze);
   const score = scoreResult.score;
   const factors = scoreResult.factors || [];

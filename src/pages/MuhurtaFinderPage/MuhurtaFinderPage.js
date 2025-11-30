@@ -41,7 +41,7 @@ function MuhurtaFinderPage() {
           Tithi: { name: 'Panchami' },
           Yoga: { name: 'Siddha' }
         },
-        day: new Date(selectedDate).toLocaleDateString('en-US', { weekday: 'long' })
+        day: new Date(selectedDate + 'T00:00:00').toLocaleDateString('en-US', { weekday: 'long' })
       };
       const result = getMuhurtaRecommendation(dataToUse, selectedEvent, selectedDate, userDetails);
       setRecommendation(result);
@@ -294,7 +294,7 @@ function MuhurtaFinderPage() {
               <div className="recommendation-header">
                 <h3>Muhurta Analysis for {selectedEvent.name}</h3>
                 <div className="date-info">
-                  {selectedDate && new Date(selectedDate).toLocaleDateString('en-IN', {
+                  {selectedDate && new Date(selectedDate + 'T00:00:00').toLocaleDateString('en-IN', {
                     weekday: 'long',
                     year: 'numeric',
                     month: 'long',
