@@ -60,7 +60,14 @@ const AskGuruPage = () => {
         })
       });
 
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('API Response Error:', response.status, errorText);
+        throw new Error(`API returned ${response.status}: ${errorText}`);
+      }
+
       const data = await response.json();
+      console.log('API Response:', data);
 
       if (data.success) {
         const guruMsg = {
@@ -75,10 +82,21 @@ const AskGuruPage = () => {
       }
     } catch (error) {
       console.error('Error calling AI:', error);
+      console.error('Error details:', error.message);
+      
+      // More informative error message
+      let errorText = '🙏 My apologies, I am having trouble connecting to divine wisdom at this moment.';
+      
+      if (error.message.includes('404')) {
+        errorText += '\n\n⚠️ The AI service is not available. Please make sure you are running the app with "netlify dev" instead of "npm start".';
+      } else if (error.message.includes('Failed to fetch')) {
+        errorText += '\n\n⚠️ Cannot reach the AI service. Please check your internet connection.';
+      }
+      
       const errorMsg = {
         id: messages.length + 2,
         type: 'guru',
-        text: '🙏 My apologies, I am having trouble connecting to divine wisdom at this moment. Please try again in a few moments.',
+        text: errorText,
         timestamp: new Date()
       };
       setMessages(prev => [...prev, errorMsg]);
