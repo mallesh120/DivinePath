@@ -1,0 +1,587 @@
+.puja-reminder-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  padding: 2rem;
+}
+
+.puja-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.puja-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.puja-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.95;
+}
+
+.today-puja-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card-header h2 {
+  color: #f5576c;
+  font-size: 2rem;
+}
+
+.completed-badge {
+  padding: 0.5rem 1rem;
+  background: #4CAF50;
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.today-content {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.deity-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #f5f5f5;
+}
+
+.deity-icon {
+  font-size: 4rem;
+}
+
+.deity-info h3 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.puja-meta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.puja-details {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.detail-group h4 {
+  color: #f5576c;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.mantra-text {
+  font-size: 1.3rem;
+  color: #f5576c;
+  font-weight: 500;
+  font-style: italic;
+  padding: 1rem;
+  background: #fff5f7;
+  border-left: 4px solid #f5576c;
+  border-radius: 8px;
+}
+
+.offerings-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.offering-tag {
+  padding: 0.5rem 1rem;
+  background: #f5f5f5;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #333;
+  border: 1px solid #e0e0e0;
+}
+
+.detail-group p {
+  color: #666;
+  line-height: 1.8;
+}
+
+.complete-btn {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+  margin-top: 1rem;
+}
+
+.complete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);
+}
+
+.streak-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #fff5f7 0%, #ffe4e8 100%);
+  border-radius: 10px;
+}
+
+.streak-icon {
+  font-size: 2rem;
+}
+
+.streak-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f5576c;
+}
+
+.streak-label {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.puja-types-section {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.puja-types-section h2 {
+  color: #f5576c;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.puja-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.puja-type-card {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 3px solid transparent;
+}
+
+.puja-type-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.puja-type-card.selected {
+  border-color: #f5576c;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.type-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.puja-type-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.puja-type-card p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 0.8rem;
+}
+
+.timing-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  font-size: 0.85rem;
+}
+
+.puja-type-details {
+  border-top: 2px solid #f5f5f5;
+  padding-top: 2rem;
+}
+
+.puja-type-details h3 {
+  color: #f5576c;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.details-content .detail-section {
+  margin-bottom: 1.5rem;
+}
+
+.details-content h4 {
+  color: #333;
+  margin-bottom: 0.8rem;
+}
+
+.items-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.item-tag {
+  padding: 0.5rem 1rem;
+  background: #f5f5f5;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #333;
+  border: 1px solid #e0e0e0;
+}
+
+.steps-list {
+  padding-left: 1.5rem;
+  color: #666;
+}
+
+.steps-list li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.reminder-settings-section {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.reminder-settings-section h2 {
+  color: #f5576c;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.notification-status {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.status-granted,
+.status-denied,
+.status-default {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  flex-wrap: wrap;
+}
+
+.status-granted {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-denied {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.status-default {
+  background: #e3f2fd;
+  color: #1565C0;
+}
+
+.status-icon {
+  font-size: 1.5rem;
+}
+
+.enable-btn,
+.test-btn {
+  padding: 0.8rem 1.5rem;
+  background: #f5576c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.enable-btn:hover,
+.test-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(245, 87, 108, 0.3);
+}
+
+.test-btn {
+  margin-left: auto;
+}
+
+.settings-form {
+  display: grid;
+  gap: 2rem;
+}
+
+.setting-group {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  background: #fafafa;
+}
+
+.setting-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.setting-label input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  accent-color: #f5576c;
+}
+
+.time-picker {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+}
+
+.time-picker label {
+  font-weight: 500;
+  color: #666;
+}
+
+.time-picker input[type="time"] {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.days-selector {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+}
+
+.days-selector label {
+  display: block;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 0.8rem;
+}
+
+.days-grid {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.day-btn {
+  padding: 0.8rem 1.2rem;
+  background: #f5f5f5;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.day-btn:hover {
+  background: #e0e0e0;
+}
+
+.day-btn.active {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border-color: #f5576c;
+}
+
+.next-reminder-info {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.special-days-options {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+}
+
+.sub-setting {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1rem;
+  color: #666;
+  cursor: pointer;
+}
+
+.sub-setting input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #f5576c;
+}
+
+.puja-footer {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.weekly-calendar {
+  margin-bottom: 2rem;
+}
+
+.weekly-calendar h3 {
+  color: #f5576c;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.calendar-day {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.calendar-day .day-name {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.calendar-day .day-deity {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.calendar-day .day-color {
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .puja-reminder-page {
+    padding: 1rem;
+  }
+
+  .puja-header h1 {
+    font-size: 2rem;
+  }
+
+  .puja-subtitle {
+    font-size: 1rem;
+  }
+
+  .deity-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .puja-types-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .status-granted,
+  .status-denied,
+  .status-default {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .test-btn {
+    margin-left: 0;
+  }
+}

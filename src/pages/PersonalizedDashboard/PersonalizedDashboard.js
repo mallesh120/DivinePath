@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { usePanchangam } from '../../hooks/usePanchangam';
 import ShlokaOfTheDay from '../../components/ShlokaOfTheDay/ShlokaOfTheDay';
+import { getPrayerOfTheDay } from '../../data/prayersData';
+import { getDailyReading } from '../../data/dailyReadings';
 import './PersonalizedDashboard.css';
 
 const PersonalizedDashboard = () => {
@@ -16,6 +18,8 @@ const PersonalizedDashboard = () => {
   const [streak, setStreak] = useState(0);
   const [upcomingFestivals, setUpcomingFestivals] = useState([]);
   const [fastingSchedule, setFastingSchedule] = useState([]);
+  const [dailyPrayer, setDailyPrayer] = useState(null);
+  const [dailyReading, setDailyReading] = useState(null);
   
   const { panchangamData, loading: panchangamLoading } = usePanchangam();
   
@@ -59,6 +63,12 @@ const PersonalizedDashboard = () => {
       { day: 'Dec 10', type: 'Ekadashi', description: 'Complete fast or fruits only' }
     ];
     setFastingSchedule(mockFasting);
+
+    // Set daily prayer based on time of day
+    setDailyPrayer(getPrayerOfTheDay());
+    
+    // Set daily scripture reading
+    setDailyReading(getDailyReading());
   }, []);
 
   const handleGoalToggle = (goal) => {
@@ -99,6 +109,20 @@ const PersonalizedDashboard = () => {
 
   const handleEditName = () => {
     setIsEditingName(true);
+  };
+
+  const scrollToPrayer = () => {
+    const prayerSection = document.querySelector('.prayer-card');
+    if (prayerSection) {
+      prayerSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+
+  const scrollToScripture = () => {
+    const scriptureSection = document.querySelector('.scripture-card');
+    if (scriptureSection) {
+      scriptureSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
   };
 
   return (
@@ -179,23 +203,41 @@ const PersonalizedDashboard = () => {
         <section className="dashboard-card goals-card">
           <h2 className="card-title">✅ Today's Spiritual Goals</h2>
           <div className="goals-list">
-            <div 
-              className={`goal-item ${userGoals.dailyPrayer ? 'completed' : ''}`}
-              onClick={() => handleGoalToggle('dailyPrayer')}
-            >
-              <span className="goal-checkbox">
-                {userGoals.dailyPrayer ? '✓' : '○'}
-              </span>
-              <span className="goal-text">Complete daily prayers</span>
+            <div className={`goal-item ${userGoals.dailyPrayer ? 'completed' : ''}`}>
+              <div 
+                className="goal-content"
+                onClick={() => handleGoalToggle('dailyPrayer')}
+              >
+                <span className="goal-checkbox">
+                  {userGoals.dailyPrayer ? '✓' : '○'}
+                </span>
+                <span className="goal-text">Complete daily prayers</span>
+              </div>
+              <button 
+                className="goal-link-btn"
+                onClick={scrollToPrayer}
+                title="Go to Daily Prayer"
+              >
+                🕉️ ↓
+              </button>
             </div>
-            <div 
-              className={`goal-item ${userGoals.readScripture ? 'completed' : ''}`}
-              onClick={() => handleGoalToggle('readScripture')}
-            >
-              <span className="goal-checkbox">
-                {userGoals.readScripture ? '✓' : '○'}
-              </span>
-              <span className="goal-text">Read scriptures</span>
+            <div className={`goal-item ${userGoals.readScripture ? 'completed' : ''}`}>
+              <div 
+                className="goal-content"
+                onClick={() => handleGoalToggle('readScripture')}
+              >
+                <span className="goal-checkbox">
+                  {userGoals.readScripture ? '✓' : '○'}
+                </span>
+                <span className="goal-text">Read scriptures</span>
+              </div>
+              <button 
+                className="goal-link-btn"
+                onClick={scrollToScripture}
+                title="Go to Daily Reading"
+              >
+                📜 ↓
+              </button>
             </div>
             <div 
               className={`goal-item ${userGoals.meditation ? 'completed' : ''}`}
@@ -226,6 +268,83 @@ const PersonalizedDashboard = () => {
               Reset
             </button>
           </div>
+        </section>
+
+        {/* Daily Prayer */}
+        <section className="dashboard-card prayer-card">
+          <h2 className="card-title">🕉️ Daily Prayer</h2>
+          {dailyPrayer && (
+            <div className="prayer-content">
+              <div className="prayer-header">
+                <h3 className="prayer-name">{dailyPrayer.name}</h3>
+                <span className="prayer-deity">{dailyPrayer.deity}</span>
+                <span className="prayer-time">🕐 {dailyPrayer.time}</span>
+              </div>
+              
+              <div className="prayer-text">
+                <div className="prayer-sanskrit">{dailyPrayer.sanskrit}</div>
+                <div className="prayer-transliteration">{dailyPrayer.transliteration}</div>
+              </div>
+              
+              <div className="prayer-meaning">
+                <strong>Meaning:</strong>
+                <p>{dailyPrayer.meaning}</p>
+              </div>
+              
+              <button 
+                className="prayer-complete-btn"
+                onClick={() => handleGoalToggle('dailyPrayer')}
+              >
+                {userGoals.dailyPrayer ? '✓ Prayer Completed' : 'Mark as Completed'}
+              </button>
+            </div>
+          )}
+        </section>
+
+        {/* Daily Scripture Reading */}
+        <section className="dashboard-card scripture-card">
+          <h2 className="card-title">📜 Daily Scripture Reading</h2>
+          {dailyReading && (
+            <div className="scripture-content">
+              <div className="scripture-header">
+                <h3 className="scripture-name">{dailyReading.scripture}</h3>
+                <div className="scripture-meta">
+                  <span className="scripture-chapter">📖 {dailyReading.title}</span>
+                  <span className="scripture-time">🕐 {dailyReading.readingTime}</span>
+                </div>
+              </div>
+              
+              <p className="scripture-summary">{dailyReading.summary}</p>
+              
+              <div className="key-verse">
+                <h4 className="verse-title">✨ Key Verse:</h4>
+                <div className="verse-sanskrit">{dailyReading.keyVerse.sanskrit}</div>
+                <div className="verse-transliteration">{dailyReading.keyVerse.transliteration}</div>
+                <div className="verse-meaning">
+                  <strong>Meaning:</strong>
+                  <p>{dailyReading.keyVerse.meaning}</p>
+                </div>
+              </div>
+              
+              <div className="scripture-actions">
+                <Link to={dailyReading.link} className="read-full-btn">
+                  Read Full Chapter →
+                </Link>
+                <button 
+                  className="scripture-complete-btn"
+                  onClick={() => handleGoalToggle('readScripture')}
+                >
+                  {userGoals.readScripture ? '✓ Reading Completed' : 'Mark as Completed'}
+                </button>
+              </div>
+              
+              <div className="library-link">
+                <Link to="/library" className="browse-library-btn">
+                  📚 Browse Full Literature Library
+                </Link>
+              </div>
+            </div>
+          )}
         </section>
 
         {/* Shloka of the Day */}
@@ -290,6 +409,33 @@ const PersonalizedDashboard = () => {
             <Link to="/ashtottaram" className="quick-action-btn">
               <span className="action-icon">🙏</span>
               <span className="action-label">108 Names</span>
+            </Link>
+          </div>
+        </section>
+
+        {/* Practical Hindu Living */}
+        <section className="dashboard-card practical-living-card">
+          <h2 className="card-title">🕉️ Practical Hindu Living</h2>
+          <div className="practical-actions">
+            <Link to="/muhurta-finder" className="practical-action-btn">
+              <span className="action-icon">🕐</span>
+              <span className="action-label">Muhurta Finder</span>
+              <span className="action-desc">Find auspicious times</span>
+            </Link>
+            <Link to="/fasting-guide" className="practical-action-btn">
+              <span className="action-icon">🍃</span>
+              <span className="action-label">Fasting Guide</span>
+              <span className="action-desc">Daily fasting rules</span>
+            </Link>
+            <Link to="/festival-countdown" className="practical-action-btn">
+              <span className="action-icon">🎊</span>
+              <span className="action-label">Festival Prep</span>
+              <span className="action-desc">Preparation checklists</span>
+            </Link>
+            <Link to="/puja-reminders" className="practical-action-btn">
+              <span className="action-icon">🔔</span>
+              <span className="action-label">Puja Reminders</span>
+              <span className="action-desc">Daily worship alerts</span>
             </Link>
           </div>
         </section>

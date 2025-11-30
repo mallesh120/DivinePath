@@ -17,6 +17,10 @@ import PujaListPage from './pages/PujaListPage/PujaListPage';
 import PujaGuidePage from './pages/PujaGuidePage/PujaGuidePage';
 import AshtottaramListPage from './pages/AshtottaramListPage/AshtottaramListPage';
 import AshtottaramDetailPage from './pages/AshtottaramDetailPage/AshtottaramDetailPage';
+import MuhurtaFinderPage from './pages/MuhurtaFinderPage/MuhurtaFinderPage';
+import FastingGuidePage from './pages/FastingGuidePage/FastingGuidePage';
+import FestivalCountdownPage from './pages/FestivalCountdownPage/FestivalCountdownPage';
+import PujaReminderPage from './pages/PujaReminderPage/PujaReminderPage';
 import Navbar from './components/Navbar/Navbar';
 import './App.css';
 import StoryPlayerPage from './pages/StoryPlayerPage/StoryPlayerPage';
@@ -58,6 +62,12 @@ function App() {
 
           {/* This is the updated story player route */}
           <Route path="/story/:storyId/:kandaIndex" element={<StoryPlayerPage />} />
+          
+          {/* Practical Hindu Living Routes */}
+          <Route path="/muhurta-finder" element={<MuhurtaFinderPage />} />
+          <Route path="/fasting-guide" element={<FastingGuidePage />} />
+          <Route path="/festival-countdown" element={<FestivalCountdownPage />} />
+          <Route path="/puja-reminders" element={<PujaReminderPage />} />
         </Routes>
       </SidebarLayout>
     </div>
