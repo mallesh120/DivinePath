@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3fb07744.css",
-    "main.js": "/static/js/main.c6175a2d.js",
+    "main.css": "/static/css/main.0a07fba7.css",
+    "main.js": "/static/js/main.e44c9128.js",
     "static/media/kishkindhaScene5.png": "/static/media/kishkindhaScene5.8cd50b6063dd1ef9bac6.png",
     "static/media/sundara_scene11.png": "/static/media/sundara_scene11.f7a935269998b76a89aa.png",
     "static/media/aranya_scene3.png": "/static/media/aranya_scene3.5049742e293f71ce10ae.png",
@@ -96,7 +96,7 @@
     "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.3fb07744.css",
-    "static/js/main.c6175a2d.js"
+    "static/css/main.0a07fba7.css",
+    "static/js/main.e44c9128.js"
   ]
 }
