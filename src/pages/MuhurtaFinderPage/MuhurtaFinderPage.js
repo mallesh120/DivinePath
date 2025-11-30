@@ -22,11 +22,11 @@ function MuhurtaFinderPage() {
   const [showCalculations, setShowCalculations] = useState(false);
 
   useEffect(() => {
-    if (selectedEvent && panchangamData && selectedDate) {
+    if (selectedEvent && panchangamData && selectedDate && showCalculations) {
       const result = getMuhurtaRecommendation(panchangamData, selectedEvent, selectedDate, userDetails);
       setRecommendation(result);
     }
-  }, [selectedEvent, panchangamData, selectedDate, userDetails]);
+  }, [selectedEvent, panchangamData, selectedDate, userDetails, showCalculations]);
 
   const handleEventSelect = (event) => {
     setSelectedEvent(event);

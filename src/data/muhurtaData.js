@@ -392,8 +392,15 @@ export const getMuhurtaRecommendation = (panchangamData, eventType, selectedDate
   }
 
   const dateToAnalyze = selectedDate ? new Date(selectedDate) : new Date();
-  const score = calculateMuhurtaScore(eventType.id, panchangamData, dateToAnalyze);
-  const recommendations = getMuhurtaRecommendations(eventType.id, score, {
+  const scoreResult = calculateMuhurtaScore(eventType.id, panchangamData, dateToAnalyze);
+  const score = scoreResult.score;
+  const factors = scoreResult.factors || [];
+  
+  // Separate favorable and unfavorable factors
+  const favorableFactors = factors.filter(f => f.startsWith('✓'));
+  const unfavorableFactors = factors.filter(f => f.startsWith('⚠'));
+  
+  const recommendationTexts = getMuhurtaRecommendations(eventType.id, score, {
     nakshatra: panchangamData.almanac?.Nakshatra?.name,
     tithi: panchangamData.almanac?.Tithi?.name,
     day: panchangamData.day
@@ -430,9 +437,9 @@ export const getMuhurtaRecommendation = (panchangamData, eventType, selectedDate
   return {
     status,
     score,
-    favorableFactors: recommendations.favorableFactors || [],
-    unfavorableFactors: recommendations.unfavorableFactors || [],
-    recommendations: [...(recommendations.suggestions || []), ...userRecommendations],
+    favorableFactors,
+    unfavorableFactors,
+    recommendations: [...recommendationTexts, ...userRecommendations],
     auspiciousTimeWindows: timeWindows,
     periodsToAvoid: periodsToAvoid
   };
