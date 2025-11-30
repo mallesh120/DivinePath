@@ -48,15 +48,6 @@ function MuhurtaFinderPage() {
     }
   };
 
-  const getStatusColor = (status) => {
-    switch (status) {
-      case 'auspicious': return '#4CAF50';
-      case 'moderate': return '#FF9800';
-      case 'avoid': return '#F44336';
-      default: return '#757575';
-    }
-  };
-
   const getStatusIcon = (status) => {
     switch (status) {
       case 'auspicious': return '✅';
