@@ -1,0 +1,560 @@
+.live-darshan-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.live-header {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 3rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.live-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.live-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.live-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.upcoming-section {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.upcoming-section h3 {
+  color: #667eea;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.upcoming-events {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.event-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  border: 2px solid #e0e0e0;
+}
+
+.event-icon {
+  font-size: 2.5rem;
+}
+
+.event-info {
+  flex-grow: 1;
+}
+
+.event-info h4 {
+  color: #667eea;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.event-temple {
+  color: #999;
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+}
+
+.event-time {
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.set-reminder-btn {
+  background: #fff;
+  border: 2px solid #667eea;
+  color: #667eea;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.set-reminder-btn:hover {
+  background: #667eea;
+  color: white;
+}
+
+.temples-section {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h3 {
+  color: #667eea;
+  font-size: 1.8rem;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  background: #f5f5f5;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+  background: #667eea;
+  color: white;
+}
+
+.temples-live-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.temple-live-card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #e0e0e0;
+}
+
+.temple-live-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.temple-live-card.live {
+  border-color: #4CAF50;
+}
+
+.temple-header-section {
+  position: relative;
+  background: linear-gradient(135deg, #667eea20 0%, #764ba220 100%);
+  padding: 2rem;
+  text-align: center;
+}
+
+.temple-icon-large {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.live-indicator {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #4CAF50;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.viewer-count {
+  font-size: 0.8rem;
+}
+
+.scheduled-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #FF9800;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.offline-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #999;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.temple-live-info {
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.temple-live-info h3 {
+  color: #667eea;
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.temple-deity {
+  color: #999;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.temple-live-location {
+  color: #999;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.temple-live-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.temple-timings h4 {
+  color: #667eea;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.temple-timings ul {
+  list-style: none;
+  padding: 0;
+}
+
+.temple-timings li {
+  color: #666;
+  font-size: 0.9rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.watch-live-btn {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.watch-live-btn.live {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  color: white;
+}
+
+.watch-live-btn.scheduled {
+  background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
+  color: white;
+}
+
+.watch-live-btn.offline {
+  background: #e0e0e0;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.watch-live-btn:not(.offline):hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.darshan-info {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.darshan-info h3 {
+  color: #667eea;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 15px;
+}
+
+.info-item-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.info-item h4 {
+  color: #667eea;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.info-item p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.live-player {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.player-header {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.close-player-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
+}
+
+.close-player-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.player-title {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.player-title h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.player-title p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.player-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.player-action-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.player-action-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.video-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a1a1a;
+}
+
+.video-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-content {
+  text-align: center;
+  color: white;
+}
+
+.placeholder-icon {
+  font-size: 8rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.live-badge-large {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #4CAF50;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.pulse-dot {
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.placeholder-text {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.placeholder-subtext {
+  font-size: 1rem;
+  opacity: 0.7;
+  max-width: 500px;
+  margin: 0 auto 1rem;
+}
+
+.viewer-info {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.player-info-bar {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.temple-details h4 {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 0.3rem;
+}
+
+.temple-details p {
+  font-size: 1.1rem;
+}
+
+.interaction-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.interact-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.interact-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .live-header h1 {
+    font-size: 2rem;
+  }
+
+  .temples-live-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .player-header,
+  .player-info-bar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .player-actions,
+  .interaction-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+}

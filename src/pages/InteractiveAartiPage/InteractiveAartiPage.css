@@ -1,0 +1,533 @@
+.interactive-aarti-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
+}
+
+.aarti-header {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 3rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.aarti-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.aarti-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.aarti-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.how-it-works-section {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.how-it-works-section h3 {
+  color: #FF9800;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.how-step {
+  text-align: center;
+  padding: 1.5rem;
+  background: #fff5e6;
+  border-radius: 15px;
+}
+
+.how-step-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.how-step h4 {
+  color: #FF9800;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.how-step p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.aartis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.aarti-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.aarti-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.aarti-image-section {
+  position: relative;
+  background: linear-gradient(135deg, #FF980020 0%, #F57C0020 100%);
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aarti-icon {
+  font-size: 5rem;
+}
+
+.aarti-type-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #FF9800;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.aarti-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.aarti-content h3 {
+  color: #FF9800;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.aarti-deity,
+.aarti-location {
+  color: #999;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.aarti-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.aarti-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.meta-item {
+  background: #fff5e6;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.join-aarti-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.join-aarti-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(255, 152, 0, 0.4);
+}
+
+.benefits-aarti-section {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.benefits-aarti-section h3 {
+  color: #FF9800;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.benefits-aarti-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.benefit-aarti-card {
+  text-align: center;
+  padding: 1.5rem;
+  background: #fff5e6;
+  border-radius: 15px;
+}
+
+.benefit-aarti-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.benefit-aarti-card h4 {
+  color: #FF9800;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.benefit-aarti-card p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.aarti-experience {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d1810 100%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.aarti-exp-header {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  border-bottom: 2px solid rgba(255, 152, 0, 0.3);
+}
+
+.exit-aarti-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
+}
+
+.exit-aarti-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.aarti-exp-title {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.aarti-exp-title h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.aarti-exp-title p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.participants-count {
+  background: rgba(255, 152, 0, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.aarti-main-area {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.aarti-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.aarti-scene {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.scene-deity-icon {
+  font-size: 8rem;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.aarti-flame {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.flame-animation {
+  width: 30px;
+  height: 60px;
+  background: linear-gradient(to top, #FF9800, #FFC107, #FFEB3B);
+  border-radius: 50% 50% 0 0;
+  animation: flicker 2s ease-in-out infinite;
+}
+
+.flame-animation.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.flame-animation.delay-2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes flicker {
+  0%, 100% { transform: scaleY(1) scaleX(1); opacity: 1; }
+  50% { transform: scaleY(1.2) scaleX(0.8); opacity: 0.8; }
+}
+
+.aarti-scene-text {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.scene-subtitle {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.user-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.stat-item {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: white;
+  border: 2px solid rgba(255, 152, 0, 0.3);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.stat-count {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  color: #FF9800;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.aarti-controls-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.lyrics-display {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 1.5rem;
+  color: white;
+  border: 2px solid rgba(255, 152, 0, 0.3);
+}
+
+.lyrics-display h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.lyrics-text {
+  text-align: center;
+}
+
+.current-line {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #FF9800;
+}
+
+.next-line {
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+.interaction-controls {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 1.5rem;
+  color: white;
+  border: 2px solid rgba(255, 152, 0, 0.3);
+}
+
+.interaction-controls h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.control-buttons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.control-interaction-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 152, 0, 0.2);
+  border: 2px solid rgba(255, 152, 0, 0.5);
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.control-interaction-btn:hover {
+  background: rgba(255, 152, 0, 0.4);
+  transform: scale(1.05);
+}
+
+.control-interaction-btn:active {
+  transform: scale(0.95);
+}
+
+.control-icon {
+  font-size: 3rem;
+}
+
+.control-label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.audio-controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.audio-btn {
+  flex: 1;
+  min-width: 120px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 152, 0, 0.3);
+  color: white;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.audio-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 1024px) {
+  .aarti-main-area {
+    grid-template-columns: 1fr;
+  }
+
+  .user-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .aarti-header h1 {
+    font-size: 2rem;
+  }
+
+  .aartis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aarti-exp-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .control-buttons-grid {
+    grid-template-columns: 1fr;
+  }
+}

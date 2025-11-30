@@ -1,0 +1,548 @@
+.vr-meditation-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4A148C 0%, #6A1B9A 100%);
+}
+
+.vr-header {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 3rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.vr-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.vr-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.vr-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.benefits-section {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.benefits-section h3 {
+  color: #6A1B9A;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.benefit-card {
+  text-align: center;
+  padding: 1.5rem;
+  background: #f3e5f5;
+  border-radius: 15px;
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.benefit-card h4 {
+  color: #6A1B9A;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.benefit-card p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.location-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.location-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.location-image {
+  position: relative;
+  background: linear-gradient(135deg, #4A148C20 0%, #6A1B9A20 100%);
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-icon {
+  font-size: 5rem;
+}
+
+.vr-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #6A1B9A;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.location-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.location-content h3 {
+  color: #6A1B9A;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.location-state {
+  color: #999;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.location-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.ambience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.ambience-tag {
+  background: #f3e5f5;
+  padding: 0.3rem 0.7rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  color: #6A1B9A;
+}
+
+.start-meditation-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #6A1B9A 0%, #8E24AA 100%);
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-meditation-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(106, 27, 154, 0.4);
+}
+
+.meditation-setup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #4A148C 0%, #6A1B9A 100%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.setup-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  padding: 3rem;
+  max-width: 600px;
+  width: 100%;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.setup-container h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.setup-location {
+  text-align: center;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.setup-section {
+  margin-bottom: 2rem;
+}
+
+.setup-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.duration-options {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.8rem;
+}
+
+.duration-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 0.8rem 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.duration-btn.selected {
+  background: rgba(255, 255, 255, 0.4);
+  border-color: white;
+  font-weight: bold;
+}
+
+.duration-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.guidance-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.guidance-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.guidance-btn.selected {
+  background: rgba(255, 255, 255, 0.4);
+  border-color: white;
+  font-weight: bold;
+}
+
+.guidance-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.setup-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cancel-setup-btn,
+.begin-meditation-btn {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-setup-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.cancel-setup-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.begin-meditation-btn {
+  background: white;
+  color: #6A1B9A;
+}
+
+.begin-meditation-btn:hover {
+  transform: scale(1.05);
+}
+
+.meditation-active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d1a3d 100%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.meditation-header {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.exit-meditation-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
+}
+
+.exit-meditation-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.meditation-title {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.meditation-title h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.meditation-timer {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #8E24AA;
+}
+
+.meditation-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 2rem;
+  position: relative;
+}
+
+.vr-environment {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 3rem;
+  text-align: center;
+  color: white;
+  border: 2px solid rgba(138, 43, 226, 0.3);
+  width: 100%;
+  max-width: 800px;
+}
+
+.environment-icon {
+  font-size: 8rem;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.breathing-circle-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 3rem auto;
+}
+
+.breathing-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #8E24AA, #6A1B9A);
+  animation: breathe 8s ease-in-out infinite;
+  box-shadow: 0 0 40px rgba(142, 36, 170, 0.6);
+}
+
+@keyframes breathe {
+  0%, 100% {
+    width: 200px;
+    height: 200px;
+    opacity: 0.7;
+  }
+  50% {
+    width: 300px;
+    height: 300px;
+    opacity: 1;
+  }
+}
+
+.breathing-instruction {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  margin-top: 2rem;
+  animation: fade 8s ease-in-out infinite;
+}
+
+@keyframes fade {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+.meditation-progress {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 3rem;
+}
+
+.progress-bar-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  height: 10px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.progress-bar-fill {
+  background: linear-gradient(90deg, #6A1B9A, #8E24AA);
+  height: 100%;
+  transition: width 1s linear;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.meditation-controls {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.control-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .vr-header h1 {
+    font-size: 2rem;
+  }
+
+  .locations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .duration-options {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .guidance-options {
+    grid-template-columns: 1fr;
+  }
+
+  .setup-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .breathing-circle-container {
+    width: 250px;
+    height: 250px;
+  }
+
+  .breathing-circle {
+    width: 150px;
+    height: 150px;
+  }
+
+  @keyframes breathe {
+    0%, 100% {
+      width: 150px;
+      height: 150px;
+      opacity: 0.7;
+    }
+    50% {
+      width: 250px;
+      height: 250px;
+      opacity: 1;
+    }
+  }
+
+  .environment-icon {
+    font-size: 5rem;
+  }
+
+  .breathing-instruction {
+    font-size: 1.5rem;
+  }
+}

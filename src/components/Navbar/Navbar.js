@@ -48,6 +48,11 @@ const Navbar = () => {
             108 Names
           </NavLink>
         </li>
+        <li>
+          <NavLink to="/immersive" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            Immersive Experience
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

@@ -27,6 +27,11 @@ const StoryPlayerPage = lazy(() => import('./pages/StoryPlayerPage/StoryPlayerPa
 const RamayanaTOCPage = lazy(() => import('./pages/RamayanaPage/RamayanaTOCPage'));
 const BhagavadGitaPage = lazy(() => import('./pages/BhagavadGitaPage/BhagavadGitaPage'));
 const PuranaPage = lazy(() => import('./pages/PuranaPage/PuranaPage'));
+const ImmersiveExperiencePage = lazy(() => import('./pages/ImmersiveExperiencePage/ImmersiveExperiencePage'));
+const ARTemplesPage = lazy(() => import('./pages/ARTemplesPage/ARTemplesPage'));
+const VRMeditationPage = lazy(() => import('./pages/VRMeditationPage/VRMeditationPage'));
+const LiveDarshanPage = lazy(() => import('./pages/LiveDarshanPage/LiveDarshanPage'));
+const InteractiveAartiPage = lazy(() => import('./pages/InteractiveAartiPage/InteractiveAartiPage'));
 
 // Loading fallback component
 const LoadingFallback = () => (
@@ -82,6 +87,13 @@ function App() {
             <Route path="/fasting-guide" element={<FastingGuidePage />} />
             <Route path="/festival-countdown" element={<FestivalCountdownPage />} />
             <Route path="/puja-reminders" element={<PujaReminderPage />} />
+            
+            {/* Immersive Experience Routes */}
+            <Route path="/immersive" element={<ImmersiveExperiencePage />} />
+            <Route path="/immersive/ar-temples" element={<ARTemplesPage />} />
+            <Route path="/immersive/vr-meditation" element={<VRMeditationPage />} />
+            <Route path="/immersive/live-darshan" element={<LiveDarshanPage />} />
+            <Route path="/immersive/interactive-aarti" element={<InteractiveAartiPage />} />
           </Routes>
         </Suspense>
       </SidebarLayout>
