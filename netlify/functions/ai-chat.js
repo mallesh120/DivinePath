@@ -37,7 +37,7 @@ exports.handler = async (event, context) => {
 
     // Initialize Gemini AI
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
     // Customize system prompt based on feature type
     let systemContext = '';
