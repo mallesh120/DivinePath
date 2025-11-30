@@ -150,8 +150,16 @@ function MuhurtaFinderPage() {
                 onClick={() => setCalculationMode('check')}
               >
                 <span className="mode-icon">📊</span>
-                <span className="mode-title">Check Specific Date</span>
-                <span className="mode-desc">Get muhurta score for a date you have in mind</span>
+                <span className="mode-title">General Date Check</span>
+                <span className="mode-desc">Quick muhurta score without personal details</span>
+              </button>
+              <button
+                className={`mode-button ${calculationMode === 'checkPersonal' ? 'active' : ''}`}
+                onClick={() => setCalculationMode('checkPersonal')}
+              >
+                <span className="mode-icon">👤</span>
+                <span className="mode-title">Personalized Date Check</span>
+                <span className="mode-desc">Get score with your birth chart compatibility</span>
               </button>
               <button
                 className={`mode-button ${calculationMode === 'find' ? 'active' : ''}`}
@@ -166,15 +174,21 @@ function MuhurtaFinderPage() {
 
           {/* User Details Form */}
           <div className="muhurta-calculator-form">
-            <h3>📋 {calculationMode === 'check' ? 'Check Date Score' : 'Enter Details for Personalized Muhurta'}</h3>
+            <h3>📋 {
+              calculationMode === 'check' ? 'Check Date Score' :
+              calculationMode === 'checkPersonal' ? 'Personalized Date Analysis' :
+              'Enter Details for Personalized Muhurta'
+            }</h3>
             <p className="form-subtitle">
               {calculationMode === 'check' 
-                ? 'Select a date to see its muhurta score and auspiciousness level'
+                ? 'Select a date to see its general muhurta score based on Panchangam'
+                : calculationMode === 'checkPersonal'
+                ? 'Provide your birth details for personalized compatibility analysis'
                 : 'Provide your birth details and event date for accurate auspicious time calculation'}
             </p>
             
             <div className="form-grid">
-              {calculationMode === 'find' && (
+              {(calculationMode === 'find' || calculationMode === 'checkPersonal') && (
                 <>
                   <div className="form-group">
                     <label>📅 Your Birth Date</label>
@@ -212,7 +226,11 @@ function MuhurtaFinderPage() {
               )}
 
               <div className="form-group">
-                <label>🗓️ {calculationMode === 'check' ? 'Date to Check' : 'Proposed Event Date'}</label>
+                <label>🗓️ {
+                  calculationMode === 'check' ? 'Date to Check' :
+                  calculationMode === 'checkPersonal' ? 'Date to Analyze' :
+                  'Proposed Event Date'
+                }</label>
                 <input
                   type="date"
                   value={selectedDate}
@@ -220,7 +238,11 @@ function MuhurtaFinderPage() {
                   min={new Date().toISOString().split('T')[0]}
                   placeholder="Select event date"
                 />
-                <small>{calculationMode === 'check' ? 'Select any date to check its score' : 'Date you want to check'}</small>
+                <small>{
+                  calculationMode === 'check' ? 'Select any date to check its general score' :
+                  calculationMode === 'checkPersonal' ? 'Select date for personalized analysis' :
+                  'Date you want to check'
+                }</small>
               </div>
 
               {calculationMode === 'find' && (
@@ -242,8 +264,15 @@ function MuhurtaFinderPage() {
               onClick={handleCalculateMuhurta}
               disabled={!selectedDate}
             >
-              <span className="button-icon">{calculationMode === 'check' ? '📊' : '🔮'}</span>
-              {calculationMode === 'check' ? 'Check Date Score' : 'Calculate Auspicious Times'}
+              <span className="button-icon">{
+                calculationMode === 'check' ? '📊' :
+                calculationMode === 'checkPersonal' ? '👤' : '🔮'
+              }</span>
+              {
+                calculationMode === 'check' ? 'Check General Score' :
+                calculationMode === 'checkPersonal' ? 'Analyze with Birth Chart' :
+                'Calculate Auspicious Times'
+              }
             </button>
           </div>
 
