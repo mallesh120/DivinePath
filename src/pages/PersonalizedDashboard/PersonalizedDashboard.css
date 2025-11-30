@@ -185,8 +185,8 @@
   border-radius: 12px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 15px;
-  cursor: pointer;
   transition: all 0.3s ease;
   border: 2px solid transparent;
 }
@@ -198,6 +198,14 @@
 
 .goal-item.completed {
   background: linear-gradient(135deg, #c3f0c3 0%, #a8e6a8 100%);
+}
+
+.goal-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+  cursor: pointer;
 }
 
 .goal-checkbox {
@@ -214,6 +222,25 @@
   font-size: 1.1rem;
   color: #333;
   font-weight: 500;
+}
+
+.goal-link-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.goal-link-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
 }
 
 /* Japa Counter */
@@ -269,6 +296,308 @@
 
 .japa-reset:hover {
   background: #e0e0e0;
+}
+
+/* Prayer Card */
+.prayer-card {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+}
+
+.prayer-content {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+.prayer-header {
+  text-align: center;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.prayer-name {
+  font-size: 1.8rem;
+  color: #333;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+
+.prayer-deity {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  margin: 10px 5px;
+  font-weight: 600;
+}
+
+.prayer-time {
+  display: inline-block;
+  background: #f0f0f0;
+  color: #666;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  margin: 10px 5px;
+}
+
+.prayer-text {
+  margin: 25px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+  border-radius: 10px;
+  border-left: 4px solid #ff9800;
+}
+
+.prayer-sanskrit {
+  font-size: 1.5rem;
+  color: #d84315;
+  font-weight: 600;
+  margin-bottom: 15px;
+  line-height: 1.8;
+  text-align: center;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+.prayer-transliteration {
+  font-size: 1.1rem;
+  color: #555;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.prayer-meaning {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  border-left: 4px solid #4caf50;
+}
+
+.prayer-meaning strong {
+  color: #4caf50;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.prayer-meaning p {
+  color: #333;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.prayer-complete-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.prayer-complete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+/* Scripture Reading Card */
+.scripture-card {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+}
+
+.scripture-content {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+.scripture-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.scripture-name {
+  font-size: 1.8rem;
+  color: #2e7d32;
+  margin: 0 0 15px 0;
+  font-weight: 700;
+}
+
+.scripture-meta {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.scripture-chapter {
+  display: inline-block;
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.scripture-time {
+  display: inline-block;
+  background: #f0f0f0;
+  color: #666;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+.scripture-summary {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+  margin: 20px 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.key-verse {
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 25px 0;
+  border-left: 4px solid #ff9800;
+}
+
+.verse-title {
+  color: #ff6f00;
+  font-size: 1.2rem;
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+.verse-sanskrit {
+  font-size: 1.4rem;
+  color: #d84315;
+  font-weight: 600;
+  margin-bottom: 12px;
+  line-height: 1.8;
+  text-align: center;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+.verse-transliteration {
+  font-size: 1rem;
+  color: #555;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.verse-meaning {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.verse-meaning strong {
+  color: #ff6f00;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.verse-meaning p {
+  color: #333;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.scripture-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.read-full-btn {
+  background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.read-full-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+}
+
+.scripture-complete-btn {
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scripture-complete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+.library-link {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.browse-library-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.browse-library-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(156, 39, 176, 0.4);
 }
 
 /* Shloka Card */
@@ -450,6 +779,57 @@
   }
 }
 
+/* Practical Hindu Living Section */
+.practical-living-card {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.practical-living-card .card-title {
+  color: white;
+}
+
+.practical-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.practical-action-btn {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.practical-action-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.practical-action-btn .action-icon {
+  font-size: 2.5rem;
+}
+
+.practical-action-btn .action-label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #f5576c;
+}
+
+.practical-action-btn .action-desc {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .hero-greeting {
     font-size: 1.8rem;
@@ -473,5 +853,21 @@
 
   .progress-stats {
     grid-template-columns: 1fr;
+  }
+
+  .scripture-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .practical-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .verse-sanskrit {
+    font-size: 1.2rem;
+  }
+
+  .scripture-name {
+    font-size: 1.5rem;
   }
 }
