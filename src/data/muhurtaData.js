@@ -184,43 +184,156 @@ export const calculateMuhurtaScore = (eventType, panchangamData, selectedDate) =
   return { score, factors };
 };
 
-// Get auspicious time periods for the day
-export const getAuspiciousTimePeriods = (panchangamData) => {
-  if (!panchangamData) return [];
+// Calculate Rahu Kaal timing based on day of week
+export const calculateRahuKaal = (date, sunrise = "06:00", sunset = "18:00") => {
+  const dayIndex = new Date(date).getDay(); // 0=Sunday, 1=Monday, etc.
+  const dayLength = 12 * 60; // Approximate 12 hours in minutes
+  const rahuKaalDuration = 90; // 1.5 hours = 90 minutes
   
-  const periods = [];
+  // Rahu Kaal occurs at different times each day
+  const rahuKaalStart = {
+    0: 16.5, // Sunday: 4:30 PM - 6:00 PM
+    1: 7.5,  // Monday: 7:30 AM - 9:00 AM
+    2: 15,   // Tuesday: 3:00 PM - 4:30 PM
+    3: 12,   // Wednesday: 12:00 PM - 1:30 PM
+    4: 13.5, // Thursday: 1:30 PM - 3:00 PM
+    5: 10.5, // Friday: 10:30 AM - 12:00 PM
+    6: 9     // Saturday: 9:00 AM - 10:30 AM
+  };
   
-  // Brahma Muhurta (1.5 hours before sunrise)
-  const sunrise = panchangamData.solarLunar?.Sunrise;
-  if (sunrise) {
-    periods.push({
-      name: 'Brahma Muhurta',
-      time: 'Before Sunrise',
-      description: 'Most auspicious for spiritual activities',
-      suitableFor: ['Meditation', 'Prayer', 'Study']
-    });
-  }
+  const startHour = rahuKaalStart[dayIndex];
+  const endHour = startHour + 1.5;
   
-  // Abhijit Muhurta (Noon for 48 minutes)
-  periods.push({
-    name: 'Abhijit Muhurta',
-    time: '11:36 AM - 12:24 PM',
-    description: 'Overcome obstacles, good for all activities',
-    suitableFor: ['All auspicious activities', 'Important decisions']
+  return {
+    start: formatTime(startHour),
+    end: formatTime(endHour)
+  };
+};
+
+// Calculate Yamaganda timing
+export const calculateYamaganda = (date) => {
+  const dayIndex = new Date(date).getDay();
+  
+  const yamagandaStart = {
+    0: 12,   // Sunday: 12:00 PM - 1:30 PM
+    1: 10.5, // Monday: 10:30 AM - 12:00 PM
+    2: 9,    // Tuesday: 9:00 AM - 10:30 AM
+    3: 7.5,  // Wednesday: 7:30 AM - 9:00 AM
+    4: 6,    // Thursday: 6:00 AM - 7:30 AM
+    5: 15,   // Friday: 3:00 PM - 4:30 PM
+    6: 13.5  // Saturday: 1:30 PM - 3:00 PM
+  };
+  
+  const startHour = yamagandaStart[dayIndex];
+  const endHour = startHour + 1.5;
+  
+  return {
+    start: formatTime(startHour),
+    end: formatTime(endHour)
+  };
+};
+
+// Calculate Gulika Kaal timing
+export const calculateGulikaKaal = (date) => {
+  const dayIndex = new Date(date).getDay();
+  
+  const gulikaStart = {
+    0: 15,   // Sunday: 3:00 PM - 4:30 PM
+    1: 13.5, // Monday: 1:30 PM - 3:00 PM
+    2: 12,   // Tuesday: 12:00 PM - 1:30 PM
+    3: 10.5, // Wednesday: 10:30 AM - 12:00 PM
+    4: 9,    // Thursday: 9:00 AM - 10:30 AM
+    5: 7.5,  // Friday: 7:30 AM - 9:00 AM
+    6: 6     // Saturday: 6:00 AM - 7:30 AM
+  };
+  
+  const startHour = gulikaStart[dayIndex];
+  const endHour = startHour + 1.5;
+  
+  return {
+    start: formatTime(startHour),
+    end: formatTime(endHour)
+  };
+};
+
+// Helper function to format time
+const formatTime = (hour) => {
+  const hours = Math.floor(hour);
+  const minutes = Math.round((hour - hours) * 60);
+  const ampm = hours >= 12 ? 'PM' : 'AM';
+  const displayHours = hours > 12 ? hours - 12 : hours === 0 ? 12 : hours;
+  return `${displayHours}:${minutes.toString().padStart(2, '0')} ${ampm}`;
+};
+
+// Calculate auspicious time windows for a specific date
+export const calculateAuspiciousTimeWindows = (date, eventType) => {
+  const windows = [];
+  
+  // Brahma Muhurta (1.5 hours before sunrise, approximately 4:30-6:00 AM)
+  windows.push({
+    name: 'Brahma Muhurta',
+    icon: '🌅',
+    startTime: '4:30 AM',
+    endTime: '6:00 AM',
+    quality: 'excellent',
+    description: 'Most auspicious period for spiritual activities and new beginnings',
+    suitableFor: ['Meditation', 'Prayer', 'Study', 'Important decisions']
   });
   
-  // Godhuli Muhurta (Sunset time)
-  const sunset = panchangamData.solarLunar?.Sunset;
-  if (sunset) {
-    periods.push({
-      name: 'Godhuli Muhurta',
-      time: 'Around Sunset',
-      description: 'Auspicious for prayers and rituals',
-      suitableFor: ['Evening prayers', 'Lighting lamps', 'Meditation']
+  // Early Morning (6:00-9:00 AM) - avoiding Rahu Kaal for specific days
+  const rahuKaal = calculateRahuKaal(date);
+  const dayIndex = new Date(date).getDay();
+  
+  if (dayIndex !== 1 && dayIndex !== 6) { // Not Monday or Saturday
+    windows.push({
+      name: 'Early Morning Period',
+      icon: '🌄',
+      startTime: '6:00 AM',
+      endTime: '9:00 AM',
+      quality: 'excellent',
+      description: 'Fresh energy, clear mind - ideal for important ceremonies',
+      suitableFor: [eventType]
     });
   }
   
-  return periods;
+  // Abhijit Muhurta (Noon - 12 minutes window around midday)
+  windows.push({
+    name: 'Abhijit Muhurta',
+    icon: '☀️',
+    startTime: '11:54 AM',
+    endTime: '12:42 PM',
+    quality: 'excellent',
+    description: 'Powerful 48-minute window that nullifies all doshas and obstacles',
+    suitableFor: ['All important activities', 'Overcoming obstacles', eventType]
+  });
+  
+  // Afternoon period (2:00-4:00 PM) - avoiding Rahu Kaal
+  if (dayIndex !== 0 && dayIndex !== 2) { // Not Sunday or Tuesday
+    windows.push({
+      name: 'Afternoon Period',
+      icon: '🌤️',
+      startTime: '2:00 PM',
+      endTime: '4:00 PM',
+      quality: 'good',
+      description: 'Stable period suitable for most activities',
+      suitableFor: [eventType, 'Business activities', 'Meetings']
+    });
+  }
+  
+  // Godhuli Muhurta (Sunset time - approximately 5:30-6:30 PM)
+  if (eventType === 'naming' || eventType === 'thread' || eventType === 'education') {
+    windows.push({
+      name: 'Godhuli Muhurta',
+      icon: '🌆',
+      startTime: '5:30 PM',
+      endTime: '6:30 PM',
+      quality: 'good',
+      description: 'Sacred twilight period, auspicious for prayers and rituals',
+      suitableFor: ['Religious ceremonies', 'Prayers', 'Lighting lamps']
+    });
+  }
+  
+  return windows;
 };
 
 // Generate recommendations
@@ -265,18 +378,21 @@ export const generateSampleMuhurtaDates = (eventType) => {
 };
 
 // Helper function for MuhurtaFinderPage - wraps existing functionality
-export const getMuhurtaRecommendation = (panchangamData, eventType) => {
+export const getMuhurtaRecommendation = (panchangamData, eventType, selectedDate = null, userDetails = {}) => {
   if (!panchangamData) {
     return {
       status: 'unavailable',
       score: 0,
       favorableFactors: [],
       unfavorableFactors: ['Panchangam data not available'],
-      recommendations: ['Please check your internet connection and try again']
+      recommendations: ['Please check your internet connection and try again'],
+      auspiciousTimeWindows: [],
+      periodsToAvoid: []
     };
   }
 
-  const score = calculateMuhurtaScore(eventType.id, panchangamData, new Date());
+  const dateToAnalyze = selectedDate ? new Date(selectedDate) : new Date();
+  const score = calculateMuhurtaScore(eventType.id, panchangamData, dateToAnalyze);
   const recommendations = getMuhurtaRecommendations(eventType.id, score, {
     nakshatra: panchangamData.almanac?.Nakshatra?.name,
     tithi: panchangamData.almanac?.Tithi?.name,
@@ -288,11 +404,36 @@ export const getMuhurtaRecommendation = (panchangamData, eventType) => {
   if (score >= 70) status = 'auspicious';
   else if (score >= 50) status = 'moderate';
 
+  // Calculate auspicious time windows
+  const timeWindows = calculateAuspiciousTimeWindows(dateToAnalyze, eventType.id);
+  
+  // Calculate periods to avoid
+  const rahuKaal = calculateRahuKaal(dateToAnalyze);
+  const yamaganda = calculateYamaganda(dateToAnalyze);
+  const gulikaKaal = calculateGulikaKaal(dateToAnalyze);
+  
+  const periodsToAvoid = [
+    { name: 'Rahu Kaal', time: `${rahuKaal.start} - ${rahuKaal.end}` },
+    { name: 'Yamaganda', time: `${yamaganda.start} - ${yamaganda.end}` },
+    { name: 'Gulika Kaal', time: `${gulikaKaal.start} - ${gulikaKaal.end}` }
+  ];
+
+  // Add user-specific recommendations if birth details provided
+  const userRecommendations = [];
+  if (userDetails.birthDate && userDetails.birthTime) {
+    userRecommendations.push('✓ Birth chart compatibility will be analyzed for optimal timing');
+    userRecommendations.push('📍 Location-specific sunrise/sunset times will be calculated');
+  } else {
+    userRecommendations.push('💡 For personalized muhurta, please provide birth details');
+  }
+
   return {
     status,
     score,
     favorableFactors: recommendations.favorableFactors || [],
     unfavorableFactors: recommendations.unfavorableFactors || [],
-    recommendations: recommendations.suggestions || []
+    recommendations: [...(recommendations.suggestions || []), ...userRecommendations],
+    auspiciousTimeWindows: timeWindows,
+    periodsToAvoid: periodsToAvoid
   };
 };

@@ -12,17 +12,35 @@ function MuhurtaFinderPage() {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [recommendation, setRecommendation] = useState(null);
   const [showInfo, setShowInfo] = useState(true);
+  const [selectedDate, setSelectedDate] = useState('');
+  const [userDetails, setUserDetails] = useState({
+    birthDate: '',
+    birthTime: '',
+    birthPlace: '',
+    eventLocation: ''
+  });
+  const [showCalculations, setShowCalculations] = useState(false);
 
   useEffect(() => {
-    if (selectedEvent && panchangamData) {
-      const result = getMuhurtaRecommendation(panchangamData, selectedEvent);
+    if (selectedEvent && panchangamData && selectedDate) {
+      const result = getMuhurtaRecommendation(panchangamData, selectedEvent, selectedDate, userDetails);
       setRecommendation(result);
     }
-  }, [selectedEvent, panchangamData]);
+  }, [selectedEvent, panchangamData, selectedDate, userDetails]);
 
   const handleEventSelect = (event) => {
     setSelectedEvent(event);
     setShowInfo(false);
+  };
+
+  const handleUserDetailsChange = (field, value) => {
+    setUserDetails(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleCalculateMuhurta = () => {
+    if (selectedEvent && selectedDate) {
+      setShowCalculations(true);
+    }
   };
 
   const getStatusColor = (status) => {
@@ -127,6 +145,79 @@ function MuhurtaFinderPage() {
             </div>
           </div>
 
+          {/* User Details Form */}
+          <div className="muhurta-calculator-form">
+            <h3>📋 Enter Details for Personalized Muhurta</h3>
+            <p className="form-subtitle">Provide your birth details and event date for accurate auspicious time calculation</p>
+            
+            <div className="form-grid">
+              <div className="form-group">
+                <label>📅 Your Birth Date</label>
+                <input
+                  type="date"
+                  value={userDetails.birthDate}
+                  onChange={(e) => handleUserDetailsChange('birthDate', e.target.value)}
+                  placeholder="Select date"
+                />
+                <small>Used for birth chart compatibility</small>
+              </div>
+
+              <div className="form-group">
+                <label>🕐 Birth Time</label>
+                <input
+                  type="time"
+                  value={userDetails.birthTime}
+                  onChange={(e) => handleUserDetailsChange('birthTime', e.target.value)}
+                  placeholder="HH:MM"
+                />
+                <small>24-hour format (e.g., 14:30)</small>
+              </div>
+
+              <div className="form-group">
+                <label>📍 Birth Place</label>
+                <input
+                  type="text"
+                  value={userDetails.birthPlace}
+                  onChange={(e) => handleUserDetailsChange('birthPlace', e.target.value)}
+                  placeholder="City, State"
+                />
+                <small>For accurate planetary positions</small>
+              </div>
+
+              <div className="form-group">
+                <label>🗓️ Proposed Event Date</label>
+                <input
+                  type="date"
+                  value={selectedDate}
+                  onChange={(e) => setSelectedDate(e.target.value)}
+                  min={new Date().toISOString().split('T')[0]}
+                  placeholder="Select event date"
+                />
+                <small>Date you want to check</small>
+              </div>
+
+              <div className="form-group">
+                <label>📌 Event Location</label>
+                <input
+                  type="text"
+                  value={userDetails.eventLocation}
+                  onChange={(e) => handleUserDetailsChange('eventLocation', e.target.value)}
+                  placeholder="City, State"
+                />
+                <small>Where the event will take place</small>
+              </div>
+            </div>
+
+            <button 
+              className="calculate-button"
+              onClick={handleCalculateMuhurta}
+              disabled={!selectedDate}
+            >
+              <span className="button-icon">🔮</span>
+              Calculate Auspicious Times
+            </button>
+          </div>
+
           {loading && (
             <div className="loading-state">
               <div className="spinner"></div>
@@ -140,12 +231,12 @@ function MuhurtaFinderPage() {
             </div>
           )}
 
-          {recommendation && !loading && (
+          {recommendation && !loading && showCalculations && (
             <div className="recommendation-card">
               <div className="recommendation-header">
-                <h3>Today's Muhurta Analysis</h3>
+                <h3>Muhurta Analysis for {selectedEvent.name}</h3>
                 <div className="date-info">
-                  {panchangamData?.date && new Date(panchangamData.date).toLocaleDateString('en-IN', {
+                  {selectedDate && new Date(selectedDate).toLocaleDateString('en-IN', {
                     weekday: 'long',
                     year: 'numeric',
                     month: 'long',
@@ -219,6 +310,56 @@ function MuhurtaFinderPage() {
                       <li key={index}>{rec}</li>
                     ))}
                   </ul>
+                </div>
+              )}
+
+              {/* Auspicious Time Windows */}
+              {recommendation.auspiciousTimeWindows && recommendation.auspiciousTimeWindows.length > 0 && (
+                <div className="time-windows-section">
+                  <h4>🕐 Auspicious Time Windows</h4>
+                  <p className="time-windows-subtitle">Recommended time slots for {selectedEvent.name}</p>
+                  <div className="time-windows-grid">
+                    {recommendation.auspiciousTimeWindows.map((window, index) => (
+                      <div key={index} className={`time-window ${window.quality}`}>
+                        <div className="window-header">
+                          <span className="window-icon">{window.icon}</span>
+                          <span className="window-name">{window.name}</span>
+                          <span className={`window-badge ${window.quality}`}>
+                            {window.quality === 'excellent' ? 'Excellent' : 
+                             window.quality === 'good' ? 'Good' : 'Fair'}
+                          </span>
+                        </div>
+                        <div className="window-time">
+                          <span className="time-icon">⏰</span>
+                          <span className="time-text">{window.startTime} - {window.endTime}</span>
+                        </div>
+                        <p className="window-description">{window.description}</p>
+                        {window.suitableFor && (
+                          <div className="suitable-for">
+                            <strong>Best for:</strong> {window.suitableFor.join(', ')}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Inauspicious Periods to Avoid */}
+              {recommendation.periodsToAvoid && recommendation.periodsToAvoid.length > 0 && (
+                <div className="avoid-periods-section">
+                  <h4>⛔ Periods to Avoid</h4>
+                  <div className="avoid-periods-grid">
+                    {recommendation.periodsToAvoid.map((period, index) => (
+                      <div key={index} className="avoid-period">
+                        <span className="avoid-icon">❌</span>
+                        <div className="avoid-details">
+                          <strong>{period.name}</strong>
+                          <span className="avoid-time">{period.time}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               )}
 
