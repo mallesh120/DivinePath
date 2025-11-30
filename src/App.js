@@ -1,74 +1,89 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-
-
-// Import Pages and Components
-import PersonalizedDashboard from './pages/PersonalizedDashboard/PersonalizedDashboard';
-import HomePage from './pages/HomePage/HomePage';
-import GodsGalleryPage from './pages/GodsGalleryPage/GodsGalleryPage';
-import AllGodsGalleryPage from './pages/AllGodsGalleryPage/AllGodsGalleryPage';
-import LiteratureLibraryPage from './pages/LiteratureLibraryPage/LiteratureLibraryPage';
-import GodDetailPage from './pages/GodDetailPage/GodDetailPage';
-import LiteratureDetailPage from './pages/LiteratureDetailPage/LiteratureDetailPage';
-import FestivalsPage from './pages/FestivalsPage/FestivalsPage';
-import FestivalDetailPage from './pages/FestivalDetailPage/FestivalDetailPage';
-import HinduCalendarPage from './pages/HinduCalendarPage/HinduCalendarPage';
-import PujaListPage from './pages/PujaListPage/PujaListPage';
-import PujaGuidePage from './pages/PujaGuidePage/PujaGuidePage';
-import AshtottaramListPage from './pages/AshtottaramListPage/AshtottaramListPage';
-import AshtottaramDetailPage from './pages/AshtottaramDetailPage/AshtottaramDetailPage';
-import MuhurtaFinderPage from './pages/MuhurtaFinderPage/MuhurtaFinderPage';
-import FastingGuidePage from './pages/FastingGuidePage/FastingGuidePage';
-import FestivalCountdownPage from './pages/FestivalCountdownPage/FestivalCountdownPage';
-import PujaReminderPage from './pages/PujaReminderPage/PujaReminderPage';
 import Navbar from './components/Navbar/Navbar';
-import './App.css';
-import StoryPlayerPage from './pages/StoryPlayerPage/StoryPlayerPage';
-import RamayanaTOCPage from './pages/RamayanaPage/RamayanaTOCPage';
 import SidebarLayout from './components/SidebarLayout/SidebarLayout';
-import BhagavadGitaPage from './pages/BhagavadGitaPage/BhagavadGitaPage';
-import PuranaPage from './pages/PuranaPage/PuranaPage';
+import './App.css';
+
+// Lazy load all page components for better performance
+const PersonalizedDashboard = lazy(() => import('./pages/PersonalizedDashboard/PersonalizedDashboard'));
+const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
+const GodsGalleryPage = lazy(() => import('./pages/GodsGalleryPage/GodsGalleryPage'));
+const AllGodsGalleryPage = lazy(() => import('./pages/AllGodsGalleryPage/AllGodsGalleryPage'));
+const LiteratureLibraryPage = lazy(() => import('./pages/LiteratureLibraryPage/LiteratureLibraryPage'));
+const GodDetailPage = lazy(() => import('./pages/GodDetailPage/GodDetailPage'));
+const LiteratureDetailPage = lazy(() => import('./pages/LiteratureDetailPage/LiteratureDetailPage'));
+const FestivalsPage = lazy(() => import('./pages/FestivalsPage/FestivalsPage'));
+const FestivalDetailPage = lazy(() => import('./pages/FestivalDetailPage/FestivalDetailPage'));
+const HinduCalendarPage = lazy(() => import('./pages/HinduCalendarPage/HinduCalendarPage'));
+const PujaListPage = lazy(() => import('./pages/PujaListPage/PujaListPage'));
+const PujaGuidePage = lazy(() => import('./pages/PujaGuidePage/PujaGuidePage'));
+const AshtottaramListPage = lazy(() => import('./pages/AshtottaramListPage/AshtottaramListPage'));
+const AshtottaramDetailPage = lazy(() => import('./pages/AshtottaramDetailPage/AshtottaramDetailPage'));
+const MuhurtaFinderPage = lazy(() => import('./pages/MuhurtaFinderPage/MuhurtaFinderPage'));
+const FastingGuidePage = lazy(() => import('./pages/FastingGuidePage/FastingGuidePage'));
+const FestivalCountdownPage = lazy(() => import('./pages/FestivalCountdownPage/FestivalCountdownPage'));
+const PujaReminderPage = lazy(() => import('./pages/PujaReminderPage/PujaReminderPage'));
+const StoryPlayerPage = lazy(() => import('./pages/StoryPlayerPage/StoryPlayerPage'));
+const RamayanaTOCPage = lazy(() => import('./pages/RamayanaPage/RamayanaTOCPage'));
+const BhagavadGitaPage = lazy(() => import('./pages/BhagavadGitaPage/BhagavadGitaPage'));
+const PuranaPage = lazy(() => import('./pages/PuranaPage/PuranaPage'));
+
+// Loading fallback component
+const LoadingFallback = () => (
+  <div style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: '400px',
+    fontSize: '1.2rem',
+    color: '#667eea'
+  }}>
+    Loading...
+  </div>
+);
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <SidebarLayout>
-        <Routes>
-          <Route path="/" element={<PersonalizedDashboard />} />
-          <Route path="/devotional" element={<HomePage />} />
-          <Route path="/gods" element={<GodsGalleryPage />} />
-          <Route path="/gods/all" element={<AllGodsGalleryPage />} />
-          <Route path="/gods/:godId" element={<GodDetailPage />} />
-          <Route path="/library" element={<LiteratureLibraryPage />} />
-          <Route path="/festivals" element={<FestivalsPage />} />
-          <Route path="/festivals/:festivalId" element={<FestivalDetailPage />} />
-          <Route path="/calendar" element={<HinduCalendarPage />} />
-          <Route path="/pujas" element={<PujaListPage />} />
-          <Route path="/puja/:pujaId" element={<PujaGuidePage />} />
-          <Route path="/ashtottaram" element={<AshtottaramListPage />} />
-          <Route path="/ashtottaram/:deityId" element={<AshtottaramDetailPage />} />
-          {/* This route is for standard literature like the Mahabharata */}
-          <Route path="/library/:storyId" element={<LiteratureDetailPage />} />
+        <Suspense fallback={<LoadingFallback />}>
+          <Routes>
+            <Route path="/" element={<PersonalizedDashboard />} />
+            <Route path="/devotional" element={<HomePage />} />
+            <Route path="/gods" element={<GodsGalleryPage />} />
+            <Route path="/gods/all" element={<AllGodsGalleryPage />} />
+            <Route path="/gods/:godId" element={<GodDetailPage />} />
+            <Route path="/library" element={<LiteratureLibraryPage />} />
+            <Route path="/festivals" element={<FestivalsPage />} />
+            <Route path="/festivals/:festivalId" element={<FestivalDetailPage />} />
+            <Route path="/calendar" element={<HinduCalendarPage />} />
+            <Route path="/pujas" element={<PujaListPage />} />
+            <Route path="/puja/:pujaId" element={<PujaGuidePage />} />
+            <Route path="/ashtottaram" element={<AshtottaramListPage />} />
+            <Route path="/ashtottaram/:deityId" element={<AshtottaramDetailPage />} />
+            {/* This route is for standard literature like the Mahabharata */}
+            <Route path="/library/:storyId" element={<LiteratureDetailPage />} />
 
-          {/* Route for Bhagavad Gita (scripture type) */}
-          <Route path="/library/scripture/:storyId" element={<BhagavadGitaPage />} />
+            {/* Route for Bhagavad Gita (scripture type) */}
+            <Route path="/library/scripture/:storyId" element={<BhagavadGitaPage />} />
 
-          {/* Route for Puranas */}
-          <Route path="/library/purana/:storyId" element={<PuranaPage />} />
+            {/* Route for Puranas */}
+            <Route path="/library/purana/:storyId" element={<PuranaPage />} />
 
-          {/* This is our new route for the Ramayana Table of Contents */}
-          <Route path="/library/ramayana/:storyId" element={<RamayanaTOCPage />} />
+            {/* This is our new route for the Ramayana Table of Contents */}
+            <Route path="/library/ramayana/:storyId" element={<RamayanaTOCPage />} />
 
-          {/* This is the updated story player route */}
-          <Route path="/story/:storyId/:kandaIndex" element={<StoryPlayerPage />} />
-          
-          {/* Practical Hindu Living Routes */}
-          <Route path="/muhurta-finder" element={<MuhurtaFinderPage />} />
-          <Route path="/fasting-guide" element={<FastingGuidePage />} />
-          <Route path="/festival-countdown" element={<FestivalCountdownPage />} />
-          <Route path="/puja-reminders" element={<PujaReminderPage />} />
-        </Routes>
+            {/* This is the updated story player route */}
+            <Route path="/story/:storyId/:kandaIndex" element={<StoryPlayerPage />} />
+            
+            {/* Practical Hindu Living Routes */}
+            <Route path="/muhurta-finder" element={<MuhurtaFinderPage />} />
+            <Route path="/fasting-guide" element={<FastingGuidePage />} />
+            <Route path="/festival-countdown" element={<FestivalCountdownPage />} />
+            <Route path="/puja-reminders" element={<PujaReminderPage />} />
+          </Routes>
+        </Suspense>
       </SidebarLayout>
     </div>
   );
