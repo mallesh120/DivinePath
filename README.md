@@ -14,6 +14,37 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+### `npm run lint`
+
+Runs ESLint to check for code quality issues.
+
+### `npm run lint:fix`
+
+Automatically fixes ESLint issues where possible.
+
+### `npm run pre-push`
+
+Runs linting and build checks before pushing to ensure code quality.
+
+### `./pre-push.sh`
+
+Run this script manually before pushing to GitHub to catch errors early:
+```bash
+./pre-push.sh
+```
+
+The script checks:
+- ✅ ESLint passes
+- ✅ Build succeeds  
+- ✅ No sensitive files (.env) in git
+
+**Note:** A git pre-push hook is automatically configured to run these checks before every push.
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\

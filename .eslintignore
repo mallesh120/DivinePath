@@ -1,0 +1,21 @@
+# Build output
+build/
+dist/
+
+# Assets
+src/assets/**/*.js
+src/assets/React*
+
+# Dependencies
+node_modules/
+
+# Netlify
+.netlify/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Test coverage
+coverage/
