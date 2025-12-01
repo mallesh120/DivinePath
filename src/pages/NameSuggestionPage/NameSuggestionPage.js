@@ -303,7 +303,7 @@ Please provide exactly 12 names separated by "---" markers.`;
       
       lines.forEach(line => {
         // Handle various formats: "KEY: value", "**KEY:** value", "KEY - value", etc.
-        const colonMatch = line.match(/^\*?\*?(NAME|GENDER|MEANING|ORIGIN|NAKSHATRA|DEITY|DESCRIPTION|POPULARITY)\*?\*?\s*[:\-]\s*(.+)/i);
+        const colonMatch = line.match(/^\*?\*?(NAME|GENDER|MEANING|ORIGIN|NAKSHATRA|DEITY|DESCRIPTION|POPULARITY)\*?\*?\s*[:−-]\s*(.+)/i);
         
         if (colonMatch) {
           const cleanKey = colonMatch[1].trim().toUpperCase();
