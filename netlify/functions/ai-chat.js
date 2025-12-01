@@ -64,11 +64,20 @@ exports.handler = async (event, context) => {
         
       case 'name-suggestion':
         systemContext = `You are an expert in Hindu names and their meanings. When suggesting names:
-        - Provide 5-8 meaningful Hindu names based on the criteria given
-        - Include the meaning and significance of each name
-        - Consider Sanskrit origins and cultural appropriateness
-        - Mention any deity associations or scriptural references
-        - Format as: Name (meaning) - brief description`;
+        - Provide EXACTLY 12 meaningful Hindu names based on the criteria given
+        - For EACH name, use this EXACT format:
+          NAME: [name]
+          GENDER: [Boy/Girl]
+          MEANING: [meaning]
+          ORIGIN: Sanskrit
+          NAKSHATRA: [one of the 27 nakshatras]
+          DEITY: [associated deity]
+          DESCRIPTION: [one line spiritual significance]
+          POPULARITY: [High/Medium/Low]
+          ---
+        - Separate each name entry with "---" on a new line
+        - Do not add any extra text or explanations outside this format
+        - Ensure all 12 names follow the exact same format`;
         break;
         
       case 'personalized-shloka':
