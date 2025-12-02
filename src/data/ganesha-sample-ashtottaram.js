@@ -1,0 +1,15 @@
+export const ganeshaSampleAshtottaram = {
+    id: 'ganesha-sample',
+    name: 'Lord Ganesha Sample',
+    title: 'Lord Ganesha Sample Ashtottara Shatanamavali',
+    description: '108 Names of Lord Ganesha Sample',
+    image: require('../assets/images/Gods/ganesha-sample.png'),
+    category: 'god',
+    names: [
+      { number: 1, sanskrit: 'गजानन', transliteration: 'Gajanana', mantraSanskrit: 'ॐ गजाननाय नमः।', mantra: 'Om Gajananaya Namah', meaning: 'Elephant-Faced Lord' },
+      { number: 2, sanskrit: 'गणाध्यक्ष', transliteration: 'Ganadhyaksha', mantraSanskrit: 'ॐ गणाध्यक्षाय नमः।', mantra: 'Om Ganadhyakshaya Namah', meaning: 'Lord of All Ganas (Gods)' },
+      { number: 3, sanskrit: 'विघ्नराज', transliteration: 'Vighnaraja', mantraSanskrit: 'ॐ विघ्नराजाय नमः।', mantra: 'Om Vighnarajaya Namah', meaning: 'Lord of All Hindrances' },
+      { number: 4, sanskrit: 'विनायक', transliteration: 'Vinayaka', mantraSanskrit: 'ॐ विनायकाय नमः।', mantra: 'Om Vinayakaya Namah', meaning: 'Lord of All' },
+      { number: 5, sanskrit: 'द्वैमातुर', transliteration: 'Dvaimatura', mantraSanskrit: 'ॐ द्वैमातुराय नमः।', mantra: 'Om Dvaimaturaya Namah', meaning: 'One who has two Mothers' }
+    ]
+};

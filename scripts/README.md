@@ -1,23 +1,164 @@
 # Ashtottaram Data Tools
 
-## ⭐ **Recommended Approach: Copy & Paste with Converter**
+## 🎯 **Recommended: Manual Data Entry with Formatter** (Most Reliable)
 
-The most reliable method is to copy the formatted data you already have and use the converter:
+The web scraping approach is complex due to website structure. The best method is to manually copy data and use our formatter.
 
 ### Quick Steps:
-1. **Copy** the deity names from your source (like you did for Vishnu and Shiva)
-2. **Save** to a text file:
-   ```bash
-   cat > deity_names.txt
-   # Paste the text (each group of 6 lines: Sanskrit, Transliteration, Number, Sanskrit Mantra, English Mantra, Meaning)
-   # Press Ctrl+D when done
+
+1. **Visit drikpanchang.com** and find a deity's 108 names page
+2. **Copy the text** (all 108 names with Sanskrit, transliteration, mantras, meanings)
+3. **Create a text file** with 5 lines per name:
    ```
-3. **Convert**:
-   ```bash
-   cd scripts
-   source venv/bin/activate
-   python convert_text_to_js.py deity_names.txt
+   गजानन
+   Gajanana
+   ॐ गजाननाय नमः।
+   Om Gajananaya Namah
+   Elephant-Faced Lord
+   
+   गणाध्यक्ष
+   Ganadhyaksha
+   ॐ गणाध्यक्षाय नमः।
+   Om Ganadhyakshaya Namah
+   Lord of All Ganas
+   
+   ... (repeat for all 108 names)
    ```
+
+4. **Run the formatter:**
+   ```bash
+   node scripts/format-ashtottaram.js shiva-names.txt shiva "Lord Shiva" god
+   ```
+
+5. **Copy generated code** from `scripts/output/shiva-ashtottaram.js`
+6. **Paste** into `src/data/ashtottaramData.js`
+7. **Add deity image** to `src/assets/images/Gods/` or `Goddesses/`
+
+### 📁 Available Tools
+
+- **format-ashtottaram.js** - Converts manually copied text to JSON format (RECOMMENDED ✅)
+- **scrape-playwright.js** - Browser automation scraper using Playwright (NEW 🤖)
+- **scrape-ashtottaram.js** - Basic HTTP scraper (may need adjustment)
+- **batch-scrape.js** - Batch scraping (experimental)
+- **find-ashtottaram-urls.js** - URL discovery tool
+
+---
+
+## 🕉️ Web Scraping Scripts
+
+### Option 1: Playwright Scraper (🤖 NEW - Automated Browser Automation)
+
+**File:** `scrape-playwright.js`
+
+Automated browser-based scraper using Playwright. Opens a real browser, navigates the website, and extracts data automatically - just like a human would!
+
+**Prerequisites:**
+```bash
+# Install Playwright (if not already installed)
+npm install playwright
+
+# Install Chromium browser
+npx playwright install chromium
+```
+
+**Usage:**
+```bash
+node scripts/scrape-playwright.js <deity-url> <deity-id> <deity-title> <category>
+```
+
+**Example:**
+```bash
+# Scrape Lord Vishnu's 108 names
+node scripts/scrape-playwright.js \
+  "https://www.drikpanchang.com/deities-namavali/gods/lord-vishnu/108-vishnu-names.html" \
+  "vishnu" \
+  "Lord Vishnu" \
+  "god"
+
+# Scrape Goddess Lakshmi's 108 names
+node scripts/scrape-playwright.js \
+  "https://www.drikpanchang.com/deities-namavali/goddesses/lakshmi/108-lakshmi-names.html" \
+  "lakshmi" \
+  "Goddess Lakshmi" \
+  "goddess"
+```
+
+**Features:**
+- ✅ **Fully automated** - Just provide the URL and it does the rest
+- ✅ **Real browser** - Handles JavaScript-rendered content perfectly
+- ✅ **Complete extraction** - Gets all 108 names with Sanskrit, transliteration, mantras, and meanings
+- ✅ **Formatted output** - Generates both `.js` and `.json` files ready to use
+- ✅ **Reliable** - Works with the current website structure
+- ✅ **Progress feedback** - Shows what it's doing at each step
+
+**Output:**
+- `scripts/output/{deity-id}-ashtottaram.js` - JavaScript module ready to copy
+- `scripts/output/{deity-id}-ashtottaram.json` - JSON data for other uses
+
+**When to use:**
+- ✅ When you want to automate scraping multiple deities
+- ✅ When the data is consistently structured on the website
+- ✅ For bulk extraction of deity names
+- ✅ When you want the most up-to-date data from the website
+
+**📖 Detailed Guide:** See [PLAYWRIGHT_GUIDE.md](./PLAYWRIGHT_GUIDE.md) for complete instructions
+
+---
+
+### Option 2: Batch Playwright Scraper (🔥 For Multiple Deities)
+
+**File:** `batch-scrape-playwright.js`
+
+Scrape multiple deities automatically in one go!
+
+**Usage:**
+```bash
+# Scrapes 8 popular deities automatically
+node scripts/batch-scrape-playwright.js
+```
+
+**Features:**
+- ✅ Scrapes 8 deities: Vishnu, Shiva, Krishna, Rama, Hanuman, Lakshmi, Durga, Saraswati
+- ✅ Respectful delays between requests (3 seconds)
+- ✅ Single browser instance (efficient)
+- ✅ Progress tracking and summary report
+- ✅ Generates all output files in one run
+
+**Customize:**
+Edit the `DEITIES` array in the script to add/remove deities
+
+**When to use:**
+- ✅ When you need to scrape 5+ deities
+- ✅ For initial database population
+- ✅ For bulk updates when website changes
+
+---
+
+### Option 3: HTTP Scraper (Basic - Legacy)
+
+### 📁 Scraper Files
+
+- **scrape-ashtottaram.js** - Single deity scraper
+- **batch-scrape.js** - Batch scraper for multiple deities
+- **output/** - Generated files saved here
+
+### 🚀 Single Deity Scrape
+
+```bash
+node scripts/scrape-ashtottaram.js \
+  "https://www.drikpanchang.com/deities-namavali/gods/lord-shiva/shiva-ashtottara-shatanamavali.html" \
+  "shiva" \
+  "Lord Shiva" \
+  "god"
+```
+
+**Note:** If this fails, the HTML structure may have changed. Use the manual formatter instead.
+
+### 📋 Output
+
+Generated files in `scripts/output/`:
+- `{deity-id}-ashtottaram.js` - Ready to paste into ashtottaramData.js
+- `{deity-id}-ashtottaram.json` - Raw JSON for reference
 4. **Copy** the output and paste into `ashtottaramData.js`
 
 ### Even Quicker (macOS):

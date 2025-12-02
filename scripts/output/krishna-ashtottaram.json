@@ -1,0 +1,880 @@
+{
+  "id": "krishna",
+  "title": "Lord Krishna",
+  "category": "god",
+  "description": "The eighth avatar of Lord Vishnu",
+  "names": [
+    {
+      "number": 1,
+      "sanskrit": "श्रीकृष्ण",
+      "transliteration": "Shrikrishnaya",
+      "mantraSanskrit": "ॐ श्रीकृष्णाय नमः",
+      "mantra": "Om Shrikrishnaya Namah",
+      "meaning": "जो श्यामवर्ण वाले हैं"
+    },
+    {
+      "number": 2,
+      "sanskrit": "कमलानाथ",
+      "transliteration": "Kamalanathaya",
+      "mantraSanskrit": "ॐ कमलानाथाय नमः",
+      "mantra": "Om Kamalanathaya Namah",
+      "meaning": "जो देवी लक्ष्मी के पति हैं"
+    },
+    {
+      "number": 3,
+      "sanskrit": "वासुदेव",
+      "transliteration": "Vasudevaya",
+      "mantraSanskrit": "ॐ वासुदेवाय नमः",
+      "mantra": "Om Vasudevaya Namah",
+      "meaning": "जो वसुदेव जी के पुत्र हैं"
+    },
+    {
+      "number": 4,
+      "sanskrit": "सनातन",
+      "transliteration": "Sanatanaya",
+      "mantraSanskrit": "ॐ सनातनाय नमः",
+      "mantra": "Om Sanatanaya Namah",
+      "meaning": "जो तीनों कालों में विद्यमान रहने वाले हैं"
+    },
+    {
+      "number": 5,
+      "sanskrit": "वसुदेवात्मज",
+      "transliteration": "Vasudevatmajaya",
+      "mantraSanskrit": "ॐ वसुदेवात्मजाय नमः",
+      "mantra": "Om Vasudevatmajaya Namah",
+      "meaning": "जो वसुदेवजी के पुत्र हैं"
+    },
+    {
+      "number": 6,
+      "sanskrit": "पुण्य",
+      "transliteration": "Punyaya",
+      "mantraSanskrit": "ॐ पुण्याय नमः",
+      "mantra": "Om Punyaya Namah",
+      "meaning": "जो परम पुण्यशाली हैं"
+    },
+    {
+      "number": 7,
+      "sanskrit": "लीलामानुषविग्रह",
+      "transliteration": "Lilamanushavigrahaya",
+      "mantraSanskrit": "ॐ लीलामानुषविग्रहाय नमः",
+      "mantra": "Om Lilamanushavigrahaya Namah",
+      "meaning": "जिन्होंने अपनी लीलाओं को दिखाने के लिये मनुष्य रूप में अवतार लिया है"
+    },
+    {
+      "number": 8,
+      "sanskrit": "श्रीवत्सकौस्तुभधर",
+      "transliteration": "Shrivatsakaustubhadharaya",
+      "mantraSanskrit": "ॐ श्रीवत्सकौस्तुभधराय नमः",
+      "mantra": "Om Shrivatsakaustubhadharaya Namah",
+      "meaning": "जो श्रीवत्स और कौस्तुभ मणि को धारण करते हैं"
+    },
+    {
+      "number": 9,
+      "sanskrit": "यशोदावत्सल",
+      "transliteration": "Yashodavatsalaya",
+      "mantraSanskrit": "ॐ यशोदावत्सलाय नमः",
+      "mantra": "Om Yashodavatsalaya Namah",
+      "meaning": "जो माता यशोदा के अत्यन्त प्रिय पुत्र हैं"
+    },
+    {
+      "number": 10,
+      "sanskrit": "हरि",
+      "transliteration": "Haraye",
+      "mantraSanskrit": "ॐ हरये नमः",
+      "mantra": "Om Haraye Namah",
+      "meaning": "जो प्रकृति के स्वामी हैं"
+    },
+    {
+      "number": 11,
+      "sanskrit": "चतुर्भुजात्तचक्रासिगदाशङ्खाम्बुजायुध",
+      "transliteration": "Chaturbhujattachakrasigadashankhambujayudhaya",
+      "mantraSanskrit": "ॐ चतुर्भुजात्तचक्रासिगदाशङ्खाम्बुजायुधाय नमः",
+      "mantra": "Om Chaturbhujattachakrasigadashankhambujayudhaya Namah",
+      "meaning": "जो चक्र, तलवार, गदा, शंख आदि अस्त्र धारण करने वाले चतुर्भुजी हैं"
+    },
+    {
+      "number": 12,
+      "sanskrit": "देवकीनन्दन",
+      "transliteration": "Devakinandanaya",
+      "mantraSanskrit": "ॐ देवकीनन्दनाय नमः",
+      "mantra": "Om Devakinandanaya Namah",
+      "meaning": "जो माता देवकी के पुत्र हैं"
+    },
+    {
+      "number": 13,
+      "sanskrit": "श्रीश",
+      "transliteration": "Shrishaya",
+      "mantraSanskrit": "ॐ श्रीशाय नमः",
+      "mantra": "Om Shrishaya Namah",
+      "meaning": "जो देवी लक्ष्मी के पति हैं"
+    },
+    {
+      "number": 14,
+      "sanskrit": "नन्दगोपप्रियात्मज",
+      "transliteration": "Nandagopapriyatmajaya",
+      "mantraSanskrit": "ॐ नन्दगोपप्रियात्मजाय नमः",
+      "mantra": "Om Nandagopapriyatmajaya Namah",
+      "meaning": "जो महाराज नन्द के प्रिय पुत्र हैं"
+    },
+    {
+      "number": 15,
+      "sanskrit": "यमुनावेगसंहारी",
+      "transliteration": "Yamunavegasamharine",
+      "mantraSanskrit": "ॐ यमुनावेगसंहारिणे नमः",
+      "mantra": "Om Yamunavegasamharine Namah",
+      "meaning": "जो यमुना नदी के वेग को हर लेने वाले हैं"
+    },
+    {
+      "number": 16,
+      "sanskrit": "बलभद्रप्रियानुज",
+      "transliteration": "Balabhadrapriyanujaya",
+      "mantraSanskrit": "ॐ बलभद्रप्रियानुजाय नमः",
+      "mantra": "Om Balabhadrapriyanujaya Namah",
+      "meaning": "जो भगवान बलराम के प्रिय अनुज हैं"
+    },
+    {
+      "number": 17,
+      "sanskrit": "पूतनाजीवितहर",
+      "transliteration": "Putanajivitaharaya",
+      "mantraSanskrit": "ॐ पूतनाजीवितहराय नमः",
+      "mantra": "Om Putanajivitaharaya Namah",
+      "meaning": "जो राक्षसी पूतना के प्राणों को हर लेने वाले हैं"
+    },
+    {
+      "number": 18,
+      "sanskrit": "शकटासुरभञ्जन",
+      "transliteration": "Shakatasurabhanjanaya",
+      "mantraSanskrit": "ॐ शकटासुरभञ्जनाय नमः",
+      "mantra": "Om Shakatasurabhanjanaya Namah",
+      "meaning": "जो शकटासुर को नष्ट कर देने वाले हैं"
+    },
+    {
+      "number": 19,
+      "sanskrit": "नन्दव्रजजनानन्दी",
+      "transliteration": "Nandavrajajananandine",
+      "mantraSanskrit": "ॐ नन्दव्रजजनानन्दिने नमः",
+      "mantra": "Om Nandavrajajananandine Namah",
+      "meaning": "जो महाराज नन्द और ब्रजवासियों को आनन्द देने वाले हैं"
+    },
+    {
+      "number": 20,
+      "sanskrit": "सच्चिदानन्दविग्रह",
+      "transliteration": "Sachchidanandavigrahaya",
+      "mantraSanskrit": "ॐ सच्चिदानन्दविग्रहाय नमः",
+      "mantra": "Om Sachchidanandavigrahaya Namah",
+      "meaning": "जो शाश्वत, अजर-अमर और अविनाशी स्वरूप हैं"
+    },
+    {
+      "number": 21,
+      "sanskrit": "नवनीतविलिप्ताङ्ग",
+      "transliteration": "Navanitaviliptangaya",
+      "mantraSanskrit": "ॐ नवनीतविलिप्ताङ्गाय नमः",
+      "mantra": "Om Navanitaviliptangaya Namah",
+      "meaning": "जिनका शरीर मक्खन से सना हुआ है"
+    },
+    {
+      "number": 22,
+      "sanskrit": "नवनीतनट",
+      "transliteration": "Navanitanataya",
+      "mantraSanskrit": "ॐ नवनीतनटाय नमः",
+      "mantra": "Om Navanitanataya Namah",
+      "meaning": "जो मक्खन के लिये नृत्य करते हैं"
+    },
+    {
+      "number": 23,
+      "sanskrit": "अनघ",
+      "transliteration": "Anaghaya",
+      "mantraSanskrit": "ॐ अनघाय नमः",
+      "mantra": "Om Anaghaya Namah",
+      "meaning": "जो पापों से रहित हैं"
+    },
+    {
+      "number": 24,
+      "sanskrit": "नवनीतनवाहार",
+      "transliteration": "Navanitanavaharaya",
+      "mantraSanskrit": "ॐ नवनीतनवाहाराय नमः",
+      "mantra": "Om Navanitanavaharaya Namah",
+      "meaning": "जो मक्खन चुराने के नये-नये तरीके ढूँढते हैं"
+    },
+    {
+      "number": 25,
+      "sanskrit": "मुचुकुन्दप्रसादक",
+      "transliteration": "Muchukundaprasadakaya",
+      "mantraSanskrit": "ॐ मुचुकुन्दप्रसादकाय नमः",
+      "mantra": "Om Muchukundaprasadakaya Namah",
+      "meaning": "जो राजा मुचुकुन्द को अनुग्रह प्रदान करने वाले हैं"
+    },
+    {
+      "number": 26,
+      "sanskrit": "षोडशस्त्रीसहस्रेश",
+      "transliteration": "Shodashastrisahasreshaya",
+      "mantraSanskrit": "ॐ षोडशस्त्रीसहस्रेशाय नमः",
+      "mantra": "Om Shodashastrisahasreshaya Namah",
+      "meaning": "जो सोलह हजार स्त्रियों के स्वामी हैं"
+    },
+    {
+      "number": 27,
+      "sanskrit": "त्रिभङ्गी",
+      "transliteration": "Tribhangine",
+      "mantraSanskrit": "ॐ त्रिभङ्गिने नमः",
+      "mantra": "Om Tribhangine Namah",
+      "meaning": "जो त्रिभङ्गी अर्थात् जिनका सुन्दर रूप तीन स्थानों से टेढ़ा है"
+    },
+    {
+      "number": 28,
+      "sanskrit": "मधुराकृति",
+      "transliteration": "Madhurakritaye",
+      "mantraSanskrit": "ॐ मधुराकृतये नमः",
+      "mantra": "Om Madhurakritaye Namah",
+      "meaning": "जिनका स्वरूप अत्यन्त आकर्षक है"
+    },
+    {
+      "number": 29,
+      "sanskrit": "शुकवागमृताब्धीन्दु",
+      "transliteration": "Shukavagamritabdhindave",
+      "mantraSanskrit": "ॐ शुकवागमृताब्धीन्दवे नमः",
+      "mantra": "Om Shukavagamritabdhindave Namah",
+      "meaning": "जो शुक के कथनानुसार अमृत के महासागर हैं"
+    },
+    {
+      "number": 30,
+      "sanskrit": "गोविन्द",
+      "transliteration": "Govindaya",
+      "mantraSanskrit": "ॐ गोविन्दाय नमः",
+      "mantra": "Om Govindaya Namah",
+      "meaning": "जो गायों को सुख प्रदान करने वाले हैं"
+    },
+    {
+      "number": 31,
+      "sanskrit": "योगिपति",
+      "transliteration": "Yoginam Pataye",
+      "mantraSanskrit": "ॐ योगिनां पतये नमः",
+      "mantra": "Om Yoginam Pataye Namah",
+      "meaning": "जो योगियों के भी योगी अर्थात् स्वामी हैं"
+    },
+    {
+      "number": 32,
+      "sanskrit": "वत्सवाटचर",
+      "transliteration": "Vatsavatacharaya",
+      "mantraSanskrit": "ॐ वत्सवाटचराय नमः",
+      "mantra": "Om Vatsavatacharaya Namah",
+      "meaning": "जो बछड़ों को चराते हैं"
+    },
+    {
+      "number": 33,
+      "sanskrit": "अनन्त",
+      "transliteration": "Anantaya",
+      "mantraSanskrit": "ॐ अनन्ताय नमः",
+      "mantra": "Om Anantaya Namah",
+      "meaning": "जिनका कोई अन्त नहीं है"
+    },
+    {
+      "number": 34,
+      "sanskrit": "धेनुकासुरभञ्जन",
+      "transliteration": "Dhenukasurabhanjanaya",
+      "mantraSanskrit": "ॐ धेनुकासुरभञ्जनाय नमः",
+      "mantra": "Om Dhenukasurabhanjanaya Namah",
+      "meaning": "जो गधे के स्वरूप वाले धेनुकासुर को मारने वाले हैं"
+    },
+    {
+      "number": 35,
+      "sanskrit": "तृणीकृततृणावर्त",
+      "transliteration": "Trinikritatrinavartaya",
+      "mantraSanskrit": "ॐ तृणीकृततृणावर्ताय नमः",
+      "mantra": "Om Trinikritatrinavartaya Namah",
+      "meaning": "जो तृणावर्त को घास के समान तुच्छ मानकर मारने वाले हैं"
+    },
+    {
+      "number": 36,
+      "sanskrit": "यमलार्जुनभञ्जन",
+      "transliteration": "Yamalarjunabhanjanaya",
+      "mantraSanskrit": "ॐ यमलार्जुनभञ्जनाय नमः",
+      "mantra": "Om Yamalarjunabhanjanaya Namah",
+      "meaning": "जो यमलार्जुन नामक अर्जुन के जुड़वा वृक्षों को तोड़ने वाले हैं"
+    },
+    {
+      "number": 37,
+      "sanskrit": "उत्तालतालभेत्ता",
+      "transliteration": "Uttalatalabhetre",
+      "mantraSanskrit": "ॐ उत्तालतालभेत्रे नमः",
+      "mantra": "Om Uttalatalabhetre Namah",
+      "meaning": "जो बड़े ताल वृक्षों को नष्ट कर देने वाले हैं"
+    },
+    {
+      "number": 38,
+      "sanskrit": "तमालश्यामलाकृति",
+      "transliteration": "Tamalashyamalakritaye",
+      "mantraSanskrit": "ॐ तमालश्यामलाकृतये नमः",
+      "mantra": "Om Tamalashyamalakritaye Namah",
+      "meaning": "जो तमाल वृक्ष के समान कृष्ण वर्ण वाले हैं"
+    },
+    {
+      "number": 39,
+      "sanskrit": "गोपगोपीश्वर",
+      "transliteration": "Gopagopishvaraya",
+      "mantraSanskrit": "ॐ गोपगोपीश्वराय नमः",
+      "mantra": "Om Gopagopishvaraya Namah",
+      "meaning": "जो गोपों और गोपियों के स्वामी हैं"
+    },
+    {
+      "number": 40,
+      "sanskrit": "योगी",
+      "transliteration": "Yogine",
+      "mantraSanskrit": "ॐ योगिने नमः",
+      "mantra": "Om Yogine Namah",
+      "meaning": "जो परम योगी हैं"
+    },
+    {
+      "number": 41,
+      "sanskrit": "कोटिसूर्यसमप्रभ",
+      "transliteration": "Kotisuryasamaprabhaya",
+      "mantraSanskrit": "ॐ कोटिसूर्यसमप्रभाय नमः",
+      "mantra": "Om Kotisuryasamaprabhaya Namah",
+      "meaning": "जो करोड़ों सूर्य के समान आभा वाले हैं"
+    },
+    {
+      "number": 42,
+      "sanskrit": "इलापति",
+      "transliteration": "Ilapataye",
+      "mantraSanskrit": "ॐ इलापतये नमः",
+      "mantra": "Om Ilapataye Namah",
+      "meaning": "जो ज्ञान के स्वामी हैं"
+    },
+    {
+      "number": 43,
+      "sanskrit": "परं ज्योतिस्",
+      "transliteration": "Parasmai Jyotishe",
+      "mantraSanskrit": "ॐ परस्मै ज्योतिषे नमः",
+      "mantra": "Om Parasmai Jyotishe Namah",
+      "meaning": "जिनके पास परम तेज है"
+    },
+    {
+      "number": 44,
+      "sanskrit": "यादवेन्द्र",
+      "transliteration": "Yadavendraya",
+      "mantraSanskrit": "ॐ यादवेन्द्राय नमः",
+      "mantra": "Om Yadavendraya Namah",
+      "meaning": "जो यादव कुल के स्वामी हैं"
+    },
+    {
+      "number": 45,
+      "sanskrit": "यदूद्वह",
+      "transliteration": "Yadudvahaya",
+      "mantraSanskrit": "ॐ यदूद्वहाय नमः",
+      "mantra": "Om Yadudvahaya Namah",
+      "meaning": "जो यदुओं के नेता हैं"
+    },
+    {
+      "number": 46,
+      "sanskrit": "वनमाली",
+      "transliteration": "Vanamaline",
+      "mantraSanskrit": "ॐ वनमालिने नमः",
+      "mantra": "Om Vanamaline Namah",
+      "meaning": "जो वनपुष्पों की मालाओं को धारण करते हैं"
+    },
+    {
+      "number": 47,
+      "sanskrit": "पीतवासा",
+      "transliteration": "Pitavasase",
+      "mantraSanskrit": "ॐ पीतवाससे नमः",
+      "mantra": "Om Pitavasase Namah",
+      "meaning": "जो पीले वस्त्र धारण करते हैं"
+    },
+    {
+      "number": 48,
+      "sanskrit": "पारिजातापहारक",
+      "transliteration": "Parijatapaharakaya",
+      "mantraSanskrit": "ॐ पारिजातापहारकाय नमः",
+      "mantra": "Om Parijatapaharakaya Namah",
+      "meaning": "जो पारिजात वृक्ष को उठाकर ले जाने वाले हैं"
+    },
+    {
+      "number": 49,
+      "sanskrit": "गोवर्धनाचलोद्धर्ता",
+      "transliteration": "Govardhanachaloddhartre",
+      "mantraSanskrit": "ॐ गोवर्धनाचलोद्धर्त्रे नमः",
+      "mantra": "Om Govardhanachaloddhartre Namah",
+      "meaning": "जो गोवर्धन पर्वत को उठाने वाले हैं"
+    },
+    {
+      "number": 50,
+      "sanskrit": "गोपाल",
+      "transliteration": "Gopalaya",
+      "mantraSanskrit": "ॐ गोपालाय नमः",
+      "mantra": "Om Gopalaya Namah",
+      "meaning": "जो गायों के संरक्षक हैं"
+    },
+    {
+      "number": 51,
+      "sanskrit": "सर्वपालक",
+      "transliteration": "Sarvapalakaya",
+      "mantraSanskrit": "ॐ सर्वपालकाय नमः",
+      "mantra": "Om Sarvapalakaya Namah",
+      "meaning": "जो सम्पूर्ण ब्रह्माण्ड के पालनहार हैं"
+    },
+    {
+      "number": 52,
+      "sanskrit": "अज",
+      "transliteration": "Ajaya",
+      "mantraSanskrit": "ॐ अजाय नमः",
+      "mantra": "Om Ajaya Namah",
+      "meaning": "जो प्रभु अजन्मे हैं"
+    },
+    {
+      "number": 53,
+      "sanskrit": "निरञ्जन",
+      "transliteration": "Niranjanaya",
+      "mantraSanskrit": "ॐ निरञ्जनाय नमः",
+      "mantra": "Om Niranjanaya Namah",
+      "meaning": "जो निष्कलंक हैं"
+    },
+    {
+      "number": 54,
+      "sanskrit": "कामजनक",
+      "transliteration": "Kamajanakaya",
+      "mantraSanskrit": "ॐ कामजनकाय नमः",
+      "mantra": "Om Kamajanakaya Namah",
+      "meaning": "जो मन में सांसारिक इच्छायें उत्पन्न करते हैं"
+    },
+    {
+      "number": 55,
+      "sanskrit": "कञ्जलोचन",
+      "transliteration": "Kanjalochanaya",
+      "mantraSanskrit": "ॐ कञ्जलोचनाय नमः",
+      "mantra": "Om Kanjalochanaya Namah",
+      "meaning": "जो कमल के समान नेत्र वाले हैं"
+    },
+    {
+      "number": 56,
+      "sanskrit": "मधुघ्ना",
+      "transliteration": "Madhughne",
+      "mantraSanskrit": "ॐ मधुघ्ने नमः",
+      "mantra": "Om Madhughne Namah",
+      "meaning": "जो मधु नामक दैत्य का वध करने वाले हैं"
+    },
+    {
+      "number": 57,
+      "sanskrit": "मथुरानाथ",
+      "transliteration": "Mathuranathaya",
+      "mantraSanskrit": "ॐ मथुरानाथाय नमः",
+      "mantra": "Om Mathuranathaya Namah",
+      "meaning": "जो मथुरा नगरी के स्वामी हैं"
+    },
+    {
+      "number": 58,
+      "sanskrit": "द्वारकानायक",
+      "transliteration": "Dvarakanayakaya",
+      "mantraSanskrit": "ॐ द्वारकानायकाय नमः",
+      "mantra": "Om Dvarakanayakaya Namah",
+      "meaning": "जो द्वारका नगरी के अधिपति हैं"
+    },
+    {
+      "number": 59,
+      "sanskrit": "बलि",
+      "transliteration": "Baline",
+      "mantraSanskrit": "ॐ बलिने नमः",
+      "mantra": "Om Baline Namah",
+      "meaning": "जो अत्यन्त शक्तिशाली हैं"
+    },
+    {
+      "number": 60,
+      "sanskrit": "वृन्दावनान्तसञ्चारी",
+      "transliteration": "Vrindavanantasancharine",
+      "mantraSanskrit": "ॐ वृन्दावनान्तसञ्चारिणे नमः",
+      "mantra": "Om Vrindavanantasancharine Namah",
+      "meaning": "जो वृन्दावन में विचरण करने वाले हैं"
+    },
+    {
+      "number": 61,
+      "sanskrit": "तुलसीदामभूषण",
+      "transliteration": "Tulasidamabhushanaya",
+      "mantraSanskrit": "ॐ तुलसीदामभूषणाय नमः",
+      "mantra": "Om Tulasidamabhushanaya Namah",
+      "meaning": "जो तुलसी की माला धारण करने वाले हैं"
+    },
+    {
+      "number": 62,
+      "sanskrit": "स्यमन्तकमणेर्हर्ता",
+      "transliteration": "Syamantakamanerhartre",
+      "mantraSanskrit": "ॐ स्यमन्तकमणेर्हर्त्रे नमः",
+      "mantra": "Om Syamantakamanerhartre Namah",
+      "meaning": "जो स्यमन्तक मणि का हरण करने वाले हैं"
+    },
+    {
+      "number": 63,
+      "sanskrit": "नरनारायणात्मक",
+      "transliteration": "Naranarayanatmakaya",
+      "mantraSanskrit": "ॐ नरनारायणात्मकाय नमः",
+      "mantra": "Om Naranarayanatmakaya Namah",
+      "meaning": "जो नर और नारायण दोनों स्वरूपों में हैं"
+    },
+    {
+      "number": 64,
+      "sanskrit": "कुब्जाकृष्णाम्बरधर",
+      "transliteration": "Kubjakrishnambaradharaya",
+      "mantraSanskrit": "ॐ कुब्जाकृष्णाम्बरधराय नमः",
+      "mantra": "Om Kubjakrishnambaradharaya Namah",
+      "meaning": "जो कुब्जा नामक कूबड़ी के हाथों द्वारा चन्दन लगवाने वाले हैं"
+    },
+    {
+      "number": 65,
+      "sanskrit": "मायी",
+      "transliteration": "Mayine",
+      "mantraSanskrit": "ॐ मायिने नमः",
+      "mantra": "Om Mayine Namah",
+      "meaning": "जो अत्यन्त मायावी हैं"
+    },
+    {
+      "number": 66,
+      "sanskrit": "परमपूरुष",
+      "transliteration": "Paramapurushaya",
+      "mantraSanskrit": "ॐ परमपूरुषाय नमः",
+      "mantra": "Om Paramapurushaya Namah",
+      "meaning": "जो सर्वोच्च हैं"
+    },
+    {
+      "number": 67,
+      "sanskrit": "मुष्टिकासुरचाणूरमल्लयुद्धविशारद",
+      "transliteration": "Mushtikasurachanuramallayuddhavisharadaya",
+      "mantraSanskrit": "ॐ मुष्टिकासुरचाणूरमल्लयुद्धविशारदाय नमः",
+      "mantra": "Om Mushtikasurachanuramallayuddhavisharadaya Namah",
+      "meaning": "जो मुष्टिका और चाणूर नामक पहलवानों से कुशलता से युद्ध करने वाले हैं"
+    },
+    {
+      "number": 68,
+      "sanskrit": "संसारवैरी",
+      "transliteration": "Samsaravairine",
+      "mantraSanskrit": "ॐ संसारवैरिणे नमः",
+      "mantra": "Om Samsaravairine Namah",
+      "meaning": "जो भौतिकी सत्ता के शत्रु हैं"
+    },
+    {
+      "number": 69,
+      "sanskrit": "कंसारि",
+      "transliteration": "Kamsaraye",
+      "mantraSanskrit": "ॐ कंसारये नमः",
+      "mantra": "Om Kamsaraye Namah",
+      "meaning": "जो राजा कंस के शत्रु हैं"
+    },
+    {
+      "number": 70,
+      "sanskrit": "मुरारि",
+      "transliteration": "Muraraye",
+      "mantraSanskrit": "ॐ मुरारये नमः",
+      "mantra": "Om Muraraye Namah",
+      "meaning": "जो मुरा नामक राक्षस का वध करने वाले हैं"
+    },
+    {
+      "number": 71,
+      "sanskrit": "नरकान्तक",
+      "transliteration": "Narakantakaya",
+      "mantraSanskrit": "ॐ नरकान्तकाय नमः",
+      "mantra": "Om Narakantakaya Namah",
+      "meaning": "जो नरका नामक असुर का संहार करने वाले हैं"
+    },
+    {
+      "number": 72,
+      "sanskrit": "अनादिब्रह्मचारी",
+      "transliteration": "Anadibrahmacharine",
+      "mantraSanskrit": "ॐ अनादिब्रह्मचारिणे नमः",
+      "mantra": "Om Anadibrahmacharine Namah",
+      "meaning": "जो शाश्वत ब्रह्मचारी है"
+    },
+    {
+      "number": 73,
+      "sanskrit": "कृष्णाव्यसनकर्षक",
+      "transliteration": "Krishnavyasanakarshakaya",
+      "mantraSanskrit": "ॐ कृष्णाव्यसनकर्षकाय नमः",
+      "mantra": "Om Krishnavyasanakarshakaya Namah",
+      "meaning": "जो द्रौपदी को संकटकाल में बचाने वाले हैं"
+    },
+    {
+      "number": 74,
+      "sanskrit": "शिशुपालशिरश्छेत्ता",
+      "transliteration": "Shishupalashirashchhetre",
+      "mantraSanskrit": "ॐ शिशुपालशिरश्छेत्रे नमः",
+      "mantra": "Om Shishupalashirashchhetre Namah",
+      "meaning": "जो शिशुपाल का सिर धड़ से अलग करने वाले हैं"
+    },
+    {
+      "number": 75,
+      "sanskrit": "दुर्योधनकुलान्तक",
+      "transliteration": "Duryodhanakulantakaya",
+      "mantraSanskrit": "ॐ दुर्योधनकुलान्तकाय नमः",
+      "mantra": "Om Duryodhanakulantakaya Namah",
+      "meaning": "जो दुर्योधन के राजवंश के विनाशक हैं"
+    },
+    {
+      "number": 76,
+      "sanskrit": "विदुराक्रूरवरद",
+      "transliteration": "Vidurakruravaradaya",
+      "mantraSanskrit": "ॐ विदुराक्रूरवरदाय नमः",
+      "mantra": "Om Vidurakruravaradaya Namah",
+      "meaning": "जो विदुर और अक्रूर को आशीर्वाद देने वाले हैं"
+    },
+    {
+      "number": 77,
+      "sanskrit": "विश्वरूपप्रदर्शक",
+      "transliteration": "Vishvarupapradarshakaya",
+      "mantraSanskrit": "ॐ विश्वरूपप्रदर्शकाय नमः",
+      "mantra": "Om Vishvarupapradarshakaya Namah",
+      "meaning": "जो विश्वस्वरूप को दिखाने वाले हैं"
+    },
+    {
+      "number": 78,
+      "sanskrit": "सत्यवाक्",
+      "transliteration": "Satyavache",
+      "mantraSanskrit": "ॐ सत्यवाचे नमः",
+      "mantra": "Om Satyavache Namah",
+      "meaning": "जो सत्य बोलने वाले हैं"
+    },
+    {
+      "number": 79,
+      "sanskrit": "सत्यसङ्कल्प",
+      "transliteration": "Satyasankalpaya",
+      "mantraSanskrit": "ॐ सत्यसङ्कल्पाय नमः",
+      "mantra": "Om Satyasankalpaya Namah",
+      "meaning": "जो सच्चे संकल्प के स्वामी हैं"
+    },
+    {
+      "number": 80,
+      "sanskrit": "सत्यभामारत",
+      "transliteration": "Satyabhamarataya",
+      "mantraSanskrit": "ॐ सत्यभामारताय नमः",
+      "mantra": "Om Satyabhamarataya Namah",
+      "meaning": "जो सत्यभामा के प्रेमी हैं"
+    },
+    {
+      "number": 81,
+      "sanskrit": "जयी",
+      "transliteration": "Jayine",
+      "mantraSanskrit": "ॐ जयिने नमः",
+      "mantra": "Om Jayine Namah",
+      "meaning": "जो हमेशा विजयी होने वाले हैं"
+    },
+    {
+      "number": 82,
+      "sanskrit": "सुभद्रापूर्वज",
+      "transliteration": "Subhadrapurvajaya",
+      "mantraSanskrit": "ॐ सुभद्रापूर्वजाय नमः",
+      "mantra": "Om Subhadrapurvajaya Namah",
+      "meaning": "जो सुभद्रा के भाई हैं"
+    },
+    {
+      "number": 83,
+      "sanskrit": "विष्णु",
+      "transliteration": "Vishnave",
+      "mantraSanskrit": "ॐ विष्णवे नमः",
+      "mantra": "Om Vishnave Namah",
+      "meaning": "जो परम परमेश्वर हैं"
+    },
+    {
+      "number": 84,
+      "sanskrit": "भीष्ममुक्तिप्रदायक",
+      "transliteration": "Bhishmamuktipradayakaya",
+      "mantraSanskrit": "ॐ भीष्ममुक्तिप्रदायकाय नमः",
+      "mantra": "Om Bhishmamuktipradayakaya Namah",
+      "meaning": "जो भीष्म को मोक्ष प्रदान करने वाले हैं"
+    },
+    {
+      "number": 85,
+      "sanskrit": "जगद्गुरु",
+      "transliteration": "Jagadgurave",
+      "mantraSanskrit": "ॐ जगद्गुरवे नमः",
+      "mantra": "Om Jagadgurave Namah",
+      "meaning": "जो सम्पूर्ण ब्रह्माण्ड के गुरु हैं"
+    },
+    {
+      "number": 86,
+      "sanskrit": "जगन्नाथ",
+      "transliteration": "Jagannathaya",
+      "mantraSanskrit": "ॐ जगन्नाथाय नमः",
+      "mantra": "Om Jagannathaya Namah",
+      "meaning": "जो सम्पूर्ण ब्रह्माण्ड के स्वामी हैं"
+    },
+    {
+      "number": 87,
+      "sanskrit": "वेणुनादविशारद",
+      "transliteration": "Venunada Visharadaya",
+      "mantraSanskrit": "ॐ वेणुनाद विशारदाय नमः",
+      "mantra": "Om Venunada Visharadaya Namah",
+      "meaning": "बाँसुरी वादन में दक्ष हैं"
+    },
+    {
+      "number": 88,
+      "sanskrit": "वृषभासुरविध्वंसी",
+      "transliteration": "Vrishabhasuravidhvamsine",
+      "mantraSanskrit": "ॐ वृषभासुरविध्वंसिने नमः",
+      "mantra": "Om Vrishabhasuravidhvamsine Namah",
+      "meaning": "जो वृषभासुर के संहारक हैं"
+    },
+    {
+      "number": 89,
+      "sanskrit": "बाणासुरकरान्तक",
+      "transliteration": "Banasurakarantakaya",
+      "mantraSanskrit": "ॐ बाणासुरकरान्तकाय नमः",
+      "mantra": "Om Banasurakarantakaya Namah",
+      "meaning": "जो बाणासुर का वध करने वाले हैं"
+    },
+    {
+      "number": 90,
+      "sanskrit": "युधिष्ठिरप्रतिष्ठाता",
+      "transliteration": "Yudhishthirapratishthatre",
+      "mantraSanskrit": "ॐ युधिष्ठिरप्रतिष्ठात्रे नमः",
+      "mantra": "Om Yudhishthirapratishthatre Namah",
+      "meaning": "जो युधिष्ठिर को राजा बनाने वाले हैं"
+    },
+    {
+      "number": 91,
+      "sanskrit": "बर्हिबर्हावतंसक",
+      "transliteration": "Barhibarhavatamsakaya",
+      "mantraSanskrit": "ॐ बर्हिबर्हावतंसकाय नमः",
+      "mantra": "Om Barhibarhavatamsakaya Namah",
+      "meaning": "जो मोर पंख का शृंगार करते हैं"
+    },
+    {
+      "number": 92,
+      "sanskrit": "पार्थसारथि",
+      "transliteration": "Parthasarathaye",
+      "mantraSanskrit": "ॐ पार्थसारथये नमः",
+      "mantra": "Om Parthasarathaye Namah",
+      "meaning": "जो अर्जुन के रथ के चालक हैं"
+    },
+    {
+      "number": 93,
+      "sanskrit": "अव्यक्त",
+      "transliteration": "Avyaktaya",
+      "mantraSanskrit": "ॐ अव्यक्ताय नमः",
+      "mantra": "Om Avyaktaya Namah",
+      "meaning": "जो रूप से रहित हैं"
+    },
+    {
+      "number": 94,
+      "sanskrit": "गीतामृतमहोदधि",
+      "transliteration": "Gitamritamahodadhaye",
+      "mantraSanskrit": "ॐ गीतामृतमहोदधये नमः",
+      "mantra": "Om Gitamritamahodadhaye Namah",
+      "meaning": "जो भगवद्गीता के अमृत से युक्त महासागर हैं"
+    },
+    {
+      "number": 95,
+      "sanskrit": "कालीयफणिमाणिक्यरञ्जितश्रीपदाम्बुज",
+      "transliteration": "Kaliyaphanimanikyaranjitashripadambujaya",
+      "mantraSanskrit": "ॐ कालीयफणिमाणिक्यरञ्जितश्रीपदाम्बुजाय नमः",
+      "mantra": "Om Kaliyaphanimanikyaranjitashripadambujaya Namah",
+      "meaning": "जिनके चरण कमलों में कालिया नाग के फन की मणियाँ सुशोभित हैं"
+    },
+    {
+      "number": 96,
+      "sanskrit": "दामोदर",
+      "transliteration": "Damodaraya",
+      "mantraSanskrit": "ॐ दामोदराय नमः",
+      "mantra": "Om Damodaraya Namah",
+      "meaning": "जिन्हें माता यशोदा ओखल से बाँध नहीं पायी थीं"
+    },
+    {
+      "number": 97,
+      "sanskrit": "यज्ञभोक्ता",
+      "transliteration": "Yajnabhoktre",
+      "mantraSanskrit": "ॐ यज्ञभोक्त्रे नमः",
+      "mantra": "Om Yajnabhoktre Namah",
+      "meaning": "जो यज्ञ में प्रदत्त आहुति को ग्रहण करते हैं"
+    },
+    {
+      "number": 98,
+      "sanskrit": "दानवेन्द्रविनाशक",
+      "transliteration": "Danavendravinashakaya",
+      "mantraSanskrit": "ॐ दानवेन्द्रविनाशकाय नमः",
+      "mantra": "Om Danavendravinashakaya Namah",
+      "meaning": "जो असुरों के स्वामी का नाश करने वाले हैं"
+    },
+    {
+      "number": 99,
+      "sanskrit": "नारायण",
+      "transliteration": "Narayanaya",
+      "mantraSanskrit": "ॐ नारायणाय नमः",
+      "mantra": "Om Narayanaya Namah",
+      "meaning": "जो भक्तों के हृदय में रहने वाले हैं"
+    },
+    {
+      "number": 100,
+      "sanskrit": "परब्रह्म",
+      "transliteration": "Parabrahmane",
+      "mantraSanskrit": "ॐ परब्रह्मणे नमः",
+      "mantra": "Om Parabrahmane Namah",
+      "meaning": "जो पराशक्ति परब्रह्म परमात्मा हैं"
+    },
+    {
+      "number": 101,
+      "sanskrit": "पन्नगाशनवाहन",
+      "transliteration": "Pannagashanavahanaya",
+      "mantraSanskrit": "ॐ पन्नगाशनवाहनाय नमः",
+      "mantra": "Om Pannagashanavahanaya Namah",
+      "meaning": "गरुड़ जिनकी सवारी है"
+    },
+    {
+      "number": 102,
+      "sanskrit": "जलक्रीडासमासक्तगोपीवस्त्रापहारक",
+      "transliteration": "Jalakridasamasaktagopivastrapaharakaya",
+      "mantraSanskrit": "ॐ जलक्रीडासमासक्तगोपीवस्त्रापहाराकाय नमः",
+      "mantra": "Om Jalakridasamasaktagopivastrapaharakaya Namah",
+      "meaning": "जो यमुना नदी में खेलते समय गोपियों के कपड़े छिपा देते हैं"
+    },
+    {
+      "number": 103,
+      "sanskrit": "पुण्यश्लोक",
+      "transliteration": "Punyashlokaya",
+      "mantraSanskrit": "ॐ पुण्यश्लोकाय नमः",
+      "mantra": "Om Punyashlokaya Namah",
+      "meaning": "जिनकी स्तुति पुण्य प्रदान करती है"
+    },
+    {
+      "number": 104,
+      "sanskrit": "तीर्थकर",
+      "transliteration": "Tirthakaraya",
+      "mantraSanskrit": "ॐ तीर्थकराय नमः",
+      "mantra": "Om Tirthakaraya Namah",
+      "meaning": "जो तीर्थ स्थानों के निर्माता हैं"
+    },
+    {
+      "number": 105,
+      "sanskrit": "वेदवेद्य",
+      "transliteration": "Vedavedyaya",
+      "mantraSanskrit": "ॐ वेदवेद्याय नमः",
+      "mantra": "Om Vedavedyaya Namah",
+      "meaning": "जो वेदों से जानने योग्य हैं"
+    },
+    {
+      "number": 106,
+      "sanskrit": "दयानिधि",
+      "transliteration": "Dayanidhaye",
+      "mantraSanskrit": "ॐ दयानिधये नमः",
+      "mantra": "Om Dayanidhaye Namah",
+      "meaning": "जो अगाध करुणा वाले हैं"
+    },
+    {
+      "number": 107,
+      "sanskrit": "सर्वतीर्थात्मक",
+      "transliteration": "Sarvatirthatmakaya",
+      "mantraSanskrit": "ॐ सर्वतीर्थात्मकाय नमः",
+      "mantra": "Om Sarvatirthatmakaya Namah",
+      "meaning": "जो सभी तीर्थस्थलों के उद्गम स्थान हैं"
+    },
+    {
+      "number": 108,
+      "sanskrit": "सर्वग्रहरूपी",
+      "transliteration": "Sarvagraharupine",
+      "mantraSanskrit": "ॐ सर्वग्रहरूपिणे नमः",
+      "mantra": "Om Sarvagraharupine Namah",
+      "meaning": "जो सम्पूर्ण हैं"
+    },
+    {
+      "number": 109,
+      "sanskrit": "परात्पर",
+      "transliteration": "Paratparaya",
+      "mantraSanskrit": "ॐ परात्पराय नमः",
+      "mantra": "Om Paratparaya Namah",
+      "meaning": "जो पराशक्ति परब्रह्म परमात्मा हैं"
+    }
+  ]
+}

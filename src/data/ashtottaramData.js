@@ -1,444 +1,117 @@
 // Ashtottara Shatanamavali (108 Names) of Hindu Deities
 // Data source: https://www.drikpanchang.com/deities-namavali/deities-ashtottara-shatanamavali.html
 
+// Import all deity ashtottarams
+import { vishnuAshtottaram } from './vishnu-ashtottaram.js';
+import { shivaAshtottaram } from './shiva-ashtottaram.js';
+import { krishnaAshtottaram } from './krishna-ashtottaram.js';
+import { ramaAshtottaram } from './rama-ashtottaram.js';
+import { hanumanAshtottaram } from './hanuman-ashtottaram.js';
+import { ganeshaAshtottaram } from './ganesha-ashtottaram.js';
+import { brahmaAshtottaram } from './brahma-ashtottaram.js';
+import { kartikeyaAshtottaram } from './kartikeya-ashtottaram.js';
+import { narasimhaAshtottaram } from './narasimha-ashtottaram.js';
+import { kuberAshtottaram } from './kuber-ashtottaram.js';
+import { satyanarayanAshtottaram } from './satyanarayan-ashtottaram.js';
+import { hayagrivaAshtottaram } from './hayagriva-ashtottaram.js';
+import { bhairavaAshtottaram } from './bhairava-ashtottaram.js';
+import { muruganAshtottaram } from './murugan-ashtottaram.js';
+
+import { lakshmiAshtottaram } from './lakshmi-ashtottaram.js';
+import { durgaAshtottaram } from './durga-ashtottaram.js';
+import { saraswatiAshtottaram } from './saraswati-ashtottaram.js';
+import { radhaAshtottaram } from './radha-ashtottaram.js';
+import { sitaAshtottaram } from './sita-ashtottaram.js';
+import { gangaAshtottaram } from './ganga-ashtottaram.js';
+import { lalitaAshtottaram } from './lalita-ashtottaram.js';
+import { tulasiAshtottaram } from './tulasi-ashtottaram.js';
+
+/**
+ * Complete collection of Ashtottara Shatanamavali (108 Names) for Hindu Deities
+ * 
+ * Structure:
+ * - 14 Gods (Male Deities)
+ * - 8 Goddesses (Female Deities)
+ * 
+ * Total: 22 Deities, each with 108 sacred names
+ */
 export const ashtottaramData = {
-  // GODS
-  ganesha: {
-    id: 'ganesha',
-    name: 'Lord Ganesha',
-    title: 'Ganesha Ashtottara Shatanamavali',
-    description: '108 Names of Lord Ganesha, the remover of obstacles and lord of beginnings',
-    image: require('../assets/images/Gods/ganesha.png'),
-    category: 'god',
-    names: [
-      { number: 1, sanskrit: 'गजानन', transliteration: 'Gajanana', mantraSanskrit: 'ॐ गजाननाय नमः।', mantra: 'Om Gajananaya Namah', meaning: 'Elephant-Faced Lord' },
-      { number: 2, sanskrit: 'गणाध्यक्ष', transliteration: 'Ganadhyaksha', mantraSanskrit: 'ॐ गणाध्यक्षाय नमः।', mantra: 'Om Ganadhyakshaya Namah', meaning: 'Lord of All Ganas (Gods)' },
-      { number: 3, sanskrit: 'विघ्नराज', transliteration: 'Vighnaraja', mantraSanskrit: 'ॐ विघ्नराजाय नमः।', mantra: 'Om Vighnarajaya Namah', meaning: 'Lord of All Hindrances' },
-      { number: 4, sanskrit: 'विनायक', transliteration: 'Vinayaka', mantraSanskrit: 'ॐ विनायकाय नमः।', mantra: 'Om Vinayakaya Namah', meaning: 'Lord of All' },
-      { number: 5, sanskrit: 'द्वैमातुर', transliteration: 'Dvaimatura', mantraSanskrit: 'ॐ द्वैमातुराय नमः।', mantra: 'Om Dvaimaturaya Namah', meaning: 'One who has two Mothers' },
-      { number: 6, sanskrit: 'द्विमुख', transliteration: 'Dvimukha', mantraSanskrit: 'ॐ द्विमुखाय नमः।', mantra: 'Om Dvimukhaya Namah', meaning: 'Lord with two Heads' },
-      { number: 7, sanskrit: 'प्रमुख', transliteration: 'Pramukha', mantraSanskrit: 'ॐ प्रमुखाय नमः।', mantra: 'Om Pramukhaya Namah', meaning: 'Supreme Head of the Universe' },
-      { number: 8, sanskrit: 'सुमुख', transliteration: 'Sumukha', mantraSanskrit: 'ॐ सुमुखाय नमः।', mantra: 'Om Sumukhaya Namah', meaning: 'Auspicious Face' },
-      { number: 9, sanskrit: 'कृती', transliteration: 'Kriti', mantraSanskrit: 'ॐ कृतिने नमः।', mantra: 'Om Kritine Namah', meaning: 'Embodiment of the Universe' },
-      { number: 10, sanskrit: 'सुप्रदीप', transliteration: 'Supradipa', mantraSanskrit: 'ॐ सुप्रदीपाय नमः।', mantra: 'Om Supradipaya Namah', meaning: 'One who Removes Darkness' },
-      { number: 11, sanskrit: 'सुखनिधि', transliteration: 'Sukhanidhi', mantraSanskrit: 'ॐ सुखनिधये नमः।', mantra: 'Om Sukhanidhaye Namah', meaning: 'Treasure of Happiness and Pleasure' },
-      { number: 12, sanskrit: 'सुराध्यक्ष', transliteration: 'Suradhyaksha', mantraSanskrit: 'ॐ सुराध्यक्षाय नमः।', mantra: 'Om Suradhyakshaya Namah', meaning: 'Sovereign of the Gods' },
-      { number: 13, sanskrit: 'सुरारिघ्न', transliteration: 'Surarighna', mantraSanskrit: 'ॐ सुरारिघ्नाय नमः।', mantra: 'Om Surarighnaya Namah', meaning: 'The Destroyer of the Enemies of Devas' },
-      { number: 14, sanskrit: 'महागणपति', transliteration: 'Mahaganapati', mantraSanskrit: 'ॐ महागणपतये नमः।', mantra: 'Om Mahaganapataye Namah', meaning: 'Omnipotent and Supreme Lord' },
-      { number: 15, sanskrit: 'मान्य', transliteration: 'Manya', mantraSanskrit: 'ॐ मान्याय नमः।', mantra: 'Om Manyaya Namah', meaning: 'One Who is Worshipped in Whole Universe' },
-      { number: 16, sanskrit: 'महाकाल', transliteration: 'Mahakala', mantraSanskrit: 'ॐ महाकालाय नमः।', mantra: 'Om Mahakalaya Namah', meaning: 'Lord of the Time / Lord of the Death' },
-      { number: 17, sanskrit: 'महाबल', transliteration: 'Mahabala', mantraSanskrit: 'ॐ महाबलाय नमः।', mantra: 'Om Mahabalaya Namah', meaning: 'Extremely Strong Lord' },
-      { number: 18, sanskrit: 'हेरम्ब', transliteration: 'Heramba', mantraSanskrit: 'ॐ हेरम्बाय नमः।', mantra: 'Om Herambaya Namah', meaning: "Mother's Beloved Son" },
-      { number: 19, sanskrit: 'लम्बजठर', transliteration: 'Lambajathara', mantraSanskrit: 'ॐ लम्बजठराय नमः।', mantra: 'Om Lambajatharaya Namah', meaning: 'Long Bellied' },
-      { number: 20, sanskrit: 'ह्रस्वग्रीव', transliteration: 'Hrasvagriva', mantraSanskrit: 'ॐ ह्रस्वग्रीवाय नमः।', mantra: 'Om Hrasvagrivaya Namah', meaning: 'One With a Small Neck' },
-      { number: 21, sanskrit: 'महोदर', transliteration: 'Mahodara', mantraSanskrit: 'ॐ महोदराय नमः।', mantra: 'Om Mahodaraya Namah', meaning: 'Having Large Abdomen' },
-      { number: 22, sanskrit: 'मदोत्कट', transliteration: 'Madotkata', mantraSanskrit: 'ॐ मदोत्कटाय नमः।', mantra: 'Om Madotkataya Namah', meaning: 'Full of Excitement' },
-      { number: 23, sanskrit: 'महावीर', transliteration: 'Mahavira', mantraSanskrit: 'ॐ महावीराय नमः।', mantra: 'Om Mahaviraya Namah', meaning: 'Very Brave and Courageous' },
-      { number: 24, sanskrit: 'मन्त्री', transliteration: 'Mantri', mantraSanskrit: 'ॐ मन्त्रिणे नमः।', mantra: 'Om Mantrine Namah', meaning: 'Possessor of the Power of Mantras' },
-      { number: 25, sanskrit: 'मङ्गलस्वर', transliteration: 'Mangalasvara', mantraSanskrit: 'ॐ मङ्गलस्वराय नमः।', mantra: 'Om Mangalasvaraya Namah', meaning: 'Who Make Auspicious Sound' },
-      { number: 26, sanskrit: 'प्रमध', transliteration: 'Pramadha', mantraSanskrit: 'ॐ प्रमधाय नमः।', mantra: 'Om Pramadhaya Namah', meaning: 'Cause of Universe' },
-      { number: 27, sanskrit: 'प्रथम', transliteration: 'Prathama', mantraSanskrit: 'ॐ प्रथमाय नमः।', mantra: 'Om Prathamaya Namah', meaning: 'First Among All Gods' },
-      { number: 28, sanskrit: 'प्राज्ञ', transliteration: 'Prajna', mantraSanskrit: 'ॐ प्राज्ञाय नमः।', mantra: 'Om Prajnaya Namah', meaning: 'The Extremely Intelligent One' },
-      { number: 29, sanskrit: 'विघ्नकर्ता', transliteration: 'Vighnakarta', mantraSanskrit: 'ॐ विघ्नकर्त्रे नमः।', mantra: 'Om Vighnakartre Namah', meaning: 'Creator of Obstacles' },
-      { number: 30, sanskrit: 'विघ्नहर्ता', transliteration: 'Vighnaharta', mantraSanskrit: 'ॐ विघ्नहर्त्रे नमः।', mantra: 'Om Vighnahartre Namah', meaning: 'Demolisher of Obstacles' },
-      { number: 31, sanskrit: 'विश्वनेता', transliteration: 'Vishvaneta', mantraSanskrit: 'ॐ विश्वनेत्रे नमः।', mantra: 'Om Vishvanetre Namah', meaning: 'Eye of the Universe / One of Keeps an Eye on the Universe' },
-      { number: 32, sanskrit: 'विराट्पति', transliteration: 'Viratpati', mantraSanskrit: 'ॐ विराट्पतये नमः।', mantra: 'Om Viratpataye Namah', meaning: 'Lord of the Universe' },
-      { number: 33, sanskrit: 'श्रीपति', transliteration: 'Shripati', mantraSanskrit: 'ॐ श्रीपतये नमः।', mantra: 'Om Shripataye Namah', meaning: 'The Lord of Fortune' },
-      { number: 34, sanskrit: 'वाक्पति', transliteration: 'Vakpati', mantraSanskrit: 'ॐ वाक्पतये नमः।', mantra: 'Om Vakpataye Namah', meaning: 'The Lord of Speech' },
-      { number: 35, sanskrit: 'शृङ्गारी', transliteration: 'Shringari', mantraSanskrit: 'ॐ शृङ्गारिणे नमः।', mantra: 'Om Shringarine Namah', meaning: 'Decorated with Vermilion' },
-      { number: 36, sanskrit: 'अश्रितवत्सल', transliteration: 'Ashritavatsala', mantraSanskrit: 'ॐ अश्रितवत्सलाय नमः।', mantra: 'Om Ashritavatsalaya Namah', meaning: 'One Who is Kind to His Devotees' },
-      { number: 37, sanskrit: 'शिवप्रिय', transliteration: 'Shivapriya', mantraSanskrit: 'ॐ शिवप्रियाय नमः।', mantra: 'Om Shivapriyaya Namah', meaning: 'Beloved of Lord Shiva' },
-      { number: 38, sanskrit: 'शीघ्रकारी', transliteration: 'Shighrakari', mantraSanskrit: 'ॐ शीघ्रकारिणे नमः।', mantra: 'Om Shighrakarine Namah', meaning: 'Quick Granter of Boons' },
-      { number: 39, sanskrit: 'शाश्वत', transliteration: 'Shashvata', mantraSanskrit: 'ॐ शाश्वताय नमः।', mantra: 'Om Shashvataya Namah', meaning: 'Adoration to the Unchanging One' },
-      { number: 40, sanskrit: 'बल', transliteration: 'Bala', mantraSanskrit: 'ॐ बलाय नमः।', mantra: 'Om Balaya Namah', meaning: 'Embodiment of Power' },
-      { number: 41, sanskrit: 'बलोत्थित', transliteration: 'Balotthita', mantraSanskrit: 'ॐ बलोत्थिताय नमः।', mantra: 'Om Balotthitaya Namah', meaning: 'Increasing Power Day by Day' },
-      { number: 42, sanskrit: 'भवात्मज', transliteration: 'Bhavatmaja', mantraSanskrit: 'ॐ भवात्मजाय नमः।', mantra: 'Om Bhavatmajaya Namah', meaning: 'Son of the Universe' },
-      { number: 43, sanskrit: 'पुराणपुरुष', transliteration: 'Puranapurusha', mantraSanskrit: 'ॐ पुराणपुरुषाय नमः।', mantra: 'Om Puranapurushaya Namah', meaning: 'The Omnipotent Personality' },
-      { number: 44, sanskrit: 'पूषा', transliteration: 'Pusha', mantraSanskrit: 'ॐ पूष्णे नमः।', mantra: 'Om Pushne Namah', meaning: 'Nourishers of All-Beings' },
-      { number: 45, sanskrit: 'पुष्करोत्षिप्तवारी', transliteration: 'Pushkarotshiptavari', mantraSanskrit: 'ॐ पुष्करोत्षिप्तवारिणे नमः।', mantra: 'Om Pushkarotshiptavarine Namah', meaning: 'Plays in the Lotus Pond' },
-      { number: 46, sanskrit: 'अग्रगण्य', transliteration: 'Agraganya', mantraSanskrit: 'ॐ अग्रगण्याय नमः।', mantra: 'Om Agraganyaya Namah', meaning: 'Pre-eminent Among All Deities' },
-      { number: 47, sanskrit: 'अग्रपूज्य', transliteration: 'Agrapujya', mantraSanskrit: 'ॐ अग्रपूज्याय नमः।', mantra: 'Om Agrapujyaya Namah', meaning: 'Worshipped Before Anyone' },
-      { number: 48, sanskrit: 'अग्रगामी', transliteration: 'Agragami', mantraSanskrit: 'ॐ अग्रगामिने नमः।', mantra: 'Om Agragamine Namah', meaning: 'One Who take the Lead' },
-      { number: 49, sanskrit: 'मन्त्रकृत्', transliteration: 'Mantrakrit', mantraSanskrit: 'ॐ मन्त्रकृते नमः।', mantra: 'Om Mantrakrite Namah', meaning: 'Creator of Mantras' },
-      { number: 50, sanskrit: 'चामीकरप्रभ', transliteration: 'Chamikaraprabha', mantraSanskrit: 'ॐ चामीकरप्रभाय नमः।', mantra: 'Om Chamikaraprabhaya Namah', meaning: 'Having the Radiance Like Sun' },
-      { number: 51, sanskrit: 'सर्व', transliteration: 'Sarva', mantraSanskrit: 'ॐ सर्वाय नमः।', mantra: 'Om Sarvaya Namah', meaning: 'Present in Every Bit of Universe' },
-      { number: 52, sanskrit: 'सर्वोपास्य', transliteration: 'Sarvopasya', mantraSanskrit: 'ॐ सर्वोपास्याय नमः।', mantra: 'Om Sarvopasyaya Namah', meaning: 'Worshipped By All' },
-      { number: 53, sanskrit: 'सर्वकर्ता', transliteration: 'Sarvakarta', mantraSanskrit: 'ॐ सर्वकर्त्रे नमः।', mantra: 'Om Sarvakartre Namah', meaning: 'Cause of all Activities' },
-      { number: 54, sanskrit: 'सर्वनेता', transliteration: 'Sarvaneta', mantraSanskrit: 'ॐ सर्वनेत्रे नमः।', mantra: 'Om Sarvanetre Namah', meaning: 'Watching Everything Happening in the Universe' },
-      { number: 55, sanskrit: 'सर्वसिद्धिप्रद', transliteration: 'Sarvasiddhiprada', mantraSanskrit: 'ॐ सर्वसिद्धिप्रदाय नमः।', mantra: 'Om Sarvasiddhipradaya Namah', meaning: 'Granter of All Kind of Accomplishments (Siddhi)' },
-      { number: 56, sanskrit: 'सिद्धि', transliteration: 'Siddhi', mantraSanskrit: 'ॐ सिद्धये नमः।', mantra: 'Om Siddhaye Namah', meaning: 'Lord of All Accomplishments / One Who is Siddha' },
-      { number: 57, sanskrit: 'पञ्चहस्त', transliteration: 'Panchahasta', mantraSanskrit: 'ॐ पञ्चहस्ताय नमः।', mantra: 'Om Panchahastaya Namah', meaning: 'Five-handed' },
-      { number: 58, sanskrit: 'पार्वतीनन्दन', transliteration: 'Parvatinandana', mantraSanskrit: 'ॐ पार्वतीनन्दनाय नमः।', mantra: 'Om Parvatinandanaya Namah', meaning: 'Son of Goddess Parvati' },
-      { number: 59, sanskrit: 'प्रभु', transliteration: 'Prabhu', mantraSanskrit: 'ॐ प्रभवे नमः।', mantra: 'Om Prabhave Namah', meaning: 'Source of the Whole Creation / The Great Lord' },
-      { number: 60, sanskrit: 'कुमारगुरु', transliteration: 'Kumaraguru', mantraSanskrit: 'ॐ कुमारगुरवे नमः।', mantra: 'Om Kumaragurave Namah', meaning: 'The Guru of Lord Kartikeya / Embodiment of Guru' },
-      { number: 61, sanskrit: 'अक्षोभ्य', transliteration: 'Akshobhya', mantraSanskrit: 'ॐ अक्षोभ्याय नमः।', mantra: 'Om Akshobhyaya Namah', meaning: 'One Who is Indestructible' },
-      { number: 62, sanskrit: 'कुञ्जरासुरभञ्जन', transliteration: 'Kunjarasurabhanjana', mantraSanskrit: 'ॐ कुञ्जरासुरभञ्जनाय नमः।', mantra: 'Om Kunjarasurabhanjanaya Namah', meaning: 'Destroyer of Kunjarasura' },
-      { number: 63, sanskrit: 'प्रमोद', transliteration: 'Pramoda', mantraSanskrit: 'ॐ प्रमोदाय नमः।', mantra: 'Om Pramodaya Namah', meaning: 'Granter of Happiness / One Full of Happiness' },
-      { number: 64, sanskrit: 'मोदकप्रिय', transliteration: 'Modakapriya', mantraSanskrit: 'ॐ मोदकप्रियाय नमः।', mantra: 'Om Modakapriyaya Namah', meaning: 'One Who Loves Modaka' },
-      { number: 65, sanskrit: 'कान्तिमान्', transliteration: 'Kantiman', mantraSanskrit: 'ॐ कान्तिमते नमः।', mantra: 'Om Kantimate Namah', meaning: 'Full of Charm' },
-      { number: 66, sanskrit: 'धृतिमान्', transliteration: 'Dhritiman', mantraSanskrit: 'ॐ धृतिमते नमः।', mantra: 'Om Dhritimate Namah', meaning: 'One Who is Patient and Steadfast' },
-      { number: 67, sanskrit: 'कामी', transliteration: 'Kami', mantraSanskrit: 'ॐ कामिने नमः।', mantra: 'Om Kamine Namah', meaning: 'Fulfiller of Wishes' },
-      { number: 68, sanskrit: 'कपित्थपनसप्रिय', transliteration: 'Kapitthapanasapriya', mantraSanskrit: 'ॐ कपित्थपनसप्रियाय नमः।', mantra: 'Om Kapitthapanasapriyaya Namah', meaning: 'One Who Love Wood Apple and Jackfruit' },
-      { number: 69, sanskrit: 'ब्रह्मचारी', transliteration: 'Brahmachari', mantraSanskrit: 'ॐ ब्रह्मचारिणे नमः।', mantra: 'Om Brahmacharine Namah', meaning: 'One Who follow Celibacy' },
-      { number: 70, sanskrit: 'ब्रह्मरूपी', transliteration: 'Brahmarupi', mantraSanskrit: 'ॐ ब्रह्मरूपिणे नमः।', mantra: 'Om Brahmarupine Namah', meaning: 'Almighty God' },
-      { number: 71, sanskrit: 'ब्रह्मविद्यादिदानभू', transliteration: 'Brahmavidyadidanabhu', mantraSanskrit: 'ॐ ब्रह्मविद्यादिदानभुवे नमः।', mantra: 'Om Brahmavidyadidanabhuve Namah', meaning: 'Granter of Brahmavidya' },
-      { number: 72, sanskrit: 'जिष्णु', transliteration: 'Jishnu', mantraSanskrit: 'ॐ जिष्णवे नमः।', mantra: 'Om Jishnave Namah', meaning: 'Granter of Victory' },
-      { number: 73, sanskrit: 'विष्णुप्रिय', transliteration: 'Vishnupriya', mantraSanskrit: 'ॐ विष्णुप्रियाय नमः।', mantra: 'Om Vishnupriyaya Namah', meaning: 'Beloved of Lord Vishnu' },
-      { number: 74, sanskrit: 'भक्तजीवित', transliteration: 'Bhaktajivita', mantraSanskrit: 'ॐ भक्तजीविताय नमः।', mantra: 'Om Bhaktajivitaya Namah', meaning: 'Protector of Devotees Life' },
-      { number: 75, sanskrit: 'जितमन्मथ', transliteration: 'Jitamanmatha', mantraSanskrit: 'ॐ जितमन्मथाय नमः।', mantra: 'Om Jitamanmathaya Namah', meaning: 'One Who has control over Mind and Body' },
-      { number: 76, sanskrit: 'ऐश्वर्यकारण', transliteration: 'Aishvaryakarana', mantraSanskrit: 'ॐ ऐश्वर्यकारणाय नमः।', mantra: 'Om Aishvaryakaranaya Namah', meaning: 'Source of Opulence' },
-      { number: 77, sanskrit: 'ज्यायस्', transliteration: 'Jyayas', mantraSanskrit: 'ॐ ज्यायसे नमः।', mantra: 'Om Jyayase Namah', meaning: 'Best and Supreme' },
-      { number: 78, sanskrit: 'यक्षकिन्नरसेवित', transliteration: 'Yakshakinnarasevita', mantraSanskrit: 'ॐ यक्षकिन्नरसेविताय नमः।', mantra: 'Om Yakshakinnarasevitaya Namah', meaning: 'Worshipped by Yakshas and Kinnaras' },
-      { number: 79, sanskrit: 'गङ्गासुत', transliteration: 'Gangasuta', mantraSanskrit: 'ॐ गङ्गासुताय नमः।', mantra: 'Om Gangasutaya Namah', meaning: 'Son of Goddess Ganga' },
-      { number: 80, sanskrit: 'गणाधीश', transliteration: 'Ganadhisha', mantraSanskrit: 'ॐ गणाधीशाय नमः।', mantra: 'Om Ganadhishaya Namah', meaning: 'Lord of All Ganas' },
-      { number: 81, sanskrit: 'गम्भीरनिनद', transliteration: 'Gambhiraninada', mantraSanskrit: 'ॐ गम्भीरनिनदाय नमः।', mantra: 'Om Gambhiraninadaya Namah', meaning: 'One Who Create Great Sound' },
-      { number: 82, sanskrit: 'वटु', transliteration: 'Vatu', mantraSanskrit: 'ॐ वटवे नमः।', mantra: 'Om Vatave Namah', meaning: 'Form of Boy' },
-      { number: 83, sanskrit: 'अभीष्टवरद', transliteration: 'Abhishtavarada', mantraSanskrit: 'ॐ अभीष्टवरदाय नमः।', mantra: 'Om Abhishtavaradaya Namah', meaning: 'Granter of Desired Boons' },
-      { number: 84, sanskrit: 'ज्योतिस्', transliteration: 'Jyotis', mantraSanskrit: 'ॐ ज्योतिषे नमः।', mantra: 'Om Jyotishe Namah', meaning: 'Expert in Astrology / Embodiment of Astrology' },
-      { number: 85, sanskrit: 'भक्तनिधि', transliteration: 'Bhaktanidhi', mantraSanskrit: 'ॐ भक्तनिधये नमः।', mantra: 'Om Bhaktanidhaye Namah', meaning: 'Treasure of devotees' },
-      { number: 86, sanskrit: 'भावगम्य', transliteration: 'Bhavagamya', mantraSanskrit: 'ॐ भावगम्याय नमः।', mantra: 'Om Bhavagamyaya Namah', meaning: 'Attainable by the True Devotion Only' },
-      { number: 87, sanskrit: 'मङ्गलप्रद', transliteration: 'Mangalaprada', mantraSanskrit: 'ॐ मङ्गलप्रदाय नमः।', mantra: 'Om Mangalapradaya Namah', meaning: 'Granter of Auspicious Things' },
-      { number: 88, sanskrit: 'अव्यक्त', transliteration: 'Avyakta', mantraSanskrit: 'ॐ अव्यक्ताय नमः।', mantra: 'Om Avyaktaya Namah', meaning: 'Not Clearly Visible' },
-      { number: 89, sanskrit: 'अप्राकृतपराक्रम', transliteration: 'Aprakritaparakrama', mantraSanskrit: 'ॐ अप्राकृतपराक्रमाय नमः।', mantra: 'Om Aprakritaparakramaya Namah', meaning: 'Having Unnatural Power and Courage' },
-      { number: 90, sanskrit: 'सत्यधर्मी', transliteration: 'Satyadharmi', mantraSanskrit: 'ॐ सत्यधर्मिणे नमः।', mantra: 'Om Satyadharmine Namah', meaning: 'Fond of Truth' },
-      { number: 91, sanskrit: 'सखा', transliteration: 'Sakha', mantraSanskrit: 'ॐ सखाये नमः।', mantra: 'Om Sakhaye Namah', meaning: 'Friend of Devotees' },
-      { number: 92, sanskrit: 'सरसाम्बुनिधि', transliteration: 'Sarasambunidhi', mantraSanskrit: 'ॐ सरसाम्बुनिधये नमः।', mantra: 'Om Sarasambunidhaye Namah', meaning: 'Fond of Durva Grass' },
-      { number: 93, sanskrit: 'महेश', transliteration: 'Mahesha', mantraSanskrit: 'ॐ महेशाय नमः।', mantra: 'Om Maheshaya Namah', meaning: 'Greatest Among All Deities / Son of Lord Shiva' },
-      { number: 94, sanskrit: 'दिव्याङ्ग', transliteration: 'Divyanga', mantraSanskrit: 'ॐ दिव्याङ्गाय नमः।', mantra: 'Om Divyangaya Namah', meaning: 'The One Who is Divine' },
-      { number: 95, sanskrit: 'मणिकिङ्किणीमेखल', transliteration: 'Manikinkinimekhala', mantraSanskrit: 'ॐ मणिकिङ्किणीमेखलाय नमः।', mantra: 'Om Manikinkinimekhalaya Namah', meaning: 'With Waistband Made of Precious Gem Stones' },
-      { number: 96, sanskrit: 'समस्तदेवतामूर्ति', transliteration: 'Samastadevatamurti', mantraSanskrit: 'ॐ समस्तदेवतामूर्तये नमः।', mantra: 'Om Samastadevatamurtaye Namah', meaning: 'Worshipped by all Deities' },
-      { number: 97, sanskrit: 'सहिष्णु', transliteration: 'Sahishnu', mantraSanskrit: 'ॐ सहिष्णवे नमः।', mantra: 'Om Sahishnave Namah', meaning: 'Tolerant' },
-      { number: 98, sanskrit: 'सततोत्थित', transliteration: 'Satatotthita', mantraSanskrit: 'ॐ सततोत्थिताय नमः।', mantra: 'Om Satatotthitaya Namah', meaning: 'Constantly Rising' },
-      { number: 99, sanskrit: 'विघातकारी', transliteration: 'Vighatakari', mantraSanskrit: 'ॐ विघातकारिणे नमः।', mantra: 'Om Vighatakarine Namah', meaning: 'Remover of Troubles' },
-      { number: 100, sanskrit: 'विश्वग्दृक्', transliteration: 'Vishvagdrik', mantraSanskrit: 'ॐ विश्वग्दृशे नमः।', mantra: 'Om Vishvagdrishe Namah', meaning: "Watching Everyone's Activities" },
-      { number: 101, sanskrit: 'विश्वरक्षाकृत्', transliteration: 'Vishvarakshakrit', mantraSanskrit: 'ॐ विश्वरक्षाकृते नमः।', mantra: 'Om Vishvarakshakrite Namah', meaning: 'Protector of the Universe' },
-      { number: 102, sanskrit: 'कल्याणगुरु', transliteration: 'Kalyanaguru', mantraSanskrit: 'ॐ कल्याणगुरवे नमः।', mantra: 'Om Kalyanagurave Namah', meaning: 'One Who Bless as a Teacher' },
-      { number: 103, sanskrit: 'उन्मत्तवेष', transliteration: 'Unmattavesha', mantraSanskrit: 'ॐ उन्मत्तवेषाय नमः।', mantra: 'Om Unmattaveshaya Namah', meaning: 'Full of Joy and Bliss' },
-      { number: 104, sanskrit: 'अपराजित', transliteration: 'Aparajita', mantraSanskrit: 'ॐ अपराजिते नमः।', mantra: 'Om Aparajite Namah', meaning: 'Unconquered' },
-      { number: 105, sanskrit: 'समस्तजगदाधार', transliteration: 'Samastajagadadhara', mantraSanskrit: 'ॐ समस्तजगदाधाराय नमः।', mantra: 'Om Samastajagadadharaya Namah', meaning: 'Support of The Universe' },
-      { number: 106, sanskrit: 'सर्वैश्वर्यप्रद', transliteration: 'Sarvaishvaryaprada', mantraSanskrit: 'ॐ सर्वैश्वर्यप्रदाय नमः।', mantra: 'Om Sarvaishvaryapradaya Namah', meaning: 'Granter of all Kind of Wealth' },
-      { number: 107, sanskrit: 'आक्रान्तचिदचित्प्रभु', transliteration: 'Akrantachidachitprabhu', mantraSanskrit: 'ॐ आक्रान्तचिदचित्प्रभवे नमः।', mantra: 'Om Akrantachidachitprabhave Namah', meaning: 'Source of the Mind and Intellect' },
-      { number: 108, sanskrit: 'श्री विघ्नेश्वर', transliteration: 'Shri Vighneshvara', mantraSanskrit: 'ॐ श्री विघ्नेश्वराय नमः।', mantra: 'Om Shri Vighneshvaraya Namah', meaning: 'Remover of Obstacles' },
-    ]
-  },
-
-  vishnu: {
-    id: 'vishnu',
-    name: 'Lord Vishnu',
-    title: 'Vishnu Ashtottara Shatanamavali',
-    description: '108 Names of Lord Vishnu, the preserver of the universe',
-    image: require('../assets/images/Gods/vishnu.png'),
-    category: 'god',
-    names: [
-      { number: 1, sanskrit: 'विष्णु', transliteration: 'Vishnu', mantraSanskrit: 'ॐ विष्णवे नमः।', mantra: 'Om Vishnave Namah', meaning: 'Who is the Supreme God' },
-      { number: 2, sanskrit: 'लक्ष्मीपति', transliteration: 'Lakshmipati', mantraSanskrit: 'ॐ लक्ष्मीपतये नमः।', mantra: 'Om Lakshmipataye Namah', meaning: 'The One Who is Consort of Goddess Lakshmi' },
-      { number: 3, sanskrit: 'कृष्ण', transliteration: 'Krishna', mantraSanskrit: 'ॐ कृष्णाय नमः।', mantra: 'Om Krishnaya Namah', meaning: 'The One Who is of Dark Complexion' },
-      { number: 4, sanskrit: 'वैकुण्ठ', transliteration: 'Vaikuntha', mantraSanskrit: 'ॐ वैकुण्ठाय नमः।', mantra: 'Om Vaikunthaya Namah', meaning: 'The One Who Resides in Vaikuntha' },
-      { number: 5, sanskrit: 'गरुडध्वज', transliteration: 'Garudadhvaja', mantraSanskrit: 'ॐ गरुडध्वजाय नमः।', mantra: 'Om Garudadhvajaya Namah', meaning: 'The One Whose Mount is Garuda' },
-      { number: 6, sanskrit: 'परब्रह्म', transliteration: 'Parabrahma', mantraSanskrit: 'ॐ परब्रह्मणे नमः।', mantra: 'Om Parabrahmane Namah', meaning: 'The One Who is the Supreme God' },
-      { number: 7, sanskrit: 'जगन्नाथ', transliteration: 'Jagannatha', mantraSanskrit: 'ॐ जगन्नाथाय नमः।', mantra: 'Om Jagannathaya Namah', meaning: 'The Lord of the Entire Universe' },
-      { number: 8, sanskrit: 'वासुदेव', transliteration: 'Vasudeva', mantraSanskrit: 'ॐ वासुदेवाय नमः।', mantra: 'Om Vasudevaya Namah', meaning: 'One Who Resides in Everyone' },
-      { number: 9, sanskrit: 'त्रिविक्रम', transliteration: 'Trivikrama', mantraSanskrit: 'ॐ त्रिविक्रमाय नमः।', mantra: 'Om Trivikramaya Namah', meaning: 'Conqueror of All the Three Worlds' },
-      { number: 10, sanskrit: 'दैत्यान्तक', transliteration: 'Daityantaka', mantraSanskrit: 'ॐ दैत्यान्तकाय नमः।', mantra: 'Om Daityantakaya Namah', meaning: 'The One Who Destroys the Sinners' },
-      { number: 11, sanskrit: 'मधुरिपु', transliteration: 'Madhuripu', mantraSanskrit: 'ॐ मधुरिपवे नमः।', mantra: 'Om Madhuripave Namah', meaning: 'One Who Destroys the Demon Named Madhu' },
-      { number: 12, sanskrit: 'तार्क्ष्यवाहन', transliteration: 'Tarkshyavahana', mantraSanskrit: 'ॐ तार्क्ष्यवाहनाय नमः।', mantra: 'Om Tarkshyavahanaya Namah', meaning: 'The One Whose Mount is Tarkshya i.e. Garuda' },
-      { number: 13, sanskrit: 'सनातन', transliteration: 'Sanatana', mantraSanskrit: 'ॐ सनातनाय नमः।', mantra: 'Om Sanatanaya Namah', meaning: 'The One Who is the Eternal God' },
-      { number: 14, sanskrit: 'नारायण', transliteration: 'Narayana', mantraSanskrit: 'ॐ नारायणाय नमः।', mantra: 'Om Narayanaya Namah', meaning: 'The One Who is the Shelter of All Beings' },
-      { number: 15, sanskrit: 'पद्मनाभ', transliteration: 'Padmanabha', mantraSanskrit: 'ॐ पद्मनाभाय नमः।', mantra: 'Om Padmanabhaya Namah', meaning: 'The Lord Who has a Lotus Shaped Navel' },
-      { number: 16, sanskrit: 'हृषीकेश', transliteration: 'Hrishikesha', mantraSanskrit: 'ॐ हृषीकेशाय नमः।', mantra: 'Om Hrishikeshaya Namah', meaning: 'The Lord of All Senses' },
-      { number: 17, sanskrit: 'सुधाप्रद', transliteration: 'Sudhaprada', mantraSanskrit: 'ॐ सुधाप्रदाय नमः।', mantra: 'Om Sudhapradaya Namah', meaning: 'One Who Provides Nectar' },
-      { number: 18, sanskrit: 'माधव', transliteration: 'Madhava', mantraSanskrit: 'ॐ माधवाय नमः।', mantra: 'Om Madhavaya Namah', meaning: 'The Lord Who has Infinite Knowledge' },
-      { number: 19, sanskrit: 'पुण्डरीकाक्ष', transliteration: 'Pundarikaksha', mantraSanskrit: 'ॐ पुण्डरीकाक्षाय नमः।', mantra: 'Om Pundarikakshaya Namah', meaning: 'The One Who has Eyes Like Lotus' },
-      { number: 20, sanskrit: 'स्थितिकर्ता', transliteration: 'Sthitikarta', mantraSanskrit: 'ॐ स्थितिकर्त्रे नमः।', mantra: 'Om Sthitikartre Namah', meaning: 'One Who Ensures the Existence of the World' },
-      { number: 21, sanskrit: 'परात्पर', transliteration: 'Paratpara', mantraSanskrit: 'ॐ परात्पराय नमः।', mantra: 'Om Paratparaya Namah', meaning: 'The One Who is the Supreme God' },
-      { number: 22, sanskrit: 'वनमाली', transliteration: 'Vanamali', mantraSanskrit: 'ॐ वनमालिने नमः।', mantra: 'Om Vanamaline Namah', meaning: 'One Who Wears Garlands of Forest Flowers' },
-      { number: 23, sanskrit: 'यज्ञरूप', transliteration: 'Yajnarupa', mantraSanskrit: 'ॐ यज्ञरूपाय नमः।', mantra: 'Om Yajnarupaya Namah', meaning: 'The God in the Form of Yajna' },
-      { number: 24, sanskrit: 'चक्रपाणि', transliteration: 'Chakrapani', mantraSanskrit: 'ॐ चक्रपाणये नमः।', mantra: 'Om Chakrapanaye Namah', meaning: 'One Who Holds the Sudarshana Chakra' },
-      { number: 25, sanskrit: 'गदाधर', transliteration: 'Gadadhara', mantraSanskrit: 'ॐ गदाधराय नमः।', mantra: 'Om Gadadharaya Namah', meaning: 'One Who Holds a Mace' },
-      { number: 26, sanskrit: 'उपेन्द्र', transliteration: 'Upendra', mantraSanskrit: 'ॐ उपेन्द्राय नमः।', mantra: 'Om Upendraya Namah', meaning: 'One Who is the Brother of Indra' },
-      { number: 27, sanskrit: 'केशव', transliteration: 'Keshava', mantraSanskrit: 'ॐ केशवाय नमः।', mantra: 'Om Keshavaya Namah', meaning: 'One with Beautiful Hair or the Slayer of Keshi' },
-      { number: 28, sanskrit: 'हंस', transliteration: 'Hamsa', mantraSanskrit: 'ॐ हंसाय नमः।', mantra: 'Om Hamsaya Namah', meaning: 'The One Whose Mount is Swan' },
-      { number: 29, sanskrit: 'समुद्रमथन', transliteration: 'Samudramathana', mantraSanskrit: 'ॐ समुद्रमथनाय नमः।', mantra: 'Om Samudramathanaya Namah', meaning: 'The One Who Churns the Ocean' },
-      { number: 30, sanskrit: 'हरि', transliteration: 'Hari', mantraSanskrit: 'ॐ हरये नमः।', mantra: 'Om Haraye Namah', meaning: 'The Lord of Nature' },
-      { number: 31, sanskrit: 'गोविन्द', transliteration: 'Govinda', mantraSanskrit: 'ॐ गोविन्दाय नमः।', mantra: 'Om Govindaya Namah', meaning: 'One Who Pleases the Cows and the Nature' },
-      { number: 32, sanskrit: 'ब्रह्मजनक', transliteration: 'Brahmajanaka', mantraSanskrit: 'ॐ ब्रह्मजनकाय नमः।', mantra: 'Om Brahmajanakaya Namah', meaning: 'One Who Created Lord Brahma' },
-      { number: 33, sanskrit: 'कैटभासुरमर्दन', transliteration: 'Kaitabhasuramardana', mantraSanskrit: 'ॐ कैटभासुरमर्दनाय नमः।', mantra: 'Om Kaitabhasuramardanaya Namah', meaning: 'One Who Killed the Demon Kaitabha' },
-      { number: 34, sanskrit: 'श्रीधर', transliteration: 'Shridhara', mantraSanskrit: 'ॐ श्रीधराय नमः।', mantra: 'Om Shridharaya Namah', meaning: 'The One Who has Goddess Lakshmi' },
-      { number: 35, sanskrit: 'कामजनक', transliteration: 'Kamajanaka', mantraSanskrit: 'ॐ कामजनकाय नमः।', mantra: 'Om Kamajanakaya Namah', meaning: 'One Who Fulfills Desires' },
-      { number: 36, sanskrit: 'शेषशायी', transliteration: 'Sheshashayi', mantraSanskrit: 'ॐ शेषशायिने नमः।', mantra: 'Om Sheshashayine Namah', meaning: 'One Who Sleeps on Sheshanaga' },
-      { number: 37, sanskrit: 'चतुर्भुज', transliteration: 'Chaturbhuja', mantraSanskrit: 'ॐ चतुर्भुजाय नमः।', mantra: 'Om Chaturbhujaya Namah', meaning: 'One Who has Four Arms' },
-      { number: 38, sanskrit: 'पाञ्चजन्यधर', transliteration: 'Panchajanyadhara', mantraSanskrit: 'ॐ पाञ्चजन्यधराय नमः।', mantra: 'Om Panchajanyadharaya Namah', meaning: 'One Who has a Conch Named Panchajanya' },
-      { number: 39, sanskrit: 'श्रीमान्', transliteration: 'Shriman', mantraSanskrit: 'ॐ श्रीमते नमः।', mantra: 'Om Shrimate Namah', meaning: 'One Who has Shri i.e. Goddess Lakshmi' },
-      { number: 40, sanskrit: 'शार्ङ्गपाणि', transliteration: 'Sharngapani', mantraSanskrit: 'ॐ शार्ङ्गपाणये नमः।', mantra: 'Om Sharngapanaye Namah', meaning: 'One Who Holds the Bow' },
-      { number: 41, sanskrit: 'जनार्दन', transliteration: 'Janardana', mantraSanskrit: 'ॐ जनार्दनाय नमः।', mantra: 'Om Janardanaya Namah', meaning: 'One Who Helps Others Compassionately' },
-      { number: 42, sanskrit: 'पीताम्बरधर', transliteration: 'Pitambaradhara', mantraSanskrit: 'ॐ पीताम्बरधराय नमः।', mantra: 'Om Pitambaradharaya Namah', meaning: 'The One Who Wears Yellow Clothes' },
-      { number: 43, sanskrit: 'देव', transliteration: 'Deva', mantraSanskrit: 'ॐ देवाय नमः।', mantra: 'Om Devaya Namah', meaning: 'The One Who is Adorable to All of Us' },
-      { number: 44, sanskrit: 'सूर्यचन्द्रविलोचन', transliteration: 'Suryachandravilochana', mantraSanskrit: 'ॐ सूर्यचन्द्रविलोचनाय नमः।', mantra: 'Om Suryachandravilochanaya Namah', meaning: 'One Whose Eyes are Like the Sun and the Moon' },
-      { number: 45, sanskrit: 'मत्स्यरूप', transliteration: 'Matsyarupa', mantraSanskrit: 'ॐ मत्स्यरूपाय नमः।', mantra: 'Om Matsyarupaya Namah', meaning: 'Lord Matsya Who is an Incarnation of Lord Vishnu' },
-      { number: 46, sanskrit: 'कूर्मतनु', transliteration: 'Kurmatanu', mantraSanskrit: 'ॐ कूर्मतनवे नमः।', mantra: 'Om Kurmatanave Namah', meaning: 'Lord Kurma Who is an Incarnation of Lord Vishnu' },
-      { number: 47, sanskrit: 'क्रोडरूप', transliteration: 'Krodarupa', mantraSanskrit: 'ॐ क्रोडरूपाय नमः।', mantra: 'Om Krodarupaya Namah', meaning: 'Lord Varaha Who is an Incarnation of Lord Vishnu' },
-      { number: 48, sanskrit: 'नृकेसरि', transliteration: 'Nrikesari', mantraSanskrit: 'ॐ नृकेसरिणे नमः।', mantra: 'Om Nrikesarine Namah', meaning: 'Lord Narasimha Who is an Incarnation of Lord Vishnu' },
-      { number: 49, sanskrit: 'वामन', transliteration: 'Vamana', mantraSanskrit: 'ॐ वामनाय नमः।', mantra: 'Om Vamanaya Namah', meaning: 'Lord Vamana Who is the Dwarf Incarnation of Lord Vishnu' },
-      { number: 50, sanskrit: 'भार्गव', transliteration: 'Bhargava', mantraSanskrit: 'ॐ भार्गवाय नमः।', mantra: 'Om Bhargavaya Namah', meaning: 'Lord Parashurama Who is an Incarnation of Lord Vishnu' },
-      { number: 51, sanskrit: 'राम', transliteration: 'Rama', mantraSanskrit: 'ॐ रामाय नमः।', mantra: 'Om Ramaya Namah', meaning: 'Lord Rama Who is an Incarnation of Lord Vishnu' },
-      { number: 52, sanskrit: 'बली', transliteration: 'Bali', mantraSanskrit: 'ॐ बलिने नमः।', mantra: 'Om Baline Namah', meaning: 'One Who is Extremely Powerful' },
-      { number: 53, sanskrit: 'कल्कि', transliteration: 'Kalki', mantraSanskrit: 'ॐ कल्किने नमः।', mantra: 'Om Kalkine Namah', meaning: 'Lord Kalki Who will be the Incarnation of Lord Vishnu at the End of Kali Yuga' },
-      { number: 54, sanskrit: 'हयानन', transliteration: 'Hayanana', mantraSanskrit: 'ॐ हयाननाय नमः।', mantra: 'Om Hayananaya Namah', meaning: 'Lord Hayagriva Who is an Incarnation of Lord Vishnu' },
-      { number: 55, sanskrit: 'विश्वम्भर', transliteration: 'Vishvambhara', mantraSanskrit: 'ॐ विश्वम्भराय नमः।', mantra: 'Om Vishvambharaya Namah', meaning: 'One Who is the Preserver of the Entire Universe' },
-      { number: 56, sanskrit: 'शिशुमार', transliteration: 'Shishumara', mantraSanskrit: 'ॐ शिशुमाराय नमः।', mantra: 'Om Shishumaraya Namah', meaning: 'Shishumara Who is a Form of Lord Vishnu' },
-      { number: 57, sanskrit: 'श्रीकर', transliteration: 'Shrikara', mantraSanskrit: 'ॐ श्रीकराय नमः।', mantra: 'Om Shrikaraya Namah', meaning: 'One Who Provides Material Comforts and Spirituality to his Devotees' },
-      { number: 58, sanskrit: 'कपिल', transliteration: 'Kapila', mantraSanskrit: 'ॐ कपिलाय नमः।', mantra: 'Om Kapilaya Namah', meaning: 'The One Who is Great Sage Kapila' },
-      { number: 59, sanskrit: 'ध्रुव', transliteration: 'Dhruva', mantraSanskrit: 'ॐ ध्रुवाय नमः।', mantra: 'Om Dhruvaya Namah', meaning: 'The One Who is Unchangeable' },
-      { number: 60, sanskrit: 'दत्तत्रेय', transliteration: 'Dattatreya', mantraSanskrit: 'ॐ दत्तत्रेयाय नमः।', mantra: 'Om Dattatreyaya Namah', meaning: 'The Teacher of the Entire Universe' },
-      { number: 61, sanskrit: 'अच्युत', transliteration: 'Achyuta', mantraSanskrit: 'ॐ अच्युताय नमः।', mantra: 'Om Achyutaya Namah', meaning: 'Who has No End to His Power' },
-      { number: 62, sanskrit: 'अनन्त', transliteration: 'Ananta', mantraSanskrit: 'ॐ अनन्ताय नमः।', mantra: 'Om Anantaya Namah', meaning: 'The One Who has No End' },
-      { number: 63, sanskrit: 'मुकुन्द', transliteration: 'Mukunda', mantraSanskrit: 'ॐ मुकुन्दाय नमः।', mantra: 'Om Mukundaya Namah', meaning: 'The One Who is the Bestower of Salvation' },
-      { number: 64, sanskrit: 'दधिवामन', transliteration: 'Dadhivamana', mantraSanskrit: 'ॐ दधिवामनाय नमः।', mantra: 'Om Dadhivamanaya Namah', meaning: 'Dadhivamana Who is the Form of Lord Vishnu' },
-      { number: 65, sanskrit: 'धन्वन्तरि', transliteration: 'Dhanvantari', mantraSanskrit: 'ॐ धन्वन्तरये नमः।', mantra: 'Om Dhanvantaraye Namah', meaning: 'A Partial Incarnation of Lord Vishnu Who Appeared After the Churning of Ocean' },
-      { number: 66, sanskrit: 'श्रीनिवास', transliteration: 'Shrinivasa', mantraSanskrit: 'ॐ श्रीनिवासाय नमः।', mantra: 'Om Shrinivasaya Namah', meaning: 'The One Who is the Permanent Abode of Shri i.e. Goddess Lakshmi' },
-      { number: 67, sanskrit: 'प्रद्युम्न', transliteration: 'Pradyumna', mantraSanskrit: 'ॐ प्रद्युम्नाय नमः।', mantra: 'Om Pradyumnaya Namah', meaning: 'Pradyumna Who is the God of Love and is a Form of Lord Vishnu' },
-      { number: 68, sanskrit: 'पुरुषोत्तम', transliteration: 'Purushottama', mantraSanskrit: 'ॐ पुरुषोत्तमाय नमः।', mantra: 'Om Purushottamaya Namah', meaning: 'The One Who is the Supreme Lord' },
-      { number: 69, sanskrit: 'श्रीवत्सकौस्तुभधर', transliteration: 'Shrivatsakaustubhadhara', mantraSanskrit: 'ॐ श्रीवत्सकौस्तुभधराय नमः।', mantra: 'Om Shrivatsakaustubhadharaya Namah', meaning: 'One Who Wears Shrivatsa Symbol and Kaustubha Mani' },
-      { number: 70, sanskrit: 'मुराराति', transliteration: 'Murarati', mantraSanskrit: 'ॐ मुरारातये नमः।', mantra: 'Om Murarataye Namah', meaning: 'One Who is the Destroyer of Mura or Demons' },
-      { number: 71, sanskrit: 'अधोक्षज', transliteration: 'Adhokshaja', mantraSanskrit: 'ॐ अधोक्षजाय नमः।', mantra: 'Om Adhokshajaya Namah', meaning: 'One Who is Beyond Knowledge Obtained Through the Senses' },
-      { number: 72, sanskrit: 'ऋषभ', transliteration: 'Rishabha', mantraSanskrit: 'ॐ ऋषभाय नमः।', mantra: 'Om Rishabhaya Namah', meaning: 'Lord Rishabha Who is an Incarnation of Lord Vishnu' },
-      { number: 73, sanskrit: 'मोहिनीरूपधारी', transliteration: 'Mohinirupadhari', mantraSanskrit: 'ॐ मोहिनीरूपधारिणे नमः।', mantra: 'Om Mohinirupadharine Namah', meaning: 'The One Who is Incarnated as Mohini' },
-      { number: 74, sanskrit: 'सङ्कर्षण', transliteration: 'Sankarshana', mantraSanskrit: 'ॐ सङ्कर्षणाय नमः।', mantra: 'Om Sankarshanaya Namah', meaning: 'Lord Balarama Who is an Incarnation of Lord Vishnu' },
-      { number: 75, sanskrit: 'पृथु', transliteration: 'Prithu', mantraSanskrit: 'ॐ पृथवे नमः।', mantra: 'Om Prithave Namah', meaning: 'King Prithu Who is an Incarnation of Lord Vishnu' },
-      { number: 76, sanskrit: 'क्षीराब्धिशायी', transliteration: 'Kshirabdhishayi', mantraSanskrit: 'ॐ क्षीराब्धिशायिने नमः।', mantra: 'Om Kshirabdhishayine Namah', meaning: 'The One Who Rests in Kshirsagara, the Milky Ocean' },
-      { number: 77, sanskrit: 'भूतात्मा', transliteration: 'Bhutatma', mantraSanskrit: 'ॐ भूतात्मने नमः।', mantra: 'Om Bhutatmane Namah', meaning: 'One Who is the Soul of All Beings' },
-      { number: 78, sanskrit: 'अनिरुद्ध', transliteration: 'Aniruddha', mantraSanskrit: 'ॐ अनिरुद्धाय नमः।', mantra: 'Om Aniruddhaya Namah', meaning: 'Who is Invincible, Unopposed, Uncontrolled and Without Obstacles' },
-      { number: 79, sanskrit: 'भक्तवत्सल', transliteration: 'Bhaktavatsala', mantraSanskrit: 'ॐ भक्तवत्सलाय नमः।', mantra: 'Om Bhaktavatsalaya Namah', meaning: 'Who has Immense Love for His Devotees' },
-      { number: 80, sanskrit: 'नर', transliteration: 'Nara', mantraSanskrit: 'ॐ नराय नमः।', mantra: 'Om Naraya Namah', meaning: 'The One Who is the Guide' },
-      { number: 81, sanskrit: 'गजेन्द्रवरद', transliteration: 'Gajendravarada', mantraSanskrit: 'ॐ गजेन्द्रवरदाय नमः।', mantra: 'Om Gajendravaradaya Namah', meaning: 'The One Who Blessed Gajendra Elephant' },
-      { number: 82, sanskrit: 'त्रिधाम', transliteration: 'Tridhama', mantraSanskrit: 'ॐ त्रिधाम्ने नमः।', mantra: 'Om Tridhamne Namah', meaning: 'One Who Exists in All Three Worlds' },
-      { number: 83, sanskrit: 'भूतभावन', transliteration: 'Bhutabhavana', mantraSanskrit: 'ॐ भूतभावनाय नमः।', mantra: 'Om Bhutabhavanaya Namah', meaning: 'One Who Creates and Gives Growth to the Elements Like Earth etc.' },
-      { number: 84, sanskrit: 'श्वेतद्वीपसुवास्तव्य', transliteration: 'Shvetadvipasuvastavya', mantraSanskrit: 'ॐ श्वेतद्वीपसुवास्तव्याय नमः।', mantra: 'Om Shvetadvipasuvastavyaya Namah', meaning: 'One Who Lives Near Milky Ocean' },
-      { number: 85, sanskrit: 'सनकादिमुनिध्येय', transliteration: 'Sanakadimunidhyeya', mantraSanskrit: 'ॐ सनकादिमुनिध्येयाय नमः।', mantra: 'Om Sanakadimunidhyeyaya Namah', meaning: 'One Who is Also Worshiped by Sanakadi Sages' },
-      { number: 86, sanskrit: 'भगवान्', transliteration: 'Bhagavan', mantraSanskrit: 'ॐ भगवते नमः।', mantra: 'Om Bhagavate Namah', meaning: 'One Who is the Supreme God' },
-      { number: 87, sanskrit: 'शङ्करप्रिय', transliteration: 'Shankarapriya', mantraSanskrit: 'ॐ शङ्करप्रियाय नमः।', mantra: 'Om Shankarapriyaya Namah', meaning: 'One Who is Dear to Lord Shankara' },
-      { number: 88, sanskrit: 'नीलकान्त', transliteration: 'Nilakanta', mantraSanskrit: 'ॐ नीलकान्ताय नमः।', mantra: 'Om Nilakantaya Namah', meaning: 'One Who has Blue Colored Complexion' },
-      { number: 89, sanskrit: 'धराकान्त', transliteration: 'Dharakanta', mantraSanskrit: 'ॐ धराकान्ताय नमः।', mantra: 'Om Dharakantaya Namah', meaning: 'The Nurturer of Earth' },
-      { number: 90, sanskrit: 'वेदात्मा', transliteration: 'Vedatma', mantraSanskrit: 'ॐ वेदात्मने नमः।', mantra: 'Om Vedatmane Namah', meaning: 'One Who is the Embodiment of the Vedas' },
-      { number: 91, sanskrit: 'बादरायण', transliteration: 'Badarayana', mantraSanskrit: 'ॐ बादरायणाय नमः।', mantra: 'Om Badarayanaya Namah', meaning: 'Shri Vedavyasa Ji Who is an Incarnation of Lord Vishnu' },
-      { number: 92, sanskrit: 'भागीरथीजन्मभूमिपादपद्म', transliteration: 'Bhagirathijanmabhumipadapadma', mantraSanskrit: 'ॐ भागीरथीजन्मभूमिपादपद्माय नमः।', mantra: 'Om Bhagirathijanmabhumipadapadmaya Namah', meaning: 'The One From Whose Feet Ganga Originated' },
-      { number: 93, sanskrit: 'सतां प्रभु', transliteration: 'Satam Prabhu', mantraSanskrit: 'ॐ सतां प्रभवे नमः।', mantra: 'Om Satam Prabhave Namah', meaning: 'The Lord of Virtuous Beings' },
-      { number: 94, sanskrit: 'स्वभु', transliteration: 'Svabhu', mantraSanskrit: 'ॐ स्वभुवे नमः।', mantra: 'Om Svabhuve Namah', meaning: 'The One Who is Self-born and Nurtures the World' },
-      { number: 95, sanskrit: 'विभु', transliteration: 'Vibhu', mantraSanskrit: 'ॐ विभवे नमः।', mantra: 'Om Vibhave Namah', meaning: 'The One Who is Omnipresent' },
-      { number: 96, sanskrit: 'घनश्याम', transliteration: 'Ghanashyama', mantraSanskrit: 'ॐ घनश्यामाय नमः।', mantra: 'Om Ghanashyamaya Namah', meaning: 'Lord Krishna Who is an Incarnation of Lord Vishnu' },
-      { number: 97, sanskrit: 'जगत्कारण', transliteration: 'Jagatkarana', mantraSanskrit: 'ॐ जगत्कारणाय नमः।', mantra: 'Om Jagatkaranaya Namah', meaning: 'The One from Which this Universe Exists' },
-      { number: 98, sanskrit: 'अव्यय', transliteration: 'Avyaya', mantraSanskrit: 'ॐ अव्ययाय नमः।', mantra: 'Om Avyayaya Namah', meaning: 'The One Who is Invincible and Indestructible' },
-      { number: 99, sanskrit: 'बुद्धावतार', transliteration: 'Buddhavatara', mantraSanskrit: 'ॐ बुद्धावताराय नमः।', mantra: 'Om Buddhavataraya Namah', meaning: 'Lord Buddha Who is an Incarnation of Lord Vishnu' },
-      { number: 100, sanskrit: 'शान्तात्मा', transliteration: 'Shantatma', mantraSanskrit: 'ॐ शान्तात्मने नमः।', mantra: 'Om Shantatmane Namah', meaning: 'The One Who is Very Calm and Serene' },
-      { number: 101, sanskrit: 'लीलामानुषविग्रह', transliteration: 'Lilamanushavigraha', mantraSanskrit: 'ॐ लीलामानुषविग्रहाय नमः।', mantra: 'Om Lilamanushavigrahaya Namah', meaning: 'One Who Incarnates in the Human Form and Performs Divine Play' },
-      { number: 102, sanskrit: 'दामोदर', transliteration: 'Damodara', mantraSanskrit: 'ॐ दामोदराय नमः।', mantra: 'Om Damodaraya Namah', meaning: 'Lord Krishna, Whom Mother Yashoda Could Not Tie to the Mortar' },
-      { number: 103, sanskrit: 'विराड्रूप', transliteration: 'Viradrupa', mantraSanskrit: 'ॐ विराड्रूपाय नमः।', mantra: 'Om Viradrupaya Namah', meaning: 'Lord Krishna, Who Displayed His Gigantic Form' },
-      { number: 104, sanskrit: 'भूतभव्यभवत्प्रभु', transliteration: 'Bhutabhavyabhavatprabhu', mantraSanskrit: 'ॐ भूतभव्यभवत्प्रभवे नमः।', mantra: 'Om Bhutabhavyabhavatprabhave Namah', meaning: 'One Who Pervades All Past, Future and Present' },
-      { number: 105, sanskrit: 'आदिदेव', transliteration: 'Adideva', mantraSanskrit: 'ॐ आदिदेवाय नमः।', mantra: 'Om Adidevaya Namah', meaning: 'One Who is the Primal God Among Gods' },
-      { number: 106, sanskrit: 'देवदेव', transliteration: 'Devadeva', mantraSanskrit: 'ॐ देवदेवाय नमः।', mantra: 'Om Devadevaya Namah', meaning: 'The God of the Gods' },
-      { number: 107, sanskrit: 'प्रह्लादपरिपालक', transliteration: 'Prahladaparipalaka', mantraSanskrit: 'ॐ प्रह्लादपरिपालकाय नमः।', mantra: 'Om Prahladaparipalakaya Namah', meaning: 'The One Who Protected Devotee Prahlada' },
-      { number: 108, sanskrit: 'श्रीमहाविष्णु', transliteration: 'Shrimahavishnu', mantraSanskrit: 'ॐ श्रीमहाविष्णवे नमः।', mantra: 'Om Shrimahavishnave Namah', meaning: 'The One Who is Shri Mahavishnu' },
-    ]
-  },
-
-  shiva: {
-    id: 'shiva',
-    name: 'Lord Shiva',
-    title: 'Shiva Ashtottara Shatanamavali',
-    description: '108 Names of Lord Shiva, the destroyer and transformer',
-    image: require('../assets/images/Gods/Shiva.png'),
-    category: 'god',
-    names: [
-      { number: 1, sanskrit: 'शिव', transliteration: 'Shiva', mantraSanskrit: 'ॐ शिवाय नमः।', mantra: 'Om Shivaya Namah', meaning: 'One Who is the Most Auspicious' },
-      { number: 2, sanskrit: 'महेश्वर', transliteration: 'Maheshvara', mantraSanskrit: 'ॐ महेश्वराय नमः।', mantra: 'Om Maheshvaraya Namah', meaning: 'The One Who is Lord of Gods' },
-      { number: 3, sanskrit: 'शम्भु', transliteration: 'Shambhu', mantraSanskrit: 'ॐ शम्भवे नमः।', mantra: 'Om Shambhave Namah', meaning: 'One Who Bestows Great Wealth and Prosperity' },
-      { number: 4, sanskrit: 'पिनाकी', transliteration: 'Pinaki', mantraSanskrit: 'ॐ पिनाकिने नमः।', mantra: 'Om Pinakine Namah', meaning: 'One Who holds the Bow Named Pinaka' },
-      { number: 5, sanskrit: 'शशिशेखर', transliteration: 'Shashishekhara', mantraSanskrit: 'ॐ शशिशेखराय नमः।', mantra: 'Om Shashishekharaya Namah', meaning: 'The God Who Wears the Crescent Moon on His Head' },
-      { number: 6, sanskrit: 'वामदेव', transliteration: 'Vamadeva', mantraSanskrit: 'ॐ वामदेवाय नमः।', mantra: 'Om Vamadevaya Namah', meaning: 'The God Who is Pleasing and Auspicious in Every Way' },
-      { number: 7, sanskrit: 'विरूपाक्ष', transliteration: 'Virupaksha', mantraSanskrit: 'ॐ विरूपाक्षाय नमः।', mantra: 'Om Virupakshaya Namah', meaning: 'The Lord with an Eye on the Forehead' },
-      { number: 8, sanskrit: 'कपर्दी', transliteration: 'Kapardi', mantraSanskrit: 'ॐ कपर्दिने नमः।', mantra: 'Om Kapardine Namah', meaning: 'The Lord Who Wears Matted Hair' },
-      { number: 9, sanskrit: 'नीललोहित', transliteration: 'Nilalohita', mantraSanskrit: 'ॐ नीललोहिताय नमः।', mantra: 'Om Nilalohitaya Namah', meaning: 'The One with Red and Blue Color Complexion' },
-      { number: 10, sanskrit: 'शङ्कर', transliteration: 'Shankara', mantraSanskrit: 'ॐ शङ्कराय नमः।', mantra: 'Om Shankaraya Namah', meaning: 'One Who Bestows Happiness and Prosperity' },
-      { number: 11, sanskrit: 'शूलपाणी', transliteration: 'Shulapani', mantraSanskrit: 'ॐ शूलपाणिने नमः।', mantra: 'Om Shulapanine Namah', meaning: 'The One Who Holds a Trident' },
-      { number: 12, sanskrit: 'खट्वाङ्गी', transliteration: 'Khatvangi', mantraSanskrit: 'ॐ खट्वाङ्गिने नमः।', mantra: 'Om Khatvangine Namah', meaning: 'The God Who Carries a Weapon Called Khatvanga' },
-      { number: 13, sanskrit: 'विष्णुवल्लभ', transliteration: 'Vishnuvallabha', mantraSanskrit: 'ॐ विष्णुवल्लभाय नमः।', mantra: 'Om Vishnuvallabhaya Namah', meaning: 'The One Who is Very Dear to Lord Vishnu' },
-      { number: 14, sanskrit: 'शिपिविष्ट', transliteration: 'Shipivishta', mantraSanskrit: 'ॐ शिपिविष्टाय नमः।', mantra: 'Om Shipivishtaya Namah', meaning: 'The Lord Whose Form Emits Great Rays of Light' },
-      { number: 15, sanskrit: 'अम्बिकानाथ', transliteration: 'Ambikanatha', mantraSanskrit: 'ॐ अम्बिकानाथाय नमः।', mantra: 'Om Ambikanathaya Namah', meaning: 'The Consort of Goddess Ambika i.e. Parvati' },
-      { number: 16, sanskrit: 'श्रीकण्ठ', transliteration: 'Shrikantha', mantraSanskrit: 'ॐ श्रीकण्ठाय नमः।', mantra: 'Om Shrikanthaya Namah', meaning: 'One Who has Beautiful Throat' },
-      { number: 17, sanskrit: 'भक्तवत्सल', transliteration: 'Bhaktavatsala', mantraSanskrit: 'ॐ भक्तवत्सलाय नमः।', mantra: 'Om Bhaktavatsalaya Namah', meaning: 'The One Who Loves His Devotees Immensely' },
-      { number: 18, sanskrit: 'भव', transliteration: 'Bhava', mantraSanskrit: 'ॐ भवाय नमः।', mantra: 'Om Bhavaya Namah', meaning: 'The God Who is Originated as Creation Itself' },
-      { number: 19, sanskrit: 'शर्व', transliteration: 'Sharva', mantraSanskrit: 'ॐ शर्वाय नमः।', mantra: 'Om Sharvaya Namah', meaning: 'The One Who is the Destroyer of Sins and Sufferings' },
-      { number: 20, sanskrit: 'त्रिलोकेश', transliteration: 'Trilokesha', mantraSanskrit: 'ॐ त्रिलोकेशाय नमः।', mantra: 'Om Trilokeshaya Namah', meaning: 'One Who is the Lord of All the Three Worlds' },
-      { number: 21, sanskrit: 'शितिकण्ठ', transliteration: 'Shitikantha', mantraSanskrit: 'ॐ शितिकण्ठाय नमः।', mantra: 'Om Shitikanthaya Namah', meaning: 'The Lord Who has White Throat' },
-      { number: 22, sanskrit: 'शिवाप्रिय', transliteration: 'Shivapriya', mantraSanskrit: 'ॐ शिवाप्रियाय नमः।', mantra: 'Om Shivapriyaya Namah', meaning: 'The Lord Who is Beloved to Goddess Parvati' },
-      { number: 23, sanskrit: 'उग्र', transliteration: 'Ugra', mantraSanskrit: 'ॐ उग्राय नमः।', mantra: 'Om Ugraya Namah', meaning: 'The One Who has Extremely Fierce Nature' },
-      { number: 24, sanskrit: 'कपाली', transliteration: 'Kapali', mantraSanskrit: 'ॐ कपालिने नमः।', mantra: 'Om Kapaline Namah', meaning: 'The One Who Wears a Skull Garland Around His Neck' },
-      { number: 25, sanskrit: 'कामारि', transliteration: 'Kamari', mantraSanskrit: 'ॐ कामारये नमः।', mantra: 'Om Kamaraye Namah', meaning: 'One Who is the Enemy of Kamadeva' },
-      { number: 26, sanskrit: 'अन्धकासुरसूदन', transliteration: 'Andhakasurasudana', mantraSanskrit: 'ॐ अन्धकासुरसूदनाय नमः।', mantra: 'Om Andhakasurasudanaya Namah', meaning: 'The Lord Who Killed the Demon Andhaka' },
-      { number: 27, sanskrit: 'गङ्गाधर', transliteration: 'Gangadhara', mantraSanskrit: 'ॐ गङ्गाधराय नमः।', mantra: 'Om Gangadharaya Namah', meaning: 'The God Who Holds Goddess Ganga in His Matted Hair' },
-      { number: 28, sanskrit: 'ललाटाक्ष', transliteration: 'Lalataksha', mantraSanskrit: 'ॐ ललाटाक्षाय नमः।', mantra: 'Om Lalatakshaya Namah', meaning: 'One Who Has an Eye in the Forehead' },
-      { number: 29, sanskrit: 'कालकाल', transliteration: 'Kalakala', mantraSanskrit: 'ॐ कालकालाय नमः।', mantra: 'Om Kalakalaya Namah', meaning: 'One Who is the Death of Even Kala i.e. Yama' },
-      { number: 30, sanskrit: 'कृपानिधि', transliteration: 'Kripanidhi', mantraSanskrit: 'ॐ कृपानिधये नमः।', mantra: 'Om Kripanidhaye Namah', meaning: 'The God Who is the Ocean of Mercy' },
-      { number: 31, sanskrit: 'भीम', transliteration: 'Bhima', mantraSanskrit: 'ॐ भीमाय नमः।', mantra: 'Om Bhimaya Namah', meaning: 'The Lord Who is Strong like Bhima' },
-      { number: 32, sanskrit: 'परशुहस्त', transliteration: 'Parashuhasta', mantraSanskrit: 'ॐ परशुहस्ताय नमः।', mantra: 'Om Parashuhastaya Namah', meaning: 'The God Who Holds Axe' },
-      { number: 33, sanskrit: 'मृगपाणि', transliteration: 'Mrigapani', mantraSanskrit: 'ॐ मृगपाणये नमः।', mantra: 'Om Mrigapanaye Namah', meaning: 'One Who Holds the Mind of the Devotees as Deer' },
-      { number: 34, sanskrit: 'जटाधर', transliteration: 'Jatadhara', mantraSanskrit: 'ॐ जटाधराय नमः।', mantra: 'Om Jatadharaya Namah', meaning: 'The God Who Wears Matted Hair' },
-      { number: 35, sanskrit: 'कैलासवासी', transliteration: 'Kailasavasi', mantraSanskrit: 'ॐ कैलासवासिने नमः।', mantra: 'Om Kailasavasine Namah', meaning: 'The One Who Resides on Mount Kailasha' },
-      { number: 36, sanskrit: 'कवची', transliteration: 'Kavachi', mantraSanskrit: 'ॐ कवचिने नमः।', mantra: 'Om Kavachine Namah', meaning: 'The God Who is the Armoured One' },
-      { number: 37, sanskrit: 'कठोर', transliteration: 'Kathora', mantraSanskrit: 'ॐ कठोराय नमः।', mantra: 'Om Kathoraya Namah', meaning: 'The God Who is Extremely Strong and Powerful' },
-      { number: 38, sanskrit: 'त्रिपुरान्तक', transliteration: 'Tripurantaka', mantraSanskrit: 'ॐ त्रिपुरान्तकाय नमः।', mantra: 'Om Tripurantakaya Namah', meaning: 'The God Who is the Slayer of Demon Tripura' },
-      { number: 39, sanskrit: 'वृषाङ्क', transliteration: 'Vrishanka', mantraSanskrit: 'ॐ वृषाङ्काय नमः।', mantra: 'Om Vrishankaya Namah', meaning: 'The God Who has a Flag with a Symbol of Bull' },
-      { number: 40, sanskrit: 'वृषभारूढ', transliteration: 'Vrishabharudha', mantraSanskrit: 'ॐ वृषभारूढाय नमः।', mantra: 'Om Vrishabharudhaya Namah', meaning: 'The One Who is Mounted on a Bull' },
-      { number: 41, sanskrit: 'भस्मोद्धूलितविग्रह', transliteration: 'Bhasmoddhulitavigraha', mantraSanskrit: 'ॐ भस्मोद्धूलितविग्रहाय नमः।', mantra: 'Om Bhasmoddhulitavigrahaya Namah', meaning: 'The One Who Applies Ashes All Over the Body' },
-      { number: 42, sanskrit: 'सामप्रिय', transliteration: 'Samapriya', mantraSanskrit: 'ॐ सामप्रियाय नमः।', mantra: 'Om Samapriyaya Namah', meaning: 'The One Who Loves Samaveda' },
-      { number: 43, sanskrit: 'स्वरमय', transliteration: 'Svaramaya', mantraSanskrit: 'ॐ स्वरमयाय नमः।', mantra: 'Om Svaramayaya Namah', meaning: 'The God Who Lives in All Seven Notes (Swara)' },
-      { number: 44, sanskrit: 'त्रयीमूर्ति', transliteration: 'Trayimurti', mantraSanskrit: 'ॐ त्रयीमूर्तये नमः।', mantra: 'Om Trayimurtaye Namah', meaning: 'One Who Exists in the Form of Rigveda, Yajurveda and Samaveda' },
-      { number: 45, sanskrit: 'अनीश्वर', transliteration: 'Anishvara', mantraSanskrit: 'ॐ अनीश्वराय नमः।', mantra: 'Om Anishvaraya Namah', meaning: 'The One Who is Himself the Lord of All' },
-      { number: 46, sanskrit: 'सर्वज्ञ', transliteration: 'Sarvajna', mantraSanskrit: 'ॐ सर्वज्ञाय नमः।', mantra: 'Om Sarvajnaya Namah', meaning: 'The Lord Who is Omniscient' },
-      { number: 47, sanskrit: 'परमात्मा', transliteration: 'Paramatma', mantraSanskrit: 'ॐ परमात्मने नमः।', mantra: 'Om Paramatmane Namah', meaning: 'The One Who is the Supreme Lord' },
-      { number: 48, sanskrit: 'सोमसूर्याग्निलोचन', transliteration: 'Somasuryagnilochana', mantraSanskrit: 'ॐ सोमसूर्याग्निलोचनाय नमः।', mantra: 'Om Somasuryagnilochanaya Namah', meaning: 'The One Who has Eyes in The Form of Sun, Moon and Fire' },
-      { number: 49, sanskrit: 'हविस्', transliteration: 'Havis', mantraSanskrit: 'ॐ हविषे नमः।', mantra: 'Om Havishe Namah', meaning: 'The One Who is the Personification of Sacrificial Offering' },
-      { number: 50, sanskrit: 'यज्ञमय', transliteration: 'Yajnamaya', mantraSanskrit: 'ॐ यज्ञमयाय नमः।', mantra: 'Om Yajnamayaya Namah', meaning: 'The One Who is in the Form of Sacrifice (Yajna)' },
-      { number: 51, sanskrit: 'सोम', transliteration: 'Soma', mantraSanskrit: 'ॐ सोमाय नमः।', mantra: 'Om Somaya Namah', meaning: 'One Who is Cool and Pure Like the Moon' },
-      { number: 52, sanskrit: 'पञ्चवक्त्र', transliteration: 'Panchavaktra', mantraSanskrit: 'ॐ पञ्चवक्त्राय नमः।', mantra: 'Om Panchavaktraya Namah', meaning: 'The One Who has Five Faces' },
-      { number: 53, sanskrit: 'सदाशिव', transliteration: 'Sadashiva', mantraSanskrit: 'ॐ सदाशिवाय नमः।', mantra: 'Om Sadashivaya Namah', meaning: 'The One Who is Eternally Auspicious' },
-      { number: 54, sanskrit: 'विश्वेश्वर', transliteration: 'Vishveshvara', mantraSanskrit: 'ॐ विश्वेश्वराय नमः।', mantra: 'Om Vishveshvaraya Namah', meaning: 'The One Who is the Lord of the Universe' },
-      { number: 55, sanskrit: 'वीरभद्र', transliteration: 'Virabhadra', mantraSanskrit: 'ॐ वीरभद्राय नमः।', mantra: 'Om Virabhadraya Namah', meaning: 'One Who has a Very Fierce Nature' },
-      { number: 56, sanskrit: 'गणनाथ', transliteration: 'Gananatha', mantraSanskrit: 'ॐ गणनाथाय नमः।', mantra: 'Om Gananathaya Namah', meaning: 'The One Who is the Lord of All the Ganas' },
-      { number: 57, sanskrit: 'प्रजापति', transliteration: 'Prajapati', mantraSanskrit: 'ॐ प्रजापतये नमः।', mantra: 'Om Prajapataye Namah', meaning: 'The One Who is the Lord of All Beings' },
-      { number: 58, sanskrit: 'हिरण्यरेता', transliteration: 'Hiranyareta', mantraSanskrit: 'ॐ हिरण्यरेतसे नमः।', mantra: 'Om Hiranyaretase Namah', meaning: 'The One Who is as Radiant as Thousands of Suns' },
-      { number: 59, sanskrit: 'दुर्धर्ष', transliteration: 'Durdharsha', mantraSanskrit: 'ॐ दुर्धर्षाय नमः।', mantra: 'Om Durdharshaya Namah', meaning: 'One Who Cannot be Defeated' },
-      { number: 60, sanskrit: 'गिरीश', transliteration: 'Girisha', mantraSanskrit: 'ॐ गिरीशाय नमः।', mantra: 'Om Girishaya Namah', meaning: 'The One Who is the Lord of Mountains' },
-      { number: 61, sanskrit: 'गिरिश', transliteration: 'Girisha', mantraSanskrit: 'ॐ गिरिशाय नमः।', mantra: 'Om Girishaya Namah', meaning: 'The God Who Sleeps on Kailasha Mountain' },
-      { number: 62, sanskrit: 'अनघ', transliteration: 'Anagha', mantraSanskrit: 'ॐ अनघाय नमः।', mantra: 'Om Anaghaya Namah', meaning: 'The One Who is Sinless' },
-      { number: 63, sanskrit: 'भुजङ्गभूषण', transliteration: 'Bhujangabhushana', mantraSanskrit: 'ॐ भुजङ्गभूषणाय नमः।', mantra: 'Om Bhujangabhushanaya Namah', meaning: 'The Lord One Who Wears Snakes as Ornaments' },
-      { number: 64, sanskrit: 'भर्ग', transliteration: 'Bharga', mantraSanskrit: 'ॐ भर्गाय नमः।', mantra: 'Om Bhargaya Namah', meaning: 'The Lord One Who Destroys All Sins' },
-      { number: 65, sanskrit: 'गिरिधन्वा', transliteration: 'Giridhanva', mantraSanskrit: 'ॐ गिरिधन्विने नमः।', mantra: 'Om Giridhanvine Namah', meaning: 'The Lord Who Holds Mount Meru as His Bow' },
-      { number: 66, sanskrit: 'गिरिप्रिय', transliteration: 'Giripriya', mantraSanskrit: 'ॐ गिरिप्रियाय नमः।', mantra: 'Om Giripriyaya Namah', meaning: 'The Lord Who is Fond of Mountains' },
-      { number: 67, sanskrit: 'कृत्तिवासा', transliteration: 'Krittivasa', mantraSanskrit: 'ॐ कृत्तिवाससे नमः।', mantra: 'Om Krittivasase Namah', meaning: 'The God One Who Wears Elephant Skin' },
-      { number: 68, sanskrit: 'पुराराति', transliteration: 'Purarati', mantraSanskrit: 'ॐ पुरारातये नमः।', mantra: 'Om Purarataye Namah', meaning: 'The One Who Destroyed Tripurasura and His Three Worlds' },
-      { number: 69, sanskrit: 'भगवान्', transliteration: 'Bhagavan', mantraSanskrit: 'ॐ भगवते नमः।', mantra: 'Om Bhagavate Namah', meaning: 'One Who is the Supreme God' },
-      { number: 70, sanskrit: 'प्रमथाधिप', transliteration: 'Pramathadhipa', mantraSanskrit: 'ॐ प्रमथाधिपाय नमः।', mantra: 'Om Pramathadhipaya Namah', meaning: 'The One Who is the Lord of Pramatha Ganas i.e. Shiva Ganas' },
-      { number: 71, sanskrit: 'मृत्युञ्जय', transliteration: 'Mrityunjaya', mantraSanskrit: 'ॐ मृत्युञ्जयाय नमः।', mantra: 'Om Mrityunjayaya Namah', meaning: 'The One Who Conquers Death' },
-      { number: 72, sanskrit: 'सूक्ष्मतनु', transliteration: 'Sukshmatanu', mantraSanskrit: 'ॐ सूक्ष्मतनवे नमः।', mantra: 'Om Sukshmatanave Namah', meaning: 'The God Who has a Subtle Body' },
-      { number: 73, sanskrit: 'जगद्व्यापी', transliteration: 'Jagadvyapi', mantraSanskrit: 'ॐ जगद्व्यापिने नमः।', mantra: 'Om Jagadvyapine Namah', meaning: 'The Lord Who Exists in the Entire Universe' },
-      { number: 74, sanskrit: 'जगद्गुरु', transliteration: 'Jagadguru', mantraSanskrit: 'ॐ जगद्गुरवे नमः।', mantra: 'Om Jagadgurave Namah', meaning: 'The One Who is the Preceptor of the Universe' },
-      { number: 75, sanskrit: 'व्योमकेश', transliteration: 'Vyomakesha', mantraSanskrit: 'ॐ व्योमकेशाय नमः।', mantra: 'Om Vyomakeshaya Namah', meaning: 'One Whose Hairs Spread in the Sky' },
-      { number: 76, sanskrit: 'महासेनजनक', transliteration: 'Mahasenajanaka', mantraSanskrit: 'ॐ महासेनजनकाय नमः।', mantra: 'Om Mahasenajanakaya Namah', meaning: 'The One Who is the Father of Lord Kartikeya' },
-      { number: 77, sanskrit: 'चारुविक्रम', transliteration: 'Charuvikrama', mantraSanskrit: 'ॐ चारुविक्रमाय नमः।', mantra: 'Om Charuvikramaya Namah', meaning: 'The Lord Who is the Conqueror of Beauty' },
-      { number: 78, sanskrit: 'रुद्र', transliteration: 'Rudra', mantraSanskrit: 'ॐ रुद्राय नमः।', mantra: 'Om Rudraya Namah', meaning: 'The One Who has a Fearsome Form' },
-      { number: 79, sanskrit: 'भूतपति', transliteration: 'Bhutapati', mantraSanskrit: 'ॐ भूतपतये नमः।', mantra: 'Om Bhutapataye Namah', meaning: 'One Who is the Master of Ghosts and Spirits and the Pancha Mahabhutas' },
-      { number: 80, sanskrit: 'स्थाणु', transliteration: 'Sthanu', mantraSanskrit: 'ॐ स्थाणवे नमः।', mantra: 'Om Sthanave Namah', meaning: 'The One Who is the Immovable and Eternal Lord' },
-      { number: 81, sanskrit: 'अहिर्बुध्न्य', transliteration: 'Ahirbudhnya', mantraSanskrit: 'ॐ अहिर्बुध्न्याय नमः।', mantra: 'Om Ahirbudhnyaya Namah', meaning: 'The One Who Holds Kundalini' },
-      { number: 82, sanskrit: 'दिगम्बर', transliteration: 'Digambara', mantraSanskrit: 'ॐ दिगम्बराय नमः।', mantra: 'Om Digambaraya Namah', meaning: 'The One Who Wears Directions as Clothes' },
-      { number: 83, sanskrit: 'अष्टमूर्ति', transliteration: 'Ashtamurti', mantraSanskrit: 'ॐ अष्टमूर्तये नमः।', mantra: 'Om Ashtamurtaye Namah', meaning: 'The Lord Who has Eight Forms' },
-      { number: 84, sanskrit: 'अनेकात्मा', transliteration: 'Anekatma', mantraSanskrit: 'ॐ अनेकात्मने नमः।', mantra: 'Om Anekatmane Namah', meaning: 'The God Who Possess Many Forms' },
-      { number: 85, sanskrit: 'सात्त्विक', transliteration: 'Sattvika', mantraSanskrit: 'ॐ सात्त्विकाय नमः।', mantra: 'Om Sattvikaya Namah', meaning: 'One Who is Endowed with Satva Guna' },
-      { number: 86, sanskrit: 'शुद्धविग्रह', transliteration: 'Shuddhavigraha', mantraSanskrit: 'ॐ शुद्धविग्रहाय नमः।', mantra: 'Om Shuddhavigrahaya Namah', meaning: 'The Lord Who has Completely Pure and Clean Soul' },
-      { number: 87, sanskrit: 'शाश्वत', transliteration: 'Shashvata', mantraSanskrit: 'ॐ शाश्वताय नमः।', mantra: 'Om Shashvataya Namah', meaning: 'The Lord Who is Eternal and Endless' },
-      { number: 88, sanskrit: 'खण्डपरशु', transliteration: 'Khandaparashu', mantraSanskrit: 'ॐ खण्डपरशवे नमः।', mantra: 'Om Khandaparashave Namah', meaning: 'One Who Holds a Broken Axe' },
-      { number: 89, sanskrit: 'अज', transliteration: 'Aja', mantraSanskrit: 'ॐ अजाय नमः।', mantra: 'Om Ajaya Namah', meaning: 'The Lord Who is Unborn i.e. Eternal' },
-      { number: 90, sanskrit: 'पाशविमोचक', transliteration: 'Pashavimochaka', mantraSanskrit: 'ॐ पाशविमोचकाय नमः।', mantra: 'Om Pashavimochakaya Namah', meaning: 'The Lord Who Liberates from All Worldly Bondages' },
-      { number: 91, sanskrit: 'मृड', transliteration: 'Mrida', mantraSanskrit: 'ॐ मृडाय नमः।', mantra: 'Om Mridaya Namah', meaning: 'The Lord Who is the Granter of Happiness' },
-      { number: 92, sanskrit: 'पशुपति', transliteration: 'Pashupati', mantraSanskrit: 'ॐ पशुपतये नमः।', mantra: 'Om Pashupataye Namah', meaning: 'The One Who is the Lord of All Beings' },
-      { number: 93, sanskrit: 'देव', transliteration: 'Deva', mantraSanskrit: 'ॐ देवाय नमः।', mantra: 'Om Devaya Namah', meaning: 'The One Who is Adorable to All of Us' },
-      { number: 94, sanskrit: 'महादेव', transliteration: 'Mahadeva', mantraSanskrit: 'ॐ महादेवाय नमः।', mantra: 'Om Mahadevaya Namah', meaning: 'One Who is the God of the Gods' },
-      { number: 95, sanskrit: 'अव्यय', transliteration: 'Avyaya', mantraSanskrit: 'ॐ अव्ययाय नमः।', mantra: 'Om Avyayaya Namah', meaning: 'The One Who is Imperishable' },
-      { number: 96, sanskrit: 'हरि', transliteration: 'Hari', mantraSanskrit: 'ॐ हरये नमः।', mantra: 'Om Haraye Namah', meaning: 'The One Who is the Lord of Nature' },
-      { number: 97, sanskrit: 'पूषदन्तभिद्', transliteration: 'Pushadantabhid', mantraSanskrit: 'ॐ पूषदन्तभिदे नमः।', mantra: 'Om Pushadantabhide Namah', meaning: 'The Lord Who Broke the Teeth of a God Named Pushan' },
-      { number: 98, sanskrit: 'अव्यग्र', transliteration: 'Avyagra', mantraSanskrit: 'ॐ अव्यग्राय नमः।', mantra: 'Om Avyagraya Namah', meaning: 'The Lord Who has a Stable and Unwavering Nature' },
-      { number: 99, sanskrit: 'दक्षाध्वरहर', transliteration: 'Dakshadhvarahara', mantraSanskrit: 'ॐ दक्षाध्वरहराय नमः।', mantra: 'Om Dakshadhvaraharaya Namah', meaning: 'One Who is the Destroyer of Daksha Prajapati\'s Sacrifice (Yajna)' },
-      { number: 100, sanskrit: 'हर', transliteration: 'Hara', mantraSanskrit: 'ॐ हराय नमः।', mantra: 'Om Haraya Namah', meaning: 'The Lord Who Destroys All Sins' },
-      { number: 101, sanskrit: 'भगनेत्रभित्', transliteration: 'Bhaganetrabhit', mantraSanskrit: 'ॐ भगनेत्रभिदे नमः।', mantra: 'Om Bhaganetrabhide Namah', meaning: 'The Lord Who Damaged Bhaga\'s Eye' },
-      { number: 102, sanskrit: 'अव्यक्त', transliteration: 'Avyakta', mantraSanskrit: 'ॐ अव्यक्ताय नमः।', mantra: 'Om Avyaktaya Namah', meaning: 'The Lord Who is Invisible' },
-      { number: 103, sanskrit: 'सहस्राक्ष', transliteration: 'Sahasraksha', mantraSanskrit: 'ॐ सहस्राक्षाय नमः।', mantra: 'Om Sahasrakshaya Namah', meaning: 'The One with Thousand Eyes' },
-      { number: 104, sanskrit: 'सहस्रपात्', transliteration: 'Sahasrapat', mantraSanskrit: 'ॐ सहस्रपदे नमः।', mantra: 'Om Sahasrapade Namah', meaning: 'The One with Thousand Legs' },
-      { number: 105, sanskrit: 'अपवर्गप्रद', transliteration: 'Apavargaprada', mantraSanskrit: 'ॐ अपवर्गप्रदाय नमः।', mantra: 'Om Apavargapradaya Namah', meaning: 'The Lord Who Gives Salvation' },
-      { number: 106, sanskrit: 'अनन्त', transliteration: 'Ananta', mantraSanskrit: 'ॐ अनन्ताय नमः।', mantra: 'Om Anantaya Namah', meaning: 'The Lord Who is Infinite i.e. has Many Forms' },
-      { number: 107, sanskrit: 'तारक', transliteration: 'Taraka', mantraSanskrit: 'ॐ तारकाय नमः।', mantra: 'Om Tarakaya Namah', meaning: 'The One Who Gives Salvation to Everyone' },
-      { number: 108, sanskrit: 'परमेश्वर', transliteration: 'Parameshvara', mantraSanskrit: 'ॐ परमेश्वराय नमः।', mantra: 'Om Parameshvaraya Namah', meaning: 'The One Who is the Supreme God' },
-    ]
-  },
-
-  // GODDESSES
-  lakshmi: {
-    id: 'lakshmi',
-    name: 'Goddess Lakshmi',
-    title: 'Lakshmi Ashtottara Shatanamavali',
-    description: '108 Names of Goddess Lakshmi, the goddess of wealth and prosperity',
-    image: require('../assets/images/Gods/lakshmi.png'),
-    category: 'goddess',
-    names: [
-      { sanskrit: 'प्रकृति', transliteration: 'Prakritayai', meaning: 'Nature' },
-      { sanskrit: 'विकृति', transliteration: 'Vikritayai', meaning: 'Multi-faceted nature' },
-      { sanskrit: 'विद्या', transliteration: 'Vidyayai', meaning: 'Knowledge' },
-      { sanskrit: 'सर्वभूतहिते रता', transliteration: 'Sarvabhutahiteratayai', meaning: 'One who is devoted to welfare of all' },
-      { sanskrit: 'श्रद्धा', transliteration: 'Shraddhayai', meaning: 'Faith' },
-      { sanskrit: 'विभूति', transliteration: 'Vibhutayai', meaning: 'Prosperity' },
-      { sanskrit: 'सुरभि', transliteration: 'Surabhayai', meaning: 'The celestial cow' },
-      { sanskrit: 'परमात्मिका', transliteration: 'Paramatmikayai', meaning: 'Supreme soul' },
-      { sanskrit: 'वाचा', transliteration: 'Vachayai', meaning: 'Speech' },
-      { sanskrit: 'पद्मालया', transliteration: 'Padmalayayai', meaning: 'Residing on lotus' },
-      // Add remaining 98 names... (truncated for demo)
-      { sanskrit: 'श्री', transliteration: 'Shriyai', meaning: 'Auspiciousness' },
-    ]
-  },
-
-  durga: {
-    id: 'durga',
-    name: 'Goddess Durga',
-    title: 'Durga Ashtottara Shatanamavali',
-    description: '108 Names of Goddess Durga, the invincible mother goddess',
-    image: require('../assets/images/Gods/durga.png'),
-    category: 'goddess',
-    names: [
-      { sanskrit: 'श्री', transliteration: 'Shriyai', meaning: 'The auspicious one' },
-      { sanskrit: 'उमा', transliteration: 'Umayai', meaning: 'Daughter of Himavan' },
-      { sanskrit: 'भवानी', transliteration: 'Bhavanyai', meaning: 'Consort of Bhava (Shiva)' },
-      { sanskrit: 'दुर्गा', transliteration: 'Durgayai', meaning: 'The invincible one' },
-      { sanskrit: 'शिवा', transliteration: 'Shivayai', meaning: 'The auspicious' },
-      { sanskrit: 'पार्वती', transliteration: 'Parvatyai', meaning: 'Daughter of the mountain' },
-      { sanskrit: 'महामाया', transliteration: 'Mahayayai', meaning: 'The great illusion' },
-      { sanskrit: 'सर्वभूतहितप्रदा', transliteration: 'Sarvabhutahitapradayai', meaning: 'Bestower of good to all beings' },
-      { sanskrit: 'काली', transliteration: 'Kalyai', meaning: 'The dark one' },
-      { sanskrit: 'महाकाली', transliteration: 'Mahakalyai', meaning: 'The great dark one' },
-      // Add remaining 98 names... (truncated for demo)
-      { sanskrit: 'त्रिदशेश्वरी', transliteration: 'Tridasheshwaryai', meaning: 'Goddess of the three worlds' },
-    ]
-  },
-
-  saraswati: {
-    id: 'saraswati',
-    name: 'Goddess Saraswati',
-    title: 'Saraswati Ashtottara Shatanamavali',
-    description: '108 Names of Goddess Saraswati, the goddess of knowledge and arts',
-    image: require('../assets/images/Gods/saraswati.png'),
-    category: 'goddess',
-    names: [
-      { sanskrit: 'सरस्वती', transliteration: 'Saraswatyai', meaning: 'The flowing one' },
-      { sanskrit: 'महाभद्रा', transliteration: 'Mahabhadrayai', meaning: 'The supremely auspicious' },
-      { sanskrit: 'महापात्रा', transliteration: 'Mahapatrayai', meaning: 'Supremely sacred' },
-      { sanskrit: 'महामाया', transliteration: 'Mahayayai', meaning: 'The great illusion' },
-      { sanskrit: 'वाराही', transliteration: 'Varahyai', meaning: 'Boar incarnation' },
-      { sanskrit: 'वैष्णवी', transliteration: 'Vaishnayai', meaning: 'Follower of Vishnu' },
-      { sanskrit: 'चित्रा', transliteration: 'Chitrayai', meaning: 'The one in various colors' },
-      { sanskrit: 'वाणी', transliteration: 'Vanyai', meaning: 'Speech' },
-      { sanskrit: 'मेधा', transliteration: 'Medhayai', meaning: 'Intelligence' },
-      { sanskrit: 'विद्या', transliteration: 'Vidyayai', meaning: 'Knowledge' },
-      // Add remaining 98 names... (truncated for demo)
-      { sanskrit: 'ज्ञानरूपिणी', transliteration: 'Jnanarupinyai', meaning: 'Embodiment of knowledge' },
-    ]
-  },
-
-  // Additional deities can be added here following the same structure:
-  // rama, krishna, hanuman, etc.
+  // ========================================
+  // GODS (Male Deities)
+  // ========================================
+  
+  // The Supreme Trinity (Trimurti)
+  vishnu: vishnuAshtottaram,
+  shiva: shivaAshtottaram,
+  brahma: brahmaAshtottaram,
+  
+  // Major Avatars & Forms
+  krishna: krishnaAshtottaram,
+  rama: ramaAshtottaram,
+  narasimha: narasimhaAshtottaram,
+  
+  // Sons of Shiva & Parvati
+  ganesha: ganeshaAshtottaram,
+  kartikeya: kartikeyaAshtottaram,
+  murugan: muruganAshtottaram, // Tamil name for Kartikeya
+  
+  // Devotees & Servants
+  hanuman: hanumanAshtottaram,
+  
+  // Specialized Deities
+  kuber: kuberAshtottaram,        // God of Wealth
+  satyanarayan: satyanarayanAshtottaram, // Form of Vishnu
+  hayagriva: hayagrivaAshtottaram,  // Horse-headed avatar of Vishnu
+  bhairava: bhairavaAshtottaram,    // Fierce form of Shiva
+  
+  // ========================================
+  // GODDESSES (Female Deities)
+  // ========================================
+  
+  // Consorts of Trinity
+  lakshmi: lakshmiAshtottaram,      // Consort of Vishnu
+  saraswati: saraswatiAshtottaram,  // Consort of Brahma
+  durga: durgaAshtottaram,          // Form of Parvati (Shiva's consort)
+  
+  // Divine Consorts & Companions
+  radha: radhaAshtottaram,          // Consort of Krishna
+  sita: sitaAshtottaram,            // Consort of Rama
+  
+  // Nature & Sacred Goddesses
+  ganga: gangaAshtottaram,          // Goddess of the Ganges River
+  tulasi: tulasiAshtottaram,        // Sacred Plant Goddess
+  
+  // Powerful Goddesses
+  lalita: lalitaAshtottaram         // Goddess of Bliss
 };
 
-// Get list of all ashtottarams
+/**
+ * Get all deity IDs
+ * @returns {string[]} Array of all deity IDs
+ */
+export const getAllDeityIds = () => Object.keys(ashtottaramData);
+
+/**
+ * Get deity data by ID
+ * @param {string} deityId - The deity identifier
+ * @returns {Object|null} Deity ashtottaram data or null if not found
+ */
+export const getDeityById = (deityId) => ashtottaramData[deityId] || null;
+
+/**
+ * Get ashtottaram by ID (alias for getDeityById for backward compatibility)
+ * @param {string} id - The deity identifier
+ * @returns {Object|null} Deity ashtottaram data or null if not found
+ */
+export const getAshtottaramById = (id) => ashtottaramData[id] || null;
+
+/**
+ * Get list of all ashtottarams with summary info
+ * @returns {Object[]} Array of deity summaries
+ */
 export const getAshtottaramList = () => {
   return Object.values(ashtottaramData).map(deity => ({
     id: deity.id,
-    name: deity.name,
     title: deity.title,
     description: deity.description,
     image: deity.image,
@@ -447,14 +120,71 @@ export const getAshtottaramList = () => {
   }));
 };
 
-// Get a specific ashtottaram by ID
-export const getAshtottaramById = (id) => {
-  return ashtottaramData[id] || null;
+/**
+ * Get all gods (male deities)
+ * @returns {Object} Object containing all god ashtottarams
+ */
+export const getAllGods = () => {
+  const gods = {};
+  Object.entries(ashtottaramData).forEach(([id, deity]) => {
+    if (deity.category === 'god') {
+      gods[id] = deity;
+    }
+  });
+  return gods;
 };
 
-// Get ashtottarams by category (god/goddess)
-export const getAshtottaramsByCategory = (category) => {
-  return Object.values(ashtottaramData).filter(deity => deity.category === category);
+/**
+ * Get all goddesses (female deities)
+ * @returns {Object} Object containing all goddess ashtottarams
+ */
+export const getAllGoddesses = () => {
+  const goddesses = {};
+  Object.entries(ashtottaramData).forEach(([id, deity]) => {
+    if (deity.category === 'goddess') {
+      goddesses[id] = deity;
+    }
+  });
+  return goddesses;
+};
+
+/**
+ * Search deities by name or description
+ * @param {string} query - Search query
+ * @returns {Object[]} Array of matching deities
+ */
+export const searchDeities = (query) => {
+  const lowerQuery = query.toLowerCase();
+  return Object.values(ashtottaramData).filter(deity => 
+    deity.title.toLowerCase().includes(lowerQuery) ||
+    deity.description.toLowerCase().includes(lowerQuery) ||
+    deity.id.toLowerCase().includes(lowerQuery)
+  );
+};
+
+/**
+ * Get random deity
+ * @returns {Object} Random deity ashtottaram
+ */
+export const getRandomDeity = () => {
+  const deityIds = getAllDeityIds();
+  const randomId = deityIds[Math.floor(Math.random() * deityIds.length)];
+  return ashtottaramData[randomId];
+};
+
+/**
+ * Get deity count
+ * @returns {{total: number, gods: number, goddesses: number}} Deity counts
+ */
+export const getDeityCount = () => {
+  const gods = Object.values(ashtottaramData).filter(d => d.category === 'god');
+  const goddesses = Object.values(ashtottaramData).filter(d => d.category === 'goddess');
+  
+  return {
+    total: Object.keys(ashtottaramData).length,
+    gods: gods.length,
+    goddesses: goddesses.length
+  };
 };
 
 export default ashtottaramData;

@@ -1,0 +1,878 @@
+/**
+ * Goddess Tulasi - 108 Names (Ashtottara Shatanamavali)
+ * The sacred plant goddess, consort of Vishnu
+ */
+
+export const tulasiAshtottaram = {
+  id: 'tulasi',
+  title: 'Goddess Tulasi',
+  category: 'goddess',
+  image: '/images/Goddesses/tulasi.png',
+  description: 'The sacred plant goddess, consort of Vishnu',
+  names: [
+    {
+      number: 1,
+      sanskrit: 'श्री तुलस्यै',
+      transliteration: 'Shri Tulasyai',
+      mantraSanskrit: 'ॐ श्री तुलस्यै नमः',
+      mantra: 'Om Shri Tulasyai Namah',
+      meaning: ''
+    },
+    {
+      number: 2,
+      sanskrit: 'नन्दिन्यै',
+      transliteration: 'Nandinyai',
+      mantraSanskrit: 'ॐ नन्दिन्यै नमः',
+      mantra: 'Om Nandinyai Namah',
+      meaning: ''
+    },
+    {
+      number: 3,
+      sanskrit: 'देव्यै',
+      transliteration: 'Devyai',
+      mantraSanskrit: 'ॐ देव्यै नमः',
+      mantra: 'Om Devyai Namah',
+      meaning: ''
+    },
+    {
+      number: 4,
+      sanskrit: 'शिखिन्यै',
+      transliteration: 'Shikhinyai',
+      mantraSanskrit: 'ॐ शिखिन्यै नमः',
+      mantra: 'Om Shikhinyai Namah',
+      meaning: ''
+    },
+    {
+      number: 5,
+      sanskrit: 'धारिण्यै',
+      transliteration: 'Dharinyai',
+      mantraSanskrit: 'ॐ धारिण्यै नमः',
+      mantra: 'Om Dharinyai Namah',
+      meaning: ''
+    },
+    {
+      number: 6,
+      sanskrit: 'धात्र्यै',
+      transliteration: 'Dhatryai',
+      mantraSanskrit: 'ॐ धात्र्यै नमः',
+      mantra: 'Om Dhatryai Namah',
+      meaning: ''
+    },
+    {
+      number: 7,
+      sanskrit: 'सावित्र्यै',
+      transliteration: 'Savitryai',
+      mantraSanskrit: 'ॐ सावित्र्यै नमः',
+      mantra: 'Om Savitryai Namah',
+      meaning: ''
+    },
+    {
+      number: 8,
+      sanskrit: 'सत्यसन्धायै',
+      transliteration: 'Satyasandhayai',
+      mantraSanskrit: 'ॐ सत्यसन्धायै नमः',
+      mantra: 'Om Satyasandhayai Namah',
+      meaning: ''
+    },
+    {
+      number: 9,
+      sanskrit: 'कालहारिण्यै',
+      transliteration: 'Kalaharinyai',
+      mantraSanskrit: 'ॐ कालहारिण्यै नमः',
+      mantra: 'Om Kalaharinyai Namah',
+      meaning: ''
+    },
+    {
+      number: 10,
+      sanskrit: 'गौर्यै',
+      transliteration: 'Gauryai',
+      mantraSanskrit: 'ॐ गौर्यै नमः',
+      mantra: 'Om Gauryai Namah',
+      meaning: ''
+    },
+    {
+      number: 11,
+      sanskrit: 'देवगीतायै',
+      transliteration: 'Devagitayai',
+      mantraSanskrit: 'ॐ देवगीतायै नमः',
+      mantra: 'Om Devagitayai Namah',
+      meaning: ''
+    },
+    {
+      number: 12,
+      sanskrit: 'द्रवीयस्यै',
+      transliteration: 'Draviyasyai',
+      mantraSanskrit: 'ॐ द्रवीयस्यै नमः',
+      mantra: 'Om Draviyasyai Namah',
+      meaning: ''
+    },
+    {
+      number: 13,
+      sanskrit: 'पद्मिन्यै',
+      transliteration: 'Padminyai',
+      mantraSanskrit: 'ॐ पद्मिन्यै नमः',
+      mantra: 'Om Padminyai Namah',
+      meaning: ''
+    },
+    {
+      number: 14,
+      sanskrit: 'सीतायै',
+      transliteration: 'Sitayai',
+      mantraSanskrit: 'ॐ सीतायै नमः',
+      mantra: 'Om Sitayai Namah',
+      meaning: ''
+    },
+    {
+      number: 15,
+      sanskrit: 'रुक्मिण्यै',
+      transliteration: 'Rukminyai',
+      mantraSanskrit: 'ॐ रुक्मिण्यै नमः',
+      mantra: 'Om Rukminyai Namah',
+      meaning: ''
+    },
+    {
+      number: 16,
+      sanskrit: 'प्रियभूषणायै',
+      transliteration: 'Priyabhushanayai',
+      mantraSanskrit: 'ॐ प्रियभूषणायै नमः',
+      mantra: 'Om Priyabhushanayai Namah',
+      meaning: ''
+    },
+    {
+      number: 17,
+      sanskrit: 'श्रेयस्यै',
+      transliteration: 'Shreyasyai',
+      mantraSanskrit: 'ॐ श्रेयस्यै नमः',
+      mantra: 'Om Shreyasyai Namah',
+      meaning: ''
+    },
+    {
+      number: 18,
+      sanskrit: 'श्रीमत्यै',
+      transliteration: 'Shrimatyai',
+      mantraSanskrit: 'ॐ श्रीमत्यै नमः',
+      mantra: 'Om Shrimatyai Namah',
+      meaning: ''
+    },
+    {
+      number: 19,
+      sanskrit: 'मान्यायै',
+      transliteration: 'Manyayai',
+      mantraSanskrit: 'ॐ मान्यायै नमः',
+      mantra: 'Om Manyayai Namah',
+      meaning: ''
+    },
+    {
+      number: 20,
+      sanskrit: 'गौर्यै',
+      transliteration: 'Gauryai',
+      mantraSanskrit: 'ॐ गौर्यै नमः',
+      mantra: 'Om Gauryai Namah',
+      meaning: ''
+    },
+    {
+      number: 21,
+      sanskrit: 'गौतमार्चितायै',
+      transliteration: 'Gautamarchitayai',
+      mantraSanskrit: 'ॐ गौतमार्चितायै नमः',
+      mantra: 'Om Gautamarchitayai Namah',
+      meaning: ''
+    },
+    {
+      number: 22,
+      sanskrit: 'त्रेतायै',
+      transliteration: 'Tretayai',
+      mantraSanskrit: 'ॐ त्रेतायै नमः',
+      mantra: 'Om Tretayai Namah',
+      meaning: ''
+    },
+    {
+      number: 23,
+      sanskrit: 'त्रिपथगायै',
+      transliteration: 'Tripathagayai',
+      mantraSanskrit: 'ॐ त्रिपथगायै नमः',
+      mantra: 'Om Tripathagayai Namah',
+      meaning: ''
+    },
+    {
+      number: 24,
+      sanskrit: 'त्रिपादायै',
+      transliteration: 'Tripadayai',
+      mantraSanskrit: 'ॐ त्रिपादायै नमः',
+      mantra: 'Om Tripadayai Namah',
+      meaning: ''
+    },
+    {
+      number: 25,
+      sanskrit: 'त्रैमूर्त्यै',
+      transliteration: 'Traimurtyai',
+      mantraSanskrit: 'ॐ त्रैमूर्त्यै नमः',
+      mantra: 'Om Traimurtyai Namah',
+      meaning: ''
+    },
+    {
+      number: 26,
+      sanskrit: 'जगत्रयायै',
+      transliteration: 'Jagatrayayai',
+      mantraSanskrit: 'ॐ जगत्रयायै नमः',
+      mantra: 'Om Jagatrayayai Namah',
+      meaning: ''
+    },
+    {
+      number: 27,
+      sanskrit: 'त्रासिन्यै',
+      transliteration: 'Trasinyai',
+      mantraSanskrit: 'ॐ त्रासिन्यै नमः',
+      mantra: 'Om Trasinyai Namah',
+      meaning: ''
+    },
+    {
+      number: 28,
+      sanskrit: 'गात्रायै',
+      transliteration: 'Gatrayai',
+      mantraSanskrit: 'ॐ गात्रायै नमः',
+      mantra: 'Om Gatrayai Namah',
+      meaning: ''
+    },
+    {
+      number: 29,
+      sanskrit: 'गात्रियायै',
+      transliteration: 'Gatriyayai',
+      mantraSanskrit: 'ॐ गात्रियायै नमः',
+      mantra: 'Om Gatriyayai Namah',
+      meaning: ''
+    },
+    {
+      number: 30,
+      sanskrit: 'गर्भवारिण्यै',
+      transliteration: 'Garbhavarinyai',
+      mantraSanskrit: 'ॐ गर्भवारिण्यै नमः',
+      mantra: 'Om Garbhavarinyai Namah',
+      meaning: ''
+    },
+    {
+      number: 31,
+      sanskrit: 'शोभनायै',
+      transliteration: 'Shobhanayai',
+      mantraSanskrit: 'ॐ शोभनायै नमः',
+      mantra: 'Om Shobhanayai Namah',
+      meaning: ''
+    },
+    {
+      number: 32,
+      sanskrit: 'समायै',
+      transliteration: 'Samayai',
+      mantraSanskrit: 'ॐ समायै नमः',
+      mantra: 'Om Samayai Namah',
+      meaning: ''
+    },
+    {
+      number: 33,
+      sanskrit: 'द्विरदायै',
+      transliteration: 'Dviradayai',
+      mantraSanskrit: 'ॐ द्विरदायै नमः',
+      mantra: 'Om Dviradayai Namah',
+      meaning: ''
+    },
+    {
+      number: 34,
+      sanskrit: 'आराद्यै',
+      transliteration: 'Aradyai',
+      mantraSanskrit: 'ॐ आराद्यै नमः',
+      mantra: 'Om Aradyai Namah',
+      meaning: ''
+    },
+    {
+      number: 35,
+      sanskrit: 'यज्ञविद्यायै',
+      transliteration: 'Yajnavidyayai',
+      mantraSanskrit: 'ॐ यज्ञविद्यायै नमः',
+      mantra: 'Om Yajnavidyayai Namah',
+      meaning: ''
+    },
+    {
+      number: 36,
+      sanskrit: 'महाविद्यायै',
+      transliteration: 'Mahavidyayai',
+      mantraSanskrit: 'ॐ महाविद्यायै नमः',
+      mantra: 'Om Mahavidyayai Namah',
+      meaning: ''
+    },
+    {
+      number: 37,
+      sanskrit: 'गुह्यविद्यायै',
+      transliteration: 'Guhyavidyayai',
+      mantraSanskrit: 'ॐ गुह्यविद्यायै नमः',
+      mantra: 'Om Guhyavidyayai Namah',
+      meaning: ''
+    },
+    {
+      number: 38,
+      sanskrit: 'कामाक्ष्यै',
+      transliteration: 'Kamakshyai',
+      mantraSanskrit: 'ॐ कामाक्ष्यै नमः',
+      mantra: 'Om Kamakshyai Namah',
+      meaning: ''
+    },
+    {
+      number: 39,
+      sanskrit: 'कुलायै',
+      transliteration: 'Kulayai',
+      mantraSanskrit: 'ॐ कुलायै नमः',
+      mantra: 'Om Kulayai Namah',
+      meaning: ''
+    },
+    {
+      number: 40,
+      sanskrit: 'श्रीयै',
+      transliteration: 'Shriyai',
+      mantraSanskrit: 'ॐ श्रीयै नमः',
+      mantra: 'Om Shriyai Namah',
+      meaning: ''
+    },
+    {
+      number: 41,
+      sanskrit: 'भूम्यै',
+      transliteration: 'Bhumyai',
+      mantraSanskrit: 'ॐ भूम्यै नमः',
+      mantra: 'Om Bhumyai Namah',
+      meaning: ''
+    },
+    {
+      number: 42,
+      sanskrit: 'भवित्र्यै',
+      transliteration: 'Bhavitryai',
+      mantraSanskrit: 'ॐ भवित्र्यै नमः',
+      mantra: 'Om Bhavitryai Namah',
+      meaning: ''
+    },
+    {
+      number: 43,
+      sanskrit: 'सावित्र्यै',
+      transliteration: 'Savitryai',
+      mantraSanskrit: 'ॐ सावित्र्यै नमः',
+      mantra: 'Om Savitryai Namah',
+      meaning: ''
+    },
+    {
+      number: 44,
+      sanskrit: 'सरवेदविदाम्वरायै',
+      transliteration: 'Saravedavidamvarayai',
+      mantraSanskrit: 'ॐ सरवेदविदाम्वरायै नमः',
+      mantra: 'Om Saravedavidamvarayai Namah',
+      meaning: ''
+    },
+    {
+      number: 45,
+      sanskrit: 'शंखिन्यै',
+      transliteration: 'Shamkhinyai',
+      mantraSanskrit: 'ॐ शंखिन्यै नमः',
+      mantra: 'Om Shamkhinyai Namah',
+      meaning: ''
+    },
+    {
+      number: 46,
+      sanskrit: 'चक्रिण्यै',
+      transliteration: 'Chakrinyai',
+      mantraSanskrit: 'ॐ चक्रिण्यै नमः',
+      mantra: 'Om Chakrinyai Namah',
+      meaning: ''
+    },
+    {
+      number: 47,
+      sanskrit: 'चारिण्यै',
+      transliteration: 'Charinyai',
+      mantraSanskrit: 'ॐ चारिण्यै नमः',
+      mantra: 'Om Charinyai Namah',
+      meaning: ''
+    },
+    {
+      number: 48,
+      sanskrit: 'चपलेक्षणायै',
+      transliteration: 'Chapalekshanayai',
+      mantraSanskrit: 'ॐ चपलेक्षणायै नमः',
+      mantra: 'Om Chapalekshanayai Namah',
+      meaning: ''
+    },
+    {
+      number: 49,
+      sanskrit: 'पीताम्बरायै',
+      transliteration: 'Pitambarayai',
+      mantraSanskrit: 'ॐ पीताम्बरायै नमः',
+      mantra: 'Om Pitambarayai Namah',
+      meaning: ''
+    },
+    {
+      number: 50,
+      sanskrit: 'प्रोत सोमायै',
+      transliteration: 'Prota Somayai',
+      mantraSanskrit: 'ॐ प्रोत सोमायै नमः',
+      mantra: 'Om Prota Somayai Namah',
+      meaning: ''
+    },
+    {
+      number: 51,
+      sanskrit: 'सौरसायै',
+      transliteration: 'Saurasayai',
+      mantraSanskrit: 'ॐ सौरसायै नमः',
+      mantra: 'Om Saurasayai Namah',
+      meaning: ''
+    },
+    {
+      number: 52,
+      sanskrit: 'अक्षिण्यै',
+      transliteration: 'Akshinyai',
+      mantraSanskrit: 'ॐ अक्षिण्यै नमः',
+      mantra: 'Om Akshinyai Namah',
+      meaning: ''
+    },
+    {
+      number: 53,
+      sanskrit: 'अम्बायै',
+      transliteration: 'Ambayai',
+      mantraSanskrit: 'ॐ अम्बायै नमः',
+      mantra: 'Om Ambayai Namah',
+      meaning: ''
+    },
+    {
+      number: 54,
+      sanskrit: 'सरस्वत्यै',
+      transliteration: 'Sarasvatyai',
+      mantraSanskrit: 'ॐ सरस्वत्यै नमः',
+      mantra: 'Om Sarasvatyai Namah',
+      meaning: ''
+    },
+    {
+      number: 55,
+      sanskrit: 'सम्श्रयायै',
+      transliteration: 'Samshrayayai',
+      mantraSanskrit: 'ॐ सम्श्रयायै नमः',
+      mantra: 'Om Samshrayayai Namah',
+      meaning: ''
+    },
+    {
+      number: 56,
+      sanskrit: 'सर्व देवत्यै',
+      transliteration: 'Sarva Devatyai',
+      mantraSanskrit: 'ॐ सर्व देवत्यै नमः',
+      mantra: 'Om Sarva Devatyai Namah',
+      meaning: ''
+    },
+    {
+      number: 57,
+      sanskrit: 'विश्वाश्रयायै',
+      transliteration: 'Vishvashrayayai',
+      mantraSanskrit: 'ॐ विश्वाश्रयायै नमः',
+      mantra: 'Om Vishvashrayayai Namah',
+      meaning: ''
+    },
+    {
+      number: 58,
+      sanskrit: 'सुगन्धिन्यै',
+      transliteration: 'Sugandhinyai',
+      mantraSanskrit: 'ॐ सुगन्धिन्यै नमः',
+      mantra: 'Om Sugandhinyai Namah',
+      meaning: ''
+    },
+    {
+      number: 59,
+      sanskrit: 'सुवासनायै',
+      transliteration: 'Suvasanayai',
+      mantraSanskrit: 'ॐ सुवासनायै नमः',
+      mantra: 'Om Suvasanayai Namah',
+      meaning: ''
+    },
+    {
+      number: 60,
+      sanskrit: 'वरदायै',
+      transliteration: 'Varadayai',
+      mantraSanskrit: 'ॐ वरदायै नमः',
+      mantra: 'Om Varadayai Namah',
+      meaning: ''
+    },
+    {
+      number: 61,
+      sanskrit: 'सुश्रोण्यै',
+      transliteration: 'Sushronyai',
+      mantraSanskrit: 'ॐ सुश्रोण्यै नमः',
+      mantra: 'Om Sushronyai Namah',
+      meaning: ''
+    },
+    {
+      number: 62,
+      sanskrit: 'चन्द्रभागायै',
+      transliteration: 'Chandrabhagayai',
+      mantraSanskrit: 'ॐ चन्द्रभागायै नमः',
+      mantra: 'Om Chandrabhagayai Namah',
+      meaning: ''
+    },
+    {
+      number: 63,
+      sanskrit: 'यमुनाप्रियायै',
+      transliteration: 'Yamunapriyayai',
+      mantraSanskrit: 'ॐ यमुनाप्रियायै नमः',
+      mantra: 'Om Yamunapriyayai Namah',
+      meaning: ''
+    },
+    {
+      number: 64,
+      sanskrit: 'कावेर्यै',
+      transliteration: 'Kaveryai',
+      mantraSanskrit: 'ॐ कावेर्यै नमः',
+      mantra: 'Om Kaveryai Namah',
+      meaning: ''
+    },
+    {
+      number: 65,
+      sanskrit: 'मणिकर्णिकायै',
+      transliteration: 'Manikarnikayai',
+      mantraSanskrit: 'ॐ मणिकर्णिकायै नमः',
+      mantra: 'Om Manikarnikayai Namah',
+      meaning: ''
+    },
+    {
+      number: 66,
+      sanskrit: 'अर्चिन्यै',
+      transliteration: 'Archinyai',
+      mantraSanskrit: 'ॐ अर्चिन्यै नमः',
+      mantra: 'Om Archinyai Namah',
+      meaning: ''
+    },
+    {
+      number: 67,
+      sanskrit: 'स्थायिन्यै',
+      transliteration: 'Sthayinyai',
+      mantraSanskrit: 'ॐ स्थायिन्यै नमः',
+      mantra: 'Om Sthayinyai Namah',
+      meaning: ''
+    },
+    {
+      number: 68,
+      sanskrit: 'दानप्रदायै',
+      transliteration: 'Danapradayai',
+      mantraSanskrit: 'ॐ दानप्रदायै नमः',
+      mantra: 'Om Danapradayai Namah',
+      meaning: ''
+    },
+    {
+      number: 69,
+      sanskrit: 'धनवत्यै',
+      transliteration: 'Dhanavatyai',
+      mantraSanskrit: 'ॐ धनवत्यै नमः',
+      mantra: 'Om Dhanavatyai Namah',
+      meaning: ''
+    },
+    {
+      number: 70,
+      sanskrit: 'सोच्यमानसायै',
+      transliteration: 'Sochyamanasayai',
+      mantraSanskrit: 'ॐ सोच्यमानसायै नमः',
+      mantra: 'Om Sochyamanasayai Namah',
+      meaning: ''
+    },
+    {
+      number: 71,
+      sanskrit: 'शुचिन्यै',
+      transliteration: 'Shuchinyai',
+      mantraSanskrit: 'ॐ शुचिन्यै नमः',
+      mantra: 'Om Shuchinyai Namah',
+      meaning: ''
+    },
+    {
+      number: 72,
+      sanskrit: 'श्रेयस्यै',
+      transliteration: 'Shreyasyai',
+      mantraSanskrit: 'ॐ श्रेयस्यै नमः',
+      mantra: 'Om Shreyasyai Namah',
+      meaning: ''
+    },
+    {
+      number: 73,
+      sanskrit: 'प्रीतिचिन्तेक्षण्यै',
+      transliteration: 'Pritichintekshanyai',
+      mantraSanskrit: 'ॐ प्रीतिचिन्तेक्षण्यै नमः',
+      mantra: 'Om Pritichintekshanyai Namah',
+      meaning: ''
+    },
+    {
+      number: 74,
+      sanskrit: 'विभूत्यै',
+      transliteration: 'Vibhutyai',
+      mantraSanskrit: 'ॐ विभूत्यै नमः',
+      mantra: 'Om Vibhutyai Namah',
+      meaning: ''
+    },
+    {
+      number: 75,
+      sanskrit: 'आकृत्यै',
+      transliteration: 'Akrityai',
+      mantraSanskrit: 'ॐ आकृत्यै नमः',
+      mantra: 'Om Akrityai Namah',
+      meaning: ''
+    },
+    {
+      number: 76,
+      sanskrit: 'आविर्भूत्यै',
+      transliteration: 'Avirbhutyai',
+      mantraSanskrit: 'ॐ आविर्भूत्यै नमः',
+      mantra: 'Om Avirbhutyai Namah',
+      meaning: ''
+    },
+    {
+      number: 77,
+      sanskrit: 'प्रभाविन्यै',
+      transliteration: 'Prabhavinyai',
+      mantraSanskrit: 'ॐ प्रभाविन्यै नमः',
+      mantra: 'Om Prabhavinyai Namah',
+      meaning: ''
+    },
+    {
+      number: 78,
+      sanskrit: 'गन्धिन्यै',
+      transliteration: 'Gandhinyai',
+      mantraSanskrit: 'ॐ गन्धिन्यै नमः',
+      mantra: 'Om Gandhinyai Namah',
+      meaning: ''
+    },
+    {
+      number: 79,
+      sanskrit: 'स्वर्गिन्यै',
+      transliteration: 'Svarginyai',
+      mantraSanskrit: 'ॐ स्वर्गिन्यै नमः',
+      mantra: 'Om Svarginyai Namah',
+      meaning: ''
+    },
+    {
+      number: 80,
+      sanskrit: 'गदायै',
+      transliteration: 'Gadayai',
+      mantraSanskrit: 'ॐ गदायै नमः',
+      mantra: 'Om Gadayai Namah',
+      meaning: ''
+    },
+    {
+      number: 81,
+      sanskrit: 'वेद्यायै',
+      transliteration: 'Vedyayai',
+      mantraSanskrit: 'ॐ वेद्यायै नमः',
+      mantra: 'Om Vedyayai Namah',
+      meaning: ''
+    },
+    {
+      number: 82,
+      sanskrit: 'प्रभायै',
+      transliteration: 'Prabhayai',
+      mantraSanskrit: 'ॐ प्रभायै नमः',
+      mantra: 'Om Prabhayai Namah',
+      meaning: ''
+    },
+    {
+      number: 83,
+      sanskrit: 'सारस्यै',
+      transliteration: 'Sarasyai',
+      mantraSanskrit: 'ॐ सारस्यै नमः',
+      mantra: 'Om Sarasyai Namah',
+      meaning: ''
+    },
+    {
+      number: 84,
+      sanskrit: 'सरसिवासायै',
+      transliteration: 'Sarasivasayai',
+      mantraSanskrit: 'ॐ सरसिवासायै नमः',
+      mantra: 'Om Sarasivasayai Namah',
+      meaning: ''
+    },
+    {
+      number: 85,
+      sanskrit: 'सरस्वत्यै',
+      transliteration: 'Sarasvatyai',
+      mantraSanskrit: 'ॐ सरस्वत्यै नमः',
+      mantra: 'Om Sarasvatyai Namah',
+      meaning: ''
+    },
+    {
+      number: 86,
+      sanskrit: 'शरावत्यै',
+      transliteration: 'Sharavatyai',
+      mantraSanskrit: 'ॐ शरावत्यै नमः',
+      mantra: 'Om Sharavatyai Namah',
+      meaning: ''
+    },
+    {
+      number: 87,
+      sanskrit: 'रसिन्यै',
+      transliteration: 'Rasinyai',
+      mantraSanskrit: 'ॐ रसिन्यै नमः',
+      mantra: 'Om Rasinyai Namah',
+      meaning: ''
+    },
+    {
+      number: 88,
+      sanskrit: 'काळिन्यै',
+      transliteration: 'Kalinyai',
+      mantraSanskrit: 'ॐ काळिन्यै नमः',
+      mantra: 'Om Kalinyai Namah',
+      meaning: ''
+    },
+    {
+      number: 89,
+      sanskrit: 'श्रेयोवत्यै',
+      transliteration: 'Shreyovatyai',
+      mantraSanskrit: 'ॐ श्रेयोवत्यै नमः',
+      mantra: 'Om Shreyovatyai Namah',
+      meaning: ''
+    },
+    {
+      number: 90,
+      sanskrit: 'यामायै',
+      transliteration: 'Yamayai',
+      mantraSanskrit: 'ॐ यामायै नमः',
+      mantra: 'Om Yamayai Namah',
+      meaning: ''
+    },
+    {
+      number: 91,
+      sanskrit: 'ब्रह्मप्रियायै',
+      transliteration: 'Brahmapriyayai',
+      mantraSanskrit: 'ॐ ब्रह्मप्रियायै नमः',
+      mantra: 'Om Brahmapriyayai Namah',
+      meaning: ''
+    },
+    {
+      number: 92,
+      sanskrit: 'श्यामसुन्दरायै',
+      transliteration: 'Shyamasundarayai',
+      mantraSanskrit: 'ॐ श्यामसुन्दरायै नमः',
+      mantra: 'Om Shyamasundarayai Namah',
+      meaning: ''
+    },
+    {
+      number: 93,
+      sanskrit: 'रत्नरूपिण्यै',
+      transliteration: 'Ratnarupinyai',
+      mantraSanskrit: 'ॐ रत्नरूपिण्यै नमः',
+      mantra: 'Om Ratnarupinyai Namah',
+      meaning: ''
+    },
+    {
+      number: 94,
+      sanskrit: 'शमनिधिन्यै',
+      transliteration: 'Shamanidhinyai',
+      mantraSanskrit: 'ॐ शमनिधिन्यै नमः',
+      mantra: 'Om Shamanidhinyai Namah',
+      meaning: ''
+    },
+    {
+      number: 95,
+      sanskrit: 'शतानन्दायै',
+      transliteration: 'Shatanandayai',
+      mantraSanskrit: 'ॐ शतानन्दायै नमः',
+      mantra: 'Om Shatanandayai Namah',
+      meaning: ''
+    },
+    {
+      number: 96,
+      sanskrit: 'शतद्युतये',
+      transliteration: 'Shatadyutaye',
+      mantraSanskrit: 'ॐ शतद्युतये नमः',
+      mantra: 'Om Shatadyutaye Namah',
+      meaning: ''
+    },
+    {
+      number: 97,
+      sanskrit: 'शितिकण्ठायै',
+      transliteration: 'Shitikanthayai',
+      mantraSanskrit: 'ॐ शितिकण्ठायै नमः',
+      mantra: 'Om Shitikanthayai Namah',
+      meaning: ''
+    },
+    {
+      number: 98,
+      sanskrit: 'प्रयायै',
+      transliteration: 'Prayayai',
+      mantraSanskrit: 'ॐ प्रयायै नमः',
+      mantra: 'Om Prayayai Namah',
+      meaning: ''
+    },
+    {
+      number: 99,
+      sanskrit: 'धात्र्यै',
+      transliteration: 'Dhatryai',
+      mantraSanskrit: 'ॐ धात्र्यै नमः',
+      mantra: 'Om Dhatryai Namah',
+      meaning: ''
+    },
+    {
+      number: 100,
+      sanskrit: 'श्री वृन्दावन्यै',
+      transliteration: 'Shri Vrindavanyai',
+      mantraSanskrit: 'ॐ श्री वृन्दावन्यै नमः',
+      mantra: 'Om Shri Vrindavanyai Namah',
+      meaning: ''
+    },
+    {
+      number: 101,
+      sanskrit: 'कृष्णायै',
+      transliteration: 'Krishnayai',
+      mantraSanskrit: 'ॐ कृष्णायै नमः',
+      mantra: 'Om Krishnayai Namah',
+      meaning: ''
+    },
+    {
+      number: 102,
+      sanskrit: 'भक्तवत्सलायै',
+      transliteration: 'Bhaktavatsalayai',
+      mantraSanskrit: 'ॐ भक्तवत्सलायै नमः',
+      mantra: 'Om Bhaktavatsalayai Namah',
+      meaning: ''
+    },
+    {
+      number: 103,
+      sanskrit: 'गोपिकाक्रीडायै',
+      transliteration: 'Gopikakridayai',
+      mantraSanskrit: 'ॐ गोपिकाक्रीडायै नमः',
+      mantra: 'Om Gopikakridayai Namah',
+      meaning: ''
+    },
+    {
+      number: 104,
+      sanskrit: 'हरायै',
+      transliteration: 'Harayai',
+      mantraSanskrit: 'ॐ हरायै नमः',
+      mantra: 'Om Harayai Namah',
+      meaning: ''
+    },
+    {
+      number: 105,
+      sanskrit: 'अमृतरूपिण्यै',
+      transliteration: 'Amritarupinyai',
+      mantraSanskrit: 'ॐ अमृतरूपिण्यै नमः',
+      mantra: 'Om Amritarupinyai Namah',
+      meaning: ''
+    },
+    {
+      number: 106,
+      sanskrit: 'भूम्यै',
+      transliteration: 'Bhumyai',
+      mantraSanskrit: 'ॐ भूम्यै नमः',
+      mantra: 'Om Bhumyai Namah',
+      meaning: ''
+    },
+    {
+      number: 107,
+      sanskrit: 'श्री कृष्णकान्तायै',
+      transliteration: 'Shri Krishnakantayai',
+      mantraSanskrit: 'ॐ श्री कृष्णकान्तायै नमः',
+      mantra: 'Om Shri Krishnakantayai Namah',
+      meaning: ''
+    },
+    {
+      number: 108,
+      sanskrit: 'श्री तुलस्यै',
+      transliteration: 'Shri Tulasyai',
+      mantraSanskrit: 'ॐ श्री तुलस्यै नमः',
+      mantra: 'Om Shri Tulasyai Namah',
+      meaning: ''
+    }
+  ]
+};
