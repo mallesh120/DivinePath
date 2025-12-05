@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { literatureData } from '../../data/literature';
 import LiteratureCard from '../../components/LitratureCard/LiteratureCard';
 import './LiteratureLibraryPage.css';
-import '../../pages/GodsGalleryPage/GodsGalleryPage.css'; // Correctly import the shared styles
 
 const LiteratureLibraryPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -13,9 +12,10 @@ const LiteratureLibraryPage = () => {
 
   return (
     <div className="gallery-page">
-      {/* Reuse the header structure from GodsGalleryPage for consistency */}
+      {/* Header with Title and Search */}
       <div className="gallery-header">
         <h1 className="gallery-title">Literature Library</h1>
+        <p className="gallery-header-subtitle">Explore Sacred Hindu Texts & Epics</p>
         <div className="search-container">
           <input
             type="text"
@@ -27,12 +27,14 @@ const LiteratureLibraryPage = () => {
         </div>
       </div>
 
+      {/* No Results Message */}
       {filteredLiterature.length === 0 && searchTerm && (
         <p className="no-results-message">
           No stories found matching "{searchTerm}"
         </p>
       )}
 
+      {/* Literature Grid */}
       <div className="gallery-grid">
         {filteredLiterature.map((story) => (
           <LiteratureCard key={story.id} story={story} />

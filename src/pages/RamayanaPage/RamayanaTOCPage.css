@@ -1,3 +1,11 @@
+@import '../../styles/theme.css';
+
+.ramayana-toc-page {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #fffaf0 0%, #fff4e6 100%);
+}
+
 .toc-page {
   max-width: 1000px;
   margin: 40px auto;

@@ -30,6 +30,13 @@
   position: relative;
 }
 
+@import '../../styles/theme.css';
+
+.puja-reminder-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  padding: 2rem;
+}
 .card-header {
   display: flex;
   justify-content: space-between;

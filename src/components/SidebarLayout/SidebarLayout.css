@@ -1,3 +1,5 @@
+@import '../../styles/theme.css';
+
 .sidebar-layout-container {
   display: flex;
   max-width: 1400px;

@@ -1,3 +1,11 @@
+@import '../../styles/theme.css';
+
+.story-player-page {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #fffaf0 0%, #fff4e6 100%);
+}
+
 .story-player {
   display: flex;
   flex-direction: column;

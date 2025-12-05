@@ -1,13 +1,21 @@
+@import '../../styles/theme.css';
+
 .home-page {
   min-height: 100vh;
-  background: linear-gradient(to bottom, #fcf9f3 0%, #ffffff 100%);
+  padding: 2rem;
+  background: linear-gradient(135deg, #fffaf0 0%, #fff4e6 100%);
+}
+
+.home-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--warm-cream) 0%, var(--parchment-light) 50%, var(--parchment-mid) 100%);
 }
 
 .devotional-hero {
-  background: linear-gradient(135deg, #ff6600 0%, #ff8833 100%);
+  background: linear-gradient(135deg, var(--saffron-primary) 0%, var(--saffron-light) 100%);
   padding: 60px 20px;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(255, 102, 0, 0.2);
+  box-shadow: 0 8px 24px var(--accent-glow);
   margin-bottom: 40px;
 }
 
@@ -17,12 +25,13 @@
 }
 
 .hero-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
+  font-family: 'Playfair Display', 'Cinzel', serif;
+  font-size: 3.2rem;
+  font-weight: 800;
   color: white;
   margin: 0 0 15px 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.28);
+  letter-spacing: -1px;
 }
 
 .hero-subtitle {
@@ -66,18 +75,21 @@
 }
 
 .practice-tips-widget {
-  background: linear-gradient(135deg, #fff 0%, #f9f9f9 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #faf9f7 100%);
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-  border: 2px solid rgba(255, 102, 0, 0.1);
+  box-shadow: 0 8px 32px var(--shadow-light);
+  border: 2px solid var(--border-subtle);
 }
 
 .tips-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
-  font-weight: 600;
-  color: #ff6600;
+  font-family: 'Playfair Display', 'Cinzel', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--saffron-primary), var(--text-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   text-align: center;
   margin: 0 0 40px 0;
 }
@@ -111,10 +123,10 @@
 }
 
 .tip-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
-  font-weight: 600;
-  color: #333;
+  font-weight: 700;
+  color: var(--text-primary);
   text-align: center;
   margin: 0 0 20px 0;
 }
@@ -137,7 +149,7 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: #ff6600;
+  color: var(--saffron-primary);
   font-weight: bold;
   font-size: 1.1rem;
 }
