@@ -5,16 +5,39 @@ import { literatureData } from '../../data/literature';
 import './StoryPlayerPage.css';
 
 const StoryPlayerPage = () => {
-  const { storyId, kandaIndex } = useParams();
-  
-  const story = literatureData.find((s) => s.id === parseInt(storyId));
-  const kanda = story.kandas[kandaIndex];
-
+  // Hooks MUST be called at the top level, before any conditional returns
   const [currentSceneIndex, setCurrentSceneIndex] = useState(0);
   const nodeRef = useRef(null);
 
+  const { storyId, kandaIndex } = useParams();
+  
+  const story = literatureData.find((s) => s.id === parseInt(storyId) || s.id === storyId);
+  
+  if (!story) {
+    return (
+      <div className="story-not-found">
+        <h2>Story not found!</h2>
+        <Link to="/library">Back to the Library</Link>
+      </div>
+    );
+  }
+
+  // Handle kandas (Ramayana), parvas (Mahabharata), mandalas (Rigveda), kaandas (Atharvaveda), samhitas (Yajurveda)
+  const sections = story.kandas || story.parvas || story.mandalas || story.kaandas || story.samhitas;
+  
+  if (!sections || !sections[kandaIndex]) {
+    return (
+      <div className="story-not-found">
+        <h2>Section not found!</h2>
+        <Link to="/library">Back to the Library</Link>
+      </div>
+    );
+  }
+
+  const section = sections[kandaIndex];
+
   const handleNextScene = () => {
-    if (currentSceneIndex < kanda.scenes.length - 1) {
+    if (currentSceneIndex < section.scenes.length - 1) {
       setCurrentSceneIndex(currentSceneIndex + 1);
     }
   };
@@ -25,8 +48,8 @@ const StoryPlayerPage = () => {
     }
   };
   
-  const isLastScene = currentSceneIndex === kanda.scenes.length - 1;
-  const currentScene = kanda.scenes[currentSceneIndex];
+  const isLastScene = currentSceneIndex === section.scenes.length - 1;
+  const currentScene = section.scenes[currentSceneIndex];
 
   return (
     <div className="story-player">

@@ -6,7 +6,11 @@ import './LiteratureCardLink.css'; // 2. Import new CSS
 const LiteratureCard = ({ story }) => {
   // Check the story's type to determine the correct link path
   let path;
-  if (story.type === 'epic') {
+  
+  // Determine if it's one of the new text types that need TOC
+  const needsTOC = ['ramcharitmanas', 'rigveda', 'atharvaveda', 'yajurveda'].includes(story.id) || story.type === 'epic';
+  
+  if (needsTOC || story.type === 'epic') {
     path = `/library/ramayana/${story.id}`;
   } else if (story.type === 'scripture') {
     path = `/library/scripture/${story.id}`;

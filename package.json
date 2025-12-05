@@ -18,6 +18,9 @@
     "react-transition-group": "^4.4.5",
     "web-vitals": "^2.1.4"
   },
+  "devDependencies": {
+    "playwright": "^1.57.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -26,7 +29,10 @@
     "generate-mantras": "node scripts/generate-mantras.js",
     "lint": "eslint src --ext .js,.jsx --max-warnings=10",
     "lint:fix": "eslint src --ext .js,.jsx --fix --max-warnings=10",
-    "pre-push": "npm run lint && npm run build"
+    "pre-push": "npm run lint && npm run build",
+    "test-playwright": "node scripts/test-playwright-setup.js",
+    "scrape-batch": "node scripts/batch-scrape-playwright.js",
+    "scrape-universal": "node scripts/scrape-universal.js"
   },
   "eslintConfig": {
     "extends": [

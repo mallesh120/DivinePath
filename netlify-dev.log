@@ -1,0 +1,4 @@
+⬥ Injecting environment variable values for all scopes
+⬥ Ignored general context env var: LANG (defined in process)
+⬥ Injected .env file env vars: CLIENT_ID, CLIENT_SECRET, GENERATE_SOURCEMAP, GOOGLE_PLACES_API_KEY, GEMINI_API_KEY
+⬥ 'port' and 'targetPort' options cannot have same values. Please consult the documentation for more details: https://ntl.fyi/ports-and-netlify-dev
