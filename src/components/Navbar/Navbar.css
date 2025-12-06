@@ -173,7 +173,9 @@
     top: 0;
     right: -100%;
     width: 280px;
+    max-width: 85vw;
     height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile browsers */
     flex-direction: column;
     background: linear-gradient(180deg, var(--warm-cream) 0%, var(--parchment-light) 100%);
     padding: 80px var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
@@ -182,6 +184,8 @@
     z-index: 100;
     box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
   }
 
   .navbar-links.open {
@@ -203,6 +207,8 @@
     padding: 18px var(--spacing-lg);
     font-size: 1.1rem;
     text-align: left;
+    white-space: nowrap;
+    box-sizing: border-box;
   }
 
   .navbar-links a::after {
