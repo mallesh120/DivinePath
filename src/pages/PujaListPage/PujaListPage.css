@@ -57,7 +57,7 @@
 .puja-search-input {
   width: 100%;
   padding: 14px 45px 14px 45px;
-  border: 2px solid #e0e0e0;
+  border: 2px solid var(--neutral-200);
   border-radius: 25px;
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -75,7 +75,7 @@
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
-  background: #e0e0e0;
+  background: var(--neutral-200);
   border: none;
   width: 28px;
   height: 28px;
@@ -90,7 +90,7 @@
 }
 
 .clear-search-btn:hover {
-  background: #ff9933;
+  background: var(--saffron-primary);
   color: white;
 }
 
@@ -110,14 +110,14 @@
 
 .filter-label {
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   white-space: nowrap;
 }
 
 .filter-select {
   flex: 1;
   padding: 12px 20px;
-  border: 2px solid #e0e0e0;
+  border: 2px solid var(--neutral-200);
   border-radius: 25px;
   font-size: 1rem;
   background: white;
@@ -127,7 +127,7 @@
 
 .filter-select:focus {
   outline: none;
-  border-color: #ff9933;
+  border-color: var(--saffron-primary);
   box-shadow: 0 0 0 3px rgba(255, 153, 51, 0.1);
 }
 
@@ -135,7 +135,7 @@
   max-width: 1200px;
   margin: 0 auto 20px auto;
   padding: 0 20px;
-  color: #666;
+  color: var(--text-tertiary);
   font-size: 0.95rem;
 }
 
@@ -167,18 +167,18 @@
 .no-pujas-message h3 {
   font-size: 1.8rem;
   margin: 0 0 10px 0;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .no-pujas-message p {
-  color: #666;
+  color: var(--text-tertiary);
   margin: 0 0 25px 0;
   font-size: 1.1rem;
 }
 
 .reset-filters-btn {
   padding: 12px 30px;
-  background: linear-gradient(135deg, #ff9933 0%, #ffaa33 100%);
+  background: linear-gradient(135deg, var(--saffron-primary) 0%, #ffaa33 100%);
   color: white;
   border: none;
   border-radius: 25px;
@@ -204,11 +204,11 @@
 
 .puja-info-note {
   text-align: center;
-  color: #666;
+  color: var(--text-tertiary);
 }
 
 .puja-info-note h3 {
-  color: #ff9933;
+  color: var(--saffron-primary);
   margin: 0 0 15px 0;
   font-size: 1.5rem;
 }

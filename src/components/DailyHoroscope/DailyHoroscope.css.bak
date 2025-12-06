@@ -1,0 +1,247 @@
+@import '../../styles/theme.css';
+
+.horoscope-widget {
+  background: linear-gradient(135deg, #fef6e4 0%, var(--card-bg) 100%);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 30px auto;
+  box-shadow: 0 8px 30px rgba(255, 193, 7, 0.15);
+  border: 2px solid rgba(255, 193, 7, 0.2);
+}
+
+.horoscope-header {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(255, 193, 7, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.horoscope-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #f57c00;
+  margin: 0;
+}
+
+.view-full-panchangam {
+  text-decoration: none;
+  color: #f57c00;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 8px 20px;
+  border: 2px solid rgba(255, 193, 7, 0.3);
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  background: rgba(255, 193, 7, 0.05);
+}
+
+.view-full-panchangam:hover {
+  background: rgba(255, 193, 7, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.2);
+}
+
+.horoscope-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.horoscope-location,
+.horoscope-day {
+  font-size: 0.95rem;
+  color: var(--text-tertiary);
+  background: rgba(255, 193, 7, 0.1);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.horoscope-loading,
+.horoscope-error {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.1rem;
+  color: var(--text-tertiary);
+}
+
+.horoscope-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.cosmic-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #ffc107;
+}
+
+.info-icon {
+  font-size: 2.5rem;
+}
+
+.info-details {
+  flex: 1;
+}
+
+.info-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #f57c00;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 5px 0;
+}
+
+.info-value {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.info-time {
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  font-style: italic;
+}
+
+.guidance-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.guidance-card {
+  padding: 20px;
+  background: linear-gradient(135deg, var(--card-bg)8e1 0%, var(--card-bg) 100%);
+  border-radius: 12px;
+  border-left: 4px solid #ff9800;
+}
+
+.guidance-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f57c00;
+  margin: 0 0 10px 0;
+}
+
+.guidance-text {
+  font-size: 1rem;
+  color: var(--text-primary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.timings-highlight {
+  margin-top: 25px;
+  padding: 20px;
+  background: rgba(255, 193, 7, 0.05);
+  border-radius: 12px;
+  border: 2px dashed rgba(255, 193, 7, 0.3);
+}
+
+.timings-highlight-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f57c00;
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+.timings-compact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.timing-compact-item {
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.timing-compact-item.auspicious {
+  background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+  border-left: 4px solid #4caf50;
+}
+
+.timing-compact-item.inauspicious {
+  background: linear-gradient(135deg, #ffebee 0%, var(--card-bg)3e0 100%);
+  border-left: 4px solid #f44336;
+}
+
+.timing-compact-label {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.timing-compact-value {
+  color: var(--text-tertiary);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.timings-note {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-tertiary);
+  margin: 0;
+}
+
+.timings-note a {
+  color: #f57c00;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.timings-note a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .horoscope-widget {
+    padding: 20px;
+    margin: 20px 15px;
+  }
+
+  .horoscope-title {
+    font-size: 1.5rem;
+  }
+
+  .cosmic-info,
+  .guidance-section,
+  .timings-compact {
+    grid-template-columns: 1fr;
+  }
+
+  .timings-highlight {
+    padding: 15px;
+  }
+
+  .timings-highlight-title {
+    font-size: 1rem;
+  }
+}

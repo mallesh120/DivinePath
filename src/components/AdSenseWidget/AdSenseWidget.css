@@ -1,21 +1,21 @@
 @import '../../styles/theme.css';
 
 .adsense-widget-container {
-  background-color: #f0f0f0;
+  background-color: var(--neutral-200);
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: var(--spacing-md);
   text-align: center;
   min-height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
 }
 
 .ad-label {
   font-size: 0.8rem;
-  color: #888;
+  color: var(--text-tertiary);
   margin-bottom: 5px;
   text-transform: uppercase;
   letter-spacing: 1px;

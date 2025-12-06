@@ -3,7 +3,7 @@
 .story-player-page {
   min-height: 100vh;
   padding: 2rem;
-  background: linear-gradient(135deg, #fffaf0 0%, #fff4e6 100%);
+  background: linear-gradient(135deg, var(--parchment-light) 0%, var(--parchment-light) 100%);
 }
 
 .story-player {
@@ -13,11 +13,11 @@
   justify-content: center;
   min-height: calc(100vh - 80px); /* Full height minus navbar */
   padding: 20px;
-  background-color: #e0f7fa; /* Light blue sky background */
+  background-color: var(--neutral-200); /* Light blue sky background */
 }
 
 .story-scene {
-  background-color: #fff;
+  background-color: var(--card-bg);
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -35,7 +35,7 @@
 
 .scene-text {
   font-size: 1.5rem;
-  color: #333;
+  color: var(--text-primary);
   margin-top: 20px;
   line-height: 1.6;
 }
@@ -50,9 +50,9 @@
   padding: 12px 25px;
   font-size: 1.1rem;
   font-weight: bold;
-  border: 2px solid #000080;
-  background-color: #fff;
-  color: #000080;
+  border: 2px solid var(--navy);
+  background-color: var(--card-bg);
+  color: var(--navy);
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -60,18 +60,18 @@
 }
 
 .story-nav-button:hover {
-  background-color: #000080;
-  color: #fff;
+  background-color: var(--navy);
+  color: var(--card-bg);
 }
 
 .story-nav-button.finish {
-  background-color: #ff6600;
-  border-color: #ff6600;
-  color: #fff;
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: var(--card-bg);
 }
 
 .story-nav-button.finish:hover {
-  background-color: #e65c00;
+  background-color: var(--accent-primary);
 }
 
 /* --- Animation Styles for Scene Transitions --- */

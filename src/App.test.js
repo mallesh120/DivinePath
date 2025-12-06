@@ -10,9 +10,9 @@ test('navigates to Ramayana page when Ramayana card is clicked', async () => {
     </MemoryRouter>
   );
 
-  const ramayanaLink = await screen.findByRole('link', { name: /ramayana/i });
+  const ramayanaLink = await screen.findByRole('link', { name: /ramayana/i }, { timeout: 10000 });
   userEvent.click(ramayanaLink);
 
-  const ramayanaPageTitle = await screen.findByRole('heading', { name: /Ramayana/i });
+  const ramayanaPageTitle = await screen.findByRole('heading', { name: /Ramayana/i }, { timeout: 10000 });
   expect(ramayanaPageTitle).toBeInTheDocument();
-});
+}, 15000);

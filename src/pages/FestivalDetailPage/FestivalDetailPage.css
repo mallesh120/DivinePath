@@ -16,7 +16,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  color: #667eea;
+  color: var(--accent-blue);
   text-decoration: none;
   font-weight: 600;
   display: flex;
@@ -35,7 +35,7 @@
   font-weight: 700;
   color: #2c3e50;
   margin-bottom: 10px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -60,7 +60,7 @@
 }
 
 .festival-status-message.today {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-rose) 100%);
   color: white;
   box-shadow: 0 6px 12px rgba(245, 87, 108, 0.3);
 }
@@ -84,7 +84,7 @@
 }
 
 .festival-status-message.past {
-  background: #e0e0e0;
+  background: var(--neutral-200);
   color: #7f8c8d;
 }
 
@@ -128,14 +128,14 @@
   align-items: center;
   gap: 8px;
   font-size: 1rem;
-  color: #555;
-  background: #f8f9fa;
+  color: var(--text-secondary);
+  background: var(--neutral-300);
   padding: 10px 20px;
   border-radius: 25px;
 }
 
 .festival-detail-meta-item.featured {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
   color: white;
   padding: 12px 25px;
   box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
@@ -191,7 +191,7 @@
 
 .festival-detail-description {
   font-size: 1.1rem;
-  color: #555;
+  color: var(--text-secondary);
   line-height: 1.8;
   text-align: justify;
 }
@@ -205,8 +205,8 @@
 .festival-detail-ritual-item {
   padding: 12px 15px;
   margin-bottom: 10px;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border-left: 4px solid #667eea;
+  background: linear-gradient(135deg, var(--neutral-300) 0%, #e9ecef 100%);
+  border-left: 4px solid var(--accent-blue);
   border-radius: 8px;
   font-size: 1rem;
   color: #2c3e50;
@@ -230,7 +230,7 @@
 }
 
 .festival-detail-deity-card {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
   color: white;
   padding: 15px 25px;
   border-radius: 12px;

@@ -27,26 +27,26 @@
 
 .progress-count {
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .progress-percent {
   font-weight: 700;
-  color: #ff9933;
+  color: var(--saffron-primary);
   font-size: 1.1rem;
 }
 
 .progress-bar-mini {
   width: 100%;
   height: 8px;
-  background: #e0e0e0;
+  background: var(--neutral-200);
   border-radius: 10px;
   overflow: hidden;
 }
 
 .progress-fill-mini {
   height: 100%;
-  background: linear-gradient(90deg, #2ed573 0%, #7bed9f 100%);
+  background: linear-gradient(90deg, var(--accent-green-2) 0%, #7bed9f 100%);
   transition: width 0.4s ease;
 }
 
@@ -68,16 +68,16 @@
 
 .check-all-btn {
   background: #e8f8f5;
-  color: #2ed573;
+  color: var(--accent-green-2);
 }
 
 .check-all-btn:hover:not(:disabled) {
-  background: #2ed573;
+  background: var(--accent-green-2);
   color: white;
 }
 
 .uncheck-all-btn {
-  background: #fff5f5;
+  background: var(--card-bg)5f5;
   color: #ff4757;
 }
 
@@ -98,7 +98,7 @@
 }
 
 .material-category {
-  background: #f8f9fa;
+  background: var(--neutral-300);
   border-radius: 10px;
   padding: 15px;
 }
@@ -109,7 +109,7 @@
   gap: 8px;
   margin: 0 0 12px 0;
   font-size: 1rem;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .category-icon {
@@ -139,12 +139,12 @@
 
 .material-item:hover {
   background: #f0f4ff;
-  border-color: #ff9933;
+  border-color: var(--saffron-primary);
 }
 
 .material-item.checked {
   background: #e8f8f5;
-  border-color: #2ed573;
+  border-color: var(--accent-green-2);
 }
 
 .material-item.checked .material-name {
@@ -157,13 +157,13 @@
   height: 20px;
   cursor: pointer;
   flex-shrink: 0;
-  accent-color: #2ed573;
+  accent-color: var(--accent-green-2);
 }
 
 .material-name {
   flex: 1;
   font-size: 0.95rem;
-  color: #555;
+  color: var(--text-secondary);
   line-height: 1.4;
 }
 
@@ -175,7 +175,7 @@
   padding: 15px;
   background: linear-gradient(135deg, #e8f8f5 0%, #d1f5e8 100%);
   border-radius: 10px;
-  border: 2px solid #2ed573;
+  border: 2px solid var(--accent-green-2);
   animation: fadeInScale 0.5s ease;
 }
 
@@ -187,7 +187,7 @@
 .completion-text {
   font-size: 1rem;
   font-weight: 700;
-  color: #2ed573;
+  color: var(--accent-green-2);
 }
 
 @keyframes fadeInScale {

@@ -3,7 +3,7 @@
 .ramayana-toc-page {
   min-height: 100vh;
   padding: 2rem;
-  background: linear-gradient(135deg, #fffaf0 0%, #fff4e6 100%);
+  background: linear-gradient(135deg, var(--parchment-light) 0%, var(--parchment-light) 100%);
 }
 
 .toc-page {
@@ -36,7 +36,7 @@
 .toc-intro-text p {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .kanda-list h2 {
@@ -44,7 +44,7 @@
   color: #581845;
   text-align: center;
   margin-bottom: 30px;
-  border-bottom: 2px solid #ff9933;
+  border-bottom: 2px solid var(--saffron-primary);
   padding-bottom: 10px;
 }
 
@@ -52,7 +52,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fffaf0;
+  background-color: var(--parchment-light);
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -62,17 +62,17 @@
 .kanda-info h3 {
   margin: 0 0 5px 0;
   font-size: 1.5rem;
-  color: #000080;
+  color: var(--navy);
 }
 
 .kanda-info p {
   margin: 0;
-  color: #555;
+  color: var(--text-secondary);
 }
 
 .kanda-story-button {
-  background-color: #ff9933;
-  color: #000080;
+  background-color: var(--saffron-primary);
+  color: var(--navy);
   padding: 10px 20px;
   border-radius: 50px;
   text-decoration: none;
@@ -89,7 +89,7 @@
 
 .kanda-story-button.disabled {
   background-color: #ccc;
-  color: #666;
+  color: var(--text-tertiary);
   cursor: not-allowed;
 }
 

@@ -1,27 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@400;500;700&family=Cinzel:wght@700&display=swap');
 
 :root {
-  /* Color Palette - Modern Spiritual Aesthetic */
-  --saffron-primary: #FF9933;
-  --saffron-dark: #FF7F00;
-  --saffron-light: #FFB366;
+  /* Color Palette - Modern Spiritual Aesthetic (Refined) */
+  --saffron-primary: #EA580C; /* Deep Orange / Rust */
+  --saffron-dark: #C2410C;
+  --saffron-light: #FB923C;
+  
   /* legacy accents preserved for some components */
-  --accent-primary: #ff6600;
-  --accent-secondary: #4a90e2;
-  --gold-accent: #FFD700;
-  --warm-cream: #fdfbf7;
-  --parchment-light: #faf8f5;
-  --parchment-mid: #f7f5f0;
-  --text-primary: #1a1a1a;
-  --text-secondary: #555555;
-  --text-tertiary: #888888;
-  --card-bg: #ffffff;
-  --border-subtle: #e8dcc8;
-  --shadow-light: rgba(0, 0, 0, 0.08);
-  --shadow-medium: rgba(0, 0, 0, 0.12);
+  --accent-primary: #EA580C;
+  --accent-secondary: #0EA5E9; /* Sky Blue */
+  --gold-accent: #D97706; /* Muted Gold */
+  
+  /* Backgrounds - Clean Stone Palette */
+  --warm-cream: #FAFAF9; /* Stone 50 */
+  --parchment-light: #F5F5F4; /* Stone 100 */
+  --parchment-mid: #E7E5E4; /* Stone 200 */
+  
+  /* Text */
+  --text-primary: #1C1917; /* Stone 900 */
+  --text-secondary: #57534E; /* Stone 600 */
+  --text-tertiary: #A8A29E; /* Stone 400 */
+  
+  --card-bg: #FFFFFF;
+  --border-subtle: #E7E5E4;
+  
+  /* Shadows */
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --shadow-medium: rgba(0, 0, 0, 0.1);
   --shadow-dark: rgba(0, 0, 0, 0.15);
-  --accent-glow: rgba(255, 153, 51, 0.1);
+  --accent-glow: rgba(234, 88, 12, 0.15);
+  
   --ui-transition: 220ms ease;
+  /* Neutral tokens for legacy greys used in older components */
+  --neutral-100: #F5F5F4;
+  --neutral-200: #E7E5E4;
+  --neutral-300: #D6D3D1;
+
+  /* Modern Design Tokens */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Modern Shadows */
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+  --shadow-hover: 0 12px 32px rgba(0,0,0,0.15);
+}
+
+/* Secondary palette tokens (common accents used across pages) */
+:root {
+  --accent-purple: #9c27b0; /* used for devotional/purana widgets */
+  --accent-purple-2: #7b1fa2;
+  --accent-blue: #667eea; /* used for cards and highlights */
+  --accent-blue-2: #2196f3;
+  --accent-teal: #11998E; /* name-suggestion/teal accents */
+  --accent-green: #4caf50; /* success/auspicious */
+  --accent-green-2: #2ed573;
+  --accent-pink: #f093fb; /* festival / celebratory */
+  --accent-rose: #f5576c; /* warm pink/red accents */
+  --accent-red: #d63447;
+  --soft-peach: #ffecd2;
+  --peach: #fcb69f;
+  --deep-teal: #00acc1;
+  --indigo-dark: #341f97;
+  --navy: #000080;
 }
 
 /* Utility classes for common use */
@@ -31,54 +81,3 @@
 /* Small helpers */
 .center { display:flex; align-items:center; justify-content:center; }
 
-/* Dark-mode placeholder (optional) */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --warm-cream: #0f0f10;
-    --parchment-light: #0b0b0b;
-    --parchment-mid: #070707;
-    --text-primary: #f5f5f5;
-    --text-secondary: #cccccc;
-    --card-bg: #0b0b0b;
-    --shadow-light: rgba(0,0,0,0.6);
-  }
-}
-
-/* Allow manual dark mode via a `.dark` class on <html> or <body> */
-html.dark, body.dark, .dark {
-  --warm-cream: #0f0f10;
-  --parchment-light: #0b0b0b;
-  --parchment-mid: #070707;
-  --text-primary: #f5f5f5;
-  --text-secondary: #cccccc;
-  --text-tertiary: #9a9a9a;
-  --card-bg: #0b0b0b;
-  --border-subtle: rgba(255,255,255,0.04);
-  --shadow-light: rgba(0,0,0,0.6);
-  --shadow-medium: rgba(0,0,0,0.7);
-  --shadow-dark: rgba(0,0,0,0.8);
-  --accent-glow: rgba(255, 153, 51, 0.06);
-}
-
-/* Toggle-specific tokens */
-:root {
-  --toggle-off: rgba(0,0,0,0.12);
-  --toggle-on: var(--saffron-primary);
-  --thumb-bg: var(--card-bg);
-}
-
-html.dark, body.dark, .dark {
-  --toggle-off: rgba(255,255,255,0.08);
-  --toggle-on: var(--saffron-light);
-  --thumb-bg: #0b0b0b;
-}
-
-/* Smooth color transitions when toggling theme */
-body {
-  transition: background-color var(--ui-transition), color var(--ui-transition);
-}
-
-/* Optional helper to scope small transition rules */
-.theme-transition * {
-  transition: color var(--ui-transition) 0s, background-color var(--ui-transition) 0s, border-color var(--ui-transition) 0s;
-}

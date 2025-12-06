@@ -1,0 +1,244 @@
+@import '../../styles/theme.css';
+
+.puja-list-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--warm-cream) 0%, var(--parchment-light) 50%, var(--parchment-mid) 100%);
+}
+
+.puja-hero {
+  background: linear-gradient(135deg, var(--saffron-primary) 0%, var(--saffron-light) 60%, var(--saffron-light) 100%);
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 24px var(--accent-glow);
+}
+
+.puja-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.puja-page-title {
+  font-family: 'Playfair Display', 'Cinzel', serif;
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0 0 15px 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.28);
+}
+
+.puja-page-subtitle {
+  font-size: 1.3rem;
+  margin: 0;
+  opacity: 0.95;
+}
+
+.puja-controls {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.puja-search-bar {
+  position: relative;
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+}
+
+.puja-search-input {
+  width: 100%;
+  padding: 14px 45px 14px 45px;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.puja-search-input:focus {
+  outline: none;
+  border-color: var(--saffron-primary);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.clear-search-btn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #e0e0e0;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.clear-search-btn:hover {
+  background: #ff9933;
+  color: white;
+}
+
+.puja-filters {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-label {
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+.filter-select {
+  flex: 1;
+  padding: 12px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #ff9933;
+  box-shadow: 0 0 0 3px rgba(255, 153, 51, 0.1);
+}
+
+.puja-results-info {
+  max-width: 1200px;
+  margin: 0 auto 20px auto;
+  padding: 0 20px;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.pujas-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.no-pujas-message {
+  max-width: 500px;
+  margin: 60px auto;
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.no-pujas-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.no-pujas-message h3 {
+  font-size: 1.8rem;
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.no-pujas-message p {
+  color: #666;
+  margin: 0 0 25px 0;
+  font-size: 1.1rem;
+}
+
+.reset-filters-btn {
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #ff9933 0%, #ffaa33 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reset-filters-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 153, 51, 0.3);
+}
+
+.puja-page-footer {
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  padding: 30px 20px;
+  background: white;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.puja-info-note {
+  text-align: center;
+  color: #666;
+}
+
+.puja-info-note h3 {
+  color: #ff9933;
+  margin: 0 0 15px 0;
+  font-size: 1.5rem;
+}
+
+.puja-info-note p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .puja-page-title {
+    font-size: 2rem;
+  }
+
+  .puja-page-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .puja-filters {
+    flex-direction: column;
+  }
+
+  .filter-group {
+    min-width: 100%;
+  }
+
+  .pujas-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

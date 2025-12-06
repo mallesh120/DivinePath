@@ -1,0 +1,180 @@
+@import '../../styles/theme.css';
+
+/* ===== MODERN SPIRITUAL LITERATURE CARD DESIGN ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@400;500;700&family=Cinzel:wght@700&display=swap');
+
+/* Base Card Styling */
+.literature-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+  
+  /* Subtle initial shadow for depth */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+  
+  /* Spiritual touch: faint gold border on hover via pseudo-element */
+  position: relative;
+}
+
+/* Enhanced hover effect with tactile lift */
+.literature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15), 0 6px 12px rgba(255, 153, 51, 0.1);
+}
+
+/* Full-Bleed Image Container (45% of card height on desktop) */
+.literature-card-image-container {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f5f1e8 0%, #faf8f5 100%);
+  position: relative;
+}
+
+/* Image fills entire container (object-fit: cover ensures uniformity) */
+.literature-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+/* Subtle zoom on hover for immersive feel */
+.literature-card:hover .literature-card-image {
+  transform: scale(1.05);
+}
+
+/* Badge Styling - Pills floating on image top-right */
+.literature-type-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Badge hover effect */
+.literature-card:hover .literature-type-badge {
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Badge Colors - Updated with Spiritual Palette */
+.literature-type-badge {
+  background: linear-gradient(135deg, #FF9933 0%, #FF7F00 100%); /* Saffron/Gold */
+}
+
+/* Alternate badge colors for variety */
+.literature-card:nth-child(2) .literature-type-badge {
+  background: linear-gradient(135deg, #1E3A5F 0%, #2C5282 100%); /* Deep Blue */
+}
+
+.literature-card:nth-child(3) .literature-type-badge {
+  background: linear-gradient(135deg, #6B4423 0%, #8B5A3C 100%); /* Brown */
+}
+
+.literature-card:nth-child(4) .literature-type-badge {
+  background: linear-gradient(135deg, #8B3A3A 0%, #A84C4C 100%); /* Maroon */
+}
+
+/* Card Content Area */
+.literature-card-content {
+  padding: 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+
+/* Title - Epic, Literary Serif Font */
+.literature-card-title {
+  font-size: 1.35rem;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+  font-family: 'Playfair Display', 'Cinzel', serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+
+.literature-card:hover .literature-card-title {
+  color: #FF9933; /* Saffron accent on hover */
+}
+
+/* Summary - Clean, Readable Sans-Serif */
+.literature-card-summary {
+  font-size: 0.95rem;
+  color: #555555;
+  line-height: 1.6;
+  font-family: 'Lato', 'Open Sans', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* Feature Icons */
+.feature-icon {
+  font-size: 1rem;
+  margin: 12px 4px 0 0;
+  display: inline-block;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.literature-card:hover .feature-icon {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .literature-card-image-container {
+    height: 200px;
+  }
+
+  .literature-card-title {
+    font-size: 1.2rem;
+  }
+
+  .literature-card-summary {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .literature-card-image-container {
+    height: 160px;
+  }
+
+  .literature-card-content {
+    padding: 16px;
+  }
+
+  .literature-card-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .literature-card-summary {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}

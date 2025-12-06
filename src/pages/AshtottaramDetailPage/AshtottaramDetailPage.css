@@ -2,13 +2,13 @@
 
 .ashtottaram-detail-page {
   min-height: 100vh;
-  background: linear-gradient(to bottom, #fef5e7, #ffffff);
+  background: linear-gradient(to bottom, #fef5e7, var(--card-bg));
   padding-bottom: 60px;
 }
 
 /* Header Section */
 .ashtottaram-header {
-  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-primary) 100%);
   color: white;
   padding: 30px 20px 50px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -132,11 +132,11 @@
   border: none;
   outline: none;
   font-size: 1rem;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .search-bar input::placeholder {
-  color: #666;
+  color: var(--text-tertiary);
 }
 
 .clear-search {
@@ -146,12 +146,12 @@
   padding: 5px;
   display: flex;
   align-items: center;
-  color: #666;
+  color: var(--text-tertiary);
   transition: color 0.3s ease;
 }
 
 .clear-search:hover {
-  color: #ff6b35;
+  color: var(--accent-primary);
 }
 
 .view-filters {
@@ -167,7 +167,7 @@
   padding: 10px 25px;
   border: none;
   background: transparent;
-  color: #666;
+  color: var(--text-tertiary);
   border-radius: 20px;
   font-size: 0.95rem;
   font-weight: 600;
@@ -176,12 +176,12 @@
 }
 
 .view-btn:hover {
-  background: #fff5f0;
-  color: #ff6b35;
+  background: var(--card-bg)5f0;
+  color: var(--accent-primary);
 }
 
 .view-btn.active {
-  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary));
   color: white;
 }
 
@@ -198,18 +198,18 @@
   align-items: center;
   margin-bottom: 30px;
   padding-bottom: 15px;
-  border-bottom: 3px solid #ff6b35;
+  border-bottom: 3px solid var(--accent-primary);
 }
 
 .names-header h2 {
   font-size: 2rem;
-  color: #333;
+  color: var(--text-primary);
   font-weight: 700;
 }
 
 .names-count {
   font-size: 1rem;
-  color: #666;
+  color: var(--text-tertiary);
   font-weight: 500;
 }
 
@@ -239,7 +239,7 @@
   flex-shrink: 0;
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary));
   color: white;
   border-radius: 50%;
   display: flex;
@@ -266,7 +266,7 @@
 
 .name-label {
   font-weight: 600;
-  color: #666;
+  color: var(--text-tertiary);
   min-width: 130px;
   font-size: 0.95rem;
 }
@@ -274,14 +274,14 @@
 .name-text {
   flex: 1;
   font-size: 1.05rem;
-  color: #333;
+  color: var(--text-primary);
   line-height: 1.6;
 }
 
 .sanskrit {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #ff6b35;
+  color: var(--accent-primary);
 }
 
 .mantra {
@@ -306,12 +306,12 @@
 
 .meaning {
   font-style: italic;
-  color: #555;
+  color: var(--text-secondary);
 }
 
 .audio-btn {
   flex-shrink: 0;
-  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary));
   color: white;
   border: none;
   width: 40px;
@@ -332,7 +332,7 @@
 }
 
 .audio-btn.playing {
-  background: linear-gradient(135deg, #4CAF50, #45a049);
+  background: linear-gradient(135deg, var(--accent-green), #45a049);
   animation: pulse 1.5s infinite;
 }
 
@@ -356,13 +356,13 @@
 
 .no-results p {
   font-size: 1.1rem;
-  color: #666;
+  color: var(--text-tertiary);
   margin-bottom: 20px;
 }
 
 .clear-btn {
   padding: 12px 30px;
-  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary));
   color: white;
   border: none;
   border-radius: 25px;
@@ -391,7 +391,7 @@
   text-align: center;
   font-size: 2rem;
   margin-bottom: 40px;
-  color: #333;
+  color: var(--text-primary);
   font-weight: 700;
 }
 
@@ -402,7 +402,7 @@
 }
 
 .instruction-card {
-  background: linear-gradient(135deg, #fff5f0, #ffffff);
+  background: linear-gradient(135deg, var(--card-bg)5f0, var(--card-bg));
   padding: 25px;
   border-radius: 15px;
   text-align: center;
@@ -419,7 +419,7 @@
 .instruction-icon {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary));
   color: white;
   border-radius: 50%;
   display: flex;
@@ -434,7 +434,7 @@
 .instruction-card p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #555;
+  color: var(--text-secondary);
 }
 
 /* Loading */
@@ -444,7 +444,7 @@
   justify-content: center;
   height: 100vh;
   font-size: 1.5rem;
-  color: #666;
+  color: var(--text-tertiary);
 }
 
 /* Responsive Design */

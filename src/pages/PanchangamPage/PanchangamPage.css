@@ -93,7 +93,7 @@
 .panchangam-subtext {
   display: block;
   font-size: 0.8rem;
-  color: #666;
+  color: var(--text-tertiary);
   margin-top: 2px;
 }
 

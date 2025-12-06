@@ -1,0 +1,201 @@
+@import '../../styles/theme.css';
+
+.puja-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.puja-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.puja-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.puja-card-header {
+  background: linear-gradient(135deg, #ff9933 0%, #ffaa33 100%);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.puja-category-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 6px 12px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.category-icon {
+  font-size: 1.2rem;
+}
+
+.category-text {
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.puja-difficulty-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.puja-card-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.puja-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff6b35;
+  margin: 0 0 8px 0;
+}
+
+.puja-deity {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+
+.puja-description {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 15px 0;
+  flex: 1;
+}
+
+.puja-meta {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  padding: 15px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.puja-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.meta-icon {
+  font-size: 1.1rem;
+}
+
+.meta-text {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.puja-occasion {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.occasion-label {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.occasion-text {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.puja-card-footer {
+  margin-top: auto;
+  padding-top: 15px;
+}
+
+.start-guide-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  color: white;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.puja-card:hover .start-guide-btn {
+  transform: translateX(5px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+@media (max-width: 768px) {
+  .puja-card-header {
+    padding: 12px 15px;
+  }
+
+  .puja-category-badge {
+    padding: 5px 10px;
+    font-size: 0.85rem;
+  }
+
+  .category-icon {
+    font-size: 1rem;
+  }
+
+  .puja-difficulty-badge {
+    padding: 5px 12px;
+    font-size: 0.8rem;
+  }
+
+  .puja-card-content {
+    padding: 15px;
+  }
+
+  .puja-name {
+    font-size: 1.3rem;
+  }
+
+  .puja-description {
+    font-size: 0.9rem;
+  }
+
+  .puja-meta {
+    gap: 10px;
+  }
+
+  .start-guide-btn {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+}

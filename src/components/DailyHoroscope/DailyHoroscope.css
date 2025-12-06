@@ -1,7 +1,7 @@
 @import '../../styles/theme.css';
 
 .horoscope-widget {
-  background: linear-gradient(135deg, #fef6e4 0%, #ffffff 100%);
+  background: linear-gradient(135deg, #fef6e4 0%, var(--card-bg) 100%);
   padding: 30px;
   border-radius: 20px;
   max-width: 900px;
@@ -56,7 +56,7 @@
 .horoscope-location,
 .horoscope-day {
   font-size: 0.95rem;
-  color: #666;
+  color: var(--text-tertiary);
   background: rgba(255, 193, 7, 0.1);
   padding: 5px 15px;
   border-radius: 20px;
@@ -68,7 +68,7 @@
   text-align: center;
   padding: 40px;
   font-size: 1.1rem;
-  color: #666;
+  color: var(--text-tertiary);
 }
 
 .horoscope-content {
@@ -114,13 +114,13 @@
 .info-value {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   margin: 0;
 }
 
 .info-time {
   font-size: 0.85rem;
-  color: #888;
+  color: var(--text-tertiary);
   font-style: italic;
 }
 
@@ -132,7 +132,7 @@
 
 .guidance-card {
   padding: 20px;
-  background: linear-gradient(135deg, #fff8e1 0%, #ffffff 100%);
+  background: linear-gradient(135deg, var(--card-bg)8e1 0%, var(--card-bg) 100%);
   border-radius: 12px;
   border-left: 4px solid #ff9800;
 }
@@ -146,7 +146,7 @@
 
 .guidance-text {
   font-size: 1rem;
-  color: #444;
+  color: var(--text-primary);
   line-height: 1.7;
   margin: 0;
 }
@@ -184,22 +184,22 @@
 
 .timing-compact-item.auspicious {
   background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
-  border-left: 4px solid #4caf50;
+  border-left: 4px solid var(--accent-green);
 }
 
 .timing-compact-item.inauspicious {
-  background: linear-gradient(135deg, #ffebee 0%, #fff3e0 100%);
+  background: linear-gradient(135deg, #ffebee 0%, var(--card-bg)3e0 100%);
   border-left: 4px solid #f44336;
 }
 
 .timing-compact-label {
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   font-size: 0.9rem;
 }
 
 .timing-compact-value {
-  color: #666;
+  color: var(--text-tertiary);
   font-size: 0.95rem;
   font-weight: 500;
 }
@@ -207,7 +207,7 @@
 .timings-note {
   text-align: center;
   font-size: 0.9rem;
-  color: #666;
+  color: var(--text-tertiary);
   margin: 0;
 }
 
