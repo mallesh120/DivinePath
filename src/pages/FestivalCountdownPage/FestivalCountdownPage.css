@@ -1,3 +1,5 @@
+@import '../../styles/theme.css';
+
 .festival-countdown-page {
   min-height: 100vh;
   background: linear-gradient(135deg, #ee9ca7 0%, #ffdde1 100%);

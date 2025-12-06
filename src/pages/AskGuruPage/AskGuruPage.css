@@ -1,3 +1,11 @@
+@import '../../styles/theme.css';
+
+.ask-guru-page {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #fffaf0 0%, #fff4e6 100%);
+}
+
 .ask-guru-page {
   min-height: 100vh;
   background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);

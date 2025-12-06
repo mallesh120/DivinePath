@@ -1,14 +1,22 @@
+@import '../../styles/theme.css';
+
+.god-detail-page {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #fffaf0 0%, #fff4e6 100%);
+}
+
 .detail-page {
   padding: 20px;
   min-height: calc(100vh - 80px - 80px);
-  background: linear-gradient(to bottom, #fffbf0 0%, #fff 100%);
+  background: linear-gradient(180deg, var(--warm-cream) 0%, var(--parchment-light) 50%, #fff 100%);
 }
 
 /* Back link at top */
 .back-link-top {
   display: inline-flex;
   align-items: center;
-  color: #ff6600;
+  color: var(--saffron-primary);
   text-decoration: none;
   font-weight: 600;
   margin-bottom: 30px;
@@ -20,7 +28,7 @@
 }
 
 .back-link-top:hover {
-  color: #ff9933;
+  color: var(--saffron-dark);
   transform: translateX(-5px);
 }
 
@@ -30,11 +38,11 @@
   margin: 0 auto 50px;
   display: flex;
   gap: 50px;
-  background: white;
+  background: var(--card-bg);
   padding: 50px;
   border-radius: 25px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-  border: 3px solid #ffd700;
+  box-shadow: 0 12px 36px var(--shadow-light);
+  border: 3px solid var(--gold-accent);
   position: relative;
   overflow: hidden;
 }
@@ -46,7 +54,7 @@
   left: 0;
   right: 0;
   height: 5px;
-  background: linear-gradient(90deg, #ff9933, #ffd700, #ff9933);
+  background: linear-gradient(90deg, var(--saffron-primary), var(--gold-accent), var(--saffron-primary));
 }
 
 /* Ashtottaram Section */

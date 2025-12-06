@@ -1,3 +1,5 @@
+@import '../../styles/theme.css';
+
 .dream-interpretation-page {
   min-height: 100vh;
   background: linear-gradient(135deg, #4E54C8 0%, #8F94FB 100%);

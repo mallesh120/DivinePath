@@ -1,10 +1,12 @@
+@import '../../styles/theme.css';
+
 :root {
-  --background-color: #fcf9f3;
-  --text-primary: #4a4a4a;
-  --accent-primary: #4a90e2;
-  --accent-secondary: #f5a623;
-  --card-background: #ffffff;
-  --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  --background-color: var(--warm-cream);
+  --text-primary: var(--text-primary);
+  --accent-primary: var(--saffron-primary);
+  --accent-secondary: var(--saffron-light);
+  --card-background: var(--card-bg);
+  --card-shadow: 0 4px 15px var(--shadow-light);
 }
 
 .navbar {
@@ -27,16 +29,19 @@
 }
 
 .navbar-brand a {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 1.8rem;
-  color: var(--accent-primary);
+  font-family: 'Playfair Display', 'Cinzel', serif;
+  font-weight: 800;
+  font-size: 1.9rem;
+  background: linear-gradient(135deg, var(--saffron-primary) 0%, var(--text-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .navbar-brand a:hover {
-  color: var(--accent-secondary);
+  transform: scale(1.03);
 }
 
 .navbar-links {
@@ -53,35 +58,34 @@
 
 .navbar-links a {
   font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  font-size: 1.1rem;
+  font-weight: 600;
+  font-size: 1rem;
   color: var(--text-primary);
   text-decoration: none;
-  padding: 10px 5px; /* Adjust padding for the underline effect */
+  padding: 10px 8px;
   position: relative;
-  transition: color 0.3s ease;
+  transition: all 0.25s ease;
 }
 
-/* Underline effect for links */
 .navbar-links a::after {
   content: '';
   position: absolute;
   width: 0;
-  height: 2px;
-  bottom: 0;
+  height: 3px;
+  bottom: -4px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--accent-primary);
-  transition: width 0.3s ease-in-out;
+  background: linear-gradient(90deg, var(--saffron-primary), var(--gold-accent));
+  transition: width 0.28s ease-in-out;
+  border-radius: 2px;
 }
 
 .navbar-links a:hover {
-  color: var(--accent-primary);
+  color: var(--saffron-primary);
 }
 
-/* Style for the currently active link */
 .navbar-links a.active-link {
-  color: var(--accent-primary);
+  color: var(--saffron-primary);
   font-weight: 700;
 }
 
@@ -89,3 +93,11 @@
 .navbar-links a.active-link::after {
   width: 100%;
 }
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+@import '../../styles/theme.css';

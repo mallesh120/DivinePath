@@ -1,3 +1,5 @@
+@import '../../styles/theme.css';
+
 .gita-page {
   min-height: 100vh;
   background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
@@ -14,6 +16,8 @@
 }
 
 .gita-hero {
+  
+  min-height: 100vh;
   text-align: center;
   margin-bottom: 30px;
 }

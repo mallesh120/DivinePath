@@ -1,3 +1,5 @@
+@import '../../styles/theme.css';
+
 .personalized-shloka-page {
   min-height: 100vh;
   background: linear-gradient(135deg, #FA8BFF 0%, #2BD2FF 100%);

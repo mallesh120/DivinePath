@@ -1,3 +1,11 @@
+@import '../../styles/theme.css';
+
+.festival-calendar-page {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #fffaf0 0%, #fff4e6 100%);
+}
+
 .festival-calendar-page {
   min-height: 100vh;
   background: linear-gradient(135deg, #fff9e6 0%, #fffef7 100%);

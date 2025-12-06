@@ -1,3 +1,11 @@
+@import '../../styles/theme.css';
+
+.all-gods-gallery-page {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #fffaf0 0%, #fff4e6 100%);
+}
+
 .all-gods-page {
   padding: 40px 20px;
   min-height: 100vh;

@@ -1,54 +1,71 @@
-/* Styling for the GodCard component */
+@import '../../styles/theme.css';
+
 .god-card {
-  /* Using CSS variables for consistency with the rest of the app */
-  background-color: var(--card-background);
-  border-radius: 15px;
-  box-shadow: var(--card-shadow);
-  overflow: hidden; /* Ensures the image corners are rounded */
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  background-color: var(--card-bg);
+  border-radius: 14px;
+  box-shadow: 0 4px 12px var(--shadow-light);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   cursor: pointer;
-  border: 1px solid #e0e0e0; /* A more subtle default border */
-  display: flex; /* Using flexbox for better content alignment */
+  border: 1px solid var(--border-subtle);
+  display: flex;
   flex-direction: column;
-  height: 100%; /* Ensure cards in a row are the same height */
+  height: 100%;
 }
 
 .god-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
-  border-color: var(--accent-secondary); /* Highlight with accent color on hover */
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px var(--shadow-dark);
+  border-color: var(--saffron-primary);
 }
 
 .god-card-image-container {
   width: 100%;
-  height: 200px;
-  /* A subtle gradient background looks more modern */
-  background: linear-gradient(135deg, #e0f7fa 0%, #f0f4f8 100%);
+  height: 240px;
+  background: linear-gradient(135deg, #f5f1e8 0%, #faf8f5 100%);
+  overflow: hidden;
 }
 
 .god-card-image {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* 'contain' is good for showing the full deity. 'cover' would crop but fill the space. */
-  padding: 10px; /* Add some padding so the image doesn't touch the edges */
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.god-card:hover .god-card-image {
+  transform: scale(1.05);
 }
 
 .god-card-content {
-  padding: 20px;
+  padding: 24px;
   text-align: center;
-  flex-grow: 1; /* Allows content to fill the remaining space */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .god-card-title {
-  font-size: 1.5rem;
-  color: var(--text-primary); /* Using variable for consistency */
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-family: 'Poppins', sans-serif; /* Using a more modern font */
+  font-size: 1.4rem;
+  font-family: 'Playfair Display', 'Cinzel', serif;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 12px 0;
+  letter-spacing: -0.5px;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+
+.god-card:hover .god-card-title {
+  color: var(--saffron-primary);
 }
 
 .god-card-description {
-  font-size: 1rem;
-  color: #666; /* A slightly lighter text color for the description */
-  line-height: 1.5;
+  font-size: 0.95rem;
+  font-family: 'Lato', sans-serif;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
 }

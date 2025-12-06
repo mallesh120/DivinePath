@@ -1,3 +1,11 @@
+@import '../../styles/theme.css';
+
+.fasting-guide-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff9e6 0%, #fffef7 100%);
+  padding: 2rem;
+}
+
 .fasting-guide-page {
   min-height: 100vh;
   background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%);

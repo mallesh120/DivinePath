@@ -1,14 +1,16 @@
+@import '../../styles/theme.css';
+
 .puja-list-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #fff9e6 0%, #fffef7 100%);
+  background: linear-gradient(180deg, var(--warm-cream) 0%, var(--parchment-light) 50%, var(--parchment-mid) 100%);
 }
 
 .puja-hero {
-  background: linear-gradient(135deg, #ff9933 0%, #ffaa33 60%, #ffbb44 100%);
+  background: linear-gradient(135deg, var(--saffron-primary) 0%, var(--saffron-light) 60%, var(--saffron-light) 100%);
   padding: 60px 20px;
   text-align: center;
   color: white;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px var(--accent-glow);
 }
 
 .puja-hero-content {
@@ -17,10 +19,11 @@
 }
 
 .puja-page-title {
+  font-family: 'Playfair Display', 'Cinzel', serif;
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 800;
   margin: 0 0 15px 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.28);
 }
 
 .puja-page-subtitle {
@@ -63,8 +66,8 @@
 
 .puja-search-input:focus {
   outline: none;
-  border-color: #ff9933;
-  box-shadow: 0 0 0 3px rgba(255, 153, 51, 0.1);
+  border-color: var(--saffron-primary);
+  box-shadow: 0 0 0 3px var(--accent-glow);
 }
 
 .clear-search-btn {
