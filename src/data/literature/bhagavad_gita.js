@@ -6,7 +6,7 @@ export const bhagavadGitaObject = {
   title: 'Bhagavad Gita',
   type: 'scripture',
   summary: 'The divine dialogue between Lord Krishna and Arjuna on the battlefield of Kurukshetra, covering philosophy, devotion, and the path to enlightenment.',
-  imageUrl: '/assets/images/bhagavad_gita.png', // To be added
+  imageUrl: 'https://placehold.co/600x800/EA580C/ffffff?text=Bhagavad+Gita',
   introduction: "The Bhagavad Gita, often referred to as the Gita, is a 700-verse Hindu scripture that is part of the epic Mahabharata. It presents a synthesis of Hindu ideas about dharma, theistic bhakti, and the yogic ideals of moksha. The text is a dialogue between Prince Arjuna and the god Krishna, who serves as his charioteer.",
   hasAudio: true,
   hasIllustrations: true,
@@ -22,7 +22,7 @@ export const bhagavadGitaObject = {
         "The nature of duty and righteousness"
       ],
       audioUrl: null, // To be added when audio files are available
-      illustration: null, // To be added when illustrations are available
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration", // To be added when illustrations are available
       sampleVerses: [
         {
           number: 1,
@@ -44,7 +44,7 @@ export const bhagavadGitaObject = {
         "The nature of the self-realized person"
       ],
       audioUrl: null,
-      illustration: null,
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration",
       sampleVerses: [
         {
           number: 47,
@@ -66,7 +66,7 @@ export const bhagavadGitaObject = {
         "The role of sacrifice (yajna)"
       ],
       audioUrl: null,
-      illustration: null
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
     },
     {
       number: 4,
@@ -80,7 +80,7 @@ export const bhagavadGitaObject = {
         "The nature of action and inaction"
       ],
       audioUrl: null,
-      illustration: null
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
     },
     {
       number: 5,
@@ -94,7 +94,7 @@ export const bhagavadGitaObject = {
         "Seeing the divine in all beings"
       ],
       audioUrl: null,
-      illustration: null
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
     },
     {
       number: 6,
@@ -108,7 +108,7 @@ export const bhagavadGitaObject = {
         "Gradual progress on the spiritual path"
       ],
       audioUrl: null,
-      illustration: null
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
     },
     {
       number: 7,
@@ -122,7 +122,7 @@ export const bhagavadGitaObject = {
         "The rare soul who truly knows Krishna"
       ],
       audioUrl: null,
-      illustration: null
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
     },
     {
       number: 8,
@@ -136,7 +136,7 @@ export const bhagavadGitaObject = {
         "Unwavering devotion"
       ],
       audioUrl: null,
-      illustration: null
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
     },
     {
       number: 9,
@@ -150,7 +150,7 @@ export const bhagavadGitaObject = {
         "God's equal love for all"
       ],
       audioUrl: null,
-      illustration: null
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
     },
     {
       number: 10,
@@ -164,7 +164,7 @@ export const bhagavadGitaObject = {
         "Krishna as the source of all"
       ],
       audioUrl: null,
-      illustration: null
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
     },
     {
       number: 11,
@@ -178,7 +178,7 @@ export const bhagavadGitaObject = {
         "Return to the personal form"
       ],
       audioUrl: null,
-      illustration: null,
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration",
       isIconic: true // This is the most famous chapter with Vishvarupa
     },
     {
@@ -193,7 +193,7 @@ export const bhagavadGitaObject = {
         "The path most dear to Krishna"
       ],
       audioUrl: null,
-      illustration: null
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
     },
     {
       number: 13,
@@ -207,7 +207,7 @@ export const bhagavadGitaObject = {
         "The Supreme Soul in all beings"
       ],
       audioUrl: null,
-      illustration: null
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
     },
     {
       number: 14,
@@ -221,7 +221,7 @@ export const bhagavadGitaObject = {
         "Symptoms of one who has transcended"
       ],
       audioUrl: null,
-      illustration: null
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
     },
     {
       number: 15,
@@ -235,7 +235,7 @@ export const bhagavadGitaObject = {
         "Knowledge that leads to liberation"
       ],
       audioUrl: null,
-      illustration: null
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
     },
     {
       number: 16,
@@ -249,7 +249,7 @@ export const bhagavadGitaObject = {
         "The importance of scripture"
       ],
       audioUrl: null,
-      illustration: null
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
     },
     {
       number: 17,
@@ -263,7 +263,7 @@ export const bhagavadGitaObject = {
         "Charity, austerity, and sacrifice in three modes"
       ],
       audioUrl: null,
-      illustration: null
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
     },
     {
       number: 18,
@@ -278,7 +278,7 @@ export const bhagavadGitaObject = {
         "The ultimate instruction: abandon all dharmas and surrender"
       ],
       audioUrl: null,
-      illustration: null,
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration",
       isConclusion: true
     }
   ]

@@ -6,7 +6,7 @@ export const vishnuPuranaObject = {
   title: 'Vishnu Purana',
   type: 'purana',
   summary: 'One of the eighteen Mahapuranas, this sacred text glorifies Lord Vishnu and describes the creation, maintenance, and dissolution of the universe.',
-  imageUrl: '/assets/images/vishnu_purana.png', // To be added
+  imageUrl: 'https://placehold.co/600x800/EA580C/ffffff?text=Vishnu+Purana',
   introduction: "The Vishnu Purana is one of the eighteen Mahapuranas and is considered one of the most important Puranas. It describes the creation of the universe, the genealogy of gods and sages, the avatars of Vishnu, and provides guidelines for living a righteous life. It consists of six books (amshas) with approximately 23,000 verses.",
   hasAudio: true,
   hasIllustrations: true,
@@ -24,19 +24,19 @@ export const vishnuPuranaObject = {
         "Cosmic time cycles (yugas)"
       ],
       audioUrl: null,
-      illustration: null,
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration",
       stories: [
         {
           title: "Dhruva's Devotion",
           summary: "The story of young prince Dhruva who through intense devotion to Vishnu attained the Pole Star position.",
           hasIllustration: true,
-          illustrationUrl: null
+          illustrationUrl: "https://placehold.co/400x300/EA580C/ffffff?text=Story+Illustration"
         },
         {
           title: "Prahlada and Hiranyakashipu",
           summary: "The demon king Hiranyakashipu's conflict with his devotee son Prahlada, leading to Vishnu's Narasimha avatar.",
           hasIllustration: true,
-          illustrationUrl: null
+          illustrationUrl: "https://placehold.co/400x300/EA580C/ffffff?text=Story+Illustration"
         }
       ]
     },
@@ -53,7 +53,7 @@ export const vishnuPuranaObject = {
         "Duties of different life stages (ashramas)"
       ],
       audioUrl: null,
-      illustration: null
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
     },
     {
       number: 3,
@@ -68,7 +68,7 @@ export const vishnuPuranaObject = {
         "The path to liberation"
       ],
       audioUrl: null,
-      illustration: null
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
     },
     {
       number: 4,
@@ -83,13 +83,13 @@ export const vishnuPuranaObject = {
         "Future kings and the Kali Yuga"
       ],
       audioUrl: null,
-      illustration: null,
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration",
       stories: [
         {
           title: "Krishna's Birth and Childhood",
           summary: "The miraculous birth of Krishna in prison, his childhood in Gokul, and his divine pastimes.",
           hasIllustration: true,
-          illustrationUrl: null
+          illustrationUrl: "https://placehold.co/400x300/EA580C/ffffff?text=Story+Illustration"
         }
       ]
     },
@@ -106,19 +106,19 @@ export const vishnuPuranaObject = {
         "Krishna's teachings and divine play"
       ],
       audioUrl: null,
-      illustration: null,
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration",
       stories: [
         {
           title: "Krishna and the Gopis",
           summary: "The divine love between Krishna and the Gopis, exemplifying the highest devotion.",
           hasIllustration: true,
-          illustrationUrl: null
+          illustrationUrl: "https://placehold.co/400x300/EA580C/ffffff?text=Story+Illustration"
         },
         {
           title: "Lifting Govardhan Hill",
           summary: "Krishna lifts the Govardhan mountain to protect the villagers from Indra's wrath.",
           hasIllustration: true,
-          illustrationUrl: null
+          illustrationUrl: "https://placehold.co/400x300/EA580C/ffffff?text=Story+Illustration"
         }
       ]
     },
@@ -135,7 +135,7 @@ export const vishnuPuranaObject = {
         "The ultimate dissolution of the universe"
       ],
       audioUrl: null,
-      illustration: null
+      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
     }
   ]
 };

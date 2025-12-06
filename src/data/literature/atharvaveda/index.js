@@ -6,35 +6,35 @@ import { kaanda20Scenes } from './kaanda_20';
 const createKaandaScenes = (kaandaNumber) => [
   {
     text: `The ${kaandaNumber} kaanda of the Atharvaveda contains hymns addressing various aspects of spiritual practice and material well-being. These verses provide guidance for navigating the complexities of earthly existence while maintaining spiritual awareness.`,
-    imageUrl: ""
+    imageUrl: "https://placehold.co/600x400/EA580C/ffffff?text=Atharvaveda+Scene"
   },
   {
     text: `Prayers in this kaanda invoke divine protection and blessings for specific purposes. The Atharvaveda recognizes that different situations require different approaches, and provides mantras tailored to diverse human needs.`,
-    imageUrl: ""
+    imageUrl: "https://placehold.co/600x400/EA580C/ffffff?text=Atharvaveda+Scene"
   },
   {
     text: `Hymns emphasize the importance of proper conduct and ethical behavior as foundations for success. The Atharvaveda teaches that material prosperity flows naturally to those who live in harmony with cosmic principles.`,
-    imageUrl: ""
+    imageUrl: "https://placehold.co/600x400/EA580C/ffffff?text=Atharvaveda+Scene"
   },
   {
     text: `The kaanda contains teachings on specific practices and rituals suited to the concerns addressed within its hymns. These practical instructions demonstrate how to apply the wisdom of the Vedas to daily life.`,
-    imageUrl: ""
+    imageUrl: "https://placehold.co/600x400/EA580C/ffffff?text=Atharvaveda+Scene"
   },
   {
     text: `Spiritual and mundane concerns are addressed together, reflecting the Atharvaveda's integrated approach to human development. Progress in one area supports progress in others when guided by dharma.`,
-    imageUrl: ""
+    imageUrl: "https://placehold.co/600x400/EA580C/ffffff?text=Atharvaveda+Scene"
   },
   {
     text: `Prayers in this section invoke both personal benefit and the welfare of society. Individual and collective well-being are understood as interconnected aspects of a single cosmic harmony.`,
-    imageUrl: ""
+    imageUrl: "https://placehold.co/600x400/EA580C/ffffff?text=Atharvaveda+Scene"
   },
   {
     text: `The Atharvaveda's practical wisdom is evident throughout, offering guidance that remains relevant across centuries. The principles taught here adapt to different times and circumstances while maintaining eternal truths.`,
-    imageUrl: ""
+    imageUrl: "https://placehold.co/600x400/EA580C/ffffff?text=Atharvaveda+Scene"
   },
   {
     text: `Hymns conclude with affirmations of faith in divine providence and the cosmic order. By aligning with these principles through knowledge and practice, humans can achieve all legitimate goals and spiritual fulfillment.`,
-    imageUrl: ""
+    imageUrl: "https://placehold.co/600x400/EA580C/ffffff?text=Atharvaveda+Scene"
   }
 ];
 
@@ -42,7 +42,7 @@ export const atharvavedaObject = {
   id: 'atharvaveda',
   title: 'Atharvaveda',
   summary: 'The fourth Veda focusing on practical spiritual wisdom, healing practices, and the integration of material and spiritual life.',
-  imageUrl: 'https://via.placeholder.com/300x400?text=Atharvaveda',
+  imageUrl: 'https://placehold.co/600x800/EA580C/ffffff?text=Atharvaveda',
   introduction: 'The Atharvaveda is the fourth Veda and stands apart from the Rigveda, Yajurveda, and Samaveda in its unique focus on practical applications of Vedic wisdom to daily life. Containing approximately 6,000 hymns organized in 20 kaandas (books), the Atharvaveda addresses healing, protection, prosperity, relationships, and both spiritual and material well-being. Unlike the other Vedas which focus primarily on ritual and philosophy, the Atharvaveda provides practical mantras and guidance for navigating life\'s challenges. It recognizes both material and spiritual dimensions of human experience and offers comprehensive guidance for achieving success, health, longevity, and ultimately, spiritual liberation.',
   author: 'Ancient Vedic Seers (Rishis)',
   language: 'Vedic Sanskrit',
