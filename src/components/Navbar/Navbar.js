@@ -1,19 +1,67 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import Search from '../Search/Search';
-import './Navbar.css'; // <--- THIS LINE IS CRUCIAL
+import React, { useState, useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
+import './Navbar.css';
 
 /**
  * The Navbar component provides navigation links for the app.
  * It uses NavLink to automatically style the active link.
+ * Includes a hamburger menu for mobile responsiveness.
  */
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location]);
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isMenuOpen && !event.target.closest('.navbar')) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [isMenuOpen]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-brand">
         <NavLink to="/">Divine Path</NavLink>
       </div>
-      <ul className="navbar-links">
+      
+      <button 
+        className={`navbar-hamburger ${isMenuOpen ? 'open' : ''}`}
+        onClick={toggleMenu}
+        aria-label="Toggle navigation menu"
+        aria-expanded={isMenuOpen}
+      >
+        <span className="hamburger-line"></span>
+        <span className="hamburger-line"></span>
+        <span className="hamburger-line"></span>
+      </button>
+
+      <ul className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
         <li>
           <NavLink to="/" className={({ isActive }) => (isActive ? 'active-link' : '')}>
             Home
@@ -55,7 +103,9 @@ const Navbar = () => {
           </NavLink>
         </li>
       </ul>
-      <Search />
+
+      {/* Overlay for mobile menu */}
+      {isMenuOpen && <div className="navbar-overlay" onClick={() => setIsMenuOpen(false)} />}
     </nav>
   );
 };
