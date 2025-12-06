@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Search from '../Search/Search';
 import './Navbar.css'; // <--- THIS LINE IS CRUCIAL
 
 /**
@@ -54,6 +55,7 @@ const Navbar = () => {
           </NavLink>
         </li>
       </ul>
+      <Search />
     </nav>
   );
 };

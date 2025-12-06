@@ -2,16 +2,16 @@
 
 .ashtottaram-detail-page {
   min-height: 100vh;
-  background: linear-gradient(to bottom, #fef5e7, var(--card-bg));
+  background-color: var(--bg-primary);
   padding-bottom: 60px;
 }
 
 /* Header Section */
 .ashtottaram-header {
-  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-primary) 100%);
+  background: var(--primary-color);
   color: white;
   padding: 30px 20px 50px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-md);
 }
 
 .back-btn {
@@ -20,9 +20,9 @@
   gap: 8px;
   background: rgba(255, 255, 255, 0.2);
   color: white;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 10px 20px;
-  border-radius: 25px;
+  border-radius: var(--radius-full);
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
@@ -116,10 +116,11 @@
   position: relative;
   display: flex;
   align-items: center;
-  background: white;
-  border-radius: 30px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
   padding: 15px 25px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-md);
 }
 
 .search-bar svg {
@@ -136,7 +137,7 @@
 }
 
 .search-bar input::placeholder {
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
 }
 
 .clear-search {
@@ -146,29 +147,30 @@
   padding: 5px;
   display: flex;
   align-items: center;
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
   transition: color 0.3s ease;
 }
 
 .clear-search:hover {
-  color: var(--accent-primary);
+  color: var(--primary-color);
 }
 
 .view-filters {
   display: flex;
   gap: 10px;
-  background: white;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
   padding: 8px;
-  border-radius: 30px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
 }
 
 .view-btn {
   padding: 10px 25px;
   border: none;
   background: transparent;
-  color: var(--text-tertiary);
-  border-radius: 20px;
+  color: var(--text-secondary);
+  border-radius: var(--radius-full);
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
@@ -176,12 +178,12 @@
 }
 
 .view-btn:hover {
-  background: var(--card-bg)5f0;
-  color: var(--accent-primary);
+  background: var(--bg-secondary);
+  color: var(--primary-color);
 }
 
 .view-btn.active {
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary));
+  background: var(--primary-color);
   color: white;
 }
 
@@ -198,7 +200,7 @@
   align-items: center;
   margin-bottom: 30px;
   padding-bottom: 15px;
-  border-bottom: 3px solid var(--accent-primary);
+  border-bottom: 3px solid var(--primary-color);
 }
 
 .names-header h2 {
@@ -209,7 +211,7 @@
 
 .names-count {
   font-size: 1rem;
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
   font-weight: 500;
 }
 
@@ -221,10 +223,11 @@
 }
 
 .name-card {
-  background: white;
-  border-radius: 15px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
   padding: 25px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-sm);
   display: flex;
   gap: 20px;
   transition: all 0.3s ease;
@@ -232,14 +235,15 @@
 
 .name-card:hover {
   transform: translateX(5px);
-  box-shadow: 0 4px 20px rgba(255, 107, 53, 0.15);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-light);
 }
 
 .name-number {
   flex-shrink: 0;
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary));
+  background: var(--primary-color);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -247,7 +251,7 @@
   justify-content: center;
   font-size: 1.2rem;
   font-weight: 700;
-  box-shadow: 0 3px 10px rgba(255, 107, 53, 0.3);
+  box-shadow: var(--shadow-sm);
 }
 
 .name-content {
@@ -266,7 +270,7 @@
 
 .name-label {
   font-weight: 600;
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
   min-width: 130px;
   font-size: 0.95rem;
 }
@@ -281,26 +285,26 @@
 .sanskrit {
   font-size: 1.3rem;
   font-weight: 600;
-  color: var(--accent-primary);
+  color: var(--primary-color);
 }
 
 .mantra {
   font-size: 1.1rem;
   font-weight: 500;
   padding: 8px 15px;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
 }
 
 .sanskrit-mantra {
-  color: #c62828;
-  background: linear-gradient(135deg, #ffebee, #ffcdd2);
-  border-left: 4px solid #c62828;
+  color: var(--primary-dark);
+  background: var(--primary-light);
+  border-left: 4px solid var(--primary-color);
   font-size: 1.2rem;
 }
 
 .english-mantra {
   color: #2e7d32;
-  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  background: #e8f5e9;
   border-left: 4px solid #2e7d32;
 }
 
@@ -311,7 +315,7 @@
 
 .audio-btn {
   flex-shrink: 0;
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary));
+  background: var(--primary-color);
   color: white;
   border: none;
   width: 40px;
@@ -323,16 +327,17 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 10px rgba(255, 107, 53, 0.3);
+  box-shadow: var(--shadow-sm);
 }
 
 .audio-btn:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+  box-shadow: var(--shadow-md);
+  background: var(--primary-dark);
 }
 
 .audio-btn.playing {
-  background: linear-gradient(135deg, var(--accent-green), #45a049);
+  background: #4caf50;
   animation: pulse 1.5s infinite;
 }
 
@@ -349,23 +354,24 @@
 .no-results {
   text-align: center;
   padding: 60px 20px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
 }
 
 .no-results p {
   font-size: 1.1rem;
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
   margin-bottom: 20px;
 }
 
 .clear-btn {
   padding: 12px 30px;
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary));
+  background: var(--primary-color);
   color: white;
   border: none;
-  border-radius: 25px;
+  border-radius: var(--radius-full);
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -374,7 +380,8 @@
 
 .clear-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+  box-shadow: var(--shadow-md);
+  background: var(--primary-dark);
 }
 
 /* Instructions Section */
@@ -382,9 +389,10 @@
   max-width: 1200px;
   margin: 60px auto 0;
   padding: 50px 20px;
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
 }
 
 .instructions-section h3 {
@@ -402,24 +410,24 @@
 }
 
 .instruction-card {
-  background: linear-gradient(135deg, var(--card-bg)5f0, var(--card-bg));
+  background: var(--bg-secondary);
   padding: 25px;
-  border-radius: 15px;
+  border-radius: var(--radius-lg);
   text-align: center;
-  border: 2px solid #ffe8dc;
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
 }
 
 .instruction-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.15);
-  border-color: #ffd4c0;
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-light);
 }
 
 .instruction-icon {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary));
+  background: var(--primary-color);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -428,7 +436,7 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0 auto 15px;
-  box-shadow: 0 3px 10px rgba(255, 107, 53, 0.3);
+  box-shadow: var(--shadow-sm);
 }
 
 .instruction-card p {
@@ -444,7 +452,7 @@
   justify-content: center;
   height: 100vh;
   font-size: 1.5rem;
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
 }
 
 /* Responsive Design */
