@@ -3,31 +3,27 @@
 .ask-guru-page {
   min-height: 100vh;
   padding: 2rem;
-  background: linear-gradient(135deg, var(--parchment-light) 0%, var(--parchment-light) 100%);
-}
-
-.ask-guru-page {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+  background-color: var(--bg-primary);
 }
 
 .guru-header {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
   padding: 2rem;
   text-align: center;
-  color: white;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-md);
 }
 
 .guru-header h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: var(--primary-color);
 }
 
 .guru-subtitle {
   font-size: 1.1rem;
-  opacity: 0.95;
+  color: var(--text-secondary);
 }
 
 .guru-container {
@@ -41,9 +37,10 @@
 }
 
 .chat-section {
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -92,15 +89,17 @@
 }
 
 .message.guru .message-content {
-  background: var(--neutral-200);
+  background: var(--bg-secondary);
   padding: 1rem;
-  border-radius: 15px 15px 15px 0;
+  border-radius: var(--radius-md) var(--radius-md) var(--radius-md) 0;
+  border: 1px solid var(--border-color);
 }
 
 .message.user .message-content {
-  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+  background: var(--primary-color);
+  color: white;
   padding: 1rem;
-  border-radius: 15px 15px 0 15px;
+  border-radius: var(--radius-md) var(--radius-md) 0 var(--radius-md);
 }
 
 .message.user .message-text {
@@ -118,17 +117,17 @@
 }
 
 .scripture-reference {
-  background: rgba(255, 107, 107, 0.1);
+  background: var(--primary-light);
   padding: 0.5rem;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   font-size: 0.9rem;
-  color: #FF6B6B;
+  color: var(--primary-color);
   font-style: italic;
 }
 
 .message-time {
   font-size: 0.75rem;
-  color: #999;
+  color: var(--text-secondary);
   align-self: flex-end;
 }
 
@@ -141,7 +140,7 @@
 .typing-indicator span {
   width: 8px;
   height: 8px;
-  background: #999;
+  background: var(--primary-color);
   border-radius: 50%;
   animation: bounce 1.4s infinite ease-in-out;
 }
@@ -165,41 +164,47 @@
 
 .input-container {
   padding: 1.5rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-secondary);
   display: flex;
   gap: 1rem;
 }
 
 .input-container textarea {
   flex-grow: 1;
-  border: 2px solid #eee;
-  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
   padding: 1rem;
   font-size: 1rem;
   font-family: inherit;
   resize: none;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   transition: border-color 0.3s ease;
 }
 
 .input-container textarea:focus {
   outline: none;
-  border-color: #FF6B6B;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px var(--primary-light);
 }
 
 .send-btn {
-  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+  background: var(--primary-color);
   color: white;
   border: none;
   padding: 0 2rem;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .send-btn:hover {
-  transform: scale(1.05);
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .sidebar-section {
@@ -211,15 +216,16 @@
 
 .suggested-topics,
 .guru-info {
-  background: white;
-  border-radius: 20px;
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
   padding: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
 }
 
 .suggested-topics h3,
 .guru-info h3 {
-  color: #FF6B6B;
+  color: var(--primary-color);
   font-size: 1.3rem;
   margin-bottom: 1rem;
 }
@@ -234,19 +240,20 @@
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  background: #f9f9f9;
-  border: 2px solid #eee;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   padding: 1rem;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: left;
 }
 
 .topic-btn:hover {
-  background: var(--card-bg);
-  border-color: #FF6B6B;
+  background: var(--bg-primary);
+  border-color: var(--primary-color);
   transform: translateX(5px);
+  box-shadow: var(--shadow-sm);
 }
 
 .topic-icon {
@@ -264,13 +271,13 @@
 }
 
 .topic-category {
-  color: #999;
+  color: var(--text-secondary);
   font-size: 0.8rem;
   margin-top: 0.2rem;
 }
 
 .guru-info p {
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1rem;
 }
@@ -281,7 +288,7 @@
 }
 
 .guru-info li {
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
   padding: 0.5rem 0;
   padding-left: 1.5rem;
   position: relative;
@@ -289,7 +296,7 @@
 
 .guru-info li::before {
   content: '•';
-  color: #FF6B6B;
+  color: var(--primary-color);
   font-weight: bold;
   position: absolute;
   left: 0;

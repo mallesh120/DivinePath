@@ -1,46 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@400;500;700&family=Cinzel:wght@700&display=swap');
 
 :root {
-  /* Color Palette - Modern Spiritual Aesthetic (Refined) */
-  --saffron-primary: #EA580C; /* Deep Orange / Rust */
-  --saffron-dark: #C2410C;
-  --saffron-light: #FB923C;
+  /* Color Palette - Modern Vibrant with Spiritual Touch */
+  --primary-color: #A78BFA; /* Lighter Purple */
+  --primary-dark: #7C3AED;
+  --primary-light: #C4B5FD;
   
-  /* legacy accents preserved for some components */
-  --accent-primary: #EA580C;
-  --accent-secondary: #0EA5E9; /* Sky Blue */
-  --gold-accent: #D97706; /* Muted Gold */
+  --secondary-color: #F9A8D4; /* Light Pink */
+  --secondary-dark: #EC4899;
+  --secondary-light: #FBCFE8;
   
-  /* Backgrounds - Clean Stone Palette */
-  --warm-cream: #FAFAF9; /* Stone 50 */
-  --parchment-light: #F5F5F4; /* Stone 100 */
-  --parchment-mid: #E7E5E4; /* Stone 200 */
+  --accent-color: #FCD34D; /* Lighter Amber/Yellow */
+  --accent-dark: #F59E0B;
+  --accent-light: #FDE68A;
+  
+  /* Legacy variables for backward compatibility */
+  --saffron-primary: #A78BFA;
+  --saffron-dark: #7C3AED;
+  --saffron-light: #C4B5FD;
+  --accent-primary: #A78BFA;
+  --accent-secondary: #F9A8D4;
+  --gold-accent: #FCD34D;
+  
+  /* Backgrounds - Modern Light */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F9FAFB; /* Gray 50 */
+  --bg-tertiary: #F3F4F6; /* Gray 100 */
+  
+  --warm-cream: #FFFFFF;
+  --parchment-light: #F9FAFB;
+  --parchment-mid: #F3F4F6;
   
   /* Text */
-  --text-primary: #1C1917; /* Stone 900 */
-  --text-secondary: #57534E; /* Stone 600 */
-  --text-tertiary: #A8A29E; /* Stone 400 */
+  --text-primary: #111827; /* Gray 900 */
+  --text-secondary: #6B7280; /* Gray 500 */
+  --text-tertiary: #9CA3AF; /* Gray 400 */
   
   --card-bg: #FFFFFF;
-  --border-subtle: #E7E5E4;
+  --border-color: #E5E7EB; /* Gray 200 */
+  --border-subtle: #F3F4F6;
   
-  /* Shadows */
-  --shadow-light: rgba(0, 0, 0, 0.05);
-  --shadow-medium: rgba(0, 0, 0, 0.1);
-  --shadow-dark: rgba(0, 0, 0, 0.15);
-  --accent-glow: rgba(234, 88, 12, 0.15);
+  /* Shadows with color */
+  --shadow-light: rgba(167, 139, 250, 0.05);
+  --shadow-medium: rgba(167, 139, 250, 0.1);
+  --shadow-dark: rgba(167, 139, 250, 0.15);
+  --accent-glow: rgba(167, 139, 250, 0.2);
   
   --ui-transition: 220ms ease;
-  /* Neutral tokens for legacy greys used in older components */
-  --neutral-100: #F5F5F4;
-  --neutral-200: #E7E5E4;
-  --neutral-300: #D6D3D1;
+  
+  /* Neutral tokens */
+  --neutral-100: #F9FAFB;
+  --neutral-200: #F3F4F6;
+  --neutral-300: #E5E7EB;
 
   /* Modern Design Tokens */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
   --radius-xl: 24px;
+  --radius-full: 9999px;
   
   --spacing-xs: 4px;
   --spacing-sm: 8px;
@@ -49,10 +67,14 @@
   --spacing-xl: 32px;
 
   /* Modern Shadows */
-  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
-  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
-  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
-  --shadow-hover: 0 12px 32px rgba(0,0,0,0.15);
+  --shadow-sm: 0 2px 8px rgba(167, 139, 250, 0.08);
+  --shadow-md: 0 4px 16px rgba(167, 139, 250, 0.12);
+  --shadow-lg: 0 8px 32px rgba(167, 139, 250, 0.16);
+  --shadow-hover: 0 12px 40px rgba(167, 139, 250, 0.2);
+  
+  /* Font */
+  --font-sans: 'Lato', 'Open Sans', sans-serif;
+  --font-display: 'Playfair Display', 'Cinzel', serif;
 }
 
 /* Secondary palette tokens (common accents used across pages) */

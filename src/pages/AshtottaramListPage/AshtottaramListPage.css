@@ -2,16 +2,16 @@
 
 .ashtottaram-list-page {
   min-height: 100vh;
-  background: linear-gradient(to bottom, #fef5e7, var(--card-bg));
+  background-color: var(--bg-primary);
 }
 
 /* Hero Section */
 .ashtottaram-hero {
-  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-primary) 100%);
+  background: var(--primary-color);
   color: white;
   padding: 80px 20px 60px;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-md);
 }
 
 .ashtottaram-hero-content {
@@ -69,10 +69,10 @@
 
 .filter-btn {
   padding: 12px 30px;
-  border: 2px solid var(--accent-primary);
-  background: white;
-  color: var(--accent-primary);
-  border-radius: 25px;
+  border: 1px solid var(--primary-color);
+  background: var(--bg-primary);
+  color: var(--primary-color);
+  border-radius: var(--radius-full);
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -80,15 +80,15 @@
 }
 
 .filter-btn:hover {
-  background: var(--card-bg)5f0;
+  background: var(--bg-secondary);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
+  box-shadow: var(--shadow-sm);
 }
 
 .filter-btn.active {
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary));
+  background: var(--primary-color);
   color: white;
-  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+  box-shadow: var(--shadow-md);
 }
 
 /* Ashtottaram Grid */
@@ -101,17 +101,19 @@
 
 /* Ashtottaram Card */
 .ashtottaram-card {
-  background: white;
-  border-radius: 15px;
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .ashtottaram-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-light);
 }
 
 .ashtottaram-card-image {
@@ -153,9 +155,9 @@
 
 .view-names-btn {
   background: white;
-  color: var(--accent-primary);
+  color: var(--primary-color);
   padding: 10px 25px;
-  border-radius: 25px;
+  border-radius: var(--radius-full);
   font-weight: 600;
   font-size: 0.95rem;
   transform: translateY(10px);
@@ -179,14 +181,14 @@
 
 .ashtottaram-card-title {
   font-size: 1rem;
-  color: var(--accent-primary);
+  color: var(--primary-color);
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .ashtottaram-card-desc {
   font-size: 0.95rem;
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 15px;
 }
