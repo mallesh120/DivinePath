@@ -2,12 +2,12 @@
 
 .ashtottaram-list-page {
   min-height: 100vh;
-  background: linear-gradient(to bottom, #fef5e7, #ffffff);
+  background: linear-gradient(to bottom, #fef5e7, var(--card-bg));
 }
 
 /* Hero Section */
 .ashtottaram-hero {
-  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-primary) 100%);
   color: white;
   padding: 80px 20px 60px;
   text-align: center;
@@ -57,7 +57,7 @@
 .filter-section h2 {
   font-size: 1.8rem;
   margin-bottom: 20px;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .filter-buttons {
@@ -69,9 +69,9 @@
 
 .filter-btn {
   padding: 12px 30px;
-  border: 2px solid #ff6b35;
+  border: 2px solid var(--accent-primary);
   background: white;
-  color: #ff6b35;
+  color: var(--accent-primary);
   border-radius: 25px;
   font-size: 1rem;
   font-weight: 600;
@@ -80,13 +80,13 @@
 }
 
 .filter-btn:hover {
-  background: #fff5f0;
+  background: var(--card-bg)5f0;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
 }
 
 .filter-btn.active {
-  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary));
   color: white;
   box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 }
@@ -153,7 +153,7 @@
 
 .view-names-btn {
   background: white;
-  color: #ff6b35;
+  color: var(--accent-primary);
   padding: 10px 25px;
   border-radius: 25px;
   font-weight: 600;
@@ -173,20 +173,20 @@
 .ashtottaram-card-content h3 {
   font-size: 1.5rem;
   margin-bottom: 8px;
-  color: #333;
+  color: var(--text-primary);
   font-weight: 700;
 }
 
 .ashtottaram-card-title {
   font-size: 1rem;
-  color: #ff6b35;
+  color: var(--accent-primary);
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .ashtottaram-card-desc {
   font-size: 0.95rem;
-  color: #666;
+  color: var(--text-tertiary);
   line-height: 1.6;
   margin-bottom: 15px;
 }
@@ -204,19 +204,19 @@
   align-items: center;
   gap: 6px;
   font-size: 0.9rem;
-  color: #888;
+  color: var(--text-tertiary);
   font-weight: 500;
 }
 
 .names-count svg {
-  color: #ff6b35;
+  color: var(--accent-primary);
 }
 
 /* No Results */
 .no-results {
   text-align: center;
   padding: 60px 20px;
-  color: #666;
+  color: var(--text-tertiary);
   font-size: 1.1rem;
 }
 
@@ -233,7 +233,7 @@
   text-align: center;
   font-size: 2.2rem;
   margin-bottom: 50px;
-  color: #333;
+  color: var(--text-primary);
   position: relative;
   padding-bottom: 15px;
 }
@@ -246,7 +246,7 @@
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: linear-gradient(to right, #ff6b35, #f7931e);
+  background: linear-gradient(to right, var(--accent-primary), var(--accent-primary));
   border-radius: 2px;
 }
 
@@ -257,7 +257,7 @@
 }
 
 .info-card {
-  background: linear-gradient(135deg, #fff5f0, #ffffff);
+  background: linear-gradient(135deg, var(--card-bg)5f0, var(--card-bg));
   padding: 30px;
   border-radius: 15px;
   border: 2px solid #ffe8dc;
@@ -273,14 +273,14 @@
 .info-card h3 {
   font-size: 1.3rem;
   margin-bottom: 15px;
-  color: #ff6b35;
+  color: var(--accent-primary);
   font-weight: 700;
 }
 
 .info-card p {
   font-size: 1rem;
   line-height: 1.7;
-  color: #555;
+  color: var(--text-secondary);
 }
 
 /* Responsive Design */

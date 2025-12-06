@@ -1,6 +1,6 @@
 .puja-reminder-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-rose) 100%);
   padding: 2rem;
 }
 
@@ -34,7 +34,7 @@
 
 .puja-reminder-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-rose) 100%);
   padding: 2rem;
 }
 .card-header {
@@ -47,13 +47,13 @@
 }
 
 .card-header h2 {
-  color: #f5576c;
+  color: var(--accent-rose);
   font-size: 2rem;
 }
 
 .completed-badge {
   padding: 0.5rem 1rem;
-  background: #4CAF50;
+  background: var(--accent-green);
   color: white;
   border-radius: 20px;
   font-size: 0.9rem;
@@ -78,7 +78,7 @@
 }
 
 .deity-info h3 {
-  color: #333;
+  color: var(--text-primary);
   font-size: 1.8rem;
   margin-bottom: 0.8rem;
 }
@@ -87,7 +87,7 @@
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
-  color: #666;
+  color: var(--text-tertiary);
   font-size: 0.95rem;
 }
 
@@ -97,19 +97,19 @@
 }
 
 .detail-group h4 {
-  color: #f5576c;
+  color: var(--accent-rose);
   margin-bottom: 0.8rem;
   font-size: 1.1rem;
 }
 
 .mantra-text {
   font-size: 1.3rem;
-  color: #f5576c;
+  color: var(--accent-rose);
   font-weight: 500;
   font-style: italic;
   padding: 1rem;
-  background: #fff5f7;
-  border-left: 4px solid #f5576c;
+  background: var(--card-bg)5f7;
+  border-left: 4px solid var(--accent-rose);
   border-radius: 8px;
 }
 
@@ -124,18 +124,18 @@
   background: #f5f5f5;
   border-radius: 20px;
   font-size: 0.9rem;
-  color: #333;
-  border: 1px solid #e0e0e0;
+  color: var(--text-primary);
+  border: 1px solid var(--neutral-200);
 }
 
 .detail-group p {
-  color: #666;
+  color: var(--text-tertiary);
   line-height: 1.8;
 }
 
 .complete-btn {
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-rose) 100%);
   color: white;
   border: none;
   border-radius: 8px;
@@ -158,7 +158,7 @@
   gap: 0.5rem;
   margin-top: 1.5rem;
   padding: 1rem;
-  background: linear-gradient(135deg, #fff5f7 0%, #ffe4e8 100%);
+  background: linear-gradient(135deg, var(--card-bg)5f7 0%, #ffe4e8 100%);
   border-radius: 10px;
 }
 
@@ -169,12 +169,12 @@
 .streak-number {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #f5576c;
+  color: var(--accent-rose);
 }
 
 .streak-label {
   font-size: 1.1rem;
-  color: #666;
+  color: var(--text-tertiary);
 }
 
 .puja-types-section {
@@ -186,7 +186,7 @@
 }
 
 .puja-types-section h2 {
-  color: #f5576c;
+  color: var(--accent-rose);
   font-size: 2rem;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -215,8 +215,8 @@
 }
 
 .puja-type-card.selected {
-  border-color: #f5576c;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border-color: var(--accent-rose);
+  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-rose) 100%);
   color: white;
 }
 
@@ -250,7 +250,7 @@
 }
 
 .puja-type-details h3 {
-  color: #f5576c;
+  color: var(--accent-rose);
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
 }
@@ -260,7 +260,7 @@
 }
 
 .details-content h4 {
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 0.8rem;
 }
 
@@ -275,13 +275,13 @@
   background: #f5f5f5;
   border-radius: 20px;
   font-size: 0.9rem;
-  color: #333;
-  border: 1px solid #e0e0e0;
+  color: var(--text-primary);
+  border: 1px solid var(--neutral-200);
 }
 
 .steps-list {
   padding-left: 1.5rem;
-  color: #666;
+  color: var(--text-tertiary);
 }
 
 .steps-list li {
@@ -298,7 +298,7 @@
 }
 
 .reminder-settings-section h2 {
-  color: #f5576c;
+  color: var(--accent-rose);
   font-size: 2rem;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -342,7 +342,7 @@
 .enable-btn,
 .test-btn {
   padding: 0.8rem 1.5rem;
-  background: #f5576c;
+  background: var(--accent-rose);
   color: white;
   border: none;
   border-radius: 8px;
@@ -367,7 +367,7 @@
 }
 
 .setting-group {
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--neutral-200);
   border-radius: 10px;
   padding: 1.5rem;
   background: #fafafa;
@@ -379,7 +379,7 @@
   gap: 1rem;
   font-size: 1.2rem;
   font-weight: bold;
-  color: #333;
+  color: var(--text-primary);
   cursor: pointer;
   margin-bottom: 1rem;
 }
@@ -388,7 +388,7 @@
   width: 24px;
   height: 24px;
   cursor: pointer;
-  accent-color: #f5576c;
+  accent-color: var(--accent-rose);
 }
 
 .time-picker {
@@ -403,13 +403,13 @@
 
 .time-picker label {
   font-weight: 500;
-  color: #666;
+  color: var(--text-tertiary);
 }
 
 .time-picker input[type="time"] {
   padding: 0.8rem;
   font-size: 1rem;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--neutral-200);
   border-radius: 8px;
   cursor: pointer;
 }
@@ -424,7 +424,7 @@
 .days-selector label {
   display: block;
   font-weight: 500;
-  color: #666;
+  color: var(--text-tertiary);
   margin-bottom: 0.8rem;
 }
 
@@ -445,13 +445,13 @@
 }
 
 .day-btn:hover {
-  background: #e0e0e0;
+  background: var(--neutral-200);
 }
 
 .day-btn.active {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-rose) 100%);
   color: white;
-  border-color: #f5576c;
+  border-color: var(--accent-rose);
 }
 
 .next-reminder-info {
@@ -459,7 +459,7 @@
   padding: 1rem;
   background: white;
   border-radius: 8px;
-  color: #666;
+  color: var(--text-tertiary);
   font-size: 0.95rem;
 }
 
@@ -477,7 +477,7 @@
   align-items: center;
   gap: 0.8rem;
   font-size: 1rem;
-  color: #666;
+  color: var(--text-tertiary);
   cursor: pointer;
 }
 
@@ -485,7 +485,7 @@
   width: 20px;
   height: 20px;
   cursor: pointer;
-  accent-color: #f5576c;
+  accent-color: var(--accent-rose);
 }
 
 .puja-footer {
@@ -500,7 +500,7 @@
 }
 
 .weekly-calendar h3 {
-  color: #f5576c;
+  color: var(--accent-rose);
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -522,13 +522,13 @@
 
 .calendar-day .day-name {
   font-weight: bold;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
 .calendar-day .day-deity {
   font-size: 0.9rem;
-  color: #666;
+  color: var(--text-tertiary);
   margin-bottom: 0.5rem;
 }
 
@@ -541,7 +541,7 @@
 .back-button {
   display: inline-block;
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-rose) 100%);
   color: white;
   text-decoration: none;
   border-radius: 8px;

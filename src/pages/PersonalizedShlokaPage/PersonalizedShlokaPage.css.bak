@@ -1,0 +1,404 @@
+@import '../../styles/theme.css';
+
+.personalized-shloka-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FA8BFF 0%, #2BD2FF 100%);
+}
+
+.shloka-header {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.shloka-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.shloka-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.shloka-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.input-section-shloka {
+  display: grid;
+  gap: 2rem;
+}
+
+.situation-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.situation-card h2 {
+  color: #FA8BFF;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.situation-instruction {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.situation-textarea {
+  width: 100%;
+  border: 2px solid #eee;
+  border-radius: 15px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.situation-textarea:focus {
+  outline: none;
+  border-color: #FA8BFF;
+}
+
+.emotions-section h3 {
+  color: #333;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.emotions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.emotion-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f9f9f9;
+  border: 2px solid #eee;
+  padding: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.emotion-btn:hover {
+  background: white;
+  border-color: #FA8BFF;
+  transform: translateY(-3px);
+}
+
+.emotion-btn.selected {
+  background: linear-gradient(135deg, #FA8BFF 0%, #2BD2FF 100%);
+  border-color: #FA8BFF;
+}
+
+.emotion-btn.selected .emotion-label {
+  color: white;
+  font-weight: 600;
+}
+
+.emotion-emoji {
+  font-size: 2.5rem;
+}
+
+.emotion-label {
+  color: #333;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.get-shloka-btn {
+  width: 100%;
+  padding: 1.2rem;
+  background: linear-gradient(135deg, #FA8BFF 0%, #2BD2FF 100%);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.get-shloka-btn:hover:not(:disabled) {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(250, 139, 255, 0.4);
+}
+
+.get-shloka-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.shloka-info {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.shloka-info h3 {
+  color: #FA8BFF;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.info-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.info-item h4 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.info-item p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.recommendations-section {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.recommendations-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+}
+
+.recommendations-header h2 {
+  color: #FA8BFF;
+  font-size: 2rem;
+}
+
+.new-shloka-btn {
+  background: linear-gradient(135deg, #FA8BFF 0%, #2BD2FF 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.new-shloka-btn:hover {
+  transform: scale(1.05);
+}
+
+.shloka-display {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.shloka-sanskrit,
+.shloka-transliteration,
+.shloka-meaning,
+.shloka-context,
+.shloka-application,
+.shloka-practices {
+  background: #f9f9f9;
+  border-radius: 15px;
+  padding: 1.5rem;
+  border-left: 4px solid #FA8BFF;
+}
+
+.shloka-sanskrit {
+  background: linear-gradient(135deg, #FA8BFF10 0%, #2BD2FF10 100%);
+  text-align: center;
+}
+
+.shloka-sanskrit h3 {
+  color: #FA8BFF;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.sanskrit-text {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #333;
+  font-weight: 500;
+  white-space: pre-wrap;
+  margin-bottom: 1.5rem;
+}
+
+.audio-btn {
+  background: linear-gradient(135deg, #FA8BFF 0%, #2BD2FF 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.audio-btn:hover {
+  transform: scale(1.05);
+}
+
+.shloka-transliteration h3 {
+  color: #2BD2FF;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.transliteration-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+  font-style: italic;
+  white-space: pre-wrap;
+}
+
+.shloka-meaning h3,
+.shloka-context h3,
+.shloka-application h3,
+.shloka-practices h3 {
+  color: #FA8BFF;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.shloka-meaning p,
+.shloka-context p,
+.shloka-application p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.source-tag {
+  display: inline-block;
+  background: #FA8BFF;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.shloka-practices ul {
+  list-style: none;
+  padding: 0;
+}
+
+.shloka-practices li {
+  color: #666;
+  padding: 0.8rem;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+  padding-left: 2.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.shloka-practices li::before {
+  content: '🙏';
+  position: absolute;
+  left: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.reflection-card {
+  background: linear-gradient(135deg, #FFD54F 0%, #FFC107 100%);
+  border-radius: 15px;
+  padding: 1.5rem;
+  border: none;
+}
+
+.reflection-card h4 {
+  color: #F57C00;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.reflection-card p {
+  color: #5D4037;
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .shloka-header h1 {
+    font-size: 2rem;
+  }
+
+  .emotions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recommendations-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .new-shloka-btn {
+    width: 100%;
+  }
+
+  .sanskrit-text {
+    font-size: 1.2rem;
+  }
+
+  .transliteration-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .emotions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .emotion-btn {
+    flex-direction: row;
+    justify-content: center;
+  }
+}

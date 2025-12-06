@@ -9,7 +9,7 @@
 .lit-detail-container {
   max-width: 800px;
   margin: 0 auto;
-  background-color: #fffaf0;
+  background-color: var(--parchment-light);
   padding: 40px;
   border-radius: 10px;
   border: 1px solid #8B4513;
@@ -40,7 +40,7 @@
 .lit-detail-introduction {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #333;
+  color: var(--text-primary);
   text-align: justify;
   margin-bottom: 30px;
   font-style: italic;
@@ -83,7 +83,7 @@
 }
 
 .parva-card {
-  background: linear-gradient(135deg, #fff9e6 0%, #fffaf0 100%);
+  background: linear-gradient(135deg, var(--parchment-light) 0%, var(--parchment-light) 100%);
   border: 2px solid #d4a574;
   border-radius: 10px;
   padding: 20px;
@@ -97,7 +97,7 @@
 }
 
 .section-card {
-  background: linear-gradient(135deg, #fff9e6 0%, #fffaf0 100%);
+  background: linear-gradient(135deg, var(--parchment-light) 0%, var(--parchment-light) 100%);
   border: 2px solid #d4a574;
   border-radius: 10px;
   padding: 20px;
@@ -118,7 +118,7 @@
 }
 
 .parva-card p {
-  color: #555;
+  color: var(--text-secondary);
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 15px;
@@ -132,7 +132,7 @@
 }
 
 .section-card p {
-  color: #555;
+  color: var(--text-secondary);
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 15px;
@@ -140,7 +140,7 @@
 
 .scenes-preview {
   background: rgba(255, 255, 255, 0.7);
-  border-left: 3px solid #ff9933;
+  border-left: 3px solid var(--saffron-primary);
   padding: 12px;
   border-radius: 5px;
 }
@@ -161,7 +161,7 @@
 .scenes-preview li {
   padding: 5px 0;
   padding-left: 15px;
-  color: #333;
+  color: var(--text-primary);
   font-size: 0.9rem;
   position: relative;
 }
@@ -170,12 +170,12 @@
   content: "▶";
   position: absolute;
   left: 0;
-  color: #ff9933;
+  color: var(--saffron-primary);
 }
 
 .more-scenes {
   margin-top: 8px;
-  color: #ff6600;
+  color: var(--accent-primary);
   font-weight: bold;
   font-size: 0.9rem;
 }
@@ -183,14 +183,14 @@
 .lit-detail-full-story {
   font-size: 1.2rem;
   line-height: 1.8;
-  color: #333;
+  color: var(--text-primary);
   text-align: justify;
 }
 
 .back-link {
   display: inline-block;
   margin-top: 30px;
-  color: #ff6600;
+  color: var(--accent-primary);
   text-decoration: none;
   font-weight: bold;
   font-family: sans-serif; /* Use a more standard font for UI elements */
@@ -211,8 +211,8 @@
 }
 
 .start-story-button {
-  background-color: #ff9933; /* Saffron */
-  color: #000080; /* Deep Blue */
+  background-color: var(--saffron-primary); /* Saffron */
+  color: var(--navy); /* Deep Blue */
   padding: 15px 30px;
   border-radius: 50px;
   text-decoration: none;

@@ -4,8 +4,8 @@
   display: flex;
   max-width: 1400px;
   margin: 0 auto;
-  gap: 30px;
-  padding: 20px;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-lg);
   box-sizing: border-box;
   align-items: flex-start; /* Ensure items align at the top */
 }

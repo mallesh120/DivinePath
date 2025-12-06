@@ -1,7 +1,7 @@
 @import '../../styles/theme.css';
 
 .story-widget {
-  background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+  background: linear-gradient(135deg, #f0f9ff 0%, var(--card-bg) 100%);
   padding: 30px;
   border-radius: 20px;
   max-width: 900px;
@@ -23,13 +23,13 @@
   font-family: 'Lato', sans-serif;
   font-size: 2rem;
   font-weight: 600;
-  color: #4a90e2;
+  color: var(--accent-secondary);
   margin: 0;
 }
 
 .story-category {
   font-size: 0.9rem;
-  color: #666;
+  color: var(--text-tertiary);
   font-style: italic;
   background: rgba(74, 144, 226, 0.1);
   padding: 5px 15px;
@@ -48,13 +48,13 @@
 
 .story-excerpt {
   font-size: 1.1rem;
-  color: #555;
+  color: var(--text-secondary);
   font-style: italic;
   line-height: 1.6;
   margin-bottom: 20px;
   padding: 15px;
   background: rgba(74, 144, 226, 0.05);
-  border-left: 4px solid #4a90e2;
+  border-left: 4px solid var(--accent-secondary);
   border-radius: 5px;
 }
 
@@ -64,7 +64,7 @@
 
 .story-paragraph {
   font-size: 1.05rem;
-  color: #444;
+  color: var(--text-primary);
   line-height: 1.8;
   margin-bottom: 15px;
   text-align: justify;
@@ -73,9 +73,9 @@
 .story-moral {
   margin: 30px 0;
   padding: 20px;
-  background: linear-gradient(135deg, #fff9e6 0%, #fffef7 100%);
+  background: linear-gradient(135deg, var(--parchment-light) 0%, var(--parchment-light) 100%);
   border-radius: 12px;
-  border-left: 5px solid #ffa500;
+  border-left: 5px solid var(--accent-primary);
 }
 
 .moral-label {
@@ -89,7 +89,7 @@
 
 .moral-text {
   font-size: 1.1rem;
-  color: #333;
+  color: var(--text-primary);
   line-height: 1.7;
   margin: 0;
   font-weight: 500;
@@ -103,7 +103,7 @@
 }
 
 .story-tag {
-  background: linear-gradient(135deg, #4a90e2 0%, #5ba3f5 100%);
+  background: linear-gradient(135deg, var(--accent-secondary) 0%, #5ba3f5 100%);
   color: white;
   padding: 6px 15px;
   border-radius: 20px;
@@ -115,7 +115,7 @@
 .read-more-btn {
   margin-top: 20px;
   padding: 12px 30px;
-  background: linear-gradient(135deg, #4a90e2 0%, #5ba3f5 100%);
+  background: linear-gradient(135deg, var(--accent-secondary) 0%, #5ba3f5 100%);
   color: white;
   border: none;
   border-radius: 25px;

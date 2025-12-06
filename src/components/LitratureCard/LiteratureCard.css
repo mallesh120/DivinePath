@@ -6,8 +6,8 @@
 
 /* Base Card Styling */
 .literature-card {
-  background-color: #ffffff;
-  border-radius: 14px;
+  background-color: var(--card-bg);
+  border-radius: var(--radius-lg);
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border: none;
@@ -17,7 +17,7 @@
   cursor: pointer;
   
   /* Subtle initial shadow for depth */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--shadow-md);
   
   /* Spiritual touch: faint gold border on hover via pseudo-element */
   position: relative;
@@ -26,7 +26,7 @@
 /* Enhanced hover effect with tactile lift */
 .literature-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15), 0 6px 12px rgba(255, 153, 51, 0.1);
+  box-shadow: var(--shadow-hover);
 }
 
 /* Full-Bleed Image Container (45% of card height on desktop) */
@@ -78,7 +78,7 @@
 
 /* Badge Colors - Updated with Spiritual Palette */
 .literature-type-badge {
-  background: linear-gradient(135deg, #FF9933 0%, #FF7F00 100%); /* Saffron/Gold */
+  background: linear-gradient(135deg, var(--saffron-primary) 0%, #FF7F00 100%); /* Saffron/Gold */
 }
 
 /* Alternate badge colors for variety */
@@ -101,7 +101,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #ffffff;
+  background-color: var(--card-bg);
 }
 
 /* Title - Epic, Literary Serif Font */
@@ -117,13 +117,13 @@
 }
 
 .literature-card:hover .literature-card-title {
-  color: #FF9933; /* Saffron accent on hover */
+  color: var(--saffron-primary); /* Saffron accent on hover */
 }
 
 /* Summary - Clean, Readable Sans-Serif */
 .literature-card-summary {
   font-size: 0.95rem;
-  color: #555555;
+  color: var(--text-secondary);
   line-height: 1.6;
   font-family: 'Lato', 'Open Sans', sans-serif;
   font-weight: 400;

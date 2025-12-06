@@ -51,7 +51,7 @@
 }
 
 .situation-instruction {
-  color: #666;
+  color: var(--text-tertiary);
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -74,7 +74,7 @@
 }
 
 .emotions-section h3 {
-  color: #333;
+  color: var(--text-primary);
   font-size: 1.3rem;
   margin-bottom: 1rem;
 }
@@ -120,7 +120,7 @@
 }
 
 .emotion-label {
-  color: #333;
+  color: var(--text-primary);
   font-size: 0.95rem;
   font-weight: 500;
 }
@@ -179,13 +179,13 @@
 }
 
 .info-item h4 {
-  color: #333;
+  color: var(--text-primary);
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
 .info-item p {
-  color: #666;
+  color: var(--text-tertiary);
   line-height: 1.6;
 }
 
@@ -258,7 +258,7 @@
 .sanskrit-text {
   font-size: 1.5rem;
   line-height: 2;
-  color: #333;
+  color: var(--text-primary);
   font-weight: 500;
   white-space: pre-wrap;
   margin-bottom: 1.5rem;
@@ -289,7 +289,7 @@
 .transliteration-text {
   font-size: 1.2rem;
   line-height: 1.8;
-  color: #555;
+  color: var(--text-secondary);
   font-style: italic;
   white-space: pre-wrap;
 }
@@ -306,7 +306,7 @@
 .shloka-meaning p,
 .shloka-context p,
 .shloka-application p {
-  color: #666;
+  color: var(--text-tertiary);
   line-height: 1.8;
   font-size: 1.05rem;
 }
@@ -328,7 +328,7 @@
 }
 
 .shloka-practices li {
-  color: #666;
+  color: var(--text-tertiary);
   padding: 0.8rem;
   background: white;
   border-radius: 8px;

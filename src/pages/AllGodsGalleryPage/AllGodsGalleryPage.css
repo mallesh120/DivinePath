@@ -3,13 +3,13 @@
 .all-gods-gallery-page {
   min-height: 100vh;
   padding: 2rem;
-  background: linear-gradient(135deg, #fffaf0 0%, #fff4e6 100%);
+  background: linear-gradient(135deg, var(--parchment-light) 0%, var(--parchment-light) 100%);
 }
 
 .all-gods-page {
   padding: 40px 20px;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #fffbf0 0%, #fff 50%);
+  background: linear-gradient(to bottom, var(--parchment-light) 0%, var(--card-bg) 50%);
 }
 
 .all-gods-header {
@@ -19,8 +19,8 @@
 
 .back-to-main-btn {
   background: white;
-  border: 2px solid #e0f7fa;
-  color: #ff6600;
+  border: 2px solid var(--neutral-200);
+  color: var(--accent-primary);
   padding: 10px 20px;
   border-radius: 25px;
   font-size: 1rem;
@@ -31,15 +31,15 @@
 }
 
 .back-to-main-btn:hover {
-  background: #ff6600;
+  background: var(--accent-primary);
   color: white;
-  border-color: #ff6600;
+  border-color: var(--accent-primary);
   transform: translateX(-5px);
 }
 
 .all-gods-title {
   font-size: 3.5rem;
-  color: #000080;
+  color: var(--navy);
   text-align: center;
   margin-bottom: 15px;
   font-weight: 700;
@@ -47,7 +47,7 @@
 
 .all-gods-subtitle {
   font-size: 1.2rem;
-  color: #666;
+  color: var(--text-tertiary);
   text-align: center;
   max-width: 700px;
   margin: 0 auto 40px;
@@ -65,7 +65,7 @@
   width: 100%;
   padding: 18px 50px 18px 20px;
   font-size: 1.1rem;
-  border: 3px solid #e0f7fa;
+  border: 3px solid var(--neutral-200);
   border-radius: 30px;
   outline: none;
   transition: all 0.3s ease;
@@ -73,7 +73,7 @@
 }
 
 .search-input:focus {
-  border-color: #ffd700;
+  border-color: var(--gold-accent);
   box-shadow: 0 4px 20px rgba(255, 215, 0, 0.2);
 }
 
@@ -98,24 +98,24 @@
 .category-pill {
   padding: 12px 24px;
   background: white;
-  border: 2px solid #e0f7fa;
+  border: 2px solid var(--neutral-200);
   border-radius: 25px;
   font-size: 1rem;
   font-weight: 600;
-  color: #000080;
+  color: var(--navy);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .category-pill:hover {
-  background: #e0f7fa;
-  border-color: #80deea;
+  background: var(--neutral-200);
+  border-color: var(--accent-teal);
   transform: translateY(-2px);
 }
 
 .category-pill.active {
-  background: linear-gradient(135deg, #ff9933 0%, #ff6600 100%);
-  border-color: #ff6600;
+  background: linear-gradient(135deg, var(--saffron-primary) 0%, var(--accent-primary) 100%);
+  border-color: var(--accent-primary);
   color: white;
   box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
 }
@@ -123,7 +123,7 @@
 .results-count {
   text-align: center;
   font-size: 1.1rem;
-  color: #666;
+  color: var(--text-tertiary);
   font-weight: 600;
   margin-bottom: 20px;
 }
@@ -142,7 +142,7 @@
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  border: 3px solid #e0f7fa;
+  border: 3px solid var(--neutral-200);
   transition: all 0.3s ease;
   cursor: pointer;
   position: relative;
@@ -151,14 +151,14 @@
 .all-god-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-  border-color: #ffd700;
+  border-color: var(--gold-accent);
 }
 
 .all-god-image-container {
   position: relative;
   width: 100%;
   height: 280px;
-  background: linear-gradient(135deg, #e0f7fa 0%, #fff5e6 100%);
+  background: linear-gradient(135deg, var(--neutral-200) 0%, var(--parchment-light) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -181,7 +181,7 @@
   position: absolute;
   top: 15px;
   right: 15px;
-  background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+  background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-purple-2) 100%);
   color: white;
   padding: 6px 14px;
   border-radius: 15px;
@@ -196,7 +196,7 @@
 
 .all-god-name {
   font-size: 1.8rem;
-  color: #000080;
+  color: var(--navy);
   margin: 0 0 12px;
   font-weight: 700;
 }
@@ -204,7 +204,7 @@
 .all-god-description {
   font-size: 1rem;
   line-height: 1.6;
-  color: #555;
+  color: var(--text-secondary);
   margin: 0 0 15px;
 }
 
@@ -212,13 +212,13 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #e0f7fa;
-  color: #000080;
+  background: var(--neutral-200);
+  color: var(--navy);
   padding: 6px 12px;
   border-radius: 15px;
   font-size: 0.85rem;
   font-weight: 500;
-  border: 1px solid #80deea;
+  border: 1px solid var(--accent-teal);
 }
 
 .parent-icon {
@@ -240,13 +240,13 @@
 
 .no-results h3 {
   font-size: 2rem;
-  color: #000080;
+  color: var(--navy);
   margin-bottom: 10px;
 }
 
 .no-results p {
   font-size: 1.1rem;
-  color: #666;
+  color: var(--text-tertiary);
 }
 
 /* Responsive Design */

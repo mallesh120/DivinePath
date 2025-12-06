@@ -2,7 +2,7 @@
 
 .muhurta-finder-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
   padding: 2rem;
 }
 
@@ -32,13 +32,13 @@
 }
 
 .muhurta-info-card h3 {
-  color: #667eea;
+  color: var(--accent-blue);
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
 .muhurta-info-card p {
-  color: #555;
+  color: var(--text-secondary);
   line-height: 1.8;
   margin-bottom: 1.5rem;
 }
@@ -55,7 +55,7 @@
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
   border-radius: 10px;
   color: white;
   text-align: center;
@@ -80,7 +80,7 @@
 .info-close-btn {
   width: 100%;
   padding: 1rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
   color: white;
   border: none;
   border-radius: 8px;
@@ -104,7 +104,7 @@
 }
 
 .event-selection h2 {
-  color: #667eea;
+  color: var(--accent-blue);
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -131,8 +131,8 @@
 }
 
 .event-card.selected {
-  border-color: #667eea;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: var(--accent-blue);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
   color: white;
 }
 
@@ -160,18 +160,18 @@
 }
 
 .event-info h2 {
-  color: #667eea;
+  color: var(--accent-blue);
   margin-bottom: 1rem;
 }
 
 .event-meta {
-  color: #666;
+  color: var(--text-tertiary);
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
 }
 
 .considerations h4 {
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 0.8rem;
 }
 
@@ -184,14 +184,14 @@
   padding: 0.5rem 0;
   padding-left: 1.5rem;
   position: relative;
-  color: #555;
+  color: var(--text-secondary);
 }
 
 .considerations li::before {
   content: "▸";
   position: absolute;
   left: 0;
-  color: #667eea;
+  color: var(--accent-blue);
   font-weight: bold;
 }
 
@@ -199,12 +199,12 @@
 .error-state {
   text-align: center;
   padding: 3rem;
-  color: #666;
+  color: var(--text-tertiary);
 }
 
 .spinner {
   border: 4px solid #f3f3f3;
-  border-top: 4px solid #667eea;
+  border-top: 4px solid var(--accent-blue);
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -233,12 +233,12 @@
 }
 
 .recommendation-header h3 {
-  color: #667eea;
+  color: var(--accent-blue);
   font-size: 1.8rem;
 }
 
 .date-info {
-  color: #666;
+  color: var(--text-tertiary);
   font-size: 1.1rem;
 }
 
@@ -271,7 +271,7 @@
 }
 
 .panchangam-details h4 {
-  color: #667eea;
+  color: var(--accent-blue);
   margin-bottom: 1rem;
 }
 
@@ -291,11 +291,11 @@
 
 .pancha-label {
   font-weight: bold;
-  color: #666;
+  color: var(--text-tertiary);
 }
 
 .pancha-value {
-  color: #333;
+  color: var(--text-primary);
 }
 
 .factors-section {
@@ -306,17 +306,17 @@
 
 .factors-section.favorable {
   background: #e8f5e9;
-  border-left: 4px solid #4CAF50;
+  border-left: 4px solid var(--accent-green);
 }
 
 .factors-section.unfavorable {
-  background: #fff3e0;
+  background: var(--card-bg)3e0;
   border-left: 4px solid #FF9800;
 }
 
 .factors-section h4 {
   margin-bottom: 1rem;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .factors-section ul {
@@ -328,14 +328,14 @@
   padding: 0.5rem 0;
   padding-left: 1.5rem;
   position: relative;
-  color: #555;
+  color: var(--text-secondary);
 }
 
 .factors-section.favorable li::before {
   content: "✓";
   position: absolute;
   left: 0;
-  color: #4CAF50;
+  color: var(--accent-green);
   font-weight: bold;
 }
 
@@ -352,7 +352,7 @@
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 2rem;
-  border-left: 4px solid #2196F3;
+  border-left: 4px solid var(--accent-blue-2);
 }
 
 .recommendations-section h4 {
@@ -369,7 +369,7 @@
   padding: 0.8rem 0;
   padding-left: 1.5rem;
   position: relative;
-  color: #555;
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
@@ -377,7 +377,7 @@
   content: "➤";
   position: absolute;
   left: 0;
-  color: #2196F3;
+  color: var(--accent-blue-2);
   font-weight: bold;
 }
 
@@ -388,18 +388,18 @@
 }
 
 .alternative-dates h4 {
-  color: #667eea;
+  color: var(--accent-blue);
   margin-bottom: 0.8rem;
 }
 
 .alternative-dates p {
-  color: #666;
+  color: var(--text-tertiary);
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
 
 .tips h5 {
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 0.8rem;
 }
 
@@ -412,14 +412,14 @@
   padding: 0.5rem 0;
   padding-left: 1.5rem;
   position: relative;
-  color: #555;
+  color: var(--text-secondary);
 }
 
 .tips li::before {
   content: "•";
   position: absolute;
   left: 0;
-  color: #667eea;
+  color: var(--accent-blue);
   font-size: 1.5rem;
   line-height: 1;
 }
@@ -432,7 +432,7 @@
 }
 
 .disclaimer {
-  background: #fff3cd;
+  background: var(--card-bg)3cd;
   border-left: 4px solid #ffc107;
   border-radius: 8px;
   padding: 1.5rem;
@@ -453,7 +453,7 @@
 .back-button {
   display: inline-block;
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
   color: white;
   text-decoration: none;
   border-radius: 8px;
@@ -510,13 +510,13 @@
 }
 
 .muhurta-calculator-form h3 {
-  color: #667eea;
+  color: var(--accent-blue);
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
 .form-subtitle {
-  color: #666;
+  color: var(--text-tertiary);
   font-size: 0.95rem;
   margin-bottom: 1.5rem;
 }
@@ -535,14 +535,14 @@
 
 .form-group label {
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
   font-size: 0.95rem;
 }
 
 .form-group input {
   padding: 0.75rem;
-  border: 2px solid #e0e0e0;
+  border: 2px solid var(--neutral-200);
   border-radius: 8px;
   font-size: 1rem;
   transition: border-color 0.3s;
@@ -550,12 +550,12 @@
 
 .form-group input:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: var(--accent-blue);
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
 .form-group small {
-  color: #666;
+  color: var(--text-tertiary);
   font-size: 0.85rem;
   margin-top: 0.25rem;
 }
@@ -563,7 +563,7 @@
 .calculate-button {
   width: 100%;
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
   color: white;
   border: none;
   border-radius: 10px;
@@ -600,13 +600,13 @@
 }
 
 .time-windows-section h4 {
-  color: #667eea;
+  color: var(--accent-blue);
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
 }
 
 .time-windows-subtitle {
-  color: #666;
+  color: var(--text-tertiary);
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
 }
@@ -622,7 +622,7 @@
   border-radius: 10px;
   padding: 1.5rem;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #4CAF50;
+  border-left: 4px solid var(--accent-green);
   transition: transform 0.2s;
 }
 
@@ -632,7 +632,7 @@
 }
 
 .time-window.excellent {
-  border-left-color: #4CAF50;
+  border-left-color: var(--accent-green);
 }
 
 .time-window.good {
@@ -640,7 +640,7 @@
 }
 
 .time-window.fair {
-  border-left-color: #2196F3;
+  border-left-color: var(--accent-blue-2);
 }
 
 .window-header {
@@ -656,7 +656,7 @@
 
 .window-name {
   font-weight: bold;
-  color: #333;
+  color: var(--text-primary);
   font-size: 1.1rem;
   flex: 1;
 }
@@ -674,7 +674,7 @@
 }
 
 .window-badge.good {
-  background: #fff3e0;
+  background: var(--card-bg)3e0;
   color: #e65100;
 }
 
@@ -699,12 +699,12 @@
 
 .time-text {
   font-weight: 600;
-  color: #667eea;
+  color: var(--accent-blue);
   font-size: 1.05rem;
 }
 
 .window-description {
-  color: #666;
+  color: var(--text-tertiary);
   line-height: 1.6;
   margin-bottom: 1rem;
   font-size: 0.95rem;
@@ -715,17 +715,17 @@
   padding: 0.75rem;
   border-radius: 6px;
   font-size: 0.9rem;
-  color: #555;
+  color: var(--text-secondary);
 }
 
 .suitable-for strong {
-  color: #667eea;
+  color: var(--accent-blue);
   margin-right: 0.5rem;
 }
 
 /* Avoid Periods Section */
 .avoid-periods-section {
-  background: #fff3f3;
+  background: var(--card-bg)3f3;
   border-radius: 12px;
   padding: 1.5rem;
   margin: 2rem 0;
@@ -770,7 +770,7 @@
 }
 
 .avoid-time {
-  color: #666;
+  color: var(--text-tertiary);
   font-size: 0.9rem;
 }
 
@@ -784,7 +784,7 @@
 }
 
 .mode-toggle-section h3 {
-  color: #667eea;
+  color: var(--accent-blue);
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -810,15 +810,15 @@
 }
 
 .mode-button:hover {
-  border-color: #667eea;
+  border-color: var(--accent-blue);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
 }
 
 .mode-button.active {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
   color: white;
-  border-color: #667eea;
+  border-color: var(--accent-blue);
   box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
 }
 
@@ -853,7 +853,7 @@
 }
 
 .score-display-section h3 {
-  color: #667eea;
+  color: var(--accent-blue);
   font-size: 1.8rem;
   margin-bottom: 2rem;
   text-align: center;
@@ -887,7 +887,7 @@
 
 .score-circle-bg {
   fill: none;
-  stroke: #e0e0e0;
+  stroke: var(--neutral-200);
   stroke-width: 12;
 }
 
@@ -899,7 +899,7 @@
 }
 
 .score-circle-fill.auspicious {
-  stroke: #4CAF50;
+  stroke: var(--accent-green);
 }
 
 .score-circle-fill.moderate {
@@ -921,13 +921,13 @@
 .score-number {
   font-size: 3.5rem;
   font-weight: bold;
-  color: #333;
+  color: var(--text-primary);
   line-height: 1;
 }
 
 .score-outof {
   font-size: 1.2rem;
-  color: #666;
+  color: var(--text-tertiary);
   margin-top: 0.2rem;
 }
 
@@ -939,7 +939,7 @@
 }
 
 .score-status-text.auspicious {
-  color: #4CAF50;
+  color: var(--accent-green);
 }
 
 .score-status-text.moderate {
@@ -958,7 +958,7 @@
 }
 
 .score-breakdown h4 {
-  color: #667eea;
+  color: var(--accent-blue);
   font-size: 1.3rem;
   margin-bottom: 1rem;
 }
@@ -983,7 +983,7 @@
 
 .breakdown-label {
   font-size: 0.95rem;
-  color: #444;
+  color: var(--text-primary);
   font-weight: 500;
 }
 
@@ -992,7 +992,7 @@
   font-weight: bold;
   padding: 0.2rem 0.6rem;
   border-radius: 4px;
-  background: #f0f0f0;
+  background: var(--neutral-200);
 }
 
 .breakdown-points.positive {
@@ -1008,7 +1008,7 @@
 .breakdown-bar-container {
   width: 100%;
   height: 8px;
-  background: #e0e0e0;
+  background: var(--neutral-200);
   border-radius: 4px;
   overflow: hidden;
 }

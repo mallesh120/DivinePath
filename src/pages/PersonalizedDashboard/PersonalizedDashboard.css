@@ -2,7 +2,7 @@
 
 .personalized-dashboard {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
   padding: 20px;
 }
 
@@ -72,7 +72,7 @@
 
 .streak-badge {
   display: inline-block;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-rose) 100%);
   color: white;
   padding: 10px 25px;
   border-radius: 25px;
@@ -117,7 +117,7 @@
 
 .card-title {
   font-size: 1.6rem;
-  color: #333;
+  color: var(--text-primary);
   margin: 0 0 20px 0;
   font-weight: 700;
 }
@@ -135,7 +135,7 @@
 }
 
 .panchangam-item {
-  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  background: linear-gradient(135deg, var(--soft-peach) 0%, var(--peach) 100%);
   padding: 15px;
   border-radius: 12px;
   display: flex;
@@ -145,19 +145,19 @@
 
 .panchangam-label {
   font-weight: 600;
-  color: #666;
+  color: var(--text-tertiary);
   font-size: 0.9rem;
 }
 
 .panchangam-value {
   font-size: 1.2rem;
-  color: #333;
+  color: var(--text-primary);
   font-weight: 700;
 }
 
 .view-full-link {
   display: inline-block;
-  color: #667eea;
+  color: var(--accent-blue);
   text-decoration: none;
   font-weight: 600;
   margin-top: 15px;
@@ -194,7 +194,7 @@
 }
 
 .goal-item:hover {
-  border-color: #667eea;
+  border-color: var(--accent-blue);
   transform: translateX(5px);
 }
 
@@ -213,21 +213,21 @@
 .goal-checkbox {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #667eea;
+  color: var(--accent-blue);
 }
 
 .goal-item.completed .goal-checkbox {
-  color: #4caf50;
+  color: var(--accent-green);
 }
 
 .goal-text {
   font-size: 1.1rem;
-  color: #333;
+  color: var(--text-primary);
   font-weight: 500;
 }
 
 .goal-link-btn {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
   color: white;
   border: none;
   padding: 8px 12px;
@@ -255,19 +255,19 @@
 
 .japa-title {
   font-size: 1.2rem;
-  color: #333;
+  color: var(--text-primary);
   margin: 0 0 15px 0;
 }
 
 .japa-display {
   font-size: 3rem;
   font-weight: 700;
-  color: #667eea;
+  color: var(--accent-blue);
   margin: 15px 0;
 }
 
 .japa-button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
   color: white;
   border: none;
   padding: 12px 30px;
@@ -285,8 +285,8 @@
 }
 
 .japa-reset {
-  background: #f0f0f0;
-  color: #666;
+  background: var(--neutral-200);
+  color: var(--text-tertiary);
   border: none;
   padding: 8px 20px;
   border-radius: 20px;
@@ -297,13 +297,13 @@
 }
 
 .japa-reset:hover {
-  background: #e0e0e0;
+  background: var(--neutral-200);
 }
 
 /* Prayer Card */
 .prayer-card {
   grid-column: 1 / -1;
-  background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+  background: linear-gradient(135deg, var(--parchment-light) 0%, #ffe8cc 100%);
 }
 
 .prayer-content {
@@ -317,19 +317,19 @@
   text-align: center;
   margin-bottom: 25px;
   padding-bottom: 20px;
-  border-bottom: 2px solid #f0f0f0;
+  border-bottom: 2px solid var(--neutral-200);
 }
 
 .prayer-name {
   font-size: 1.8rem;
-  color: #333;
+  color: var(--text-primary);
   margin: 0 0 10px 0;
   font-weight: 700;
 }
 
 .prayer-deity {
   display: inline-block;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
   color: white;
   padding: 5px 15px;
   border-radius: 15px;
@@ -340,8 +340,8 @@
 
 .prayer-time {
   display: inline-block;
-  background: #f0f0f0;
-  color: #666;
+  background: var(--neutral-200);
+  color: var(--text-tertiary);
   padding: 5px 15px;
   border-radius: 15px;
   font-size: 0.9rem;
@@ -351,7 +351,7 @@
 .prayer-text {
   margin: 25px 0;
   padding: 20px;
-  background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+  background: linear-gradient(135deg, var(--card-bg)8e1 0%, #ffecb3 100%);
   border-radius: 10px;
   border-left: 4px solid #ff9800;
 }
@@ -368,7 +368,7 @@
 
 .prayer-transliteration {
   font-size: 1.1rem;
-  color: #555;
+  color: var(--text-secondary);
   font-style: italic;
   line-height: 1.6;
   text-align: center;
@@ -380,18 +380,18 @@
   padding: 20px;
   border-radius: 10px;
   margin: 20px 0;
-  border-left: 4px solid #4caf50;
+  border-left: 4px solid var(--accent-green);
 }
 
 .prayer-meaning strong {
-  color: #4caf50;
+  color: var(--accent-green);
   font-size: 1.1rem;
   display: block;
   margin-bottom: 10px;
 }
 
 .prayer-meaning p {
-  color: #333;
+  color: var(--text-primary);
   line-height: 1.7;
   font-size: 1.05rem;
   margin: 0;
@@ -399,7 +399,7 @@
 
 .prayer-complete-btn {
   width: 100%;
-  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  background: linear-gradient(135deg, var(--accent-green) 0%, #45a049 100%);
   color: white;
   border: none;
   padding: 15px;
@@ -433,7 +433,7 @@
   text-align: center;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 2px solid #f0f0f0;
+  border-bottom: 2px solid var(--neutral-200);
 }
 
 .scripture-name {
@@ -452,7 +452,7 @@
 
 .scripture-chapter {
   display: inline-block;
-  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  background: linear-gradient(135deg, var(--accent-green) 0%, #45a049 100%);
   color: white;
   padding: 5px 15px;
   border-radius: 15px;
@@ -462,8 +462,8 @@
 
 .scripture-time {
   display: inline-block;
-  background: #f0f0f0;
-  color: #666;
+  background: var(--neutral-200);
+  color: var(--text-tertiary);
   padding: 5px 15px;
   border-radius: 15px;
   font-size: 0.9rem;
@@ -471,7 +471,7 @@
 
 .scripture-summary {
   font-size: 1.1rem;
-  color: #555;
+  color: var(--text-secondary);
   line-height: 1.7;
   margin: 20px 0;
   text-align: center;
@@ -479,7 +479,7 @@
 }
 
 .key-verse {
-  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+  background: linear-gradient(135deg, var(--card-bg)3e0 0%, #ffe0b2 100%);
   padding: 20px;
   border-radius: 10px;
   margin: 25px 0;
@@ -505,7 +505,7 @@
 
 .verse-transliteration {
   font-size: 1rem;
-  color: #555;
+  color: var(--text-secondary);
   font-style: italic;
   line-height: 1.6;
   text-align: center;
@@ -527,7 +527,7 @@
 }
 
 .verse-meaning p {
-  color: #333;
+  color: var(--text-primary);
   line-height: 1.6;
   font-size: 1rem;
   margin: 0;
@@ -541,7 +541,7 @@
 }
 
 .read-full-btn {
-  background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+  background: linear-gradient(135deg, var(--accent-blue-2) 0%, #1976d2 100%);
   color: white;
   border: none;
   padding: 15px;
@@ -562,7 +562,7 @@
 }
 
 .scripture-complete-btn {
-  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  background: linear-gradient(135deg, var(--accent-green) 0%, #45a049 100%);
   color: white;
   border: none;
   padding: 15px;
@@ -582,12 +582,12 @@
   text-align: center;
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 2px solid #f0f0f0;
+  border-top: 2px solid var(--neutral-200);
 }
 
 .browse-library-btn {
   display: inline-block;
-  background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+  background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-purple-2) 100%);
   color: white;
   padding: 12px 25px;
   border-radius: 25px;
@@ -605,7 +605,7 @@
 /* Shloka Card */
 .shloka-card {
   grid-column: span 2;
-  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  background: linear-gradient(135deg, var(--soft-peach) 0%, var(--peach) 100%);
 }
 
 /* Festivals Card */
@@ -617,7 +617,7 @@
 }
 
 .festival-item {
-  background: linear-gradient(135deg, #fff5e6 0%, #ffe0b2 100%);
+  background: linear-gradient(135deg, var(--parchment-light) 0%, #ffe0b2 100%);
   padding: 15px 20px;
   border-radius: 12px;
   display: flex;
@@ -627,13 +627,13 @@
 
 .festival-info h3 {
   margin: 0 0 5px 0;
-  color: #333;
+  color: var(--text-primary);
   font-size: 1.2rem;
 }
 
 .festival-date {
   margin: 0;
-  color: #666;
+  color: var(--text-tertiary);
   font-size: 0.9rem;
 }
 
@@ -650,7 +650,7 @@
 
 .countdown-label {
   font-size: 0.9rem;
-  color: #666;
+  color: var(--text-tertiary);
 }
 
 /* Fasting Card */
@@ -661,7 +661,7 @@
 }
 
 .fasting-item {
-  background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+  background: linear-gradient(135deg, var(--neutral-200) 0%, #b2ebf2 100%);
   padding: 15px 20px;
   border-radius: 12px;
   display: flex;
@@ -670,7 +670,7 @@
 }
 
 .fasting-day {
-  background: #00acc1;
+  background: var(--deep-teal);
   color: white;
   padding: 10px 15px;
   border-radius: 10px;
@@ -681,13 +681,13 @@
 
 .fasting-details h3 {
   margin: 0 0 5px 0;
-  color: #333;
+  color: var(--text-primary);
   font-size: 1.1rem;
 }
 
 .fasting-description {
   margin: 0;
-  color: #666;
+  color: var(--text-tertiary);
   font-size: 0.9rem;
 }
 
@@ -699,7 +699,7 @@
 }
 
 .quick-action-btn {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
   color: white;
   padding: 20px;
   border-radius: 15px;
@@ -754,13 +754,13 @@
 .stat-value {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #667eea;
+  color: var(--accent-blue);
   margin: 10px 0;
 }
 
 .stat-label {
   font-size: 1rem;
-  color: #666;
+  color: var(--text-tertiary);
   font-weight: 600;
 }
 
@@ -783,7 +783,7 @@
 
 /* Practical Hindu Living Section */
 .practical-living-card {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-rose) 100%);
   color: white;
 }
 
@@ -823,12 +823,12 @@
 .practical-action-btn .action-label {
   font-size: 1.1rem;
   font-weight: bold;
-  color: #f5576c;
+  color: var(--accent-rose);
 }
 
 .practical-action-btn .action-desc {
   font-size: 0.85rem;
-  color: #666;
+  color: var(--text-tertiary);
   text-align: center;
 }
 

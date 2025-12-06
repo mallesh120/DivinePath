@@ -22,8 +22,8 @@
     "playwright": "^1.57.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "node scripts/strip-sourcemaps.js && rm -rf node_modules/.cache && react-scripts start",
+    "build": "node scripts/strip-sourcemaps.js && rm -rf node_modules/.cache && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "generate-mantras": "node scripts/generate-mantras.js",
@@ -34,6 +34,7 @@
     "scrape-batch": "node scripts/batch-scrape-playwright.js",
     "scrape-universal": "node scripts/scrape-universal.js"
   },
+  "postinstall": "node scripts/strip-sourcemaps.js",
   "eslintConfig": {
     "extends": [
       "react-app",

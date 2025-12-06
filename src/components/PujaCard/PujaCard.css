@@ -23,7 +23,7 @@
 }
 
 .puja-card-header {
-  background: linear-gradient(135deg, #ff9933 0%, #ffaa33 100%);
+  background: linear-gradient(135deg, var(--saffron-primary) 0%, #ffaa33 100%);
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
@@ -69,20 +69,20 @@
 .puja-name {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #ff6b35;
+  color: var(--accent-primary);
   margin: 0 0 8px 0;
 }
 
 .puja-deity {
   font-size: 0.95rem;
-  color: #666;
+  color: var(--text-tertiary);
   margin: 0 0 12px 0;
   font-weight: 600;
 }
 
 .puja-description {
   font-size: 0.95rem;
-  color: #555;
+  color: var(--text-secondary);
   line-height: 1.6;
   margin: 0 0 15px 0;
   flex: 1;
@@ -110,7 +110,7 @@
 
 .meta-text {
   font-size: 0.9rem;
-  color: #666;
+  color: var(--text-tertiary);
   font-weight: 500;
 }
 
@@ -123,7 +123,7 @@
 
 .occasion-label {
   font-size: 0.85rem;
-  color: #666;
+  color: var(--text-tertiary);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -131,7 +131,7 @@
 
 .occasion-text {
   font-size: 0.95rem;
-  color: #333;
+  color: var(--text-primary);
   line-height: 1.4;
 }
 
@@ -145,7 +145,7 @@
   align-items: center;
   gap: 8px;
   padding: 12px 24px;
-  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-primary) 100%);
   color: white;
   border-radius: 25px;
   font-weight: 600;

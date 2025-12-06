@@ -3,16 +3,16 @@
 .festival-calendar-page {
   min-height: 100vh;
   padding: 2rem;
-  background: linear-gradient(135deg, #fffaf0 0%, #fff4e6 100%);
+  background: linear-gradient(135deg, var(--parchment-light) 0%, var(--parchment-light) 100%);
 }
 
 .festival-calendar-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #fff9e6 0%, #fffef7 100%);
+  background: linear-gradient(135deg, var(--parchment-light) 0%, var(--parchment-light) 100%);
 }
 
 .festival-hero {
-  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 60%, #ffa500 100%);
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-primary) 60%, var(--accent-primary) 100%);
   padding: 60px 20px;
   text-align: center;
   color: white;
@@ -40,7 +40,7 @@
 .todays-festival-banner {
   max-width: 1200px;
   margin: -30px auto 30px auto;
-  background: linear-gradient(135deg, #4caf50 0%, #8bc34a 100%);
+  background: linear-gradient(135deg, var(--accent-green) 0%, #8bc34a 100%);
   padding: 25px 30px;
   border-radius: 15px;
   box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
@@ -136,7 +136,7 @@
 }
 
 .view-mode-tab.active {
-  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-primary) 100%);
   color: white;
   box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 }
@@ -158,7 +158,7 @@
 .festival-search-input {
   width: 100%;
   padding: 14px 45px 14px 45px;
-  border: 2px solid #e0e0e0;
+  border: 2px solid var(--neutral-200);
   border-radius: 25px;
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -167,7 +167,7 @@
 
 .festival-search-input:focus {
   outline: none;
-  border-color: #ff6b35;
+  border-color: var(--accent-primary);
   box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
 }
 
@@ -176,7 +176,7 @@
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
-  background: #e0e0e0;
+  background: var(--neutral-200);
   border: none;
   width: 28px;
   height: 28px;
@@ -191,7 +191,7 @@
 }
 
 .clear-search-btn:hover {
-  background: #ff6b35;
+  background: var(--accent-primary);
   color: white;
 }
 
@@ -203,12 +203,12 @@
 
 .filter-label {
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .category-select {
   padding: 12px 20px;
-  border: 2px solid #e0e0e0;
+  border: 2px solid var(--neutral-200);
   border-radius: 25px;
   font-size: 1rem;
   background: white;
@@ -219,7 +219,7 @@
 
 .category-select:focus {
   outline: none;
-  border-color: #ff6b35;
+  border-color: var(--accent-primary);
   box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
 }
 
@@ -227,7 +227,7 @@
   max-width: 1200px;
   margin: 0 auto 20px auto;
   padding: 0 20px;
-  color: #666;
+  color: var(--text-tertiary);
   font-size: 0.95rem;
 }
 
@@ -259,18 +259,18 @@
 .no-festivals-message h3 {
   font-size: 1.8rem;
   margin: 0 0 10px 0;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .no-festivals-message p {
-  color: #666;
+  color: var(--text-tertiary);
   margin: 0 0 25px 0;
   font-size: 1.1rem;
 }
 
 .reset-filters-btn {
   padding: 12px 30px;
-  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-primary) 100%);
   color: white;
   border: none;
   border-radius: 25px;
@@ -296,11 +296,11 @@
 
 .festival-info-note {
   text-align: center;
-  color: #666;
+  color: var(--text-tertiary);
 }
 
 .festival-info-note h3 {
-  color: #ff6b35;
+  color: var(--accent-primary);
   margin: 0 0 15px 0;
   font-size: 1.5rem;
 }

@@ -51,7 +51,7 @@
 }
 
 .input-instruction {
-  color: #666;
+  color: var(--text-tertiary);
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -110,7 +110,7 @@
 }
 
 .common-symbols-section > p {
-  color: #666;
+  color: var(--text-tertiary);
   margin-bottom: 1.5rem;
 }
 
@@ -150,7 +150,7 @@
 }
 
 .symbol-meaning {
-  color: #666;
+  color: var(--text-tertiary);
   font-size: 0.85rem;
   line-height: 1.4;
 }
@@ -212,7 +212,7 @@
 }
 
 .interpretation-card p {
-  color: #666;
+  color: var(--text-tertiary);
   line-height: 1.8;
 }
 
@@ -229,12 +229,12 @@
 }
 
 .scripture-reference {
-  border-left-color: #4CAF50;
+  border-left-color: var(--accent-green);
   background: #f0f8f4;
 }
 
 .scripture-reference h3 {
-  color: #4CAF50;
+  color: var(--accent-green);
 }
 
 .found-symbols {
@@ -263,7 +263,7 @@
 }
 
 .found-symbol p {
-  color: #666;
+  color: var(--text-tertiary);
   font-size: 0.95rem;
   margin: 0;
 }
@@ -274,7 +274,7 @@
 }
 
 .recommendations li {
-  color: #666;
+  color: var(--text-tertiary);
   padding: 0.8rem;
   background: white;
   border-radius: 8px;

@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css'; // <--- THIS LINE IS CRUCIAL
-import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
 /**
  * The Navbar component provides navigation links for the app.
@@ -55,9 +54,6 @@ const Navbar = () => {
           </NavLink>
         </li>
       </ul>
-      <div className="navbar-actions">
-        <ThemeToggle />
-      </div>
     </nav>
   );
 };

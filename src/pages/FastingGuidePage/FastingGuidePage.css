@@ -2,7 +2,7 @@
 
 .fasting-guide-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #fff9e6 0%, #fffef7 100%);
+  background: linear-gradient(135deg, var(--parchment-light) 0%, var(--parchment-light) 100%);
   padding: 2rem;
 }
 
@@ -53,11 +53,11 @@
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s;
-  color: #666;
+  color: var(--text-tertiary);
 }
 
 .tab:hover {
-  background: #e0e0e0;
+  background: var(--neutral-200);
 }
 
 .tab.active {
@@ -87,7 +87,7 @@
 
 .section-intro {
   text-align: center;
-  color: #666;
+  color: var(--text-tertiary);
   line-height: 1.8;
   margin-bottom: 2rem;
   font-size: 1.1rem;
@@ -164,13 +164,13 @@
 }
 
 .detail-section h4 {
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 1rem;
   font-size: 1.2rem;
 }
 
 .detail-section p {
-  color: #666;
+  color: var(--text-tertiary);
   line-height: 1.8;
 }
 
@@ -200,14 +200,14 @@
 }
 
 .detail-section.benefits {
-  background: linear-gradient(135deg, #fff9e6 0%, #ffe4b3 100%);
+  background: linear-gradient(135deg, var(--parchment-light) 0%, #ffe4b3 100%);
   border-left: 4px solid #ffa726;
 }
 
 /* Ekadashi Styles */
 .ekadashi-intro {
   background: #e3f2fd;
-  border-left: 4px solid #2196F3;
+  border-left: 4px solid var(--accent-blue-2);
   border-radius: 10px;
   padding: 1.5rem;
   margin-bottom: 2rem;
@@ -242,7 +242,7 @@
 }
 
 .ekadashi-card p {
-  color: #666;
+  color: var(--text-tertiary);
   line-height: 1.8;
 }
 
@@ -253,7 +253,7 @@
 }
 
 .ekadashi-tips {
-  background: #fff3e0;
+  background: var(--card-bg)3e0;
   border-left: 4px solid #FF9800;
   border-radius: 10px;
   padding: 1.5rem;
@@ -273,7 +273,7 @@
   padding: 0.5rem 0;
   padding-left: 1.5rem;
   position: relative;
-  color: #666;
+  color: var(--text-tertiary);
 }
 
 .ekadashi-tips li::before {
@@ -380,18 +380,18 @@
 }
 
 .tip h4 {
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
 .tip p {
-  color: #666;
+  color: var(--text-tertiary);
   font-size: 0.9rem;
   line-height: 1.6;
 }
 
 .disclaimer {
-  background: #fff3cd;
+  background: var(--card-bg)3cd;
   border-left: 4px solid #ffc107;
   border-radius: 8px;
   padding: 1.5rem;
