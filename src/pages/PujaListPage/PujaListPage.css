@@ -6,11 +6,11 @@
 }
 
 .puja-hero {
-  background: linear-gradient(135deg, var(--saffron-primary) 0%, var(--saffron-light) 60%, var(--saffron-light) 100%);
+  background: linear-gradient(135deg, var(--saffron-primary) 0%, #ffaa33 60%, #ffbb44 100%);
   padding: 60px 20px;
   text-align: center;
   color: white;
-  box-shadow: 0 8px 24px var(--accent-glow);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .puja-hero-content {

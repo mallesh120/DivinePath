@@ -40,30 +40,39 @@
 
 /* Header Section */
 .gallery-header {
+  background: linear-gradient(135deg, var(--saffron-primary) 0%, #ffaa33 60%, #ffbb44 100%);
+  padding: 40px 20px 50px 20px;
+  color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
   margin-bottom: 50px;
   position: relative;
   z-index: 2;
+  border-radius: 0 0 20px 20px;
+  margin-top: -40px;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
 .gallery-title {
   font-family: 'Playfair Display', serif;
   font-size: 3.2rem;
   font-weight: 800;
-  color: var(--text-primary);
+  color: white;
   margin: 0 0 10px 0;
   letter-spacing: -1px;
-  background: linear-gradient(135deg, var(--text-primary) 0%, var(--saffron-primary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
 }
 
 /* Subtitle for Library (if needed) */
 .gallery-header-subtitle {
   font-family: 'Lato', sans-serif;
   font-size: 1.1rem;
-  color: var(--text-tertiary);
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 400;
   margin: 10px 0 0 0;
   letter-spacing: 1px;
