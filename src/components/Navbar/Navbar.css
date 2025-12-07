@@ -171,7 +171,7 @@
   .navbar-links {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: 0;
     width: 280px;
     max-width: 85vw;
     height: 100vh;
@@ -180,7 +180,10 @@
     background: linear-gradient(180deg, var(--warm-cream) 0%, var(--parchment-light) 100%);
     padding: 80px var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
     gap: 0;
-    transition: right 0.3s ease;
+    transform: translateX(100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
     z-index: 100;
     box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
@@ -189,7 +192,9 @@
   }
 
   .navbar-links.open {
-    right: 0;
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
   }
 
   .navbar-links li {
