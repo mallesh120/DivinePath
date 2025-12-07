@@ -1,6 +1,13 @@
+<<<<<<< HEAD
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import Search from '../Search/Search';
+import './Navbar.css'; // <--- THIS LINE IS CRUCIAL
+=======
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import './Navbar.css';
+>>>>>>> cc9c354 (Add mobile responsive hamburger menu to Navbar)
 
 /**
  * The Navbar component provides navigation links for the app.
@@ -103,9 +110,13 @@ const Navbar = () => {
           </NavLink>
         </li>
       </ul>
+<<<<<<< HEAD
+      <Search />
+=======
 
       {/* Overlay for mobile menu */}
       {isMenuOpen && <div className="navbar-overlay" onClick={() => setIsMenuOpen(false)} />}
+>>>>>>> cc9c354 (Add mobile responsive hamburger menu to Navbar)
     </nav>
   );
 };

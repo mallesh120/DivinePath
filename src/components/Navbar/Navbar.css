@@ -13,19 +13,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 var(--spacing-xl); /* Increased padding for more breathing room */
+  padding: 0 var(--spacing-xl);
   height: 80px;
-  position: sticky; /* Make the navbar stick to the top */
+  position: sticky;
   top: 0;
   z-index: 100;
   transition: all 0.3s ease;
 
   /* Modern glassmorphism effect */
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-  backdrop-filter: blur(10px); /* The blur effect */
-  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: var(--shadow-sm);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Subtle bottom border */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .navbar-brand a {
@@ -49,7 +49,7 @@
   display: flex;
   margin: 0;
   padding: 0;
-  gap: 20px; /* Use gap for spacing between links */
+  gap: 20px;
 }
 
 .navbar-links li {
@@ -100,4 +100,157 @@
   gap: 12px;
 }
 
-@import '../../styles/theme.css';
+/* Hamburger Menu Button */
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 110;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--saffron-primary), var(--gold-accent));
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* Hamburger Animation - Open State */
+.navbar-hamburger.open .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-hamburger.open .hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.navbar-hamburger.open .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile Menu Overlay */
+.navbar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 90;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 var(--spacing-md);
+    height: 70px;
+  }
+
+  .navbar-brand a {
+    font-size: 1.5rem;
+  }
+
+  .navbar-hamburger {
+    display: flex;
+  }
+
+  .navbar-overlay {
+    display: block;
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    max-width: 85vw;
+    height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile browsers */
+    flex-direction: column;
+    background: linear-gradient(180deg, var(--warm-cream) 0%, var(--parchment-light) 100%);
+    padding: 80px var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
+    gap: 0;
+    transform: translateX(100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 100;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  .navbar-links.open {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .navbar-links li {
+    width: 100%;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .navbar-links li:last-child {
+    border-bottom: none;
+  }
+
+  .navbar-links a {
+    display: block;
+    width: 100%;
+    padding: 18px var(--spacing-lg);
+    font-size: 1.1rem;
+    text-align: left;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+
+  .navbar-links a::after {
+    display: none;
+  }
+
+  .navbar-links a:hover,
+  .navbar-links a.active-link {
+    background: linear-gradient(90deg, rgba(234, 88, 12, 0.1) 0%, transparent 100%);
+    color: var(--saffron-primary);
+  }
+
+  .navbar-links a.active-link {
+    border-left: 4px solid var(--saffron-primary);
+    padding-left: calc(var(--spacing-lg) - 4px);
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 var(--spacing-sm);
+    height: 60px;
+  }
+
+  .navbar-brand a {
+    font-size: 1.3rem;
+  }
+
+  .navbar-links {
+    width: 100%;
+    right: -100%;
+    padding-left: var(--spacing-lg);
+    padding-right: var(--spacing-lg);
+  }
+
+  .navbar-links.open {
+    right: 0;
+  }
+}
