@@ -2,7 +2,6 @@ import React, { useState, useMemo } from 'react';
 import FestivalCard from '../../components/FestivalCard/FestivalCard';
 import { 
   festivalsData, 
-  getFestivalsByCategory,
   getUpcomingFestivals,
   getTodaysFestivals,
   sortFestivalsByDate
@@ -50,7 +49,7 @@ const FestivalCalendarPage = () => {
     }
 
     return festivals;
-  }, [festivalsData, selectedCategory, searchQuery, viewMode, todaysFestivals]);
+  }, [selectedCategory, searchQuery, viewMode, todaysFestivals]);
 
   const upcomingCount = getUpcomingFestivals().length;
 

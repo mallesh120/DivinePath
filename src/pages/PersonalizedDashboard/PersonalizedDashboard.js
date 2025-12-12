@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { usePanchangam } from '../../hooks/usePanchangam';
 import ShlokaOfTheDay from '../../components/ShlokaOfTheDay/ShlokaOfTheDay';
-import { getPrayerOfTheDay } from '../../data/prayersData';
+import { getPrayerOfTheDay } from '../../data/prayers/prayersData';
 import { getDailyReading } from '../../data/dailyReadings';
 import './PersonalizedDashboard.css';
 

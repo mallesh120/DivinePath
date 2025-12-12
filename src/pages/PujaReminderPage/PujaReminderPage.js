@@ -13,7 +13,7 @@ import {
   getPujaStreak,
   markPujaCompleted,
   getNextReminderTime
-} from '../../data/pujaReminderData';
+} from '../../data/pujas/pujaReminderData';
 import './PujaReminderPage.css';
 
 function PujaReminderPage() {

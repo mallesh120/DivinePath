@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { getAshtottaramById } from '../../data/ashtottaramData';
+import { getAshtottaramById } from '../../data/ashtottaram/ashtottaramData';
 import './AshtottaramDetailPage.css';
 
 const AshtottaramDetailPage = () => {

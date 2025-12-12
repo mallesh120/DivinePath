@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { godsData, godCategories, getGodsByCategory, searchGods } from '../../data/godsData';
+import { godsData, godCategories, getGodsByCategory, searchGods } from '../../data/gods/godsData';
 import { useNavigate } from 'react-router-dom';
 import './AllGodsGalleryPage.css';
 

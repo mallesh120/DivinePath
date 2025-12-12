@@ -1,5 +1,5 @@
 import React from 'react';
-import { trimurtiData, godsData } from '../../data/godsData';
+import { trimurtiData, godsData } from '../../data/gods/godsData';
 import { useNavigate } from 'react-router-dom';
 import './GodsGalleryPage.css';
 

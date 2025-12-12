@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getAshtottaramList } from '../../data/ashtottaramData';
+import { getAshtottaramList } from '../../data/ashtottaram/ashtottaramData';
 import './AshtottaramListPage.css';
 
 const AshtottaramListPage = () => {

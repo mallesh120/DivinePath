@@ -21,6 +21,43 @@ const nakshatraNamesList = [
   'Uttara Bhadrapada', 'Revati'
 ];
 
+/**
+ * Calculate basic Hindu calendar information for any date
+ * This provides approximate values when detailed calculations are not needed
+ * @param {number} year - Year
+ * @param {number} month - Month (0-11, JavaScript convention)
+ * @param {number} day - Day of month
+ * @returns {object} Basic panchang information
+ */
+export const calculateBasicPanchang = (year, month, day) => {
+  const date = new Date(year, month, day);
+  const dayOfYear = Math.floor((date - new Date(year, 0, 0)) / 86400000);
+  
+  // Approximate tithi (lunar day) - 30 tithis per lunar month
+  const tithiIndex = ((dayOfYear % 30));
+  
+  // Approximate nakshatra (27 nakshatras)
+  const nakshatraIndex = (dayOfYear % 27);
+  
+  // Get day of week
+  const weekday = date.getDay();
+  const weekdayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  
+  // Determine paksha (lunar fortnight)
+  const paksha = tithiIndex < 15 ? 'Shukla Paksha' : 'Krishna Paksha';
+  
+  return {
+    tithi: tithiNames[tithiIndex] || 'N/A',
+    nakshatra: nakshatraNamesList[nakshatraIndex] || 'N/A',
+    vara: weekdayNames[weekday],
+    paksha: paksha
+  };
+};
+
+/**
+ * Hook to fetch Panchangam (Hindu calendar) data with automatic geolocation
+ * Uses local astronomical calculations for accuracy
+ */
 export const usePanchangam = () => {
   const [location, setLocation] = useState(null);
   const [placeName, setPlaceName] = useState('');

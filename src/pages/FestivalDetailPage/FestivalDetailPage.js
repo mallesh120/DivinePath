@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { getFestivalById, formatDateRange, getDaysUntilFestival, getFestivalStatus } from '../../data/festivalsData';
+import { getFestivalById, formatDateRange, getDaysUntilFestival, getFestivalStatus } from '../../data/festivals/festivalsData';
 import './FestivalDetailPage.css';
 
 const FestivalDetailPage = () => {

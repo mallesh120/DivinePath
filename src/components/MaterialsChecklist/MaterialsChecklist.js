@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getAllMaterialsForPuja } from '../../data/pujasData';
+import { getAllMaterialsForPuja } from '../../data/pujas/pujasData';
 import './MaterialsChecklist.css';
 
 const MaterialsChecklist = ({ puja }) => {

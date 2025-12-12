@@ -1,5 +1,5 @@
-import { godsData } from '../data/godsData';
-import { festivalsData } from '../data/festivalsData';
+import { godsData } from '../data/gods/godsData';
+import { festivalsData } from '../data/festivals/festivalsData';
 import { literatureData } from '../data/literature/index';
 
 export const searchContent = (query) => {

@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import PujaCard from '../../components/PujaCard/PujaCard';
-import { pujasData, pujaCategories, difficultyLevels, searchPujas } from '../../data/pujas/pujasData';
+import PujaCard from '../../../components/PujaCard/PujaCard';
+import { pujasData, pujaCategories, difficultyLevels, searchPujas } from '../../../data/pujas/pujasData';
 import './PujaListPage.css';
 
 const PujaListPage = () => {

@@ -1,4 +1,4 @@
-import { generateFestivalDatesForYear } from '../utils/hinduCalendar';
+import { generateFestivalDatesForYear } from '../../utils/hinduCalendar';
 
 // Festival dates for 2025-2026 (based on Hindu lunar calendar)
 // This will be used as both static data and templates for calculation

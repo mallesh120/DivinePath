@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { sortFestivalsByDate, getAllFestivalsWithCalculated } from '../../data/festivalsData';
+import { sortFestivalsByDate, getAllFestivalsWithCalculated } from '../../data/festivals/festivalsData';
 import FestivalCard from '../../components/FestivalCard/FestivalCard';
 import { getLocationForFestivals, WORLD_CITIES, setUserLocation } from '../../utils/locationService';
 import './FestivalsPage.css';

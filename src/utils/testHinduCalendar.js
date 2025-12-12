@@ -6,7 +6,7 @@
 const { generateFestivalDatesForYear } = require('./hinduCalendar');
 
 console.log('Testing Hindu Calendar Calculations\n');
-console.log('=' .repeat(60));
+console.log('='.repeat(60));
 
 // Test years 2027, 2030, 2035
 const testYears = [2027, 2030, 2035];

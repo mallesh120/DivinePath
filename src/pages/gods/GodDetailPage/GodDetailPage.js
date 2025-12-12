@@ -1,8 +1,8 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { godsData, trimurtiData } from '../../data/gods/godsData';
-import { ashtottaramData } from '../../data/ashtottaram/ashtottaramData';
-import ImageGallery from '../../components/ImageGallery/ImageGallery';
+import { godsData, trimurtiData } from '../../../data/gods/godsData';
+import { ashtottaramData } from '../../../data/ashtottaram/ashtottaramData';
+import ImageGallery from '../../../components/ImageGallery/ImageGallery';
 import './GodDetailPage.css';
 
 const GodDetailPage = () => {

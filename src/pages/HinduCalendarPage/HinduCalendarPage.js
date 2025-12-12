@@ -1,9 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getAllFestivalsWithCalculated } from '../../data/festivalsData';
+import { getAllFestivalsWithCalculated } from '../../data/festivals/festivalsData';
 import { getLocationForFestivals } from '../../utils/locationService';
-import { calculateBasicPanchang } from '../../hooks/usePanchangamForDate';
-import { usePanchangam } from '../../hooks/usePanchangam';
+import { calculateBasicPanchang, usePanchangam } from '../../hooks/usePanchangam';
 import './HinduCalendarPage.css';
 
 const HinduCalendarPage = () => {

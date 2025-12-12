@@ -6,7 +6,7 @@ import {
   saveChecklistProgress,
   loadChecklistProgress,
   getChecklistCompletion 
-} from '../../data/festivalChecklistData';
+} from '../../data/festivals/festivalChecklistData';
 import './FestivalCountdownPage.css';
 
 function FestivalCountdownPage() {

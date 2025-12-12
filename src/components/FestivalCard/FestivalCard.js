@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { formatDateRange, getDaysUntilFestival, getFestivalStatus } from '../../data/festivalsData';
+import { formatDateRange, getDaysUntilFestival, getFestivalStatus } from '../../data/festivals/festivalsData';
 import './FestivalCard.css';
 
 const FestivalCard = ({ festival, compact = false }) => {

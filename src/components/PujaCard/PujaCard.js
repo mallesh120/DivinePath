@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { getAllMaterialsForPuja } from '../../data/pujasData';
+import { getAllMaterialsForPuja } from '../../data/pujas/pujasData';
 import './PujaCard.css';
 
 const PujaCard = ({ puja }) => {
