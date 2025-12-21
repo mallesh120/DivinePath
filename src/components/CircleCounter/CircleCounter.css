@@ -1,0 +1,170 @@
+.circle-counter {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.circle-counter-title {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  margin: 0 0 20px 0;
+}
+
+.circle-container {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  margin: 0 auto 20px;
+}
+
+/* SVG Progress Ring */
+.progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(-1); /* Flip to make progress go clockwise */
+}
+
+.progress-ring-circle {
+  transition: stroke-dasharray 0.3s ease;
+}
+
+/* Beads Container */
+.beads-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bead {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d0d0d0;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.bead-active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+  transform: translate(-50%, -50%) scale(1.3);
+}
+
+/* Center Display */
+.counter-display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.count-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.count-max {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.count-percentage {
+  font-size: 0.8rem;
+  color: #aaa;
+  font-weight: 600;
+}
+
+/* Control Buttons */
+.counter-controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.counter-button {
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.counter-button.increment {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.counter-button.increment:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.counter-button.increment:active {
+  transform: scale(0.98);
+}
+
+.counter-button.reset {
+  background: var(--neutral-200, #f0f0f0);
+  color: var(--text-tertiary, #666);
+}
+
+.counter-button.reset:hover {
+  background: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .circle-container {
+    width: 240px;
+    height: 240px;
+  }
+
+  .count-number {
+    font-size: 2rem;
+  }
+
+  .bead {
+    width: 6px;
+    height: 6px;
+  }
+
+  .counter-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .circle-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .count-number {
+    font-size: 1.8rem;
+  }
+
+  .bead {
+    width: 5px;
+    height: 5px;
+  }
+}
