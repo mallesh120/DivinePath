@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { usePanchangam } from '../../hooks/usePanchangam';
 import ShlokaOfTheDay from '../../components/ShlokaOfTheDay/ShlokaOfTheDay';
+import CircleCounter from '../../components/CircleCounter/CircleCounter';
 import { getPrayerOfTheDay } from '../../data/prayers/prayersData';
 import { getDailyReading } from '../../data/dailyReadings';
 import './PersonalizedDashboard.css';
@@ -250,24 +251,17 @@ const PersonalizedDashboard = () => {
             </div>
           </div>
           
-          {/* Japa Counter */}
-          <div className="japa-counter">
-            <h3 className="japa-title">📿 Mantra Japa Counter</h3>
-            <div className="japa-display">{userGoals.japaCount}</div>
-            <button className="japa-button" onClick={handleJapaIncrement}>
-              + Count Japa
-            </button>
-            <button 
-              className="japa-reset" 
-              onClick={() => {
-                const updatedGoals = { ...userGoals, japaCount: 0 };
-                setUserGoals(updatedGoals);
-                localStorage.setItem('userGoals', JSON.stringify(updatedGoals));
-              }}
-            >
-              Reset
-            </button>
-          </div>
+          {/* Circle Counter for Japa */}
+          <CircleCounter
+            count={userGoals.japaCount}
+            onIncrement={handleJapaIncrement}
+            onReset={() => {
+              const updatedGoals = { ...userGoals, japaCount: 0 };
+              setUserGoals(updatedGoals);
+              localStorage.setItem('userGoals', JSON.stringify(updatedGoals));
+            }}
+            maxCount={108}
+          />
         </section>
 
         {/* Daily Prayer */}
