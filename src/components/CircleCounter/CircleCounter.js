@@ -6,12 +6,16 @@ import './CircleCounter.css';
  * Displays 108 beads in a circle with visual progress tracking
  */
 const CircleCounter = ({ count = 0, onIncrement, onReset, maxCount = 108 }) => {
+  // Constants
+  const VISUAL_BEAD_COUNT = 36; // Display 36 beads for performance (representing 108)
+  const CIRCLE_RADIUS = 85; // Radius of the progress circle
+  const CIRCLE_CIRCUMFERENCE = 2 * Math.PI * CIRCLE_RADIUS; // ~534
+  
   // Calculate rotation angle for current progress
   const progressAngle = (count / maxCount) * 360;
   
   // Create array of beads (simplified to 36 visual beads for performance)
-  const visualBeadCount = 36;
-  const beadsPerVisualBead = maxCount / visualBeadCount;
+  const beadsPerVisualBead = maxCount / VISUAL_BEAD_COUNT;
   const activeBeadCount = Math.ceil(count / beadsPerVisualBead);
 
   return (
@@ -26,7 +30,7 @@ const CircleCounter = ({ count = 0, onIncrement, onReset, maxCount = 108 }) => {
             className="progress-ring-bg"
             cx="100"
             cy="100"
-            r="85"
+            r={CIRCLE_RADIUS}
             fill="none"
             stroke="#e0e0e0"
             strokeWidth="8"
@@ -36,11 +40,11 @@ const CircleCounter = ({ count = 0, onIncrement, onReset, maxCount = 108 }) => {
             className="progress-ring-circle"
             cx="100"
             cy="100"
-            r="85"
+            r={CIRCLE_RADIUS}
             fill="none"
             stroke="url(#gradient)"
             strokeWidth="8"
-            strokeDasharray={`${(progressAngle / 360) * 534} 534`}
+            strokeDasharray={`${(progressAngle / 360) * CIRCLE_CIRCUMFERENCE} ${CIRCLE_CIRCUMFERENCE}`}
             strokeLinecap="round"
             transform="rotate(-90 100 100)"
           />
@@ -54,8 +58,8 @@ const CircleCounter = ({ count = 0, onIncrement, onReset, maxCount = 108 }) => {
 
         {/* Beads arranged in a circle */}
         <div className="beads-container">
-          {Array.from({ length: visualBeadCount }).map((_, index) => {
-            const angle = (360 / visualBeadCount) * index - 90; // Start from top
+          {Array.from({ length: VISUAL_BEAD_COUNT }).map((_, index) => {
+            const angle = (360 / VISUAL_BEAD_COUNT) * index - 90; // Start from top
             const radian = (angle * Math.PI) / 180;
             const radius = 90; // Distance from center
             const x = 100 + radius * Math.cos(radian);
