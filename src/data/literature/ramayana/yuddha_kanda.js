@@ -1,17 +1,17 @@
 // At the top of yuddha_kanda.js, add the new image imports:
-import yuddhaScene1 from '../../../assets/images/yuddhaScenes/yuddha_scene1.png';
-import yuddhaScene2 from '../../../assets/images/yuddhaScenes/yuddha_scene2.png';
-import yuddhaScene3 from '../../../assets/images/yuddhaScenes/yuddha_scene3.png';
-import yuddhaScene4 from '../../../assets/images/yuddhaScenes/yuddha_scene4.png';
-import yuddhaScene5 from '../../../assets/images/yuddhaScenes/yuddha_scene5.png';
-import yuddhaScene6 from '../../../assets/images/yuddhaScenes/yuddha_scene6.png';
-import yuddhaScene7 from '../../../assets/images/yuddhaScenes/yuddha_scene7.png';
-import yuddhaScene8 from '../../../assets/images/yuddhaScenes/yuddha_scene8.png';
-import yuddhaScene9 from '../../../assets/images/yuddhaScenes/yuddha_scene9.png';
-import yuddhaScene10 from '../../../assets/images/yuddhaScenes/yuddha_scene10.png';
-import yuddhaScene11 from '../../../assets/images/yuddhaScenes/yuddha_scene11.png';
-import yuddhaScene12 from '../../../assets/images/yuddhaScenes/yuddha_scene12.png';
-import yuddhaScene13 from '../../../assets/images/yuddhaScenes/yuddha_scene13.png';
+import yuddhaScene1 from '../../../assets/images/yuddhaScenes/yuddha_scene1.webp';
+import yuddhaScene2 from '../../../assets/images/yuddhaScenes/yuddha_scene2.webp';
+import yuddhaScene3 from '../../../assets/images/yuddhaScenes/yuddha_scene3.webp';
+import yuddhaScene4 from '../../../assets/images/yuddhaScenes/yuddha_scene4.webp';
+import yuddhaScene5 from '../../../assets/images/yuddhaScenes/yuddha_scene5.webp';
+import yuddhaScene6 from '../../../assets/images/yuddhaScenes/yuddha_scene6.webp';
+import yuddhaScene7 from '../../../assets/images/yuddhaScenes/yuddha_scene7.webp';
+import yuddhaScene8 from '../../../assets/images/yuddhaScenes/yuddha_scene8.webp';
+import yuddhaScene9 from '../../../assets/images/yuddhaScenes/yuddha_scene9.webp';
+import yuddhaScene10 from '../../../assets/images/yuddhaScenes/yuddha_scene10.webp';
+import yuddhaScene11 from '../../../assets/images/yuddhaScenes/yuddha_scene11.webp';
+import yuddhaScene12 from '../../../assets/images/yuddhaScenes/yuddha_scene12.webp';
+import yuddhaScene13 from '../../../assets/images/yuddhaScenes/yuddha_scene13.webp';
 
 // Export the array of scene objects for this Kanda
 export const yuddhaKandaScenes = [

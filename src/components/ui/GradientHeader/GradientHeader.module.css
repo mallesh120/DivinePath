@@ -1,0 +1,41 @@
+.header {
+  background: linear-gradient(135deg, var(--saffron-primary) 0%, var(--saffron-light) 100%);
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 8px 24px var(--accent-glow);
+  margin-bottom: 40px;
+  border-radius: var(--radius-lg);
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: 'Playfair Display', 'Cinzel', serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: white;
+  margin: 0 0 15px 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.28);
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0 20px 0;
+  line-height: 1.6;
+}
+
+.date {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.2);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-xl);
+  display: inline-block;
+  margin-top: 10px;
+}

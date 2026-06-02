@@ -194,7 +194,7 @@ const PersonalizedDashboard = () => {
           ) : (
             <p>Panchangam data unavailable</p>
           )}
-          <Link to="/calendar" className="view-full-link">
+          <Link to="/adults/calendar" className="view-full-link">
             View Full Calendar →
           </Link>
         </section>
@@ -339,7 +339,7 @@ const PersonalizedDashboard = () => {
               </div>
               
               <div className="library-link">
-                <Link to="/library" className="browse-library-btn">
+                <Link to="/adults/library" className="browse-library-btn">
                   📚 Browse Full Literature Library
                 </Link>
               </div>
@@ -369,7 +369,7 @@ const PersonalizedDashboard = () => {
               </div>
             ))}
           </div>
-          <Link to="/festivals" className="view-full-link">
+          <Link to="/adults/festivals" className="view-full-link">
             View All Festivals →
           </Link>
         </section>
@@ -394,19 +394,19 @@ const PersonalizedDashboard = () => {
         <section className="dashboard-card quick-actions-card">
           <h2 className="card-title">⚡ Quick Actions</h2>
           <div className="quick-actions-grid">
-            <Link to="/gods" className="quick-action-btn">
+            <Link to="/adults/gods" className="quick-action-btn">
               <span className="action-icon">🕉️</span>
               <span className="action-label">Gods Gallery</span>
             </Link>
-            <Link to="/library" className="quick-action-btn">
+            <Link to="/adults/library" className="quick-action-btn">
               <span className="action-icon">📚</span>
               <span className="action-label">Sacred Texts</span>
             </Link>
-            <Link to="/pujas" className="quick-action-btn">
+            <Link to="/adults/pujas" className="quick-action-btn">
               <span className="action-icon">🔱</span>
               <span className="action-label">Puja Guide</span>
             </Link>
-            <Link to="/ashtottaram" className="quick-action-btn">
+            <Link to="/adults/ashtottaram" className="quick-action-btn">
               <span className="action-icon">🙏</span>
               <span className="action-label">108 Names</span>
             </Link>
@@ -417,22 +417,22 @@ const PersonalizedDashboard = () => {
         <section className="dashboard-card practical-living-card">
           <h2 className="card-title">🕉️ Practical Hindu Living</h2>
           <div className="practical-actions">
-            <Link to="/muhurta-finder" className="practical-action-btn">
+            <Link to="/adults/muhurta-finder" className="practical-action-btn">
               <span className="action-icon">🕐</span>
               <span className="action-label">Muhurta Finder</span>
               <span className="action-desc">Find auspicious times</span>
             </Link>
-            <Link to="/fasting-guide" className="practical-action-btn">
+            <Link to="/adults/fasting-guide" className="practical-action-btn">
               <span className="action-icon">🍃</span>
               <span className="action-label">Fasting Guide</span>
               <span className="action-desc">Daily fasting rules</span>
             </Link>
-            <Link to="/festival-countdown" className="practical-action-btn">
+            <Link to="/adults/festival-countdown" className="practical-action-btn">
               <span className="action-icon">🎊</span>
               <span className="action-label">Festival Prep</span>
               <span className="action-desc">Preparation checklists</span>
             </Link>
-            <Link to="/puja-reminders" className="practical-action-btn">
+            <Link to="/adults/puja-reminders" className="practical-action-btn">
               <span className="action-icon">🔔</span>
               <span className="action-label">Puja Reminders</span>
               <span className="action-desc">Daily worship alerts</span>

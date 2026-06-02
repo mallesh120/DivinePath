@@ -7,7 +7,7 @@ export const krishnaAshtottaram = {
   id: 'krishna',
   title: 'Lord Krishna',
   category: 'god',
-  image: '/images/Gods/krishna.png',
+  image: '/images/Gods/krishna.webp',
   description: 'The eighth avatar of Lord Vishnu',
   names: [
     {

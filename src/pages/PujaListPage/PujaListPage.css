@@ -6,7 +6,7 @@
 }
 
 .puja-hero {
-  background: linear-gradient(135deg, var(--saffron-primary) 0%, #ffaa33 60%, #ffbb44 100%);
+  background: linear-gradient(135deg, var(--saffron-primary) 0%, var(--primary-color) 60%, var(--parchment-mid) 100%);
   padding: 60px 20px;
   text-align: center;
   color: white;
@@ -178,7 +178,7 @@
 
 .reset-filters-btn {
   padding: 12px 30px;
-  background: linear-gradient(135deg, var(--saffron-primary) 0%, #ffaa33 100%);
+  background: linear-gradient(135deg, var(--saffron-primary) 0%, var(--primary-color) 100%);
   color: white;
   border: none;
   border-radius: 25px;

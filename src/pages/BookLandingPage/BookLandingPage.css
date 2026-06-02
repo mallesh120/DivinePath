@@ -1,0 +1,213 @@
+.book-landing-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 80vh;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.book-not-found {
+  text-align: center;
+  padding: 5rem 2rem;
+  color: var(--text-color);
+}
+
+.book-landing-hero {
+  display: flex;
+  gap: 3rem;
+  margin-top: -2rem; /* Pull up into the gradient slightly */
+  margin-bottom: 4rem;
+  background: var(--card-bg);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 153, 51, 0.1);
+  position: relative;
+  z-index: 2;
+  align-items: center;
+}
+
+.book-hero-image-container {
+  flex: 0 0 300px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.book-hero-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.book-hero-details {
+  flex: 1;
+}
+
+.book-hero-details h2 {
+  color: var(--primary-color);
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.book-intro-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.book-features {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.feature-pill {
+  background: rgba(255, 153, 51, 0.1);
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 153, 51, 0.2);
+}
+
+.book-table-of-contents h2 {
+  color: var(--primary-color);
+  font-family: 'Cinzel', serif;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.book-table-of-contents h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--primary-color);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.toc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.coming-soon-text {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  opacity: 0.7;
+  padding: 3rem;
+  background: var(--card-bg);
+  border-radius: 1rem;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.back-link-container {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.back-to-library-btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 2rem;
+  font-weight: 600;
+  border: 2px solid var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.back-to-library-btn:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);
+}
+
+@media (max-width: 900px) {
+  .book-landing-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .book-hero-image-container {
+    flex: none;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .book-features {
+    justify-content: center;
+  }
+}
+
+.toc-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem;
+}
+
+.toc-card-title {
+  color: var(--primary-color);
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.toc-card-subtitle {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.toc-card-summary {
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.toc-card-action {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s;
+}
+
+.toc-card-link:hover .toc-card-action {
+  transform: translateX(5px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

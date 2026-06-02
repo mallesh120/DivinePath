@@ -7,7 +7,7 @@ export const kartikeyaAshtottaram = {
   id: 'kartikeya',
   title: 'Lord Kartikeya',
   category: 'god',
-  image: '/images/Gods/kartikeya.png',
+  image: '/images/Gods/kartikeya.webp',
   description: 'The God of War, son of Shiva and Parvati',
   names: [
     {

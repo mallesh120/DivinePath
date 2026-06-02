@@ -1,4 +1,4 @@
-import mahabharataImage from '../../assets/images/mahabharata.png';
+import mahabharataImage from '../../assets/images/mahabharata.webp';
 
 export const mahabharataObject = {
   id: 2,

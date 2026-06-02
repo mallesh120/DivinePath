@@ -1,0 +1,91 @@
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { shlokaService } from '../../../services/shlokaService';
+import KidsPageTransition from '../../../components/KidsLayout/KidsPageTransition';
+import './KidsDashboard.css';
+
+const KidsDashboard = () => {
+  const [dailyShloka, setDailyShloka] = useState(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    shlokaService.getDailyShloka().then(setDailyShloka);
+    
+    // Cleanup speech synth if component unmounts
+    return () => {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+    };
+  }, []);
+
+  const handleListen = () => {
+    if ('speechSynthesis' in window && dailyShloka) {
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(dailyShloka.english);
+      utterance.rate = 0.8;
+      utterance.pitch = 1.2;
+      
+      utterance.onstart = () => setIsPlaying(true);
+      utterance.onend = () => setIsPlaying(false);
+      utterance.onerror = () => setIsPlaying(false);
+      
+      window.speechSynthesis.speak(utterance);
+    }
+  };
+  return (
+    <KidsPageTransition>
+      <div className="kids-dashboard">
+        <h1 className="welcome-title">Hari Om! 🙏</h1>
+        
+        <section className="daily-shloka-section">
+          {dailyShloka ? (
+            <div className="shloka-card">
+              <div className="shloka-header">
+                <h2>Daily Shloka</h2>
+                <span className="shloka-icon">{dailyShloka.icon}</span>
+              </div>
+              <div className="shloka-content">
+                <p className="sanskrit-text">{dailyShloka.sanskrit}</p>
+                <p className="english-text">{dailyShloka.english}</p>
+                <div className="meaning-box">
+                  <p>{dailyShloka.meaning}</p>
+                </div>
+              </div>
+              <button 
+                className={`listen-btn ${isPlaying ? 'playing' : ''}`}
+                onClick={handleListen}
+              >
+                {isPlaying ? '🔊 Listening...' : '▶️ Listen to Shloka'}
+              </button>
+            </div>
+          ) : (
+            <div className="shloka-card loading">
+              <p>Loading today's Shloka...</p>
+            </div>
+          )}
+        </section>
+
+        <section className="quick-links">
+          <h2>What would you like to do?</h2>
+          <div className="grid-links">
+            <Link to="/kids/stories" className="grid-card story-card">
+              <span className="card-emoji">📖</span>
+              <h3>Read Stories</h3>
+            </Link>
+            <Link to="/kids/games" className="grid-card game-card">
+              <span className="card-emoji">🎯</span>
+              <h3>Play Games</h3>
+            </Link>
+            <Link to="/kids/chanting" className="grid-card chant-card">
+              <span className="card-emoji">🌸</span>
+              <h3>Chanting</h3>
+            </Link>
+          </div>
+        </section>
+      </div>
+    </KidsPageTransition>
+  );
+};
+
+export default KidsDashboard;

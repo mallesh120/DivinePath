@@ -17,8 +17,8 @@ const HinduCalendarPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [showDatePicker, setShowDatePicker] = useState(false);
 
-  // Get today's full Panchangam data
-  const { loading: panchangamLoading, error: panchangamError, panchangamData } = usePanchangam();
+  // Get today's full Panchangam data and user location
+  const { loading: panchangamLoading, error: panchangamError, panchangamData, location: hookLocation } = usePanchangam();
 
   const minYear = 2020;
   const maxYear = 2120;
@@ -51,7 +51,7 @@ const HinduCalendarPage = () => {
     let ekadashiDates = [];
 
     for (let day = 1; day <= daysInMonth; day++) {
-      const panchang = calculateBasicPanchang(calendarYear, calendarMonth, day);
+      const panchang = calculateBasicPanchang(calendarYear, calendarMonth, day, hookLocation);
       if (panchang.auspiciousness >= 4) auspiciousDays++;
       if (panchang.isEkadashi) ekadashiDates.push(day);
       
@@ -62,11 +62,11 @@ const HinduCalendarPage = () => {
     }
 
     return { auspiciousDays, festivalsCount, ekadashiDates };
-  }, [calendarYear, calendarMonth, festivalsByDate]);
+  }, [calendarYear, calendarMonth, festivalsByDate, hookLocation]);
 
   // Get Hindu month information
   const getHinduMonthInfo = () => {
-    const panchang = calculateBasicPanchang(calendarYear, calendarMonth, 15);
+    const panchang = calculateBasicPanchang(calendarYear, calendarMonth, 15, hookLocation);
     return {
       hinduMonth: panchang.hinduMonth || 'N/A',
       paksha: panchang.paksha || 'N/A'
@@ -361,6 +361,7 @@ const HinduCalendarPage = () => {
         onFestivalClick={(festivalId) => navigate(`/festivals/${festivalId}`)}
         viewMode={viewMode}
         filterMode={filterMode}
+        location={hookLocation}
       />
 
       {/* Legend for Calendar Symbols */}
@@ -447,7 +448,7 @@ const HinduCalendarPage = () => {
 };
 
 // CalendarView Component
-const CalendarView = ({ year, month, onYearChange, onMonthChange, festivalsByDate, selectedDate, onDateSelect, minYear, maxYear, onFestivalClick, viewMode, filterMode }) => {
+const CalendarView = ({ year, month, onYearChange, onMonthChange, festivalsByDate, selectedDate, onDateSelect, minYear, maxYear, onFestivalClick, viewMode, filterMode, location }) => {
   const monthNames = [
     'January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December'
@@ -501,7 +502,7 @@ const CalendarView = ({ year, month, onYearChange, onMonthChange, festivalsByDat
     const hasFestival = festivals.length > 0;
     
     // Calculate panchang data for this date
-    const panchangInfo = calculateBasicPanchang(year, month, day);
+    const panchangInfo = calculateBasicPanchang(year, month, day, location);
     
     // Apply filters
     if (filterMode === 'festivals' && !hasFestival) continue;
@@ -647,7 +648,8 @@ const CalendarView = ({ year, month, onYearChange, onMonthChange, festivalsByDat
             const panchang = calculateBasicPanchang(
               selectedDate.year, 
               selectedDate.month, 
-              selectedDate.day
+              selectedDate.day,
+              location
             );
             
             return (

@@ -7,7 +7,7 @@ export const vishnuAshtottaram = {
   name: 'Lord Vishnu',
   title: 'Ashtottara Shatanamavali',
   description: 'The Preserver, one of the principal deities of Hinduism',
-  image: '/images/Gods/vishnu.png',
+  image: '/images/Gods/vishnu.webp',
   category: 'god',
   names: [
     {

@@ -1,10 +1,10 @@
 // At the top of kishkindha_kanda.js, add the new image imports:
-import kishkindhaScene1 from '../../../assets/images/kishkindhaScenes/kishkindhaScene1.png';
-import kishkindhaScene2 from '../../../assets/images/kishkindhaScenes/kishkindhaScene2.png';
-import kishkindhaScene3 from '../../../assets/images/kishkindhaScenes/kishkindhaScene3.png';
-import kishkindhaScene4 from '../../../assets/images/kishkindhaScenes/kishkindhaScene4.png';
-import kishkindhaScene5 from '../../../assets/images/kishkindhaScenes/kishkindhaScene5.png';
-import kishkindhaScene6 from '../../../assets/images/kishkindhaScenes/kishkindhaScene6.png';
+import kishkindhaScene1 from '../../../assets/images/kishkindhaScenes/kishkindhaScene1.webp';
+import kishkindhaScene2 from '../../../assets/images/kishkindhaScenes/kishkindhaScene2.webp';
+import kishkindhaScene3 from '../../../assets/images/kishkindhaScenes/kishkindhaScene3.webp';
+import kishkindhaScene4 from '../../../assets/images/kishkindhaScenes/kishkindhaScene4.webp';
+import kishkindhaScene5 from '../../../assets/images/kishkindhaScenes/kishkindhaScene5.webp';
+import kishkindhaScene6 from '../../../assets/images/kishkindhaScenes/kishkindhaScene6.webp';
 
 
 // Export the array of scene objects for this Kanda

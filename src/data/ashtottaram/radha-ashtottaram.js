@@ -7,7 +7,7 @@ export const radhaAshtottaram = {
   id: 'radha',
   title: 'Goddess Radha',
   category: 'goddess',
-  image: '/images/Goddesses/radha.png',
+  image: '/images/Goddesses/radha.webp',
   description: 'The consort of Lord Krishna, embodiment of divine love',
   names: [
     {

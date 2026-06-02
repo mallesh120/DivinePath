@@ -193,6 +193,8 @@ const AshtottaramDetailPage = () => {
                       className={`audio-btn ${isPlayingAudio && currentPlayingIndex === `${index}-sanskrit` ? 'playing' : ''}`}
                       onClick={() => speakText(name.sanskrit, `${index}-sanskrit`)}
                       title="Listen to pronunciation"
+                      aria-label="Listen to Sanskrit pronunciation"
+                      aria-pressed={isPlayingAudio && currentPlayingIndex === `${index}-sanskrit`}
                     >
                       {isPlayingAudio && currentPlayingIndex === `${index}-sanskrit` ? '⏸️' : '🔊'}
                     </button>
@@ -206,6 +208,8 @@ const AshtottaramDetailPage = () => {
                       className={`audio-btn ${isPlayingAudio && currentPlayingIndex === `${index}-trans` ? 'playing' : ''}`}
                       onClick={() => speakText(name.transliteration, `${index}-trans`)}
                       title="Listen to pronunciation"
+                      aria-label="Listen to transliteration pronunciation"
+                      aria-pressed={isPlayingAudio && currentPlayingIndex === `${index}-trans`}
                     >
                       {isPlayingAudio && currentPlayingIndex === `${index}-trans` ? '⏸️' : '🔊'}
                     </button>
@@ -219,6 +223,8 @@ const AshtottaramDetailPage = () => {
                       className={`audio-btn ${isPlayingAudio && currentPlayingIndex === `${index}-mantra-sanskrit` ? 'playing' : ''}`}
                       onClick={() => speakText(name.mantraSanskrit, `${index}-mantra-sanskrit`)}
                       title="Listen to pronunciation"
+                      aria-label="Listen to Mantra pronunciation"
+                      aria-pressed={isPlayingAudio && currentPlayingIndex === `${index}-mantra-sanskrit`}
                     >
                       {isPlayingAudio && currentPlayingIndex === `${index}-mantra-sanskrit` ? '⏸️' : '🔊'}
                     </button>

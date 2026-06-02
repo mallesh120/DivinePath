@@ -1,22 +1,22 @@
 // At the top of sundara_kanda.js, add all the new image imports:
-import sundaraScene1 from '../../../assets/images/sundaraScenes/sundara_scene1.png';
-import sundaraScene2 from '../../../assets/images/sundaraScenes/sundara_scene2.png';
-import sundaraScene3 from '../../../assets/images/sundaraScenes/sundara_scene3.png';
-import sundaraScene4 from '../../../assets/images/sundaraScenes/sundara_scene4.png';
-import sundaraScene5 from '../../../assets/images/sundaraScenes/sundara_scene5.png';
-import sundaraScene6 from '../../../assets/images/sundaraScenes/sundara_scene6.png';
-import sundaraScene7 from '../../../assets/images/sundaraScenes/sundara_scene7.png';
-import sundaraScene8 from '../../../assets/images/sundaraScenes/sundara_scene8.png';
-import sundaraScene9 from '../../../assets/images/sundaraScenes/sundara_scene9.png';
-import sundaraScene10 from '../../../assets/images/sundaraScenes/sundara_scene10.png';
-import sundaraScene11 from '../../../assets/images/sundaraScenes/sundara_scene11.png';
-import sundaraScene12 from '../../../assets/images/sundaraScenes/sundara_scene12.png';
-import sundaraScene13 from '../../../assets/images/sundaraScenes/sundara_scene13.png';
-import sundaraScene14 from '../../../assets/images/sundaraScenes/sundara_scene14.png';
-import sundaraScene15 from '../../../assets/images/sundaraScenes/sundara_scene15.png';
-import sundaraScene16 from '../../../assets/images/sundaraScenes/sundara_scene16.png';
-import sundaraScene17 from '../../../assets/images/sundaraScenes/sundara_scene17.png';
-import sundaraScene18 from '../../../assets/images/sundaraScenes/sundara_scene18.png';
+import sundaraScene1 from '../../../assets/images/sundaraScenes/sundara_scene1.webp';
+import sundaraScene2 from '../../../assets/images/sundaraScenes/sundara_scene2.webp';
+import sundaraScene3 from '../../../assets/images/sundaraScenes/sundara_scene3.webp';
+import sundaraScene4 from '../../../assets/images/sundaraScenes/sundara_scene4.webp';
+import sundaraScene5 from '../../../assets/images/sundaraScenes/sundara_scene5.webp';
+import sundaraScene6 from '../../../assets/images/sundaraScenes/sundara_scene6.webp';
+import sundaraScene7 from '../../../assets/images/sundaraScenes/sundara_scene7.webp';
+import sundaraScene8 from '../../../assets/images/sundaraScenes/sundara_scene8.webp';
+import sundaraScene9 from '../../../assets/images/sundaraScenes/sundara_scene9.webp';
+import sundaraScene10 from '../../../assets/images/sundaraScenes/sundara_scene10.webp';
+import sundaraScene11 from '../../../assets/images/sundaraScenes/sundara_scene11.webp';
+import sundaraScene12 from '../../../assets/images/sundaraScenes/sundara_scene12.webp';
+import sundaraScene13 from '../../../assets/images/sundaraScenes/sundara_scene13.webp';
+import sundaraScene14 from '../../../assets/images/sundaraScenes/sundara_scene14.webp';
+import sundaraScene15 from '../../../assets/images/sundaraScenes/sundara_scene15.webp';
+import sundaraScene16 from '../../../assets/images/sundaraScenes/sundara_scene16.webp';
+import sundaraScene17 from '../../../assets/images/sundaraScenes/sundara_scene17.webp';
+import sundaraScene18 from '../../../assets/images/sundaraScenes/sundara_scene18.webp';
 
 
 // Export the array of scene objects for this Kanda

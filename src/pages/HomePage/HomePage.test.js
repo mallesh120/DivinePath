@@ -102,9 +102,9 @@ describe('HomePage Component', () => {
       </MemoryRouter>
     );
     
-    expect(container.querySelector('.home-page')).toBeInTheDocument();
-    expect(container.querySelector('.devotional-hero')).toBeInTheDocument();
-    expect(container.querySelector('.devotional-container')).toBeInTheDocument();
+    expect(container.querySelector('.homePage')).toBeInTheDocument();
+    expect(container.querySelector('.header')).toBeInTheDocument();
+    expect(container.querySelector('.devotionalContainer')).toBeInTheDocument();
   });
 
   it('should render multiple devotional sections', () => {
@@ -114,7 +114,7 @@ describe('HomePage Component', () => {
       </MemoryRouter>
     );
     
-    const sections = container.querySelectorAll('.devotional-section');
+    const sections = container.querySelectorAll('.devotionalSection');
     expect(sections.length).toBeGreaterThan(3);
   });
 });

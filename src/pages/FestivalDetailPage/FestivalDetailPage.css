@@ -26,16 +26,16 @@
 }
 
 .festival-detail-back-link:hover {
-  color: #764ba2;
+  color: var(--secondary-dark);
   gap: 8px;
 }
 
 .festival-detail-title {
   font-size: 3rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: var(--secondary-dark);
   margin-bottom: 10px;
-  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, var(--secondary-dark) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -43,7 +43,7 @@
 
 .festival-detail-short-name {
   font-size: 1.3rem;
-  color: #7f8c8d;
+  color: var(--text-secondary);
   font-style: italic;
   margin-bottom: 20px;
 }
@@ -66,26 +66,26 @@
 }
 
 .festival-status-message.this-week {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-color) 100%);
   color: white;
   box-shadow: 0 6px 12px rgba(79, 172, 254, 0.3);
 }
 
 .festival-status-message.upcoming {
-  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-  color: #2c3e50;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: var(--secondary-dark);
   box-shadow: 0 6px 12px rgba(67, 233, 123, 0.3);
 }
 
 .festival-status-message.future {
-  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-  color: #2c3e50;
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--parchment-mid) 100%);
+  color: var(--secondary-dark);
   box-shadow: 0 6px 12px rgba(250, 112, 154, 0.3);
 }
 
 .festival-status-message.past {
   background: var(--neutral-200);
-  color: #7f8c8d;
+  color: var(--text-secondary);
 }
 
 @keyframes slideIn {
@@ -135,7 +135,7 @@
 }
 
 .festival-detail-meta-item.featured {
-  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, var(--secondary-dark) 100%);
   color: white;
   padding: 12px 25px;
   box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
@@ -157,7 +157,7 @@
 
 .festival-detail-meta-label {
   font-weight: 600;
-  color: #2c3e50;
+  color: var(--secondary-dark);
 }
 
 .festival-detail-content {
@@ -178,7 +178,7 @@
 .festival-detail-section-title {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: var(--secondary-dark);
   margin-bottom: 15px;
   display: flex;
   align-items: center;
@@ -205,17 +205,17 @@
 .festival-detail-ritual-item {
   padding: 12px 15px;
   margin-bottom: 10px;
-  background: linear-gradient(135deg, var(--neutral-300) 0%, #e9ecef 100%);
+  background: linear-gradient(135deg, var(--neutral-300) 0%, var(--secondary-light) 100%);
   border-left: 4px solid var(--accent-blue);
   border-radius: 8px;
   font-size: 1rem;
-  color: #2c3e50;
+  color: var(--secondary-dark);
   transition: all 0.3s ease;
 }
 
 .festival-detail-ritual-item:hover {
   transform: translateX(5px);
-  border-left-color: #764ba2;
+  border-left-color: var(--secondary-dark);
 }
 
 .festival-detail-ritual-item::before {
@@ -230,7 +230,7 @@
 }
 
 .festival-detail-deity-card {
-  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, var(--secondary-dark) 100%);
   color: white;
   padding: 15px 25px;
   border-radius: 12px;
@@ -251,7 +251,7 @@
 }
 
 .festival-detail-no-deities {
-  color: #7f8c8d;
+  color: var(--text-secondary);
   font-style: italic;
 }
 

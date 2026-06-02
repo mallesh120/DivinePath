@@ -40,7 +40,7 @@
 
 /* Header Section */
 .gallery-header {
-  background: linear-gradient(135deg, var(--saffron-primary) 0%, #ffaa33 60%, #ffbb44 100%);
+  background: linear-gradient(135deg, var(--saffron-primary) 0%, var(--primary-color) 60%, var(--parchment-mid) 100%);
   padding: 40px 20px 50px 20px;
   color: white;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -108,7 +108,7 @@
 }
 
 .search-bar::placeholder {
-  color: #999;
+  color: var(--border-color);
   font-style: italic;
 }
 
@@ -116,7 +116,7 @@
 .no-results-message {
   text-align: center;
   font-size: 1.1rem;
-  color: #999;
+  color: var(--border-color);
   padding: 40px 20px;
   font-family: 'Lato', sans-serif;
   position: relative;

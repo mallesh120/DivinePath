@@ -13,7 +13,7 @@
 }
 
 .gallery-header {
-  background: linear-gradient(135deg, var(--saffron-primary) 0%, #ffaa33 60%, #ffbb44 100%);
+  background: linear-gradient(135deg, var(--saffron-primary) 0%, var(--primary-color) 60%, var(--parchment-mid) 100%);
   padding: 40px 20px 50px 20px;
   color: white;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -74,7 +74,7 @@
   position: relative;
   height: 250px;
   overflow: hidden;
-  background: linear-gradient(135deg, #f5f1e8 0%, #faf8f5 100%);
+  background: linear-gradient(135deg, var(--parchment-light) 0%, var(--bg-secondary) 100%);
 }
 
 .trimurti-card-image {
@@ -121,7 +121,7 @@
   font-family: 'Lato', sans-serif;
   font-size: 2rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: var(--secondary-dark);
   margin: 0 0 5px 0;
 }
 
@@ -135,7 +135,7 @@
 
 .trimurti-card-role {
   display: inline-block;
-  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, var(--secondary-dark) 100%);
   color: white;
   padding: 5px 15px;
   border-radius: 20px;
@@ -175,7 +175,7 @@
 
 .stat-label {
   font-weight: 600;
-  color: #2c3e50;
+  color: var(--secondary-dark);
 }
 
 .stat-value {

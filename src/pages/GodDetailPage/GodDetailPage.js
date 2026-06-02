@@ -21,7 +21,7 @@ const GodDetailPage = () => {
     return (
       <div className="god-not-found">
         <h2>God not found!</h2>
-        <Link to="/gods">Back to the Gods Gallery</Link>
+        <Link to="/adults/gods">Back to the Gods Gallery</Link>
       </div>
     );
   }
@@ -31,7 +31,7 @@ const GodDetailPage = () => {
 
   return (
     <div className="detail-page">
-      <Link to="/gods" className="back-link-top">
+      <Link to="/adults/gods" className="back-link-top">
         ← Back to Gallery
       </Link>
 
@@ -298,7 +298,7 @@ const GodDetailPage = () => {
             <ImageGallery images={god.imageGallery} godName={god.name} />
           )}
 
-          <Link to="/gods-gallery" className="back-link">
+          <Link to="/adults/gods" className="back-link">
             ← Back to Gallery
           </Link>
         </>

@@ -9,38 +9,43 @@ if (!fs.existsSync(pkgDir)) {
   process.exit(0);
 }
 
-const files = fs.readdirSync(pkgDir).filter(f => f.endsWith('.js'));
+function walkDir(dir, callback) {
+  fs.readdirSync(dir).forEach(f => {
+    let dirPath = path.join(dir, f);
+    let isDirectory = fs.statSync(dirPath).isDirectory();
+    isDirectory ? walkDir(dirPath, callback) : callback(dirPath);
+  });
+}
+
 let count = 0;
-files.forEach(f => {
-  const p = path.join(pkgDir, f);
-  let content = fs.readFileSync(p, 'utf8');
-  const orig = content;
-  // Remove sourceMappingURL comments (both valid and invalid references)
-  content = content.replace(/\/\/#\s*sourceMappingURL=.*/g, '');
-  content = content.replace(/\/\*# sourceMappingURL=.* \*\//g, '');
-  if (content !== orig) {
-    try { fs.copyFileSync(p, p + '.bak'); } catch (e) {}
-    fs.writeFileSync(p, content, 'utf8');
-    console.log('Stripped sourceMappingURL from', p);
-    count++;
+let mapCount = 0;
+
+walkDir(pkgDir, (filePath) => {
+  if (filePath.endsWith('.js')) {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const orig = content;
+    // Remove sourceMappingURL comments (both valid and invalid references)
+    content = content.replace(/\/\/#\s*sourceMappingURL=.*/g, '');
+    content = content.replace(/\/\*# sourceMappingURL=.* \*\//g, '');
+    if (content !== orig) {
+      try { fs.copyFileSync(filePath, filePath + '.bak'); } catch (e) {}
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log('Stripped sourceMappingURL from', filePath);
+      count++;
+    }
+  } else if (filePath.endsWith('.map')) {
+    try {
+      fs.copyFileSync(filePath, filePath + '.bak');
+      fs.unlinkSync(filePath);
+      console.log('Removed map file', filePath);
+      mapCount++;
+    } catch (e) {
+      // ignore
+    }
   }
 });
 
 if (count === 0) console.log('No sourceMappingURL entries found to strip.');
 else console.log('Stripped sourceMappingURL from', count, 'files.');
 
-// Also remove .map files in dist to avoid source-map-loader trying to load sources that aren't published
-const mapFiles = fs.readdirSync(pkgDir).filter(f => f.endsWith('.map'));
-let mapCount = 0;
-mapFiles.forEach(m => {
-  const mp = path.join(pkgDir, m);
-  try {
-    fs.copyFileSync(mp, mp + '.bak');
-    fs.unlinkSync(mp);
-    console.log('Removed map file', mp);
-    mapCount++;
-  } catch (e) {
-    // ignore
-  }
-});
 if (mapCount > 0) console.log('Removed', mapCount, 'map files.');

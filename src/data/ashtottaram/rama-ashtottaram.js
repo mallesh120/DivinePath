@@ -7,7 +7,7 @@ export const ramaAshtottaram = {
   name: 'Lord Rama',
   title: 'Ashtottara Shatanamavali',
   description: 'The seventh avatar of Lord Vishnu',
-  image: '/images/Gods/rama.png',
+  image: '/images/Gods/rama.webp',
   category: 'god',
   names: [
     {

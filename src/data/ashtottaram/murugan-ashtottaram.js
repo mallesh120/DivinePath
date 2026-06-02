@@ -7,7 +7,7 @@ export const muruganAshtottaram = {
   id: 'murugan',
   title: 'Lord Murugan',
   category: 'god',
-  image: '/images/Gods/murugan.png',
+  image: '/images/Gods/murugan.webp',
   description: 'The Tamil God of War, son of Shiva',
   names: [
     {

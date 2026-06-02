@@ -1,0 +1,225 @@
+.kids-dashboard {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.welcome-title {
+  color: #FF914D;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.highlight-card {
+  background: white;
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(255, 145, 77, 0.15);
+  border: 4px solid #FFDE59;
+  position: relative;
+  overflow: hidden;
+}
+
+.highlight-card h2 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.highlight-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.highlight-icon {
+  font-size: 3rem;
+  background: #FFF3E0;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.highlight-text h3 {
+  color: #D35400;
+  margin-bottom: 0.25rem;
+  font-size: 1.3rem;
+}
+
+.highlight-text p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.action-btn {
+  display: block;
+  background: #FF5757;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: transform 0.2s;
+}
+
+.action-btn:hover {
+  transform: scale(1.05);
+}
+
+.quick-links {
+  margin-top: 3rem;
+}
+
+.quick-links h2 {
+  color: #555;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.grid-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.grid-card {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.grid-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-emoji {
+  font-size: 2.5rem;
+}
+
+.grid-card h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.story-card { border-bottom: 4px solid #3498DB; }
+.game-card { border-bottom: 4px solid #2ECC71; }
+.chant-card { border-bottom: 4px solid #9B59B6; }
+
+/* Daily Shloka Styles */
+.daily-shloka-section {
+  width: 100%;
+}
+
+.shloka-card {
+  background: white;
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(142, 68, 173, 0.15);
+  border: 4px solid #D2B4DE;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.shloka-card.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  color: #888;
+  font-size: 1.2rem;
+  border-style: dashed;
+}
+
+.shloka-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.shloka-header h2 {
+  color: #8E44AD;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.shloka-icon {
+  font-size: 1.8rem;
+}
+
+.shloka-content {
+  margin-bottom: 1.5rem;
+}
+
+.sanskrit-text {
+  font-size: 1.4rem;
+  color: #D35400;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.english-text {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1rem;
+  font-style: italic;
+  white-space: pre-wrap;
+}
+
+.meaning-box {
+  background: #F9E79F;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 2px solid #F1C40F;
+}
+
+.meaning-box p {
+  color: #7D6608;
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.listen-btn {
+  display: inline-block;
+  background: #3498DB;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 100px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.listen-btn:hover {
+  transform: translateY(-3px);
+}
+
+.listen-btn.playing {
+  background: #FFC107;
+  color: #333;
+}
+

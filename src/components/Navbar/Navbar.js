@@ -9,7 +9,25 @@ import './Navbar.css';
  */
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('divine_path_theme');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      setIsDarkMode(true);
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = isDarkMode ? 'light' : 'dark';
+    setIsDarkMode(!isDarkMode);
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('divine_path_theme', newTheme);
+  };
 
   // Close mobile menu when route changes
   useEffect(() => {
@@ -45,63 +63,82 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" role="navigation" aria-label="Main Navigation">
       <div className="navbar-brand">
-        <NavLink to="/">Divine Path</NavLink>
+        <NavLink to="/adults">Divine Path</NavLink>
       </div>
       
-      <button 
-        className={`navbar-hamburger ${isMenuOpen ? 'open' : ''}`}
-        onClick={toggleMenu}
-        aria-label="Toggle navigation menu"
-        aria-expanded={isMenuOpen}
-      >
-        <span className="hamburger-line"></span>
-        <span className="hamburger-line"></span>
-        <span className="hamburger-line"></span>
-      </button>
+      <div className="navbar-actions">
+        <button 
+          className="switch-zone-nav-btn"
+          onClick={() => {
+            localStorage.setItem('preferredZone', 'kids');
+            window.location.href = '/kids';
+          }}
+          aria-label="Switch to Kids Zone"
+        >
+          🎈 Kids
+        </button>
+
+        <button 
+          className="theme-toggle" 
+          onClick={toggleTheme}
+          aria-label={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
+          title={`Switch to ${isDarkMode ? 'Light' : 'Dark'} Mode`}
+        >
+          {isDarkMode ? '☀️' : '🌙'}
+        </button>
+
+        <button 
+          className={`navbar-hamburger ${isMenuOpen ? 'open' : ''}`}
+          onClick={toggleMenu}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isMenuOpen}
+        >
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+        </button>
+      </div>
 
       <ul className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
         <li>
-          <NavLink to="/" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+          <NavLink to="/adults" end className={({ isActive }) => (isActive ? 'active-link' : '')}>
             Home
           </NavLink>
         </li>
+
         <li>
-          <NavLink to="/gods" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+          <NavLink to="/adults/gods" className={({ isActive }) => (isActive ? 'active-link' : '')}>
             Gods Gallery
           </NavLink>
         </li>
         <li>
-          <NavLink to="/library" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+          <NavLink to="/adults/library" className={({ isActive }) => (isActive ? 'active-link' : '')}>
             Literature
           </NavLink>
         </li>
         <li>
-          <NavLink to="/festivals" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+          <NavLink to="/adults/festivals" className={({ isActive }) => (isActive ? 'active-link' : '')}>
             Festivals
           </NavLink>
         </li>
         <li>
-          <NavLink to="/calendar" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+          <NavLink to="/adults/calendar" className={({ isActive }) => (isActive ? 'active-link' : '')}>
             Hindu Calendar
           </NavLink>
         </li>
         <li>
-          <NavLink to="/pujas" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+          <NavLink to="/adults/pujas" className={({ isActive }) => (isActive ? 'active-link' : '')}>
             Puja Guide
           </NavLink>
         </li>
         <li>
-          <NavLink to="/ashtottaram" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+          <NavLink to="/adults/ashtottaram" className={({ isActive }) => (isActive ? 'active-link' : '')}>
             108 Names
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/ai" className={({ isActive }) => (isActive ? 'active-link' : '')}>
-            AI Features
-          </NavLink>
-        </li>
+
       </ul>
 
       {/* Overlay for mobile menu */}

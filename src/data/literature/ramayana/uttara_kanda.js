@@ -1,13 +1,13 @@
 // At the top of uttara_kanda.js, add the new image imports:
-import uttaraScene1 from '../../../assets/images/uttaraScenes/uttara_scene1.png';
-import uttaraScene2 from '../../../assets/images/uttaraScenes/uttara_scene2.png';
-import uttaraScene3 from '../../../assets/images/uttaraScenes/uttara_scene3.png';
-import uttaraScene4 from '../../../assets/images/uttaraScenes/uttara_scene4.png';
-import uttaraScene5 from '../../../assets/images/uttaraScenes/uttara_scene5.png';
-import uttaraScene6 from '../../../assets/images/uttaraScenes/uttara_scene6.png';
-import uttaraScene7 from '../../../assets/images/uttaraScenes/uttara_scene7.png';
-import uttaraScene8 from '../../../assets/images/uttaraScenes/uttara_scene8.png';
-import uttaraScene9 from '../../../assets/images/uttaraScenes/uttara_scene9.png';
+import uttaraScene1 from '../../../assets/images/uttaraScenes/uttara_scene1.webp';
+import uttaraScene2 from '../../../assets/images/uttaraScenes/uttara_scene2.webp';
+import uttaraScene3 from '../../../assets/images/uttaraScenes/uttara_scene3.webp';
+import uttaraScene4 from '../../../assets/images/uttaraScenes/uttara_scene4.webp';
+import uttaraScene5 from '../../../assets/images/uttaraScenes/uttara_scene5.webp';
+import uttaraScene6 from '../../../assets/images/uttaraScenes/uttara_scene6.webp';
+import uttaraScene7 from '../../../assets/images/uttaraScenes/uttara_scene7.webp';
+import uttaraScene8 from '../../../assets/images/uttaraScenes/uttara_scene8.webp';
+import uttaraScene9 from '../../../assets/images/uttaraScenes/uttara_scene9.webp';
 
 // Export the array of scene objects for this Kanda
 export const uttaraKandaScenes = [

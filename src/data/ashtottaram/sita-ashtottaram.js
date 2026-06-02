@@ -7,7 +7,7 @@ export const sitaAshtottaram = {
   id: 'sita',
   title: 'Goddess Sita',
   category: 'goddess',
-  image: '/images/Goddesses/sita.png',
+  image: '/images/Goddesses/sita.webp',
   description: 'The consort of Lord Rama, embodiment of virtue',
   names: [
     {

@@ -2,13 +2,13 @@
 
 .personalized-dashboard {
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--secondary-color) 100%);
   padding: 20px;
 }
 
 /* Hero Section */
 .dashboard-hero {
-  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-dark) 100%);
   border-radius: 20px;
   padding: 40px 30px;
   margin-bottom: 30px;
@@ -104,15 +104,15 @@
 /* Card Styles */
 .dashboard-card {
   background: white;
-  border-radius: 20px;
+  border-radius: var(--radius-xl);
   padding: 30px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--shadow-md);
+  transition: all var(--ui-transition);
 }
 
 .dashboard-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-hover);
 }
 
 .card-title {
@@ -166,12 +166,12 @@
 
 .view-full-link:hover {
   transform: translateX(5px);
-  color: #764ba2;
+  color: var(--secondary-dark);
 }
 
 /* Goals Card */
 .goals-card {
-  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  background: var(--bg-tertiary);
 }
 
 .goals-list {
@@ -199,7 +199,7 @@
 }
 
 .goal-item.completed {
-  background: linear-gradient(135deg, #c3f0c3 0%, #a8e6a8 100%);
+  background: var(--primary-light);
 }
 
 .goal-content {
@@ -227,7 +227,7 @@
 }
 
 .goal-link-btn {
-  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-dark) 100%);
   color: white;
   border: none;
   padding: 8px 12px;
@@ -267,7 +267,7 @@
 }
 
 .japa-button {
-  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-dark) 100%);
   color: white;
   border: none;
   padding: 12px 30px;
@@ -303,7 +303,7 @@
 /* Prayer Card */
 .prayer-card {
   grid-column: 1 / -1;
-  background: linear-gradient(135deg, var(--parchment-light) 0%, #ffe8cc 100%);
+  background: linear-gradient(135deg, var(--parchment-light) 0%, var(--parchment-mid) 100%);
 }
 
 .prayer-content {
@@ -329,7 +329,7 @@
 
 .prayer-deity {
   display: inline-block;
-  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-dark) 100%);
   color: white;
   padding: 5px 15px;
   border-radius: 15px;
@@ -351,14 +351,14 @@
 .prayer-text {
   margin: 25px 0;
   padding: 20px;
-  background: linear-gradient(135deg, var(--card-bg)8e1 0%, #ffecb3 100%);
+  background: linear-gradient(135deg, var(--card-bg) 0%, var(--parchment-light) 100%);
   border-radius: 10px;
-  border-left: 4px solid #ff9800;
+  border-left: 4px solid var(--primary-color);
 }
 
 .prayer-sanskrit {
   font-size: 1.5rem;
-  color: #d84315;
+  color: var(--primary-dark);
   font-weight: 600;
   margin-bottom: 15px;
   line-height: 1.8;
@@ -376,7 +376,7 @@
 }
 
 .prayer-meaning {
-  background: #f9f9f9;
+  background: var(--bg-secondary);
   padding: 20px;
   border-radius: 10px;
   margin: 20px 0;
@@ -399,7 +399,7 @@
 
 .prayer-complete-btn {
   width: 100%;
-  background: linear-gradient(135deg, var(--accent-green) 0%, #45a049 100%);
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-dark) 100%);
   color: white;
   border: none;
   padding: 15px;
@@ -413,13 +413,13 @@
 
 .prayer-complete-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
 }
 
 /* Scripture Reading Card */
 .scripture-card {
   grid-column: 1 / -1;
-  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  background: var(--secondary-light);
 }
 
 .scripture-content {
@@ -438,7 +438,7 @@
 
 .scripture-name {
   font-size: 1.8rem;
-  color: #2e7d32;
+  color: var(--secondary-dark);
   margin: 0 0 15px 0;
   font-weight: 700;
 }
@@ -452,7 +452,7 @@
 
 .scripture-chapter {
   display: inline-block;
-  background: linear-gradient(135deg, var(--accent-green) 0%, #45a049 100%);
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-dark) 100%);
   color: white;
   padding: 5px 15px;
   border-radius: 15px;
@@ -479,15 +479,15 @@
 }
 
 .key-verse {
-  background: linear-gradient(135deg, var(--card-bg)3e0 0%, #ffe0b2 100%);
+  background: linear-gradient(135deg, var(--card-bg) 0%, var(--parchment-light) 100%);
   padding: 20px;
   border-radius: 10px;
   margin: 25px 0;
-  border-left: 4px solid #ff9800;
+  border-left: 4px solid var(--primary-color);
 }
 
 .verse-title {
-  color: #ff6f00;
+  color: var(--primary-dark);
   font-size: 1.2rem;
   margin: 0 0 15px 0;
   text-align: center;
@@ -495,7 +495,7 @@
 
 .verse-sanskrit {
   font-size: 1.4rem;
-  color: #d84315;
+  color: var(--primary-dark);
   font-weight: 600;
   margin-bottom: 12px;
   line-height: 1.8;
@@ -520,7 +520,7 @@
 }
 
 .verse-meaning strong {
-  color: #ff6f00;
+  color: var(--primary-dark);
   font-size: 1rem;
   display: block;
   margin-bottom: 8px;
@@ -541,7 +541,7 @@
 }
 
 .read-full-btn {
-  background: linear-gradient(135deg, var(--accent-blue-2) 0%, #1976d2 100%);
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-dark) 100%);
   color: white;
   border: none;
   padding: 15px;
@@ -562,7 +562,7 @@
 }
 
 .scripture-complete-btn {
-  background: linear-gradient(135deg, var(--accent-green) 0%, #45a049 100%);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
   color: white;
   border: none;
   padding: 15px;
@@ -575,7 +575,7 @@
 
 .scripture-complete-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.4);
 }
 
 .library-link {
@@ -617,7 +617,7 @@
 }
 
 .festival-item {
-  background: linear-gradient(135deg, var(--parchment-light) 0%, #ffe0b2 100%);
+  background: linear-gradient(135deg, var(--parchment-light) 0%, var(--parchment-mid) 100%);
   padding: 15px 20px;
   border-radius: 12px;
   display: flex;
@@ -645,7 +645,7 @@
   display: block;
   font-size: 2rem;
   font-weight: 700;
-  color: #ff6b6b;
+  color: var(--accent-color);
 }
 
 .countdown-label {
@@ -661,7 +661,7 @@
 }
 
 .fasting-item {
-  background: linear-gradient(135deg, var(--neutral-200) 0%, #b2ebf2 100%);
+  background: linear-gradient(135deg, var(--neutral-200) 0%, var(--secondary-light) 100%);
   padding: 15px 20px;
   border-radius: 12px;
   display: flex;
@@ -699,7 +699,7 @@
 }
 
 .quick-action-btn {
-  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-dark) 100%);
   color: white;
   padding: 20px;
   border-radius: 15px;
@@ -729,7 +729,7 @@
 /* Progress Card */
 .progress-card {
   grid-column: span 2;
-  background: linear-gradient(135deg, #fa8bff 0%, #2bd2ff 90%, #2bff88 100%);
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-light) 100%);
 }
 
 .progress-stats {

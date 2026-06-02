@@ -1,57 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@400;500;700&family=Cinzel:wght@700&display=swap');
 
 :root {
-  /* Color Palette - Modern Vibrant with Spiritual Touch */
-  --primary-color: #A78BFA; /* Lighter Purple */
-  --primary-dark: #7C3AED;
-  --primary-light: #C4B5FD;
+  /* Color Palette - Strict Spiritual Palette (Saffron, Red, White, Blue) */
+  --primary-color: #EA580C; /* Saffron (Orange 600) */
+  --primary-dark: #C2410C; /* Saffron Dark */
+  --primary-light: #FFEDD5; /* Saffron Light */
   
-  --secondary-color: #F9A8D4; /* Light Pink */
-  --secondary-dark: #EC4899;
-  --secondary-light: #FBCFE8;
+  --secondary-color: #15803D; /* Traditional Green (Green 700) */
+  --secondary-dark: #14532D;  /* Dark Forest Green */
+  --secondary-light: #E8F5E9; /* Soft Sage Light Green */
   
-  --accent-color: #FCD34D; /* Lighter Amber/Yellow */
-  --accent-dark: #F59E0B;
-  --accent-light: #FDE68A;
+  --accent-color: #F97316; /* Bright Saffron/Orange (Orange 500) */
+  --accent-dark: #EA580C;  /* Saffron (Orange 600) */
+  --accent-light: #FFF7ED; /* Soft Saffron Light (Orange 50) */
   
   /* Legacy variables for backward compatibility */
-  --saffron-primary: #A78BFA;
-  --saffron-dark: #7C3AED;
-  --saffron-light: #C4B5FD;
-  --accent-primary: #A78BFA;
-  --accent-secondary: #F9A8D4;
-  --gold-accent: #FCD34D;
+  --saffron-primary: #EA580C;
+  --saffron-dark: #C2410C;
+  --saffron-light: #FFEDD5;
+  --accent-primary: #15803D; /* Mapped to Green */
+  --accent-secondary: #F97316; /* Orange Accent */
+  --gold-accent: #EA580C; /* Mapped to Saffron */
   
-  /* Backgrounds - Modern Light */
+  /* Backgrounds - Whites and Warm/Cool Off-whites */
   --bg-primary: #FFFFFF;
-  --bg-secondary: #F9FAFB; /* Gray 50 */
-  --bg-tertiary: #F3F4F6; /* Gray 100 */
+  --bg-secondary: #FDFBF7; /* Warm White */
+  --bg-tertiary: #F8FAFC; /* Slate 50 (Cool White) */
   
-  --warm-cream: #FFFFFF;
-  --parchment-light: #F9FAFB;
-  --parchment-mid: #F3F4F6;
+  --warm-cream: #FFF7ED; /* Orange 50 */
+  --parchment-light: #FFEDD5; /* Orange 100 */
+  --parchment-mid: #FED7AA; /* Orange 200 */
   
-  /* Text */
-  --text-primary: #111827; /* Gray 900 */
-  --text-secondary: #6B7280; /* Gray 500 */
-  --text-tertiary: #9CA3AF; /* Gray 400 */
+  /* Text (Dark Navy Blue for primary to avoid flat black) */
+  --text-primary: #0F172A; /* Slate 900 */
+  --text-secondary: #475569; /* Slate 600 */
+  --text-tertiary: #94A3B8; /* Slate 400 */
   
   --card-bg: #FFFFFF;
-  --border-color: #E5E7EB; /* Gray 200 */
-  --border-subtle: #F3F4F6;
+  --border-color: #E2E8F0; /* Slate 200 */
+  --border-subtle: #F1F5F9; /* Slate 100 */
   
-  /* Shadows with color */
-  --shadow-light: rgba(167, 139, 250, 0.05);
-  --shadow-medium: rgba(167, 139, 250, 0.1);
-  --shadow-dark: rgba(167, 139, 250, 0.15);
-  --accent-glow: rgba(167, 139, 250, 0.2);
+  /* Shadows with slate/neutral tint */
+  --shadow-light: rgba(15, 23, 42, 0.04);
+  --shadow-medium: rgba(15, 23, 42, 0.08);
+  --shadow-dark: rgba(15, 23, 42, 0.12);
+  --accent-glow: rgba(234, 88, 12, 0.2); /* Saffron glow */
   
   --ui-transition: 220ms ease;
   
   /* Neutral tokens */
-  --neutral-100: #F9FAFB;
-  --neutral-200: #F3F4F6;
-  --neutral-300: #E5E7EB;
+  --neutral-100: #F8FAFC;
+  --neutral-200: #F1F5F9;
+  --neutral-300: #E2E8F0;
 
   /* Modern Design Tokens */
   --radius-sm: 8px;
@@ -67,33 +67,33 @@
   --spacing-xl: 32px;
 
   /* Modern Shadows */
-  --shadow-sm: 0 2px 8px rgba(167, 139, 250, 0.08);
-  --shadow-md: 0 4px 16px rgba(167, 139, 250, 0.12);
-  --shadow-lg: 0 8px 32px rgba(167, 139, 250, 0.16);
-  --shadow-hover: 0 12px 40px rgba(167, 139, 250, 0.2);
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.12);
+  --shadow-lg: 0 8px 32px rgba(15, 23, 42, 0.16);
+  --shadow-hover: 0 12px 40px rgba(15, 23, 42, 0.2);
   
   /* Font */
   --font-sans: 'Lato', 'Open Sans', sans-serif;
   --font-display: 'Playfair Display', 'Cinzel', serif;
 }
 
-/* Secondary palette tokens (common accents used across pages) */
+/* Secondary palette tokens (Mapped strictly to Saffron and Green) */
 :root {
-  --accent-purple: #9c27b0; /* used for devotional/purana widgets */
-  --accent-purple-2: #7b1fa2;
-  --accent-blue: #667eea; /* used for cards and highlights */
-  --accent-blue-2: #2196f3;
-  --accent-teal: #11998E; /* name-suggestion/teal accents */
-  --accent-green: #4caf50; /* success/auspicious */
-  --accent-green-2: #2ed573;
-  --accent-pink: #f093fb; /* festival / celebratory */
-  --accent-rose: #f5576c; /* warm pink/red accents */
-  --accent-red: #d63447;
-  --soft-peach: #ffecd2;
-  --peach: #fcb69f;
-  --deep-teal: #00acc1;
-  --indigo-dark: #341f97;
-  --navy: #000080;
+  --accent-purple: #15803D; /* Mapped to Green */
+  --accent-purple-2: #14532D; /* Mapped to Dark Green */
+  --accent-blue: #15803D; /* Mapped to Green */
+  --accent-blue-2: #16A34A; /* Mapped to Light Green */
+  --accent-teal: #15803D; /* Mapped to Green */
+  --accent-green: #15803D; /* Correctly mapped to Green */
+  --accent-green-2: #22C55E; /* Bright Green */
+  --accent-pink: #F97316; /* Mapped to Bright Saffron */
+  --accent-rose: #F97316; /* Mapped to Bright Saffron */
+  --accent-red: #EA580C; /* Mapped to Saffron */
+  --soft-peach: #FFEDD5; /* Saffron light */
+  --peach: #FED7AA; /* Saffron mid */
+  --deep-teal: #14532D; /* Mapped to Dark Green */
+  --indigo-dark: #14532D; /* Mapped to Dark Green */
+  --navy: #0F172A; /* Slate 900 */
 }
 
 /* Utility classes for common use */
@@ -103,3 +103,81 @@
 /* Small helpers */
 .center { display:flex; align-items:center; justify-content:center; }
 
+/* ========================================= */
+/* COSMIC DARK MODE (Phase 2)                */
+/* ========================================= */
+[data-theme='dark'] {
+  /* Backgrounds - Deep Space Navy & Cosmic Black */
+  --bg-primary: #0A0F1C; /* Cosmic Black */
+  --bg-secondary: #0F172A; /* Slate 900 (Deep Navy) */
+  --bg-tertiary: #1E293B; /* Slate 800 */
+  
+  --warm-cream: #1E293B; 
+  --parchment-light: #0F172A; 
+  --parchment-mid: #1E293B; 
+  
+  --card-bg: #0F172A;
+  
+  /* Text (Starlight White/Silver) */
+  --text-primary: #F8FAFC; 
+  --text-secondary: #CBD5E1; 
+  --text-tertiary: #94A3B8; 
+  
+  /* Borders */
+  --border-color: #334155; 
+  --border-subtle: #1E293B; 
+  
+  /* Adjust Core Colors for Dark Mode Contrast */
+  --primary-color: #F97316; /* Brighter Saffron */
+  --primary-dark: #EA580C; 
+  --primary-light: #431407; /* Dark Orange Tint */
+  
+  --secondary-color: #22C55E; /* Bright Green for Dark Mode */
+  --secondary-dark: #15803D;
+  --secondary-light: #064E3B; /* Deep Forest/Teal Green Tint */
+  
+  --accent-color: #FB923C; /* Brighter Orange (Orange 400) */
+  --accent-dark: #F97316;  /* Bright Saffron (Orange 500) */
+  --accent-light: #431407; /* Dark Orange Tint */
+
+  /* Legacy variable overrides */
+  --saffron-primary: #F97316;
+  --saffron-dark: #EA580C;
+  --saffron-light: #431407;
+  --accent-primary: #22C55E; /* Mapped to Bright Green */
+  --accent-secondary: #F97316; /* Bright Saffron */
+  --gold-accent: #F97316;
+  --soft-peach: #431407;
+  --peach: #7C2D12;
+  --navy: #F8FAFC; /* Invert Navy for text */
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.7);
+  --accent-glow: rgba(249, 115, 22, 0.15); /* Saffron glow */
+}
+
+/* Smooth scrolling for the page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for the page */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--neutral-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--saffron-primary), var(--saffron-dark));
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, var(--saffron-dark), var(--saffron-dark));
+}

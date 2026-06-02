@@ -65,7 +65,7 @@
 }
 
 .ashtottaram-preview {
-  background: linear-gradient(135deg, var(--parchment-light) 0%, #ffe4cc 100%);
+  background: linear-gradient(135deg, var(--parchment-light) 0%, var(--parchment-light) 100%);
   border-radius: 20px;
   padding: 40px;
   box-shadow: 0 4px 20px rgba(255, 107, 53, 0.15);
@@ -231,7 +231,7 @@
 }
 
 .symbol-tag {
-  background: linear-gradient(135deg, var(--neutral-200) 0%, #b2ebf2 100%);
+  background: linear-gradient(135deg, var(--neutral-200) 0%, var(--secondary-light) 100%);
   color: var(--navy);
   padding: 8px 16px;
   border-radius: 20px;
@@ -249,7 +249,7 @@
 .detail-mantra-container {
   margin-top: 30px;
   padding: 25px 30px;
-  background: linear-gradient(135deg, var(--parchment-light) 0%, #ffe6cc 100%);
+  background: linear-gradient(135deg, var(--parchment-light) 0%, var(--parchment-light) 100%);
   border-left: 6px solid var(--saffron-primary);
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(255, 153, 51, 0.15);
@@ -393,7 +393,7 @@
 }
 
 .symbol-tag-small {
-  background: linear-gradient(135deg, var(--neutral-200) 0%, #b2ebf2 100%);
+  background: linear-gradient(135deg, var(--neutral-200) 0%, var(--secondary-light) 100%);
   color: var(--navy);
   padding: 5px 12px;
   border-radius: 15px;
@@ -403,7 +403,7 @@
 }
 
 .consort-mantra {
-  background: linear-gradient(135deg, var(--parchment-light) 0%, #ffe6cc 100%);
+  background: linear-gradient(135deg, var(--parchment-light) 0%, var(--parchment-light) 100%);
   padding: 15px 20px;
   border-radius: 12px;
   border-left: 4px solid var(--saffron-primary);
@@ -689,7 +689,7 @@
   max-width: 1200px;
   margin: 50px auto;
   padding: 40px;
-  background: linear-gradient(135deg, #f0f9ff 0%, var(--card-bg) 100%);
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--card-bg) 100%);
   border-radius: 20px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
@@ -721,7 +721,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent-secondary), #50c9e8);
+  background: linear-gradient(90deg, var(--accent-secondary), var(--secondary-color));
 }
 
 .story-card:hover {

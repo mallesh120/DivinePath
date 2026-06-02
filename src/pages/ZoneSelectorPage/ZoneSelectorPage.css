@@ -1,0 +1,102 @@
+.zone-selector-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFE0B2 100%);
+  padding: 2rem;
+  text-align: center;
+}
+
+.zone-selector-title {
+  font-size: 2.5rem;
+  color: #D35400;
+  margin-bottom: 0.5rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+}
+
+.zone-selector-subtitle {
+  font-size: 1.25rem;
+  color: #7F8C8D;
+  margin-bottom: 3rem;
+}
+
+.zone-cards {
+  display: flex;
+  gap: 2rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+.zone-card {
+  flex: 1;
+  background: white;
+  border-radius: 24px;
+  padding: 3rem 2rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.zone-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.zone-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.zone-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #2C3E50;
+}
+
+.zone-card p {
+  color: #7F8C8D;
+  font-size: 1rem;
+}
+
+.kids-card {
+  border: 4px solid transparent;
+}
+
+.kids-card:hover {
+  border-color: #3498DB;
+  background: #EBF5FB;
+}
+
+.kids-card h2 {
+  color: #2980B9;
+}
+
+.adults-card {
+  border: 4px solid transparent;
+}
+
+.adults-card:hover {
+  border-color: #E67E22;
+  background: #FDEDEC;
+}
+
+.adults-card h2 {
+  color: #C0392B;
+}
+
+@media (max-width: 768px) {
+  .zone-cards {
+    flex-direction: column;
+  }
+  
+  .zone-card {
+    padding: 2rem;
+  }
+}

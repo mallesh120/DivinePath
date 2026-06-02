@@ -7,7 +7,7 @@ export const satyanarayanAshtottaram = {
   id: 'satyanarayan',
   title: 'Lord Satyanarayan',
   category: 'god',
-  image: '/images/Gods/satyanarayan.png',
+  image: '/images/Gods/satyanarayan.webp',
   description: 'A form of Lord Vishnu',
   names: [
     {
