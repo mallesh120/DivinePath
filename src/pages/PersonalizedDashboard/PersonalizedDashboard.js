@@ -1,25 +1,48 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { usePanchangam } from '../../hooks/usePanchangam';
-import ShlokaOfTheDay from '../../components/ShlokaOfTheDay/ShlokaOfTheDay';
-import { getPrayerOfTheDay } from '../../data/prayers/prayersData';
-import { getDailyReading } from '../../data/dailyReadings';
+import { useSadhana } from '../../hooks/useSadhana';
+import MeditationTimer from '../../components/MeditationTimer/MeditationTimer';
+import StreakCalendar from '../../components/StreakCalendar/StreakCalendar';
+import { getDailyChallenge } from '../../data/dharmaChallenges';
+import { getLearningPathway } from '../../data/learningPathways';
+import { getWeeklyShloka } from '../../data/shlokaMastery';
+import EditGoalsModal from '../../components/EditGoalsModal/EditGoalsModal';
 import './PersonalizedDashboard.css';
 
 const PersonalizedDashboard = () => {
+  
+  const [isMeditationTimerOpen, setIsMeditationTimerOpen] = useState(false);
+  
+  // User state
   const [userName, setUserName] = useState('');
+  const [greeting, setGreeting] = useState('');
   const [isEditingName, setIsEditingName] = useState(false);
-  const [userGoals, setUserGoals] = useState({
-    dailyPrayer: false,
-    readScripture: false,
-    meditation: false,
-    japaCount: 0
-  });
-  const [streak, setStreak] = useState(0);
-  const [upcomingFestivals, setUpcomingFestivals] = useState([]);
-  const [fastingSchedule, setFastingSchedule] = useState([]);
-  const [dailyPrayer, setDailyPrayer] = useState(null);
-  const [dailyReading, setDailyReading] = useState(null);
+  
+  const [isEditGoalsOpen, setIsEditGoalsOpen] = useState(false);
+  
+  const { 
+    goals: userGoals, 
+    customGoals, 
+    addCustomGoal, 
+    removeCustomGoal, 
+    toggleGoal, 
+    streak,
+    completionHistory,
+    pathwayProgress,
+    incrementPathwayProgress,
+    shlokaPracticeDays,
+    incrementShlokaPractice
+  } = useSadhana(false);
+
+  // Content state
+  const dailyChallenge = getDailyChallenge();
+  const currentPathway = getLearningPathway('gita_basics');
+  const currentLesson = currentPathway.lessons.find(l => l.day === pathwayProgress) || currentPathway.lessons[currentPathway.lessons.length - 1];
+  const weeklyShloka = getWeeklyShloka();
+  
+  // UI state
+  const [isLessonModalOpen, setIsLessonModalOpen] = useState(false);
   
   const { panchangamData, loading: panchangamLoading } = usePanchangam();
   
@@ -30,67 +53,26 @@ const PersonalizedDashboard = () => {
     day: 'numeric'
   });
 
-  // Load user preferences from localStorage
+  // Dynamic theme is now handled globally in App.js
+
+  // Load user preferences
   useEffect(() => {
     const savedName = localStorage.getItem('userName') || '';
-    const savedGoals = JSON.parse(localStorage.getItem('userGoals') || '{}');
-    const savedStreak = parseInt(localStorage.getItem('userStreak') || '0');
-    
     setUserName(savedName);
-    setUserGoals({
-      dailyPrayer: savedGoals.dailyPrayer || false,
-      readScripture: savedGoals.readScripture || false,
-      meditation: savedGoals.meditation || false,
-      japaCount: savedGoals.japaCount || 0
-    });
-    setStreak(savedStreak);
+    
+    const updateGreeting = () => {
+      const hour = new Date().getHours();
+      if (hour < 12) setGreeting('Good Morning');
+      else if (hour < 18) setGreeting('Good Afternoon');
+      else setGreeting('Good Evening');
+    };
+    
+    updateGreeting();
+    const interval = setInterval(updateGreeting, 60000);
+    return () => clearInterval(interval);
   }, []);
 
-  // Mock upcoming festivals (will integrate with actual festival data)
-  useEffect(() => {
-    const mockFestivals = [
-      { name: 'Maha Shivaratri', date: '2025-02-26', daysAway: 89 },
-      { name: 'Holi', date: '2025-03-14', daysAway: 105 },
-      { name: 'Ram Navami', date: '2025-04-06', daysAway: 128 },
-      { name: 'Hanuman Jayanti', date: '2025-04-13', daysAway: 135 }
-    ];
-    setUpcomingFestivals(mockFestivals.slice(0, 3));
 
-    // Mock fasting schedule
-    const mockFasting = [
-      { day: 'Today', type: 'Ekadashi', description: 'Complete fast or fruits only' },
-      { day: 'Monday', type: 'Somvar', description: 'Fast for Lord Shiva (optional)' },
-      { day: 'Dec 10', type: 'Ekadashi', description: 'Complete fast or fruits only' }
-    ];
-    setFastingSchedule(mockFasting);
-
-    // Set daily prayer based on time of day
-    setDailyPrayer(getPrayerOfTheDay());
-    
-    // Set daily scripture reading
-    setDailyReading(getDailyReading());
-  }, []);
-
-  const handleGoalToggle = (goal) => {
-    const updatedGoals = { ...userGoals, [goal]: !userGoals[goal] };
-    setUserGoals(updatedGoals);
-    localStorage.setItem('userGoals', JSON.stringify(updatedGoals));
-    
-    // Update streak if all goals completed
-    const allCompleted = updatedGoals.dailyPrayer && updatedGoals.readScripture && updatedGoals.meditation;
-    if (allCompleted) {
-      const newStreak = streak + 1;
-      setStreak(newStreak);
-      localStorage.setItem('userStreak', newStreak.toString());
-    }
-  };
-
-  const handleJapaIncrement = () => {
-    const newCount = userGoals.japaCount + 1;
-    const updatedGoals = { ...userGoals, japaCount: newCount };
-    setUserGoals(updatedGoals);
-    localStorage.setItem('userGoals', JSON.stringify(updatedGoals));
-  };
 
   const handleNameChange = (e) => {
     const newName = e.target.value;
@@ -107,363 +89,245 @@ const PersonalizedDashboard = () => {
     }
   };
 
-  const handleEditName = () => {
-    setIsEditingName(true);
-  };
+  // Compute Traffic Light Status
+  let trafficStatus = null;
+  if (panchangamData) {
+    const isRahuKalam = false; // Mock
+    const isAbhijit = true; // Mock
 
-  const scrollToPrayer = () => {
-    const prayerSection = document.querySelector('.prayer-card');
-    if (prayerSection) {
-      prayerSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    trafficStatus = { color: 'yellow', text: 'Neutral Time', icon: '🟡', message: 'Good for routine tasks' };
+    if (isRahuKalam) {
+      trafficStatus = { color: 'red', text: 'Rahu Kalam', icon: '🔴', message: 'Avoid new important tasks' };
+    } else if (isAbhijit) {
+      trafficStatus = { color: 'green', text: 'Highly Auspicious', icon: '🟢', message: 'Abhijit Muhurat is active' };
     }
-  };
-
-  const scrollToScripture = () => {
-    const scriptureSection = document.querySelector('.scripture-card');
-    if (scriptureSection) {
-      scriptureSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  };
+  }
 
   return (
-    <div className="personalized-dashboard">
-      {/* Welcome Header */}
-      <div className="dashboard-hero">
-        <div className="hero-content">
-          <h1 className="hero-greeting">
-            🙏 Namaste{userName ? `, ${userName}` : ''}!
-            {userName && !isEditingName && (
-              <button className="edit-name-btn" onClick={handleEditName}>✏️</button>
+    <div className="dashboard-container">
+      <div className="dashboard-content-area">
+        
+        {/* Zone 1: Cosmic Welcome */}
+        <section className="dashboard-zone zone-welcome">
+          <div className="hero-header">
+            <div className="hero-greeting-container">
+              <h1 className="hero-greeting">
+                {greeting}{userName ? `, ${userName}` : ''}!
+                {userName && !isEditingName && (
+                  <button className="edit-name-btn" onClick={() => setIsEditingName(true)}>✏️</button>
+                )}
+              </h1>
+              {(!userName || isEditingName) && (
+                <input
+                  type="text"
+                  placeholder="Enter your name..."
+                  value={userName}
+                  onChange={handleNameChange}
+                  onKeyPress={handleNameKeyPress}
+                  className="name-input"
+                  autoFocus={isEditingName}
+                  onBlur={() => setIsEditingName(false)}
+                />
+              )}
+              <p className="hero-date">{currentDate}</p>
+            </div>
+            
+            {streak > 0 && (
+              <div className="streak-badge-glass">
+                <span className="streak-icon">🔥</span>
+                <div className="streak-info">
+                  <span className="streak-count">{streak}</span>
+                  <span className="streak-label">Day Streak</span>
+                </div>
+              </div>
             )}
-          </h1>
-          {(!userName || isEditingName) && (
-            <div className="name-input-container">
-              <input
-                type="text"
-                placeholder="Enter your name..."
-                value={userName}
-                onChange={handleNameChange}
-                onKeyPress={handleNameKeyPress}
-                className="name-input"
-                autoFocus={isEditingName}
-              />
-            </div>
-          )}
-          <p className="hero-date">{currentDate}</p>
-          {streak > 0 && (
-            <div className="streak-badge">
-              🔥 {streak} Day Streak! Keep it going!
-            </div>
-          )}
-        </div>
-      </div>
+          </div>
 
-      <div className="dashboard-container">
-        {/* Today's Panchangam Card */}
-        <section className="dashboard-card panchangam-card">
-          <h2 className="card-title">📅 Today's Panchangam</h2>
-          {panchangamLoading ? (
-            <p>Loading Panchangam...</p>
-          ) : panchangamData ? (
-            <div className="panchangam-grid">
-              <div className="panchangam-item">
-                <span className="panchangam-label">Tithi:</span>
-                <span className="panchangam-value">{panchangamData.almanac?.Tithi?.name || 'N/A'}</span>
-              </div>
-              <div className="panchangam-item">
-                <span className="panchangam-label">Nakshatra:</span>
-                <span className="panchangam-value">{panchangamData.almanac?.Nakshatra?.name || 'N/A'}</span>
-              </div>
-              <div className="panchangam-item">
-                <span className="panchangam-label">Yoga:</span>
-                <span className="panchangam-value">{panchangamData.almanac?.Yoga?.name || 'N/A'}</span>
-              </div>
-              <div className="panchangam-item">
-                <span className="panchangam-label">Karana:</span>
-                <span className="panchangam-value">{panchangamData.almanac?.Karana?.name || 'N/A'}</span>
-              </div>
-              <div className="panchangam-item">
-                <span className="panchangam-label">Sunrise:</span>
-                <span className="panchangam-value">{panchangamData.solarLunar?.Sunrise || 'N/A'}</span>
-              </div>
-              <div className="panchangam-item">
-                <span className="panchangam-label">Sunset:</span>
-                <span className="panchangam-value">{panchangamData.solarLunar?.Sunset || 'N/A'}</span>
-              </div>
-            </div>
-          ) : (
-            <p>Panchangam data unavailable</p>
-          )}
-          <Link to="/adults/calendar" className="view-full-link">
-            View Full Calendar →
+          {/* Panchang Mini-Status */}
+          <Link to="/adults/calendar" className="panchang-mini-card glass-panel">
+             {panchangamLoading ? (
+               <div className="mini-status-loading">Consulting the stars...</div>
+             ) : panchangamData ? (
+               <div className="mini-status-content">
+                 <div className={`mini-status-indicator indicator-${trafficStatus.color}`}>
+                   {trafficStatus.icon}
+                 </div>
+                 <div className="mini-status-text">
+                    <div className="mini-status-primary">
+                      <strong>{panchangamData.almanac?.Tithi?.name}</strong> • {panchangamData.almanac?.Nakshatra?.name}
+                    </div>
+                    <div className="mini-status-traffic">
+                      {trafficStatus.text}: <span className="traffic-msg">{trafficStatus.message}</span>
+                    </div>
+                    <span className="mini-status-sub">Tap for full calendar & timings →</span>
+                 </div>
+               </div>
+             ) : (
+               <div className="mini-status-loading">Panchang data unavailable</div>
+             )}
           </Link>
         </section>
 
-        {/* Daily Goals Tracker */}
-        <section className="dashboard-card goals-card">
-          <h2 className="card-title">✅ Today's Spiritual Goals</h2>
-          <div className="goals-list">
-            <div className={`goal-item ${userGoals.dailyPrayer ? 'completed' : ''}`}>
-              <div 
-                className="goal-content"
-                onClick={() => handleGoalToggle('dailyPrayer')}
-              >
-                <span className="goal-checkbox">
-                  {userGoals.dailyPrayer ? '✓' : '○'}
-                </span>
-                <span className="goal-text">Complete daily prayers</span>
-              </div>
-              <button 
-                className="goal-link-btn"
-                onClick={scrollToPrayer}
-                title="Go to Daily Prayer"
-              >
-                🕉️ ↓
-              </button>
-            </div>
-            <div className={`goal-item ${userGoals.readScripture ? 'completed' : ''}`}>
-              <div 
-                className="goal-content"
-                onClick={() => handleGoalToggle('readScripture')}
-              >
-                <span className="goal-checkbox">
-                  {userGoals.readScripture ? '✓' : '○'}
-                </span>
-                <span className="goal-text">Read scriptures</span>
-              </div>
-              <button 
-                className="goal-link-btn"
-                onClick={scrollToScripture}
-                title="Go to Daily Reading"
-              >
-                📜 ↓
-              </button>
-            </div>
-            <div 
-              className={`goal-item ${userGoals.meditation ? 'completed' : ''}`}
-              onClick={() => handleGoalToggle('meditation')}
-            >
-              <span className="goal-checkbox">
-                {userGoals.meditation ? '✓' : '○'}
-              </span>
-              <span className="goal-text">Meditation (15 min)</span>
-            </div>
+        {/* Zone 2: Your Dharma Journey */}
+        <section className="dashboard-zone zone-sadhana">
+          <div className="zone-header">
+            <h2 className="zone-title">Your Dharma Journey</h2>
+            <button className="edit-goals-btn" onClick={() => setIsEditGoalsOpen(true)}>
+              ⚙️ Settings
+            </button>
           </div>
           
-          {/* Japa Counter */}
-          <div className="japa-counter">
-            <h3 className="japa-title">📿 Mantra Japa Counter</h3>
-            <div className="japa-display">{userGoals.japaCount}</div>
-            <button className="japa-button" onClick={handleJapaIncrement}>
-              + Count Japa
-            </button>
+          <div className="dharma-journey-stack">
+            
+            {/* A. Daily Challenge */}
+            <div className="journey-card challenge-card glass-panel">
+              <div className="journey-card-header">
+                <span className="journey-icon">✨</span>
+                <h3>Today's Dharma Challenge</h3>
+              </div>
+              <p className="challenge-title">{dailyChallenge.title}</p>
+              <p className="challenge-desc">{dailyChallenge.description}</p>
+            </div>
+
+            {/* B. Learning Pathway */}
+            <div className="journey-card learning-card glass-panel" onClick={() => setIsLessonModalOpen(true)}>
+              <div className="journey-card-header">
+                <span className="journey-icon">📚</span>
+                <h3>{currentPathway.title}</h3>
+                <span className="pathway-progress-badge">Day {pathwayProgress}/{currentPathway.totalDays}</span>
+              </div>
+              <div className="learning-preview">
+                <h4>{currentLesson.title}</h4>
+                <p>Tap to read today's 2-minute lesson →</p>
+              </div>
+            </div>
+
+            {/* C. Weekly Shloka Mastery */}
+            <div className="journey-card shloka-card glass-panel">
+              <div className="journey-card-header">
+                <span className="journey-icon">🕉️</span>
+                <h3>Weekly Mantra Mastery</h3>
+                <span className="shloka-progress-badge">{shlokaPracticeDays}/7 Days</span>
+              </div>
+              <div className="shloka-content">
+                <h4 className="shloka-title">{weeklyShloka.title}</h4>
+                <p className="shloka-sanskrit">{weeklyShloka.sanskrit}</p>
+                <div className="shloka-actions">
+                  <button className="shloka-play-btn">🔊 Listen</button>
+                  <button 
+                    className={`shloka-practice-btn ${shlokaPracticeDays > 0 ? 'practiced' : ''}`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      incrementShlokaPractice();
+                    }}
+                  >
+                    {shlokaPracticeDays > 0 ? '✓ Practiced' : 'Mark as Practiced'}
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* D. Meditation & Japa */}
+            <div className="sadhana-card glass-panel">
+              {/* <div className="japa-counter-section">
+                <div className="japa-linear-container" onClick={handleJapaIncrement}>
+                  <div className="japa-linear-header">
+                    <span className="japa-count">{japaCount % 108}</span>
+                    <span className="japa-label">/ 108</span>
+                  </div>
+                  <div className="japa-progress-bar">
+                    <div 
+                      className="japa-progress-fill"
+                      style={{ 
+                        width: `${((japaCount % 108) / 108) * 100}%`,
+                        backgroundImage: `url(${process.env.PUBLIC_URL || ''}/images/rudraksha_bead.png)`
+                      }}
+                    ></div>
+                  </div>
+                </div>
+                <div className="malas-completed">
+                  <span>{Math.floor(japaCount / 108)}</span> Malas Completed
+                </div>
+                <p className="japa-hint">Tap bar to count mantra recitations</p>
+              </div> */}
+              
+              <StreakCalendar streak={streak} completionHistory={completionHistory} />
+            </div>
+            
+          </div>
+        </section>
+
+        {/* Zone 4: Navigation Hub */}
+        <section className="dashboard-zone zone-navigation">
+          <h2 className="zone-title">Explore</h2>
+          <div className="nav-hub-scroll">
+            <Link to="/adults/gods" className="nav-hub-item glass-panel">
+              <span className="nav-hub-icon">🕉️</span>
+              <span className="nav-hub-label">Gods Gallery</span>
+            </Link>
+            <Link to="/adults/library" className="nav-hub-item glass-panel">
+              <span className="nav-hub-icon">📚</span>
+              <span className="nav-hub-label">Sacred Texts</span>
+            </Link>
+            <Link to="/adults/pujas" className="nav-hub-item glass-panel">
+              <span className="nav-hub-icon">🔱</span>
+              <span className="nav-hub-label">Puja Guide</span>
+            </Link>
+            <Link to="/adults/calendar" state={{ activeTab: 'festivals' }} className="nav-hub-item glass-panel">
+              <span className="nav-hub-icon">🎊</span>
+              <span className="nav-hub-label">Festivals</span>
+            </Link>
+            <Link to="/adults/muhurta-finder" className="nav-hub-item glass-panel">
+              <span className="nav-hub-icon">🕐</span>
+              <span className="nav-hub-label">Muhurtas</span>
+            </Link>
+          </div>
+        </section>
+
+      </div>
+
+      {/* Modals */}
+      {isLessonModalOpen && (
+        <div className="meditation-overlay">
+          <div className="meditation-modal glass-panel lesson-modal">
+            <button className="close-btn" onClick={() => setIsLessonModalOpen(false)}>×</button>
+            <h2 className="meditation-title">{currentPathway.title}</h2>
+            <h3 className="meditation-subtitle">Day {pathwayProgress}: {currentLesson.title}</h3>
+            
+            <div className="lesson-content-body">
+              <p>{currentLesson.content}</p>
+            </div>
+
             <button 
-              className="japa-reset" 
+              className="start-session-btn" 
               onClick={() => {
-                const updatedGoals = { ...userGoals, japaCount: 0 };
-                setUserGoals(updatedGoals);
-                localStorage.setItem('userGoals', JSON.stringify(updatedGoals));
+                incrementPathwayProgress(currentPathway.totalDays);
+                setIsLessonModalOpen(false);
               }}
             >
-              Reset
+              Mark as Read
             </button>
           </div>
-        </section>
+        </div>
+      )}
 
-        {/* Daily Prayer */}
-        <section className="dashboard-card prayer-card">
-          <h2 className="card-title">🕉️ Daily Prayer</h2>
-          {dailyPrayer && (
-            <div className="prayer-content">
-              <div className="prayer-header">
-                <h3 className="prayer-name">{dailyPrayer.name}</h3>
-                <span className="prayer-deity">{dailyPrayer.deity}</span>
-                <span className="prayer-time">🕐 {dailyPrayer.time}</span>
-              </div>
-              
-              <div className="prayer-text">
-                <div className="prayer-sanskrit">{dailyPrayer.sanskrit}</div>
-                <div className="prayer-transliteration">{dailyPrayer.transliteration}</div>
-              </div>
-              
-              <div className="prayer-meaning">
-                <strong>Meaning:</strong>
-                <p>{dailyPrayer.meaning}</p>
-              </div>
-              
-              <button 
-                className="prayer-complete-btn"
-                onClick={() => handleGoalToggle('dailyPrayer')}
-              >
-                {userGoals.dailyPrayer ? '✓ Prayer Completed' : 'Mark as Completed'}
-              </button>
-            </div>
-          )}
-        </section>
+      {isMeditationTimerOpen && (
+        <MeditationTimer 
+          onClose={() => setIsMeditationTimerOpen(false)} 
+          onComplete={() => {
+            if (!userGoals.meditation) toggleGoal('meditation');
+          }}
+          initialMinutes={5} 
+        />
+      )}
 
-        {/* Daily Scripture Reading */}
-        <section className="dashboard-card scripture-card">
-          <h2 className="card-title">📜 Daily Scripture Reading</h2>
-          {dailyReading && (
-            <div className="scripture-content">
-              <div className="scripture-header">
-                <h3 className="scripture-name">{dailyReading.scripture}</h3>
-                <div className="scripture-meta">
-                  <span className="scripture-chapter">📖 {dailyReading.title}</span>
-                  <span className="scripture-time">🕐 {dailyReading.readingTime}</span>
-                </div>
-              </div>
-              
-              <p className="scripture-summary">{dailyReading.summary}</p>
-              
-              <div className="key-verse">
-                <h4 className="verse-title">✨ Key Verse:</h4>
-                <div className="verse-sanskrit">{dailyReading.keyVerse.sanskrit}</div>
-                <div className="verse-transliteration">{dailyReading.keyVerse.transliteration}</div>
-                <div className="verse-meaning">
-                  <strong>Meaning:</strong>
-                  <p>{dailyReading.keyVerse.meaning}</p>
-                </div>
-              </div>
-              
-              <div className="scripture-actions">
-                <Link to={dailyReading.link} className="read-full-btn">
-                  Read Full Chapter →
-                </Link>
-                <button 
-                  className="scripture-complete-btn"
-                  onClick={() => handleGoalToggle('readScripture')}
-                >
-                  {userGoals.readScripture ? '✓ Reading Completed' : 'Mark as Completed'}
-                </button>
-              </div>
-              
-              <div className="library-link">
-                <Link to="/adults/library" className="browse-library-btn">
-                  📚 Browse Full Literature Library
-                </Link>
-              </div>
-            </div>
-          )}
-        </section>
-
-        {/* Shloka of the Day */}
-        <section className="dashboard-card shloka-card">
-          <ShlokaOfTheDay />
-        </section>
-
-        {/* Upcoming Festivals */}
-        <section className="dashboard-card festivals-card">
-          <h2 className="card-title">🎉 Upcoming Festivals</h2>
-          <div className="festivals-list">
-            {upcomingFestivals.map((festival, index) => (
-              <div key={index} className="festival-item">
-                <div className="festival-info">
-                  <h3 className="festival-name">{festival.name}</h3>
-                  <p className="festival-date">{festival.date}</p>
-                </div>
-                <div className="festival-countdown">
-                  <span className="countdown-number">{festival.daysAway}</span>
-                  <span className="countdown-label">days</span>
-                </div>
-              </div>
-            ))}
-          </div>
-          <Link to="/adults/festivals" className="view-full-link">
-            View All Festivals →
-          </Link>
-        </section>
-
-        {/* Fasting Schedule */}
-        <section className="dashboard-card fasting-card">
-          <h2 className="card-title">🌙 Fasting Schedule</h2>
-          <div className="fasting-list">
-            {fastingSchedule.map((fast, index) => (
-              <div key={index} className="fasting-item">
-                <div className="fasting-day">{fast.day}</div>
-                <div className="fasting-details">
-                  <h3 className="fasting-type">{fast.type}</h3>
-                  <p className="fasting-description">{fast.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Quick Actions */}
-        <section className="dashboard-card quick-actions-card">
-          <h2 className="card-title">⚡ Quick Actions</h2>
-          <div className="quick-actions-grid">
-            <Link to="/adults/gods" className="quick-action-btn">
-              <span className="action-icon">🕉️</span>
-              <span className="action-label">Gods Gallery</span>
-            </Link>
-            <Link to="/adults/library" className="quick-action-btn">
-              <span className="action-icon">📚</span>
-              <span className="action-label">Sacred Texts</span>
-            </Link>
-            <Link to="/adults/pujas" className="quick-action-btn">
-              <span className="action-icon">🔱</span>
-              <span className="action-label">Puja Guide</span>
-            </Link>
-            <Link to="/adults/ashtottaram" className="quick-action-btn">
-              <span className="action-icon">🙏</span>
-              <span className="action-label">108 Names</span>
-            </Link>
-          </div>
-        </section>
-
-        {/* Practical Hindu Living */}
-        <section className="dashboard-card practical-living-card">
-          <h2 className="card-title">🕉️ Practical Hindu Living</h2>
-          <div className="practical-actions">
-            <Link to="/adults/muhurta-finder" className="practical-action-btn">
-              <span className="action-icon">🕐</span>
-              <span className="action-label">Muhurta Finder</span>
-              <span className="action-desc">Find auspicious times</span>
-            </Link>
-            <Link to="/adults/fasting-guide" className="practical-action-btn">
-              <span className="action-icon">🍃</span>
-              <span className="action-label">Fasting Guide</span>
-              <span className="action-desc">Daily fasting rules</span>
-            </Link>
-            <Link to="/adults/festival-countdown" className="practical-action-btn">
-              <span className="action-icon">🎊</span>
-              <span className="action-label">Festival Prep</span>
-              <span className="action-desc">Preparation checklists</span>
-            </Link>
-            <Link to="/adults/puja-reminders" className="practical-action-btn">
-              <span className="action-icon">🔔</span>
-              <span className="action-label">Puja Reminders</span>
-              <span className="action-desc">Daily worship alerts</span>
-            </Link>
-          </div>
-        </section>
-
-        {/* Progress Summary */}
-        <section className="dashboard-card progress-card">
-          <h2 className="card-title">📊 Your Progress</h2>
-          <div className="progress-stats">
-            <div className="stat-item">
-              <div className="stat-icon">🔥</div>
-              <div className="stat-value">{streak}</div>
-              <div className="stat-label">Day Streak</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-icon">📿</div>
-              <div className="stat-value">{userGoals.japaCount}</div>
-              <div className="stat-label">Japa Today</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-icon">✅</div>
-              <div className="stat-value">
-                {[userGoals.dailyPrayer, userGoals.readScripture, userGoals.meditation].filter(Boolean).length}/3
-              </div>
-              <div className="stat-label">Goals Done</div>
-            </div>
-          </div>
-        </section>
-      </div>
+      <EditGoalsModal 
+        isOpen={isEditGoalsOpen}
+        onClose={() => setIsEditGoalsOpen(false)}
+        customGoals={customGoals}
+        addCustomGoal={addCustomGoal}
+        removeCustomGoal={removeCustomGoal}
+      />
     </div>
   );
 };

@@ -20,24 +20,31 @@
   z-index: 100;
   transition: all 0.3s ease;
 
-  /* Modern glassmorphism effect */
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: var(--shadow-sm);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  /* Dynamic glassmorphism effect */
+  background: var(--glass-bg, rgba(255, 255, 255, 0.8));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 30px var(--glass-shadow, rgba(0, 0, 0, 0.1));
+  border-bottom: 1px solid var(--glass-border, rgba(0, 0, 0, 0.05));
+}
+
+.navbar-brand {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .navbar-brand a {
   font-family: 'Playfair Display', 'Cinzel', serif;
   font-weight: 800;
   font-size: 1.9rem;
-  background: linear-gradient(135deg, var(--saffron-primary) 0%, var(--text-primary) 100%);
+  background: linear-gradient(135deg, var(--saffron-primary) 0%, var(--text-color, #fff) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-decoration: none;
   transition: all 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .navbar-brand a:hover {
@@ -47,6 +54,7 @@
 .navbar-links {
   list-style: none;
   display: flex;
+  justify-content: center;
   margin: 0;
   padding: 0;
   gap: 20px;
@@ -57,7 +65,7 @@
   font-family: 'Lato', sans-serif;
   font-weight: 600;
   font-size: 1rem;
-  color: var(--text-primary);
+  color: var(--text-color, var(--text-primary));
   text-decoration: none;
   padding: 10px 8px;
   position: relative;
@@ -92,7 +100,9 @@
 }
 
 .navbar-actions {
+  flex: 1;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
   gap: 12px;
 }
@@ -109,7 +119,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-primary);
+  color: var(--text-color, var(--text-primary));
 }
 
 .theme-toggle:hover {
@@ -194,7 +204,7 @@
     height: 100vh;
     height: 100dvh; /* Dynamic viewport height for mobile browsers */
     flex-direction: column;
-    background: linear-gradient(180deg, var(--warm-cream) 0%, var(--parchment-light) 100%);
+    background: var(--bg-gradient, linear-gradient(180deg, var(--warm-cream) 0%, var(--parchment-light) 100%));
     padding: 80px var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
     gap: 0;
     transform: translateX(100%);

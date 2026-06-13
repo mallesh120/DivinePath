@@ -2,30 +2,32 @@
 
 .puja-guide-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--parchment-light) 0%, var(--parchment-light) 100%);
+  padding-bottom: 4rem;
+  color: var(--text-color);
+  font-family: var(--font-family);
+  transition: background 1s ease;
 }
 
 .puja-guide-header {
-  background: linear-gradient(135deg, var(--saffron-primary) 0%, var(--primary-color) 60%, var(--parchment-mid) 100%);
   padding: 30px 20px 40px 20px;
-  color: white;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  color: var(--hero-title, #ffffff);
 }
 
 .back-link {
   display: inline-block;
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
   font-size: 1rem;
   margin-bottom: 20px;
   padding: 8px 16px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--glass-border);
   border-radius: 20px;
   transition: all 0.3s ease;
 }
 
 .back-link:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   transform: translateX(-5px);
 }
 
@@ -37,7 +39,7 @@
 .puja-guide-title h1 {
   font-size: 2.5rem;
   margin: 0 0 15px 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  color: var(--hero-title);
 }
 
 .puja-meta {
@@ -57,7 +59,8 @@
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 600;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--glass-border);
   backdrop-filter: blur(10px);
 }
 
@@ -80,7 +83,8 @@
   padding: 6px 16px;
   border-radius: 20px;
   font-size: 0.9rem;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--glass-border);
   backdrop-filter: blur(10px);
 }
 
@@ -92,7 +96,8 @@
 .progress-bar {
   width: 100%;
   height: 12px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--glass-border);
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 10px;
@@ -127,10 +132,12 @@
 }
 
 .sidebar-section {
-  background: white;
+  background: var(--glass-bg, rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.1));
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar-toggle {
@@ -142,7 +149,7 @@
   border: none;
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--text-color);
   cursor: pointer;
   padding: 0;
   text-align: left;
@@ -154,7 +161,7 @@
 
 .toggle-icon {
   font-size: 0.9rem;
-  color: var(--text-tertiary);
+  color: var(--text-muted);
 }
 
 .materials-section {
@@ -164,7 +171,7 @@
 .sidebar-title {
   font-size: 1.2rem;
   margin: 0 0 15px 0;
-  color: var(--text-primary);
+  color: var(--text-color);
 }
 
 .timing-info {
@@ -175,7 +182,7 @@
 }
 
 .current-timing {
-  background: var(--neutral-300);
+  background: rgba(255, 255, 255, 0.05);
   padding: 12px;
   border-radius: 10px;
   border-left: 4px solid var(--saffron-primary);
@@ -183,7 +190,7 @@
 
 .current-timing p {
   margin: 5px 0;
-  color: var(--text-secondary);
+  color: var(--text-muted);
 }
 
 .best-days, .avoid-days, .best-nakshatra {
@@ -192,18 +199,18 @@
 }
 
 .best-days {
-  background: var(--secondary-light);
-  border-left: 3px solid var(--secondary-color);
+  background: rgba(0, 200, 100, 0.1);
+  border-left: 3px solid rgba(0, 200, 100, 0.8);
 }
 
 .avoid-days {
-  background: var(--bg-secondary);
-  border-left: 3px solid var(--accent-color);
+  background: rgba(255, 50, 50, 0.1);
+  border-left: 3px solid rgba(255, 50, 50, 0.8);
 }
 
 .best-nakshatra {
-  background: var(--primary-light);
-  border-left: 3px solid var(--primary-color);
+  background: rgba(100, 100, 255, 0.1);
+  border-left: 3px solid rgba(100, 100, 255, 0.8);
 }
 
 .timing-info ul {
@@ -223,7 +230,7 @@
 .benefits-list li, .tips-list li {
   margin: 10px 0;
   line-height: 1.6;
-  color: var(--text-secondary);
+  color: var(--text-muted);
 }
 
 .guide-main {
@@ -233,10 +240,12 @@
 }
 
 .step-progress-bar {
-  background: white;
+  background: var(--glass-bg, rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.1));
   border-radius: 12px;
   padding: 15px 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
 }
 
@@ -256,7 +265,7 @@
 
 .step-title-inline {
   font-size: 0.95rem;
-  color: var(--text-tertiary);
+  color: var(--text-muted);
   font-weight: 500;
   text-align: right;
 }
@@ -289,7 +298,8 @@
 .step-nav-item {
   min-width: 140px;
   padding: 15px;
-  background: var(--neutral-300);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -300,7 +310,7 @@
 }
 
 .step-nav-item:hover {
-  background: var(--bg-secondary);
+  background: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
 }
 
@@ -312,7 +322,7 @@
 }
 
 .step-nav-item.completed {
-  background: var(--primary-light);
+  background: rgba(255, 160, 50, 0.1);
   border-color: var(--saffron-primary);
 }
 
@@ -324,8 +334,8 @@
 .step-number {
   width: 32px;
   height: 32px;
-  background: white;
-  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--text-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -347,15 +357,17 @@
 }
 
 .current-step-content {
-  background: white;
+  background: var(--glass-bg, rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.1));
   border-radius: 15px;
   padding: 40px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .step-header {
   margin-bottom: 25px;
-  border-bottom: 2px solid var(--neutral-200);
+  border-bottom: 2px solid var(--glass-border);
   padding-bottom: 20px;
 }
 
@@ -370,27 +382,27 @@
 .step-title {
   font-size: 2rem;
   margin: 10px 0;
-  color: var(--text-primary);
+  color: var(--text-color);
 }
 
 .step-duration {
   display: inline-block;
   padding: 6px 14px;
-  background: var(--neutral-300);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   font-size: 0.9rem;
-  color: var(--text-tertiary);
+  color: var(--text-muted);
 }
 
 .step-description {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   margin-bottom: 30px;
 }
 
 .mantra-section {
-  background: linear-gradient(135deg, var(--parchment-light) 0%, var(--parchment-light) 100%);
+  background: rgba(255, 160, 50, 0.05);
   border-left: 4px solid var(--saffron-primary);
   padding: 25px;
   border-radius: 12px;
@@ -465,7 +477,7 @@
 .mantra-sanskrit {
   font-size: 1.3rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--text-color);
   line-height: 1.8;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -474,7 +486,7 @@
 .mantra-transliteration {
   font-size: 1.1rem;
   font-style: italic;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   line-height: 1.6;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -482,10 +494,10 @@
 
 .mantra-meaning {
   font-size: 1rem;
-  color: var(--text-tertiary);
+  color: var(--text-muted);
   line-height: 1.7;
   padding-top: 10px;
-  border-top: 1px solid var(--neutral-200);
+  border-top: 1px solid var(--glass-border);
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
@@ -495,13 +507,13 @@
   color: var(--saffron-primary);
   font-weight: 600;
   padding: 10px 15px;
-  background: white;
+  background: rgba(255, 160, 50, 0.1);
   border-radius: 8px;
   display: inline-block;
 }
 
 .step-tips {
-  background: var(--bg-secondary);
+  background: rgba(255, 255, 255, 0.05);
   padding: 20px;
   border-radius: 12px;
   margin: 25px 0;
@@ -521,14 +533,14 @@
 
 .step-tips li {
   margin: 8px 0;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   line-height: 1.6;
 }
 
 .step-completion {
   margin: 30px 0;
   padding: 20px;
-  background: var(--neutral-300);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
 }
 
@@ -539,7 +551,7 @@
   cursor: pointer;
   font-size: 1.05rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--text-color);
 }
 
 .completion-checkbox input[type="checkbox"] {
@@ -555,7 +567,7 @@
   gap: 15px;
   margin-top: 40px;
   padding-top: 30px;
-  border-top: 2px solid var(--neutral-200);
+  border-top: 2px solid var(--glass-border);
 }
 
 .nav-btn {
@@ -616,10 +628,12 @@
 }
 
 .all-mantras-section {
-  background: white;
+  background: var(--glass-bg, rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.1));
   border-radius: 15px;
   padding: 30px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .all-mantras-section h3 {
@@ -634,7 +648,8 @@
 }
 
 .mantra-card {
-  background: linear-gradient(135deg, var(--parchment-light) 0%, var(--parchment-light) 100%);
+  background: rgba(255, 160, 50, 0.05);
+  border: 1px solid var(--glass-border);
   padding: 20px;
   border-radius: 12px;
   border-left: 4px solid var(--saffron-primary);
@@ -643,23 +658,23 @@
 .mantra-card-sanskrit {
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--text-color);
   margin-bottom: 10px;
 }
 
 .mantra-card-transliteration {
   font-size: 1rem;
   font-style: italic;
-  color: var(--text-tertiary);
+  color: var(--text-muted);
   margin-bottom: 10px;
 }
 
 .mantra-card-meaning {
   font-size: 0.95rem;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   line-height: 1.6;
   padding-top: 10px;
-  border-top: 1px solid var(--neutral-200);
+  border-top: 1px solid var(--glass-border);
 }
 
 .mantra-card-repetitions {
@@ -674,15 +689,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--parchment-light) 0%, var(--parchment-light) 100%);
 }
 
 .not-found-content {
   text-align: center;
   padding: 60px;
-  background: white;
+  background: var(--glass-bg, rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.1));
   border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
 .not-found-icon {
@@ -694,12 +710,12 @@
 .not-found-content h2 {
   font-size: 2.5rem;
   margin: 0 0 15px 0;
-  color: var(--text-primary);
+  color: var(--text-color);
 }
 
 .not-found-content p {
   font-size: 1.2rem;
-  color: var(--text-tertiary);
+  color: var(--text-muted);
   margin: 0 0 30px 0;
 }
 

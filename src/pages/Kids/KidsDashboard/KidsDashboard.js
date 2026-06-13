@@ -2,11 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { shlokaService } from '../../../services/shlokaService';
 import KidsPageTransition from '../../../components/KidsLayout/KidsPageTransition';
+import { useSadhana } from '../../../hooks/useSadhana';
+import MeditationTimer from '../../../components/MeditationTimer/MeditationTimer';
 import './KidsDashboard.css';
 
 const KidsDashboard = () => {
   const [dailyShloka, setDailyShloka] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  
+  // Kids specific sadhana with stars
+  const { goals, toggleGoal, stars } = useSadhana(true);
+  const [isMeditationTimerOpen, setIsMeditationTimerOpen] = useState(false);
 
   useEffect(() => {
     shlokaService.getDailyShloka().then(setDailyShloka);
@@ -33,10 +39,58 @@ const KidsDashboard = () => {
       window.speechSynthesis.speak(utterance);
     }
   };
+  const handleGoalToggle = (goal) => {
+    if (goal === 'quietTime' && !goals.quietTime) {
+      setIsMeditationTimerOpen(true);
+      return;
+    }
+    toggleGoal(goal);
+  };
+
+  const handleMeditationComplete = () => {
+    if (!goals.quietTime) {
+      toggleGoal('quietTime');
+    }
+    setIsMeditationTimerOpen(false);
+  };
+
   return (
     <KidsPageTransition>
       <div className="kids-dashboard">
-        <h1 className="welcome-title">Hari Om! 🙏</h1>
+        <div className="kids-header">
+          <h1 className="welcome-title">Hari Om! 🙏</h1>
+          
+          <div className="dharma-stars">
+            <span className="stars-icon">⭐</span>
+            <div className="stars-info">
+              <span className="stars-count">{stars}</span>
+              <span className="stars-label">Dharma Stars</span>
+            </div>
+          </div>
+        </div>
+
+        <section className="kids-sadhana-section">
+          <h2>My Daily Habits</h2>
+          <div className="kids-sadhana-card">
+            <div className={`kids-goal-item ${goals.chant ? 'completed' : ''}`} onClick={() => handleGoalToggle('chant')}>
+              <div className="kids-goal-icon">🌸</div>
+              <div className="kids-goal-text">Chant Shloka</div>
+              <div className="kids-checkbox">{goals.chant ? '⭐' : ''}</div>
+            </div>
+            
+            <div className={`kids-goal-item ${goals.story ? 'completed' : ''}`} onClick={() => handleGoalToggle('story')}>
+              <div className="kids-goal-icon">📖</div>
+              <div className="kids-goal-text">Read a Story</div>
+              <div className="kids-checkbox">{goals.story ? '⭐' : ''}</div>
+            </div>
+            
+            <div className={`kids-goal-item ${goals.quietTime ? 'completed' : ''}`} onClick={() => handleGoalToggle('quietTime')}>
+              <div className="kids-goal-icon">🧘</div>
+              <div className="kids-goal-text">Quiet Time (5m)</div>
+              <div className="kids-checkbox">{goals.quietTime ? '⭐' : ''}</div>
+            </div>
+          </div>
+        </section>
         
         <section className="daily-shloka-section">
           {dailyShloka ? (
@@ -84,6 +138,14 @@ const KidsDashboard = () => {
           </div>
         </section>
       </div>
+
+      {isMeditationTimerOpen && (
+        <MeditationTimer 
+          onClose={() => setIsMeditationTimerOpen(false)}
+          onComplete={handleMeditationComplete}
+          initialMinutes={5}
+        />
+      )}
     </KidsPageTransition>
   );
 };

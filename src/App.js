@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useState, useEffect } from 'react';
 import { Routes, Route, useLocation, Navigate, Outlet } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar/Navbar';
@@ -26,9 +26,9 @@ const GodsGalleryPage = lazy(() => import('./pages/GodsGalleryPage/GodsGalleryPa
 const AllGodsGalleryPage = lazy(() => import('./pages/AllGodsGalleryPage/AllGodsGalleryPage'));
 const LiteratureLibraryPage = lazy(() => import('./pages/LiteratureLibraryPage/LiteratureLibraryPage'));
 const GodDetailPage = lazy(() => import('./pages/GodDetailPage/GodDetailPage'));
-const FestivalsPage = lazy(() => import('./pages/FestivalsPage/FestivalsPage'));
+// FestivalsPage has been merged into PanchangPage
 const FestivalDetailPage = lazy(() => import('./pages/FestivalDetailPage/FestivalDetailPage'));
-const HinduCalendarPage = lazy(() => import('./pages/HinduCalendarPage/HinduCalendarPage'));
+const PanchangPage = lazy(() => import('./pages/PanchangPage/PanchangPage'));
 const PujaListPage = lazy(() => import('./pages/PujaListPage/PujaListPage'));
 const PujaGuidePage = lazy(() => import('./pages/PujaGuidePage/PujaGuidePage'));
 const AshtottaramListPage = lazy(() => import('./pages/AshtottaramListPage/AshtottaramListPage'));
@@ -66,6 +66,27 @@ const AdultsLayoutWrapper = () => (
 
 function App() {
   const location = useLocation();
+  const [themeClass, setThemeClass] = useState('theme-night');
+
+  // Determine dynamic theme based on current time
+  useEffect(() => {
+    const getThemeClass = () => {
+      const hour = new Date().getHours();
+      if (hour >= 5 && hour < 8) return 'theme-dawn';
+      if (hour >= 8 && hour < 17) return 'theme-day';
+      if (hour >= 17 && hour < 20) return 'theme-dusk';
+      return 'theme-night';
+    };
+
+    setThemeClass(getThemeClass());
+
+    // Update theme every minute to catch transitions
+    const interval = setInterval(() => {
+      setThemeClass(getThemeClass());
+    }, 60000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   // Helper to wrap route elements with page transitions
   const withTransition = (Component) => (
@@ -75,7 +96,7 @@ function App() {
   );
 
   return (
-    <div className="App">
+    <div className={`App ${themeClass}`}>
       <AnimatePresence mode="wait">
         <Suspense fallback={<LoadingFallback />}>
           <Routes location={location} key={location.pathname.split('/')[1]}>
@@ -103,9 +124,9 @@ function App() {
               <Route path="gods/all" element={withTransition(AllGodsGalleryPage)} />
               <Route path="gods/:godId" element={withTransition(GodDetailPage)} />
               <Route path="library" element={withTransition(LiteratureLibraryPage)} />
-              <Route path="festivals" element={withTransition(FestivalsPage)} />
+              <Route path="festivals" element={<Navigate to="/adults/calendar" state={{ activeTab: 'festivals' }} replace />} />
               <Route path="festivals/:festivalId" element={withTransition(FestivalDetailPage)} />
-              <Route path="calendar" element={withTransition(HinduCalendarPage)} />
+              <Route path="calendar" element={withTransition(PanchangPage)} />
               <Route path="pujas" element={withTransition(PujaListPage)} />
               <Route path="puja/:pujaId" element={withTransition(PujaGuidePage)} />
               <Route path="ashtottaram" element={withTransition(AshtottaramListPage)} />

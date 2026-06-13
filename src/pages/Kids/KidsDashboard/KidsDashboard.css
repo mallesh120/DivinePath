@@ -7,11 +7,129 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+.kids-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
 .welcome-title {
   color: #FF914D;
   font-size: 2.2rem;
-  margin-bottom: 2rem;
-  text-align: center;
+  margin: 0;
+}
+
+.dharma-stars {
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+  border: 2px solid #FFDE59;
+}
+
+.stars-icon {
+  font-size: 2rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.stars-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stars-count {
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: #FF914D;
+  line-height: 1;
+}
+
+.stars-label {
+  font-size: 0.75rem;
+  color: #666;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.kids-sadhana-section {
+  margin-bottom: 2.5rem;
+}
+
+.kids-sadhana-section h2 {
+  color: #4A90E2;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.kids-sadhana-card {
+  background: white;
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(74, 144, 226, 0.15);
+  border: 4px solid #BFE6FF;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.kids-goal-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: #F0F8FF;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+}
+
+.kids-goal-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.kids-goal-item.completed {
+  background: #FFF9E6;
+  border-color: #FFDE59;
+}
+
+.kids-goal-icon {
+  font-size: 1.8rem;
+  margin-right: 1rem;
+}
+
+.kids-goal-text {
+  flex: 1;
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.kids-checkbox {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  background: white;
+  transition: all 0.3s;
+}
+
+.kids-goal-item.completed .kids-checkbox {
+  border-color: #FFDE59;
+  background: #FFDE59;
 }
 
 .highlight-card {

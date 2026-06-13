@@ -181,3 +181,58 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to bottom, var(--saffron-dark), var(--saffron-dark));
 }
+
+/* ========================================= */
+/* COSMIC THEMES (Time-based backgrounds)    */
+/* ========================================= */
+.theme-night {
+  --bg-gradient: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
+  --text-color: #FFFFFF;
+  --text-muted: #A0A0B0;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: rgba(0, 0, 0, 0.3);
+  --hero-title: #FFD700;
+  --hero-bg: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+  --nav-bg: rgba(26, 26, 46, 0.95);
+  --timeline-line: linear-gradient(90deg, #FF9A9E 0%, #FECFEF 99%, #FECFEF 100%);
+}
+
+.theme-dawn {
+  --bg-gradient: linear-gradient(135deg, #FF9A9E 0%, #FECFEF 100%);
+  --text-color: #2C3E50;
+  --text-muted: #5D6D7E;
+  --glass-bg: rgba(255, 255, 255, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-shadow: rgba(0, 0, 0, 0.1);
+  --hero-title: #E67E22;
+  --hero-bg: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.2) 100%);
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --timeline-line: linear-gradient(90deg, #E74C3C 0%, #F39C12 100%);
+}
+
+.theme-day {
+  --bg-gradient: linear-gradient(135deg, #85C1E9 0%, #D4E6F1 100%);
+  --text-color: #154360;
+  --text-muted: #2980B9;
+  --glass-bg: rgba(255, 255, 255, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --glass-shadow: rgba(0, 0, 0, 0.05);
+  --hero-title: #D35400;
+  --hero-bg: linear-gradient(180deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.3) 100%);
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --timeline-line: linear-gradient(90deg, #F39C12 0%, #E74C3C 100%);
+}
+
+.theme-dusk {
+  --bg-gradient: linear-gradient(135deg, #E67E22 0%, #8E44AD 100%);
+  --text-color: #FDEDEC;
+  --text-muted: #FADBD8;
+  --glass-bg: rgba(0, 0, 0, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: rgba(0, 0, 0, 0.2);
+  --hero-title: #F1C40F;
+  --hero-bg: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
+  --nav-bg: rgba(142, 68, 173, 0.95);
+  --timeline-line: linear-gradient(90deg, #F1C40F 0%, #FF9A9E 100%);
+}

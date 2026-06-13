@@ -67,7 +67,40 @@ const Navbar = () => {
       <div className="navbar-brand">
         <NavLink to="/adults">Divine Path</NavLink>
       </div>
-      
+      <ul className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
+        <li>
+          <NavLink to="/adults" end className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            Home
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/adults/gods" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            Gods Gallery
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/adults/library" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            Literature
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/adults/calendar" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            Hindu Calendar
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/adults/pujas" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            Puja Guide
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/adults/ashtottaram" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            108 Names
+          </NavLink>
+        </li>
+      </ul>
+
       <div className="navbar-actions">
         <button 
           className="switch-zone-nav-btn"
@@ -100,46 +133,6 @@ const Navbar = () => {
           <span className="hamburger-line"></span>
         </button>
       </div>
-
-      <ul className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
-        <li>
-          <NavLink to="/adults" end className={({ isActive }) => (isActive ? 'active-link' : '')}>
-            Home
-          </NavLink>
-        </li>
-
-        <li>
-          <NavLink to="/adults/gods" className={({ isActive }) => (isActive ? 'active-link' : '')}>
-            Gods Gallery
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/adults/library" className={({ isActive }) => (isActive ? 'active-link' : '')}>
-            Literature
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/adults/festivals" className={({ isActive }) => (isActive ? 'active-link' : '')}>
-            Festivals
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/adults/calendar" className={({ isActive }) => (isActive ? 'active-link' : '')}>
-            Hindu Calendar
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/adults/pujas" className={({ isActive }) => (isActive ? 'active-link' : '')}>
-            Puja Guide
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/adults/ashtottaram" className={({ isActive }) => (isActive ? 'active-link' : '')}>
-            108 Names
-          </NavLink>
-        </li>
-
-      </ul>
 
       {/* Overlay for mobile menu */}
       {isMenuOpen && <div className="navbar-overlay" onClick={() => setIsMenuOpen(false)} />}

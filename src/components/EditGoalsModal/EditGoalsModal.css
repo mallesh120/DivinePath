@@ -1,0 +1,99 @@
+.edit-goals-modal {
+  padding: 2rem;
+}
+
+.custom-goals-list {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  max-height: 200px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.no-custom-goals {
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+}
+
+.custom-goal-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.custom-goal-item:last-child {
+  border-bottom: none;
+}
+
+.remove-goal-btn {
+  background: rgba(255, 50, 50, 0.2);
+  border: none;
+  color: #ffcccc;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.remove-goal-btn:hover {
+  background: rgba(255, 50, 50, 0.5);
+  color: white;
+}
+
+.add-goal-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.add-goal-input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 0.8rem 1rem;
+  color: white;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.add-goal-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.add-goal-input:focus {
+  border-color: var(--hero-title);
+}
+
+.add-goal-btn {
+  background: var(--hero-title);
+  color: #1A1A2E;
+  border: none;
+  border-radius: 20px;
+  padding: 0 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.add-goal-btn:active {
+  transform: scale(0.95);
+}
+
+.add-goal-btn:disabled {
+  background: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: not-allowed;
+  transform: none;
+}

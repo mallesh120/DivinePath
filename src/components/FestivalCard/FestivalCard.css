@@ -1,21 +1,24 @@
 @import '../../styles/theme.css';
 
 .festival-card {
-  background: linear-gradient(135deg, var(--card-bg) 0%, var(--neutral-300) 100%);
-  border-radius: 12px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-  border: 2px solid transparent;
   position: relative;
   overflow: hidden;
+  color: var(--text-color);
 }
 
 .festival-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-  border-color: var(--accent-primary);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 160, 50, 0.4); /* subtle saffron glow */
 }
 
 .festival-card-header {
@@ -37,20 +40,22 @@
 .festival-card-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: var(--hero-title);
   margin: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .festival-card-short-name {
   font-size: 0.9rem;
-  color: #7f8c8d;
+  color: var(--text-muted);
   font-style: italic;
   margin-top: 5px;
 }
 
 .festival-card-category {
-  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-primary) 100%);
-  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--hero-title);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 5px 12px;
   border-radius: 20px;
   font-size: 0.75rem;
@@ -138,20 +143,20 @@
   align-items: center;
   gap: 8px;
   font-size: 0.9rem;
-  color: var(--text-secondary);
+  color: var(--text-color);
 }
 
 .festival-info-item.festival-date-highlight {
   flex-basis: 100%;
   padding: 10px;
-  background: linear-gradient(135deg, var(--neutral-300) 0%, #e9ecef 100%);
+  background: rgba(255,255,255,0.05);
   border-radius: 8px;
-  border-left: 4px solid var(--accent-blue);
+  border-left: 4px solid var(--hero-title);
 }
 
 .festival-date-value {
   font-weight: 700;
-  color: #2c3e50;
+  color: var(--hero-title);
   font-size: 1rem;
 }
 
@@ -161,12 +166,12 @@
 
 .festival-info-label {
   font-weight: 600;
-  color: #2c3e50;
+  color: var(--hero-title);
 }
 
 .festival-card-description {
   font-size: 0.95rem;
-  color: var(--text-secondary);
+  color: var(--text-color);
   line-height: 1.6;
   margin-bottom: 15px;
 }
@@ -179,8 +184,9 @@
 }
 
 .festival-deity-tag {
-  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
-  color: white;
+  background: rgba(255,255,255,0.05);
+  color: var(--hero-title);
+  border: 1px solid rgba(255, 160, 50, 0.3);
   padding: 5px 12px;
   border-radius: 15px;
   font-size: 0.8rem;
@@ -190,14 +196,14 @@
 .festival-card-footer {
   margin-top: 15px;
   padding-top: 15px;
-  border-top: 1px solid var(--neutral-200);
+  border-top: 1px solid var(--glass-border);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .festival-card-view-details {
-  color: var(--accent-primary);
+  color: var(--hero-title);
   font-weight: 600;
   font-size: 0.9rem;
   text-decoration: none;
@@ -208,8 +214,29 @@
 }
 
 .festival-card-view-details:hover {
-  color: #e55a2b;
+  color: #FFD700;
   gap: 8px;
+}
+
+.festival-card-puja-btn {
+  background: linear-gradient(135deg, var(--saffron-primary) 0%, #FF8C00 100%);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 153, 51, 0.3);
+}
+
+.festival-card-puja-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 153, 51, 0.4);
+  color: white;
 }
 
 /* Compact version for smaller displays */

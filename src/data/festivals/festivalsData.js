@@ -4,7 +4,24 @@ import { generateFestivalDatesForYear } from '../../utils/hinduCalendar';
 // This will be used as both static data and templates for calculation
 export const festivalsData = [
   {
+    id: "test-festival",
+    name: "Summer Solstice (Test)",
+    shortName: "Solstice",
+    category: "Festival",
+    date: "2026-06-02",
+    endDate: "2026-06-02",
+    month: "June",
+    duration: "1 day",
+    lunarDate: "Jyeshtha",
+    description: "A test festival added to demonstrate the bottom sheet.",
+    significance: "Testing the UI.",
+    rituals: ["Testing the bottom sheet", "Clicking the dot"],
+    deities: [],
+    colors: ["#FFD700"]
+  },
+  {
     id: 'diwali',
+    pujaId: 'diwali-puja',
     name: 'Diwali',
     shortName: 'Deepavali',
     category: 'Major Festival',
@@ -51,6 +68,7 @@ export const festivalsData = [
   },
   {
     id: 'navaratri',
+    pujaId: 'durga-puja',
     name: 'Navaratri',
     shortName: 'Nine Nights',
     category: 'Major Festival',
@@ -96,6 +114,7 @@ export const festivalsData = [
   },
   {
     id: 'janmashtami',
+    pujaId: 'janmashtami-puja',
     name: 'Janmashtami',
     shortName: 'Krishna Jayanti',
     category: 'Major Festival',
@@ -119,6 +138,7 @@ export const festivalsData = [
   },
   {
     id: 'ganesh-chaturthi',
+    pujaId: 'ganesh-chaturthi-puja',
     name: 'Ganesh Chaturthi',
     shortName: 'Vinayaka Chavithi',
     category: 'Major Festival',
@@ -142,6 +162,7 @@ export const festivalsData = [
   },
   {
     id: 'maha-shivaratri',
+    pujaId: 'shivaratri-puja',
     name: 'Maha Shivaratri',
     shortName: 'Great Night of Shiva',
     category: 'Major Festival',
@@ -396,6 +417,7 @@ export const festivalsData = [
   },
   {
     id: 'maha-shivaratri-2026',
+    pujaId: 'shivaratri-puja',
     name: 'Maha Shivaratri',
     shortName: 'Great Night of Shiva',
     category: 'Major Festival',
@@ -534,6 +556,7 @@ export const festivalsData = [
   },
   {
     id: 'janmashtami-2026',
+    pujaId: 'janmashtami-puja',
     name: 'Janmashtami',
     shortName: 'Krishna Jayanti',
     category: 'Major Festival',
@@ -557,6 +580,7 @@ export const festivalsData = [
   },
   {
     id: 'ganesh-chaturthi-2026',
+    pujaId: 'ganesh-chaturthi-puja',
     name: 'Ganesh Chaturthi',
     shortName: 'Vinayaka Chavithi',
     category: 'Major Festival',
@@ -580,6 +604,7 @@ export const festivalsData = [
   },
   {
     id: 'navaratri-2026',
+    pujaId: 'durga-puja',
     name: 'Navaratri',
     shortName: 'Nine Nights',
     category: 'Major Festival',
@@ -648,6 +673,7 @@ export const festivalsData = [
   },
   {
     id: 'diwali-2026',
+    pujaId: 'diwali-puja',
     name: 'Diwali',
     shortName: 'Deepavali',
     category: 'Major Festival',
