@@ -78,7 +78,7 @@ const BookLandingPage = () => {
               
               return (
                 <SpiritualCard key={routeId}>
-                  <Link to={`/library/${book.id}/${routeId}`} className="toc-card-link">
+                  <Link to={`/adults/library/${book.id}/${routeId}`} className="toc-card-link">
                     <div className="toc-card-content">
                       <h3 className="toc-card-title">{title}</h3>
                       

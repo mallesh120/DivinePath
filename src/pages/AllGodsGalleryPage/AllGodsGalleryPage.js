@@ -23,11 +23,11 @@ const AllGodsGalleryPage = () => {
 
   const handleGodClick = (godId) => {
     // Check if it's a Trinity god (string id) or regular god (number id)
-    navigate(`/gods/${godId}`);
+    navigate(`/adults/gods/${godId}`);
   };
 
   const handleBackToMain = () => {
-    navigate('/gods');
+    navigate('/adults/gods');
   };
 
   return (

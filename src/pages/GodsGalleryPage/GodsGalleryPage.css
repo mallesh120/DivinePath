@@ -1,52 +1,54 @@
 @import '../../styles/theme.css';
 
-.gods-gallery-page {
-  min-height: 100vh;
-  padding: 2rem;
-  background: linear-gradient(135deg, var(--parchment-light) 0%, var(--parchment-light) 100%);
-}
-
+/* Container */
 .gallery-page {
   padding: 40px 50px;
-  background-color: var(--background-color);
+  /* Let it inherit the global dynamic background */
   min-height: calc(100vh - 80px);
+  color: var(--text-color);
+  font-family: var(--font-family);
 }
 
+/* Glass Header */
 .gallery-header {
-  background: linear-gradient(135deg, var(--saffron-primary) 0%, var(--primary-color) 60%, var(--parchment-mid) 100%);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   padding: 40px 20px 50px 20px;
-  color: white;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
   margin-bottom: 50px;
-  border-radius: 0 0 20px 20px;
-  margin-top: -40px; /* Counteract page padding if needed, or adjust page padding */
+  border-radius: 0 0 30px 30px;
+  margin-top: -40px; 
   margin-left: -50px;
   margin-right: -50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] .gallery-header {
+  background: rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
 
 .gallery-title {
   font-family: 'Playfair Display', 'Cinzel', serif;
   font-size: 3rem;
   font-weight: 700;
-  color: white;
   margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  background: none;
-  -webkit-background-clip: initial;
-  -webkit-text-fill-color: initial;
-  background-clip: initial;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .gallery-subtitle {
   font-family: 'Lato', sans-serif;
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.9);
+  opacity: 0.9;
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.6;
 }
 
+/* Trimurti Grid */
 .trimurti-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -56,36 +58,51 @@
 }
 
 .trimurti-card {
-  background: var(--card-bg);
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 12px 32px var(--shadow-light);
-  transition: all 0.32s ease;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   cursor: pointer;
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+[data-theme="light"] .trimurti-card {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .trimurti-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="light"] .trimurti-card:hover {
+  border-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.1);
 }
 
 .trimurti-card-image-container {
   position: relative;
-  height: 250px;
+  height: 280px;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--parchment-light) 0%, var(--bg-secondary) 100%);
 }
 
 .trimurti-card-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
 .trimurti-card:hover .trimurti-card-image {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 .trimurti-card-overlay {
@@ -94,7 +111,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,17 +129,26 @@
   font-size: 1.3rem;
   font-weight: 600;
   font-family: 'Lato', sans-serif;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  transform: translateY(10px);
+  transition: transform 0.3s ease;
+}
+
+.trimurti-card:hover .view-details-text {
+  transform: translateY(0);
 }
 
 .trimurti-card-content {
   padding: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .trimurti-card-name {
-  font-family: 'Lato', sans-serif;
-  font-size: 2rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
   font-weight: 700;
-  color: var(--secondary-dark);
   margin: 0 0 5px 0;
 }
 
@@ -130,96 +157,78 @@
   font-size: 1.1rem;
   color: var(--accent-blue);
   font-weight: 600;
-  margin: 0 0 8px 0;
+  margin: 0 0 12px 0;
 }
 
 .trimurti-card-role {
   display: inline-block;
-  background: linear-gradient(135deg, var(--accent-blue) 0%, var(--secondary-dark) 100%);
-  color: white;
+  background: rgba(255, 255, 255, 0.1);
   padding: 5px 15px;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 15px;
+  align-self: flex-start;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="light"] .trimurti-card-role {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .trimurti-card-description {
   font-family: 'Lato', sans-serif;
   font-size: 0.95rem;
-  color: var(--text-secondary);
+  opacity: 0.8;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  flex: 1;
 }
 
 .trimurti-card-stats {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   padding-top: 20px;
-  border-top: 2px solid var(--neutral-200);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] .trimurti-card-stats {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .stat-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-family: 'Lato', sans-serif;
   font-size: 0.9rem;
-  color: var(--text-secondary);
 }
 
 .stat-icon {
   font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.1);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+[data-theme="light"] .stat-icon {
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .stat-label {
   font-weight: 600;
-  color: var(--secondary-dark);
+  opacity: 0.8;
 }
 
 .stat-value {
   color: var(--accent-blue);
   font-weight: 600;
-}
-
-/* Responsive design */
-@media (max-width: 1024px) {
-  .trimurti-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  .gallery-page {
-    padding: 30px 20px;
-  }
-
-  .gallery-title {
-    font-size: 2.2rem;
-  }
-
-  .gallery-subtitle {
-    font-size: 1rem;
-  }
-
-  .trimurti-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
-  .trimurti-card-image-container {
-    height: 300px;
-  }
-  
-  .trimurti-card-content {
-    padding: 20px;
-  }
-
-  .trimurti-card-name {
-    font-size: 1.7rem;
-  }
 }
 
 /* Gallery Sections */
@@ -233,15 +242,15 @@
 }
 
 .section-title {
+  font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
-  color: var(--navy);
   margin-bottom: 15px;
   font-weight: 700;
 }
 
 .section-subtitle {
   font-size: 1.1rem;
-  color: var(--text-tertiary);
+  opacity: 0.8;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -256,29 +265,47 @@
 }
 
 .god-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  border: 3px solid var(--neutral-200);
-  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+[data-theme="light"] .god-card {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .god-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-  border-color: var(--gold-accent);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="light"] .god-card:hover {
+  border-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.1);
 }
 
 .god-card-image-container {
   width: 100%;
   height: 250px;
-  background: linear-gradient(135deg, var(--neutral-200) 0%, var(--parchment-light) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="light"] .god-card-image-container {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .god-card-image {
@@ -286,20 +313,22 @@
   height: 100%;
   object-fit: contain;
   padding: 15px;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
 }
 
 .god-card:hover .god-card-image {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .god-card-content {
   padding: 20px;
+  flex: 1;
 }
 
 .god-card-name {
+  font-family: 'Playfair Display', serif;
   font-size: 1.6rem;
-  color: var(--navy);
   margin: 0 0 12px;
   font-weight: 700;
 }
@@ -307,16 +336,24 @@
 .god-card-description {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: var(--text-secondary);
+  opacity: 0.8;
   margin: 0;
 }
 
 /* Dashavatar Preview Section */
 .dashavatar-section {
-  background: linear-gradient(135deg, var(--parchment-light) 0%, var(--card-bg) 100%);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   padding: 60px 20px;
   border-radius: 30px;
   margin-bottom: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] .dashavatar-section {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .avatars-preview-grid {
@@ -328,19 +365,29 @@
 }
 
 .avatar-preview-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 15px;
-  padding: 20px;
-  border: 2px solid var(--neutral-200);
+  padding: 25px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
   cursor: pointer;
   position: relative;
 }
 
+[data-theme="light"] .avatar-preview-card {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
 .avatar-preview-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-  border-color: var(--gold-accent);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="light"] .avatar-preview-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-color: white;
 }
 
 .avatar-number {
@@ -349,8 +396,9 @@
   right: 15px;
   width: 35px;
   height: 35px;
-  background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-purple-2) 100%);
-  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -359,9 +407,13 @@
   font-size: 1.1rem;
 }
 
+[data-theme="light"] .avatar-number {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid white;
+}
+
 .avatar-preview-name {
   font-size: 1.3rem;
-  color: var(--navy);
   margin: 0 0 10px;
   font-weight: 700;
 }
@@ -369,7 +421,7 @@
 .avatar-preview-description {
   font-size: 0.9rem;
   line-height: 1.5;
-  color: var(--text-tertiary);
+  opacity: 0.7;
   margin: 0;
 }
 
@@ -377,28 +429,36 @@
   display: block;
   margin: 0 auto;
   padding: 15px 40px;
-  background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-purple-2) 100%);
-  color: white;
-  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: var(--text-color);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 30px;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(156, 39, 176, 0.3);
+}
+
+[data-theme="light"] .view-all-avatars-btn {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 .view-all-avatars-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(156, 39, 176, 0.4);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .view-all-avatars-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
 }
 
 /* View All Gods Section */
 .view-all-section {
   text-align: center;
   padding: 60px 20px;
-  background: linear-gradient(135deg, var(--neutral-200) 0%, var(--parchment-light) 100%);
-  border-radius: 30px;
   margin-bottom: 40px;
 }
 
@@ -408,37 +468,60 @@
   align-items: center;
   gap: 10px;
   padding: 30px 60px;
-  background: linear-gradient(135deg, var(--saffron-primary) 0%, var(--accent-primary) 100%);
-  color: white;
-  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: var(--text-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   font-size: 1.5rem;
   font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 30px rgba(255, 102, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+[data-theme="light"] .view-all-gods-btn {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .view-all-gods-btn:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(255, 102, 0, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] .view-all-gods-btn:hover {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
 .view-all-count {
   font-size: 1rem;
   font-weight: 500;
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 /* Responsive Design */
-@media (max-width: 968px) {
+@media (max-width: 1024px) {
   .trimurti-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
   }
 }
 
 @media (max-width: 768px) {
+  .gallery-page {
+    padding: 30px 20px;
+  }
+
+  .gallery-header {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
   .section-title {
     font-size: 2rem;
   }

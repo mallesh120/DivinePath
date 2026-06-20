@@ -5,7 +5,7 @@ import './LiteratureCardLink.css'; // 2. Import new CSS
 
 const LiteratureCard = ({ story }) => {
   // All literature types now use the Universal Reader architecture
-  const path = `/library/${story.id}`;
+  const path = `/adults/library/${story.id}`;
 
   // Type badges for visual identification
   const typeBadges = {

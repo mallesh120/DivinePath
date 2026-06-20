@@ -110,7 +110,7 @@ const GodDetailPage = () => {
                     ))}
                   </div>
                 </div>
-                <Link to={`/ashtottaram/${ashtottaram.id}`} className="view-all-names-btn">
+                <Link to={`/adults/ashtottaram/${ashtottaram.id}`} className="view-all-names-btn">
                   View All 108 Names with Audio →
                 </Link>
               </div>
@@ -269,7 +269,7 @@ const GodDetailPage = () => {
                     ))}
                   </div>
                 </div>
-                <Link to={`/ashtottaram/${ashtottaram.id}`} className="view-all-names-btn">
+                <Link to={`/adults/ashtottaram/${ashtottaram.id}`} className="view-all-names-btn">
                   View All 108 Names with Audio →
                 </Link>
               </div>

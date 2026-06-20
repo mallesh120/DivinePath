@@ -57,7 +57,7 @@ const UniversalReaderPage = () => {
     return (
       <div className="reader-not-found">
         <h2>No content available for this text yet.</h2>
-        <Link to={`/library/${book.id}`} className="back-btn">Go Back</Link>
+        <Link to={`/adults/library/${book.id}`} className="back-btn">Go Back</Link>
       </div>
     );
   }
@@ -71,7 +71,7 @@ const UniversalReaderPage = () => {
     return (
       <div className="reader-not-found">
         <h2>Chapter not found!</h2>
-        <Link to={`/library/${book.id}`} className="back-btn">Go Back</Link>
+        <Link to={`/adults/library/${book.id}`} className="back-btn">Go Back</Link>
       </div>
     );
   }
@@ -81,8 +81,8 @@ const UniversalReaderPage = () => {
   // Navigation helpers
   const isFirst = currentIndex === 0;
   const isLast = currentIndex === sections.length - 1;
-  const prevChapterRoute = isFirst ? null : `/library/${book.id}/${sections[currentIndex - 1].id || currentIndex - 1}`;
-  const nextChapterRoute = isLast ? null : `/library/${book.id}/${sections[currentIndex + 1].id || currentIndex + 1}`;
+  const prevChapterRoute = isFirst ? null : `/adults/library/${book.id}/${sections[currentIndex - 1].id || currentIndex - 1}`;
+  const nextChapterRoute = isLast ? null : `/adults/library/${book.id}/${sections[currentIndex + 1].id || currentIndex + 1}`;
 
   const title = chapter.title || `Chapter ${chapter.number || currentIndex + 1}`;
 
@@ -253,7 +253,7 @@ const UniversalReaderPage = () => {
   return (
     <div className="universal-reader-page">
       <div className="reader-nav-top">
-        <Link to={`/library/${book.id}`} className="reader-back-btn">
+        <Link to={`/adults/library/${book.id}`} className="reader-back-btn">
           &larr; Back to {book.title}
         </Link>
       </div>
@@ -387,7 +387,7 @@ const UniversalReaderPage = () => {
                Next &rarr;
              </button>
           ) : (
-            <Link to={`/library/${book.id}`} className="pagination-btn finish">
+            <Link to={`/adults/library/${book.id}`} className="pagination-btn finish">
                Finish Book
              </Link>
           )}
