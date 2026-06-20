@@ -1,11 +1,11 @@
-import ramayanaScene1 from '../../../assets/images/balaScenes/ramayana_scene1.png';
-import ramayanaScene2 from '../../../assets/images/balaScenes/ramayana_scene2.png';
-import ramayanaScene3 from '../../../assets/images/balaScenes/ramayana_scene3.png';
-import ramayanaScene4 from '../../../assets/images/balaScenes/ramayana_scene4.png';
-import ramayanaScene5 from '../../../assets/images/balaScenes/ramayana_scene5.png';
-import ramayanaScene6 from '../../../assets/images/balaScenes/ramayana_scene6.png';
-import ramayanaScene7 from '../../../assets/images/balaScenes/ramayana_scene7.png';
-import ramayanaScene8 from '../../../assets/images/balaScenes/ramayana_scene8.png';
+import ramayanaScene1 from '../../../assets/images/balaScenes/ramayana_scene1.webp';
+import ramayanaScene2 from '../../../assets/images/balaScenes/ramayana_scene2.webp';
+import ramayanaScene3 from '../../../assets/images/balaScenes/ramayana_scene3.webp';
+import ramayanaScene4 from '../../../assets/images/balaScenes/ramayana_scene4.webp';
+import ramayanaScene5 from '../../../assets/images/balaScenes/ramayana_scene5.webp';
+import ramayanaScene6 from '../../../assets/images/balaScenes/ramayana_scene6.webp';
+import ramayanaScene7 from '../../../assets/images/balaScenes/ramayana_scene7.webp';
+import ramayanaScene8 from '../../../assets/images/balaScenes/ramayana_scene8.webp';
 
 export const balaKandaScenes = [
     { text: "King Dasharatha of Ayodhya, who has no sons, performs a great fire sacrifice (yagna) to ask the gods for children.", imageUrl: ramayanaScene1 },

@@ -7,7 +7,7 @@ export const durgaAshtottaram = {
   id: 'durga',
   title: 'Goddess Durga',
   category: 'goddess',
-  image: '/images/Goddesses/durga.png',
+  image: '/images/Goddesses/durga.webp',
   description: 'The Divine Mother, Goddess of Power',
   names: [
     {

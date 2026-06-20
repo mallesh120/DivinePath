@@ -2,15 +2,15 @@
 
 .puja-list-page {
   min-height: 100vh;
-  background: linear-gradient(180deg, var(--warm-cream) 0%, var(--parchment-light) 50%, var(--parchment-mid) 100%);
+  padding-bottom: 4rem;
+  color: var(--text-color);
+  font-family: var(--font-family);
+  transition: background 1s ease;
 }
 
 .puja-hero {
-  background: linear-gradient(135deg, var(--saffron-primary) 0%, #ffaa33 60%, #ffbb44 100%);
   padding: 60px 20px;
   text-align: center;
-  color: white;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .puja-hero-content {
@@ -23,13 +23,14 @@
   font-size: 3rem;
   font-weight: 800;
   margin: 0 0 15px 0;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.28);
+  color: var(--hero-title, #ffffff);
 }
 
 .puja-page-subtitle {
   font-size: 1.3rem;
   margin: 0;
   opacity: 0.95;
+  color: var(--text-muted, #e2e8f0);
 }
 
 .puja-controls {
@@ -57,11 +58,17 @@
 .puja-search-input {
   width: 100%;
   padding: 14px 45px 14px 45px;
-  border: 2px solid var(--neutral-200);
+  border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.1));
   border-radius: 25px;
   font-size: 1rem;
   transition: all 0.3s ease;
-  background: white;
+  background: var(--glass-bg, rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(10px);
+  color: var(--text-color);
+}
+
+.puja-search-input::placeholder {
+  color: var(--text-muted);
 }
 
 .puja-search-input:focus {
@@ -75,8 +82,9 @@
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--neutral-200);
-  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  border: 1px solid var(--glass-border);
   width: 28px;
   height: 28px;
   border-radius: 50%;
@@ -110,19 +118,26 @@
 
 .filter-label {
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--text-muted);
   white-space: nowrap;
 }
 
 .filter-select {
   flex: 1;
   padding: 12px 20px;
-  border: 2px solid var(--neutral-200);
+  border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.1));
   border-radius: 25px;
   font-size: 1rem;
-  background: white;
+  background: var(--glass-bg, rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(10px);
+  color: var(--text-color);
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+.filter-select option {
+  background: #111;
+  color: #fff;
 }
 
 .filter-select:focus {
@@ -135,7 +150,7 @@
   max-width: 1200px;
   margin: 0 auto 20px auto;
   padding: 0 20px;
-  color: var(--text-tertiary);
+  color: var(--text-muted);
   font-size: 0.95rem;
 }
 
@@ -153,7 +168,9 @@
   margin: 60px auto;
   text-align: center;
   padding: 40px;
-  background: white;
+  background: var(--glass-bg, rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.1));
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
@@ -161,24 +178,24 @@
 .no-pujas-icon {
   font-size: 4rem;
   margin-bottom: 20px;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .no-pujas-message h3 {
   font-size: 1.8rem;
   margin: 0 0 10px 0;
-  color: var(--text-primary);
+  color: var(--hero-title);
 }
 
 .no-pujas-message p {
-  color: var(--text-tertiary);
+  color: var(--text-muted);
   margin: 0 0 25px 0;
   font-size: 1.1rem;
 }
 
 .reset-filters-btn {
   padding: 12px 30px;
-  background: linear-gradient(135deg, var(--saffron-primary) 0%, #ffaa33 100%);
+  background: linear-gradient(135deg, var(--saffron-primary) 0%, var(--primary-color) 100%);
   color: white;
   border: none;
   border-radius: 25px;
@@ -197,14 +214,15 @@
   max-width: 1200px;
   margin: 40px auto 0 auto;
   padding: 30px 20px;
-  background: white;
+  background: var(--glass-bg, rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.1));
   border-radius: 20px 20px 0 0;
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .puja-info-note {
   text-align: center;
-  color: var(--text-tertiary);
+  color: var(--text-muted);
 }
 
 .puja-info-note h3 {

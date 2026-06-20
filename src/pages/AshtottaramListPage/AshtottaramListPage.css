@@ -7,7 +7,7 @@
 
 /* Hero Section */
 .ashtottaram-hero {
-  background: linear-gradient(135deg, var(--saffron-primary) 0%, #ffaa33 60%, #ffbb44 100%);
+  background: linear-gradient(135deg, var(--saffron-primary) 0%, var(--primary-color) 60%, var(--parchment-mid) 100%);
   color: white;
   padding: 80px 20px 60px;
   text-align: center;
@@ -198,7 +198,7 @@
   align-items: center;
   gap: 10px;
   padding-top: 15px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--bg-secondary);
 }
 
 .names-count {
@@ -262,14 +262,14 @@
   background: linear-gradient(135deg, var(--card-bg)5f0, var(--card-bg));
   padding: 30px;
   border-radius: 15px;
-  border: 2px solid #ffe8dc;
+  border: 2px solid var(--parchment-light);
   transition: all 0.3s ease;
 }
 
 .info-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(255, 107, 53, 0.15);
-  border-color: #ffd4c0;
+  border-color: var(--parchment-light);
 }
 
 .info-card h3 {

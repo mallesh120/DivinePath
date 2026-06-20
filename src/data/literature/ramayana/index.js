@@ -9,7 +9,7 @@ import { uttaraKandaScenes } from './uttara_kanda.js';
 
 
 // Import the main cover image for the Ramayana
-import ramayanaImage from '../../../assets/images/ramayana.png';
+import ramayanaImage from '../../../assets/images/ramayana.webp';
 
 export const ramayanaObject = {
   id: 1,

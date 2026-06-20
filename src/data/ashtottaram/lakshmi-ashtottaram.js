@@ -7,7 +7,7 @@ export const lakshmiAshtottaram = {
   id: 'lakshmi',
   title: 'Goddess Lakshmi',
   category: 'goddess',
-  image: '/images/Goddesses/lakshmi.png',
+  image: '/images/Goddesses/lakshmi.webp',
   description: 'The Goddess of Wealth and Prosperity',
   names: [
     {

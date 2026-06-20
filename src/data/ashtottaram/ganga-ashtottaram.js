@@ -7,7 +7,7 @@ export const gangaAshtottaram = {
   id: 'ganga',
   title: 'Goddess Ganga',
   category: 'goddess',
-  image: '/images/Goddesses/ganga.png',
+  image: '/images/Goddesses/ganga.webp',
   description: 'The sacred river goddess',
   names: [
     {

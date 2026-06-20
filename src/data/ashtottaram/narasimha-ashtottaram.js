@@ -7,7 +7,7 @@ export const narasimhaAshtottaram = {
   id: 'narasimha',
   title: 'Lord Narasimha',
   category: 'god',
-  image: '/images/Gods/narasimha.png',
+  image: '/images/Gods/narasimha.webp',
   description: 'The Man-Lion avatar of Vishnu',
   names: [
     {

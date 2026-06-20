@@ -1,13 +1,13 @@
 // Import the images for the Ayodhya Kanda scenes
-import ayodhyaScene1 from '../../../assets/images/ayodhyaScenes/ayodhya_scene1.png';
-import ayodhyaScene2 from '../../../assets/images/ayodhyaScenes/ayodhya_scene2.png';
-import ayodhyaScene3 from '../../../assets/images/ayodhyaScenes/ayodhya_scene3.png';
-import ayodhyaScene4 from '../../../assets/images/ayodhyaScenes/ayodhya_scene4.png';
-import ayodhyaScene5 from '../../../assets/images/ayodhyaScenes/ayodhya_scene5.png';
-import ayodhyaScene6 from '../../../assets/images/ayodhyaScenes/ayodhya_scene6.png';
-import ayodhyaScene7 from '../../../assets/images/ayodhyaScenes/ayodhya_scene7.png';
-import ayodhyaScene8 from '../../../assets/images/ayodhyaScenes/ayodhya_scene8.png';
-import ayodhyaScene9 from '../../../assets/images/ayodhyaScenes/ayodhya_scene9.png';
+import ayodhyaScene1 from '../../../assets/images/ayodhyaScenes/ayodhya_scene1.webp';
+import ayodhyaScene2 from '../../../assets/images/ayodhyaScenes/ayodhya_scene2.webp';
+import ayodhyaScene3 from '../../../assets/images/ayodhyaScenes/ayodhya_scene3.webp';
+import ayodhyaScene4 from '../../../assets/images/ayodhyaScenes/ayodhya_scene4.webp';
+import ayodhyaScene5 from '../../../assets/images/ayodhyaScenes/ayodhya_scene5.webp';
+import ayodhyaScene6 from '../../../assets/images/ayodhyaScenes/ayodhya_scene6.webp';
+import ayodhyaScene7 from '../../../assets/images/ayodhyaScenes/ayodhya_scene7.webp';
+import ayodhyaScene8 from '../../../assets/images/ayodhyaScenes/ayodhya_scene8.webp';
+import ayodhyaScene9 from '../../../assets/images/ayodhyaScenes/ayodhya_scene9.webp';
 
 
 // Export the array of scene objects for this Kanda

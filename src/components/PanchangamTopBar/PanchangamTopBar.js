@@ -62,7 +62,7 @@ const PanchangamTopBar = () => {
           >
             {isExpanded ? '▲' : '▼'}
           </button>
-          <Link to="/calendar" className="panchangam-link-btn">
+          <Link to="/adults/calendar" className="panchangam-link-btn">
             View Full Panchangam
           </Link>
         </div>

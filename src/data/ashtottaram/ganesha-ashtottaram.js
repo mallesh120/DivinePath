@@ -7,7 +7,7 @@ export const ganeshaAshtottaram = {
   id: 'ganesha',
   title: 'Lord Ganesha',
   category: 'god',
-  image: '/images/Gods/ganesha.png',
+  image: '/images/Gods/ganesha.webp',
   description: 'The Remover of Obstacles, son of Shiva and Parvati',
   names: [
     {

@@ -84,7 +84,7 @@ describe('LiteratureCard Component', () => {
     );
     
     const link = screen.getByRole('link');
-    expect(link).toHaveAttribute('href', '/library/ramayana/ramayana');
+    expect(link).toHaveAttribute('href', '/library/ramayana');
   });
 
   it('should link to correct path for scripture type', () => {
@@ -95,7 +95,7 @@ describe('LiteratureCard Component', () => {
     );
     
     const link = screen.getByRole('link');
-    expect(link).toHaveAttribute('href', '/library/scripture/bhagavad-gita');
+    expect(link).toHaveAttribute('href', '/library/bhagavad-gita');
   });
 
   it('should link to correct path for purana type', () => {
@@ -106,7 +106,7 @@ describe('LiteratureCard Component', () => {
     );
     
     const link = screen.getByRole('link');
-    expect(link).toHaveAttribute('href', '/library/purana/bhagavata');
+    expect(link).toHaveAttribute('href', '/library/bhagavata');
   });
 
   it('should link to TOC for ramcharitmanas', () => {
@@ -117,7 +117,7 @@ describe('LiteratureCard Component', () => {
     );
     
     const link = screen.getByRole('link');
-    expect(link).toHaveAttribute('href', '/library/ramayana/ramcharitmanas');
+    expect(link).toHaveAttribute('href', '/library/ramcharitmanas');
   });
 
   it('should render epic type badge', () => {

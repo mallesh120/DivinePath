@@ -7,7 +7,7 @@ export const brahmaAshtottaram = {
   id: 'brahma',
   title: 'Lord Brahma',
   category: 'god',
-  image: '/images/Gods/brahma.png',
+  image: '/images/Gods/brahma.webp',
   description: 'The Creator, one of the Trimurti',
   names: [
     {

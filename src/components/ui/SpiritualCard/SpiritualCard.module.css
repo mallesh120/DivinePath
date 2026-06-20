@@ -1,0 +1,18 @@
+.card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--ui-transition);
+  border: 2px solid var(--border-subtle);
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(234, 88, 12, 0.3); /* Saffron glow */
+}

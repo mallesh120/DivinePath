@@ -4,27 +4,15 @@ import './LiteratureCard.css';
 import './LiteratureCardLink.css'; // 2. Import new CSS
 
 const LiteratureCard = ({ story }) => {
-  // Check the story's type to determine the correct link path
-  let path;
-  
-  // Determine if it's one of the new text types that need TOC
-  const needsTOC = ['ramcharitmanas', 'rigveda', 'atharvaveda', 'yajurveda'].includes(story.id) || story.type === 'epic';
-  
-  if (needsTOC || story.type === 'epic') {
-    path = `/library/ramayana/${story.id}`;
-  } else if (story.type === 'scripture') {
-    path = `/library/scripture/${story.id}`;
-  } else if (story.type === 'purana') {
-    path = `/library/purana/${story.id}`;
-  } else {
-    path = `/library/${story.id}`;
-  }
+  // All literature types now use the Universal Reader architecture
+  const path = `/adults/library/${story.id}`;
 
   // Type badges for visual identification
   const typeBadges = {
     epic: { emoji: '⚔️', label: 'Epic', color: '#ff6b6b' },
     scripture: { emoji: '📖', label: 'Scripture', color: '#4ecdc4' },
     purana: { emoji: '🕉️', label: 'Purana', color: '#95e1d3' },
+    mythology: { emoji: '✨', label: 'Mythology', color: '#ffb142' },
     summary: { emoji: '📚', label: 'Summary', color: '#f38181' }
   };
 

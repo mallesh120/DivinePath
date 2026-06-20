@@ -1,0 +1,862 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for src/data/festivals/festivalChecklistData.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/data/festivals</a> festivalChecklistData.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>0/36</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/20</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/9</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>0/28</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a>
+<a name='L210'></a><a href='#L210'>210</a>
+<a name='L211'></a><a href='#L211'>211</a>
+<a name='L212'></a><a href='#L212'>212</a>
+<a name='L213'></a><a href='#L213'>213</a>
+<a name='L214'></a><a href='#L214'>214</a>
+<a name='L215'></a><a href='#L215'>215</a>
+<a name='L216'></a><a href='#L216'>216</a>
+<a name='L217'></a><a href='#L217'>217</a>
+<a name='L218'></a><a href='#L218'>218</a>
+<a name='L219'></a><a href='#L219'>219</a>
+<a name='L220'></a><a href='#L220'>220</a>
+<a name='L221'></a><a href='#L221'>221</a>
+<a name='L222'></a><a href='#L222'>222</a>
+<a name='L223'></a><a href='#L223'>223</a>
+<a name='L224'></a><a href='#L224'>224</a>
+<a name='L225'></a><a href='#L225'>225</a>
+<a name='L226'></a><a href='#L226'>226</a>
+<a name='L227'></a><a href='#L227'>227</a>
+<a name='L228'></a><a href='#L228'>228</a>
+<a name='L229'></a><a href='#L229'>229</a>
+<a name='L230'></a><a href='#L230'>230</a>
+<a name='L231'></a><a href='#L231'>231</a>
+<a name='L232'></a><a href='#L232'>232</a>
+<a name='L233'></a><a href='#L233'>233</a>
+<a name='L234'></a><a href='#L234'>234</a>
+<a name='L235'></a><a href='#L235'>235</a>
+<a name='L236'></a><a href='#L236'>236</a>
+<a name='L237'></a><a href='#L237'>237</a>
+<a name='L238'></a><a href='#L238'>238</a>
+<a name='L239'></a><a href='#L239'>239</a>
+<a name='L240'></a><a href='#L240'>240</a>
+<a name='L241'></a><a href='#L241'>241</a>
+<a name='L242'></a><a href='#L242'>242</a>
+<a name='L243'></a><a href='#L243'>243</a>
+<a name='L244'></a><a href='#L244'>244</a>
+<a name='L245'></a><a href='#L245'>245</a>
+<a name='L246'></a><a href='#L246'>246</a>
+<a name='L247'></a><a href='#L247'>247</a>
+<a name='L248'></a><a href='#L248'>248</a>
+<a name='L249'></a><a href='#L249'>249</a>
+<a name='L250'></a><a href='#L250'>250</a>
+<a name='L251'></a><a href='#L251'>251</a>
+<a name='L252'></a><a href='#L252'>252</a>
+<a name='L253'></a><a href='#L253'>253</a>
+<a name='L254'></a><a href='#L254'>254</a>
+<a name='L255'></a><a href='#L255'>255</a>
+<a name='L256'></a><a href='#L256'>256</a>
+<a name='L257'></a><a href='#L257'>257</a>
+<a name='L258'></a><a href='#L258'>258</a>
+<a name='L259'></a><a href='#L259'>259</a>
+<a name='L260'></a><a href='#L260'>260</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// Festival preparation checklists and countdown data
+&nbsp;
+export const majorFestivals = <span class="cstat-no" title="statement not covered" >[</span>
+  {
+    id: 'diwali',
+    name: 'Diwali',
+    date: '2025-10-20', // Sample date
+    daysToGo: 0, // Calculate dynamically
+    significance: 'Festival of Lights, Victory of Good over Evil',
+    duration: '5 days',
+    mainDay: 'Lakshmi Puja on Amavasya',
+    checklist: {
+      '30days': [
+        { task: 'Plan renovation/painting if needed', category: 'Home', done: false },
+        { task: 'Order new clothes for family', category: 'Shopping', done: false },
+        { task: 'Plan guest list and invitations', category: 'Social', done: false },
+        { task: 'Check and order diyas, candles, decorations', category: 'Shopping', done: false }
+      ],
+      '15days': [
+        { task: 'Deep clean entire house', category: 'Home', done: false },
+        { task: 'Service AC, fans, lights', category: 'Home', done: false },
+        { task: 'Order sweets and dry fruits', category: 'Food', done: false },
+        { task: 'Buy puja items (incense, flowers, etc.)', category: 'Spiritual', done: false },
+        { task: 'Order crackers (if celebrating)', category: 'Shopping', done: false }
+      ],
+      '7days': [
+        { task: 'Declutter and donate unused items', category: 'Home', done: false },
+        { task: 'Polish silver items, clean puja room', category: 'Home', done: false },
+        { task: 'Prepare rangoli designs', category: 'Decoration', done: false },
+        { task: 'Stock groceries for festive cooking', category: 'Food', done: false }
+      ],
+      '3days': [
+        { task: 'Complete all pending work', category: 'General', done: false },
+        { task: 'Set up decorations and lights', category: 'Decoration', done: false },
+        { task: 'Prepare festive snacks', category: 'Food', done: false },
+        { task: 'Charge all diyas and arrange them', category: 'Decoration', done: false }
+      ],
+      '1day': [
+        { task: 'Final house cleaning', category: 'Home', done: false },
+        { task: 'Make rangoli', category: 'Decoration', done: false },
+        { task: 'Prepare special dishes', category: 'Food', done: false },
+        { task: 'Set up Lakshmi puja area', category: 'Spiritual', done: false },
+        { task: 'Test all lights and diyas', category: 'Decoration', done: false }
+      ],
+      'today': [
+        { task: 'Morning bath and wear new clothes', category: 'Personal', done: false },
+        { task: 'Perform Lakshmi Puja at muhurat time', category: 'Spiritual', done: false },
+        { task: 'Light diyas in evening', category: 'Spiritual', done: false },
+        { task: 'Distribute sweets to neighbors', category: 'Social', done: false },
+        { task: 'Family celebration and blessings', category: 'Social', done: false }
+      ]
+    },
+    shopping: ['Diyas', 'Candles', 'Rangoli colors', 'Flowers', 'Incense', 'Puja items', 'Sweets', 'Dry fruits', 'New clothes', 'Decorative lights'],
+    puja: {
+      items: ['Lakshmi idol/photo', 'Ganesh idol', 'Red cloth', 'Flowers (lotus, marigold)', 'Incense', 'Diyas', 'Fruits', 'Sweets', 'Coins', 'Rice', 'Kumkum', 'Turmeric'],
+      timing: 'Evening during Amavasya',
+      mantra: 'Om Shreem Mahalakshmyai Namah'
+    }
+  },
+  {
+    id: 'holi',
+    name: 'Holi',
+    date: '2026-03-14',
+    significance: 'Festival of Colors, Victory of Good over Evil',
+    duration: '2 days',
+    checklist: {
+      '15days': [
+        { task: 'Collect wood for Holika bonfire', category: 'Preparation', done: false },
+        { task: 'Order organic/herbal colors', category: 'Shopping', done: false },
+        { task: 'Plan Holi party or gathering', category: 'Social', done: false }
+      ],
+      '7days': [
+        { task: 'Buy snacks ingredients (gujiya, namak pare)', category: 'Food', done: false },
+        { task: 'Prepare protective hair oil', category: 'Personal', done: false },
+        { task: 'Stock water balloons and pichkaris', category: 'Shopping', done: false }
+      ],
+      '3days': [
+        { task: 'Make traditional sweets (gujiya, malpua)', category: 'Food', done: false },
+        { task: 'Prepare thandai syrup', category: 'Food', done: false },
+        { task: 'Set up outdoor play area', category: 'Preparation', done: false }
+      ],
+      '1day': [
+        { task: 'Holika Dahan preparation and ritual', category: 'Spiritual', done: false },
+        { task: 'Apply oil to hair and skin', category: 'Personal', done: false },
+        { task: 'Arrange colors and water guns', category: 'Preparation', done: false }
+      ],
+      'today': [
+        { task: 'Wear old clothes', category: 'Personal', done: false },
+        { task: 'Play with colors (morning)', category: 'Celebration', done: false },
+        { task: 'Clean up and bathe', category: 'Personal', done: false },
+        { task: 'Serve festive lunch', category: 'Food', done: false },
+        { task: 'Visit friends and family', category: 'Social', done: false }
+      ]
+    },
+    shopping: ['Organic colors', 'Water guns', 'Buckets', 'Snacks', 'Thandai ingredients', 'Protective oil'],
+    puja: {
+      items: ['Wood for bonfire', 'Coconut', 'Wheat stalks', 'Flowers', 'Water'],
+      timing: 'Evening before Holi',
+      mantra: 'Om Prahlad Narasimhaya Namah'
+    }
+  },
+  {
+    id: 'navratri',
+    name: 'Navratri',
+    date: '2025-09-22',
+    significance: '9 Nights of Goddess Worship',
+    duration: '9 days',
+    checklist: {
+      '15days': [
+        { task: 'Plan fasting menu for 9 days', category: 'Food', done: false },
+        { task: 'Buy new traditional clothes', category: 'Shopping', done: false },
+        { task: 'Order Navratri puja items', category: 'Spiritual', done: false }
+      ],
+      '7days': [
+        { task: 'Stock fasting-friendly groceries', category: 'Food', done: false },
+        { task: 'Clean and decorate puja space', category: 'Home', done: false },
+        { task: 'Plan Garba/Dandiya events', category: 'Social', done: false }
+      ],
+      '3days': [
+        { task: 'Prepare Kalash and setup', category: 'Spiritual', done: false },
+        { task: 'Make advance fasting snacks', category: 'Food', done: false },
+        { task: 'Arrange flowers for daily puja', category: 'Spiritual', done: false }
+      ],
+      'today': [
+        { task: 'Establish Kalash (Day 1)', category: 'Spiritual', done: false },
+        { task: 'Observe fast according to tradition', category: 'Spiritual', done: false },
+        { task: 'Perform daily Durga puja', category: 'Spiritual', done: false },
+        { task: 'Read Durga Saptashati', category: 'Spiritual', done: false },
+        { task: 'Attend Garba/Dandiya (evening)', category: 'Social', done: false }
+      ]
+    },
+    shopping: ['Kalash', 'Coconut', 'Mango leaves', 'Red cloth', 'Chunari', 'Bangles', 'Fruits', 'Flowers', 'Sabudana', 'Singhara flour', 'Dry fruits'],
+    puja: {
+      items: ['Durga idol/photo', 'Kalash', 'Flowers', 'Fruits', 'Incense', 'Chunari', 'Bangles'],
+      timing: 'Morning and evening daily',
+      mantra: 'Om Dum Durgayei Namah'
+    }
+  },
+  {
+    id: 'janmashtami',
+    name: 'Krishna Janmashtami',
+    date: '2025-08-16',
+    significance: 'Birth of Lord Krishna',
+    duration: '1 day + night vigil',
+    checklist: {
+      '7days': [
+        { task: 'Decorate Krishna jhula (swing)', category: 'Decoration', done: false },
+        { task: 'Plan midnight celebration', category: 'Social', done: false },
+        { task: 'Order puja flowers and items', category: 'Spiritual', done: false }
+      ],
+      '3days': [
+        { task: 'Prepare special bhog items', category: 'Food', done: false },
+        { task: 'Make butter and paneer at home', category: 'Food', done: false },
+        { task: 'Decorate home with peacock feathers', category: 'Decoration', done: false }
+      ],
+      '1day': [
+        { task: 'Fast during the day', category: 'Spiritual', done: false },
+        { task: 'Set up baby Krishna cradle', category: 'Decoration', done: false },
+        { task: 'Prepare 56 bhog items', category: 'Food', done: false },
+        { task: 'Arrange midnight aarti', category: 'Spiritual', done: false }
+      ],
+      'today': [
+        { task: 'Observe fast', category: 'Spiritual', done: false },
+        { task: 'Midnight puja at birth time', category: 'Spiritual', done: false },
+        { task: 'Offer 56 bhog to Krishna', category: 'Spiritual', done: false },
+        { task: 'Break fast with prasad', category: 'Food', done: false },
+        { task: 'Celebrate with bhajans', category: 'Social', done: false }
+      ]
+    },
+    shopping: ['Krishna idol', 'Peacock feathers', 'Butter', 'Mishri', 'Milk products', 'Fruits', 'Flowers', 'Flute', 'Yellow cloth'],
+    puja: {
+      items: ['Krishna idol', 'Jhula/cradle', 'Makhan', 'Mishri', 'Milk', 'Tulsi', 'Peacock feather', 'Flute'],
+      timing: 'Midnight (around 12 AM)',
+      mantra: 'Om Kleem Krishnaya Namah'
+    }
+  },
+  {
+    id: 'ganesh-chaturthi',
+    name: 'Ganesh Chaturthi',
+    date: '2025-08-27',
+    significance: 'Birth of Lord Ganesha',
+    duration: '10 days',
+    checklist: {
+      '15days': [
+        { task: 'Order eco-friendly Ganesha idol', category: 'Spiritual', done: false },
+        { task: 'Plan 10-day puja schedule', category: 'Spiritual', done: false },
+        { task: 'Arrange flower suppliers', category: 'Shopping', done: false }
+      ],
+      '7days': [
+        { task: 'Prepare puja platform', category: 'Home', done: false },
+        { task: 'Stock modak ingredients', category: 'Food', done: false },
+        { task: 'Buy decoration items', category: 'Shopping', done: false }
+      ],
+      '3days': [
+        { task: 'Clean and decorate puja area', category: 'Home', done: false },
+        { task: 'Make advance modaks', category: 'Food', done: false },
+        { task: 'Prepare aarti items', category: 'Spiritual', done: false }
+      ],
+      'today': [
+        { task: 'Sthapana (installation) at muhurat', category: 'Spiritual', done: false },
+        { task: 'Perform prana pratishtha', category: 'Spiritual', done: false },
+        { task: 'Offer modaks and prayers', category: 'Spiritual', done: false },
+        { task: 'Evening aarti', category: 'Spiritual', done: false },
+        { task: 'Distribute prasad', category: 'Social', done: false }
+      ]
+    },
+    shopping: ['Eco-friendly Ganesh idol', 'Red cloth', 'Modak molds', 'Flowers', 'Durva grass', 'Fruits', 'Coconut', '21 modaks ingredients'],
+    puja: {
+      items: ['Ganesh idol', 'Red flowers', 'Durva grass', 'Modaks', 'Coconut', 'Jaggery', 'Rice'],
+      timing: 'Morning during muhurat',
+      mantra: 'Om Gam Ganapataye Namah'
+    }
+  }
+];
+&nbsp;
+// Get festivals for next 90 days
+export const getUpcomingFestivals = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+  const today = <span class="cstat-no" title="statement not covered" >new Date();</span>
+  
+<span class="cstat-no" title="statement not covered" >  return majorFestivals</span>
+    .map(<span class="fstat-no" title="function not covered" >fe</span>stival =&gt; {
+      const festivalDate = <span class="cstat-no" title="statement not covered" >new Date(festival.date);</span>
+      const daysToGo = <span class="cstat-no" title="statement not covered" >Math.ceil((festivalDate - today) / (1000 * 60 * 60 * 24));</span>
+<span class="cstat-no" title="statement not covered" >      return { ...festival, daysToGo };</span>
+    })
+    .filter(<span class="fstat-no" title="function not covered" >fe</span>stival =&gt; <span class="cstat-no" title="statement not covered" >festival.daysToGo &gt;= 0 &amp;&amp; festival.daysToGo &lt;= 90)</span>
+    .sort(<span class="fstat-no" title="function not covered" >(a</span>, b) =&gt; <span class="cstat-no" title="statement not covered" >a.daysToGo - b.daysToGo)</span>;
+};
+&nbsp;
+// Get current checklist based on days remaining
+export const getCurrentChecklist = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(f</span>estival) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  if (festival.daysToGo === 0) <span class="cstat-no" title="statement not covered" >return festival.checklist.today;</span></span>
+<span class="cstat-no" title="statement not covered" >  if (festival.daysToGo === 1) <span class="cstat-no" title="statement not covered" >return festival.checklist['1day'];</span></span>
+<span class="cstat-no" title="statement not covered" >  if (festival.daysToGo &lt;= 3) <span class="cstat-no" title="statement not covered" >return festival.checklist['3days'];</span></span>
+<span class="cstat-no" title="statement not covered" >  if (festival.daysToGo &lt;= 7) <span class="cstat-no" title="statement not covered" >return festival.checklist['7days'];</span></span>
+<span class="cstat-no" title="statement not covered" >  if (festival.daysToGo &lt;= 15) <span class="cstat-no" title="statement not covered" >return festival.checklist['15days'];</span></span>
+<span class="cstat-no" title="statement not covered" >  if (festival.daysToGo &lt;= 30) <span class="cstat-no" title="statement not covered" >return festival.checklist['30days'];</span></span>
+<span class="cstat-no" title="statement not covered" >  return [];</span>
+};
+&nbsp;
+// Save checklist progress to localStorage
+export const saveChecklistProgress = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(f</span>estivalId, checklist) =&gt; {</span>
+  const key = <span class="cstat-no" title="statement not covered" >`festival_${festivalId}_checklist`;</span>
+<span class="cstat-no" title="statement not covered" >  localStorage.setItem(key, JSON.stringify(checklist));</span>
+};
+&nbsp;
+// Load checklist progress from localStorage
+export const loadChecklistProgress = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(f</span>estivalId) =&gt; {</span>
+  const key = <span class="cstat-no" title="statement not covered" >`festival_${festivalId}_checklist`;</span>
+  const saved = <span class="cstat-no" title="statement not covered" >localStorage.getItem(key);</span>
+<span class="cstat-no" title="statement not covered" >  return saved ? JSON.parse(saved) : null;</span>
+};
+&nbsp;
+// Calculate checklist completion percentage
+export const getChecklistCompletion = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(c</span>hecklist) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  if (!checklist || checklist.length === 0) <span class="cstat-no" title="statement not covered" >return 0;</span></span>
+  const completed = <span class="cstat-no" title="statement not covered" >checklist.filter(<span class="fstat-no" title="function not covered" >it</span>em =&gt; <span class="cstat-no" title="statement not covered" >item.done)</span>.length;</span>
+<span class="cstat-no" title="statement not covered" >  return Math.round((completed / checklist.length) * 100);</span>
+};
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2025-12-12T20:37:17.142Z
+            </div>
+        <script src="../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../sorter.js"></script>
+        <script src="../../../block-navigation.js"></script>
+    </body>
+</html>
+    

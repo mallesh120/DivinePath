@@ -1,0 +1,510 @@
+/* Base Page Styles & Themes */
+.panchang-page-container {
+  min-height: 100vh;
+  color: var(--text-color);
+  background: var(--bg-gradient);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80px; /* Space for bottom nav */
+  font-family: 'Inter', sans-serif;
+  transition: background 1s ease-in-out, color 0.5s ease-in-out;
+}
+
+/* Theme definitions have been moved to src/styles/theme.css to make them globally accessible */
+
+.panchang-content-area {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.panchang-loading, .panchang-error, .placeholder-tab {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  color: #A0A0B0;
+}
+
+/* Glassmorphism Panel */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px 0 var(--glass-shadow);
+  transition: all 0.5s ease-in-out;
+}
+
+/* Today Tab Header */
+.today-header-context {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Hero Card */
+.hero-card {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  background: var(--hero-bg);
+}
+
+.hindu-date-title {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--hero-title);
+  font-weight: 700;
+}
+
+.hindu-date-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  opacity: 0.9;
+  margin: 0 0 1.5rem 0;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.stat-pill {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Traffic Light Status Bar */
+.status-bar {
+  border-radius: 16px;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.status-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.status-icon {
+  font-size: 1.5rem;
+}
+
+.status-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.status-message {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.status-green {
+  background: linear-gradient(135deg, rgba(46, 204, 113, 0.2) 0%, rgba(39, 174, 96, 0.4) 100%);
+  border: 1px solid rgba(46, 204, 113, 0.3);
+  color: #E8F8F5;
+}
+
+.status-red {
+  background: linear-gradient(135deg, rgba(231, 76, 60, 0.2) 0%, rgba(192, 57, 43, 0.4) 100%);
+  border: 1px solid rgba(231, 76, 60, 0.3);
+  color: #FDEDEC;
+}
+
+.status-yellow {
+  background: linear-gradient(135deg, rgba(241, 196, 15, 0.2) 0%, rgba(243, 156, 18, 0.4) 100%);
+  border: 1px solid rgba(241, 196, 15, 0.3);
+  color: #FEF9E7;
+}
+
+/* Quick Timeline */
+.quick-timeline {
+  margin-bottom: 1.5rem;
+}
+
+.quick-timeline h3, .quick-timings h3 {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.timeline-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.timeline-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.node-icon { font-size: 1.5rem; }
+.node-time { font-weight: bold; font-size: 1.1rem; color: var(--text-color); }
+.node-label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; }
+
+.timeline-line {
+  flex: 1;
+  height: 2px;
+  background: var(--timeline-line);
+  margin: 0 1rem;
+  opacity: 0.7;
+}
+
+/* Quick Timings */
+.quick-timings {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.timing-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.timing-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.timing-name {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.timing-value {
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.timing-row.bad .timing-name { color: #E74C3C; }
+.timing-row.good .timing-name { color: #2ECC71; }
+
+/* Bottom Navigation */
+.panchang-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: var(--nav-bg);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-top: 1px solid var(--glass-border);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+  padding-bottom: env(safe-area-inset-bottom);
+  transition: background 0.5s ease-in-out;
+}
+
+.nav-item {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 1;
+}
+
+.nav-item.active {
+  color: var(--hero-title);
+}
+
+.nav-item .nav-icon {
+  font-size: 1.5rem;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.2s;
+}
+
+.nav-item.active .nav-icon {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* --- Timings Tab Styles --- */
+.timings-tab-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tab-header h2 {
+  font-size: 2rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--hero-title);
+}
+
+.tab-header p {
+  color: var(--text-muted);
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.timings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.timings-group-title {
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.timings-group-title.success { color: #2ECC71; }
+.timings-group-title.warning { color: #E74C3C; }
+
+.timing-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem;
+}
+
+.timing-card.good {
+  border-left: 4px solid #2ECC71;
+}
+
+.timing-card.bad {
+  border-left: 4px solid #E74C3C;
+}
+
+.timing-icon {
+  font-size: 1.5rem;
+}
+
+.timing-info {
+  flex: 1;
+}
+
+.timing-info h4 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.timing-desc {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.timing-time {
+  font-weight: 600;
+  color: var(--text-color);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* --- Calendar Tab Styles --- */
+.calendar-tab-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 100%;
+}
+
+.cal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.cal-nav-btn {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.cal-month-title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--hero-title);
+}
+
+.cal-grid-container {
+  padding: 1rem;
+}
+
+.cal-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.3rem;
+}
+
+.cal-cell {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  color: var(--text-color);
+  transition: all 0.2s;
+}
+
+.cal-cell:hover:not(.blank) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.cal-cell.today {
+  background: var(--hero-bg);
+  border: 1px solid var(--hero-title);
+  font-weight: bold;
+}
+
+.cal-cell.has-event {
+  color: var(--hero-title);
+  font-weight: 600;
+}
+
+.cal-dot {
+  width: 5px;
+  height: 5px;
+  background-color: var(--hero-title);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10%;
+}
+
+/* --- Bottom Sheet --- */
+.bottom-sheet-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.bottom-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg-gradient);
+  z-index: 1001;
+  border-radius: 30px 30px 0 0;
+  padding: 2rem;
+  padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  box-shadow: 0 -10px 40px rgba(0,0,0,0.3);
+}
+
+.close-sheet-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sheet-content h3 {
+  font-size: 1.8rem;
+  color: var(--hero-title);
+  margin: 0 0 0.5rem 0;
+}
+
+.sheet-lunar-date {
+  color: var(--text-muted);
+  font-style: italic;
+  margin: 0 0 1rem 0;
+}
+
+.sheet-desc {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.sheet-rituals h4 {
+  color: var(--text-color);
+  margin: 0 0 0.5rem 0;
+}
+
+.sheet-rituals ul {
+  padding-left: 1.2rem;
+  margin: 0;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.sheet-rituals li {
+  margin-bottom: 0.3rem;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

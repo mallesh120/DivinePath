@@ -7,14 +7,18 @@
 }
 
 .puja-card {
-  background: white;
+  background: var(--glass-bg, rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.1));
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   height: 100%;
   display: flex;
   flex-direction: column;
+  color: var(--text-color);
 }
 
 .puja-card:hover {
@@ -23,7 +27,8 @@
 }
 
 .puja-card-header {
-  background: linear-gradient(135deg, var(--saffron-primary) 0%, #ffaa33 100%);
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid var(--glass-border, rgba(255, 255, 255, 0.1));
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
@@ -34,10 +39,10 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 160, 50, 0.2);
+  border: 1px solid rgba(255, 160, 50, 0.4);
   padding: 6px 12px;
   border-radius: 20px;
-  backdrop-filter: blur(10px);
 }
 
 .category-icon {
@@ -45,7 +50,7 @@
 }
 
 .category-text {
-  color: white;
+  color: var(--hero-title);
   font-weight: 600;
   font-size: 0.9rem;
 }
@@ -75,14 +80,14 @@
 
 .puja-deity {
   font-size: 0.95rem;
-  color: var(--text-tertiary);
+  color: var(--text-muted);
   margin: 0 0 12px 0;
   font-weight: 600;
 }
 
 .puja-description {
   font-size: 0.95rem;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   line-height: 1.6;
   margin: 0 0 15px 0;
   flex: 1;
@@ -94,8 +99,8 @@
   flex-wrap: wrap;
   margin-bottom: 15px;
   padding: 15px 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  border-top: 1px solid var(--glass-border, rgba(255, 255, 255, 0.1));
+  border-bottom: 1px solid var(--glass-border, rgba(255, 255, 255, 0.1));
 }
 
 .puja-meta-item {
@@ -110,7 +115,7 @@
 
 .meta-text {
   font-size: 0.9rem;
-  color: var(--text-tertiary);
+  color: var(--text-muted);
   font-weight: 500;
 }
 
@@ -123,7 +128,7 @@
 
 .occasion-label {
   font-size: 0.85rem;
-  color: var(--text-tertiary);
+  color: var(--text-muted);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -131,7 +136,7 @@
 
 .occasion-text {
   font-size: 0.95rem;
-  color: var(--text-primary);
+  color: var(--text-color);
   line-height: 1.4;
 }
 

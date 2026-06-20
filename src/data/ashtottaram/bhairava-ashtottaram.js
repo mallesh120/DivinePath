@@ -7,7 +7,7 @@ export const bhairavaAshtottaram = {
   id: 'bhairava',
   title: 'Lord Bhairava',
   category: 'god',
-  image: '/images/Gods/bhairava.png',
+  image: '/images/Gods/bhairava.webp',
   description: 'A fierce manifestation of Shiva',
   names: [
     {

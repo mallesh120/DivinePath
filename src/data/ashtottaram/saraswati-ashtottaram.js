@@ -7,7 +7,7 @@ export const saraswatiAshtottaram = {
   id: 'saraswati',
   title: 'Goddess Saraswati',
   category: 'goddess',
-  image: '/images/Goddesses/saraswati.png',
+  image: '/images/Goddesses/saraswati.webp',
   description: 'The Goddess of Knowledge and Arts',
   names: [
     {

@@ -7,7 +7,7 @@ export const hanumanAshtottaram = {
   name: 'Lord Hanuman',
   title: 'Ashtottara Shatanamavali',
   description: 'The devoted follower of Lord Rama',
-  image: '/images/Gods/hanuman.png',
+  image: '/images/Gods/hanuman.webp',
   category: 'god',
   names: [
     {

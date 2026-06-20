@@ -7,7 +7,7 @@ export const tulasiAshtottaram = {
   id: 'tulasi',
   title: 'Goddess Tulasi',
   category: 'goddess',
-  image: '/images/Goddesses/tulasi.png',
+  image: '/images/Goddesses/tulasi.webp',
   description: 'The sacred plant goddess, consort of Vishnu',
   names: [
     {

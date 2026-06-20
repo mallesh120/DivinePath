@@ -1,0 +1,155 @@
+.meditation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.meditation-modal {
+  width: 90%;
+  max-width: 400px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  border-radius: 30px;
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meditation-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+  color: #FFD700;
+}
+
+.meditation-subtitle {
+  margin: 0 0 2rem 0;
+  color: rgba(255,255,255,0.7);
+}
+
+.breathing-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.breathing-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,215,0,0.3) 0%, rgba(255,215,0,0.05) 70%, transparent 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255,215,0,0.5);
+  box-shadow: 0 0 30px rgba(255,215,0,0.2);
+  transition: all 0.5s;
+}
+
+.timer-text {
+  font-size: 3rem;
+  font-weight: bold;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.breathing-circle.animating {
+  animation: breathe 8s infinite ease-in-out;
+}
+
+.breathing-circle.completed-circle {
+  background: radial-gradient(circle, rgba(46,204,113,0.4) 0%, rgba(46,204,113,0.1) 70%, transparent 100%);
+  border-color: #2ECC71;
+  box-shadow: 0 0 50px rgba(46,204,113,0.4);
+  animation: none;
+}
+
+.meditation-controls {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.track-selector-wrapper {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 0.2rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.track-selector {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 0.9rem;
+  outline: none;
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+
+.track-selector option {
+  background: #1A1A2E;
+  color: white;
+}
+
+.timer-play-btn {
+  background: white;
+  color: #1A1A2E;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.timer-play-btn:active {
+  transform: scale(0.95);
+}
+
+.timer-play-btn.success {
+  background: #2ECC71;
+  color: white;
+}
+
+.meditation-hint {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  font-style: italic;
+  min-height: 1.5rem;
+}
+
+@keyframes breathe {
+  0% { transform: scale(1); box-shadow: 0 0 30px rgba(255,215,0,0.2); }
+  50% { transform: scale(1.15); box-shadow: 0 0 60px rgba(255,215,0,0.4); }
+  100% { transform: scale(1); box-shadow: 0 0 30px rgba(255,215,0,0.2); }
+}

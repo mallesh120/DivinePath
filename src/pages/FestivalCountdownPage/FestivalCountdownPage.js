@@ -87,7 +87,7 @@ function FestivalCountdownPage() {
         </div>
         <div className="empty-state">
           <p>Check back later for upcoming festival preparations!</p>
-          <Link to="/dashboard" className="back-button">
+          <Link to="/adults" className="back-button">
             ← Back to Dashboard
           </Link>
         </div>
@@ -265,7 +265,7 @@ function FestivalCountdownPage() {
       )}
 
       <div className="festival-footer">
-        <Link to="/dashboard" className="back-button">
+        <Link to="/adults" className="back-button">
           ← Back to Dashboard
         </Link>
       </div>

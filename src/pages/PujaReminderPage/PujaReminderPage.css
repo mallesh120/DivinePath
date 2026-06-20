@@ -70,7 +70,7 @@
   align-items: center;
   gap: 1.5rem;
   padding-bottom: 1.5rem;
-  border-bottom: 2px solid #f5f5f5;
+  border-bottom: 2px solid var(--bg-tertiary);
 }
 
 .deity-icon {
@@ -121,7 +121,7 @@
 
 .offering-tag {
   padding: 0.5rem 1rem;
-  background: #f5f5f5;
+  background: var(--bg-tertiary);
   border-radius: 20px;
   font-size: 0.9rem;
   color: var(--text-primary);
@@ -158,7 +158,7 @@
   gap: 0.5rem;
   margin-top: 1.5rem;
   padding: 1rem;
-  background: linear-gradient(135deg, var(--card-bg)5f7 0%, #ffe4e8 100%);
+  background: linear-gradient(135deg, var(--card-bg)5f7 0%, var(--accent-color) 100%);
   border-radius: 10px;
 }
 
@@ -200,7 +200,7 @@
 }
 
 .puja-type-card {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--secondary-light) 100%);
   border-radius: 12px;
   padding: 1.5rem;
   text-align: center;
@@ -245,7 +245,7 @@
 }
 
 .puja-type-details {
-  border-top: 2px solid #f5f5f5;
+  border-top: 2px solid var(--bg-tertiary);
   padding-top: 2rem;
 }
 
@@ -272,7 +272,7 @@
 
 .item-tag {
   padding: 0.5rem 1rem;
-  background: #f5f5f5;
+  background: var(--bg-tertiary);
   border-radius: 20px;
   font-size: 0.9rem;
   color: var(--text-primary);
@@ -321,18 +321,18 @@
 }
 
 .status-granted {
-  background: #e8f5e9;
-  color: #2e7d32;
+  background: var(--secondary-light);
+  color: var(--secondary-dark);
 }
 
 .status-denied {
-  background: #ffebee;
-  color: #c62828;
+  background: var(--bg-secondary);
+  color: var(--accent-color);
 }
 
 .status-default {
-  background: #e3f2fd;
-  color: #1565C0;
+  background: var(--secondary-light);
+  color: var(--secondary-color);
 }
 
 .status-icon {
@@ -370,7 +370,7 @@
   border: 1px solid var(--neutral-200);
   border-radius: 10px;
   padding: 1.5rem;
-  background: #fafafa;
+  background: var(--bg-secondary);
 }
 
 .setting-label {
@@ -436,7 +436,7 @@
 
 .day-btn {
   padding: 0.8rem 1.2rem;
-  background: #f5f5f5;
+  background: var(--bg-tertiary);
   border: 2px solid transparent;
   border-radius: 8px;
   font-weight: bold;
@@ -514,7 +514,7 @@
 }
 
 .calendar-day {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--secondary-light) 100%);
   border-radius: 10px;
   padding: 1rem;
   text-align: center;
@@ -535,7 +535,7 @@
 .calendar-day .day-color {
   height: 30px;
   border-radius: 5px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--bg-secondary);
 }
 
 .back-button {

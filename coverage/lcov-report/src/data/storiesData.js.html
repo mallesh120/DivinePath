@@ -1,0 +1,331 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for src/data/storiesData.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/data</a> storiesData.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>0/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>0/1</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export const puranaStories = <span class="cstat-no" title="statement not covered" >[</span>
+  {
+    title: "Samudra Manthan - The Churning of the Ocean",
+    category: "Vishnu Purana",
+    excerpt: "The devas and asuras churned the cosmic ocean to obtain the nectar of immortality, Amrita.",
+    story: "Once, the devas (gods) lost their strength due to a curse from Sage Durvasa. Lord Indra, the king of gods, sought help from Lord Vishnu. Vishnu advised them to churn the cosmic ocean (Samudra) to obtain Amrita, the nectar of immortality, which would restore their power.\n\nThe devas approached the asuras (demons) for help, promising to share the Amrita. Using Mount Mandara as the churning rod and the serpent Vasuki as the rope, both groups began churning the ocean. Lord Vishnu took the form of a tortoise (Kurma avatar) to support the mountain.\n\nDuring the churning, many divine objects emerged: the celestial cow Kamadhenu, the wish-fulfilling tree Kalpavriksha, Goddess Lakshmi, and the deadly poison Halahala. Lord Shiva drank the poison to save the universe, which turned his throat blue, earning him the name Neelakantha.\n\nFinally, Dhanvantari appeared carrying the pot of Amrita. The asuras immediately seized it. Lord Vishnu then took the form of Mohini, a beautiful enchantress, who distracted the asuras and distributed the Amrita only to the devas, restoring their power and immortality.",
+    moral: "Cooperation, even with adversaries, can lead to great achievements. Divine intervention comes when we persist in our righteous efforts.",
+    tags: ["Vishnu", "Shiva", "Devas", "Asuras", "Kurma Avatar", "Mohini"]
+  },
+  {
+    title: "Prahlada and Narasimha - Victory of Devotion",
+    category: "Bhagavata Purana",
+    excerpt: "Young Prahlada's unwavering devotion to Vishnu led to the appearance of Narasimha avatar.",
+    story: "Hiranyakashipu, a powerful demon king, obtained a boon that made him nearly invincible - he could not be killed by man or animal, inside or outside, day or night, on earth or in sky, by any weapon. Intoxicated with power, he demanded everyone worship him as God.\n\nHowever, his own son Prahlada was a devoted worshipper of Lord Vishnu. Despite numerous attempts to kill him - through poison, elephants, snakes, and fire - Prahlada remained unharmed, protected by his faith. Each time, he would emerge safely, chanting 'Narayana, Narayana.'\n\nEnraged, Hiranyakashipu challenged Prahlada, asking if his Vishnu was present in a pillar. When Prahlada affirmed that Vishnu is omnipresent, Hiranyakashipu struck the pillar. Lord Vishnu emerged as Narasimha (half-man, half-lion), appearing at twilight (neither day nor night), at the threshold (neither inside nor outside), and placed the demon on his lap (neither earth nor sky), killing him with his claws (not a weapon).\n\nPrahlada was blessed and crowned king, ruling with dharma and devotion.",
+    moral: "Unwavering faith and devotion protect a devotee from all harm. The Divine appears in whatever form necessary to protect the righteous.",
+    tags: ["Vishnu", "Narasimha", "Prahlada", "Devotion", "Faith"]
+  },
+  {
+    title: "Ganesha and the Moon - The Curse",
+    category: "Ganesha Purana",
+    excerpt: "How Lord Ganesha cursed the moon for laughing at him, and why we shouldn't look at the moon on Ganesh Chaturthi.",
+    story: "Once, after a grand feast on Ganesh Chaturthi, Lord Ganesha was riding his vehicle, the mouse, back home. His stomach was so full that he was having difficulty maintaining balance. Suddenly, a snake crossed their path, frightening the mouse, which ran abruptly causing Ganesha to fall. His stomach burst open, and all the modaks (sweets) fell out.\n\nGanesha calmly collected all the modaks, put them back in his stomach, and tied the same snake around his belly as a belt. The Moon, Chandra, who was watching this from the sky, burst into laughter at the sight.\n\nAngered by this disrespect, Lord Ganesha cursed the Moon, declaring that no one would look at the moon, and whoever did would be falsely accused of theft. The Moon realized his mistake and begged for forgiveness.\n\nGanesha softened and modified the curse: the moon would wax and wane monthly, appearing full only once. On Ganesh Chaturthi, looking at the moon would bring bad luck and false accusations, but one could nullify it by listening to the story of the Syamantaka jewel from Krishna's life.",
+    moral: "Pride and mockery of others, especially the divine, brings misfortune. Humility and seeking forgiveness can lighten consequences.",
+    tags: ["Ganesha", "Moon", "Curse", "Humility"]
+  },
+  {
+    title: "Daksha's Yajna and Sati's Sacrifice",
+    category: "Shiva Purana",
+    excerpt: "The story of Sati's self-immolation and Shiva's rage that shook the cosmos.",
+    story: "Daksha Prajapati, one of the sons of Brahma, organized a grand yajna (fire sacrifice) and invited all gods and sages, but deliberately excluded his daughter Sati's husband, Lord Shiva, whom he considered inferior and unconventional.\n\nDespite Shiva's advice not to go, Sati attended the yajna to meet her family. However, Daksha publicly insulted Shiva, calling him an ascetic unworthy of the gods' assembly. Unable to bear the humiliation of her beloved husband, Sati invoked her inner yogic fire and immolated herself in the sacrificial fire.\n\nWhen news reached Shiva, he was overwhelmed with grief and rage. He plucked a lock of his matted hair and created Virabhadra, a fierce warrior, who destroyed Daksha's yajna, beheaded Daksha, and scattered the gods in terror. Shiva then carried Sati's body and began the Tandava, the dance of destruction, threatening to destroy the entire universe.\n\nTo stop the destruction, Lord Vishnu used his Sudarshana Chakra to cut Sati's body into pieces, which fell at various places across the Indian subcontinent, creating the 51 Shakti Peethas. Shiva finally calmed down. Later, the gods revived Daksha with a goat's head, and he sought Shiva's forgiveness. Sati was later reborn as Parvati and reunited with Shiva.",
+    moral: "Ego and disrespect toward others, especially the divine, lead to catastrophic consequences. True love transcends death and form.",
+    tags: ["Shiva", "Sati", "Parvati", "Daksha", "Shakti Peetha"]
+  },
+  {
+    title: "Dhruva's Determination - The Pole Star",
+    category: "Vishnu Purana",
+    excerpt: "A young prince's unwavering devotion earned him the position of the eternal North Star.",
+    story: "Dhruva was the son of King Uttanapada and his wife Suniti. The king had another wife, Suruchi, who was his favorite and had a son named Uttama. One day, young Dhruva wanted to sit on his father's lap, but Suruchi pushed him away, saying he wasn't worthy because he wasn't born to her. She mockingly said he should pray to Lord Vishnu to be reborn as her son if he wanted such privileges.\n\nHeartbroken, Dhruva returned to his mother Suniti, who encouraged him to indeed seek Lord Vishnu's blessings. Though only five years old, Dhruva decided to perform severe penance. He went to the forest, where Sage Narada tried to dissuade him, saying he was too young. But Dhruva was determined.\n\nFollowing Narada's advice, Dhruva meditated on the mantra 'Om Namo Bhagavate Vasudevaya' with intense concentration. His penance was so severe that he stood on one leg, eating nothing, barely breathing. His tapasya (penance) created such heat that it disturbed the very balance of nature.\n\nFinally, after six months, Lord Vishnu appeared before him. Dhruva had been seeking a kingdom, but in Vishnu's presence, he forgot all material desires. Vishnu blessed him with a kingdom that would last for ages and promised him the most exalted position in the sky, where he would shine as the Pole Star (Dhruva Nakshatra), the fixed point around which all other stars revolve, remaining eternal and unwavering.\n\nDhruva ruled his kingdom wisely for many years and eventually ascended to his celestial position as the eternal Pole Star.",
+    moral: "Determination, focus, and unwavering devotion can help even a child achieve the impossible. True success transcends material desires.",
+    tags: ["Vishnu", "Devotion", "Determination", "Dhruva", "Pole Star"]
+  },
+  {
+    title: "The Birth of Kartikeya - The Destroyer of Tarakasura",
+    category: "Skanda Purana",
+    excerpt: "How the six-faced Kartikeya was born to defeat the demon Tarakasura and lead the army of gods.",
+    story: "The demon Tarakasura obtained a boon from Brahma that he could only be killed by a son of Shiva. Believing Shiva, an ascetic who had lost his wife Sati, would never marry again, Tarakasura felt invincible. He began terrorizing the three worlds, driving the gods from heaven.\n\nThe gods were desperate. They needed Shiva to marry and have a son. Sati had been reborn as Parvati, daughter of Himavan (the Himalayas), and was performing severe penance to win Shiva as her husband. To help, the gods sent Kamadeva (the god of love) to shoot his flower arrows at Shiva during meditation.\n\nWhen Kamadeva's arrow struck, Shiva opened his third eye in anger, reducing Kamadeva to ash. However, the arrow had worked - Shiva noticed Parvati and eventually married her. But their union didn't produce a child immediately, as Shiva's seed was too powerful for any womb to hold.\n\nThe divine seed was carried by Agni (fire god) and placed in the Ganga river, which deposited it in a forest of reeds (Sara-vana). There, it was nurtured by the six Krittika stars (Pleiades), who each fed the child, giving him six faces and twelve arms.\n\nThe child was named Kartikeya (raised by Krittikas) or Skanda. When brought to Shiva and Parvati, he was embraced by his mother, merging his six heads into one at her touch. As prophesied, Kartikeya led the army of gods against Tarakasura and slew him with his divine spear (Vel), restoring peace to the three worlds.",
+    moral: "Divine plans unfold in their own time and way. Obstacles are removed when the righteous forces unite under skilled leadership.",
+    tags: ["Kartikeya", "Skanda", "Shiva", "Parvati", "Tarakasura"]
+  },
+  {
+    title: "Markandeya - The Eternal Youth",
+    category: "Shiva Purana",
+    excerpt: "How a devoted young sage conquered death itself through his devotion to Lord Shiva.",
+    story: "Sage Mrikandu and his wife Marudmati performed severe penance to Lord Shiva, praying for a child. Shiva appeared and gave them a choice: a foolish son who would live long, or an intelligent, virtuous son who would live only sixteen years. Without hesitation, they chose the latter.\n\nTheir son Markandeya was born - brilliant, devoted, and deeply spiritual from childhood. He mastered the Vedas quickly and became an ardent devotee of Lord Shiva, worshipping him daily with complete dedication.\n\nAs Markandeya approached his sixteenth birthday, his parents became sorrowful, knowing his time was near. When Markandeya asked why they were sad, they revealed the truth. Undeterred, Markandeya intensified his worship, creating a Shiva Linga on the seashore and meditating continuously.\n\nOn the fated day, Yama, the god of death, arrived to claim Markandeya's soul. He threw his noose to capture the boy, but Markandeya was tightly embracing the Shiva Linga, and the noose fell around both the boy and the Linga.\n\nEnraged that death dared to touch his devotee and his sacred form, Lord Shiva emerged from the Linga as Kalasamhara Murti (Conqueror of Time) and kicked Yama with his foot, declaring that Markandeya would remain eternally sixteen, forever young, and immortal. Thus, Markandeya became a Chiranjivi (immortal being), blessed to wander the earth eternally, spreading wisdom.",
+    moral: "Unwavering devotion to the Divine can overcome even death itself. Faith is the ultimate protection.",
+    tags: ["Shiva", "Markandeya", "Death", "Immortality", "Devotion"]
+  },
+  {
+    title: "The Legend of Savitri and Satyavan",
+    category: "Mahabharata",
+    excerpt: "How Princess Savitri's devotion and intelligence brought her husband back from the clutches of death.",
+    story: "Princess Savitri was renowned for her beauty, intelligence, and virtue. When it was time for her to marry, her father sent her to find a suitable husband. She chose Satyavan, a prince living in exile in the forest with his blind father. Sage Narada warned her that Satyavan was fated to die exactly one year from that day. But Savitri, having chosen her husband with her heart, refused to change her decision.\n\nSavitri married Satyavan and moved to the forest, living a simple life and serving her in-laws devotedly. As the fated day approached, she began a three-day fast and vigil. On the destined day, she insisted on accompanying Satyavan to the forest to gather wood.\n\nWhile cutting wood, Satyavan suddenly felt weak and laid his head on Savitri's lap. At that moment, Yama, the god of death, appeared to take Satyavan's soul. Savitri began following Yama as he carried away her husband's soul.\n\nYama told her to return, as the living cannot follow the dead. But Savitri continued, speaking profound words of wisdom about dharma, devotion, and duty. Impressed by her knowledge and devotion, Yama offered her boons - anything except Satyavan's life.\n\nClever Savitri asked for her father-in-law's eyesight to be restored, for her father to have many sons, and finally, for herself to have many children. Yama granted all boons. Then Savitri pointed out that as a pativrata (devoted wife), she could only have children with her husband Satyavan, so he must return to life.\n\nCaught in his own word, Yama smiled at Savitri's intelligence and devotion, and restored Satyavan's life. The couple returned home, where they found that the father's sight had indeed been restored.",
+    moral: "Intelligence combined with unwavering devotion and righteousness can overcome even the most impossible situations. A devoted heart finds a way.",
+    tags: ["Savitri", "Satyavan", "Yama", "Death", "Devotion", "Intelligence"]
+  },
+  {
+    title: "Ambarisha and Durvasa - The Power of Vishnu's Devotee",
+    category: "Bhagavata Purana",
+    excerpt: "How a humble king's devotion protected him from an angry sage's curse.",
+    story: "King Ambarisha was a great devotee of Lord Vishnu, ruling his kingdom with perfect righteousness. He observed the Ekadashi fast with complete devotion every fortnight. Once, he was about to break his Ekadashi fast at the precise moment prescribed when Sage Durvasa arrived as a guest.\n\nAmbarisha requested the sage to join him for the meal. Durvasa went to the river to perform his rituals but didn't return for a long time. The auspicious time for breaking the fast was about to end, and not breaking it on time would be a fault, but eating before the guest would be disrespectful.\n\nAfter consulting priests, Ambarisha found a solution: he sipped a little water (which technically breaks the fast but is not eating). When Durvasa returned, his mystical powers revealed what had happened. Feeling insulted, the hot-tempered sage became furious. He pulled out a strand of his matted hair and created a fiery demon to destroy Ambarisha.\n\nThe humble king stood calmly, meditating on Vishnu. Immediately, Lord Vishnu's Sudarshana Chakra appeared and destroyed the demon, then began chasing Durvasa himself. Terrified, the sage ran across all three worlds - to Brahma, to Shiva, and even to Vishnu - but none could protect him from the Chakra, as it was punishing him for attacking Vishnu's devotee.\n\nFinally, Vishnu told Durvasa that only Ambarisha could save him, as the Chakra serves the devotees' will. Durvasa rushed back and fell at Ambarisha's feet, begging forgiveness. The compassionate king immediately prayed for the Chakra to stop, and Durvasa was saved. The sage realized that the power of true devotion surpasses even great tapasya (penance).",
+    moral: "The Divine protects devotees who are humble and righteous. True strength lies in devotion, not in anger or spiritual powers.",
+    tags: ["Vishnu", "Ambarisha", "Durvasa", "Devotion", "Protection"]
+  },
+  {
+    title: "The Story of Shibi - The King Who Gave His Flesh",
+    category: "Mahabharata",
+    excerpt: "A king's extraordinary sacrifice for a dove teaches the supreme lesson of dharma and compassion.",
+    story: "King Shibi was renowned throughout the three worlds for his righteousness, charity, and adherence to dharma. His fame reached the heavens, where Indra (king of gods) and Agni (fire god) decided to test whether his reputation was truly deserved.\n\nAgni took the form of a dove and Indra became a hawk. The hawk chased the dove, which flew into King Shibi's court and sought refuge in his lap, begging for protection. The king immediately granted it, promising to protect the dove with his life.\n\nThe hawk then arrived and demanded his prey, saying he was hungry and the dove was his rightful food. The hawk argued that by saving the dove, the king would cause his (the hawk's) death by starvation. What kind of dharma saves one life by ending another?\n\nThe king was in a dilemma. He offered the hawk other food - gold, cattle, even his kingdom - but the hawk refused, saying only the dove's flesh would satisfy him. Finally, the hawk agreed to accept an equal weight of the king's own flesh instead of the dove.\n\nShibi immediately began cutting flesh from his thigh and placing it on a scale to balance the dove's weight. But no matter how much he cut, the dove weighed more. He cut more from his arms, chest, and legs, but still, the balance didn't tip. Finally, weak from blood loss, the king himself climbed onto the scale, offering his entire body.\n\nAt that moment, both the hawk and dove revealed their true forms as Indra and Agni. They blessed the king, saying his name would be immortal and his dedication to dharma unparalleled. His wounds healed instantly, and his fame spread throughout eternity as a supreme example of self-sacrifice and dharma.",
+    moral: "True dharma requires putting others' welfare above one's own, even at the cost of one's life. Righteousness tests us at our limits.",
+    tags: ["Shibi", "Sacrifice", "Dharma", "Compassion", "Indra", "Agni"]
+  }
+];
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2025-12-12T20:37:17.142Z
+            </div>
+        <script src="../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
+    </body>
+</html>
+    

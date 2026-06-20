@@ -1,0 +1,97 @@
+.kids-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #F0F8FF; /* AliceBlue for a soft, kid-friendly background */
+  font-family: 'Outfit', 'Inter', sans-serif;
+}
+
+.kids-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #FFDE59; /* Bright, playful yellow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.kids-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #FF5757;
+  text-decoration: none;
+}
+
+.switch-zone-btn {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.kids-main-content {
+  flex: 1;
+  padding: 2rem;
+  padding-bottom: 100px; /* Space for bottom nav */
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.kids-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  z-index: 100;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #BDC3C7;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.nav-icon {
+  font-size: 1.8rem;
+  margin-bottom: 4px;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-item.active {
+  color: #3498DB;
+}
+
+.nav-item.active .nav-icon {
+  transform: scale(1.2);
+}
+
+@media (max-width: 480px) {
+  .kids-header {
+    padding: 1rem;
+  }
+  .kids-main-content {
+    padding: 1rem;
+    padding-bottom: 90px;
+  }
+}

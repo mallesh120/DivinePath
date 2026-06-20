@@ -1,875 +1,554 @@
-@import '../../styles/theme.css';
-
-.personalized-dashboard {
+/* Base Page Styles & Themes (Matching Panchang) */
+.dashboard-page-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
-  padding: 20px;
+  color: var(--text-color);
+  background: var(--bg-gradient);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80px;
+  font-family: 'Inter', sans-serif;
+  transition: background 1s ease-in-out, color 0.5s ease-in-out;
 }
 
-/* Hero Section */
-.dashboard-hero {
-  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+.dashboard-content-area {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Glassmorphism Panel */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
   border-radius: 20px;
-  padding: 40px 30px;
-  margin-bottom: 30px;
-  text-align: center;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 32px 0 var(--glass-shadow);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Common Zone Styles */
+.zone-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.zone-title {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.edit-goals-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-muted);
+  border-radius: 12px;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.edit-goals-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* --- Zone 1: Welcome --- */
+.hero-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
 }
 
 .hero-greeting {
-  font-size: 2.5rem;
-  color: white;
-  margin: 0 0 15px 0;
+  font-size: 2rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--hero-title);
   font-weight: 700;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .edit-name-btn {
-  background: rgba(255, 255, 255, 0.2);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  color: white;
-  font-size: 1.2rem;
-  padding: 8px 12px;
-  border-radius: 50%;
+  background: none;
+  border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.edit-name-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: scale(1.1);
-}
-
-.name-input-container {
-  margin: 15px 0;
+  font-size: 1rem;
+  opacity: 0.6;
 }
 
 .name-input {
-  padding: 12px 20px;
-  font-size: 1.1rem;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 25px;
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  text-align: center;
-  width: 300px;
-  max-width: 90%;
-}
-
-.name-input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+  background: rgba(0,0,0,0.2);
+  border: 1px solid var(--glass-border);
+  color: var(--text-color);
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  width: 200px;
+  margin-bottom: 0.5rem;
 }
 
 .hero-date {
-  font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin: 10px 0;
-}
-
-.streak-badge {
-  display: inline-block;
-  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-rose) 100%);
-  color: white;
-  padding: 10px 25px;
-  border-radius: 25px;
-  font-weight: 600;
+  color: var(--text-color);
+  opacity: 0.9;
+  margin: 0;
   font-size: 1.1rem;
-  margin-top: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  animation: pulse 2s infinite;
 }
 
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
-
-/* Dashboard Container */
-.dashboard-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 25px;
-}
-
-/* Card Styles */
-.dashboard-card {
-  background: white;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.dashboard-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-}
-
-.card-title {
-  font-size: 1.6rem;
-  color: var(--text-primary);
-  margin: 0 0 20px 0;
-  font-weight: 700;
-}
-
-/* Panchangam Card */
-.panchangam-card {
-  grid-column: span 2;
-}
-
-.panchangam-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.panchangam-item {
-  background: linear-gradient(135deg, var(--soft-peach) 0%, var(--peach) 100%);
-  padding: 15px;
+.streak-badge-glass {
+  background: rgba(255, 152, 0, 0.15);
+  border: 1px solid rgba(255, 152, 0, 0.3);
   border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.panchangam-label {
-  font-weight: 600;
-  color: var(--text-tertiary);
-  font-size: 0.9rem;
-}
-
-.panchangam-value {
-  font-size: 1.2rem;
-  color: var(--text-primary);
-  font-weight: 700;
-}
-
-.view-full-link {
-  display: inline-block;
-  color: var(--accent-blue);
-  text-decoration: none;
-  font-weight: 600;
-  margin-top: 15px;
-  transition: transform 0.3s ease;
-}
-
-.view-full-link:hover {
-  transform: translateX(5px);
-  color: #764ba2;
-}
-
-/* Goals Card */
-.goals-card {
-  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-}
-
-.goals-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 25px;
-}
-
-.goal-item {
-  background: white;
-  padding: 15px 20px;
-  border-radius: 12px;
+  padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
+  gap: 0.5rem;
 }
 
-.goal-item:hover {
-  border-color: var(--accent-blue);
-  transform: translateX(5px);
-}
-
-.goal-item.completed {
-  background: linear-gradient(135deg, #c3f0c3 0%, #a8e6a8 100%);
-}
-
-.goal-content {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  flex: 1;
-  cursor: pointer;
-}
-
-.goal-checkbox {
+.streak-icon {
   font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--accent-blue);
 }
 
-.goal-item.completed .goal-checkbox {
-  color: var(--accent-green);
+.streak-info {
+  display: flex;
+  flex-direction: column;
 }
 
-.goal-text {
+.streak-count {
+  font-weight: bold;
+  color: #FF9800;
+  line-height: 1;
+}
+
+.streak-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.panchang-mini-card {
+  display: block;
+  padding: 1.2rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.panchang-mini-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mini-status-loading {
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.mini-status-content {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.mini-status-indicator {
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.indicator-green { border: 2px solid #2ECC71; }
+.indicator-red { border: 2px solid #E74C3C; }
+.indicator-yellow { border: 2px solid #F1C40F; }
+
+.mini-status-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.mini-status-primary {
   font-size: 1.1rem;
-  color: var(--text-primary);
+}
+
+.mini-status-primary strong {
+  color: var(--hero-title);
+}
+
+.mini-status-traffic {
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
-.goal-link-btn {
-  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.traffic-msg {
+  font-weight: normal;
+  opacity: 0.9;
+}
+
+.mini-status-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- Zone 2: Sadhana --- */
+.sadhana-glass-card {
   display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.goal-link-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-}
-
-/* Japa Counter */
-.japa-counter {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-}
-
-.japa-title {
-  font-size: 1.2rem;
-  color: var(--text-primary);
-  margin: 0 0 15px 0;
-}
-
-.japa-display {
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--accent-blue);
-  margin: 15px 0;
-}
-
-.japa-button {
-  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
-  color: white;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 25px;
-  font-weight: 600;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin: 10px 5px;
-}
-
-.japa-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-}
-
-.japa-reset {
-  background: var(--neutral-200);
-  color: var(--text-tertiary);
-  border: none;
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin: 10px 5px;
-}
-
-.japa-reset:hover {
-  background: var(--neutral-200);
-}
-
-/* Prayer Card */
-.prayer-card {
-  grid-column: 1 / -1;
-  background: linear-gradient(135deg, var(--parchment-light) 0%, #ffe8cc 100%);
-}
-
-.prayer-content {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  margin-top: 15px;
-}
-
-.prayer-header {
-  text-align: center;
-  margin-bottom: 25px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid var(--neutral-200);
-}
-
-.prayer-name {
-  font-size: 1.8rem;
-  color: var(--text-primary);
-  margin: 0 0 10px 0;
-  font-weight: 700;
-}
-
-.prayer-deity {
-  display: inline-block;
-  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
-  color: white;
-  padding: 5px 15px;
-  border-radius: 15px;
-  font-size: 0.9rem;
-  margin: 10px 5px;
-  font-weight: 600;
-}
-
-.prayer-time {
-  display: inline-block;
-  background: var(--neutral-200);
-  color: var(--text-tertiary);
-  padding: 5px 15px;
-  border-radius: 15px;
-  font-size: 0.9rem;
-  margin: 10px 5px;
-}
-
-.prayer-text {
-  margin: 25px 0;
-  padding: 20px;
-  background: linear-gradient(135deg, var(--card-bg)8e1 0%, #ffecb3 100%);
-  border-radius: 10px;
-  border-left: 4px solid #ff9800;
-}
-
-.prayer-sanskrit {
-  font-size: 1.5rem;
-  color: #d84315;
-  font-weight: 600;
-  margin-bottom: 15px;
-  line-height: 1.8;
-  text-align: center;
-  font-family: 'Noto Sans Devanagari', sans-serif;
-}
-
-.prayer-transliteration {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  font-style: italic;
-  line-height: 1.6;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.prayer-meaning {
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px 0;
-  border-left: 4px solid var(--accent-green);
-}
-
-.prayer-meaning strong {
-  color: var(--accent-green);
-  font-size: 1.1rem;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.prayer-meaning p {
-  color: var(--text-primary);
-  line-height: 1.7;
-  font-size: 1.05rem;
-  margin: 0;
-}
-
-.prayer-complete-btn {
-  width: 100%;
-  background: linear-gradient(135deg, var(--accent-green) 0%, #45a049 100%);
-  color: white;
-  border: none;
-  padding: 15px;
-  border-radius: 10px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 20px;
-}
-
-.prayer-complete-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
-}
-
-/* Scripture Reading Card */
-.scripture-card {
-  grid-column: 1 / -1;
-  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-}
-
-.scripture-content {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  margin-top: 15px;
-}
-
-.scripture-header {
-  text-align: center;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid var(--neutral-200);
-}
-
-.scripture-name {
-  font-size: 1.8rem;
-  color: #2e7d32;
-  margin: 0 0 15px 0;
-  font-weight: 700;
-}
-
-.scripture-meta {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.scripture-chapter {
-  display: inline-block;
-  background: linear-gradient(135deg, var(--accent-green) 0%, #45a049 100%);
-  color: white;
-  padding: 5px 15px;
-  border-radius: 15px;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.scripture-time {
-  display: inline-block;
-  background: var(--neutral-200);
-  color: var(--text-tertiary);
-  padding: 5px 15px;
-  border-radius: 15px;
-  font-size: 0.9rem;
-}
-
-.scripture-summary {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
-  margin: 20px 0;
-  text-align: center;
-  font-style: italic;
-}
-
-.key-verse {
-  background: linear-gradient(135deg, var(--card-bg)3e0 0%, #ffe0b2 100%);
-  padding: 20px;
-  border-radius: 10px;
-  margin: 25px 0;
-  border-left: 4px solid #ff9800;
-}
-
-.verse-title {
-  color: #ff6f00;
-  font-size: 1.2rem;
-  margin: 0 0 15px 0;
-  text-align: center;
-}
-
-.verse-sanskrit {
-  font-size: 1.4rem;
-  color: #d84315;
-  font-weight: 600;
-  margin-bottom: 12px;
-  line-height: 1.8;
-  text-align: center;
-  font-family: 'Noto Sans Devanagari', sans-serif;
-}
-
-.verse-transliteration {
-  font-size: 1rem;
-  color: var(--text-secondary);
-  font-style: italic;
-  line-height: 1.6;
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.verse-meaning {
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
-  margin-top: 15px;
-}
-
-.verse-meaning strong {
-  color: #ff6f00;
-  font-size: 1rem;
-  display: block;
-  margin-bottom: 8px;
-}
-
-.verse-meaning p {
-  color: var(--text-primary);
-  line-height: 1.6;
-  font-size: 1rem;
-  margin: 0;
-}
-
-.scripture-actions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  margin: 20px 0;
-}
-
-.read-full-btn {
-  background: linear-gradient(135deg, var(--accent-blue-2) 0%, #1976d2 100%);
-  color: white;
-  border: none;
-  padding: 15px;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.read-full-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
-}
-
-.scripture-complete-btn {
-  background: linear-gradient(135deg, var(--accent-green) 0%, #45a049 100%);
-  color: white;
-  border: none;
-  padding: 15px;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.scripture-complete-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
-}
-
-.library-link {
-  text-align: center;
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 2px solid var(--neutral-200);
-}
-
-.browse-library-btn {
-  display: inline-block;
-  background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-purple-2) 100%);
-  color: white;
-  padding: 12px 25px;
-  border-radius: 25px;
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.browse-library-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(156, 39, 176, 0.4);
-}
-
-/* Shloka Card */
-.shloka-card {
-  grid-column: span 2;
-  background: linear-gradient(135deg, var(--soft-peach) 0%, var(--peach) 100%);
-}
-
-/* Festivals Card */
-.festivals-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.festival-item {
-  background: linear-gradient(135deg, var(--parchment-light) 0%, #ffe0b2 100%);
-  padding: 15px 20px;
-  border-radius: 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.festival-info h3 {
-  margin: 0 0 5px 0;
-  color: var(--text-primary);
-  font-size: 1.2rem;
-}
-
-.festival-date {
-  margin: 0;
-  color: var(--text-tertiary);
-  font-size: 0.9rem;
-}
-
-.festival-countdown {
-  text-align: center;
-}
-
-.countdown-number {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #ff6b6b;
-}
-
-.countdown-label {
-  font-size: 0.9rem;
-  color: var(--text-tertiary);
-}
-
-/* Fasting Card */
-.fasting-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.fasting-item {
-  background: linear-gradient(135deg, var(--neutral-200) 0%, #b2ebf2 100%);
-  padding: 15px 20px;
-  border-radius: 12px;
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-
-.fasting-day {
-  background: var(--deep-teal);
-  color: white;
-  padding: 10px 15px;
-  border-radius: 10px;
-  font-weight: 700;
-  min-width: 80px;
-  text-align: center;
-}
-
-.fasting-details h3 {
-  margin: 0 0 5px 0;
-  color: var(--text-primary);
-  font-size: 1.1rem;
-}
-
-.fasting-description {
-  margin: 0;
-  color: var(--text-tertiary);
-  font-size: 0.9rem;
-}
-
-/* Quick Actions */
-.quick-actions-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-}
-
-.quick-action-btn {
-  background: linear-gradient(135deg, var(--accent-blue) 0%, #764ba2 100%);
-  color: white;
-  padding: 20px;
-  border-radius: 15px;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.quick-action-btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-.action-icon {
-  font-size: 2.5rem;
-}
-
-.action-label {
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-/* Progress Card */
-.progress-card {
-  grid-column: span 2;
-  background: linear-gradient(135deg, #fa8bff 0%, #2bd2ff 90%, #2bff88 100%);
-}
-
-.progress-stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
-}
-
-.stat-item {
-  background: white;
-  padding: 25px;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.stat-icon {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-.stat-value {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--accent-blue);
-  margin: 10px 0;
-}
-
-.stat-label {
-  font-size: 1rem;
-  color: var(--text-tertiary);
-  font-weight: 600;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .dashboard-container {
-    grid-template-columns: 1fr;
-  }
-
-  .panchangam-card,
-  .shloka-card,
-  .progress-card {
-    grid-column: span 1;
-  }
-
-  .panchangam-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Practical Hindu Living Section */
-.practical-living-card {
-  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-rose) 100%);
-  color: white;
-}
-
-.practical-living-card .card-title {
-  color: white;
-}
-
-.practical-actions {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.practical-action-btn {
-  background: white;
   padding: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.dharma-journey-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.journey-card {
+  padding: 1.2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.journey-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.journey-card-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  flex: 1;
+}
+
+.journey-icon {
+  font-size: 1.2rem;
+}
+
+/* Daily Challenge */
+.challenge-card {
+  background: linear-gradient(135deg, rgba(243, 156, 18, 0.1) 0%, rgba(211, 84, 0, 0.05) 100%);
+  border-color: rgba(243, 156, 18, 0.2);
+}
+
+.challenge-title {
+  font-weight: bold;
+  color: #f39c12;
+  margin: 0 0 0.4rem 0;
+}
+
+.challenge-desc {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Learning Pathway */
+.learning-card {
+  cursor: pointer;
+}
+
+.learning-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.pathway-progress-badge {
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.6rem;
   border-radius: 12px;
-  text-decoration: none;
+  color: var(--text-muted);
+}
+
+.learning-preview h4 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1rem;
+}
+
+.learning-preview p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #3498db;
+}
+
+/* Shloka Mastery */
+.shloka-progress-badge {
+  font-size: 0.75rem;
+  background: rgba(46, 204, 113, 0.1);
+  color: #2ecc71;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+}
+
+.shloka-content {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.shloka-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.shloka-sanskrit {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: var(--hero-title);
+  margin: 0 0 1rem 0;
+  font-family: 'Georgia', serif;
+}
+
+.shloka-actions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.shloka-play-btn, .shloka-practice-btn {
+  flex: 1;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.shloka-play-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+}
+
+.shloka-play-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.shloka-practice-btn {
+  background: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+  border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.shloka-practice-btn:hover {
+  background: rgba(46, 204, 113, 0.3);
+}
+
+.shloka-practice-btn.practiced {
+  background: #2ecc71;
+  color: white;
+}
+
+.sadhana-japa {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.practical-action-btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+.japa-counter-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.practical-action-btn .action-icon {
+.japa-linear-container {
+  width: 100%;
+  max-width: 300px;
+  cursor: pointer;
+  transition: transform 0.1s;
+  padding: 10px 0;
+}
+
+.japa-linear-container:active {
+  transform: scale(0.98);
+}
+
+.japa-linear-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.japa-thread-track {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  margin: 1.5rem 0; /* Space for the bead to overflow */
+}
+
+.japa-thread-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(234, 88, 12, 0.2), var(--hero-title));
+  border-radius: 2px;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 8px var(--hero-title);
+}
+
+.japa-active-bead {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+}
+
+.japa-active-bead img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 115%; /* Scale up slightly to push the checkerboard out of the circle bounds */
+  height: 115%;
+  object-fit: cover;
+  transition: width 0.1s, height 0.1s;
+}
+
+.japa-linear-container:active .japa-active-bead img {
+  width: 105%;
+  height: 105%;
+}
+
+.japa-count {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--hero-title);
+  line-height: 1;
+}
+
+.japa-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.malas-completed {
+  font-size: 0.85rem;
+  color: var(--text-color);
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  margin-top: 0.5rem;
+}
+
+.malas-completed span {
+  color: var(--hero-title);
+  font-weight: bold;
+}
+
+.japa-hint {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.japa-reset-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 0.5rem;
+}
+
+
+/* --- Zone 4: Navigation Hub --- */
+.nav-hub-scroll {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.nav-hub-item {
+  flex: 0 0 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.5rem 1rem;
+  text-decoration: none;
+  color: var(--text-color);
+  scroll-snap-align: start;
+}
+
+.nav-hub-item:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
+}
+
+.nav-hub-icon {
   font-size: 2.5rem;
 }
 
-.practical-action-btn .action-label {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: var(--accent-rose);
-}
-
-.practical-action-btn .action-desc {
-  font-size: 0.85rem;
-  color: var(--text-tertiary);
+.nav-hub-label {
+  font-size: 0.9rem;
+  font-weight: 500;
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  .hero-greeting {
-    font-size: 1.8rem;
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  .hero-header {
+    flex-direction: column;
+    gap: 1rem;
   }
-
-  .dashboard-card {
-    padding: 20px;
+  
+  .sadhana-glass-card {
+    flex-direction: column;
   }
-
-  .card-title {
-    font-size: 1.3rem;
-  }
-
-  .panchangam-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .quick-actions-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .progress-stats {
-    grid-template-columns: 1fr;
-  }
-
-  .scripture-actions {
-    grid-template-columns: 1fr;
-  }
-
-  .practical-actions {
-    grid-template-columns: 1fr;
-  }
-
-  .verse-sanskrit {
-    font-size: 1.2rem;
-  }
-
-  .scripture-name {
-    font-size: 1.5rem;
+  
+  .sadhana-japa {
+    width: 100%;
+    padding-top: 1rem;
+    border-top: 1px solid var(--glass-border);
   }
 }

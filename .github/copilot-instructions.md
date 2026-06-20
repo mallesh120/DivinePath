@@ -6,6 +6,8 @@ DivinePath is a React-based web application for Hindu spiritual content (Literat
 ## Tech Stack
 - **Frontend**: React 19, React Router 6, Create React App
 - **Backend**: Netlify Functions (Node.js)
+- **AI**: Google Gemini API with hybrid rate limiting (15/min per user + 500/day global)
+- **Storage**: Netlify Blobs for global rate limit tracking
 - **Data Processing**: Node.js (Playwright) and Python scripts
 - **Testing**: Jest (Unit), Playwright (E2E)
 - **Styling**: CSS Modules / Standard CSS (e.g., `App.css`, `FestivalsPage.css`)
@@ -64,6 +66,8 @@ DivinePath is a React-based web application for Hindu spiritual content (Literat
 - Located in `netlify/functions/`.
 - Use CommonJS (`require`/`module.exports`).
 - Handle errors gracefully and return appropriate HTTP status codes.
+- **Rate Limiting**: `ai-chat.js` enforces global 500 calls/day limit using Netlify Blobs.
+- Returns HTTP 429 when global limit reached.
 
 ## Common Tasks
 - **Adding a new Deity**:

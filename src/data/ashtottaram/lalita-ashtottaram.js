@@ -7,7 +7,7 @@ export const lalitaAshtottaram = {
   id: 'lalita',
   title: 'Goddess Lalita',
   category: 'goddess',
-  image: '/images/Goddesses/lalita.png',
+  image: '/images/Goddesses/lalita.webp',
   description: 'A form of the Divine Mother',
   names: [
     {

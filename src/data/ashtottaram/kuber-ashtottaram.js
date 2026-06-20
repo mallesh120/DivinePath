@@ -7,7 +7,7 @@ export const kuberAshtottaram = {
   id: 'kuber',
   title: 'Lord Kuber',
   category: 'god',
-  image: '/images/Gods/kuber.png',
+  image: '/images/Gods/kuber.webp',
   description: 'The God of Wealth and Prosperity',
   names: [
     {

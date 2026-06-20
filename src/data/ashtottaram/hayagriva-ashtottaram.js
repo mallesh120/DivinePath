@@ -7,7 +7,7 @@ export const hayagrivaAshtottaram = {
   id: 'hayagriva',
   title: 'Lord Hayagriva',
   category: 'god',
-  image: '/images/Gods/hayagriva.png',
+  image: '/images/Gods/hayagriva.webp',
   description: 'The horse-headed avatar of Vishnu',
   names: [
     {

@@ -1,13 +1,13 @@
 // At the top of aranya_kanda.js, add the new image imports:
-import aranyaScene1 from '../../../assets/images/aranyaScenes/aranya_scene1.png';
-import aranyaScene2 from '../../../assets/images/aranyaScenes/aranya_scene2.png';
-import aranyaScene3 from '../../../assets/images/aranyaScenes/aranya_scene3.png';
-import aranyaScene4 from '../../../assets/images/aranyaScenes/aranya_scene4.png';
-import aranyaScene5 from '../../../assets/images/aranyaScenes/aranya_scene5.png';
-import aranyaScene6 from '../../../assets/images/aranyaScenes/aranya_scene6.png';
-import aranyaScene7 from '../../../assets/images/aranyaScenes/aranya_scene7.png';
-import aranyaScene8 from '../../../assets/images/aranyaScenes/aranya_scene8.png';
-import aranyaScene9 from '../../../assets/images/aranyaScenes/aranya_scene9.png';
+import aranyaScene1 from '../../../assets/images/aranyaScenes/aranya_scene1.webp';
+import aranyaScene2 from '../../../assets/images/aranyaScenes/aranya_scene2.webp';
+import aranyaScene3 from '../../../assets/images/aranyaScenes/aranya_scene3.webp';
+import aranyaScene4 from '../../../assets/images/aranyaScenes/aranya_scene4.webp';
+import aranyaScene5 from '../../../assets/images/aranyaScenes/aranya_scene5.webp';
+import aranyaScene6 from '../../../assets/images/aranyaScenes/aranya_scene6.webp';
+import aranyaScene7 from '../../../assets/images/aranyaScenes/aranya_scene7.webp';
+import aranyaScene8 from '../../../assets/images/aranyaScenes/aranya_scene8.webp';
+import aranyaScene9 from '../../../assets/images/aranyaScenes/aranya_scene9.webp';
 
 
 // Export the array of scene objects for this Kanda

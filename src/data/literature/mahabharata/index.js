@@ -9,7 +9,7 @@ import { karnaParvaScenes } from './karna_parva.js';
 import { shantiParvaScenes } from './shanti_parva.js';
 
 // Import the main cover image for the Mahabharata
-import mahabharataImage from '../../../assets/images/mahabharata.png';
+import mahabharataImage from '../../../assets/images/mahabharata.webp';
 
 export const mahabharataObject = {
   id: 2,

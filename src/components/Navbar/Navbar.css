@@ -20,24 +20,31 @@
   z-index: 100;
   transition: all 0.3s ease;
 
-  /* Modern glassmorphism effect */
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: var(--shadow-sm);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  /* Dynamic glassmorphism effect */
+  background: var(--glass-bg, rgba(255, 255, 255, 0.8));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 30px var(--glass-shadow, rgba(0, 0, 0, 0.1));
+  border-bottom: 1px solid var(--glass-border, rgba(0, 0, 0, 0.05));
+}
+
+.navbar-brand {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .navbar-brand a {
   font-family: 'Playfair Display', 'Cinzel', serif;
   font-weight: 800;
   font-size: 1.9rem;
-  background: linear-gradient(135deg, var(--saffron-primary) 0%, var(--text-primary) 100%);
+  background: linear-gradient(135deg, var(--saffron-primary) 0%, var(--text-color, #fff) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-decoration: none;
   transition: all 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .navbar-brand a:hover {
@@ -47,20 +54,18 @@
 .navbar-links {
   list-style: none;
   display: flex;
+  justify-content: center;
   margin: 0;
   padding: 0;
   gap: 20px;
 }
 
-.navbar-links li {
-  /* margin-left is no longer needed with gap */
-}
 
 .navbar-links a {
   font-family: 'Lato', sans-serif;
   font-weight: 600;
   font-size: 1rem;
-  color: var(--text-primary);
+  color: var(--text-color, var(--text-primary));
   text-decoration: none;
   padding: 10px 8px;
   position: relative;
@@ -95,9 +100,31 @@
 }
 
 .navbar-actions {
+  flex: 1;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
   gap: 12px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: var(--radius-full);
+  transition: transform 0.3s ease, background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color, var(--text-primary));
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  background: rgba(128, 128, 128, 0.1);
 }
 
 /* Hamburger Menu Button */
@@ -177,7 +204,7 @@
     height: 100vh;
     height: 100dvh; /* Dynamic viewport height for mobile browsers */
     flex-direction: column;
-    background: linear-gradient(180deg, var(--warm-cream) 0%, var(--parchment-light) 100%);
+    background: var(--bg-gradient, linear-gradient(180deg, var(--warm-cream) 0%, var(--parchment-light) 100%));
     padding: 80px var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
     gap: 0;
     transform: translateX(100%);
@@ -253,4 +280,37 @@
   .navbar-links.open {
     right: 0;
   }
+}
+
+/* Kids Hub Link Styling */
+.kids-hub-link {
+  background: linear-gradient(90deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-shadow: 0px 0px 8px rgba(255, 154, 158, 0.4);
+}
+
+.kids-hub-link:hover {
+  background: linear-gradient(90deg, #ff758c 0%, #ff7eb3 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: translateY(-2px);
+}
+.switch-zone-nav-btn {
+  background: #FF5757;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: transform 0.2s;
+}
+.switch-zone-nav-btn:hover {
+  transform: scale(1.05);
 }
