@@ -31,7 +31,6 @@ const FestivalDetailPage = lazy(() => import('./pages/FestivalDetailPage/Festiva
 const PanchangPage = lazy(() => import('./pages/PanchangPage/PanchangPage'));
 const PujaListPage = lazy(() => import('./pages/PujaListPage/PujaListPage'));
 const PujaGuidePage = lazy(() => import('./pages/PujaGuidePage/PujaGuidePage'));
-const AshtottaramListPage = lazy(() => import('./pages/AshtottaramListPage/AshtottaramListPage'));
 const AshtottaramDetailPage = lazy(() => import('./pages/AshtottaramDetailPage/AshtottaramDetailPage'));
 const MuhurtaFinderPage = lazy(() => import('./pages/MuhurtaFinderPage/MuhurtaFinderPage'));
 const FastingGuidePage = lazy(() => import('./pages/FastingGuidePage/FastingGuidePage'));
@@ -39,6 +38,9 @@ const FestivalCountdownPage = lazy(() => import('./pages/FestivalCountdownPage/F
 const PujaReminderPage = lazy(() => import('./pages/PujaReminderPage/PujaReminderPage'));
 const BookLandingPage = lazy(() => import('./pages/BookLandingPage/BookLandingPage'));
 const UniversalReaderPage = lazy(() => import('./pages/UniversalReaderPage/UniversalReaderPage'));
+const SacredTextsPage = lazy(() => import('./pages/SacredTextsPage/SacredTextsPage'));
+const StotramCategoryPage = lazy(() => import('./pages/StotramCategoryPage/StotramCategoryPage'));
+const StotramReaderPage = lazy(() => import('./pages/StotramReaderPage/StotramReaderPage'));
 
 // Loading fallback component
 const LoadingFallback = () => <LoadingSpinner />;
@@ -129,12 +131,14 @@ function App() {
               <Route path="calendar" element={withTransition(PanchangPage)} />
               <Route path="pujas" element={withTransition(PujaListPage)} />
               <Route path="puja/:pujaId" element={withTransition(PujaGuidePage)} />
-              <Route path="ashtottaram" element={withTransition(AshtottaramListPage)} />
               <Route path="ashtottaram/:deityId" element={withTransition(AshtottaramDetailPage)} />
               <Route path="library/:bookId" element={withTransition(BookLandingPage)} />
               <Route path="library/:bookId/:chapterId" element={withTransition(UniversalReaderPage)} />
               <Route path="muhurta-finder" element={withTransition(MuhurtaFinderPage)} />
               <Route path="fasting-guide" element={withTransition(FastingGuidePage)} />
+              <Route path="sacred-texts" element={withTransition(SacredTextsPage)} />
+              <Route path="stotrams/:categorySlug" element={withTransition(StotramCategoryPage)} />
+              <Route path="stotrams/read/:stotramTitle" element={withTransition(StotramReaderPage)} />
               <Route path="festival-countdown" element={withTransition(FestivalCountdownPage)} />
               <Route path="puja-reminders" element={withTransition(PujaReminderPage)} />
             </Route>

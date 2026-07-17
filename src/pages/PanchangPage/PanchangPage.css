@@ -386,16 +386,18 @@
 }
 
 .cal-cell {
-  aspect-ratio: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  border-radius: 50%;
+  justify-content: flex-start;
+  border-radius: 8px;
   cursor: pointer;
   position: relative;
   color: var(--text-color);
   transition: all 0.2s;
+  padding: 0.3rem 0;
+  min-height: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .cal-cell:hover:not(.blank) {
@@ -403,7 +405,7 @@
 }
 
 .cal-cell.today {
-  background: var(--hero-bg);
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--hero-title);
   font-weight: bold;
 }
@@ -413,13 +415,55 @@
   font-weight: 600;
 }
 
+.cal-date {
+  font-size: 1rem;
+  margin-bottom: 0.1rem;
+  z-index: 2;
+}
+
+.cal-cell.today .cal-date {
+  background: var(--hero-title);
+  color: var(--bg-color, #1a1a24);
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cal-panchang-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 2px;
+  margin-top: 2px;
+}
+
+.cal-tithi, .cal-nakshatra {
+  font-size: 0.5rem;
+  line-height: 1.1;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  text-align: center;
+}
+
+.cal-nakshatra {
+  font-size: 0.45rem;
+  opacity: 0.7;
+}
+
 .cal-dot {
   width: 5px;
   height: 5px;
   background-color: var(--hero-title);
   border-radius: 50%;
   position: absolute;
-  bottom: 10%;
+  bottom: 8%;
 }
 
 /* --- Bottom Sheet --- */
@@ -497,6 +541,142 @@
 
 .sheet-rituals li {
   margin-bottom: 0.3rem;
+}
+
+/* Calendar Indicators & Icons */
+.cal-indicators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  position: absolute;
+  bottom: 8%;
+}
+
+.moon-icon {
+  font-size: 0.6rem;
+  line-height: 1;
+}
+
+.cal-dot {
+  width: 5px;
+  height: 5px;
+  background-color: var(--hero-title);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Scrollable Bottom Sheet */
+.scrollable-sheet {
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+/* Bottom Sheet Sections */
+.sheet-section {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.section-title {
+  font-size: 1.1rem;
+  margin: 0 0 1rem 0;
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 0.5rem;
+}
+
+.section-title.success { border-bottom-color: #2ECC71; color: #2ECC71; }
+.section-title.warning { border-bottom-color: #E74C3C; color: #E74C3C; }
+
+/* Festivals Detail */
+.festival-detail {
+  margin-bottom: 1rem;
+}
+
+.festival-detail strong {
+  color: var(--hero-title);
+  font-size: 1.1rem;
+}
+
+.festival-detail p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.sheet-rituals-list {
+  padding-left: 1.2rem;
+  margin: 0;
+  color: var(--text-color);
+  opacity: 0.85;
+  font-size: 0.9rem;
+}
+
+.sheet-rituals-list li {
+  margin-bottom: 0.3rem;
+}
+
+/* Panchang & Timings Grid */
+.panchang-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.panchang-item {
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.8rem;
+  border-radius: 8px;
+}
+
+.panchang-item span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.timings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.8rem;
+}
+
+.timing-box {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.timing-box strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.timing-box.good {
+  border-top: 3px solid #2ECC71;
+}
+
+.timing-box.bad {
+  border-top: 3px solid #E74C3C;
+}
+
+.timing-placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 0.9rem;
+  margin: 0;
 }
 
 @keyframes slideUp {

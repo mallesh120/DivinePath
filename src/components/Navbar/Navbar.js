@@ -85,6 +85,11 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
+          <NavLink to="/adults/sacred-texts" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            Sacred Texts
+          </NavLink>
+        </li>
+        <li>
           <NavLink to="/adults/calendar" className={({ isActive }) => (isActive ? 'active-link' : '')}>
             Hindu Calendar
           </NavLink>
@@ -92,11 +97,6 @@ const Navbar = () => {
         <li>
           <NavLink to="/adults/pujas" className={({ isActive }) => (isActive ? 'active-link' : '')}>
             Puja Guide
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/adults/ashtottaram" className={({ isActive }) => (isActive ? 'active-link' : '')}>
-            108 Names
           </NavLink>
         </li>
       </ul>

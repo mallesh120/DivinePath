@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { festivalsData } from '../../data/festivals/festivalsData';
+import { calculateBasicPanchang } from '../../hooks/usePanchangam';
 import './PanchangPage.css';
 
 const CalendarTab = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
-  const [selectedFestival, setSelectedFestival] = useState(null);
+  const [selectedDayDetails, setSelectedDayDetails] = useState(null);
 
   // Calendar logic
   const year = currentDate.getFullYear();
@@ -24,6 +25,16 @@ const CalendarTab = () => {
     return festivalsData.filter(f => f.date === formattedDate || (f.date <= formattedDate && f.endDate >= formattedDate));
   };
 
+  const handleDayClick = (day, dayFestivals, panchang) => {
+    setSelectedDayDetails({
+      day,
+      month,
+      year,
+      festivals: dayFestivals,
+      panchang
+    });
+  };
+
   // Generate calendar grid
   const renderCalendarDays = () => {
     const blanks = Array(firstDayOfMonth).fill(null);
@@ -36,16 +47,25 @@ const CalendarTab = () => {
       const dayFestivals = getFestivalsForDay(day);
       const hasFestival = dayFestivals.length > 0;
       
+      const panchang = calculateBasicPanchang(year, month, day);
       const isToday = new Date().toDateString() === new Date(year, month, day).toDateString();
 
       return (
         <div 
           key={`day-${day}`} 
           className={`cal-cell ${isToday ? 'today' : ''} ${hasFestival ? 'has-event' : ''}`}
-          onClick={() => hasFestival && setSelectedFestival(dayFestivals[0])}
+          onClick={() => handleDayClick(day, dayFestivals, panchang)}
         >
           <span className="cal-date">{day}</span>
-          {hasFestival && <span className="cal-dot"></span>}
+          <div className="cal-panchang-info">
+            <div className="cal-tithi" title={panchang.tithi}>{panchang.tithi}</div>
+            <div className="cal-nakshatra" title={panchang.nakshatra}>{panchang.nakshatra}</div>
+          </div>
+          <div className="cal-indicators">
+            {panchang.isPurnima && <span className="moon-icon purnima" title="Purnima">🌕</span>}
+            {panchang.isAmavasya && <span className="moon-icon amavasya" title="Amavasya">🌑</span>}
+            {hasFestival && <span className="cal-dot"></span>}
+          </div>
         </div>
       );
     });
@@ -70,25 +90,66 @@ const CalendarTab = () => {
         </div>
       </div>
 
-      {/* Interactive Bottom Sheet for Festival Details */}
-      {selectedFestival && (
+      {/* Interactive Bottom Sheet for Day Details */}
+      {selectedDayDetails && (
         <>
-          <div className="bottom-sheet-overlay" onClick={() => setSelectedFestival(null)}></div>
-          <div className="bottom-sheet glass-panel">
-            <button className="close-sheet-btn" onClick={() => setSelectedFestival(null)}>×</button>
+          <div className="bottom-sheet-overlay" onClick={() => setSelectedDayDetails(null)}></div>
+          <div className="bottom-sheet glass-panel scrollable-sheet">
+            <button className="close-sheet-btn" onClick={() => setSelectedDayDetails(null)}>×</button>
             <div className="sheet-content">
-              <h3>{selectedFestival.name}</h3>
-              <p className="sheet-lunar-date">{selectedFestival.lunarDate}</p>
-              <p className="sheet-desc">{selectedFestival.description}</p>
+              <h3>{monthNames[selectedDayDetails.month]} {selectedDayDetails.day}, {selectedDayDetails.year}</h3>
+              <p className="sheet-lunar-date">
+                {selectedDayDetails.panchang.hinduMonth} • {selectedDayDetails.panchang.tithi} {selectedDayDetails.panchang.paksha}
+              </p>
               
-              <div className="sheet-rituals">
-                <h4>Suggested Practices:</h4>
-                <ul>
-                  {selectedFestival.rituals.map((ritual, idx) => (
-                    <li key={idx}>{ritual}</li>
+              {selectedDayDetails.festivals.length > 0 && (
+                <div className="sheet-section">
+                  <h4 className="section-title">Festivals:</h4>
+                  {selectedDayDetails.festivals.map((fest, idx) => (
+                    <div key={idx} className="festival-detail">
+                      <strong>{fest.name}</strong>
+                      <p>{fest.description}</p>
+                      {fest.rituals && fest.rituals.length > 0 && (
+                        <ul className="sheet-rituals-list">
+                          {fest.rituals.map((r, i) => <li key={i}>{r}</li>)}
+                        </ul>
+                      )}
+                    </div>
                   ))}
-                </ul>
+                </div>
+              )}
+
+              <div className="sheet-section">
+                <h4 className="section-title">Panchang Details:</h4>
+                <div className="panchang-grid">
+                  <div className="panchang-item"><span>Nakshatra:</span> {selectedDayDetails.panchang.nakshatra}</div>
+                  <div className="panchang-item"><span>Yoga:</span> {selectedDayDetails.panchang.yoga}</div>
+                  <div className="panchang-item"><span>Karana:</span> {selectedDayDetails.panchang.karana}</div>
+                  <div className="panchang-item"><span>Moon Phase:</span> {selectedDayDetails.panchang.moonPhase}</div>
+                </div>
               </div>
+
+              <div className="sheet-section">
+                <h4 className="section-title success">✨ Auspicious Timings</h4>
+                <div className="timings-grid">
+                  {Object.entries(selectedDayDetails.panchang.auspicious).map(([key, val]) => (
+                    val !== 'N/A' && <div key={key} className="timing-box good"><strong>{key}</strong><br/>{val}</div>
+                  ))}
+                  {Object.values(selectedDayDetails.panchang.auspicious).every(v => v === 'N/A') && (
+                    <p className="timing-placeholder">No specific auspicious timings for this day.</p>
+                  )}
+                </div>
+              </div>
+
+              <div className="sheet-section">
+                <h4 className="section-title warning">⚠️ Inauspicious Timings</h4>
+                <div className="timings-grid">
+                  {Object.entries(selectedDayDetails.panchang.inauspicious).map(([key, val]) => (
+                    val !== 'N/A' && <div key={key} className="timing-box bad"><strong>{key}</strong><br/>{val}</div>
+                  ))}
+                </div>
+              </div>
+              
             </div>
           </div>
         </>

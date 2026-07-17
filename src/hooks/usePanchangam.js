@@ -10,8 +10,8 @@ import { getPanchangam, Observer, yogaNames, tithiNames, nakshatraNames } from '
  * @returns {object} Accurate panchang information formatted for HinduCalendarPage
  */
 export const calculateBasicPanchang = (year, month, day, observer) => {
-  const date = new Date(year, month, day);
-  date.setHours(12, 0, 0, 0); // Calculate at midday to avoid edge cases near midnight transitions
+  const dateMid = new Date(year, month, day, 12, 0, 0, 0); // Midday for tithi/nakshatra
+  const dateStart = new Date(year, month, day, 0, 0, 0, 0); // Start of day for timings
   
   // Ensure targetObserver is an instance of Observer
   let targetObserver;
@@ -24,20 +24,21 @@ export const calculateBasicPanchang = (year, month, day, observer) => {
   }
   
   try {
-    const panchang = getPanchangam(date, targetObserver);
+    const panchangNow = getPanchangam(dateMid, targetObserver);
+    const panchangDay = getPanchangam(dateStart, targetObserver);
     
     // Calculate simple auspiciousness rating based on tithi
     // (5 = best, 1 = worst)
     let auspiciousness = 3;
-    const t = panchang.tithi;
+    const t = panchangNow.tithi; // 0-indexed: 0-14 Shukla, 15-29 Krishna
     
-    if (t === 11 || t === 26 || t === 15) {
+    if (t === 10 || t === 25 || t === 14) {
       auspiciousness = 5; // Ekadashi, Purnima
-    } else if (t === 2 || t === 3 || t === 5 || t === 7 || t === 10 || t === 13 || t === 17 || t === 18 || t === 20 || t === 22 || t === 25 || t === 28) {
+    } else if (t === 1 || t === 2 || t === 4 || t === 6 || t === 9 || t === 11 || t === 16 || t === 17 || t === 19 || t === 21 || t === 24 || t === 26) {
       auspiciousness = 4; // Generally good tithis
-    } else if (t === 4 || t === 9 || t === 14 || t === 19 || t === 24 || t === 29) {
+    } else if (t === 3 || t === 8 || t === 13 || t === 18 || t === 23 || t === 28) {
       auspiciousness = 2; // Rikta tithis (empty hands)
-    } else if (t === 30 || t === 8 || t === 23) {
+    } else if (t === 29 || t === 7 || t === 22) {
       auspiciousness = 1; // Amavasya, Ashtami
     }
 
@@ -48,8 +49,8 @@ export const calculateBasicPanchang = (year, month, day, observer) => {
       });
     };
 
-    const isShukla = panchang.paksha === 'Shukla';
-    const tithiInPaksha = t > 15 ? t - 15 : t;
+    const isShukla = panchangNow.paksha === 'Shukla';
+    const tithiInPaksha = (t % 15) + 1; // 1 to 15
     
     // Moon illumination %
     const moonIllumination = isShukla 
@@ -58,26 +59,34 @@ export const calculateBasicPanchang = (year, month, day, observer) => {
 
     return {
       auspiciousness,
-      isEkadashi: t === 11 || t === 26,
-      isPurnima: t === 15,
-      isAmavasya: t === 30,
-      isPradosham: t === 13 || t === 28,
-      isChaturthi: t === 4 || t === 19,
-      isAshtami: t === 8 || t === 23,
+      isEkadashi: t === 10 || t === 25,
+      isPurnima: t === 14,
+      isAmavasya: t === 29,
+      isPradosham: t === 12 || t === 27,
+      isChaturthi: t === 3 || t === 18,
+      isAshtami: t === 7 || t === 22,
       moonPhase: isShukla ? 'Waxing Crescent/Gibbous' : 'Waning Crescent/Gibbous',
-      moonIllumination: t === 15 ? 100 : t === 30 ? 0 : moonIllumination,
-      hinduMonth: panchang.masa?.name || 'N/A',
-      paksha: (panchang.paksha || '') + ' Paksha',
-      rashi: panchang.moonRashi?.name || 'N/A',
-      tithi: tithiNames[t - 1] || 'N/A',
+      moonIllumination: t === 14 ? 100 : t === 29 ? 0 : moonIllumination,
+      hinduMonth: panchangNow.masa?.name || 'N/A',
+      paksha: (panchangNow.paksha || '') + ' Paksha',
+      rashi: panchangNow.moonRashi?.name || 'N/A',
+      tithi: tithiNames[t] || 'N/A',
       tithiIndex: tithiInPaksha,
-      nakshatra: nakshatraNames[panchang.nakshatra - 1] || 'N/A',
-      yoga: yogaNames[panchang.yoga - 1] || 'N/A',
-      karana: panchang.karana || 'N/A',
-      vara: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][panchang.vara],
-      sunrise: formatTime(panchang.sunrise),
-      sunset: formatTime(panchang.sunset),
-      rahuKala: panchang.rahuKalamStart ? `${formatTime(panchang.rahuKalamStart)} - ${formatTime(panchang.rahuKalamEnd)}` : 'N/A',
+      nakshatra: nakshatraNames[panchangNow.nakshatra - 1] || 'N/A',
+      yoga: yogaNames[panchangNow.yoga - 1] || 'N/A',
+      karana: panchangNow.karana || 'N/A',
+      vara: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][panchangNow.vara],
+      sunrise: formatTime(panchangDay.sunrise),
+      sunset: formatTime(panchangDay.sunset),
+      auspicious: {
+        "Brahma Muhurta": panchangDay.brahmaMuhurta ? `${formatTime(panchangDay.brahmaMuhurta.start)} - ${formatTime(panchangDay.brahmaMuhurta.end)}` : 'N/A',
+        "Abhijit Muhurta": panchangDay.abhijitMuhurta ? `${formatTime(panchangDay.abhijitMuhurta.start)} - ${formatTime(panchangDay.abhijitMuhurta.end)}` : 'N/A',
+      },
+      inauspicious: {
+        "Rahu Kalam": panchangDay.rahuKalamStart ? `${formatTime(panchangDay.rahuKalamStart)} - ${formatTime(panchangDay.rahuKalamEnd)}` : 'N/A',
+        "Yamagandam": panchangDay.yamagandaKalam ? `${formatTime(panchangDay.yamagandaKalam.start)} - ${formatTime(panchangDay.yamagandaKalam.end)}` : 'N/A',
+        "Gulikai Kalam": panchangDay.gulikaKalam ? `${formatTime(panchangDay.gulikaKalam.start)} - ${formatTime(panchangDay.gulikaKalam.end)}` : 'N/A',
+      },
       bestFor: []
     };
   } catch (error) {
@@ -87,7 +96,8 @@ export const calculateBasicPanchang = (year, month, day, observer) => {
       isPradosham: false, isChaturthi: false, isAshtami: false,
       moonPhase: 'N/A', moonIllumination: 0, hinduMonth: 'N/A', paksha: 'N/A', 
       rashi: 'N/A', tithi: 'N/A', tithiIndex: 1, nakshatra: 'N/A', yoga: 'N/A', 
-      karana: 'N/A', vara: 'N/A', sunrise: 'N/A', sunset: 'N/A', rahuKala: 'N/A', bestFor: []
+      karana: 'N/A', vara: 'N/A', sunrise: 'N/A', sunset: 'N/A', 
+      auspicious: {}, inauspicious: {}, bestFor: []
     };
   }
 };
