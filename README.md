@@ -37,8 +37,9 @@ graph TD
     subgraph OfflineScripts [Data Scraping & Build Pipeline]
         Scrapers[Playwright / Python Scrapers]
         DrikPanchang[drikpanchang.com]
+        Vignanam[vignanam.org]
         Aggregators[Node.js Content Aggregators]
-        StaticData[(Static JS Modules - src/data/)]
+        StaticData[(Static JSON/JS - public/data & src/data)]
     end
 
     %% Connections
@@ -61,6 +62,7 @@ graph TD
     
     %% Data Pipeline
     Scrapers -.->|Extracts names & mantras| DrikPanchang
+    Scrapers -.->|Extracts multilingual stotrams| Vignanam
     Scrapers -.->|Generates JSON/JS| Aggregators
     Aggregators -.->|Pre-populates database| StaticData
     Pages -->|Loads static content| StaticData
@@ -125,7 +127,12 @@ Provides interactive tools for deity worship and chanting.
     *   Sanskrit text, English transliteration, and English meanings.
     *   Visual progress tracker, sound cues, and a cumulative counter capping at 108.
 
-### E. AI Spiritual Assistant (Gemini Integration)
+### E. Multilingual Stotram Library
+Offers an extensive collection of Hindu Stotrams scraped dynamically in multiple languages.
+*   **Stotram Categories ([StotramCategoryPage.js](file:///Users/mallesh/DivinePath/src/pages/StotramCategoryPage/StotramCategoryPage.js))**: Organized navigation for various stotrams.
+*   **Multilingual Reader ([StotramReaderPage.js](file:///Users/mallesh/DivinePath/src/pages/StotramReaderPage/StotramReaderPage.js))**: A dedicated reading interface allowing users to dynamically switch between 10+ languages (English, Sanskrit, Telugu, Tamil, Kannada, Malayalam, Gujarati, Odia, Bengali, Hindi) with `localStorage` persistence. It seamlessly falls back to English if the specific language text is unavailable.
+
+### F. AI Spiritual Assistant (Gemini Integration)
 The application includes AI features powered by Google's `gemini-2.5-flash` model. Queries are routed through a serverless function with a hybrid rate-limiting configuration.
 
 #### Hybrid Rate Limiting Architecture
@@ -177,9 +184,13 @@ sequenceDiagram
 │   └── functions/
 │       ├── ai-chat.js                    # Gemini endpoint with rate limits
 │       └── panchangam-for-date.js        # Prokerala API connection
+├── public/
+│   └── data/
+│       └── stotrams/                     # Static multilingual JSONs
 ├── scripts/                              # Scrapers & maintenance utilities
 │   ├── format-ashtottaram.js             # Converts raw text to JSON
 │   ├── scrape-universal.js              # Universal Web scraper
+│   ├── scrape-vignanam-languages.js      # Vaidika Vignanam scraper
 │   └── batch-scrape-playwright.js        # Playwright batch scraper
 ├── src/
 │   ├── components/                       # Shared UI widgets

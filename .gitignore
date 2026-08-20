@@ -11,3 +11,4 @@ src/.DS_Store
 # production
 /build
 /dist
+.tmp.driveupload
