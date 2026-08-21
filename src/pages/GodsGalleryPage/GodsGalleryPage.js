@@ -7,15 +7,15 @@ const GodsGalleryPage = () => {
   const navigate = useNavigate();
 
   const handleTrinityClick = (godId) => {
-    navigate(`/adults/gods/${godId}`);
+    navigate(`/gods/${godId}`);
   };
 
   const handleGodClick = (godId) => {
-    navigate(`/adults/gods/${godId}`);
+    navigate(`/gods/${godId}`);
   };
 
   const handleViewAll = () => {
-    navigate('/adults/gods/all');
+    navigate('/gods/all');
   };
 
   // Get major deities (excluding Trinity)

@@ -9,7 +9,7 @@ const FestivalDetailPage = () => {
 
   // If festival not found, redirect to festivals page
   if (!festival) {
-    return <Navigate to="/adults/festivals" replace />;
+    return <Navigate to="/festivals" replace />;
   }
 
   const daysUntil = getDaysUntilFestival(festival.date);
@@ -33,7 +33,7 @@ const FestivalDetailPage = () => {
   return (
     <div className="festival-detail-page">
       <div className="festival-detail-header">
-        <Link to="/adults/festivals" className="festival-detail-back-link">
+        <Link to="/festivals" className="festival-detail-back-link">
           ← Back to Festivals
         </Link>
 

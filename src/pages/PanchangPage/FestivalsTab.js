@@ -223,7 +223,7 @@ const FestivalsTab = () => {
             </h2>
             <div className="puja-vidhanam-grid">
               {festivalsWithPujas.map(festival => (
-                <Link key={festival.pujaId} to={`/adults/puja/${festival.pujaId}`} className="puja-vidhanam-card">
+                <Link key={festival.pujaId} to={`/puja/${festival.pujaId}`} className="puja-vidhanam-card">
                   <div className="puja-vidhanam-icon">🪔</div>
                   <div className="puja-vidhanam-info">
                     <h3>{festival.name} Puja</h3>

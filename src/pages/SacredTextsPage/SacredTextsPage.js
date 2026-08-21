@@ -47,11 +47,11 @@ const SacredTextsPage = () => {
   }, []);
 
   const handleCategoryClick = (slug) => {
-    navigate(`/adults/stotrams/${slug}`);
+    navigate(`/stotrams/${slug}`);
   };
 
   const handleDeityClick = (deityId) => {
-    navigate(`/adults/ashtottaram/${deityId}`);
+    navigate(`/ashtottaram/${deityId}`);
   };
 
   const filteredAshtottarams = filterCategory === 'all'

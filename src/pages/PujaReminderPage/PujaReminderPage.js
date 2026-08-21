@@ -355,7 +355,7 @@ function PujaReminderPage() {
           </div>
         </div>
 
-        <Link to="/adults" className="back-button">
+        <Link to="/" className="back-button">
           ← Back to Dashboard
         </Link>
       </div>

@@ -89,7 +89,7 @@ const FestivalCard = ({ festival, compact = false }) => {
       <div className="festival-card-footer">
         {festival.pujaId && (
           <Link 
-            to={`/adults/puja/${festival.pujaId}`} 
+            to={`/puja/${festival.pujaId}`} 
             className="festival-card-puja-btn"
             title="View Pooja Vidhanam"
           >
@@ -97,7 +97,7 @@ const FestivalCard = ({ festival, compact = false }) => {
           </Link>
         )}
         <Link 
-          to={`/adults/festivals/${festival.id}`} 
+          to={`/festivals/${festival.id}`} 
           className="festival-card-view-details"
         >
           View Details →

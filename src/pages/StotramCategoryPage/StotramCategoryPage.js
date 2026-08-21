@@ -49,14 +49,14 @@ const StotramCategoryPage = () => {
   const handleStotramClick = (stotram) => {
     // We will navigate to the Universal Reader, passing the title as the ID
     // and passing the category so the reader knows where to fetch from
-    navigate(`/adults/stotrams/read/${encodeURIComponent(stotram.title)}?category=${categorySlug}`);
+    navigate(`/stotrams/read/${encodeURIComponent(stotram.title)}?category=${categorySlug}`);
   };
 
   return (
     <div className="stotram-category-page">
       <main className="category-main">
         <div className="category-header-wrapper">
-          <Link to="/adults/stotrams" className="back-link">
+          <Link to="/stotrams" className="back-link">
             <span className="material-icons">arrow_back</span>
             Back to Library
           </Link>

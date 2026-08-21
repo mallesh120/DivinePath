@@ -15,7 +15,7 @@ const BookLandingPage = () => {
     return (
       <div className="book-not-found">
         <h2>Sacred Text not found!</h2>
-        <Link to="/adults/library" className="back-to-library-btn">Return to Library</Link>
+        <Link to="/library" className="back-to-library-btn">Return to Library</Link>
       </div>
     );
   }
@@ -78,7 +78,7 @@ const BookLandingPage = () => {
               
               return (
                 <SpiritualCard key={routeId}>
-                  <Link to={`/adults/library/${book.id}/${routeId}`} className="toc-card-link">
+                  <Link to={`/library/${book.id}/${routeId}`} className="toc-card-link">
                     <div className="toc-card-content">
                       <h3 className="toc-card-title">{title}</h3>
                       
@@ -105,7 +105,7 @@ const BookLandingPage = () => {
       </div>
 
       <div className="back-link-container">
-        <Link to="/adults/library" className="back-to-library-btn">
+        <Link to="/library" className="back-to-library-btn">
           &larr; Back to Literature Library
         </Link>
       </div>

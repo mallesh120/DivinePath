@@ -499,7 +499,7 @@ function MuhurtaFinderPage() {
             who can consider your personal birth chart and other specific factors.
           </p>
         </div>
-        <Link to="/adults" className="back-button">
+        <Link to="/" className="back-button">
           ← Back to Dashboard
         </Link>
       </div>

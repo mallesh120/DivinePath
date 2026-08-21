@@ -15,8 +15,8 @@ const KidsLayout = () => {
         <Link to="/kids/home" className="kids-logo">
           🌟 Divine Kids
         </Link>
-        <Link to="/" className="switch-zone-btn" onClick={() => localStorage.removeItem('preferredZone')}>
-          Switch to Adults
+        <Link to="/" className="switch-zone-btn">
+          Back to Main
         </Link>
       </div>
 

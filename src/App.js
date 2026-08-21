@@ -8,8 +8,7 @@ import LoadingSpinner from './components/ui/LoadingSpinner/LoadingSpinner';
 import KidsLayout from './components/KidsLayout/KidsLayout';
 import './App.css';
 
-// Lazy load Zone Selector
-const ZoneSelectorPage = lazy(() => import('./pages/ZoneSelectorPage/ZoneSelectorPage'));
+
 
 // Lazy load Kids Zone components
 const KidsDashboard = lazy(() => import('./pages/Kids/KidsDashboard/KidsDashboard'));
@@ -45,18 +44,7 @@ const StotramReaderPage = lazy(() => import('./pages/StotramReaderPage/StotramRe
 // Loading fallback component
 const LoadingFallback = () => <LoadingSpinner />;
 
-// Root Component to redirect based on Zone preference
-const RootRouter = () => {
-  const preferredZone = localStorage.getItem('preferredZone');
-  if (preferredZone === 'kids') {
-    return <Navigate to="/kids/home" replace />;
-  } else if (preferredZone === 'adults') {
-    return <Navigate to="/adults" replace />;
-  }
-  return <Navigate to="/selector" replace />;
-};
-
-// Wrapper for Adult Layout
+// Wrapper for Main Layout
 const AdultsLayoutWrapper = () => (
   <>
     <Navbar />
@@ -102,31 +90,15 @@ function App() {
       <AnimatePresence mode="wait">
         <Suspense fallback={<LoadingFallback />}>
           <Routes location={location} key={location.pathname.split('/')[1]}>
-            {/* Entry Routing */}
-            <Route path="/" element={<RootRouter />} />
-            <Route path="/selector" element={withTransition(ZoneSelectorPage)} />
-
-            {/* Kids Zone */}
-            <Route path="/kids" element={<KidsLayout />}>
-              <Route index element={<Navigate to="home" replace />} />
-              <Route path="home" element={withTransition(KidsDashboard)} />
-              <Route path="stories" element={withTransition(StorybookViewer)} />
-              <Route path="stories/:storyId" element={withTransition(StorybookViewer)} />
-              <Route path="games" element={withTransition(KidsGamesHub)} />
-              <Route path="games/trivia" element={withTransition(KidsTriviaGame)} />
-              <Route path="games/memory" element={withTransition(MemoryMatch)} />
-              <Route path="chanting" element={withTransition(KidsChanting)} />
-            </Route>
-
-            {/* Adults Zone */}
-            <Route path="/adults" element={<AdultsLayoutWrapper />}>
+            {/* Main Application Routes */}
+            <Route path="/" element={<AdultsLayoutWrapper />}>
               <Route index element={withTransition(PersonalizedDashboard)} />
               <Route path="devotional" element={withTransition(HomePage)} />
               <Route path="gods" element={withTransition(GodsGalleryPage)} />
               <Route path="gods/all" element={withTransition(AllGodsGalleryPage)} />
               <Route path="gods/:godId" element={withTransition(GodDetailPage)} />
               <Route path="library" element={withTransition(LiteratureLibraryPage)} />
-              <Route path="festivals" element={<Navigate to="/adults/calendar" state={{ activeTab: 'festivals' }} replace />} />
+              <Route path="festivals" element={<Navigate to="/calendar" state={{ activeTab: 'festivals' }} replace />} />
               <Route path="festivals/:festivalId" element={withTransition(FestivalDetailPage)} />
               <Route path="calendar" element={withTransition(PanchangPage)} />
               <Route path="pujas" element={withTransition(PujaListPage)} />
@@ -142,6 +114,20 @@ function App() {
               <Route path="festival-countdown" element={withTransition(FestivalCountdownPage)} />
               <Route path="puja-reminders" element={withTransition(PujaReminderPage)} />
             </Route>
+
+            {/* Kids Zone */}
+            <Route path="/kids" element={<KidsLayout />}>
+              <Route index element={<Navigate to="home" replace />} />
+              <Route path="home" element={withTransition(KidsDashboard)} />
+              <Route path="stories" element={withTransition(StorybookViewer)} />
+              <Route path="stories/:storyId" element={withTransition(StorybookViewer)} />
+              <Route path="games" element={withTransition(KidsGamesHub)} />
+              <Route path="games/trivia" element={withTransition(KidsTriviaGame)} />
+              <Route path="games/memory" element={withTransition(MemoryMatch)} />
+              <Route path="chanting" element={withTransition(KidsChanting)} />
+            </Route>
+
+
 
             {/* Catch all redirect to root */}
             <Route path="*" element={<Navigate to="/" replace />} />

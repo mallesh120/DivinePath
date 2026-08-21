@@ -144,7 +144,7 @@ const PersonalizedDashboard = () => {
           </div>
 
           {/* Panchang Mini-Status */}
-          <Link to="/adults/calendar" className="panchang-mini-card glass-panel">
+          <Link to="/calendar" className="panchang-mini-card glass-panel">
              {panchangamLoading ? (
                <div className="mini-status-loading">Consulting the stars...</div>
              ) : panchangamData ? (
@@ -261,23 +261,23 @@ const PersonalizedDashboard = () => {
         <section className="dashboard-zone zone-navigation">
           <h2 className="zone-title">Explore</h2>
           <div className="nav-hub-scroll">
-            <Link to="/adults/gods" className="nav-hub-item glass-panel">
+            <Link to="/gods" className="nav-hub-item glass-panel">
               <span className="nav-hub-icon">🕉️</span>
               <span className="nav-hub-label">Gods Gallery</span>
             </Link>
-            <Link to="/adults/library" className="nav-hub-item glass-panel">
+            <Link to="/library" className="nav-hub-item glass-panel">
               <span className="nav-hub-icon">📚</span>
               <span className="nav-hub-label">Sacred Texts</span>
             </Link>
-            <Link to="/adults/pujas" className="nav-hub-item glass-panel">
+            <Link to="/pujas" className="nav-hub-item glass-panel">
               <span className="nav-hub-icon">🔱</span>
               <span className="nav-hub-label">Puja Guide</span>
             </Link>
-            <Link to="/adults/calendar" state={{ activeTab: 'festivals' }} className="nav-hub-item glass-panel">
+            <Link to="/calendar" state={{ activeTab: 'festivals' }} className="nav-hub-item glass-panel">
               <span className="nav-hub-icon">🎊</span>
               <span className="nav-hub-label">Festivals</span>
             </Link>
-            <Link to="/adults/muhurta-finder" className="nav-hub-item glass-panel">
+            <Link to="/muhurta-finder" className="nav-hub-item glass-panel">
               <span className="nav-hub-icon">🕐</span>
               <span className="nav-hub-label">Muhurtas</span>
             </Link>

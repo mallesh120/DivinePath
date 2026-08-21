@@ -52,7 +52,7 @@ const PujaGuidePage = () => {
           <span className={styles['not-found-icon']}>🔍</span>
           <h2>Puja Not Found</h2>
           <p>The puja you're looking for doesn't exist.</p>
-          <Link to="/adults/pujas" className={styles['back-to-list-btn']}>
+          <Link to="/pujas" className={styles['back-to-list-btn']}>
             Browse All Pujas
           </Link>
         </div>
@@ -144,7 +144,7 @@ const PujaGuidePage = () => {
   return (
     <div className={styles['puja-guide-page']}>
       <div className={styles['puja-guide-header']}>
-        <Link to="/adults/pujas" className={styles['back-link']}>← Back to Pujas</Link>
+        <Link to="/pujas" className={styles['back-link']}>← Back to Pujas</Link>
         <div className={styles['puja-guide-title']}>
           <h1>{puja.name}</h1>
           <div className={styles['puja-meta']}>

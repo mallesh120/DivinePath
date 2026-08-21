@@ -65,53 +65,51 @@ const Navbar = () => {
   return (
     <nav className="navbar" role="navigation" aria-label="Main Navigation">
       <div className="navbar-brand">
-        <NavLink to="/adults">Divine Path</NavLink>
+        <NavLink to="/">Divine Path</NavLink>
       </div>
       <ul className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
         <li>
-          <NavLink to="/adults" end className={({ isActive }) => (isActive ? 'active-link' : '')}>
+          <NavLink to="/" end className={({ isActive }) => (isActive ? 'active-link' : '')}>
             Home
           </NavLink>
         </li>
 
         <li>
-          <NavLink to="/adults/gods" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+          <NavLink to="/gods" className={({ isActive }) => (isActive ? 'active-link' : '')}>
             Gods Gallery
           </NavLink>
         </li>
         <li>
-          <NavLink to="/adults/library" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+          <NavLink to="/library" className={({ isActive }) => (isActive ? 'active-link' : '')}>
             Literature
           </NavLink>
         </li>
         <li>
-          <NavLink to="/adults/sacred-texts" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+          <NavLink to="/sacred-texts" className={({ isActive }) => (isActive ? 'active-link' : '')}>
             Sacred Texts
           </NavLink>
         </li>
         <li>
-          <NavLink to="/adults/calendar" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+          <NavLink to="/calendar" className={({ isActive }) => (isActive ? 'active-link' : '')}>
             Hindu Calendar
           </NavLink>
         </li>
         <li>
-          <NavLink to="/adults/pujas" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+          <NavLink to="/pujas" className={({ isActive }) => (isActive ? 'active-link' : '')}>
             Puja Guide
           </NavLink>
         </li>
       </ul>
 
       <div className="navbar-actions">
-        <button 
+        <NavLink 
+          to="/kids"
           className="switch-zone-nav-btn"
-          onClick={() => {
-            localStorage.setItem('preferredZone', 'kids');
-            window.location.href = '/kids';
-          }}
           aria-label="Switch to Kids Zone"
+          style={{ textDecoration: 'none' }}
         >
           🎈 Kids
-        </button>
+        </NavLink>
 
         <button 
           className="theme-toggle" 
