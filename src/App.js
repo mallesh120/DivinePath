@@ -22,7 +22,7 @@ const KidsChanting = lazy(() => import('./pages/Kids/Chanting/KidsChanting'));
 const PersonalizedDashboard = lazy(() => import('./pages/PersonalizedDashboard/PersonalizedDashboard'));
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const GodsGalleryPage = lazy(() => import('./pages/GodsGalleryPage/GodsGalleryPage'));
-const AllGodsGalleryPage = lazy(() => import('./pages/AllGodsGalleryPage/AllGodsGalleryPage'));
+
 const LiteratureLibraryPage = lazy(() => import('./pages/LiteratureLibraryPage/LiteratureLibraryPage'));
 const GodDetailPage = lazy(() => import('./pages/GodDetailPage/GodDetailPage'));
 // FestivalsPage has been merged into PanchangPage
@@ -95,7 +95,7 @@ function App() {
               <Route index element={withTransition(PersonalizedDashboard)} />
               <Route path="devotional" element={withTransition(HomePage)} />
               <Route path="gods" element={withTransition(GodsGalleryPage)} />
-              <Route path="gods/all" element={withTransition(AllGodsGalleryPage)} />
+
               <Route path="gods/:godId" element={withTransition(GodDetailPage)} />
               <Route path="library" element={withTransition(LiteratureLibraryPage)} />
               <Route path="festivals" element={<Navigate to="/calendar" state={{ activeTab: 'festivals' }} replace />} />

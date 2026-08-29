@@ -8,7 +8,7 @@ export const balKandScenes = [
     imageUrl: ""
   },
   {
-    text: "Sage Valmiki, the great saint and author of the ancient Ramayana, blessed the royal family with the assurance that they would be granted four sons of unparalleled excellence. This blessing filled the hearts of the queens with joy and hope.",
+    text: "Sage Vashistha, the royal priest, advised King Dasharatha to perform the Putrakameshti Yajna under the guidance of Sage Shringi. This sacred ritual was performed with great devotion, filling the hearts of the queens with joy and hope.",
     imageUrl: ""
   },
   {

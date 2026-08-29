@@ -13,7 +13,7 @@ export const rigvedaObject = {
   id: 'rigveda',
   title: 'Rigveda',
   summary: 'The most ancient and sacred of the four Vedas, containing profound hymns on cosmic principles and divine wisdom.',
-  imageUrl: 'https://placehold.co/600x800/EA580C/ffffff?text=Rigveda',
+  imageUrl: '/images/literature/cover_rigveda_1787361454013.jpg',
   introduction: 'The Rigveda is the oldest and most sacred of the four Vedas, the foundational scriptures of Hinduism. Compiled over centuries and containing 10,552 verses organized in 10 mandalas (books), the Rigveda represents humanity\'s earliest attempts to understand the divine and cosmic principles. These hymns praise various deities - Agni, Indra, Soma, Ashvins, and many others - while containing profound philosophical teachings about creation, consciousness, righteousness, and ultimate reality. The Rigveda serves as the source for all Hindu spiritual knowledge and continues to inspire seekers on the path of self-realization.',
   author: 'Ancient Vedic Seers (Rishis)',
   language: 'Vedic Sanskrit',

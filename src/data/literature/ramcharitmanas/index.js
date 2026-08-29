@@ -10,7 +10,7 @@ export const ramcharitmanasObject = {
   id: 'ramcharitmanas',
   title: 'Ramcharitmanas',
   summary: 'The beloved epic tale of Lord Rama by Sant Tulsidas, celebrating devotion, dharma, and divine love.',
-  imageUrl: 'https://placehold.co/600x800/EA580C/ffffff?text=Ramcharitmanas',
+  imageUrl: '/images/literature/cover_ramcharitmanas_1787361444644.jpg',
   introduction: 'The Ramcharitmanas, composed by the great saint Tulsidas, is one of the most beloved and widely read epics in Hindu tradition. Written in Awadhi language with devotional fervor, it tells the divine story of Lord Rama with poetic grace and spiritual profundity. The epic encompasses seven kandas (books) that narrate the incarnation, trials, heroic deeds, and ultimate triumph of Rama, along with profound lessons on dharma (righteousness), bhakti (devotion), and the eternal nature of divinity.',
   author: 'Sant Tulsidas',
   language: 'Awadhi (Hindi)',

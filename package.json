@@ -4,10 +4,6 @@
   "private": true,
   "dependencies": {
     "@ishubhamx/panchangam-js": "^2.2.6",
-    "@testing-library/dom": "^10.4.1",
-    "@testing-library/jest-dom": "^6.6.4",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^13.5.0",
     "framer-motion": "^12.38.0",
     "node-fetch": "^2.7.0",
     "react": "^19.1.1",
@@ -21,43 +17,21 @@
     "workbox-routing": "^7.4.0",
     "workbox-strategies": "^7.4.0"
   },
-  "devDependencies": {
-    "playwright": "^1.57.0"
-  },
   "scripts": {
     "start": "node scripts/strip-sourcemaps.js && rm -rf node_modules/.cache && react-scripts start",
     "build": "node scripts/strip-sourcemaps.js && rm -rf node_modules/.cache && react-scripts build",
-    "test": "react-scripts test",
-    "test:e2e": "playwright test",
-    "test:e2e:headed": "playwright test --headed",
-    "test:e2e:ui": "playwright test --ui",
     "eject": "react-scripts eject",
     "generate-mantras": "node scripts/generate-mantras.js",
     "lint": "eslint src --ext .js,.jsx --max-warnings=10",
     "lint:fix": "eslint src --ext .js,.jsx --fix --max-warnings=10",
     "pre-push": "npm run lint && npm run build",
-    "test-playwright": "node scripts/test-playwright-setup.js",
     "scrape-batch": "node scripts/batch-scrape-playwright.js",
     "scrape-universal": "node scripts/scrape-universal.js"
   },
   "postinstall": "node scripts/strip-sourcemaps.js",
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.test.js",
-          "**/*.test.jsx"
-        ],
-        "rules": {
-          "testing-library/no-container": "off",
-          "testing-library/no-node-access": "off",
-          "jest/no-conditional-expect": "off"
-        }
-      }
+      "react-app"
     ]
   },
   "browserslist": {

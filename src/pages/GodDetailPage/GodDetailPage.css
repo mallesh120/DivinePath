@@ -829,3 +829,69 @@
   text-align: center;
   padding: 50px;
 }
+
+/* ========================================= */
+/* COSMIC DARK MODE OVERRIDES                */
+/* ========================================= */
+
+[data-theme='dark'].detail-page {
+  background: var(--bg-primary);
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(249, 115, 22, 0.05), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(34, 197, 94, 0.03), transparent 25%);
+  background-attachment: fixed;
+}
+
+[data-theme='dark'] .detail-hero,
+[data-theme='dark'] .detail-container,
+[data-theme='dark'] .ashtottaram-preview,
+[data-theme='dark'] .festivals-section,
+[data-theme='dark'] .stories-section,
+[data-theme='dark'] .image-gallery {
+  background: rgba(30, 41, 59, 0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .sample-name-card,
+[data-theme='dark'] .festival-card,
+[data-theme='dark'] .story-card,
+[data-theme='dark'] .main-consort-card,
+[data-theme='dark'] .deity-card,
+[data-theme='dark'] .detail-mantra-container,
+[data-theme='dark'] .consort-mantra {
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='dark'] .deity-image-wrapper,
+[data-theme='dark'] .detail-image-container,
+[data-theme='dark'] .consort-image-container {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+[data-theme='dark'] .symbol-tag,
+[data-theme='dark'] .symbol-tag-small {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  border-color: rgba(249, 115, 22, 0.3);
+}
+
+[data-theme='dark'] .story-card:hover,
+[data-theme='dark'] .festival-card:hover,
+[data-theme='dark'] .deity-card:hover,
+[data-theme='dark'] .sample-name-card:hover {
+  border-color: var(--saffron-primary);
+  box-shadow: 0 10px 30px rgba(234, 88, 12, 0.2);
+}
+
+[data-theme='dark'] .detail-hero::before,
+[data-theme='dark'] .main-consort-card::before,
+[data-theme='dark'] .festival-card::before,
+[data-theme='dark'] .story-card::before {
+  opacity: 0.8;
+}

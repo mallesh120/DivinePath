@@ -18,6 +18,17 @@ import kartikeyaImage from '../../assets/images/Gods/kartikeya.png';
 import kuberaImage from '../../assets/images/Gods/kubera.webp';
 import yamaImage from '../../assets/images/Gods/yama.webp';
 
+import matsyaImage from '../../assets/images/Dashavatara/matsya.jpg';
+import kurmaImage from '../../assets/images/Dashavatara/kurma.jpg';
+import varahaImage from '../../assets/images/Dashavatara/varaha.jpg';
+import narasimhaImage from '../../assets/images/Dashavatara/narasimha.jpg';
+import vamanaImage from '../../assets/images/Dashavatara/vamana.jpg';
+import parashuramaImage from '../../assets/images/Dashavatara/parashurama.jpg';
+import ramaAvatarImage from '../../assets/images/Dashavatara/rama.jpg';
+import krishnaAvatarImage from '../../assets/images/Dashavatara/krishna.jpg';
+import buddhaImage from '../../assets/images/Dashavatara/buddha.jpg';
+import kalkiImage from '../../assets/images/Dashavatara/kalki.jpg';
+
 // The Holy Trinity (Trimurti)
 export const trimurtiData = [
   {
@@ -66,52 +77,62 @@ export const trimurtiData = [
       {
         name: "Matsya",
         description: "The Fish - Saved humanity from the great flood",
-        order: 1
+        order: 1,
+        imageUrl: matsyaImage
       },
       {
         name: "Kurma",
         description: "The Tortoise - Supported Mount Mandara during churning of the ocean",
-        order: 2
+        order: 2,
+        imageUrl: kurmaImage
       },
       {
         name: "Varaha",
         description: "The Boar - Rescued Earth from the demon Hiranyaksha",
-        order: 3
+        order: 3,
+        imageUrl: varahaImage
       },
       {
         name: "Narasimha",
         description: "The Man-Lion - Defeated the demon king Hiranyakashipu",
-        order: 4
+        order: 4,
+        imageUrl: narasimhaImage
       },
       {
         name: "Vamana",
         description: "The Dwarf - Subdued the demon king Bali",
-        order: 5
+        order: 5,
+        imageUrl: vamanaImage
       },
       {
         name: "Parashurama",
         description: "Rama with an Axe - Warrior sage who fought corrupt kshatriyas",
-        order: 6
+        order: 6,
+        imageUrl: parashuramaImage
       },
       {
         name: "Rama",
         description: "Prince of Ayodhya - Hero of the Ramayana, embodiment of dharma",
-        order: 7
+        order: 7,
+        imageUrl: ramaAvatarImage
       },
       {
         name: "Krishna",
         description: "The Divine Cowherd - Teacher of Bhagavad Gita, central to Mahabharata",
-        order: 8
+        order: 8,
+        imageUrl: krishnaAvatarImage
       },
       {
         name: "Buddha",
         description: "The Enlightened One - Founded Buddhism and taught compassion",
-        order: 9
+        order: 9,
+        imageUrl: buddhaImage
       },
       {
         name: "Kalki",
         description: "The Future Avatar - Will appear at the end of Kali Yuga to restore dharma",
-        order: 10
+        order: 10,
+        imageUrl: kalkiImage
       }
     ]
   },
