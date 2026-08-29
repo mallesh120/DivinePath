@@ -6,7 +6,7 @@ import { kaanda20Scenes } from './kaanda_20';
 const createKaandaScenes = (kaandaNumber) => [
   {
     text: `The ${kaandaNumber} kaanda of the Atharvaveda contains hymns addressing various aspects of spiritual practice and material well-being. These verses provide guidance for navigating the complexities of earthly existence while maintaining spiritual awareness.`,
-    imageUrl: "https://placehold.co/600x400/EA580C/ffffff?text=Atharvaveda+Scene"
+    imageUrl: '/images/literature/cover_atharvaveda_1787361461854.jpg'
   },
   {
     text: `Prayers in this kaanda invoke divine protection and blessings for specific purposes. The Atharvaveda recognizes that different situations require different approaches, and provides mantras tailored to diverse human needs.`,

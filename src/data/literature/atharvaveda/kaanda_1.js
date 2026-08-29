@@ -1,23 +1,23 @@
 export const kaanda1Scenes = [
   {
     text: "The first kaanda of the Atharvaveda opens with hymns for protection and prosperity. These verses invoke divine forces to remove obstacles, bring health and abundance, and establish a foundation of security for all beings.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/atharvaveda_scene_1_1_1787979630561.jpg"
   },
   {
     text: "Extensive hymns address the removal of negative influences, curses, and harmful forces. The Atharvaveda recognizes the reality of malevolent influences and provides practical means through sacred mantras to counteract them.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/atharvaveda_scene_1_2_1787979641293.jpg"
   },
   {
     text: "Prayers for healing illnesses and restoration of health reveal the Atharvaveda's interest in both spiritual and physical well-being. Disease is addressed as both a physical phenomenon and a manifestation of spiritual imbalance.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/atharvaveda_scene_1_3_1787979652267.jpg"
   },
   {
     text: "The Atharvaveda teaches that proper conduct and righteous living form the foundation of health and prosperity. These hymns establish dharma as the supreme healer and protector of both individuals and communities.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/atharvaveda_scene_1_4_retry_1787979694329.jpg"
   },
   {
     text: "Hymns celebrate the power of sacred words and mantras to transform circumstances. The proper recitation of Vedic verses with sincere intention is presented as a means to invoke divine assistance in daily life.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/atharvaveda_scene_1_5_1787979669157.jpg"
   },
   {
     text: "Prayers for fertility, prosperity in agricultural pursuits, and abundance of cattle emphasize the Atharvaveda's practical concern with material well-being. Abundance comes through a combination of effort and divine blessing.",

@@ -6,7 +6,7 @@ export const bhagavadGitaObject = {
   title: 'Bhagavad Gita',
   type: 'scripture',
   summary: 'The divine dialogue between Lord Krishna and Arjuna on the battlefield of Kurukshetra, covering philosophy, devotion, and the path to enlightenment.',
-  imageUrl: 'https://placehold.co/600x800/EA580C/ffffff?text=Bhagavad+Gita',
+  imageUrl: '/images/literature/cover_bhagavad_gita_1787361499699.jpg',
   introduction: "The Bhagavad Gita, often referred to as the Gita, is a 700-verse Hindu scripture that is part of the epic Mahabharata. It presents a synthesis of Hindu ideas about dharma, theistic bhakti, and the yogic ideals of moksha. The text is a dialogue between Prince Arjuna and the god Krishna, who serves as his charioteer.",
   hasAudio: true,
   hasIllustrations: true,

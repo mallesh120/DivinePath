@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { godsData, trimurtiData } from '../../data/gods/godsData';
 import { ashtottaramData } from '../../data/ashtottaram/ashtottaramData';
 import ImageGallery from '../../components/ImageGallery/ImageGallery';
+import { motion } from 'framer-motion';
 import './GodDetailPage.css';
 
 const GodDetailPage = () => {
@@ -29,8 +30,13 @@ const GodDetailPage = () => {
   // Get ashtottaram data if available
   const ashtottaram = ashtottaramData[godId] || ashtottaramData[god.id];
 
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
   return (
-    <div className="detail-page">
+    <div className="detail-page" data-theme="dark">
       <Link to="/gods" className="back-link-top">
         ← Back to Gallery
       </Link>
@@ -39,7 +45,13 @@ const GodDetailPage = () => {
       {isTrinity ? (
         <>
           {/* Main God Hero Section */}
-          <div className="detail-hero">
+          <motion.div 
+            className="detail-hero"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={sectionVariants}
+          >
             <div className="detail-image-container">
               <img src={god.imageUrl} alt={god.name} className="detail-image" />
             </div>
@@ -72,11 +84,17 @@ const GodDetailPage = () => {
                 </div>
               )}
             </div>
-          </div>
+          </motion.div>
 
           {/* Festivals Section */}
           {god.festivals && god.festivals.length > 0 && (
-            <div className="festivals-section">
+            <motion.div 
+              className="festivals-section"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              variants={sectionVariants}
+            >
               <h2 className="section-title">Associated Festivals</h2>
               <div className="festivals-grid">
                 {god.festivals.map((festival, index) => (
@@ -88,12 +106,18 @@ const GodDetailPage = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           )}
 
           {/* Ashtottaram Section */}
           {ashtottaram && (
-            <div className="ashtottaram-section">
+            <motion.div 
+              className="ashtottaram-section"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              variants={sectionVariants}
+            >
               <h2 className="section-title">108 Names (Ashtottara Shatanamavali)</h2>
               <div className="ashtottaram-preview">
                 <p className="ashtottaram-description">{ashtottaram.description}</p>
@@ -114,12 +138,18 @@ const GodDetailPage = () => {
                   View All 108 Names with Audio →
                 </Link>
               </div>
-            </div>
+            </motion.div>
           )}
 
           {/* Related Stories Section */}
           {god.relatedStories && god.relatedStories.length > 0 && (
-            <div className="stories-section">
+            <motion.div 
+              className="stories-section"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              variants={sectionVariants}
+            >
               <h2 className="section-title">Related Stories</h2>
               <div className="stories-grid">
                 {god.relatedStories.map((story, index) => (
@@ -131,17 +161,30 @@ const GodDetailPage = () => {
                   </Link>
                 ))}
               </div>
-            </div>
+            </motion.div>
           )}
 
           {/* Image Gallery */}
           {god.imageGallery && god.imageGallery.length > 0 && (
-            <ImageGallery images={god.imageGallery} godName={god.name} />
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              variants={sectionVariants}
+            >
+              <ImageGallery images={god.imageGallery} godName={god.name} />
+            </motion.div>
           )}
 
           {/* Consort, Family, and Avatars Section */}
           {god.consort && (
-            <div className="divine-family-container">
+            <motion.div 
+              className="divine-family-container"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              variants={sectionVariants}
+            >
               {/* Main Consort Card */}
               <div className="main-consort-card">
                 <div className="consort-image-container">
@@ -198,13 +241,19 @@ const GodDetailPage = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           )}
         </>
       ) : (
         /* Non-Trinity gods */
         <>
-          <div className="detail-container">
+          <motion.div 
+            className="detail-container"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={sectionVariants}
+          >
             <div className="detail-image-container">
               <img src={god.imageUrl} alt={god.name} className="detail-image" />
             </div>
@@ -231,11 +280,17 @@ const GodDetailPage = () => {
                 )}
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Festivals Section */}
           {god.festivals && god.festivals.length > 0 && (
-            <div className="festivals-section">
+            <motion.div 
+              className="festivals-section"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              variants={sectionVariants}
+            >
               <h2 className="section-title">Associated Festivals</h2>
               <div className="festivals-grid">
                 {god.festivals.map((festival, index) => (
@@ -247,12 +302,18 @@ const GodDetailPage = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           )}
 
           {/* Ashtottaram Section */}
           {ashtottaram && (
-            <div className="ashtottaram-section">
+            <motion.div 
+              className="ashtottaram-section"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              variants={sectionVariants}
+            >
               <h2 className="section-title">108 Names (Ashtottara Shatanamavali)</h2>
               <div className="ashtottaram-preview">
                 <p className="ashtottaram-description">{ashtottaram.description}</p>
@@ -273,12 +334,18 @@ const GodDetailPage = () => {
                   View All 108 Names with Audio →
                 </Link>
               </div>
-            </div>
+            </motion.div>
           )}
 
           {/* Related Stories Section */}
           {god.relatedStories && god.relatedStories.length > 0 && (
-            <div className="stories-section">
+            <motion.div 
+              className="stories-section"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              variants={sectionVariants}
+            >
               <h2 className="section-title">Related Stories</h2>
               <div className="stories-grid">
                 {god.relatedStories.map((story, index) => (
@@ -290,12 +357,19 @@ const GodDetailPage = () => {
                   </Link>
                 ))}
               </div>
-            </div>
+            </motion.div>
           )}
 
           {/* Image Gallery */}
           {god.imageGallery && god.imageGallery.length > 0 && (
-            <ImageGallery images={god.imageGallery} godName={god.name} />
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              variants={sectionVariants}
+            >
+              <ImageGallery images={god.imageGallery} godName={god.name} />
+            </motion.div>
           )}
 
           <Link to="/gods" className="back-link">

@@ -6,7 +6,7 @@ export const vishnuPuranaObject = {
   title: 'Vishnu Purana',
   type: 'purana',
   summary: 'One of the eighteen Mahapuranas, this sacred text glorifies Lord Vishnu and describes the creation, maintenance, and dissolution of the universe.',
-  imageUrl: 'https://placehold.co/600x800/EA580C/ffffff?text=Vishnu+Purana',
+  imageUrl: '/images/literature/cover_vishnu_purana_1787361507333.jpg',
   introduction: "The Vishnu Purana is one of the eighteen Mahapuranas and is considered one of the most important Puranas. It describes the creation of the universe, the genealogy of gods and sages, the avatars of Vishnu, and provides guidelines for living a righteous life. It consists of six books (amshas) with approximately 23,000 verses.",
   hasAudio: true,
   hasIllustrations: true,

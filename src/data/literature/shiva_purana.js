@@ -6,7 +6,7 @@ export const shivaPuranaObject = {
   title: 'Shiva Purana',
   type: 'purana',
   summary: 'One of the eighteen Mahapuranas, dedicated to Lord Shiva, describing his glory, forms, sacred places, and stories of devotees.',
-  imageUrl: 'https://placehold.co/600x800/EA580C/ffffff?text=Shiva+Purana',
+  imageUrl: '/images/literature/cover_shiva_purana_1787361516444.jpg',
   introduction: "The Shiva Purana is one of the eighteen Mahapuranas and is dedicated to Lord Shiva. It glorifies Shiva as the supreme being, describes his various forms and manifestations, narrates stories of his devotees, and provides guidelines for worship and spiritual practices. It contains approximately 24,000 verses organized into seven samhitas (sections).",
   hasAudio: true,
   hasIllustrations: true,
