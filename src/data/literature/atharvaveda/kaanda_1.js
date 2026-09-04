@@ -21,14 +21,14 @@ export const kaanda1Scenes = [
   },
   {
     text: "Prayers for fertility, prosperity in agricultural pursuits, and abundance of cattle emphasize the Atharvaveda's practical concern with material well-being. Abundance comes through a combination of effort and divine blessing.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_batch2_1_1787980525585.jpg"
   },
   {
     text: "The Atharvaveda addresses the role of divine and supernatural forces in human affairs. Recognition of these forces and proper rituals to align with them are presented as practical wisdom for successful living.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_batch2_2_1787980537474.jpg"
   },
   {
     text: "Hymns establish the principle of cause and effect in spiritual matters, teaching that thoughts, words, and actions have consequences that shape future circumstances. Awareness of this principle enables conscious creation of favorable conditions.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_batch2_3_1787980549140.jpg"
   }
 ];

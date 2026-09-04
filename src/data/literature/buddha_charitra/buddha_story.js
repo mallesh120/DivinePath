@@ -1,23 +1,23 @@
 export const buddhaStoryScenes = [
   {
     text: "Long ago, in a beautiful kingdom nestled at the foothills of the Himalayas, a prince named Siddhartha Gautama was born. According to Hindu tradition, he is considered the ninth avatar of Lord Vishnu. At his birth, wise men predicted that he would either become a great world-conquering king or a highly enlightened spiritual teacher.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_batch8_3_1788522264735.jpg"
   },
   {
     text: "His father, the King, desperately wanted him to be a powerful ruler. To prevent Siddhartha from becoming a spiritual teacher, the King decided to hide him from all the sadness and suffering of the world. He built three magnificent palaces for the prince and filled them with music, delicious food, and luxury.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_batch8_4_1788522275457.jpg"
   },
   {
     text: "Prince Siddhartha grew up surrounded by beauty. He married a beautiful princess, had a son, and never saw a sick person, an old person, or death. He believed that the whole world was a perfect, happy place.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_batch8_5_1788522286521.jpg"
   },
   {
     text: "But one day, the young prince grew curious about the world outside his palace walls. He ordered his charioteer to take him for a ride through the city. Despite the King's efforts to clear the streets of anything unpleasant, Siddhartha saw four things that changed his life forever.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_batch9_1_1788522334380.jpg"
   },
   {
     text: "First, he saw an old man, frail and struggling to walk. Next, he saw a sick man crying in pain. Then, he saw a dead body being carried to a funeral pyre. Shocked and heartbroken, Siddhartha realized that youth, health, and life itself are temporary, and everyone must suffer.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_batch9_2_1788522345992.jpg"
   },
   {
     text: "Finally, he saw a peaceful ascetic (a wandering monk) wearing simple robes. This man had no money or home, yet his face was calm and glowing with inner peace. Siddhartha realized that true happiness could not be found in palace luxuries, but only through understanding the truth of life.",
