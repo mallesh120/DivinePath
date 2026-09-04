@@ -10,20 +10,39 @@ const HINDU_LUNAR_MONTHS = [
   'Ashwin', 'Kartik', 'Margashirsha', 'Pausha', 'Magha', 'Phalguna'
 ];
 
-const FestivalsTab = () => {
+const FestivalsTab = (props) => {
   const [selectedLunarMonth, setSelectedLunarMonth] = useState('All');
   const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
-  const [userLocation, setUserLocationState] = useState(null);
+  const [userLocation, setUserLocationState] = useState(() => {
+    if (props.location && props.placeName) {
+      return {
+        latitude: props.location.latitude,
+        longitude: props.location.longitude,
+        city: props.placeName,
+        country: ''
+      };
+    }
+    return null;
+  });
   const [showLocationPicker, setShowLocationPicker] = useState(false);
 
-  // Get user location on mount
+  // Sync user location on mount or when props update
   useEffect(() => {
-    const loadLocation = async () => {
-      const location = await getLocationForFestivals();
-      setUserLocationState(location);
-    };
-    loadLocation();
-  }, []);
+    if (props.location && props.placeName) {
+      setUserLocationState({
+        latitude: props.location.latitude,
+        longitude: props.location.longitude,
+        city: props.placeName,
+        country: ''
+      });
+    } else {
+      const loadLocation = async () => {
+        const location = await getLocationForFestivals();
+        setUserLocationState(location);
+      };
+      loadLocation();
+    }
+  }, [props.location, props.placeName]);
 
   // Dynamic theme is now handled globally in App.js
 
@@ -115,6 +134,12 @@ const FestivalsTab = () => {
       );
       setUserLocationState(location);
       setShowLocationPicker(false);
+      if (props.setCity && props.cities) {
+        const matched = props.cities.find(c => c.name.toLowerCase().includes(city.toLowerCase()));
+        if (matched) {
+          props.setCity(matched.id);
+        }
+      }
     }
   };
 
