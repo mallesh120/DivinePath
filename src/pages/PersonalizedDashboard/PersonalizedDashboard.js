@@ -51,7 +51,7 @@ const PersonalizedDashboard = () => {
   // Continue reading state
   const [lastRead, setLastRead] = useState(null);
 
-  const { panchangamData, loading: panchangamLoading, currentCity, setCity, cities } = usePanchangam();
+  const { panchangamData, loading: panchangamLoading, currentCity, setCity, cities, placeName } = usePanchangam();
   
   const currentDate = new Date().toLocaleDateString('en-US', {
     weekday: 'long',
@@ -172,9 +172,14 @@ const PersonalizedDashboard = () => {
                    className="dashboard-city-select"
                    aria-label="Select City for Panchangam"
                  >
-                   {cities && cities.map(c => (
-                     <option key={c.id} value={c.id}>{c.name}</option>
-                   ))}
+                   {cities && cities.map(c => {
+                     const label = c.id === 'auto'
+                       ? (currentCity === 'auto' ? (placeName || c.name) : `${placeName || c.name} (Detected Location)`)
+                       : c.name;
+                     return (
+                       <option key={c.id} value={c.id}>{label}</option>
+                     );
+                   })}
                  </select>
                </div>
                {trafficStatus && (

@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { getPanchangam, Observer, yogaNames, tithiNames, nakshatraNames } from '@ishubhamx/panchangam-js';
 
 export const SACRED_CITIES = [
-  { id: 'auto', name: '📍 Auto-detect GPS', lat: null, lon: null },
+  { id: 'auto', name: 'Current Location', lat: null, lon: null },
   { id: 'varanasi', name: 'Varanasi (Kashi)', lat: 25.3176, lon: 82.9739, elevation: 0.080 },
   { id: 'ayodhya', name: 'Ayodhya', lat: 26.7922, lon: 82.1998, elevation: 0.093 },
   { id: 'haridwar', name: 'Haridwar', lat: 29.9457, lon: 78.1642, elevation: 0.314 },
@@ -19,6 +19,76 @@ export const SACRED_CITIES = [
   { id: 'singapore', name: 'Singapore', lat: 1.3521, lon: 103.8198, elevation: 0.015 },
   { id: 'sydney', name: 'Sydney (Australia)', lat: -33.8688, lon: 151.2093, elevation: 0.019 }
 ];
+
+export const TIMEZONE_COORDINATES = {
+  'America/Detroit': { name: 'Detroit', latitude: 42.3314, longitude: -83.0458, elevation: 0.183 },
+  'America/New_York': { name: 'New York', latitude: 40.7128, longitude: -74.0060, elevation: 0.010 },
+  'America/Chicago': { name: 'Chicago', latitude: 41.8781, longitude: -87.6298, elevation: 0.181 },
+  'America/Los_Angeles': { name: 'Los Angeles', latitude: 34.0522, longitude: -118.2437, elevation: 0.089 },
+  'America/Denver': { name: 'Denver', latitude: 39.7392, longitude: -104.9903, elevation: 1.609 },
+  'America/Phoenix': { name: 'Phoenix', latitude: 33.4484, longitude: -112.0740, elevation: 0.331 },
+  'America/Indiana/Indianapolis': { name: 'Indianapolis', latitude: 39.7684, longitude: -86.1581, elevation: 0.218 },
+  'America/Toronto': { name: 'Toronto', latitude: 43.6532, longitude: -79.3832, elevation: 0.076 },
+  'America/Vancouver': { name: 'Vancouver', latitude: 49.2827, longitude: -123.1207, elevation: 0.070 },
+  'Europe/London': { name: 'London', latitude: 51.5074, longitude: -0.1278, elevation: 0.025 },
+  'Europe/Paris': { name: 'Paris', latitude: 48.8566, longitude: 2.3522, elevation: 0.035 },
+  'Europe/Berlin': { name: 'Berlin', latitude: 52.5200, longitude: 13.4050, elevation: 0.034 },
+  'Asia/Kolkata': { name: 'Bengaluru', latitude: 12.9716, longitude: 77.5946, elevation: 0.920 },
+  'Asia/Calcutta': { name: 'Bengaluru', latitude: 12.9716, longitude: 77.5946, elevation: 0.920 },
+  'Asia/Dubai': { name: 'Dubai', latitude: 25.2048, longitude: 55.2708, elevation: 0.005 },
+  'Asia/Singapore': { name: 'Singapore', latitude: 1.3521, longitude: 103.8198, elevation: 0.015 },
+  'Asia/Tokyo': { name: 'Tokyo', latitude: 35.6762, longitude: 139.6503, elevation: 0.040 },
+  'Australia/Sydney': { name: 'Sydney', latitude: -33.8688, longitude: 151.2093, elevation: 0.019 },
+  'Australia/Melbourne': { name: 'Melbourne', latitude: -37.8136, longitude: 144.9631, elevation: 0.031 },
+};
+
+export const getTimezoneLocation = () => {
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+    if (TIMEZONE_COORDINATES[tz]) {
+      return TIMEZONE_COORDINATES[tz];
+    }
+    const parts = tz.split('/');
+    const rawCity = parts[parts.length - 1]?.replace(/_/g, ' ');
+    if (rawCity) {
+      return { name: rawCity, latitude: 12.9716, longitude: 77.5946, elevation: 0.5 };
+    }
+  } catch (e) {
+    // fallback
+  }
+  return { name: 'Detroit', latitude: 42.3314, longitude: -83.0458, elevation: 0.183 };
+};
+
+export const getInitialLocation = () => {
+  try {
+    const cachedUserLoc = localStorage.getItem('userLocation');
+    if (cachedUserLoc) {
+      const parsed = JSON.parse(cachedUserLoc);
+      if (parsed?.city && parsed.city !== 'Unknown') {
+        return {
+          name: parsed.city,
+          latitude: parsed.latitude || 42.3314,
+          longitude: parsed.longitude || -83.0458,
+          elevation: 0.2
+        };
+      }
+    }
+    const cachedPlace = localStorage.getItem('divine_path_detected_place');
+    const cachedCoords = localStorage.getItem('divine_path_detected_coords');
+    if (cachedPlace) {
+      const coords = cachedCoords ? JSON.parse(cachedCoords) : null;
+      return {
+        name: cachedPlace,
+        latitude: coords?.latitude || 42.3314,
+        longitude: coords?.longitude || -83.0458,
+        elevation: 0.2
+      };
+    }
+  } catch (e) {
+    // Ignore storage parse errors
+  }
+  return getTimezoneLocation();
+};
 
 /**
  * Calculate accurate Hindu calendar information for any date
@@ -119,8 +189,13 @@ export const usePanchangam = () => {
   const [selectedCityId, setSelectedCityId] = useState(() => {
     return localStorage.getItem('divine_path_selected_city') || 'auto';
   });
-  const [location, setLocation] = useState(null);
-  const [placeName, setPlaceName] = useState('Bengaluru');
+  const [initialLoc] = useState(() => getInitialLocation());
+  const [location, setLocation] = useState(() => ({
+    latitude: initialLoc.latitude,
+    longitude: initialLoc.longitude,
+    elevation: initialLoc.elevation || 0.2
+  }));
+  const [placeName, setPlaceName] = useState(() => initialLoc.name);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
   const [panchangamData, setPanchangamData] = useState(null);
@@ -133,25 +208,29 @@ export const usePanchangam = () => {
             const { latitude, longitude } = position.coords;
             setLocation({ latitude, longitude, elevation: 0.5 });
             try {
+              localStorage.setItem('divine_path_detected_coords', JSON.stringify({ latitude, longitude }));
               const res = await fetch(
                 `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`
               );
               const data = await res.json();
-              setPlaceName(data.address?.city || data.address?.town || data.address?.state || 'Local Area');
+              const detected = data.address?.city || data.address?.town || data.address?.village || data.address?.suburb || data.address?.county || data.address?.state || initialLoc.name;
+              setPlaceName(detected);
+              localStorage.setItem('divine_path_detected_place', detected);
             } catch {
-              setPlaceName('Your Location');
+              setPlaceName(initialLoc.name);
             }
             setLoading(false);
           },
           () => {
-            setLocation({ latitude: 12.9716, longitude: 77.5946, elevation: 0.920 });
-            setPlaceName('Bengaluru');
+            setLocation({ latitude: initialLoc.latitude, longitude: initialLoc.longitude, elevation: initialLoc.elevation || 0.2 });
+            setPlaceName(initialLoc.name);
             setLoading(false);
-          }
+          },
+          { timeout: 8000, maximumAge: 3600000 }
         );
       } else {
-        setLocation({ latitude: 12.9716, longitude: 77.5946, elevation: 0.920 });
-        setPlaceName('Bengaluru');
+        setLocation({ latitude: initialLoc.latitude, longitude: initialLoc.longitude, elevation: initialLoc.elevation || 0.2 });
+        setPlaceName(initialLoc.name);
         setLoading(false);
       }
     } else {
@@ -162,7 +241,7 @@ export const usePanchangam = () => {
       }
       setLoading(false);
     }
-  }, []);
+  }, [initialLoc]);
 
   const changeCity = (cityId) => {
     setSelectedCityId(cityId);
@@ -262,16 +341,27 @@ export const usePanchangam = () => {
     }
   }, [loading, location, placeName, selectedCityId]);
 
+  const dynamicCities = SACRED_CITIES.map(c => {
+    if (c.id === 'auto') {
+      return {
+        ...c,
+        name: placeName || initialLoc.name || 'Current Location'
+      };
+    }
+    return c;
+  });
+
   return { 
     loading, 
     error, 
     panchangamData, 
     location, 
+    placeName,
     selectedCityId, 
     changeCity, 
     currentCity: selectedCityId,
     setCity: changeCity,
-    cities: SACRED_CITIES,
+    cities: dynamicCities,
     SACRED_CITIES 
   };
 };
