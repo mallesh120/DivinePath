@@ -117,7 +117,7 @@ const PersonalizedDashboard = () => {
     } else if (isBrahma) {
       trafficStatus = { color: 'green', text: 'Brahma Muhurta Active', icon: '✨', message: 'Divine spiritual hour for sadhana & prayer' };
     } else {
-      trafficStatus = { color: 'yellow', text: 'Shubha Vela', icon: '🟡', message: 'Favorable time for regular duties & sadhana' };
+      trafficStatus = { color: 'yellow', text: 'Shubha Vela', icon: '✨', message: 'Favorable time for regular duties & sadhana' };
     }
   }
 

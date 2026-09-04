@@ -16,7 +16,7 @@ const TodayTab = () => {
   const isRahuKalam = false; // Mock
   const isAbhijit = true; // Mock
 
-  let trafficStatus = { color: 'yellow', text: 'Neutral Time', icon: '🟡', message: 'Good for routine tasks.' };
+  let trafficStatus = { color: 'yellow', text: 'Neutral Time', icon: '✨', message: 'Good for routine tasks.' };
   if (isRahuKalam) {
     trafficStatus = { color: 'red', text: 'Rahu Kalam Active', icon: '🔴', message: 'Avoid starting new important tasks.' };
   } else if (isAbhijit) {

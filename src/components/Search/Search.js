@@ -121,7 +121,7 @@ const Search = ({ isModal = false, onClose }) => {
           ref={inputRef}
           type="text"
           className="search-input"
-          placeholder="Search scriptures, deities, pujas, 108 names..."
+          placeholder="Search scriptures..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => {

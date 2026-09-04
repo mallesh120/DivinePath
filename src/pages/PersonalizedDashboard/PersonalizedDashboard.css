@@ -164,19 +164,65 @@
 }
 
 .mini-status-indicator {
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
 }
 
-.indicator-green { border: 2px solid #2ECC71; }
-.indicator-red { border: 2px solid #E74C3C; }
-.indicator-yellow { border: 2px solid #F1C40F; }
+.indicator-green { 
+  border: 2.5px solid #16a34a; 
+  background: rgba(22, 163, 74, 0.14);
+  color: #15803d;
+  box-shadow: 0 0 10px rgba(22, 163, 74, 0.2);
+}
+.indicator-red { 
+  border: 2.5px solid #dc2626; 
+  background: rgba(220, 38, 38, 0.14);
+  color: #b91c1c;
+  box-shadow: 0 0 10px rgba(220, 38, 38, 0.2);
+}
+.indicator-yellow { 
+  border: 2.5px solid #d97706; 
+  background: rgba(245, 158, 11, 0.18);
+  color: #b45309;
+  box-shadow: 0 0 10px rgba(217, 119, 6, 0.2);
+}
+
+[data-theme='dark'] .mini-status-indicator,
+.theme-night .mini-status-indicator {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme='dark'] .indicator-green,
+.theme-night .indicator-green {
+  border-color: #4ade80;
+  background: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.3);
+}
+[data-theme='dark'] .indicator-red,
+.theme-night .indicator-red {
+  border-color: #f87171;
+  background: rgba(239, 68, 68, 0.22);
+  color: #f87171;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.3);
+}
+[data-theme='dark'] .indicator-yellow,
+.theme-night .indicator-yellow {
+  border-color: #fde047;
+  background: rgba(245, 158, 11, 0.24);
+  color: #fde047;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.35);
+}
 
 .mini-status-text {
   display: flex;
@@ -204,10 +250,17 @@
 
 .mini-status-sub {
   font-size: 0.8rem;
-  color: var(--text-muted);
-  margin-top: 0.2rem;
+  color: var(--primary-color, #c2410c);
+  font-weight: 600;
+  margin-top: 0.25rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+
+.panchang-mini-link:hover .mini-status-sub {
+  color: var(--accent-color, #f97316);
+  text-decoration: underline;
 }
 
 /* --- Zone 2: Sadhana --- */
@@ -598,32 +651,61 @@
 
 .timing-status-pill {
   font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.25rem 0.65rem;
+  font-weight: 700;
+  padding: 0.28rem 0.75rem;
   border-radius: 12px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: all 0.25s ease;
 }
 
 .pill-green {
-  background: rgba(46, 204, 113, 0.18);
-  color: #2ecc71;
-  border: 1px solid rgba(46, 204, 113, 0.4);
-  box-shadow: 0 0 10px rgba(46, 204, 113, 0.2);
+  background: rgba(22, 163, 74, 0.14);
+  color: #15803d;
+  border: 1.5px solid rgba(22, 163, 74, 0.4);
+  box-shadow: 0 1px 4px rgba(22, 163, 74, 0.15);
 }
 
 .pill-red {
-  background: rgba(231, 76, 60, 0.2);
-  color: #ff6b6b;
-  border: 1px solid rgba(231, 76, 60, 0.45);
-  box-shadow: 0 0 10px rgba(231, 76, 60, 0.25);
+  background: rgba(220, 38, 38, 0.14);
+  color: #b91c1c;
+  border: 1.5px solid rgba(220, 38, 38, 0.4);
+  box-shadow: 0 1px 4px rgba(220, 38, 38, 0.15);
   animation: pulseWarning 2s infinite ease-in-out;
 }
 
 .pill-yellow {
-  background: rgba(241, 196, 15, 0.18);
-  color: #f1c40f;
-  border: 1px solid rgba(241, 196, 15, 0.35);
+  background: rgba(217, 119, 6, 0.14);
+  color: #9a3412;
+  border: 1.5px solid rgba(217, 119, 6, 0.45);
+  box-shadow: 0 1px 4px rgba(217, 119, 6, 0.15);
+}
+
+[data-theme='dark'] .pill-green,
+.theme-night .pill-green {
+  background: rgba(46, 204, 113, 0.2);
+  color: #4ade80;
+  border: 1.5px solid rgba(74, 222, 128, 0.45);
+  box-shadow: 0 0 12px rgba(46, 204, 113, 0.25);
+}
+
+[data-theme='dark'] .pill-red,
+.theme-night .pill-red {
+  background: rgba(231, 76, 60, 0.22);
+  color: #f87171;
+  border: 1.5px solid rgba(248, 113, 113, 0.45);
+  box-shadow: 0 0 12px rgba(231, 76, 60, 0.25);
+}
+
+[data-theme='dark'] .pill-yellow,
+.theme-night .pill-yellow {
+  background: rgba(245, 158, 11, 0.24);
+  color: #fde047;
+  border: 1.5px solid rgba(253, 224, 71, 0.45);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.3);
 }
 
 @keyframes pulseWarning {

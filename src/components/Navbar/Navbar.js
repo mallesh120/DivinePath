@@ -10,24 +10,41 @@ import './Navbar.css';
  */
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const saved = localStorage.getItem('divine_path_theme');
+    if (saved) return saved === 'dark';
+    const hour = new Date().getHours();
+    return hour < 8 || hour >= 17;
+  });
   const location = useLocation();
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('divine_path_theme');
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      setIsDarkMode(true);
-      document.documentElement.setAttribute('data-theme', 'dark');
+    if (savedTheme) {
+      setIsDarkMode(savedTheme === 'dark');
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    } else {
+      const hour = new Date().getHours();
+      const initialDark = hour < 8 || hour >= 17;
+      setIsDarkMode(initialDark);
+      document.documentElement.setAttribute('data-theme', initialDark ? 'dark' : 'light');
     }
+
+    const handleThemeEvent = (e) => {
+      setIsDarkMode(e.detail === 'dark');
+    };
+
+    window.addEventListener('divineThemeChange', handleThemeEvent);
+    return () => window.removeEventListener('divineThemeChange', handleThemeEvent);
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = isDarkMode ? 'light' : 'dark';
-    setIsDarkMode(!isDarkMode);
+    const nextIsDark = !isDarkMode;
+    const newTheme = nextIsDark ? 'dark' : 'light';
+    setIsDarkMode(nextIsDark);
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('divine_path_theme', newTheme);
+    window.dispatchEvent(new CustomEvent('divineThemeChange', { detail: newTheme }));
   };
 
   // Close mobile menu when route changes
