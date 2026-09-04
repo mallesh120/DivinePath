@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
+import Search from '../Search/Search';
 import './Navbar.css';
 
 /**
@@ -67,13 +68,13 @@ const Navbar = () => {
       <div className="navbar-brand">
         <NavLink to="/">Divine Path</NavLink>
       </div>
+
       <ul className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
         <li>
           <NavLink to="/" end className={({ isActive }) => (isActive ? 'active-link' : '')}>
             Home
           </NavLink>
         </li>
-
         <li>
           <NavLink to="/gods" className={({ isActive }) => (isActive ? 'active-link' : '')}>
             Gods Gallery
@@ -91,17 +92,30 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink to="/calendar" className={({ isActive }) => (isActive ? 'active-link' : '')}>
-            Hindu Calendar
+            Calendar
           </NavLink>
         </li>
         <li>
           <NavLink to="/pujas" className={({ isActive }) => (isActive ? 'active-link' : '')}>
-            Puja Guide
+            Pujas
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/virtual-shrine" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            🪔 Mandir
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/japa-mala" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            📿 Japa Mala
           </NavLink>
         </li>
       </ul>
 
       <div className="navbar-actions">
+        {/* Global Omnibar Search */}
+        <Search />
+
         <NavLink 
           to="/kids"
           className="switch-zone-nav-btn"

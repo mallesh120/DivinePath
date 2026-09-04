@@ -40,6 +40,8 @@ const UniversalReaderPage = lazy(() => import('./pages/UniversalReaderPage/Unive
 const SacredTextsPage = lazy(() => import('./pages/SacredTextsPage/SacredTextsPage'));
 const StotramCategoryPage = lazy(() => import('./pages/StotramCategoryPage/StotramCategoryPage'));
 const StotramReaderPage = lazy(() => import('./pages/StotramReaderPage/StotramReaderPage'));
+const JapaMalaPage = lazy(() => import('./pages/JapaMalaPage/JapaMalaPage'));
+const VirtualShrinePage = lazy(() => import('./pages/VirtualShrinePage/VirtualShrinePage'));
 
 // Loading fallback component
 const LoadingFallback = () => <LoadingSpinner />;
@@ -113,6 +115,9 @@ function App() {
               <Route path="stotrams/read/:stotramTitle" element={withTransition(StotramReaderPage)} />
               <Route path="festival-countdown" element={withTransition(FestivalCountdownPage)} />
               <Route path="puja-reminders" element={withTransition(PujaReminderPage)} />
+              <Route path="japa-mala" element={withTransition(JapaMalaPage)} />
+              <Route path="virtual-shrine" element={withTransition(VirtualShrinePage)} />
+              <Route path="mandir" element={<Navigate to="/virtual-shrine" replace />} />
             </Route>
 
             {/* Kids Zone */}

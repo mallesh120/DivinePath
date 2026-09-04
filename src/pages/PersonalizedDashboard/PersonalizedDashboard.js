@@ -8,6 +8,7 @@ import { getDailyChallenge } from '../../data/dharmaChallenges';
 import { getLearningPathway } from '../../data/learningPathways';
 import { getWeeklyShloka } from '../../data/shlokaMastery';
 import EditGoalsModal from '../../components/EditGoalsModal/EditGoalsModal';
+import ShlokaCardModal from '../../components/ShlokaCardModal/ShlokaCardModal';
 import './PersonalizedDashboard.css';
 
 const PersonalizedDashboard = () => {
@@ -44,7 +45,13 @@ const PersonalizedDashboard = () => {
   // UI state
   const [isLessonModalOpen, setIsLessonModalOpen] = useState(false);
   
-  const { panchangamData, loading: panchangamLoading } = usePanchangam();
+  // Shloka Card Modal state
+  const [isShlokaModalOpen, setIsShlokaModalOpen] = useState(false);
+  
+  // Continue reading state
+  const [lastRead, setLastRead] = useState(null);
+
+  const { panchangamData, loading: panchangamLoading, currentCity, setCity, cities } = usePanchangam();
   
   const currentDate = new Date().toLocaleDateString('en-US', {
     weekday: 'long',
@@ -53,12 +60,19 @@ const PersonalizedDashboard = () => {
     day: 'numeric'
   });
 
-  // Dynamic theme is now handled globally in App.js
-
-  // Load user preferences
+  // Load user preferences & reading history
   useEffect(() => {
     const savedName = localStorage.getItem('userName') || '';
     setUserName(savedName);
+
+    try {
+      const savedReading = localStorage.getItem('divine_path_last_read');
+      if (savedReading) {
+        setLastRead(JSON.parse(savedReading));
+      }
+    } catch (e) {
+      console.warn('Failed to parse last read record', e);
+    }
     
     const updateGreeting = () => {
       const hour = new Date().getHours();
@@ -71,8 +85,6 @@ const PersonalizedDashboard = () => {
     const interval = setInterval(updateGreeting, 60000);
     return () => clearInterval(interval);
   }, []);
-
-
 
   const handleNameChange = (e) => {
     const newName = e.target.value;
@@ -89,17 +101,23 @@ const PersonalizedDashboard = () => {
     }
   };
 
-  // Compute Traffic Light Status
+  // Compute Real-Time Traffic Light Status
   let trafficStatus = null;
   if (panchangamData) {
-    const isRahuKalam = false; // Mock
-    const isAbhijit = true; // Mock
+    const nowEpoch = Date.now();
+    const raw = panchangamData.rawTimings || {};
+    const isRahuKalam = Boolean(raw.rahuStart && raw.rahuEnd && nowEpoch >= raw.rahuStart && nowEpoch <= raw.rahuEnd);
+    const isAbhijit = Boolean(raw.abhijitStart && raw.abhijitEnd && nowEpoch >= raw.abhijitStart && nowEpoch <= raw.abhijitEnd);
+    const isBrahma = Boolean(raw.brahmaStart && raw.brahmaEnd && nowEpoch >= raw.brahmaStart && nowEpoch <= raw.brahmaEnd);
 
-    trafficStatus = { color: 'yellow', text: 'Neutral Time', icon: '🟡', message: 'Good for routine tasks' };
     if (isRahuKalam) {
-      trafficStatus = { color: 'red', text: 'Rahu Kalam', icon: '🔴', message: 'Avoid new important tasks' };
+      trafficStatus = { color: 'red', text: 'Rahu Kalam Active', icon: '🔴', message: 'Inauspicious window — avoid new beginnings' };
     } else if (isAbhijit) {
-      trafficStatus = { color: 'green', text: 'Highly Auspicious', icon: '🟢', message: 'Abhijit Muhurat is active' };
+      trafficStatus = { color: 'green', text: 'Abhijit Muhurta Active', icon: '🟢', message: 'Highly auspicious victory window' };
+    } else if (isBrahma) {
+      trafficStatus = { color: 'green', text: 'Brahma Muhurta Active', icon: '✨', message: 'Divine spiritual hour for sadhana & prayer' };
+    } else {
+      trafficStatus = { color: 'yellow', text: 'Shubha Vela', icon: '🟡', message: 'Favorable time for regular duties & sadhana' };
     }
   }
 
@@ -144,28 +162,91 @@ const PersonalizedDashboard = () => {
           </div>
 
           {/* Panchang Mini-Status */}
-          <Link to="/calendar" className="panchang-mini-card glass-panel">
-             {panchangamLoading ? (
-               <div className="mini-status-loading">Consulting the stars...</div>
-             ) : panchangamData ? (
-               <div className="mini-status-content">
-                 <div className={`mini-status-indicator indicator-${trafficStatus.color}`}>
-                   {trafficStatus.icon}
-                 </div>
-                 <div className="mini-status-text">
-                    <div className="mini-status-primary">
-                      <strong>{panchangamData.almanac?.Tithi?.name}</strong> • {panchangamData.almanac?.Nakshatra?.name}
-                    </div>
-                    <div className="mini-status-traffic">
-                      {trafficStatus.text}: <span className="traffic-msg">{trafficStatus.message}</span>
-                    </div>
-                    <span className="mini-status-sub">Tap for full calendar & timings →</span>
-                 </div>
+          <div className="panchang-mini-card glass-panel">
+             <div className="panchang-mini-header-bar">
+               <div className="city-picker-badge" onClick={(e) => e.stopPropagation()}>
+                 <span className="city-icon">📍</span>
+                 <select 
+                   value={currentCity} 
+                   onChange={(e) => setCity(e.target.value)}
+                   className="dashboard-city-select"
+                   aria-label="Select City for Panchangam"
+                 >
+                   {cities && cities.map(c => (
+                     <option key={c.id} value={c.id}>{c.name}</option>
+                   ))}
+                 </select>
                </div>
-             ) : (
-               <div className="mini-status-loading">Panchang data unavailable</div>
-             )}
-          </Link>
+               {trafficStatus && (
+                 <span className={`timing-status-pill pill-${trafficStatus.color}`}>
+                   {trafficStatus.text}
+                 </span>
+               )}
+             </div>
+
+             <Link to="/calendar" className="panchang-mini-link">
+               {panchangamLoading ? (
+                 <div className="mini-status-loading">Consulting the celestial positions...</div>
+               ) : panchangamData ? (
+                 <div className="mini-status-content">
+                   <div className={`mini-status-indicator indicator-${trafficStatus?.color || 'yellow'}`}>
+                     {trafficStatus?.icon || '🕉️'}
+                   </div>
+                   <div className="mini-status-text">
+                      <div className="mini-status-primary">
+                        <strong>{panchangamData.almanac?.Tithi?.name}</strong> • {panchangamData.almanac?.Nakshatra?.name}
+                      </div>
+                      <div className="mini-status-traffic">
+                        <span className="traffic-msg">{trafficStatus?.message}</span>
+                      </div>
+                      <span className="mini-status-sub">Tap for Rahu Kalam, Choghadiya & full timings →</span>
+                   </div>
+                 </div>
+               ) : (
+                 <div className="mini-status-loading">Panchang data unavailable</div>
+               )}
+             </Link>
+          </div>
+
+          {/* Continue Reading Shelf (1-Click Resume) */}
+          {lastRead && (
+            <div className="continue-reading-shelf glass-panel">
+              <div className="continue-reading-header">
+                <span className="shelf-badge">📖 Continue Reading</span>
+                <span className="shelf-time">{new Date(lastRead.timestamp).toLocaleDateString()}</span>
+              </div>
+              <div className="continue-reading-body">
+                <div className="continue-reading-text">
+                  <span className="continue-book-name">{lastRead.bookTitle}</span>
+                  <h3 className="continue-chapter-name">{lastRead.chapterTitle}</h3>
+                </div>
+                <Link 
+                  to={`/library/${lastRead.bookId}/${lastRead.chapterId}`}
+                  className="resume-reading-btn"
+                >
+                  Resume →
+                </Link>
+              </div>
+            </div>
+          )}
+
+          {/* Sadhana Quick Gateways */}
+          <div className="sadhana-quick-grid">
+            <Link to="/virtual-shrine" className="sadhana-gateway-card glass-panel gateway-mandir">
+              <span className="gateway-icon">🪔</span>
+              <div className="gateway-details">
+                <h4>Virtual Mandir</h4>
+                <p>Darshan & Aarti Altar</p>
+              </div>
+            </Link>
+            <Link to="/japa-mala" className="sadhana-gateway-card glass-panel gateway-mala">
+              <span className="gateway-icon">📿</span>
+              <div className="gateway-details">
+                <h4>108 Japa Mala</h4>
+                <p>Mantra Chanting Beads</p>
+              </div>
+            </Link>
+          </div>
         </section>
 
         {/* Zone 2: Your Dharma Journey */}
@@ -215,6 +296,15 @@ const PersonalizedDashboard = () => {
                 <div className="shloka-actions">
                   <button className="shloka-play-btn">🔊 Listen</button>
                   <button 
+                    className="shloka-card-btn"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setIsShlokaModalOpen(true);
+                    }}
+                  >
+                    ✨ Quote Card
+                  </button>
+                  <button 
                     className={`shloka-practice-btn ${shlokaPracticeDays > 0 ? 'practiced' : ''}`}
                     onClick={(e) => {
                       e.stopPropagation();
@@ -261,6 +351,14 @@ const PersonalizedDashboard = () => {
         <section className="dashboard-zone zone-navigation">
           <h2 className="zone-title">Explore</h2>
           <div className="nav-hub-scroll">
+            <Link to="/virtual-shrine" className="nav-hub-item glass-panel">
+              <span className="nav-hub-icon">🪔</span>
+              <span className="nav-hub-label">Virtual Mandir</span>
+            </Link>
+            <Link to="/japa-mala" className="nav-hub-item glass-panel">
+              <span className="nav-hub-icon">📿</span>
+              <span className="nav-hub-label">108 Japa Mala</span>
+            </Link>
             <Link to="/gods" className="nav-hub-item glass-panel">
               <span className="nav-hub-icon">🕉️</span>
               <span className="nav-hub-label">Gods Gallery</span>
@@ -327,6 +425,18 @@ const PersonalizedDashboard = () => {
         customGoals={customGoals}
         addCustomGoal={addCustomGoal}
         removeCustomGoal={removeCustomGoal}
+      />
+
+      <ShlokaCardModal
+        isOpen={isShlokaModalOpen}
+        onClose={() => setIsShlokaModalOpen(false)}
+        shloka={{
+          title: weeklyShloka.title,
+          sanskrit: weeklyShloka.sanskrit,
+          transliteration: weeklyShloka.transliteration,
+          english: weeklyShloka.meaning,
+          source: 'Weekly Mantra Sadhana'
+        }}
       />
     </div>
   );

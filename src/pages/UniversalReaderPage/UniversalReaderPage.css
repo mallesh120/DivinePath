@@ -480,4 +480,262 @@
   .reader-article {
     padding: 2rem;
   }
+  .reader-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+  .reader-controls-cluster {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
+
+/* --- Reader Customization & Font Multiplier System --- */
+.universal-reader-page {
+  --reader-font-size: 1.15rem;
+  --reader-line-height: 1.8;
+}
+
+.universal-reader-page[data-font-size="small"] {
+  --reader-font-size: 1rem;
+  --reader-line-height: 1.65;
+}
+
+.universal-reader-page[data-font-size="normal"] {
+  --reader-font-size: 1.15rem;
+  --reader-line-height: 1.8;
+}
+
+.universal-reader-page[data-font-size="large"] {
+  --reader-font-size: 1.3rem;
+  --reader-line-height: 1.9;
+}
+
+.universal-reader-page[data-font-size="xlarge"] {
+  --reader-font-size: 1.5rem;
+  --reader-line-height: 2;
+}
+
+.prose-content p,
+.scene-text,
+.verse-translation {
+  font-size: var(--reader-font-size) !important;
+  line-height: var(--reader-line-height) !important;
+}
+
+/* --- Top Reader Toolbar --- */
+.reader-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.reader-toolbar .reader-nav-top {
+  margin-bottom: 0;
+}
+
+.reader-controls-cluster {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.font-size-toggles {
+  display: flex;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 0.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.font-btn {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.65rem;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+
+.font-btn.active, .font-btn:hover {
+  background: rgba(255, 153, 51, 0.25);
+  color: #ff9933;
+  opacity: 1;
+}
+
+.zen-toggle-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-color);
+  border-radius: 20px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.zen-toggle-btn:hover, .zen-toggle-btn.active {
+  background: rgba(138, 43, 226, 0.25);
+  border-color: rgba(138, 43, 226, 0.5);
+  color: #d1b3ff;
+}
+
+/* Master Narration Bar */
+.narration-controls-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 153, 51, 0.12);
+  border: 1px solid rgba(255, 153, 51, 0.35);
+  padding: 0.25rem 0.5rem;
+  border-radius: 20px;
+}
+
+.narration-action-btn {
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.narration-action-btn.play {
+  background: #ff9933;
+  color: #fff;
+}
+
+.narration-action-btn.play:hover {
+  filter: brightness(1.1);
+}
+
+.narration-action-btn.pause {
+  background: #f1c40f;
+  color: #111;
+}
+
+.narration-action-btn.stop {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.narration-progress-tag {
+  font-size: 0.75rem;
+  color: #ff9933;
+  font-weight: 600;
+  padding: 0 0.4rem;
+}
+
+/* --- Active Scene Narration Glowing State --- */
+.active-narration-scene {
+  border: 2px solid #ff9933 !important;
+  box-shadow: 0 0 30px rgba(255, 153, 51, 0.5), inset 0 0 15px rgba(255, 153, 51, 0.1) !important;
+  background: rgba(255, 153, 51, 0.05) !important;
+  transform: scale(1.015);
+  transition: all 0.4s ease;
+  border-radius: 1.25rem;
+}
+
+.scene-text-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.scene-text-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scene-number-tag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--primary-color, #ff9933);
+}
+
+.scene-listen-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--text-color);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.scene-listen-btn:hover {
+  background: rgba(255, 153, 51, 0.2);
+  color: #ff9933;
+  border-color: #ff9933;
+}
+
+.verse-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --- Zen Mode Full Immersion --- */
+.universal-reader-page.zen-mode {
+  max-width: 860px;
+  padding: 1rem;
+}
+
+.universal-reader-page.zen-mode .reader-article {
+  background: rgba(14, 14, 18, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+  padding: 3.5rem 5rem;
+}
+
+.universal-reader-page.zen-mode .reader-toolbar {
+  opacity: 0.35;
+  transition: opacity 0.3s;
+}
+
+.universal-reader-page.zen-mode .reader-toolbar:hover {
+  opacity: 1;
+}
+
+.exit-zen-btn {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.exit-zen-btn:hover {
+  background: #e74c3c;
+  transform: scale(1.05);
+}
+

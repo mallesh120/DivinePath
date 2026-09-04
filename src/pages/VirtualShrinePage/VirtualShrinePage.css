@@ -1,0 +1,10 @@
+.virtual-shrine-page {
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+.virtual-shrine-page-content {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 1rem;
+}

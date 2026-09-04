@@ -551,4 +551,220 @@
     padding-top: 1rem;
     border-top: 1px solid var(--glass-border);
   }
+
+  .sadhana-quick-grid {
+    grid-template-columns: 1fr;
+  }
 }
+
+/* --- Panchang Mini Header & Sacred City Selector --- */
+.panchang-mini-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.25rem 0.25rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.city-picker-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 0.2rem 0.6rem;
+}
+
+.city-icon {
+  font-size: 0.85rem;
+}
+
+.dashboard-city-select {
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
+}
+
+.dashboard-city-select option {
+  background: #1e1e24;
+  color: #fff;
+}
+
+.timing-status-pill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pill-green {
+  background: rgba(46, 204, 113, 0.18);
+  color: #2ecc71;
+  border: 1px solid rgba(46, 204, 113, 0.4);
+  box-shadow: 0 0 10px rgba(46, 204, 113, 0.2);
+}
+
+.pill-red {
+  background: rgba(231, 76, 60, 0.2);
+  color: #ff6b6b;
+  border: 1px solid rgba(231, 76, 60, 0.45);
+  box-shadow: 0 0 10px rgba(231, 76, 60, 0.25);
+  animation: pulseWarning 2s infinite ease-in-out;
+}
+
+.pill-yellow {
+  background: rgba(241, 196, 15, 0.18);
+  color: #f1c40f;
+  border: 1px solid rgba(241, 196, 15, 0.35);
+}
+
+@keyframes pulseWarning {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(0.98); }
+}
+
+.panchang-mini-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* --- Continue Reading Shelf --- */
+.continue-reading-shelf {
+  padding: 1.25rem 1.5rem;
+  margin-top: 0.5rem;
+  border-left: 4px solid var(--primary-color, #ff9933);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.continue-reading-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shelf-badge {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary-color, #ff9933);
+}
+
+.shelf-time {
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+.continue-reading-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.continue-reading-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.continue-book-name {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.continue-chapter-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.resume-reading-btn {
+  background: linear-gradient(135deg, #ff9933, #e65100);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(255, 153, 51, 0.3);
+}
+
+.resume-reading-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 153, 51, 0.45);
+}
+
+/* --- Sadhana Gateways (Mandir & Japa Mala) --- */
+.sadhana-quick-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.sadhana-gateway-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sadhana-gateway-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 153, 51, 0.4);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.gateway-icon {
+  font-size: 2rem;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+}
+
+.gateway-details h4 {
+  margin: 0 0 0.2rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.gateway-details p {
+  margin: 0;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+/* --- Shloka Card Button --- */
+.shloka-card-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-color);
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.shloka-card-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-1px);
+}
+
