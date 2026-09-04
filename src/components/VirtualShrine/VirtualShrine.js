@@ -7,6 +7,7 @@ import hanumanImg from '../../assets/images/Gods/hanuman.webp';
 import durgaImg from '../../assets/images/Gods/durga.webp';
 import ramaImg from '../../assets/images/Gods/rama.webp';
 import saraswatiImg from '../../assets/images/Gods/saraswati.webp';
+import vishnuImg from '../../assets/images/Gods/vishnu.webp';
 import './VirtualShrine.css';
 
 const DEITIES = [
@@ -81,6 +82,15 @@ const DEITIES = [
     image: saraswatiImg,
     prasad: 'Yellow Fruits & Sacred Vidya',
     blessing: 'May Mother Saraswati illuminate your speech, knowledge, arts, and discernment.'
+  },
+  {
+    id: 'vishnu',
+    name: 'Lord Vishnu',
+    title: 'Narayana • The Supreme Preserver',
+    mantra: 'ॐ नमो नारायणाय',
+    image: vishnuImg,
+    prasad: 'Yellow Sweets & Sacred Tulasi',
+    blessing: 'May Lord Narayana preserve righteousness, peace, and spiritual harmony in your life.'
   }
 ];
 
