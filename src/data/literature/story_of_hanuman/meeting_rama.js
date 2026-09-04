@@ -17,11 +17,11 @@ export const hanumanMeetingRamaScenes = [
   },
   {
     text: "Tears of joy streamed down Hanuman's face as he embraced Rama's feet. Rama gently lifted him up and hugged him warmly. In that divine embrace, an eternal bond of pure devotion and unconditional love was forged between the Supreme Lord and his greatest devotee.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_meet_5_1788529349798.jpg"
   },
   {
     text: "Hanuman immediately carried Rama and Lakshmana on his broad shoulders and bounded up the mountain to introduce them to Sugriva. In front of a sacred fire kindled by Hanuman, Rama and Sugriva pledged a pact of friendship: Rama would help Sugriva defeat Vali, and Sugriva would mobilize his army to find Sita.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_meet_6_1788529362504.jpg"
   },
   {
     text: "True to his word, Rama defeated Vali and restored Sugriva to the throne of Kishkindha. After the rainy season passed, Sugriva commanded millions of monkeys to search the earth in all four directions. Hanuman was assigned to the southern search party, led by Prince Angada.",
