@@ -1,0 +1,10 @@
+.japa-mala-page {
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+.japa-mala-page-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}

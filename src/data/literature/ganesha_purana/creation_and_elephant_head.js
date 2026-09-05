@@ -1,27 +1,27 @@
 export const ganeshaCreationScenes = [
   {
     text: "Long ago, on the beautiful, snow-covered Mount Kailash, Goddess Parvati, the wife of Lord Shiva, was preparing to take a bath. She asked Nandi, Shiva's trusted bull, to guard the door and let no one enter. However, when Lord Shiva arrived, Nandi, out of loyalty to his master, let him pass.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/ganesha_birth_1_1788566284913.jpg"
   },
   {
     text: "Parvati realized she needed someone who was solely loyal to her, a son she could call her very own. So, she gathered the fragrant turmeric paste (ubtan) she used for bathing and began to mold it into the shape of a little boy.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/ganesha_birth_2_1788566299378.jpg"
   },
   {
     text: "With her divine powers, Parvati breathed life into the clay figure. Instantly, a beautiful, strong, and radiant boy stood before her. She hugged him tightly, filled with a mother's love, and declared, 'You are my son, and you belong only to me.'",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/ganesha_birth_3_1788566316021.jpg"
   },
   {
     text: "She gave him a strict instruction: 'I am going to bathe. Stand at the entrance of the cave and do not allow anyone—absolutely anyone—to enter until I am finished.' The young boy, devoted to his mother, took a sturdy staff and stood guard at the door like a brave soldier.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/ganesha_birth_4_1788566335126.jpg"
   },
   {
     text: "A little while later, Lord Shiva returned to his home. He tried to enter the cave, but the young boy stopped him, raising his staff. 'Halt! No one may enter while my mother is bathing,' the boy declared fearlessly.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/ganesha_birth_5_1788566620667.jpg"
   },
   {
     text: "Shiva was amused but also confused. 'I am Shiva, the Lord of Kailash, and Parvati is my wife. Step aside, little boy,' he said. But the boy refused to budge. He did not know who Shiva was, only that he had a strict order from his mother.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/ganesha_birth_6_1788566637309.jpg"
   },
   {
     text: "Shiva, known for his quick temper, grew angry. He sent his powerful army, the Ganas, to move the boy. To their astonishment, this little boy fought them all off with incredible strength, defeating every warrior Shiva sent.",

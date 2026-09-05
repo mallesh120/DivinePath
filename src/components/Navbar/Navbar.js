@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
+import Search from '../Search/Search';
 import './Navbar.css';
 
 /**
@@ -9,24 +10,41 @@ import './Navbar.css';
  */
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const saved = localStorage.getItem('divine_path_theme');
+    if (saved) return saved === 'dark';
+    const hour = new Date().getHours();
+    return hour < 8 || hour >= 17;
+  });
   const location = useLocation();
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('divine_path_theme');
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      setIsDarkMode(true);
-      document.documentElement.setAttribute('data-theme', 'dark');
+    if (savedTheme) {
+      setIsDarkMode(savedTheme === 'dark');
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    } else {
+      const hour = new Date().getHours();
+      const initialDark = hour < 8 || hour >= 17;
+      setIsDarkMode(initialDark);
+      document.documentElement.setAttribute('data-theme', initialDark ? 'dark' : 'light');
     }
+
+    const handleThemeEvent = (e) => {
+      setIsDarkMode(e.detail === 'dark');
+    };
+
+    window.addEventListener('divineThemeChange', handleThemeEvent);
+    return () => window.removeEventListener('divineThemeChange', handleThemeEvent);
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = isDarkMode ? 'light' : 'dark';
-    setIsDarkMode(!isDarkMode);
+    const nextIsDark = !isDarkMode;
+    const newTheme = nextIsDark ? 'dark' : 'light';
+    setIsDarkMode(nextIsDark);
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('divine_path_theme', newTheme);
+    window.dispatchEvent(new CustomEvent('divineThemeChange', { detail: newTheme }));
   };
 
   // Close mobile menu when route changes
@@ -67,13 +85,13 @@ const Navbar = () => {
       <div className="navbar-brand">
         <NavLink to="/">Divine Path</NavLink>
       </div>
+
       <ul className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
         <li>
           <NavLink to="/" end className={({ isActive }) => (isActive ? 'active-link' : '')}>
             Home
           </NavLink>
         </li>
-
         <li>
           <NavLink to="/gods" className={({ isActive }) => (isActive ? 'active-link' : '')}>
             Gods Gallery
@@ -91,17 +109,30 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink to="/calendar" className={({ isActive }) => (isActive ? 'active-link' : '')}>
-            Hindu Calendar
+            Calendar
           </NavLink>
         </li>
         <li>
           <NavLink to="/pujas" className={({ isActive }) => (isActive ? 'active-link' : '')}>
-            Puja Guide
+            Pujas
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/virtual-shrine" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            🪔 Mandir
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/japa-mala" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            📿 Japa Mala
           </NavLink>
         </li>
       </ul>
 
       <div className="navbar-actions">
+        {/* Global Omnibar Search */}
+        <Search />
+
         <NavLink 
           to="/kids"
           className="switch-zone-nav-btn"

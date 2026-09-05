@@ -236,3 +236,61 @@ html {
   --nav-bg: rgba(142, 68, 173, 0.95);
   --timeline-line: linear-gradient(90deg, #F1C40F 0%, #FF9A9E 100%);
 }
+
+/* ==================================================== */
+/* EXPLICIT THEME OVERRIDES (Takes precedence over time) */
+/* ==================================================== */
+[data-theme='dark'],
+[data-theme='dark'] body,
+[data-theme='dark'] .App,
+[data-theme='dark'] .theme-day,
+[data-theme='dark'] .theme-dawn,
+[data-theme='dark'] .theme-dusk,
+[data-theme='dark'] .theme-night {
+  --bg-primary: #0A0F1C !important;
+  --bg-secondary: #0F172A !important;
+  --bg-tertiary: #1E293B !important;
+  --bg-gradient: linear-gradient(135deg, #0d0a1a 0%, #16122c 50%, #0e0a1f 100%) !important;
+  --text-color: #FFFFFF !important;
+  --text-primary: #F8FAFC !important;
+  --text-secondary: #CBD5E1 !important;
+  --text-muted: #94A3B8 !important;
+  --glass-bg: rgba(255, 255, 255, 0.06) !important;
+  --glass-border: rgba(255, 255, 255, 0.12) !important;
+  --glass-shadow: rgba(0, 0, 0, 0.5) !important;
+  --hero-title: #FFD700 !important;
+  --hero-bg: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%) !important;
+  --nav-bg: rgba(18, 15, 30, 0.95) !important;
+  --card-bg: #141026 !important;
+  --border-color: #334155 !important;
+  --border-subtle: #1E293B !important;
+  --primary-color: #F97316 !important;
+}
+
+[data-theme='light'],
+[data-theme='light'] body,
+[data-theme='light'] .App,
+[data-theme='light'] .theme-night,
+[data-theme='light'] .theme-dawn,
+[data-theme='light'] .theme-dusk,
+[data-theme='light'] .theme-day {
+  --bg-primary: #FFFFFF !important;
+  --bg-secondary: #FDFBF7 !important;
+  --bg-tertiary: #F8FAFC !important;
+  --bg-gradient: linear-gradient(135deg, #85C1E9 0%, #D4E6F1 100%) !important;
+  --text-color: #154360 !important;
+  --text-primary: #0F172A !important;
+  --text-secondary: #475569 !important;
+  --text-muted: #2980B9 !important;
+  --glass-bg: rgba(255, 255, 255, 0.6) !important;
+  --glass-border: rgba(255, 255, 255, 0.65) !important;
+  --glass-shadow: rgba(0, 0, 0, 0.06) !important;
+  --hero-title: #D35400 !important;
+  --hero-bg: linear-gradient(180deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.3) 100%) !important;
+  --nav-bg: rgba(255, 255, 255, 0.95) !important;
+  --card-bg: #FFFFFF !important;
+  --border-color: #E2E8F0 !important;
+  --border-subtle: #F1F5F9 !important;
+  --primary-color: #EA580C !important;
+}
+

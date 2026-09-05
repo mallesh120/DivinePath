@@ -40,6 +40,8 @@ const UniversalReaderPage = lazy(() => import('./pages/UniversalReaderPage/Unive
 const SacredTextsPage = lazy(() => import('./pages/SacredTextsPage/SacredTextsPage'));
 const StotramCategoryPage = lazy(() => import('./pages/StotramCategoryPage/StotramCategoryPage'));
 const StotramReaderPage = lazy(() => import('./pages/StotramReaderPage/StotramReaderPage'));
+const JapaMalaPage = lazy(() => import('./pages/JapaMalaPage/JapaMalaPage'));
+const VirtualShrinePage = lazy(() => import('./pages/VirtualShrinePage/VirtualShrinePage'));
 
 // Loading fallback component
 const LoadingFallback = () => <LoadingSpinner />;
@@ -56,26 +58,58 @@ const AdultsLayoutWrapper = () => (
 
 function App() {
   const location = useLocation();
-  const [themeClass, setThemeClass] = useState('theme-night');
+  const [themeClass, setThemeClass] = useState(() => {
+    const saved = localStorage.getItem('divine_path_theme');
+    if (saved === 'dark') return 'theme-night';
+    if (saved === 'light') return 'theme-day';
+    const hour = new Date().getHours();
+    if (hour >= 5 && hour < 8) return 'theme-dawn';
+    if (hour >= 8 && hour < 17) return 'theme-day';
+    if (hour >= 17 && hour < 20) return 'theme-dusk';
+    return 'theme-night';
+  });
 
-  // Determine dynamic theme based on current time
+  // Synchronize theme with user preference & daylight cycles
   useEffect(() => {
-    const getThemeClass = () => {
-      const hour = new Date().getHours();
-      if (hour >= 5 && hour < 8) return 'theme-dawn';
-      if (hour >= 8 && hour < 17) return 'theme-day';
-      if (hour >= 17 && hour < 20) return 'theme-dusk';
-      return 'theme-night';
+    const applyTheme = (forcedTheme) => {
+      const active = forcedTheme || localStorage.getItem('divine_path_theme');
+      if (active === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        setThemeClass('theme-night');
+      } else if (active === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        setThemeClass('theme-day');
+      } else {
+        const hour = new Date().getHours();
+        let cls = 'theme-night';
+        if (hour >= 5 && hour < 8) cls = 'theme-dawn';
+        else if (hour >= 8 && hour < 17) cls = 'theme-day';
+        else if (hour >= 17 && hour < 20) cls = 'theme-dusk';
+        setThemeClass(cls);
+        document.documentElement.setAttribute('data-theme', (cls === 'theme-night' || cls === 'theme-dusk') ? 'dark' : 'light');
+      }
     };
 
-    setThemeClass(getThemeClass());
+    applyTheme();
 
-    // Update theme every minute to catch transitions
+    const handleThemeEvent = (e) => {
+      applyTheme(e.detail);
+    };
+
+    window.addEventListener('divineThemeChange', handleThemeEvent);
+    window.addEventListener('storage', () => applyTheme());
+
+    // Update time-based theme every minute if user hasn't chosen an explicit override
     const interval = setInterval(() => {
-      setThemeClass(getThemeClass());
+      if (!localStorage.getItem('divine_path_theme')) {
+        applyTheme();
+      }
     }, 60000);
 
-    return () => clearInterval(interval);
+    return () => {
+      window.removeEventListener('divineThemeChange', handleThemeEvent);
+      clearInterval(interval);
+    };
   }, []);
 
   // Helper to wrap route elements with page transitions
@@ -113,6 +147,9 @@ function App() {
               <Route path="stotrams/read/:stotramTitle" element={withTransition(StotramReaderPage)} />
               <Route path="festival-countdown" element={withTransition(FestivalCountdownPage)} />
               <Route path="puja-reminders" element={withTransition(PujaReminderPage)} />
+              <Route path="japa-mala" element={withTransition(JapaMalaPage)} />
+              <Route path="virtual-shrine" element={withTransition(VirtualShrinePage)} />
+              <Route path="mandir" element={<Navigate to="/virtual-shrine" replace />} />
             </Route>
 
             {/* Kids Zone */}
