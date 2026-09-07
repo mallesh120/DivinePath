@@ -25,34 +25,34 @@ export const ganeshaCreationScenes = [
   },
   {
     text: "Shiva, known for his quick temper, grew angry. He sent his powerful army, the Ganas, to move the boy. To their astonishment, this little boy fought them all off with incredible strength, defeating every warrior Shiva sent.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/ganesha_birth_7_1788665811910.jpg"
   },
   {
     text: "Seeing his entire army defeated by a child, Shiva’s anger boiled over. Without thinking, he raised his mighty Trishul (trident) and struck the boy, severing his head from his body. The boy fell instantly.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/ganesha_birth_8_1788665834022.jpg"
   },
   {
     text: "Hearing the commotion, Parvati rushed out. When she saw her beloved son lying lifeless, her grief turned into a terrifying fury. She assumed the cosmic form of the fierce goddess Adi Shakti and threatened to destroy the entire universe in her sorrow.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/ganesha_birth_9_1788665852032.jpg"
   },
   {
     text: "The universe began to tremble. Realizing his terrible mistake, Lord Shiva tried to pacify Parvati, but she demanded that her son be brought back to life immediately, or else everything would be destroyed.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/ganesha_birth_10_1788702216179.jpg"
   },
   {
     text: "Shiva ordered Lord Brahma and his followers to go north and bring back the head of the very first living creature they found sleeping with its head facing north. The search party hurried away and soon found a strong, majestic elephant sleeping in that exact position.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/ganesha_birth_11_1788702241033.jpg"
   },
   {
     text: "They returned with the elephant's head. Lord Shiva placed it upon the boy's body and chanted sacred mantras. The boy opened his eyes, now sporting a beautiful, grand elephant head, complete with a trunk and large, flapping ears.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/ganesha_birth_12_1788702268941.jpg"
   },
   {
     text: "Parvati was overjoyed to have her son back, but she worried that the other gods might mock his unusual appearance. To reassure her, Lord Shiva, Lord Brahma, and Lord Vishnu bestowed incredible blessings upon the boy.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/ganesha_birth_13_1788702320929.jpg"
   },
   {
     text: "Shiva declared, 'From this day forward, he shall be known as Ganesha, the Lord of the Ganas. He will be worshipped before any other god, and no prayer, ritual, or new beginning will be successful without seeking his blessings first.' And so, Ganesha became the beloved Lord of Beginnings.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/ganesha_birth_14_1788702366241.jpg"
   }
 ];
