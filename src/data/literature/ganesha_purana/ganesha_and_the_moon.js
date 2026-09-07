@@ -29,14 +29,14 @@ export const ganeshaMoonScenes = [
   },
   {
     text: "Chandra immediately rushed down to earth and fell at Ganesha's feet, weeping and begging for forgiveness. The other gods also came and pleaded with Ganesha, explaining that without the moon, the balance of nature and time would be ruined.",
-    imageUrl: "/images/literature/scenes/ganesha_and_the_moon_flux_1788760198364.jpg"
+    imageUrl: ""
   },
   {
     text: "Ganesha, being kind-hearted, forgave him but said, 'A curse cannot be entirely taken back. You will get your light back, but not all at once. You will grow and glow for 15 days until you are full, and then fade away for 15 days until you are completely dark. This waxing and waning will remind you to stay humble.'",
-    imageUrl: "/images/literature/scenes/ganesha_and_the_moon_flux_1788760202865.jpg"
+    imageUrl: ""
   },
   {
     text: "And so, from that day on, the moon goes through its phases. The curse also serves as a reminder to everyone: never mock others for their appearance, and always remember that true wisdom is more beautiful than physical looks.",
-    imageUrl: "/images/literature/scenes/ganesha_and_the_moon_flux_1788760329885.jpg"
+    imageUrl: ""
   }
 ];
