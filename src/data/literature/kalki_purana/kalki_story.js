@@ -1,19 +1,19 @@
 export const kalkiStoryScenes = [
   {
     text: "According to the ancient scriptures, time moves in great cosmic cycles called Yugas. We are currently living in the Kali Yuga, the final and darkest of the four ages. It is an age where people forget about truth, kindness, and spirituality.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/kalki_scene_1_1789168941351.jpg"
   },
   {
     text: "As the Kali Yuga progresses, the texts predict that the world will become a very difficult place. Kings and leaders will become corrupt, stealing from their own people. People will become greedy, angry, and deceitful. The environment will suffer, and rivers will dry up.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/kalki_scene_2_1789169078279.jpg"
   },
   {
     text: "Righteousness (Dharma) will be like a bull standing on only one leg, ready to collapse at any moment. True knowledge will be lost, and people will suffer from wars, diseases, and sorrow because they have forgotten the path of love and devotion to God.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/kalki_scene_3_1789169638607.jpg"
   },
   {
     text: "But the scriptures also offer a powerful promise of hope. They declare that whenever evil becomes too great to bear, Lord Vishnu will return to earth to protect the good, destroy the wicked, and restore cosmic balance.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/kalki_scene_4_1789171667893.jpg"
   },
   {
     text: "It is prophesied that at the very end of the Kali Yuga, when darkness is at its absolute peak, the tenth and final avatar of Lord Vishnu will appear. His name will be Kalki, the fierce warrior of light.",
