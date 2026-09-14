@@ -12,6 +12,7 @@ import './App.css';
 
 // Lazy load Kids Zone components
 const KidsDashboard = lazy(() => import('./pages/Kids/KidsDashboard/KidsDashboard'));
+const StoryCatalog = lazy(() => import('./pages/Kids/Storybook/StoryCatalog'));
 const StorybookViewer = lazy(() => import('./pages/Kids/Storybook/StorybookViewer'));
 const KidsTriviaGame = lazy(() => import('./pages/Kids/Games/KidsTriviaGame'));
 const KidsGamesHub = lazy(() => import('./pages/Kids/Games/KidsGamesHub'));
@@ -156,7 +157,7 @@ function App() {
             <Route path="/kids" element={<KidsLayout />}>
               <Route index element={<Navigate to="home" replace />} />
               <Route path="home" element={withTransition(KidsDashboard)} />
-              <Route path="stories" element={withTransition(StorybookViewer)} />
+              <Route path="stories" element={withTransition(StoryCatalog)} />
               <Route path="stories/:storyId" element={withTransition(StorybookViewer)} />
               <Route path="games" element={withTransition(KidsGamesHub)} />
               <Route path="games/trivia" element={withTransition(KidsTriviaGame)} />

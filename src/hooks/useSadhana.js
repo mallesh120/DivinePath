@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 const SADHANA_STORAGE_KEY = 'divinepath_sadhana_state';
 
@@ -15,6 +15,8 @@ const defaultKidsGoals = {
 };
 
 export const useSadhana = (isKidsZone = false) => {
+  const storageKey = isKidsZone ? 'divinepath_kids_sadhana_state' : SADHANA_STORAGE_KEY;
+
   const [goals, setGoals] = useState(() => isKidsZone ? { ...defaultKidsGoals } : { ...defaultGoals });
   const [customGoals, setCustomGoals] = useState([]); // Array of strings e.g. ['Read Gita', 'Yoga']
   const [japaCount, setJapaCount] = useState(0);
@@ -26,10 +28,14 @@ export const useSadhana = (isKidsZone = false) => {
   const [pathwayProgress, setPathwayProgress] = useState(1);
   const [shlokaPracticeDays, setShlokaPracticeDays] = useState(0);
 
+  const saveSadhana = useCallback((newState) => {
+    localStorage.setItem(storageKey, JSON.stringify(newState));
+  }, [storageKey]);
+
   useEffect(() => {
     const loadSadhana = () => {
       try {
-        const saved = localStorage.getItem(SADHANA_STORAGE_KEY);
+        const saved = localStorage.getItem(storageKey);
         if (saved) {
           const parsed = JSON.parse(saved);
           
@@ -108,7 +114,7 @@ export const useSadhana = (isKidsZone = false) => {
           saveSadhana({
             lastDate: new Date().toLocaleDateString(),
             streak: 0,
-            stars: 0,
+            stars: isKidsZone ? 0 : 0,
             goals: isKidsZone ? { ...defaultKidsGoals } : { ...defaultGoals },
             customGoals: [],
             completionHistory: [],
@@ -124,11 +130,7 @@ export const useSadhana = (isKidsZone = false) => {
     };
     
     loadSadhana();
-  }, [isKidsZone]);
-
-  const saveSadhana = (newState) => {
-    localStorage.setItem(SADHANA_STORAGE_KEY, JSON.stringify(newState));
-  };
+  }, [isKidsZone, storageKey, saveSadhana]);
 
   const checkAllCompleted = (currentGoals) => {
     return Object.values(currentGoals).every(v => v === true);
@@ -144,35 +146,52 @@ export const useSadhana = (isKidsZone = false) => {
       let newStreak = streak;
       let newStars = stars;
 
-      if (allCompletedNow && !allCompletedBefore) {
-        newStreak += 1;
-        newStars += 1;
-        setStreak(newStreak);
+      if (isKidsZone) {
+        // In Kids Zone, checking any goal immediately awards a star!
+        if (!prev[goalKey]) {
+          newStars += 1;
+        } else {
+          newStars = Math.max(0, newStars - 1);
+        }
         setStars(newStars);
-        
-        // Add today to completion history
-        const today = new Date().toLocaleDateString();
-        setCompletionHistory(prev => {
-          if (!prev.includes(today)) {
-            return [...prev, today];
-          }
-          return prev;
-        });
-        
-      } else if (!allCompletedNow && allCompletedBefore) {
-        newStreak = Math.max(0, newStreak - 1);
-        newStars = Math.max(0, newStars - 1);
-        setStreak(newStreak);
-        setStars(newStars);
-        
-        // Remove today from completion history
-        const today = new Date().toLocaleDateString();
-        setCompletionHistory(prev => prev.filter(d => d !== today));
+        if (allCompletedNow && !allCompletedBefore) {
+          newStreak += 1;
+          setStreak(newStreak);
+        } else if (!allCompletedNow && allCompletedBefore) {
+          newStreak = Math.max(0, newStreak - 1);
+          setStreak(newStreak);
+        }
+      } else {
+        if (allCompletedNow && !allCompletedBefore) {
+          newStreak += 1;
+          newStars += 1;
+          setStreak(newStreak);
+          setStars(newStars);
+          
+          // Add today to completion history
+          const today = new Date().toLocaleDateString();
+          setCompletionHistory(prevH => {
+            if (!prevH.includes(today)) {
+              return [...prevH, today];
+            }
+            return prevH;
+          });
+          
+        } else if (!allCompletedNow && allCompletedBefore) {
+          newStreak = Math.max(0, newStreak - 1);
+          newStars = Math.max(0, newStars - 1);
+          setStreak(newStreak);
+          setStars(newStars);
+          
+          // Remove today from completion history
+          const today = new Date().toLocaleDateString();
+          setCompletionHistory(prevH => prevH.filter(d => d !== today));
+        }
       }
 
       // Save to localStorage
       try {
-        const saved = JSON.parse(localStorage.getItem(SADHANA_STORAGE_KEY) || '{}');
+        const saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
         const today = new Date().toLocaleDateString();
         
         let newHistory = saved.completionHistory || [];
@@ -200,7 +219,7 @@ export const useSadhana = (isKidsZone = false) => {
     setJapaCount(prev => {
       const next = prev + 1;
       try {
-        const saved = JSON.parse(localStorage.getItem(SADHANA_STORAGE_KEY) || '{}');
+        const saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
         saveSadhana({ ...saved, japaCount: next });
       } catch (e) {}
       return next;
@@ -210,7 +229,7 @@ export const useSadhana = (isKidsZone = false) => {
   const resetJapa = () => {
     setJapaCount(0);
     try {
-      const saved = JSON.parse(localStorage.getItem(SADHANA_STORAGE_KEY) || '{}');
+      const saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
       saveSadhana({ ...saved, japaCount: 0 });
     } catch (e) {}
   };
@@ -221,7 +240,7 @@ export const useSadhana = (isKidsZone = false) => {
     setCustomGoals(prev => {
       const updated = [...prev, goalName];
       try {
-        const saved = JSON.parse(localStorage.getItem(SADHANA_STORAGE_KEY) || '{}');
+        const saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
         saveSadhana({ ...saved, customGoals: updated });
       } catch (e) {}
       return updated;
@@ -230,7 +249,7 @@ export const useSadhana = (isKidsZone = false) => {
     setGoals(prev => {
       const updated = { ...prev, [goalName]: false };
       try {
-        const saved = JSON.parse(localStorage.getItem(SADHANA_STORAGE_KEY) || '{}');
+        const saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
         saveSadhana({ ...saved, goals: updated });
       } catch (e) {}
       return updated;
@@ -241,7 +260,7 @@ export const useSadhana = (isKidsZone = false) => {
     setCustomGoals(prev => {
       const updated = prev.filter(g => g !== goalName);
       try {
-        const saved = JSON.parse(localStorage.getItem(SADHANA_STORAGE_KEY) || '{}');
+        const saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
         saveSadhana({ ...saved, customGoals: updated });
       } catch (e) {}
       return updated;
@@ -251,7 +270,7 @@ export const useSadhana = (isKidsZone = false) => {
       const updated = { ...prev };
       delete updated[goalName];
       try {
-        const saved = JSON.parse(localStorage.getItem(SADHANA_STORAGE_KEY) || '{}');
+        const saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
         saveSadhana({ ...saved, goals: updated });
       } catch (e) {}
       return updated;
@@ -262,7 +281,7 @@ export const useSadhana = (isKidsZone = false) => {
     setPathwayProgress(prev => {
       const next = prev < totalDays ? prev + 1 : prev;
       try {
-        const saved = JSON.parse(localStorage.getItem(SADHANA_STORAGE_KEY) || '{}');
+        const saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
         saveSadhana({ ...saved, pathwayProgress: next });
       } catch (e) {}
       return next;
@@ -273,8 +292,19 @@ export const useSadhana = (isKidsZone = false) => {
     setShlokaPracticeDays(prev => {
       const next = prev < 7 ? prev + 1 : prev;
       try {
-        const saved = JSON.parse(localStorage.getItem(SADHANA_STORAGE_KEY) || '{}');
+        const saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
         saveSadhana({ ...saved, shlokaPracticeDays: next });
+      } catch (e) {}
+      return next;
+    });
+  };
+
+  const awardStars = (amount = 1) => {
+    setStars(prev => {
+      const next = prev + amount;
+      try {
+        const saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
+        saveSadhana({ ...saved, stars: next });
       } catch (e) {}
       return next;
     });
@@ -291,6 +321,7 @@ export const useSadhana = (isKidsZone = false) => {
     resetJapa,
     streak,
     stars,
+    awardStars,
     completionHistory,
     pathwayProgress,
     incrementPathwayProgress,

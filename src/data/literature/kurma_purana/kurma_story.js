@@ -49,14 +49,14 @@ export const kurmaStoryScenes = [
   },
   {
     text: "However, the churning also brought up Halahala, the most deadly, toxic poison in the universe, which threatened to destroy everything. Lord Shiva stepped forward and drank the poison to save the world, holding it in his throat, which turned blue, earning him the name Neelakantha.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/kurma_scene_13.jpg"
   },
   {
     text: "Finally, Dhanvantari, the divine physician, emerged from the ocean holding the glowing pot of Amrita (the nectar of immortality). The demons immediately snatched it and ran away, breaking their promise to share.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/kurma_scene_14.jpg"
   },
   {
     text: "Lord Vishnu then took the form of Mohini, an enchantingly beautiful woman. She tricked the demons, took the pot, and distributed the nectar to the gods. The gods regained their strength, defeated the demons, and reclaimed heaven, all thanks to the strong back of the Kurma Avatar!",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/kurma_scene_15.jpg"
   }
 ];
