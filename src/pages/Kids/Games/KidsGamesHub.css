@@ -1,71 +1,167 @@
 .games-hub-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  padding: 1rem;
+  gap: 1.75rem;
+  margin-bottom: 2rem;
 }
 
 .hub-header {
-  text-align: center;
-  background: white;
-  padding: 1.5rem 3rem;
-  border-radius: 30px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  border: 4px solid #FFDE59;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.hub-header h2 {
-  color: #8E44AD;
-  font-size: 2.2rem;
-  margin-bottom: 0.5rem;
+.hub-header-text h2 {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #1E293B;
+  margin: 0 0 0.3rem 0;
+  letter-spacing: -0.5px;
 }
 
-.hub-header p {
-  color: #555;
-  font-size: 1.2rem;
+.hub-header-text p {
+  color: #64748B;
+  font-size: 1.05rem;
+  margin: 0;
 }
 
 .games-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  width: 100%;
-  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
 }
 
 .game-card {
-  background: white;
-  border-radius: 24px;
-  padding: 2rem;
-  width: 280px;
-  text-align: center;
+  background: #FFFFFF;
+  border-radius: 28px;
+  padding: 1.6rem;
   cursor: pointer;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-  border: 4px solid transparent;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border: 3px solid #F1F5F9;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.trivia-card {
-  border-color: #3498DB;
-}
-
-.memory-card {
-  border-color: #2ECC71;
+.game-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
 }
 
 .game-icon {
-  font-size: 5rem;
-  margin-bottom: 1rem;
+  font-size: 3.2rem;
+  width: 68px;
+  height: 68px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trivia-icon {
+  background: #EFF6FF;
+}
+
+.memory-icon {
+  background: #ECFDF5;
+}
+
+.chant-icon {
+  background: #FDF2F8;
+}
+
+.game-badge {
+  background: #F1F5F9;
+  color: #475569;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
 }
 
 .game-card h3 {
-  font-size: 1.8rem;
-  color: #333;
-  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #1E293B;
+  margin: 0 0 0.5rem 0;
 }
 
 .game-card p {
-  color: #666;
-  font-size: 1.1rem;
+  font-size: 0.92rem;
+  color: #64748B;
+  line-height: 1.45;
+  margin: 0 0 1.4rem 0;
+  flex: 1;
+}
+
+.game-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #F1F5F9;
+}
+
+.game-reward-tag {
+  color: #D97706;
+  background: #FEF3C7;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+}
+
+.game-play-btn {
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  color: #FFFFFF;
+  border: none;
+  font-weight: 800;
+  font-size: 0.88rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.game-card:hover {
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.1);
+}
+
+.trivia-card:hover {
+  border-color: #93C5FD;
+}
+
+.trivia-card:hover .game-play-btn {
+  background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+}
+
+.memory-card:hover {
+  border-color: #A7F3D0;
+}
+
+.memory-card .game-play-btn {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+}
+
+.chant-garden-card:hover {
+  border-color: #FBCFE8;
+}
+
+.chant-garden-card .game-play-btn {
+  background: linear-gradient(135deg, #EC4899 0%, #DB2777 100%);
+}
+
+@media (max-width: 600px) {
+  .hub-header-text h2 {
+    font-size: 1.6rem;
+  }
+  .games-grid {
+    grid-template-columns: 1fr;
+  }
 }

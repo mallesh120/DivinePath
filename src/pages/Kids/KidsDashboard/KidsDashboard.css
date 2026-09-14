@@ -1,39 +1,82 @@
 .kids-dashboard {
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.kids-header {
+  animation: fadeIn 0.4s ease-in-out;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
   margin-bottom: 2rem;
 }
 
-.welcome-title {
-  color: #FF914D;
-  font-size: 2.2rem;
-  margin: 0;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.dharma-stars {
-  background: white;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
+/* Floating Toast */
+.kids-toast {
+  position: fixed;
+  top: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  color: white;
+  font-weight: 800;
+  font-size: 1.05rem;
+  padding: 0.65rem 1.6rem;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(217, 119, 6, 0.4);
+  z-index: 2000;
+  pointer-events: none;
+  border: 2px solid #FDE68A;
+}
+
+/* Header Area */
+.kids-dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.welcome-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.welcome-title {
+  color: #D97706;
+  font-size: 2.3rem;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.welcome-subtitle {
+  color: #64748B;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.dharma-stars-card {
+  background: #FFFFFF;
+  padding: 0.6rem 1.2rem;
+  border-radius: 24px;
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
-  border: 2px solid #FFDE59;
+  gap: 0.9rem;
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.2);
+  border: 2.5px solid #FDE68A;
 }
 
 .stars-icon {
-  font-size: 2rem;
-  animation: float 3s ease-in-out infinite;
+  font-size: 2.4rem;
+  animation: floatStars 3s ease-in-out infinite;
+}
+
+@keyframes floatStars {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 
 .stars-info {
@@ -42,214 +85,141 @@
 }
 
 .stars-count {
-  font-weight: 800;
-  font-size: 1.4rem;
-  color: #FF914D;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #D97706;
   line-height: 1;
 }
 
 .stars-label {
-  font-size: 0.75rem;
-  color: #666;
-  font-weight: 600;
+  font-size: 0.72rem;
+  color: #64748B;
+  font-weight: 800;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+.stars-tier-badge {
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin-top: 2px;
 }
 
+/* Habits Section */
 .kids-sadhana-section {
-  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.section-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .kids-sadhana-section h2 {
-  color: #4A90E2;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
+  color: #1E293B;
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+
+.habits-hint {
+  font-size: 0.85rem;
+  color: #64748B;
+  font-weight: 600;
 }
 
 .kids-sadhana-card {
-  background: white;
-  border-radius: 24px;
-  padding: 1.5rem;
-  box-shadow: 0 8px 24px rgba(74, 144, 226, 0.15);
-  border: 4px solid #BFE6FF;
+  background: #FFFFFF;
+  border-radius: 28px;
+  padding: 1.25rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  border: 3px solid #E2E8F0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
 }
 
 .kids-goal-item {
   display: flex;
   align-items: center;
-  padding: 1rem;
-  background: #F0F8FF;
-  border-radius: 16px;
+  padding: 1rem 1.2rem;
+  background: #F8FAFC;
+  border-radius: 20px;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2px solid transparent;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 2px solid #E2E8F0;
 }
 
 .kids-goal-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transform: translateY(-2px);
+  border-color: #CBD5E1;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
 }
 
 .kids-goal-item.completed {
-  background: #FFF9E6;
-  border-color: #FFDE59;
+  background: #FFFBEB;
+  border-color: #FCD34D;
 }
 
 .kids-goal-icon {
-  font-size: 1.8rem;
-  margin-right: 1rem;
+  font-size: 2rem;
+  margin-right: 0.9rem;
+}
+
+.kids-goal-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .kids-goal-text {
-  flex: 1;
+  font-weight: 800;
+  color: #1E293B;
+  font-size: 1.05rem;
+}
+
+.goal-subtext {
+  font-size: 0.78rem;
+  color: #64748B;
   font-weight: 600;
-  color: #333;
-  font-size: 1.1rem;
 }
 
 .kids-checkbox {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  border: 2px solid #ccc;
+  border: 2.5px solid #CBD5E1;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
   background: white;
-  transition: all 0.3s;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .kids-goal-item.completed .kids-checkbox {
-  border-color: #FFDE59;
-  background: #FFDE59;
-}
-
-.highlight-card {
-  background: white;
-  border-radius: 24px;
-  padding: 1.5rem;
-  box-shadow: 0 8px 24px rgba(255, 145, 77, 0.15);
-  border: 4px solid #FFDE59;
-  position: relative;
-  overflow: hidden;
-}
-
-.highlight-card h2 {
-  color: #333;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.highlight-content {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.highlight-icon {
-  font-size: 3rem;
-  background: #FFF3E0;
-  padding: 1rem;
-  border-radius: 50%;
-}
-
-.highlight-text h3 {
-  color: #D35400;
-  margin-bottom: 0.25rem;
-  font-size: 1.3rem;
-}
-
-.highlight-text p {
-  color: #666;
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-
-.action-btn {
-  display: block;
-  background: #FF5757;
+  border-color: #F59E0B;
+  background: #F59E0B;
   color: white;
-  text-align: center;
-  padding: 1rem;
-  border-radius: 100px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: transform 0.2s;
+  transform: scale(1.08);
 }
 
-.action-btn:hover {
-  transform: scale(1.05);
-}
-
-.quick-links {
-  margin-top: 3rem;
-}
-
-.quick-links h2 {
-  color: #555;
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-}
-
-.grid-links {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 1rem;
-}
-
-.grid-card {
-  background: white;
-  border-radius: 20px;
-  padding: 1.5rem 1rem;
-  text-align: center;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.2s;
-}
-
-.grid-card:hover {
-  transform: translateY(-5px);
-}
-
-.card-emoji {
-  font-size: 2.5rem;
-}
-
-.grid-card h3 {
-  color: #333;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.story-card { border-bottom: 4px solid #3498DB; }
-.game-card { border-bottom: 4px solid #2ECC71; }
-.chant-card { border-bottom: 4px solid #9B59B6; }
-
-/* Daily Shloka Styles */
+/* Daily Shloka Section */
 .daily-shloka-section {
   width: 100%;
 }
 
 .shloka-card {
-  background: white;
-  border-radius: 24px;
-  padding: 1.5rem;
-  box-shadow: 0 8px 24px rgba(142, 68, 173, 0.15);
-  border: 4px solid #D2B4DE;
+  background: #FFFFFF;
+  border-radius: 28px;
+  padding: 1.8rem;
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.12);
+  border: 4px solid #DDD6FE;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -260,8 +230,8 @@
   justify-content: center;
   align-items: center;
   min-height: 200px;
-  color: #888;
-  font-size: 1.2rem;
+  color: #64748B;
+  font-size: 1.1rem;
   border-style: dashed;
 }
 
@@ -269,18 +239,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  gap: 0.6rem;
+  margin-bottom: 1.4rem;
 }
 
 .shloka-header h2 {
-  color: #8E44AD;
-  font-size: 1.5rem;
+  color: #7C3AED;
+  font-size: 1.45rem;
+  font-weight: 800;
   margin: 0;
 }
 
 .shloka-icon {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .shloka-content {
@@ -289,55 +260,159 @@
 
 .sanskrit-text {
   font-size: 1.4rem;
-  color: #D35400;
-  font-weight: bold;
+  color: #B45309;
+  font-weight: 800;
   margin-bottom: 0.8rem;
-  line-height: 1.5;
+  line-height: 1.6;
   white-space: pre-wrap;
 }
 
 .english-text {
-  font-size: 1.1rem;
-  color: #555;
+  font-size: 1.08rem;
+  color: #334155;
   margin-bottom: 1rem;
   font-style: italic;
   white-space: pre-wrap;
+  font-weight: 600;
 }
 
 .meaning-box {
-  background: #F9E79F;
-  padding: 1rem;
-  border-radius: 12px;
-  border: 2px solid #F1C40F;
+  background: #FFFBEB;
+  padding: 1.1rem 1.4rem;
+  border-radius: 18px;
+  border: 2px solid #FCD34D;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .meaning-box p {
-  color: #7D6608;
-  font-size: 1rem;
+  color: #78350F;
+  font-size: 0.98rem;
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.5;
+  font-weight: 600;
 }
 
 .listen-btn {
-  display: inline-block;
-  background: #3498DB;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
   color: white;
   border: none;
-  padding: 0.8rem 2rem;
-  border-radius: 100px;
-  font-size: 1.1rem;
-  font-weight: bold;
+  padding: 0.75rem 2rem;
+  border-radius: 999px;
+  font-size: 1.05rem;
+  font-weight: 800;
   cursor: pointer;
-  transition: transform 0.2s;
-  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
 }
 
 .listen-btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4);
 }
 
 .listen-btn.playing {
-  background: #FFC107;
-  color: #333;
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
 }
 
+/* Quick Links / Explore */
+.quick-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quick-links h2 {
+  color: #1E293B;
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+
+.grid-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.grid-card {
+  background: #FFFFFF;
+  border-radius: 26px;
+  padding: 1.6rem 1.4rem;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  border: 3px solid #F1F5F9;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.grid-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.09);
+}
+
+.card-emoji {
+  font-size: 3.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.grid-card h3 {
+  color: #1E293B;
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.grid-card p {
+  color: #64748B;
+  font-size: 0.88rem;
+  margin: 0 0 1rem 0;
+}
+
+.card-action-pill {
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  transition: transform 0.2s;
+}
+
+.story-card {
+  border-color: #BFDBFE;
+}
+.story-card .card-action-pill {
+  background: #EFF6FF;
+  color: #2563EB;
+}
+
+.game-card {
+  border-color: #A7F3D0;
+}
+.game-card .card-action-pill {
+  background: #ECFDF5;
+  color: #059669;
+}
+
+.chant-card {
+  border-color: #FBCFE8;
+}
+.chant-card .card-action-pill {
+  background: #FDF2F8;
+  color: #DB2777;
+}
+
+@media (max-width: 600px) {
+  .welcome-title { font-size: 1.8rem; }
+  .grid-links { grid-template-columns: 1fr; }
+  .sanskrit-text { font-size: 1.2rem; }
+  .shloka-card { padding: 1.25rem; }
+}
