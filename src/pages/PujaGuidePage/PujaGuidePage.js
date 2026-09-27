@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { getPujaById } from '../../data/pujas/pujasData';
 import MaterialsChecklist from '../../components/MaterialsChecklist/MaterialsChecklist';
 import { usePanchangam } from '../../hooks/usePanchangam';
+import useTextToSpeech from '../../hooks/useTextToSpeech';
 import styles from './PujaGuidePage.module.css';
 
 const PujaGuidePage = () => {
@@ -11,9 +12,9 @@ const PujaGuidePage = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [showMaterials, setShowMaterials] = useState(true);
   const [completedSteps, setCompletedSteps] = useState([]);
-  const [isPlayingAudio, setIsPlayingAudio] = useState(false);
   const [playingSection, setPlayingSection] = useState(null);
   const { panchangam } = usePanchangam();
+  const { speak, stop, isPlaying } = useTextToSpeech();
 
   useEffect(() => {
     // Load completed steps from localStorage
@@ -28,22 +29,12 @@ const PujaGuidePage = () => {
     localStorage.setItem(`puja_${pujaId}_completed`, JSON.stringify(completedSteps));
   }, [completedSteps, pujaId]);
 
-  // Load voices when component mounts
-  useEffect(() => {
-    if ('speechSynthesis' in window) {
-      // Chrome loads voices asynchronously
-      window.speechSynthesis.onvoiceschanged = () => {
-        window.speechSynthesis.getVoices();
-      };
-    }
-  }, []);
-
   // Stop audio when component unmounts or step changes
   useEffect(() => {
     return () => {
-      window.speechSynthesis.cancel();
+      stop();
     };
-  }, [currentStep]);
+  }, [currentStep, stop]);
 
   if (!puja) {
     return (
@@ -89,53 +80,21 @@ const PujaGuidePage = () => {
   };
 
   const speakText = (text, section) => {
-    // Stop any ongoing speech
-    window.speechSynthesis.cancel();
+    stop();
     
-    if (isPlayingAudio && playingSection === section) {
+    if (isPlaying && playingSection === section) {
       // If already playing this section, stop it
-      setIsPlayingAudio(false);
       setPlayingSection(null);
       return;
     }
 
-    // Check if speech synthesis is supported
-    if ('speechSynthesis' in window) {
-      const utterance = new SpeechSynthesisUtterance(text);
-      
-      // Try to use a Hindi voice if available, otherwise use default
-      const voices = window.speechSynthesis.getVoices();
-      const hindiVoice = voices.find(voice => 
-        voice.lang.startsWith('hi') || voice.lang.startsWith('sa')
-      );
-      
-      if (hindiVoice) {
-        utterance.voice = hindiVoice;
-      }
-      
-      utterance.rate = 0.8; // Slower for better pronunciation
-      utterance.pitch = 1;
-      utterance.volume = 1;
+    let lang = section === 'sanskrit' ? 'hi' : 'en';
 
-      utterance.onstart = () => {
-        setIsPlayingAudio(true);
-        setPlayingSection(section);
-      };
-
-      utterance.onend = () => {
-        setIsPlayingAudio(false);
-        setPlayingSection(null);
-      };
-
-      utterance.onerror = () => {
-        setIsPlayingAudio(false);
-        setPlayingSection(null);
-      };
-
-      window.speechSynthesis.speak(utterance);
-    } else {
-      alert('Text-to-speech is not supported in your browser. Please use Chrome, Safari, or Edge.');
-    }
+    speak(text, 0.8, 1, lang, {
+      onStart: () => setPlayingSection(section),
+      onEnd: () => setPlayingSection(null),
+      onError: () => setPlayingSection(null)
+    });
   };
 
   const isLastStep = currentStep === puja.steps.length - 1;
@@ -278,13 +237,13 @@ const PujaGuidePage = () => {
                     <div className={styles['mantra-text-header']}>
                       <strong>Sanskrit:</strong>
                       <button
-                        className={`${styles['audio-btn']} ${isPlayingAudio && playingSection === 'sanskrit' ? styles.playing : ''}`}
+                        className={`${styles['audio-btn']} ${isPlaying && playingSection === 'sanskrit' ? styles.playing : ''}`}
                         onClick={() => speakText(currentStepData.mantra.sanskrit, 'sanskrit')}
                         title="Listen to Sanskrit pronunciation"
                         aria-label="Listen to Sanskrit pronunciation"
-                        aria-pressed={isPlayingAudio && playingSection === 'sanskrit'}
+                        aria-pressed={isPlaying && playingSection === 'sanskrit'}
                       >
-                        {isPlayingAudio && playingSection === 'sanskrit' ? '⏸️ Pause' : '🔊 Listen'}
+                        {isPlaying && playingSection === 'sanskrit' ? '⏸️ Pause' : '🔊 Listen'}
                       </button>
                     </div>
                     <p>{currentStepData.mantra.sanskrit}</p>
@@ -293,13 +252,13 @@ const PujaGuidePage = () => {
                     <div className={styles['mantra-text-header']}>
                       <strong>Transliteration:</strong>
                       <button
-                        className={`${styles['audio-btn']} ${isPlayingAudio && playingSection === 'transliteration' ? styles.playing : ''}`}
+                        className={`${styles['audio-btn']} ${isPlaying && playingSection === 'transliteration' ? styles.playing : ''}`}
                         onClick={() => speakText(currentStepData.mantra.transliteration, 'transliteration')}
                         title="Listen to pronunciation guide"
                         aria-label="Listen to transliteration pronunciation"
-                        aria-pressed={isPlayingAudio && playingSection === 'transliteration'}
+                        aria-pressed={isPlaying && playingSection === 'transliteration'}
                       >
-                        {isPlayingAudio && playingSection === 'transliteration' ? '⏸️ Pause' : '🔊 Listen'}
+                        {isPlaying && playingSection === 'transliteration' ? '⏸️ Pause' : '🔊 Listen'}
                       </button>
                     </div>
                     <p>{currentStepData.mantra.transliteration}</p>
@@ -308,13 +267,13 @@ const PujaGuidePage = () => {
                     <div className={styles['mantra-text-header']}>
                       <strong>Meaning:</strong>
                       <button
-                        className={`${styles['audio-btn']} ${isPlayingAudio && playingSection === 'meaning' ? styles.playing : ''}`}
+                        className={`${styles['audio-btn']} ${isPlaying && playingSection === 'meaning' ? styles.playing : ''}`}
                         onClick={() => speakText(currentStepData.mantra.meaning, 'meaning')}
                         title="Listen to meaning"
                         aria-label="Listen to meaning pronunciation"
-                        aria-pressed={isPlayingAudio && playingSection === 'meaning'}
+                        aria-pressed={isPlaying && playingSection === 'meaning'}
                       >
-                        {isPlayingAudio && playingSection === 'meaning' ? '⏸️ Pause' : '🔊 Listen'}
+                        {isPlaying && playingSection === 'meaning' ? '⏸️ Pause' : '🔊 Listen'}
                       </button>
                     </div>
                     <p>{currentStepData.mantra.meaning}</p>

@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getAshtottaramById } from '../../data/ashtottaram/ashtottaramData';
+import useTextToSpeech from '../../hooks/useTextToSpeech';
 import './AshtottaramDetailPage.css';
 
 const AshtottaramDetailPage = () => {
   const { deityId } = useParams();
   const navigate = useNavigate();
   const [deity, setDeity] = useState(null);
-  const [isPlayingAudio, setIsPlayingAudio] = useState(false);
   const [currentPlayingIndex, setCurrentPlayingIndex] = useState(null);
+  const { speak, stop, isPlaying } = useTextToSpeech();
   const [searchTerm, setSearchTerm] = useState('');
   const [filterView, setFilterView] = useState('all'); // 'all', 'sanskrit', 'transliteration'
 
@@ -24,60 +25,26 @@ const AshtottaramDetailPage = () => {
   useEffect(() => {
     // Cleanup: Cancel any ongoing speech when component unmounts or deity changes
     return () => {
-      if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-      }
+      stop();
     };
-  }, [deityId]);
+  }, [deityId, stop]);
 
   const speakText = (text, index) => {
-    if (!('speechSynthesis' in window)) {
-      alert('Sorry, your browser does not support text-to-speech.');
-      return;
-    }
+    stop();
 
     // If already playing this name, stop it
-    if (isPlayingAudio && currentPlayingIndex === index) {
-      window.speechSynthesis.cancel();
-      setIsPlayingAudio(false);
+    if (isPlaying && currentPlayingIndex === index) {
       setCurrentPlayingIndex(null);
       return;
     }
 
-    // Cancel any ongoing speech
-    window.speechSynthesis.cancel();
+    let lang = index.includes('sanskrit') ? 'hi' : 'en';
 
-    const utterance = new SpeechSynthesisUtterance(text);
-    
-    // Try to use a Hindi/Sanskrit voice if available
-    const voices = window.speechSynthesis.getVoices();
-    const hindiVoice = voices.find(voice => 
-      voice.lang.includes('hi') || voice.lang.includes('sa')
-    );
-    if (hindiVoice) {
-      utterance.voice = hindiVoice;
-    }
-
-    utterance.lang = 'hi-IN';
-    utterance.rate = 0.8;
-    utterance.pitch = 1;
-
-    utterance.onstart = () => {
-      setIsPlayingAudio(true);
-      setCurrentPlayingIndex(index);
-    };
-
-    utterance.onend = () => {
-      setIsPlayingAudio(false);
-      setCurrentPlayingIndex(null);
-    };
-
-    utterance.onerror = () => {
-      setIsPlayingAudio(false);
-      setCurrentPlayingIndex(null);
-    };
-
-    window.speechSynthesis.speak(utterance);
+    speak(text, 0.8, 1, lang, {
+      onStart: () => setCurrentPlayingIndex(index),
+      onEnd: () => setCurrentPlayingIndex(null),
+      onError: () => setCurrentPlayingIndex(null)
+    });
   };
 
   const filteredNames = deity?.names.filter(name => {
@@ -190,13 +157,13 @@ const AshtottaramDetailPage = () => {
                     <span className="name-label">Sanskrit:</span>
                     <span className="name-text sanskrit">{name.sanskrit}</span>
                     <button
-                      className={`audio-btn ${isPlayingAudio && currentPlayingIndex === `${index}-sanskrit` ? 'playing' : ''}`}
+                      className={`audio-btn ${isPlaying && currentPlayingIndex === `${index}-sanskrit` ? 'playing' : ''}`}
                       onClick={() => speakText(name.sanskrit, `${index}-sanskrit`)}
                       title="Listen to pronunciation"
                       aria-label="Listen to Sanskrit pronunciation"
-                      aria-pressed={isPlayingAudio && currentPlayingIndex === `${index}-sanskrit`}
+                      aria-pressed={isPlaying && currentPlayingIndex === `${index}-sanskrit`}
                     >
-                      {isPlayingAudio && currentPlayingIndex === `${index}-sanskrit` ? '⏸️' : '🔊'}
+                      {isPlaying && currentPlayingIndex === `${index}-sanskrit` ? '⏸️' : '🔊'}
                     </button>
                   </div>
                 )}
@@ -205,13 +172,13 @@ const AshtottaramDetailPage = () => {
                     <span className="name-label">Transliteration:</span>
                     <span className="name-text">{name.transliteration}</span>
                     <button
-                      className={`audio-btn ${isPlayingAudio && currentPlayingIndex === `${index}-trans` ? 'playing' : ''}`}
+                      className={`audio-btn ${isPlaying && currentPlayingIndex === `${index}-trans` ? 'playing' : ''}`}
                       onClick={() => speakText(name.transliteration, `${index}-trans`)}
                       title="Listen to pronunciation"
                       aria-label="Listen to transliteration pronunciation"
-                      aria-pressed={isPlayingAudio && currentPlayingIndex === `${index}-trans`}
+                      aria-pressed={isPlaying && currentPlayingIndex === `${index}-trans`}
                     >
-                      {isPlayingAudio && currentPlayingIndex === `${index}-trans` ? '⏸️' : '🔊'}
+                      {isPlaying && currentPlayingIndex === `${index}-trans` ? '⏸️' : '🔊'}
                     </button>
                   </div>
                 )}
@@ -220,13 +187,13 @@ const AshtottaramDetailPage = () => {
                     <span className="name-label">Mantra (Sanskrit):</span>
                     <span className="name-text mantra sanskrit-mantra">{name.mantraSanskrit}</span>
                     <button
-                      className={`audio-btn ${isPlayingAudio && currentPlayingIndex === `${index}-mantra-sanskrit` ? 'playing' : ''}`}
+                      className={`audio-btn ${isPlaying && currentPlayingIndex === `${index}-mantra-sanskrit` ? 'playing' : ''}`}
                       onClick={() => speakText(name.mantraSanskrit, `${index}-mantra-sanskrit`)}
                       title="Listen to pronunciation"
                       aria-label="Listen to Mantra pronunciation"
-                      aria-pressed={isPlayingAudio && currentPlayingIndex === `${index}-mantra-sanskrit`}
+                      aria-pressed={isPlaying && currentPlayingIndex === `${index}-mantra-sanskrit`}
                     >
-                      {isPlayingAudio && currentPlayingIndex === `${index}-mantra-sanskrit` ? '⏸️' : '🔊'}
+                      {isPlaying && currentPlayingIndex === `${index}-mantra-sanskrit` ? '⏸️' : '🔊'}
                     </button>
                   </div>
                 )}

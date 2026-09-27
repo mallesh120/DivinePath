@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { kidsStories } from '../../../data/kids/stories';
 import useSoundEffects from '../../../hooks/useSoundEffects';
 import { useSadhana } from '../../../hooks/useSadhana';
+import useTextToSpeech from '../../../hooks/useTextToSpeech';
 import KidsPageTransition from '../../../components/KidsLayout/KidsPageTransition';
 import './StorybookViewer.css';
 
@@ -12,12 +13,12 @@ const StorybookViewer = () => {
   const navigate = useNavigate();
   const [story, setStory] = useState(null);
   const [currentPage, setCurrentPage] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
   const [interactionState, setInteractionState] = useState('idle');
   const [isFinished, setIsFinished] = useState(false);
 
   const { playClick, playSuccess } = useSoundEffects();
   const { awardStars, goals, toggleGoal } = useSadhana(true);
+  const { speak, stop, isPlaying } = useTextToSpeech();
 
   useEffect(() => {
     let foundStory;
@@ -38,27 +39,12 @@ const StorybookViewer = () => {
 
   // Handle Text-to-Speech
   const handleReadAloud = (text) => {
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.rate = 0.85; // slightly slower for kids
-      utterance.pitch = 1.1; // cheerful higher pitch
-      
-      utterance.onstart = () => setIsPlaying(true);
-      utterance.onend = () => setIsPlaying(false);
-      utterance.onerror = () => setIsPlaying(false);
-      
-      window.speechSynthesis.speak(utterance);
+    if (isPlaying) {
+      stop();
+    } else {
+      speak(text, 0.85, 1.1);
     }
   };
-
-  useEffect(() => {
-    return () => {
-      if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-      }
-    };
-  }, []);
 
   if (!story) return <div className="storybook-loading">Loading Story...</div>;
 
@@ -71,7 +57,7 @@ const StorybookViewer = () => {
     if (currentPage < story.pages.length - 1) {
       setCurrentPage(c => c + 1);
       setInteractionState('idle');
-      if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+      stop();
     } else {
       // Finished story
       handleFinishStory();
@@ -83,12 +69,12 @@ const StorybookViewer = () => {
     if (currentPage > 0) {
       setCurrentPage(c => c - 1);
       setInteractionState('idle');
-      if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+      stop();
     }
   };
 
   const handleFinishStory = () => {
-    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    stop();
     try { playSuccess(); } catch (e) {}
     awardStars(1);
     if (!goals.story) {
@@ -196,7 +182,7 @@ const StorybookViewer = () => {
             to="/kids/stories" 
             className="back-catalog-link"
             onClick={() => {
-              if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+              stop();
               try { playClick(); } catch (e) {}
             }}
           >

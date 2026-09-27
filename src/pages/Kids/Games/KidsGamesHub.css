@@ -16,13 +16,13 @@
 .hub-header-text h2 {
   font-size: 1.9rem;
   font-weight: 800;
-  color: #1E293B;
+  color: var(--text-primary);
   margin: 0 0 0.3rem 0;
   letter-spacing: -0.5px;
 }
 
 .hub-header-text p {
-  color: #64748B;
+  color: var(--text-muted);
   font-size: 1.05rem;
   margin: 0;
 }
@@ -34,12 +34,12 @@
 }
 
 .game-card {
-  background: #FFFFFF;
+  background: var(--card-bg, #FFFFFF);
   border-radius: 28px;
   padding: 1.6rem;
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-  border: 3px solid #F1F5F9;
+  box-shadow: 0 8px 24px var(--shadow-sm, rgba(0, 0, 0, 0.06));
+  border: 3px solid var(--border-subtle, #F1F5F9);
   display: flex;
   flex-direction: column;
   transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -63,20 +63,20 @@
 }
 
 .trivia-icon {
-  background: #EFF6FF;
+  background: var(--bg-tertiary, #EFF6FF);
 }
 
 .memory-icon {
-  background: #ECFDF5;
+  background: var(--bg-tertiary, #ECFDF5);
 }
 
 .chant-icon {
-  background: #FDF2F8;
+  background: var(--bg-tertiary, #FDF2F8);
 }
 
 .game-badge {
-  background: #F1F5F9;
-  color: #475569;
+  background: var(--border-subtle, #F1F5F9);
+  color: var(--text-secondary, #475569);
   font-size: 0.75rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -88,13 +88,13 @@
 .game-card h3 {
   font-size: 1.3rem;
   font-weight: 800;
-  color: #1E293B;
+  color: var(--text-primary);
   margin: 0 0 0.5rem 0;
 }
 
 .game-card p {
   font-size: 0.92rem;
-  color: #64748B;
+  color: var(--text-muted);
   line-height: 1.45;
   margin: 0 0 1.4rem 0;
   flex: 1;
@@ -105,12 +105,12 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 1rem;
-  border-top: 1px solid #F1F5F9;
+  border-top: 1px solid var(--border-subtle, #F1F5F9);
 }
 
 .game-reward-tag {
-  color: #D97706;
-  background: #FEF3C7;
+  color: var(--primary-color, #D97706);
+  background: var(--bg-tertiary, #FEF3C7);
   font-size: 0.8rem;
   font-weight: 800;
   padding: 0.25rem 0.65rem;
@@ -118,7 +118,7 @@
 }
 
 .game-play-btn {
-  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  background: linear-gradient(135deg, var(--secondary-color, #3B82F6) 0%, var(--secondary-dark, #2563EB) 100%);
   color: #FFFFFF;
   border: none;
   font-weight: 800;
@@ -130,31 +130,31 @@
 }
 
 .game-card:hover {
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 14px 32px var(--shadow-md, rgba(0, 0, 0, 0.1));
 }
 
 .trivia-card:hover {
-  border-color: #93C5FD;
+  border-color: var(--secondary-color, #93C5FD);
 }
 
 .trivia-card:hover .game-play-btn {
-  background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+  background: linear-gradient(135deg, var(--secondary-color, #2563EB) 0%, var(--secondary-dark, #1D4ED8) 100%);
 }
 
 .memory-card:hover {
-  border-color: #A7F3D0;
+  border-color: var(--accent-color, #A7F3D0);
 }
 
 .memory-card .game-play-btn {
-  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  background: linear-gradient(135deg, var(--accent-color, #10B981) 0%, var(--accent-dark, #059669) 100%);
 }
 
 .chant-garden-card:hover {
-  border-color: #FBCFE8;
+  border-color: var(--primary-color, #FBCFE8);
 }
 
 .chant-garden-card .game-play-btn {
-  background: linear-gradient(135deg, #EC4899 0%, #DB2777 100%);
+  background: linear-gradient(135deg, var(--accent-color, #EC4899) 0%, var(--accent-dark, #DB2777) 100%);
 }
 
 @media (max-width: 600px) {

@@ -1,0 +1,214 @@
+/* src/pages/Kids/Games/CatchTheModak.css */
+.modak-game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: calc(100vh - 80px);
+  padding: 2rem;
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.modak-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  z-index: 10;
+}
+
+.modak-header h2 {
+  font-size: 2.5rem;
+  color: #ff7e5f;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.modak-stats {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4a4a4a;
+  background: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.score-display {
+  color: #f6d365;
+}
+
+.lives-display {
+  color: #ff6b6b;
+}
+
+.game-area {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 60vh;
+  min-height: 400px;
+  background: linear-gradient(to bottom, #87CEEB 0%, #E0F6FF 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15), inset 0 0 20px rgba(255,255,255,0.5);
+  border: 4px solid #fff;
+}
+
+/* Floor of the game area */
+.game-area::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: #a8e6cf;
+  border-top: 4px solid #88d4ab;
+  z-index: 1;
+}
+
+.basket {
+  position: absolute;
+  bottom: 40px;
+  /* Removed transition for instant tracking (feels smoother) */
+  z-index: 10;
+  transform: translateX(-50%);
+  cursor: pointer;
+  user-select: none;
+}
+
+.ganesha-basket-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+  /* Make him look cute when catching */
+  transition: transform 0.1s ease;
+  transform-origin: bottom center;
+}
+
+.ganesha-basket-img.eating {
+  animation: happyEat 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ganesha-basket-img.flip-horizontal {
+  transform: scaleX(-1);
+}
+
+.ganesha-basket-img.running {
+  animation: runningBob 0.3s infinite alternate ease-in-out;
+}
+
+@keyframes runningBob {
+  0% { transform: translateY(0) scaleX(var(--flip, 1)); }
+  100% { transform: translateY(-5px) scaleX(var(--flip, 1)); }
+}
+
+.ganesha-basket-img.running.flip-horizontal {
+  --flip: -1;
+}
+.ganesha-basket-img.running:not(.flip-horizontal) {
+  --flip: 1;
+}
+
+@keyframes happyEat {
+  0% { transform: scale(1, 1); }
+  25% { transform: scale(1.3, 0.7); } /* Squash down */
+  50% { transform: scale(0.8, 1.2); } /* Stretch up */
+  75% { transform: scale(1.1, 0.9); }
+  100% { transform: scale(1, 1); }
+}
+
+.ganesha-basket-img.hurt {
+  animation: sadHurt 0.4s ease-in-out;
+  filter: drop-shadow(0 5px 10px rgba(255,0,0,0.4)) sepia(1) hue-rotate(-50deg) saturate(3);
+}
+
+@keyframes sadHurt {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-10px) rotate(-10deg); }
+  40% { transform: translateX(10px) rotate(10deg); }
+  60% { transform: translateX(-10px) rotate(-10deg); }
+  80% { transform: translateX(10px) rotate(10deg); }
+  100% { transform: translateX(0); }
+}
+
+.falling-item {
+  position: absolute;
+  font-size: 2.5rem;
+  transform: translateX(-50%);
+  z-index: 5;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+  will-change: top;
+}
+
+/* Animations now handled by framer-motion in JS */
+
+.game-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255,255,255,0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  border-radius: 20px;
+}
+
+.game-overlay h3 {
+  font-size: 3rem;
+  color: #ff7e5f;
+  margin-bottom: 1rem;
+}
+
+.game-overlay p {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.start-btn {
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(253, 160, 133, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.start-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(253, 160, 133, 0.6);
+}
+
+.start-btn:active {
+  transform: scale(0.95);
+}
+
+.controls-hint {
+  margin-top: 1rem;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .game-area {
+    height: 50vh;
+  }
+  .modak-header h2 {
+    font-size: 2rem;
+  }
+}

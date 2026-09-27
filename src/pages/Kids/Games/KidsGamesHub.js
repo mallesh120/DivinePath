@@ -28,6 +28,27 @@ const KidsGamesHub = () => {
         </div>
 
         <div className="games-grid">
+          {/* Catch the Modak */}
+          <motion.div 
+            className="game-card modak-card"
+            whileHover={{ y: -8 }}
+            whileTap={{ scale: 0.98 }}
+            onClick={() => handleGameSelect('/kids/games/modak')}
+          >
+            <div className="game-card-top">
+              <div className="game-icon modak-icon">🥟</div>
+              <span className="game-badge">Action Game</span>
+            </div>
+            <h3>Catch the Modak!</h3>
+            <p>Help Ganesha catch falling Modaks and Laddoos, but watch out for the stones!</p>
+            <div className="game-card-footer">
+              <span className="game-reward-tag">⭐ High Score Rewards</span>
+              <button className="game-play-btn" tabIndex="-1">
+                Play Now ▶
+              </button>
+            </div>
+          </motion.div>
+
           {/* Trivia Quiz */}
           <motion.div 
             className="game-card trivia-card"
