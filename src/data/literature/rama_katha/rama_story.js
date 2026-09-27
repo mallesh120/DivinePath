@@ -29,18 +29,18 @@ export const ramaKathaScenes = [
   },
   {
     text: "The battle was terrifying. The sky was filled with magical arrows, fire, and thunder. Even Lakshmana was badly wounded, but Hanuman flew to the Himalayas and brought back an entire mountain of healing herbs to save him. Finally, Rama faced the ten-headed Ravana in single combat.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/rama_fights_ravana_2_1790520659343.jpg"
   },
   {
     text: "After a long and epic duel, Rama used a divine arrow—the Brahmastra—to strike Ravana's navel, defeating the evil king once and for all. Good had triumphed over evil. Rama rescued Sita, and their joyous reunion brought light back to the world.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/rama_sita_reunion_2_1790520669865.jpg"
   },
   {
     text: "The fourteen years of exile were finally over. Rama, Sita, and Lakshmana flew back to Ayodhya in a magical chariot. The people of the city were so overjoyed that they lit thousands of oil lamps to guide them home in the dark night—a celebration we now know as Diwali.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/rama_returns_ayodhya_1790520679952.jpg"
   },
   {
     text: "Rama was finally crowned King of Ayodhya. He ruled with such perfect justice, compassion, and truth that his reign became known as 'Rama Rajya'—an era of absolute peace and prosperity where no one ever suffered. He remains the ultimate symbol of the perfect king and the ideal human being.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/king_rama_throne_1790520689487.jpg"
   }
 ];

@@ -1,7 +1,7 @@
 export const ayodhyaKandScenes = [
   {
     text: "King Dasharatha, now advanced in age and full of affection for his son Rama, decided to install him as the crown prince and heir to the throne of Ayodhya. The entire kingdom rejoiced at this announcement, celebrating the prospect of being ruled by the virtuous Rama.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/dasharatha_announces_rama_crown_prince_1790522304200.jpg"
   },
   {
     text: "However, Queen Kaikeyi, the youngest and most beautiful of the king's wives, harbored a deep jealousy of Rama. Instigated by her maidservant Manthara, she resolved to prevent Rama's coronation and secure the throne for her own son, Bharata.",
