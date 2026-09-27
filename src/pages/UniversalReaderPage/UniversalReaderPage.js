@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { literatureData } from '../../data/literature';
 import GradientHeader from '../../components/ui/GradientHeader/GradientHeader';
 import AudioPlayer from '../../components/AudioPlayer/AudioPlayer';
+import useTextToSpeech from '../../hooks/useTextToSpeech';
 import './UniversalReaderPage.css';
 
 const UniversalReaderPage = () => {
@@ -10,10 +11,9 @@ const UniversalReaderPage = () => {
   const navigate = useNavigate();
 
   // Speech Synthesis & Narration State
-  const [isPlaying, setIsPlaying] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [activeItemIndex, setActiveItemIndex] = useState(-1);
-  const utteranceRef = useRef(null);
+  const { speak, stop, pause, resume, isPlaying } = useTextToSpeech();
   const itemRefs = useRef([]);
 
   // Reader Customization State
@@ -25,19 +25,16 @@ const UniversalReaderPage = () => {
     window.scrollTo(0, 0); 
     
     // Stop speaking if navigating away
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-      setIsPlaying(false);
+    if (isPlaying || isPaused) {
+      stop();
       setIsPaused(false);
       setActiveItemIndex(-1);
     }
 
     return () => {
-      if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-      }
+      stop();
     };
-  }, [bookId, chapterId]);
+  }, [bookId, chapterId, stop, isPlaying, isPaused]);
   
   const book = literatureData.find((s) => s.id === parseInt(bookId) || s.id === bookId);
 
@@ -131,7 +128,7 @@ const UniversalReaderPage = () => {
 
     const items = chapter.scenes || chapter.sampleVerses || (chapter.content ? chapter.content.split('\n\n') : []);
     if (!items || index >= items.length) {
-      setIsPlaying(false);
+      stop();
       setIsPaused(false);
       setActiveItemIndex(-1);
       return;
@@ -154,65 +151,43 @@ const UniversalReaderPage = () => {
       textToRead = items[index];
     }
 
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(textToRead);
-    utterance.lang = 'en-US';
-    utterance.volume = 1;
-    utterance.rate = 0.95;
-
-    const voices = window.speechSynthesis.getVoices();
-    const gentleVoice = voices.find(v => v.name.includes("Google US English") || v.name.includes("Samantha") || v.lang === 'en-US');
-    if (gentleVoice) utterance.voice = gentleVoice;
-
-    utterance.onerror = (e) => {
-      console.error("Speech error", e);
-      setIsPlaying(false);
-      setActiveItemIndex(-1);
-    };
-
-    utterance.onend = () => {
-      if (index + 1 < items.length) {
-        setTimeout(() => {
-          speakNarrativeItem(index + 1);
-        }, 600);
-      } else {
-        setIsPlaying(false);
-        setIsPaused(false);
+    speak(textToRead, 0.95, 1, 'en', {
+      onStart: () => setIsPaused(false),
+      onEnd: () => {
+        if (index + 1 < items.length) {
+          setTimeout(() => {
+            speakNarrativeItem(index + 1);
+          }, 600);
+        } else {
+          setIsPaused(false);
+          setActiveItemIndex(-1);
+        }
+      },
+      onError: (e) => {
+        console.error("Speech error", e);
         setActiveItemIndex(-1);
       }
-    };
-
-    utteranceRef.current = utterance;
-    window.speechSynthesis.speak(utterance);
-    setIsPlaying(true);
-    setIsPaused(false);
+    });
   };
 
   const handleStartNarration = (fromIndex = 0) => {
     if (isPaused) {
-      window.speechSynthesis.resume();
+      resume();
       setIsPaused(false);
-      setIsPlaying(true);
       return;
     }
     speakNarrativeItem(fromIndex);
   };
 
   const handlePauseNarration = () => {
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.pause();
-      setIsPaused(true);
-      setIsPlaying(false);
-    }
+    pause();
+    setIsPaused(true);
   };
 
   const handleStopNarration = () => {
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-      setIsPlaying(false);
-      setIsPaused(false);
-      setActiveItemIndex(-1);
-    }
+    stop();
+    setIsPaused(false);
+    setActiveItemIndex(-1);
   };
 
   const renderContent = () => {

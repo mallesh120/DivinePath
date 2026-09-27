@@ -17,6 +17,7 @@ const StorybookViewer = lazy(() => import('./pages/Kids/Storybook/StorybookViewe
 const KidsTriviaGame = lazy(() => import('./pages/Kids/Games/KidsTriviaGame'));
 const KidsGamesHub = lazy(() => import('./pages/Kids/Games/KidsGamesHub'));
 const MemoryMatch = lazy(() => import('./pages/Kids/Games/MemoryMatch'));
+const CatchTheModak = lazy(() => import('./pages/Kids/Games/CatchTheModak'));
 const KidsChanting = lazy(() => import('./pages/Kids/Chanting/KidsChanting'));
 
 // Lazy load Adults Zone components (Original Pages)
@@ -162,6 +163,7 @@ function App() {
               <Route path="games" element={withTransition(KidsGamesHub)} />
               <Route path="games/trivia" element={withTransition(KidsTriviaGame)} />
               <Route path="games/memory" element={withTransition(MemoryMatch)} />
+              <Route path="games/modak" element={withTransition(CatchTheModak)} />
               <Route path="chanting" element={withTransition(KidsChanting)} />
             </Route>
 

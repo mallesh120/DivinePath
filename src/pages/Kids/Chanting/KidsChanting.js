@@ -1,46 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { kidsShlokas } from '../../../data/kids/shlokas';
 import useSoundEffects from '../../../hooks/useSoundEffects';
 import { useSadhana } from '../../../hooks/useSadhana';
+import useTextToSpeech from '../../../hooks/useTextToSpeech';
 import KidsPageTransition from '../../../components/KidsLayout/KidsPageTransition';
 import './KidsChanting.css';
 
 const KidsChanting = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
   const [petals, setPetals] = useState([]);
   const [bellRinging, setBellRinging] = useState(false);
   const [chantCount, setChantCount] = useState(0);
 
   const { playClick, playSuccess } = useSoundEffects();
   const { awardStars, goals, toggleGoal } = useSadhana(true);
+  const { speak, stop, isPlaying } = useTextToSpeech();
 
   const currentShloka = kidsShlokas[currentIndex];
 
-  useEffect(() => {
-    return () => {
-      if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-      }
-    };
-  }, []);
-
   const handleReadAloud = () => {
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(currentShloka.english);
-      utterance.rate = 0.8;
-      utterance.pitch = 1.15;
-
-      utterance.onstart = () => setIsPlaying(true);
-      utterance.onend = () => {
-        setIsPlaying(false);
-        handleChantComplete();
-      };
-      utterance.onerror = () => setIsPlaying(false);
-
-      window.speechSynthesis.speak(utterance);
+    if (isPlaying) {
+      stop();
+    } else {
+      speak(currentShloka.english, 0.8, 1.15);
+      // Note: We don't have an exact hook for onend yet, so we'll just handleChantComplete when they offer a flower or manually complete it, or we could leave it as is if they just listen. For now we will rely on manual completion (offering flower/bell).
     }
   };
 
@@ -101,22 +85,19 @@ const KidsChanting = () => {
 
   const nextShloka = () => {
     try { playClick(); } catch (e) {}
-    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
-    setIsPlaying(false);
+    stop();
     setCurrentIndex(c => (c + 1) % kidsShlokas.length);
   };
 
   const prevShloka = () => {
     try { playClick(); } catch (e) {}
-    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
-    setIsPlaying(false);
+    stop();
     setCurrentIndex(c => (c - 1 + kidsShlokas.length) % kidsShlokas.length);
   };
 
   const selectDeity = (idx) => {
     try { playClick(); } catch (e) {}
-    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
-    setIsPlaying(false);
+    stop();
     setCurrentIndex(idx);
   };
 

@@ -17,16 +17,16 @@
   top: 75px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-color) 100%);
   color: white;
   font-weight: 800;
   font-size: 1.05rem;
   padding: 0.65rem 1.6rem;
   border-radius: 999px;
-  box-shadow: 0 8px 24px rgba(217, 119, 6, 0.4);
+  box-shadow: 0 8px 24px var(--accent-glow, rgba(217, 119, 6, 0.4));
   z-index: 2000;
   pointer-events: none;
-  border: 2px solid #FDE68A;
+  border: 2px solid var(--primary-color);
 }
 
 /* Header Area */
@@ -45,7 +45,7 @@
 }
 
 .welcome-title {
-  color: #D97706;
+  color: var(--primary-color);
   font-size: 2.3rem;
   font-weight: 900;
   margin: 0;
@@ -53,20 +53,20 @@
 }
 
 .welcome-subtitle {
-  color: #64748B;
+  color: var(--text-muted);
   font-size: 1.05rem;
   font-weight: 600;
 }
 
 .dharma-stars-card {
-  background: #FFFFFF;
+  background: var(--card-bg, #FFFFFF);
   padding: 0.6rem 1.2rem;
   border-radius: 24px;
   display: flex;
   align-items: center;
   gap: 0.9rem;
-  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.2);
-  border: 2.5px solid #FDE68A;
+  box-shadow: 0 6px 20px var(--shadow-sm, rgba(245, 158, 11, 0.2));
+  border: 2.5px solid var(--primary-color);
 }
 
 .stars-icon {
@@ -87,13 +87,13 @@
 .stars-count {
   font-weight: 900;
   font-size: 1.5rem;
-  color: #D97706;
+  color: var(--primary-color);
   line-height: 1;
 }
 
 .stars-label {
   font-size: 0.72rem;
-  color: #64748B;
+  color: var(--text-muted);
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -121,7 +121,7 @@
 }
 
 .kids-sadhana-section h2 {
-  color: #1E293B;
+  color: var(--text-primary);
   margin: 0;
   font-size: 1.45rem;
   font-weight: 800;
@@ -129,16 +129,16 @@
 
 .habits-hint {
   font-size: 0.85rem;
-  color: #64748B;
+  color: var(--text-muted);
   font-weight: 600;
 }
 
 .kids-sadhana-card {
-  background: #FFFFFF;
+  background: var(--card-bg, #FFFFFF);
   border-radius: 28px;
   padding: 1.25rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-  border: 3px solid #E2E8F0;
+  box-shadow: 0 8px 24px var(--shadow-sm, rgba(0, 0, 0, 0.05));
+  border: 3px solid var(--border-color, #E2E8F0);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
@@ -148,22 +148,22 @@
   display: flex;
   align-items: center;
   padding: 1rem 1.2rem;
-  background: #F8FAFC;
+  background: var(--bg-tertiary, #F8FAFC);
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border: 2px solid #E2E8F0;
+  border: 2px solid var(--border-subtle, #E2E8F0);
 }
 
 .kids-goal-item:hover {
   transform: translateY(-2px);
-  border-color: #CBD5E1;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  border-color: var(--border-color, #CBD5E1);
+  box-shadow: 0 6px 16px var(--shadow-sm, rgba(0, 0, 0, 0.05));
 }
 
 .kids-goal-item.completed {
-  background: #FFFBEB;
-  border-color: #FCD34D;
+  background: var(--glass-bg, #FFFBEB);
+  border-color: var(--primary-color, #FCD34D);
 }
 
 .kids-goal-icon {
@@ -179,13 +179,13 @@
 
 .kids-goal-text {
   font-weight: 800;
-  color: #1E293B;
+  color: var(--text-primary);
   font-size: 1.05rem;
 }
 
 .goal-subtext {
   font-size: 0.78rem;
-  color: #64748B;
+  color: var(--text-muted);
   font-weight: 600;
 }
 
@@ -193,18 +193,18 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  border: 2.5px solid #CBD5E1;
+  border: 2.5px solid var(--border-color, #CBD5E1);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
-  background: white;
+  background: var(--card-bg, white);
   transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .kids-goal-item.completed .kids-checkbox {
-  border-color: #F59E0B;
-  background: #F59E0B;
+  border-color: var(--primary-color, #F59E0B);
+  background: var(--primary-color, #F59E0B);
   color: white;
   transform: scale(1.08);
 }
@@ -215,11 +215,11 @@
 }
 
 .shloka-card {
-  background: #FFFFFF;
+  background: var(--card-bg, #FFFFFF);
   border-radius: 28px;
   padding: 1.8rem;
-  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.12);
-  border: 4px solid #DDD6FE;
+  box-shadow: 0 10px 30px var(--shadow-md, rgba(139, 92, 246, 0.12));
+  border: 4px solid var(--border-color, #DDD6FE);
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -230,7 +230,7 @@
   justify-content: center;
   align-items: center;
   min-height: 200px;
-  color: #64748B;
+  color: var(--text-muted);
   font-size: 1.1rem;
   border-style: dashed;
 }
@@ -244,7 +244,7 @@
 }
 
 .shloka-header h2 {
-  color: #7C3AED;
+  color: var(--primary-color);
   font-size: 1.45rem;
   font-weight: 800;
   margin: 0;
@@ -260,7 +260,7 @@
 
 .sanskrit-text {
   font-size: 1.4rem;
-  color: #B45309;
+  color: var(--primary-color);
   font-weight: 800;
   margin-bottom: 0.8rem;
   line-height: 1.6;
@@ -269,7 +269,7 @@
 
 .english-text {
   font-size: 1.08rem;
-  color: #334155;
+  color: var(--text-secondary);
   margin-bottom: 1rem;
   font-style: italic;
   white-space: pre-wrap;
@@ -277,16 +277,16 @@
 }
 
 .meaning-box {
-  background: #FFFBEB;
+  background: var(--bg-tertiary, #FFFBEB);
   padding: 1.1rem 1.4rem;
   border-radius: 18px;
-  border: 2px solid #FCD34D;
+  border: 2px solid var(--primary-color, #FCD34D);
   max-width: 600px;
   margin: 0 auto;
 }
 
 .meaning-box p {
-  color: #78350F;
+  color: var(--text-primary);
   font-size: 0.98rem;
   margin: 0;
   line-height: 1.5;
@@ -297,7 +297,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  background: linear-gradient(135deg, var(--secondary-color, #3B82F6) 0%, var(--secondary-dark, #2563EB) 100%);
   color: white;
   border: none;
   padding: 0.75rem 2rem;
@@ -306,18 +306,18 @@
   font-weight: 800;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 15px var(--shadow-sm, rgba(37, 99, 235, 0.3));
 }
 
 .listen-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 6px 18px var(--shadow-md, rgba(37, 99, 235, 0.4));
 }
 
 .listen-btn.playing {
-  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
   color: white;
-  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+  box-shadow: 0 4px 15px var(--accent-glow, rgba(245, 158, 11, 0.4));
 }
 
 /* Quick Links / Explore */
@@ -328,7 +328,7 @@
 }
 
 .quick-links h2 {
-  color: #1E293B;
+  color: var(--text-primary);
   margin: 0;
   font-size: 1.45rem;
   font-weight: 800;
@@ -341,7 +341,7 @@
 }
 
 .grid-card {
-  background: #FFFFFF;
+  background: var(--card-bg, #FFFFFF);
   border-radius: 26px;
   padding: 1.6rem 1.4rem;
   text-align: center;
@@ -350,14 +350,14 @@
   flex-direction: column;
   align-items: center;
   gap: 0.4rem;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-  border: 3px solid #F1F5F9;
+  box-shadow: 0 6px 20px var(--shadow-sm, rgba(0, 0, 0, 0.05));
+  border: 3px solid var(--border-subtle, #F1F5F9);
   transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .grid-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.09);
+  box-shadow: 0 12px 28px var(--shadow-md, rgba(0, 0, 0, 0.09));
 }
 
 .card-emoji {
@@ -366,14 +366,14 @@
 }
 
 .grid-card h3 {
-  color: #1E293B;
+  color: var(--text-primary);
   font-size: 1.25rem;
   font-weight: 800;
   margin: 0;
 }
 
 .grid-card p {
-  color: #64748B;
+  color: var(--text-muted);
   font-size: 0.88rem;
   margin: 0 0 1rem 0;
 }
@@ -387,27 +387,27 @@
 }
 
 .story-card {
-  border-color: #BFDBFE;
+  border-color: var(--secondary-color, #BFDBFE);
 }
 .story-card .card-action-pill {
-  background: #EFF6FF;
-  color: #2563EB;
+  background: var(--bg-tertiary, #EFF6FF);
+  color: var(--secondary-color, #2563EB);
 }
 
 .game-card {
-  border-color: #A7F3D0;
+  border-color: var(--accent-color, #A7F3D0);
 }
 .game-card .card-action-pill {
-  background: #ECFDF5;
-  color: #059669;
+  background: var(--bg-tertiary, #ECFDF5);
+  color: var(--accent-dark, #059669);
 }
 
 .chant-card {
-  border-color: #FBCFE8;
+  border-color: var(--primary-color, #FBCFE8);
 }
 .chant-card .card-action-pill {
-  background: #FDF2F8;
-  color: #DB2777;
+  background: var(--bg-tertiary, #FDF2F8);
+  color: var(--primary-dark, #DB2777);
 }
 
 @media (max-width: 600px) {
@@ -416,3 +416,4 @@
   .sanskrit-text { font-size: 1.2rem; }
   .shloka-card { padding: 1.25rem; }
 }
+
