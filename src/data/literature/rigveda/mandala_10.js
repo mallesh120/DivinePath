@@ -1,15 +1,15 @@
 export const mandala10Scenes = [
   {
     text: "The tenth and final mandala of the Rigveda contains some of the most philosophically advanced and spiritually profound hymns. These verses represent the culmination of Vedic wisdom and contain teachings on the ultimate nature of reality.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/tenth_mandala_wisdom_1791653302597.jpg"
   },
   {
     text: "The famous Nasadiya Sukta (hymn on creation) opens the tenth mandala with profound questions about existence and non-existence. This philosophical meditation explores the mystery of how creation emerged from primordial undifferentiated consciousness.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/nasadiya_sukta_creation_1791653311827.jpg"
   },
   {
     text: "The concept of Hiranyagarbha (the golden embryo) as the source of all creation is introduced, representing the cosmic womb from which all universe emerges. This divine principle encompasses all possibilities and potentials within itself.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/hiranyagarbha_golden_embryo_1791653320526.jpg"
   },
   {
     text: "Extensive hymns celebrate Purusa, the cosmic person whose body becomes the material universe. This profound concept teaches that all matter is ultimately a manifestation of divine consciousness in its infinite form.",
