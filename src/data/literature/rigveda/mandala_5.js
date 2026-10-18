@@ -1,11 +1,11 @@
 export const mandala5Scenes = [
   {
     text: "The fifth mandala is associated with the Atri family of seers and contains some of the most spiritually profound hymns in the Rigveda. These verses explore advanced concepts of cosmic consciousness and the nature of ultimate reality.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/atri_sages_cosmic_consciousness_1792292033677.jpg"
   },
   {
     text: "Mitra and Varuna, guardians of cosmic order and moral law, are hymned as divine judges who reward virtue and punish vice. The concept of divine justice is established as an immutable principle governing both celestial and earthly realms.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/mitra_varuna_divine_justice_1792292055944.jpg"
   },
   {
     text: "The hymns celebrate the divine feminine energy (Aditi) as the primordial mother from whom all existence emerges. Aditi represents boundless space and unlimited potential, the womb of creation from which all beings arise.",

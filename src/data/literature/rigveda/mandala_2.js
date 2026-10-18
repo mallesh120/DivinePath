@@ -29,14 +29,14 @@ export const mandala2Scenes = [
   },
   {
     text: "Detailed descriptions of the morning and evening rituals highlight the sacred rhythm of daily worship. These rituals are seen not merely as religious practices but as means of aligning human life with cosmic rhythms and divine will.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/sandhyavandanam_daily_rhythm_1791863853192.jpg"
   },
   {
     text: "Hymns express gratitude to the gods for abundance in cattle, grain, and offspring. Prosperity is viewed as a divine gift that comes through righteous living, proper rituals, and sincere devotion to the cosmic order.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/vedic_pastoral_abundance_1791863891485.jpg"
   },
   {
     text: "The concept of immortality and eternal life is explored through the lens of sacrifice and transcendence. By offering themselves to the divine through rituals and virtuous deeds, humans can transcend mortal limitations and attain eternal fellowship with the gods.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/immortality_transcendence_1791863940092.jpg"
   }
 ];
