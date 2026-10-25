@@ -2,20 +2,19 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import KidsPageTransition from '../../../components/KidsLayout/KidsPageTransition';
 import useSoundEffects from '../../../hooks/useSoundEffects';
-import ganeshaImage from '../../../assets/images/Gods/ganesha.webp'; // Idle image
-import ganeshaRunningImage from '../../../assets/images/Gods/ganesha_running.jpg'; // Running image
-import ganeshaEatingImage from '../../../assets/images/Gods/ganesha_eating.jpg'; // Eating image
-import ganeshaHurtImage from '../../../assets/images/Gods/ganesha_hurt.jpg'; // Hurt image
+import ganeshaImage from '../../../assets/images/Gods/ganesha_3d_idle.jpg'; // Idle 3D image
+import ganeshaRunningImage from '../../../assets/images/Gods/ganesha_3d_running.jpg'; // Running 3D image
+import { ModakSVG, LaddooSVG, StoneSVG, TwigSVG } from './GameAssets';
 import './CatchTheModak.css';
 
 const GAME_SPEED = 0.03; // percentage per millisecond
 const SPAWN_RATE = 1500; // ms between spawns
 
 const ITEM_TYPES = [
-  { id: 'modak', emoji: '🥟', points: 10, type: 'good' },
-  { id: 'laddoo', emoji: '🟡', points: 10, type: 'good' },
-  { id: 'stone', emoji: '🪨', points: -1, type: 'bad' },
-  { id: 'twig', emoji: '🌿', points: -1, type: 'bad' }
+  { id: 'modak', Component: ModakSVG, points: 10, type: 'good' },
+  { id: 'laddoo', Component: LaddooSVG, points: 10, type: 'good' },
+  { id: 'stone', Component: StoneSVG, points: -1, type: 'bad' },
+  { id: 'twig', Component: TwigSVG, points: -1, type: 'bad' }
 ];
 
 const CatchTheModak = () => {
@@ -24,6 +23,7 @@ const CatchTheModak = () => {
   const [lives, setLives] = useState(3);
   const [basketPos, setBasketPos] = useState(50); // percentage 0-100
   const [items, setItems] = useState([]);
+  const [particles, setParticles] = useState([]);
   const [isEating, setIsEating] = useState(false);
   const [isHurt, setIsHurt] = useState(false);
   const [direction, setDirection] = useState('idle'); // 'left', 'right', 'idle'
@@ -81,6 +81,7 @@ const CatchTheModak = () => {
     setScore(0);
     setLives(3);
     setItems([]);
+    setParticles([]);
     setGameState('playing');
     lastSpawnTime.current = performance.now();
     lastTimeRef.current = performance.now();
@@ -132,12 +133,32 @@ const CatchTheModak = () => {
               eatTimerRef.current = 400; // Trigger animation
               setIsEating(true);
               try { playSuccess(); } catch(e) {}
+              
+              // Add good particles
+              const newParticles = Array.from({ length: 6 }).map((_, i) => ({
+                id: `p-${time}-${item.id}-${i}`,
+                x: item.x,
+                y: newY,
+                color: item.id === 'laddoo' ? '#ffb03a' : '#fde073',
+                createdAt: time
+              }));
+              setParticles(prev => [...prev, ...newParticles]);
             } else {
               currentLives -= 1;
               livesChanged = true;
               hurtTimerRef.current = 400;
               setIsHurt(true);
               try { playError(); } catch(e) {}
+              
+              // Add bad particles (dust)
+              const newParticles = Array.from({ length: 4 }).map((_, i) => ({
+                id: `p-${time}-${item.id}-${i}`,
+                x: item.x,
+                y: newY,
+                color: '#888',
+                createdAt: time
+              }));
+              setParticles(prev => [...prev, ...newParticles]);
             }
             return { ...item, status: 'caught', y: newY, resolvedAt: time };
           }
@@ -172,7 +193,8 @@ const CatchTheModak = () => {
 
       return activeItems;
     });
-
+    
+    setParticles(prev => prev.filter(p => time - p.createdAt < 600));
 
     if (eatTimerRef.current > 0) {
       eatTimerRef.current -= deltaTime;
@@ -205,11 +227,15 @@ const CatchTheModak = () => {
         </div>
 
         <div 
-          className="game-area" 
+          className={`game-area ${isHurt ? 'shake' : ''}`} 
           ref={gameAreaRef}
           onMouseMove={handleMouseMove}
           onTouchMove={handleTouchMove}
         >
+          {/* Parallax Background Layers */}
+          <div className="parallax-layer clouds"></div>
+          <div className="parallax-layer mountains"></div>
+
           {gameState === 'start' && (
             <div className="game-overlay">
               <h3>Help Ganesha!</h3>
@@ -232,8 +258,8 @@ const CatchTheModak = () => {
           >
             <img 
               src={
-                isEating ? ganeshaEatingImage :
-                isHurt ? ganeshaHurtImage :
+                isEating ? ganeshaImage :
+                isHurt ? ganeshaImage :
                 (direction !== 'idle') ? ganeshaRunningImage :
                 ganeshaImage
               } 
@@ -243,26 +269,55 @@ const CatchTheModak = () => {
           </div>
 
           <AnimatePresence>
-            {items.map(item => (
+            {items.map(item => {
+              const ItemComponent = item.Component;
+              return (
+                <motion.div
+                  key={item.id}
+                  className={`falling-item ${item.status}`}
+                  initial={{ opacity: 1, scale: 1, x: "-50%", top: "-10%", left: `${item.x}%` }}
+                  animate={
+                    item.status === 'caught'
+                      ? { top: "85%", left: `${basketPos}%`, scale: 0, opacity: 0, rotate: 360 }
+                      : item.status === 'missed'
+                      ? { top: "100%", opacity: 0, scale: 0.5, rotate: -180 }
+                      : { top: `${item.y}%`, left: `${item.x}%`, scale: 1, opacity: 1, rotate: item.type === 'bad' ? 360 : 0 }
+                  }
+                  transition={
+                    item.status === 'falling' 
+                      ? { duration: item.type === 'bad' ? 10 : 0, ease: "linear", repeat: item.type === 'bad' ? Infinity : 0 } 
+                      : { duration: 0.3, ease: "backIn" }
+                  }
+                >
+                  <ItemComponent size={45} />
+                </motion.div>
+              )
+            })}
+          </AnimatePresence>
+
+          <AnimatePresence>
+            {particles.map(p => (
               <motion.div
-                key={item.id}
-                className={`falling-item ${item.status}`}
-                initial={{ opacity: 1, scale: 1, x: "-50%", top: "-10%", left: `${item.x}%` }}
-                animate={
-                  item.status === 'caught'
-                    ? { top: "85%", left: `${basketPos}%`, scale: 0, opacity: 0, rotate: 360 }
-                    : item.status === 'missed'
-                    ? { top: "100%", opacity: 0, scale: 0.5, rotate: -180 }
-                    : { top: `${item.y}%`, left: `${item.x}%`, scale: 1, opacity: 1, rotate: 0 }
-                }
-                transition={
-                  item.status === 'falling' 
-                    ? { duration: 0 } 
-                    : { duration: 0.3, ease: "backIn" }
-                }
-              >
-                {item.emoji}
-              </motion.div>
+                key={p.id}
+                className="particle"
+                initial={{ 
+                  opacity: 1, 
+                  scale: Math.random() * 0.5 + 0.5, 
+                  left: `${p.x}%`, 
+                  top: `${p.y}%`,
+                  x: "-50%",
+                  y: "-50%"
+                }}
+                animate={{ 
+                  opacity: 0,
+                  scale: 0,
+                  left: `${p.x + (Math.random() * 20 - 10)}%`,
+                  top: `${p.y + (Math.random() * 20 - 10)}%`,
+                  rotate: Math.random() * 360
+                }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                style={{ backgroundColor: p.color }}
+              />
             ))}
           </AnimatePresence>
           
