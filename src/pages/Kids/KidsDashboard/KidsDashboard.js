@@ -205,9 +205,9 @@ const KidsDashboard = () => {
               <span className="card-action-pill">Open Library ▶</span>
             </Link>
             <Link to="/kids/games" className="grid-card game-card">
-              <span className="card-emoji">🎯</span>
-              <h3>Play Games</h3>
-              <p>Trivia quizzes & Memory match</p>
+              <span className="card-emoji">🕹️</span>
+              <h3>Divine Arcade</h3>
+              <p>5 action games, quizzes & puzzles</p>
               <span className="card-action-pill">Play Now ▶</span>
             </Link>
             <Link to="/kids/chanting" className="grid-card chant-card">

@@ -34,6 +34,13 @@ const ArcadePlayerShell = ({
   const [showHowToPlay, setShowHowToPlay] = useState(false);
   const [highScore, setHighScore] = useState(() => getGameHighScore(gameId));
   const [restartVersion, setRestartVersion] = useState(0);
+  const [reportedScore, setReportedScore] = useState(null);
+
+  const reportScore = useCallback((val) => {
+    setReportedScore(val);
+  }, []);
+
+  const displayLiveScore = liveScore !== null ? liveScore : reportedScore;
 
   // Sync high score updates
   useEffect(() => {
@@ -43,7 +50,7 @@ const ArcadePlayerShell = ({
     };
     window.addEventListener('divineArcadeScoreUpdate', handleScoreEvent);
     return () => window.removeEventListener('divineArcadeScoreUpdate', handleScoreEvent);
-  }, [gameId, liveScore]);
+  }, [gameId, displayLiveScore]);
 
   // Simulate classic Flash/Miniclip preloader bar on game mount
   useEffect(() => {
@@ -147,17 +154,33 @@ const ArcadePlayerShell = ({
       playClick();
     } catch (e) {}
     setIsPaused(false);
+    setReportedScore(null);
     setRestartVersion((v) => v + 1);
     if (onRestart) onRestart();
   };
 
-  const handlePauseToggle = () => {
+  const handlePauseToggle = useCallback(() => {
     if (!hasBooted) return;
     try {
       playClick();
     } catch (e) {}
     setIsPaused((prev) => !prev);
-  };
+  }, [hasBooted, playClick]);
+
+  // Global keyboard shortcut ('P' key) to pause/resume active arcade game
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (!hasBooted) return;
+      const tag = e.target?.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+      if (e.key === 'p' || e.key === 'P') {
+        e.preventDefault();
+        handlePauseToggle();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [hasBooted, handlePauseToggle]);
 
   return (
     <KidsPageTransition>
@@ -326,6 +349,7 @@ const ArcadePlayerShell = ({
                     isMuted,
                     isFullscreen,
                     restartGame: handleRestartClick,
+                    reportScore,
                   })
                 : children}
             </div>
@@ -336,9 +360,9 @@ const ArcadePlayerShell = ({
             <div className="control-bar-left">
               <span className="player-led-dot" />
               <span className="player-engine-tag">DIVINE PLAYER</span>
-              {liveScore !== null && (
+              {displayLiveScore !== null && (
                 <span className="control-live-score">
-                  {liveStatLabel || 'SCORE'}: <strong>{liveScore}</strong>
+                  {liveStatLabel || 'SCORE'}: <strong>{displayLiveScore}</strong>
                 </span>
               )}
               <span className="control-best-score">

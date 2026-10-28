@@ -1,16 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { getAshtottaramList } from '../../data/ashtottaram/ashtottaramData';
 import './SacredTextsPage.css';
 
 const SacredTextsPage = () => {
-  const [activeTab, setActiveTab] = useState('stotrams'); // 'stotrams' or 'ashtotharams'
+  const location = useLocation();
+  const [activeTab, setActiveTab] = useState(
+    location.state?.activeTab === 'ashtotharams' ? 'ashtotharams' : 'stotrams'
+  ); // 'stotrams' or 'ashtotharams'
   const [stotramCategories, setStotramCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filterCategory, setFilterCategory] = useState('all');
   
   const navigate = useNavigate();
   const ashtottarams = getAshtottaramList();
+
+  useEffect(() => {
+    if (location.state?.activeTab) {
+      setActiveTab(location.state.activeTab);
+    }
+  }, [location.state]);
 
   useEffect(() => {
     const fetchStotrams = async () => {

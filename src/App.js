@@ -147,6 +147,8 @@ function App() {
               <Route path="muhurta-finder" element={withTransition(MuhurtaFinderPage)} />
               <Route path="fasting-guide" element={withTransition(FastingGuidePage)} />
               <Route path="sacred-texts" element={withTransition(SacredTextsPage)} />
+              <Route path="stotrams" element={<Navigate to="/sacred-texts" replace />} />
+              <Route path="ashtottaram" element={<Navigate to="/sacred-texts" state={{ activeTab: 'ashtotharams' }} replace />} />
               <Route path="stotrams/:categorySlug" element={withTransition(StotramCategoryPage)} />
               <Route path="stotrams/read/:stotramTitle" element={withTransition(StotramReaderPage)} />
               <Route path="festival-countdown" element={withTransition(FestivalCountdownPage)} />

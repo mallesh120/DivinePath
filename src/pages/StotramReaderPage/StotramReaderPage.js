@@ -97,7 +97,7 @@ const StotramReaderPage = () => {
       <div className="universal-reader-page">
         <div className="reader-not-found">
           <h2>Stotram not found!</h2>
-          <Link to="/stotrams" className="back-btn">Return to Library</Link>
+          <Link to="/sacred-texts" className="back-btn">Return to Library</Link>
         </div>
       </div>
     );
@@ -107,7 +107,7 @@ const StotramReaderPage = () => {
     <div className="universal-reader-page">
       <div className="reader-nav-top" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Link 
-          to={categorySlug ? `/stotrams/${categorySlug}` : '/stotrams'} 
+          to={categorySlug ? `/stotrams/${categorySlug}` : '/sacred-texts'} 
           className="reader-back-btn"
         >
           &larr; Back
@@ -177,7 +177,7 @@ const StotramReaderPage = () => {
         <div className="reader-pagination">
           <div />
           <Link 
-            to={categorySlug ? `/stotrams/${categorySlug}` : '/stotrams'} 
+            to={categorySlug ? `/stotrams/${categorySlug}` : '/sacred-texts'} 
             className="pagination-btn finish"
           >
              Finish Reading

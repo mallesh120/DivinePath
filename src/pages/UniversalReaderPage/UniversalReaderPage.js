@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { literatureData } from '../../data/literature';
+import { findLiteratureBook } from '../../data/literature';
 import GradientHeader from '../../components/ui/GradientHeader/GradientHeader';
 import AudioPlayer from '../../components/AudioPlayer/AudioPlayer';
 import useTextToSpeech from '../../hooks/useTextToSpeech';
@@ -36,7 +36,7 @@ const UniversalReaderPage = () => {
     };
   }, [bookId, chapterId, stop, isPlaying, isPaused]);
   
-  const book = literatureData.find((s) => s.id === parseInt(bookId) || s.id === bookId);
+  const book = findLiteratureBook(bookId);
 
   // Find sections array safely
   const sections = book ? (

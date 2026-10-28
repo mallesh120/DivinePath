@@ -26,6 +26,43 @@ import { gangaAshtottaram } from './ganga-ashtottaram.js';
 import { lalitaAshtottaram } from './lalita-ashtottaram.js';
 import { tulasiAshtottaram } from './tulasi-ashtottaram.js';
 
+// Import deity images from bundled assets
+import vishnuImg from '../../assets/images/Gods/vishnu.webp';
+import shivaImg from '../../assets/images/Gods/Shiva.webp';
+import brahmaImg from '../../assets/images/Gods/brahma.webp';
+import krishnaImg from '../../assets/images/Gods/krishna.webp';
+import ramaImg from '../../assets/images/Gods/rama.webp';
+import narasimhaImg from '../../assets/images/Gods/narasimha.webp';
+import ganeshaImg from '../../assets/images/Gods/ganesha.webp';
+import kartikeyaImg from '../../assets/images/Gods/kartikeya.webp';
+import muruganImg from '../../assets/images/Gods/murugan.webp';
+import hanumanImg from '../../assets/images/Gods/hanuman.webp';
+import kuberImg from '../../assets/images/Gods/kuber.webp';
+import satyanarayanImg from '../../assets/images/Gods/satyanarayan.webp';
+import hayagrivaImg from '../../assets/images/Gods/hayagriva.webp';
+import bhairavaImg from '../../assets/images/Gods/bhairava.webp';
+
+import lakshmiImg from '../../assets/images/Goddesses/lakshmi.webp';
+import saraswatiImg from '../../assets/images/Goddesses/saraswati.webp';
+import durgaImg from '../../assets/images/Goddesses/durga.webp';
+import radhaImg from '../../assets/images/Goddesses/radha.webp';
+import sitaImg from '../../assets/images/Goddesses/sita.webp';
+import gangaImg from '../../assets/images/Goddesses/ganga.webp';
+import tulasiImg from '../../assets/images/Goddesses/tulasi.webp';
+import lalitaImg from '../../assets/images/Goddesses/lalita.webp';
+
+const normalizeDeity = (deity, resolvedImage) => {
+  const deityName = deity.name || deity.title;
+  const subtitle = deity.name ? deity.title : 'Ashtottara Shatanamavali';
+  return {
+    ...deity,
+    name: deityName,
+    deityName,
+    title: subtitle,
+    image: resolvedImage || deity.image
+  };
+};
+
 /**
  * Complete collection of Ashtottara Shatanamavali (108 Names) for Hindu Deities
  * 
@@ -41,48 +78,48 @@ export const ashtottaramData = {
   // ========================================
   
   // The Supreme Trinity (Trimurti)
-  vishnu: vishnuAshtottaram,
-  shiva: shivaAshtottaram,
-  brahma: brahmaAshtottaram,
+  vishnu: normalizeDeity(vishnuAshtottaram, vishnuImg),
+  shiva: normalizeDeity(shivaAshtottaram, shivaImg),
+  brahma: normalizeDeity(brahmaAshtottaram, brahmaImg),
   
   // Major Avatars & Forms
-  krishna: krishnaAshtottaram,
-  rama: ramaAshtottaram,
-  narasimha: narasimhaAshtottaram,
+  krishna: normalizeDeity(krishnaAshtottaram, krishnaImg),
+  rama: normalizeDeity(ramaAshtottaram, ramaImg),
+  narasimha: normalizeDeity(narasimhaAshtottaram, narasimhaImg),
   
   // Sons of Shiva & Parvati
-  ganesha: ganeshaAshtottaram,
-  kartikeya: kartikeyaAshtottaram,
-  murugan: muruganAshtottaram, // Tamil name for Kartikeya
+  ganesha: normalizeDeity(ganeshaAshtottaram, ganeshaImg),
+  kartikeya: normalizeDeity(kartikeyaAshtottaram, kartikeyaImg),
+  murugan: normalizeDeity(muruganAshtottaram, muruganImg), // Tamil name for Kartikeya
   
   // Devotees & Servants
-  hanuman: hanumanAshtottaram,
+  hanuman: normalizeDeity(hanumanAshtottaram, hanumanImg),
   
   // Specialized Deities
-  kuber: kuberAshtottaram,        // God of Wealth
-  satyanarayan: satyanarayanAshtottaram, // Form of Vishnu
-  hayagriva: hayagrivaAshtottaram,  // Horse-headed avatar of Vishnu
-  bhairava: bhairavaAshtottaram,    // Fierce form of Shiva
+  kuber: normalizeDeity(kuberAshtottaram, kuberImg),        // God of Wealth
+  satyanarayan: normalizeDeity(satyanarayanAshtottaram, satyanarayanImg), // Form of Vishnu
+  hayagriva: normalizeDeity(hayagrivaAshtottaram, hayagrivaImg),  // Horse-headed avatar of Vishnu
+  bhairava: normalizeDeity(bhairavaAshtottaram, bhairavaImg),    // Fierce form of Shiva
   
   // ========================================
   // GODDESSES (Female Deities)
   // ========================================
   
   // Consorts of Trinity
-  lakshmi: lakshmiAshtottaram,      // Consort of Vishnu
-  saraswati: saraswatiAshtottaram,  // Consort of Brahma
-  durga: durgaAshtottaram,          // Form of Parvati (Shiva's consort)
+  lakshmi: normalizeDeity(lakshmiAshtottaram, lakshmiImg),      // Consort of Vishnu
+  saraswati: normalizeDeity(saraswatiAshtottaram, saraswatiImg),  // Consort of Brahma
+  durga: normalizeDeity(durgaAshtottaram, durgaImg),          // Form of Parvati (Shiva's consort)
   
   // Divine Consorts & Companions
-  radha: radhaAshtottaram,          // Consort of Krishna
-  sita: sitaAshtottaram,            // Consort of Rama
+  radha: normalizeDeity(radhaAshtottaram, radhaImg),          // Consort of Krishna
+  sita: normalizeDeity(sitaAshtottaram, sitaImg),            // Consort of Rama
   
   // Nature & Sacred Goddesses
-  ganga: gangaAshtottaram,          // Goddess of the Ganges River
-  tulasi: tulasiAshtottaram,        // Sacred Plant Goddess
+  ganga: normalizeDeity(gangaAshtottaram, gangaImg),          // Goddess of the Ganges River
+  tulasi: normalizeDeity(tulasiAshtottaram, tulasiImg),        // Sacred Plant Goddess
   
   // Powerful Goddesses
-  lalita: lalitaAshtottaram         // Goddess of Bliss
+  lalita: normalizeDeity(lalitaAshtottaram, lalitaImg)         // Goddess of Bliss
 };
 
 /**
@@ -112,6 +149,8 @@ export const getAshtottaramById = (id) => ashtottaramData[id] || null;
 export const getAshtottaramList = () => {
   return Object.values(ashtottaramData).map(deity => ({
     id: deity.id,
+    name: deity.name,
+    deityName: deity.deityName,
     title: deity.title,
     description: deity.description,
     image: deity.image,
@@ -156,6 +195,7 @@ export const getAllGoddesses = () => {
 export const searchDeities = (query) => {
   const lowerQuery = query.toLowerCase();
   return Object.values(ashtottaramData).filter(deity => 
+    deity.name.toLowerCase().includes(lowerQuery) ||
     deity.title.toLowerCase().includes(lowerQuery) ||
     deity.description.toLowerCase().includes(lowerQuery) ||
     deity.id.toLowerCase().includes(lowerQuery)

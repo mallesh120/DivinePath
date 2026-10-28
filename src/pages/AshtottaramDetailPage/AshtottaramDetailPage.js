@@ -18,7 +18,7 @@ const AshtottaramDetailPage = () => {
     if (deityData) {
       setDeity(deityData);
     } else {
-      navigate('/ashtottaram');
+      navigate('/sacred-texts', { state: { activeTab: 'ashtotharams' }, replace: true });
     }
   }, [deityId, navigate]);
 
@@ -66,7 +66,10 @@ const AshtottaramDetailPage = () => {
     <div className="ashtottaram-detail-page">
       {/* Header */}
       <div className="ashtottaram-header">
-        <button className="back-btn" onClick={() => navigate('/ashtottaram')}>
+        <button
+          className="back-btn"
+          onClick={() => navigate('/sacred-texts', { state: { activeTab: 'ashtotharams' } })}
+        >
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M19 12H5M12 19l-7-7 7-7"/>
           </svg>

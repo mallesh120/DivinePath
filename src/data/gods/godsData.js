@@ -205,8 +205,8 @@ export const godsData = [
       { name: "Ganesh Jayanti", date: "Jan-Feb", description: "Birthday celebration in Magha month" }
     ],
     relatedStories: [
-      { title: "Birth of Ganesha", epic: "Shiva Purana", link: "/library/puranas/shiva" },
-      { title: "Ganesha and the Moon", epic: "Puranas", link: "/library/puranas" }
+      { title: "Birth of Ganesha", epic: "Ganesha Purana", link: "/library/ganesha-purana" },
+      { title: "Ganesha and the Moon", epic: "Ganesha Purana", link: "/library/ganesha-purana" }
     ]
   },
   {
@@ -224,8 +224,8 @@ export const godsData = [
       { name: "Shravan Somvar", date: "July-Aug", description: "Mondays in the holy month of Shravan" }
     ],
     relatedStories: [
-      { title: "Samudra Manthan", epic: "Puranas", link: "/library/puranas" },
-      { title: "Marriage of Shiva and Parvati", epic: "Shiva Purana", link: "/library/puranas/shiva" }
+      { title: "Samudra Manthan", epic: "Kurma Purana", link: "/library/kurma-purana" },
+      { title: "Marriage of Shiva and Parvati", epic: "Shiva Purana", link: "/library/5" }
     ]
   },
   {
@@ -243,8 +243,8 @@ export const godsData = [
       { name: "Vishnu Jayanti", date: "March-April", description: "Appearance day of Lord Vishnu" }
     ],
     relatedStories: [
-      { title: "Dashavatara Stories", epic: "Puranas", link: "/library/puranas" },
-      { title: "Vishnu's Cosmic Sleep", epic: "Vishnu Purana", link: "/library/puranas/vishnu" }
+      { title: "Dashavatara Stories", epic: "Vishnu Purana", link: "/library/4" },
+      { title: "Vishnu's Cosmic Sleep", epic: "Vishnu Purana", link: "/library/4" }
     ]
   },
   {
@@ -261,8 +261,8 @@ export const godsData = [
       { name: "Brahma Jayanti", date: "Oct-Nov", description: "Birthday of Lord Brahma on Kartik Purnima" }
     ],
     relatedStories: [
-      { title: "Creation of the Universe", epic: "Brahma Purana", link: "/library/puranas" },
-      { title: "Why Brahma is Not Worshipped", epic: "Puranas", link: "/library/puranas" }
+      { title: "Creation of the Universe", epic: "Vishnu Purana", link: "/library/4" },
+      { title: "Why Brahma is Not Worshipped", epic: "Shiva Purana", link: "/library/5" }
     ]
   },
   {
@@ -280,8 +280,8 @@ export const godsData = [
       { name: "Varalakshmi Vratam", date: "July-Aug", description: "Special worship day for married women" }
     ],
     relatedStories: [
-      { title: "Birth from Ocean of Milk", epic: "Puranas", link: "/library/puranas" },
-      { title: "Lakshmi and Vishnu", epic: "Vishnu Purana", link: "/library/puranas/vishnu" }
+      { title: "Birth from Ocean of Milk", epic: "Kurma Purana", link: "/library/kurma-purana" },
+      { title: "Lakshmi and Vishnu", epic: "Vishnu Purana", link: "/library/4" }
     ]
   },
   {
@@ -299,8 +299,8 @@ export const godsData = [
       { name: "Gauri Tritiya", date: "April-May", description: "Worship of Goddess Gauri" }
     ],
     relatedStories: [
-      { title: "Parvati's Penance for Shiva", epic: "Shiva Purana", link: "/library/puranas/shiva" },
-      { title: "Birth of Ganesha", epic: "Puranas", link: "/library/puranas" }
+      { title: "Parvati's Penance for Shiva", epic: "Shiva Purana", link: "/library/5" },
+      { title: "Birth of Ganesha", epic: "Ganesha Purana", link: "/library/ganesha-purana" }
     ]
   },
   {
@@ -319,8 +319,8 @@ export const godsData = [
       { name: "Saraswati Puja", date: "Jan-Feb", description: "Worship of the goddess of learning" }
     ],
     relatedStories: [
-      { title: "Saraswati and the Vedas", epic: "Brahma Purana", link: "/library/puranas" },
-      { title: "Origin of Saraswati River", epic: "Puranas", link: "/library/puranas" }
+      { title: "Saraswati and the Vedas", epic: "Rig Veda", link: "/library/rigveda" },
+      { title: "Origin of Saraswati River", epic: "Rig Veda", link: "/library/rigveda" }
     ]
   },
   {
@@ -339,9 +339,9 @@ export const godsData = [
       { name: "Hanuman Chalisa Recitation", date: "Every Tuesday", description: "Weekly devotional practice" }
     ],
     relatedStories: [
-      { title: "Hanuman Meets Rama", epic: "Ramayana", link: "/library/ramayana/kishkindha" },
-      { title: "Hanuman Brings Sanjeevani", epic: "Ramayana", link: "/library/ramayana/yuddha" },
-      { title: "Hanuman Crosses the Ocean", epic: "Ramayana", link: "/library/ramayana/sundara" }
+      { title: "Hanuman Meets Rama", epic: "Ramayana", link: "/library/1/kishkindha" },
+      { title: "Hanuman Brings Sanjeevani", epic: "Ramayana", link: "/library/1/yuddha" },
+      { title: "Hanuman Crosses the Ocean", epic: "Ramayana", link: "/library/1/sundara" }
     ]
   },
   {
@@ -360,8 +360,8 @@ export const godsData = [
       { name: "Navaratri", date: "Sep-Oct", description: "Nine nights of Goddess worship" }
     ],
     relatedStories: [
-      { title: "Slaying of Mahishasura", epic: "Devi Mahatmya", link: "/library/puranas" },
-      { title: "Birth of Durga", epic: "Devi Bhagavata Purana", link: "/library/puranas" }
+      { title: "Slaying of Mahishasura", epic: "Bhagavata Purana", link: "/library/bhagavata-purana" },
+      { title: "Birth of Durga", epic: "Shiva Purana", link: "/library/5" }
     ]
   },
   {
@@ -380,8 +380,8 @@ export const godsData = [
       { name: "Kali Jayanti", date: "Nov-Dec", description: "Appearance day of Goddess Kali" }
     ],
     relatedStories: [
-      { title: "Kali and Shiva", epic: "Puranas", link: "/library/puranas" },
-      { title: "Slaying of Raktabija", epic: "Devi Mahatmya", link: "/library/puranas" }
+      { title: "Kali and Shiva", epic: "Shiva Purana", link: "/library/5" },
+      { title: "Slaying of Raktabija", epic: "Bhagavata Purana", link: "/library/bhagavata-purana" }
     ]
   },
   {
@@ -400,9 +400,9 @@ export const godsData = [
       { name: "Holi", date: "Feb-Mar", description: "Festival of colors associated with Krishna" }
     ],
     relatedStories: [
-      { title: "Birth of Krishna", epic: "Bhagavata Purana", link: "/library/puranas" },
-      { title: "Krishna and Arjuna", epic: "Mahabharata", link: "/library/mahabharata" },
-      { title: "Lifting Govardhan Hill", epic: "Bhagavata Purana", link: "/library/puranas" }
+      { title: "Birth of Krishna", epic: "Krishna Leela", link: "/library/krishna-leela" },
+      { title: "Krishna and Arjuna", epic: "Bhagavad Gita", link: "/library/3" },
+      { title: "Lifting Govardhan Hill", epic: "Bhagavata Purana", link: "/library/bhagavata-purana" }
     ]
   },
   {
@@ -421,9 +421,9 @@ export const godsData = [
       { name: "Dussehra", date: "Sep-Oct", description: "Celebrates Rama's victory over Ravana" }
     ],
     relatedStories: [
-      { title: "Birth and Childhood", epic: "Ramayana", link: "/library/ramayana/bala" },
-      { title: "Exile and Sita's Abduction", epic: "Ramayana", link: "/library/ramayana/aranya" },
-      { title: "War with Ravana", epic: "Ramayana", link: "/library/ramayana/yuddha" }
+      { title: "Birth and Childhood", epic: "Ramayana", link: "/library/1/bala" },
+      { title: "Exile and Sita's Abduction", epic: "Ramayana", link: "/library/1/aranya" },
+      { title: "War with Ravana", epic: "Ramayana", link: "/library/1/yuddha" }
     ]
   },
   {
@@ -442,8 +442,8 @@ export const godsData = [
       { name: "Ratha Saptami", date: "Jan-Feb", description: "Surya's birthday celebration" }
     ],
     relatedStories: [
-      { title: "Surya and Karna", epic: "Mahabharata", link: "/library/mahabharata" },
-      { title: "Surya's Chariot", epic: "Puranas", link: "/library/puranas" }
+      { title: "Surya and Karna", epic: "Mahabharata", link: "/library/2" },
+      { title: "Surya's Chariot", epic: "Rig Veda", link: "/library/rigveda" }
     ]
   },
   {
@@ -461,8 +461,8 @@ export const godsData = [
       { name: "Karva Chauth", date: "Oct-Nov", description: "Women fast for husband's longevity, break fast seeing moon" }
     ],
     relatedStories: [
-      { title: "Chandra's Curse", epic: "Puranas", link: "/library/puranas" },
-      { title: "Moon's 27 Wives", epic: "Puranas", link: "/library/puranas" }
+      { title: "Chandra's Curse", epic: "Ganesha Purana", link: "/library/ganesha-purana" },
+      { title: "Moon's 27 Wives", epic: "Shiva Purana", link: "/library/5" }
     ]
   },
   {
@@ -479,8 +479,8 @@ export const godsData = [
       { name: "Indra Jatra", date: "Aug-Sep", description: "Festival honoring Indra, especially in Nepal" }
     ],
     relatedStories: [
-      { title: "Indra and Vritra", epic: "Rig Veda", link: "/library/vedas" },
-      { title: "Indra's Pride", epic: "Bhagavata Purana", link: "/library/puranas" }
+      { title: "Indra and Vritra", epic: "Rig Veda", link: "/library/rigveda" },
+      { title: "Indra's Pride", epic: "Bhagavata Purana", link: "/library/bhagavata-purana" }
     ]
   },
   {
@@ -498,8 +498,8 @@ export const godsData = [
       { name: "Agni Nakshatra", date: "Various", description: "Worship during fire-related auspicious days" }
     ],
     relatedStories: [
-      { title: "Agni in Vedic Rituals", epic: "Rig Veda", link: "/library/vedas" },
-      { title: "Birth of Agni", epic: "Puranas", link: "/library/puranas" }
+      { title: "Agni in Vedic Rituals", epic: "Rig Veda", link: "/library/rigveda" },
+      { title: "Birth of Agni", epic: "Yajur Veda", link: "/library/yajurveda" }
     ]
   },
   {
@@ -518,8 +518,8 @@ export const godsData = [
       { name: "Thaipusam", date: "Jan-Feb", description: "Tamil festival honoring Murugan" }
     ],
     relatedStories: [
-      { title: "Birth of Kartikeya", epic: "Shiva Purana", link: "/library/puranas/shiva" },
-      { title: "Slaying of Tarakasura", epic: "Skanda Purana", link: "/library/puranas" }
+      { title: "Birth of Kartikeya", epic: "Shiva Purana", link: "/library/5" },
+      { title: "Slaying of Tarakasura", epic: "Shiva Purana", link: "/library/5" }
     ]
   },
   {
@@ -537,8 +537,8 @@ export const godsData = [
       { name: "Akshaya Tritiya", date: "April-May", description: "Auspicious day for wealth and prosperity" }
     ],
     relatedStories: [
-      { title: "Kubera and Ravana", epic: "Ramayana", link: "/library/ramayana" },
-      { title: "Kubera's Wealth", epic: "Puranas", link: "/library/puranas" }
+      { title: "Kubera and Ravana", epic: "Ramayana", link: "/library/1/uttara" },
+      { title: "Kubera's Wealth", epic: "Shiva Purana", link: "/library/5" }
     ]
   },
   {
@@ -556,7 +556,7 @@ export const godsData = [
       { name: "Naraka Chaturdashi", date: "Oct-Nov", description: "Remembrance of Yama and ancestors" }
     ],
     relatedStories: [
-      { title: "Savitri and Satyavan", epic: "Mahabharata", link: "/library/mahabharata" },
+      { title: "Savitri and Satyavan", epic: "Mahabharata", link: "/library/2" },
       { title: "Yama and Nachiketa", epic: "Katha Upanishad", link: "/library/upanishads" }
     ]
   },

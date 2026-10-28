@@ -119,21 +119,23 @@ export const searchContent = (query, filterType = 'all') => {
   if (filterType === 'all' || filterType === 'ashtottaram') {
     Object.keys(ashtottaramData).forEach(deityKey => {
       const ash = ashtottaramData[deityKey];
-      if (ash && ash.deityName) {
-        const deityMatch = ash.deityName.toLowerCase().includes(lowerQuery);
+      const dName = ash && (ash.deityName || ash.name || ash.title);
+      if (ash && dName) {
+        const deityMatch = dName.toLowerCase().includes(lowerQuery);
         const titleMatch = ash.title && ash.title.toLowerCase().includes(lowerQuery);
+        const descMatch = ash.description && ash.description.toLowerCase().includes(lowerQuery);
 
-        if (deityMatch || titleMatch) {
+        if (deityMatch || titleMatch || descMatch) {
           results.push({
             id: `ash-${deityKey}`,
-            title: `${ash.deityName} Ashtottaram`,
+            title: `${dName} Ashtottaram`,
             subtitle: '108 Sacred Names (Shatanamavali)',
-            description: ash.description || `Complete 108 sacred names for daily chanting of ${ash.deityName}.`,
+            description: ash.description || `Complete 108 sacred names for daily chanting of ${dName}.`,
             type: 'Ashtottaram',
             category: 'ashtottaram',
             badgeColor: '#00796b',
             link: `/ashtottaram/${deityKey}`,
-            image: null
+            image: ash.image || null
           });
         }
       }

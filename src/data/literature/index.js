@@ -53,3 +53,24 @@ export const literatureData = [
   panchatantraObject,
   upanishadsObject,
 ];
+
+const BOOK_SLUG_ALIASES = {
+  ramayana: 1,
+  mahabharata: 2,
+  'bhagavad-gita': 3,
+  gita: 3,
+  'vishnu-purana': 4,
+  vishnu: 4,
+  'shiva-purana': 5,
+  shiva: 5,
+  puranas: 'bhagavata-purana',
+  vedas: 'rigveda'
+};
+
+export const findLiteratureBook = (bookId) => {
+  if (bookId === undefined || bookId === null) return null;
+  const resolvedId = BOOK_SLUG_ALIASES[String(bookId).toLowerCase()] ?? bookId;
+  return literatureData.find(
+    (s) => s.id === Number(resolvedId) || String(s.id) === String(resolvedId)
+  ) || null;
+};
