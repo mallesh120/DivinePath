@@ -1,279 +1,122 @@
-/* src/pages/Kids/Games/CatchTheModak.css */
-.modak-game-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: calc(100vh - 80px);
-  padding: 2rem;
-  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-  position: relative;
-  overflow: hidden;
-}
-
-.modak-header {
-  text-align: center;
-  margin-bottom: 2rem;
-  z-index: 10;
-}
-
-.modak-header h2 {
-  font-size: 2.5rem;
-  color: #ff7e5f;
-  margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-}
-
-.modak-stats {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #4a4a4a;
-  background: white;
-  padding: 0.5rem 1.5rem;
-  border-radius: 30px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-.score-display {
-  color: #f6d365;
-}
-
-.lives-display {
-  color: #ff6b6b;
-}
-
-.game-area {
+.modak-canvas-stage {
   position: relative;
   width: 100%;
-  max-width: 600px;
-  height: 60vh;
-  min-height: 400px;
-  background: linear-gradient(to bottom, #87CEEB 0%, #E0F6FF 100%);
-  border-radius: 20px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f172a;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15), inset 0 0 20px rgba(255,255,255,0.5);
-  border: 4px solid #fff;
-}
-
-.game-area.shake {
-  animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
-}
-
-@keyframes shake {
-  10%, 90% { transform: translate3d(-2px, 0, 0); }
-  20%, 80% { transform: translate3d(4px, 0, 0); }
-  30%, 50%, 70% { transform: translate3d(-6px, 0, 0); }
-  40%, 60% { transform: translate3d(6px, 0, 0); }
-}
-
-/* Parallax Backgrounds */
-.parallax-layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.parallax-layer.clouds {
-  background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.8) 10%, transparent 20%),
-                    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.6) 15%, transparent 25%),
-                    radial-gradient(circle at 50% 10%, rgba(255,255,255,0.7) 12%, transparent 22%);
-  background-size: 200% 200%;
-  animation: floatClouds 30s linear infinite;
-  opacity: 0.6;
-}
-
-.parallax-layer.mountains {
-  background-image: 
-    linear-gradient(135deg, #a8d5e5 25%, transparent 25%),
-    linear-gradient(225deg, #a8d5e5 25%, transparent 25%);
-  background-position: 0 100%, 0 100%;
-  background-size: 150px 100px;
-  background-repeat: repeat-x;
-  bottom: 40px;
-  top: auto;
-  height: 100px;
-  opacity: 0.4;
-  animation: scrollMountains 40s linear infinite;
-}
-
-@keyframes floatClouds {
-  0% { background-position: 0% 0%; }
-  100% { background-position: 100% 0%; }
-}
-
-@keyframes scrollMountains {
-  0% { background-position: 0 100%, 0 100%; }
-  100% { background-position: -300px 100%, -300px 100%; }
-}
-
-/* Floor of the game area */
-.game-area::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 40px;
-  background: #a8e6cf;
-  border-top: 4px solid #88d4ab;
-  z-index: 1;
-}
-
-.basket {
-  position: absolute;
-  bottom: 40px;
-  /* Removed transition for instant tracking (feels smoother) */
-  z-index: 10;
-  transform: translateX(-50%);
-  cursor: pointer;
   user-select: none;
 }
 
-.ganesha-basket-img {
-  width: 150px;
-  height: 150px;
+.arcade-game-canvas {
+  width: 100%;
+  height: 100%;
+  max-height: 75vh;
   object-fit: contain;
-  mix-blend-mode: multiply; /* Removes white background since the game area is light */
-  filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
-  transition: transform 0.1s ease;
-  transform-origin: bottom center;
+  display: block;
+  cursor: pointer;
+  touch-action: none;
 }
 
-.ganesha-basket-img.eating {
-  animation: happyEat 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.ganesha-basket-img.flip-horizontal {
-  transform: scaleX(-1);
-}
-
-.ganesha-basket-img.running {
-  animation: runningBob 0.3s infinite alternate ease-in-out;
-}
-
-@keyframes runningBob {
-  0% { transform: translateY(0) scaleX(var(--flip, 1)); }
-  100% { transform: translateY(-5px) scaleX(var(--flip, 1)); }
-}
-
-.ganesha-basket-img.running.flip-horizontal {
-  --flip: -1;
-}
-.ganesha-basket-img.running:not(.flip-horizontal) {
-  --flip: 1;
-}
-
-@keyframes happyEat {
-  0% { transform: scale(1, 1); }
-  25% { transform: scale(1.3, 0.7); } /* Squash down */
-  50% { transform: scale(0.8, 1.2); } /* Stretch up */
-  75% { transform: scale(1.1, 0.9); }
-  100% { transform: scale(1, 1); }
-}
-
-.ganesha-basket-img.hurt {
-  animation: sadHurt 0.4s ease-in-out;
-  filter: drop-shadow(0 5px 10px rgba(255,0,0,0.4)) sepia(1) hue-rotate(-50deg) saturate(3);
-}
-
-@keyframes sadHurt {
-  0% { transform: translateX(0); }
-  20% { transform: translateX(-10px) rotate(-10deg); }
-  40% { transform: translateX(10px) rotate(10deg); }
-  60% { transform: translateX(-10px) rotate(-10deg); }
-  80% { transform: translateX(10px) rotate(10deg); }
-  100% { transform: translateX(0); }
-}
-
-.falling-item {
+.canvas-gameover-overlay {
   position: absolute;
-  transform: translateX(-50%);
-  z-index: 5;
-  will-change: top;
+  inset: 0;
+  z-index: 40;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1.5rem;
 }
 
-.particle {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  z-index: 15;
-  pointer-events: none;
+.gameover-modal-card {
+  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  border: 2px solid #f59e0b;
+  border-radius: 26px;
+  padding: 2rem;
+  max-width: 430px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
 }
 
-/* Animations now handled by framer-motion in JS */
+.gameover-badge {
+  display: inline-block;
+  background: rgba(245, 158, 11, 0.22);
+  color: #fde047;
+  font-weight: 900;
+  font-size: 0.78rem;
+  letter-spacing: 1px;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  margin-bottom: 0.65rem;
+}
 
-.game-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255,255,255,0.85);
+.gameover-modal-card h2 {
+  font-size: 1.75rem;
+  font-weight: 900;
+  margin: 0 0 1.2rem 0;
+}
+
+.gameover-score-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.65rem;
+  margin-bottom: 1.25rem;
+}
+
+.go-stat-box {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 0.75rem 0.4rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 20;
-  border-radius: 20px;
+  gap: 0.25rem;
 }
 
-.game-overlay h3 {
-  font-size: 3rem;
-  color: #ff7e5f;
-  margin-bottom: 1rem;
+.go-stat-box span {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
 }
 
-.game-overlay p {
-  font-size: 1.5rem;
-  color: #666;
-  margin-bottom: 2rem;
+.go-stat-box strong {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #fde047;
 }
 
-.start-btn {
-  padding: 1rem 3rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-  color: white;
+.gameover-stars-banner {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(16, 185, 129, 0.25) 100%);
+  border: 1px solid rgba(74, 222, 128, 0.45);
+  color: #4ade80;
+  font-weight: 800;
+  font-size: 0.92rem;
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+}
+
+.canvas-replay-btn {
+  width: 100%;
+  padding: 0.9rem 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 900;
   border: none;
-  border-radius: 50px;
+  border-radius: 999px;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(253, 160, 133, 0.4);
-  transition: transform 0.2s, box-shadow 0.2s;
+  background: linear-gradient(135deg, #fde047 0%, #f59e0b 100%);
+  color: #0f172a;
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.45);
+  transition: transform 0.15s ease;
 }
 
-.start-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(253, 160, 133, 0.6);
-}
-
-.start-btn:active {
-  transform: scale(0.95);
-}
-
-.controls-hint {
-  margin-top: 1rem;
-  color: #888;
-  font-size: 0.9rem;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .game-area {
-    height: 50vh;
-  }
-  .modak-header h2 {
-    font-size: 2rem;
-  }
+.canvas-replay-btn:hover {
+  transform: scale(1.03);
 }
