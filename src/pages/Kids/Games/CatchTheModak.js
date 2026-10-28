@@ -164,7 +164,7 @@ const drawStone = (ctx, x, y, r, rot) => {
   ctx.restore();
 };
 
-const CatchTheModakStage = ({ isPaused }) => {
+const CatchTheModakStage = ({ isPaused, reportScore }) => {
   const canvasRef = useRef(null);
   const { playClick, playSuccess, playError, playPop, playGameOver } = useSoundEffects();
   const { awardStars } = useSadhana(true);
@@ -179,6 +179,10 @@ const CatchTheModakStage = ({ isPaused }) => {
     starsEarned: 0,
     newRecord: false,
   });
+
+  useEffect(() => {
+    if (reportScore) reportScore(uiState.score);
+  }, [uiState.score, reportScore]);
 
   const spritesRef = useRef({
     idle: null,
@@ -871,8 +875,10 @@ const CatchTheModakStage = ({ isPaused }) => {
 
 const CatchTheModak = () => {
   return (
-    <ArcadePlayerShell gameId="modak">
-      {({ isPaused }) => <CatchTheModakStage isPaused={isPaused} />}
+    <ArcadePlayerShell gameId="modak" liveStatLabel="SCORE">
+      {({ isPaused, reportScore }) => (
+        <CatchTheModakStage isPaused={isPaused} reportScore={reportScore} />
+      )}
     </ArcadePlayerShell>
   );
 };

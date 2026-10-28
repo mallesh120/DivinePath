@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { literatureData } from '../../data/literature';
+import { findLiteratureBook } from '../../data/literature';
 import GradientHeader from '../../components/ui/GradientHeader/GradientHeader';
 import SpiritualCard from '../../components/ui/SpiritualCard/SpiritualCard';
 import './BookLandingPage.css';
@@ -8,8 +8,8 @@ import './BookLandingPage.css';
 const BookLandingPage = () => {
   const { bookId } = useParams();
   
-  // Find the requested book, handling both int and string IDs
-  const book = literatureData.find((s) => s.id === parseInt(bookId) || s.id === bookId);
+  // Find the requested book, handling both int, string IDs, and slug aliases
+  const book = findLiteratureBook(bookId);
 
   if (!book) {
     return (

@@ -30,6 +30,30 @@ export const useSadhana = (isKidsZone = false) => {
 
   const saveSadhana = useCallback((newState) => {
     localStorage.setItem(storageKey, JSON.stringify(newState));
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('divineSadhanaUpdate', {
+        detail: { storageKey, state: newState }
+      }));
+    }
+  }, [storageKey]);
+
+  useEffect(() => {
+    const handleSync = (e) => {
+      if (!e.detail || e.detail.storageKey !== storageKey) return;
+      const synced = e.detail.state;
+      if (!synced) return;
+      if (typeof synced.stars === 'number') setStars(synced.stars);
+      if (typeof synced.streak === 'number') setStreak(synced.streak);
+      if (typeof synced.japaCount === 'number') setJapaCount(synced.japaCount);
+      if (typeof synced.pathwayProgress === 'number') setPathwayProgress(synced.pathwayProgress);
+      if (typeof synced.shlokaPracticeDays === 'number') setShlokaPracticeDays(synced.shlokaPracticeDays);
+      if (Array.isArray(synced.customGoals)) setCustomGoals(synced.customGoals);
+      if (Array.isArray(synced.completionHistory)) setCompletionHistory(synced.completionHistory);
+      if (synced.goals && typeof synced.goals === 'object') setGoals(synced.goals);
+    };
+
+    window.addEventListener('divineSadhanaUpdate', handleSync);
+    return () => window.removeEventListener('divineSadhanaUpdate', handleSync);
   }, [storageKey]);
 
   useEffect(() => {

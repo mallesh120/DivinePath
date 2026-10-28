@@ -13,7 +13,7 @@ const PujaGuidePage = () => {
   const [showMaterials, setShowMaterials] = useState(true);
   const [completedSteps, setCompletedSteps] = useState([]);
   const [playingSection, setPlayingSection] = useState(null);
-  const { panchangam } = usePanchangam();
+  const { panchangamData } = usePanchangam();
   const { speak, stop, isPlaying } = useTextToSpeech();
 
   useEffect(() => {
@@ -141,13 +141,13 @@ const PujaGuidePage = () => {
             )}
           </div>
 
-          {panchangam && puja.panchangamGuidance && (
+          {panchangamData && puja.panchangamGuidance && (
             <div className={styles['sidebar-section']}>
               <h3 className={styles['sidebar-title']}>🌙 Timing Guidance</h3>
               <div className={styles['timing-info']}>
                 <div className={styles['current-timing']}>
-                  <p><strong>Current Tithi:</strong> {panchangam.tithi}</p>
-                  <p><strong>Current Nakshatra:</strong> {panchangam.nakshatra}</p>
+                  <p><strong>Current Tithi:</strong> {panchangamData.almanac?.Tithi?.name || 'N/A'}</p>
+                  <p><strong>Current Nakshatra:</strong> {panchangamData.almanac?.Nakshatra?.name || 'N/A'}</p>
                 </div>
                 {puja.panchangamGuidance.bestDays && (
                   <div className={styles['best-days']}>

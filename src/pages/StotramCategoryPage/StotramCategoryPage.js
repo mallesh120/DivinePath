@@ -56,7 +56,7 @@ const StotramCategoryPage = () => {
     <div className="stotram-category-page">
       <main className="category-main">
         <div className="category-header-wrapper">
-          <Link to="/stotrams" className="back-link">
+          <Link to="/sacred-texts" className="back-link">
             <span className="material-icons">arrow_back</span>
             Back to Library
           </Link>

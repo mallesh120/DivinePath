@@ -12,7 +12,7 @@ const THEMES = [
   { id: 'legends', label: '🏹 Epic Legends', symbols: ['🏹', '👑', '☀️', '💍', '⛰️', '🌺'] },
 ];
 
-const MemoryMatchStage = ({ isPaused }) => {
+const MemoryMatchStage = ({ isPaused, reportScore }) => {
   const [selectedThemeId, setSelectedThemeId] = useState('symbols');
   const [cards, setCards] = useState([]);
   const [flippedIndices, setFlippedIndices] = useState([]);
@@ -24,6 +24,10 @@ const MemoryMatchStage = ({ isPaused }) => {
 
   const { playClick, playSuccess, playError, playPop } = useSoundEffects();
   const { awardStars } = useSadhana(true);
+
+  useEffect(() => {
+    if (reportScore) reportScore(score);
+  }, [score, reportScore]);
 
   const currentTheme = THEMES.find((t) => t.id === selectedThemeId) || THEMES[0];
 
@@ -196,8 +200,10 @@ const MemoryMatchStage = ({ isPaused }) => {
 
 const MemoryMatch = () => {
   return (
-    <ArcadePlayerShell gameId="memory">
-      {({ isPaused }) => <MemoryMatchStage isPaused={isPaused} />}
+    <ArcadePlayerShell gameId="memory" liveStatLabel="SCORE">
+      {({ isPaused, reportScore }) => (
+        <MemoryMatchStage isPaused={isPaused} reportScore={reportScore} />
+      )}
     </ArcadePlayerShell>
   );
 };

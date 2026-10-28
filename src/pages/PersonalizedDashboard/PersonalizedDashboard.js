@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { usePanchangam } from '../../hooks/usePanchangam';
 import { useSadhana } from '../../hooks/useSadhana';
+import useTextToSpeech from '../../hooks/useTextToSpeech';
 import MeditationTimer from '../../components/MeditationTimer/MeditationTimer';
 import StreakCalendar from '../../components/StreakCalendar/StreakCalendar';
 import { getDailyChallenge } from '../../data/dharmaChallenges';
@@ -47,6 +48,7 @@ const PersonalizedDashboard = () => {
   
   // Shloka Card Modal state
   const [isShlokaModalOpen, setIsShlokaModalOpen] = useState(false);
+  const { speak, stop, isPlaying } = useTextToSpeech();
   
   // Continue reading state
   const [lastRead, setLastRead] = useState(null);
@@ -299,7 +301,24 @@ const PersonalizedDashboard = () => {
                 <h4 className="shloka-title">{weeklyShloka.title}</h4>
                 <p className="shloka-sanskrit">{weeklyShloka.sanskrit}</p>
                 <div className="shloka-actions">
-                  <button className="shloka-play-btn">🔊 Listen</button>
+                  <button
+                    className={`shloka-play-btn ${isPlaying ? 'playing' : ''}`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      if (isPlaying) {
+                        stop();
+                      } else {
+                        speak(
+                          `${weeklyShloka.transliteration || weeklyShloka.sanskrit}. Meaning: ${weeklyShloka.meaning}`,
+                          0.85,
+                          1,
+                          'en'
+                        );
+                      }
+                    }}
+                  >
+                    {isPlaying ? '⏹ Stop' : '🔊 Listen'}
+                  </button>
                   <button 
                     className="shloka-card-btn"
                     onClick={(e) => {

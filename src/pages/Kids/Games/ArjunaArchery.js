@@ -11,7 +11,7 @@ const BOW_X = 115;
 const BOW_Y = 355;
 const GRAVITY = 540;
 
-const ArjunaArcheryStage = ({ isPaused }) => {
+const ArjunaArcheryStage = ({ isPaused, reportScore }) => {
   const canvasRef = useRef(null);
   const { playClick, playSuccess, playError, playPop, playJump, playGameOver } =
     useSoundEffects();
@@ -26,6 +26,10 @@ const ArjunaArcheryStage = ({ isPaused }) => {
     starsEarned: 0,
     newRecord: false,
   });
+
+  useEffect(() => {
+    if (reportScore) reportScore(uiState.score);
+  }, [uiState.score, reportScore]);
 
   const stateRef = useRef({
     phase: 'playing',
@@ -720,8 +724,10 @@ const ArjunaArcheryStage = ({ isPaused }) => {
 
 const ArjunaArchery = () => {
   return (
-    <ArcadePlayerShell gameId="archery">
-      {({ isPaused }) => <ArjunaArcheryStage isPaused={isPaused} />}
+    <ArcadePlayerShell gameId="archery" liveStatLabel="SCORE">
+      {({ isPaused, reportScore }) => (
+        <ArjunaArcheryStage isPaused={isPaused} reportScore={reportScore} />
+      )}
     </ArcadePlayerShell>
   );
 };

@@ -37,7 +37,7 @@ const createPlatforms = () => {
   return list;
 };
 
-const HanumanSkyJumpStage = ({ isPaused }) => {
+const HanumanSkyJumpStage = ({ isPaused, reportScore }) => {
   const canvasRef = useRef(null);
   const { playClick, playSuccess, playPop, playJump, playGameOver } =
     useSoundEffects();
@@ -61,6 +61,10 @@ const HanumanSkyJumpStage = ({ isPaused }) => {
     starsEarned: 0,
     newRecord: false,
   });
+
+  useEffect(() => {
+    if (reportScore) reportScore(`${uiState.altitude} m`);
+  }, [uiState.altitude, reportScore]);
 
   const gameRef = useRef({
     phase: 'playing',
@@ -572,8 +576,10 @@ const HanumanSkyJumpStage = ({ isPaused }) => {
 
 const HanumanSkyJump = () => {
   return (
-    <ArcadePlayerShell gameId="hanuman">
-      {({ isPaused }) => <HanumanSkyJumpStage isPaused={isPaused} />}
+    <ArcadePlayerShell gameId="hanuman" liveStatLabel="ALTITUDE">
+      {({ isPaused, reportScore }) => (
+        <HanumanSkyJumpStage isPaused={isPaused} reportScore={reportScore} />
+      )}
     </ArcadePlayerShell>
   );
 };

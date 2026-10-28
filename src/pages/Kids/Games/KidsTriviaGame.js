@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { kidsQuizzes } from '../../../data/kids/quizzes';
 import { motion, AnimatePresence } from 'framer-motion';
 import useSoundEffects from '../../../hooks/useSoundEffects';
@@ -7,7 +7,7 @@ import ArcadePlayerShell from './ArcadePlayerShell';
 import { saveGameHighScore } from './arcadeCatalog';
 import './KidsTriviaGame.css';
 
-const KidsTriviaStage = ({ isPaused }) => {
+const KidsTriviaStage = ({ isPaused, reportScore }) => {
   const [selectedQuizId, setSelectedQuizId] = useState(null);
   const [currentQuestionIdx, setCurrentQuestionIdx] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
@@ -19,6 +19,10 @@ const KidsTriviaStage = ({ isPaused }) => {
 
   const { playClick, playSuccess, playError } = useSoundEffects();
   const { awardStars } = useSadhana(true);
+
+  useEffect(() => {
+    if (reportScore) reportScore(arcadePoints);
+  }, [arcadePoints, reportScore]);
 
   const quiz = kidsQuizzes.find((q) => q.id === selectedQuizId);
 
@@ -258,8 +262,10 @@ const KidsTriviaStage = ({ isPaused }) => {
 
 const KidsTriviaGame = () => {
   return (
-    <ArcadePlayerShell gameId="trivia">
-      {({ isPaused }) => <KidsTriviaStage isPaused={isPaused} />}
+    <ArcadePlayerShell gameId="trivia" liveStatLabel="SCORE">
+      {({ isPaused, reportScore }) => (
+        <KidsTriviaStage isPaused={isPaused} reportScore={reportScore} />
+      )}
     </ArcadePlayerShell>
   );
 };

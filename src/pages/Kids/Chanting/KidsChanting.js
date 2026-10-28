@@ -13,7 +13,7 @@ const KidsChanting = () => {
   const [bellRinging, setBellRinging] = useState(false);
   const [chantCount, setChantCount] = useState(0);
 
-  const { playClick, playSuccess } = useSoundEffects();
+  const { playClick, playSuccess, isMuted } = useSoundEffects();
   const { awardStars, goals, toggleGoal } = useSadhana(true);
   const { speak, stop, isPlaying } = useTextToSpeech();
 
@@ -59,6 +59,8 @@ const KidsChanting = () => {
     setBellRinging(true);
     setTimeout(() => setBellRinging(false), 1000);
 
+    if (isMuted) return;
+
     // Audio synthesis of a bell chime
     try {
       const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -79,6 +81,9 @@ const KidsChanting = () => {
 
         osc.start();
         osc.stop(ctx.currentTime + 1.2);
+        setTimeout(() => {
+          if (ctx.state !== 'closed') ctx.close().catch(() => {});
+        }, 1350);
       }
     } catch (e) {}
   };
