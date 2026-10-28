@@ -41,10 +41,10 @@ export const hanumanBirthScenes = [
   },
   {
     text: "Lord Brahma blessed him that no weapon could ever harm him and that he could change his size at will. Lord Indra gave him a body stronger than the Vajra weapon itself. Agni, the Fire God, blessed him that fire would never burn him. Varuna, the Water God, protected him from drowning.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_11_boons_1793217147382.jpg"
   },
   {
     text: "Finally, because his chin (hanu) was swollen from the thunderbolt strike, Lord Indra named the boy 'Hanuman' – the one with the prominent chin. Empowered by the blessings of all the gods, Hanuman awoke, stronger than ever, ready for his divine destiny.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_12_awakening_1793217164021.jpg"
   }
 ];

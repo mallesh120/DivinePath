@@ -25,26 +25,26 @@ export const hanumanMeetingRamaScenes = [
   },
   {
     text: "True to his word, Rama defeated Vali and restored Sugriva to the throne of Kishkindha. After the rainy season passed, Sugriva commanded millions of monkeys to search the earth in all four directions. Hanuman was assigned to the southern search party, led by Prince Angada.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_meet_7_search_party_1793217224961.jpg"
   },
   {
     text: "Before they departed, Rama called Hanuman aside. Recognizing Hanuman's exceptional devotion and capability, Rama handed him his personal signet ring, engraved with his name. 'When you find Sita,' Rama said, 'show her this ring. She will know you are my true messenger.'",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_meet_8_signet_ring_1793217249335.jpg"
   },
   {
     text: "The southern search party scoured the forests, caves, and mountains, facing numerous challenges. Eventually, they reached the edge of the Indian subcontinent, facing the vast, seemingly endless southern ocean. They received intelligence from the vulture king Sampati that Sita was being held captive in Lanka, across the sea.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_meet_9_southern_ocean_1793217292649.jpg"
   },
   {
     text: "The monkeys stared at the terrifying, roaring ocean in despair. None of them had the strength to cross a hundred yojanas (leagues) of water. Even Angada and the mighty bear Jambavan doubted their abilities. Hanuman sat quietly apart from the group, forgetting his own strength due to the childhood curse of Sage Bhrigu.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_meet_10_silent_contemplation_1793217332344.jpg"
   },
   {
     text: "Realizing that Hanuman was their only hope, Jambavan approached him. 'O Hanuman, why do you sit in silence?' Jambavan began. He reminded Hanuman of his divine birth, his father the Wind God, his incredible leap to the sun as a baby, and his unmatched wisdom.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_meet_11_jambavan_awakens_1793217374069.jpg"
   },
   {
     text: "As Jambavan praised him, the curse was broken! Hanuman's memory of his divine powers came flooding back. He began to grow in size, glowing like a golden mountain. With a mighty roar that shook the earth, Hanuman declared he would cross the ocean, find mother Sita, and return victorious.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_meet_12_golden_mountain_1793217390366.jpg"
   }
 ];

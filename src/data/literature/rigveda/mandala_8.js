@@ -37,6 +37,6 @@ export const mandala8Scenes = [
   },
   {
     text: "Profound teachings on the nature of immortality and the methods to attain it are woven throughout these hymns. The path is clearly marked - through knowledge, righteousness, devotion, and proper practice, humans can transcend mortal limitations.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/amrita_marga_transcending_mortality_1792988185632.jpg"
   }
 ];

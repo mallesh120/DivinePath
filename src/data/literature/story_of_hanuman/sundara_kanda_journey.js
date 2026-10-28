@@ -1,23 +1,23 @@
 export const hanumanSundaraKandaScenes = [
   {
     text: "Standing on the Mahendra mountain, Hanuman expanded his body to a colossal size. He prayed to Lord Rama, his father Vayu, and the Sun God. With a mighty push that shook the mountain and scattered the animals, Hanuman leaped into the sky, flying like a golden comet across the vast ocean.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_sundara_1_ocean_leap_1793217458039.jpg"
   },
   {
     text: "His journey was not without obstacles. The ocean deity, wanting to offer him rest, raised the Mainaka mountain from the depths. Hanuman, focused entirely on his mission, respectfully touched the mountain to acknowledge the offer but refused to rest, pressing forward towards Lanka.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_sundara_2_mount_mainaka_1793217472520.jpg"
   },
   {
     text: "Next, the gods tested his strength and wit by sending Surasa, the mother of serpents. She blocked his path with her gigantic mouth, demanding to eat him. Hanuman cleverly expanded his size, forcing her to open her mouth wider and wider. Suddenly, he shrank to the size of a thumb, darted in and out of her mouth, and respectfully continued his journey, passing the test.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_sundara_3_surasa_1793217515948.jpg"
   },
   {
     text: "Finally, a demoness named Simhika tried to pull him down by catching his shadow on the water. Hanuman recognized her dark magic, shrank his size, entered her massive body, and destroyed her from the inside out, freeing the ocean from her terror.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_sundara_4_simhika_1793217529687.jpg"
   },
   {
     text: "Upon reaching the shores of Lanka, Hanuman shrank himself to the size of a small cat to avoid detection. The island fortress was magnificent, guarded by fierce demons and surrounded by golden walls. As he tried to sneak in, Lankini, the guardian demoness of the city gate, stopped him.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_sundara_5_lanka_arrival_1793217571431.jpg"
   },
   {
     text: "Lankini struck Hanuman, but he retaliated with a single, forceful punch that brought her to her knees. Realizing his divine power, Lankini remembered a prophecy: when a monkey defeated her, it would signal the end of Ravana and the demon empire. She bowed and allowed him to enter.",
