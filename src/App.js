@@ -18,6 +18,8 @@ const KidsTriviaGame = lazy(() => import('./pages/Kids/Games/KidsTriviaGame'));
 const KidsGamesHub = lazy(() => import('./pages/Kids/Games/KidsGamesHub'));
 const MemoryMatch = lazy(() => import('./pages/Kids/Games/MemoryMatch'));
 const CatchTheModak = lazy(() => import('./pages/Kids/Games/CatchTheModak'));
+const ArjunaArchery = lazy(() => import('./pages/Kids/Games/ArjunaArchery'));
+const HanumanSkyJump = lazy(() => import('./pages/Kids/Games/HanumanSkyJump'));
 const KidsChanting = lazy(() => import('./pages/Kids/Chanting/KidsChanting'));
 
 // Lazy load Adults Zone components (Original Pages)
@@ -164,6 +166,8 @@ function App() {
               <Route path="games/trivia" element={withTransition(KidsTriviaGame)} />
               <Route path="games/memory" element={withTransition(MemoryMatch)} />
               <Route path="games/modak" element={withTransition(CatchTheModak)} />
+              <Route path="games/archery" element={withTransition(ArjunaArchery)} />
+              <Route path="games/hanuman" element={withTransition(HanumanSkyJump)} />
               <Route path="chanting" element={withTransition(KidsChanting)} />
             </Route>
 
