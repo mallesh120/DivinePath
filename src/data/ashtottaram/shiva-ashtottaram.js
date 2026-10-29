@@ -12,14 +12,6 @@ export const shivaAshtottaram = {
   names: [
     {
       number: 1,
-      sanskrit: 'शिव1',
-      transliteration: '2',
-      mantraSanskrit: 'महेश्वर2',
-      mantra: '2',
-      meaning: 'शम्भु3ॐ शम्भवे नमः।Om Shambhave Namah।जो सुख-सम्पत्ति प्रदान करने वाले हैं'
-    },
-    {
-      number: 1,
       sanskrit: 'शिव',
       transliteration: 'Shivaya',
       mantraSanskrit: 'ॐ शिवाय नमः',

@@ -58,7 +58,7 @@ function PujaReminderPage() {
 
   const handleSettingChange = (path, value) => {
     const keys = path.split('.');
-    const updatedSettings = { ...settings };
+    const updatedSettings = JSON.parse(JSON.stringify(settings));
     let current = updatedSettings;
     
     for (let i = 0; i < keys.length - 1; i++) {
@@ -293,7 +293,10 @@ function PujaReminderPage() {
                 </div>
 
                 <div className="next-reminder-info">
-                  Next reminder: {nextReminderTime.toLocaleString()}
+                  Next reminder:{' '}
+                  {settings.dailyReminder.days.length > 0 && nextReminderTime && !isNaN(nextReminderTime.getTime())
+                    ? nextReminderTime.toLocaleString()
+                    : 'Select at least one day to schedule reminders'}
                 </div>
               </>
             )}
@@ -345,13 +348,19 @@ function PujaReminderPage() {
         <div className="weekly-calendar">
           <h3>Weekly Deity Days</h3>
           <div className="calendar-grid">
-            {Object.entries(deityDays).map(([day, info]) => (
-              <div key={day} className="calendar-day">
-                <div className="day-name">{day.charAt(0).toUpperCase() + day.slice(1)}</div>
-                <div className="day-deity">{info.deity}</div>
-                <div className="day-color" style={{ background: info.color.toLowerCase() }}></div>
-              </div>
-            ))}
+            {Object.entries(deityDays).map(([day, info]) => {
+              const colorParts = info.color.split('/').map(c => c.trim().toLowerCase());
+              const bgStyle = colorParts.length > 1
+                ? `linear-gradient(135deg, ${colorParts[0]} 50%, ${colorParts[1]} 50%)`
+                : colorParts[0];
+              return (
+                <div key={day} className="calendar-day">
+                  <div className="day-name">{day.charAt(0).toUpperCase() + day.slice(1)}</div>
+                  <div className="day-deity">{info.deity}</div>
+                  <div className="day-color" style={{ background: bgStyle }}></div>
+                </div>
+              );
+            })}
           </div>
         </div>
 
