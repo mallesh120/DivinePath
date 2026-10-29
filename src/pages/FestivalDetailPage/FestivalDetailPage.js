@@ -14,6 +14,7 @@ const FestivalDetailPage = () => {
 
   const daysUntil = getDaysUntilFestival(festival.date);
   const status = getFestivalStatus(festival.date, festival.endDate);
+  const festivalYear = festival.date ? festival.date.split('-')[0] : new Date().getFullYear();
 
   const getStatusMessage = () => {
     if (status === 'today') {
@@ -25,7 +26,7 @@ const FestivalDetailPage = () => {
     } else if (status === 'future' && daysUntil > 0) {
       return <div className="festival-status-message future">📆 {daysUntil} days away</div>;
     } else if (status === 'past') {
-      return <div className="festival-status-message past">✓ This festival has passed for 2025</div>;
+      return <div className="festival-status-message past">✓ This festival has passed for {festivalYear}</div>;
     }
     return null;
   };
@@ -61,7 +62,7 @@ const FestivalDetailPage = () => {
         <div className="festival-detail-meta">
           <div className="festival-detail-meta-item featured">
             <span className="festival-detail-meta-icon">📅</span>
-            <span className="festival-detail-meta-label">2025 Date:</span>
+            <span className="festival-detail-meta-label">{festivalYear} Date:</span>
             <span className="festival-detail-date-value">{formatDateRange(festival.date, festival.endDate)}</span>
           </div>
           <div className="festival-detail-meta-item">

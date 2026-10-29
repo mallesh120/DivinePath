@@ -43,21 +43,31 @@ const DevotionalAudio = () => {
     };
   }, [currentTrack, filteredTracks.length]);
 
+  const handleFilterChange = (nextFilter) => {
+    setFilter(nextFilter);
+    setCurrentTrack(0);
+    setProgress(0);
+    setIsPlaying(false);
+    audioRef.current?.pause();
+  };
+
   const playPauseHandler = () => {
     const audio = audioRef.current;
+    if (!audio) return;
     if (isPlaying) {
       audio.pause();
+      setIsPlaying(false);
     } else {
-      audio.play();
+      audio.play()?.catch(() => setIsPlaying(false));
+      setIsPlaying(true);
     }
-    setIsPlaying(!isPlaying);
   };
 
   const selectTrack = (index) => {
     setCurrentTrack(index);
     setIsPlaying(true);
     setTimeout(() => {
-      audioRef.current?.play();
+      audioRef.current?.play()?.catch(() => setIsPlaying(false));
     }, 100);
   };
 
@@ -88,19 +98,19 @@ const DevotionalAudio = () => {
       <div className="audio-filters">
         <button 
           className={`filter-btn ${filter === 'all' ? 'active' : ''}`}
-          onClick={() => setFilter('all')}
+          onClick={() => handleFilterChange('all')}
         >
           All Tracks
         </button>
         <button 
           className={`filter-btn ${filter === 'meditation' ? 'active' : ''}`}
-          onClick={() => setFilter('meditation')}
+          onClick={() => handleFilterChange('meditation')}
         >
           🧘 Meditation
         </button>
         <button 
           className={`filter-btn ${filter === 'bhajan' ? 'active' : ''}`}
-          onClick={() => setFilter('bhajan')}
+          onClick={() => handleFilterChange('bhajan')}
         >
           🙏 Bhajans
         </button>
