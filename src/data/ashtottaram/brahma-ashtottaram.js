@@ -16,7 +16,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Brahmane',
       mantraSanskrit: 'ॐ ब्रह्मणे नमः',
       mantra: 'Om Brahmane Namah',
-      meaning: ''
+      meaning: 'Lord Brahma, the cosmic creator and knower of the Vedas'
     },
     {
       number: 2,
@@ -24,7 +24,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Gayatripataye',
       mantraSanskrit: 'ॐ गायत्रीपतये नमः',
       mantra: 'Om Gayatripataye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Gayatripataye'
     },
     {
       number: 3,
@@ -32,7 +32,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Savitripataye',
       mantraSanskrit: 'ॐ सावित्रीपतये नमः',
       mantra: 'Om Savitripataye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Savitripataye'
     },
     {
       number: 4,
@@ -40,7 +40,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Sarasvatipataye',
       mantraSanskrit: 'ॐ सरस्वतिपतये नमः',
       mantra: 'Om Sarasvatipataye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Sarasvatipataye'
     },
     {
       number: 5,
@@ -48,7 +48,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Prajapataye',
       mantraSanskrit: 'ॐ प्रजापतये नमः',
       mantra: 'Om Prajapataye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Prajapataye'
     },
     {
       number: 6,
@@ -56,7 +56,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Hiranyagarbhaya',
       mantraSanskrit: 'ॐ हिरण्यगर्भाय नमः',
       mantra: 'Om Hiranyagarbhaya Namah',
-      meaning: ''
+      meaning: 'Remover of fear, sorrow, and distress (Hiranyagarbhaya)'
     },
     {
       number: 7,
@@ -64,7 +64,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Kamandaludharaya',
       mantraSanskrit: 'ॐ कमण्डलुधराय नमः',
       mantra: 'Om Kamandaludharaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Kamandaludharaya)'
     },
     {
       number: 8,
@@ -72,7 +72,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Raktavarnaya',
       mantraSanskrit: 'ॐ रक्तवर्णाय नमः',
       mantra: 'Om Raktavarnaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Raktavarnaya'
     },
     {
       number: 9,
@@ -80,7 +80,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Urdhvalokapalaya',
       mantraSanskrit: 'ॐ ऊर्ध्वलोकपालाय नमः',
       mantra: 'Om Urdhvalokapalaya Namah',
-      meaning: ''
+      meaning: 'Guardian and sustainer of the cosmic worlds (Urdhvalokapalaya)'
     },
     {
       number: 10,
@@ -88,7 +88,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Varadaya',
       mantraSanskrit: 'ॐ वरदाय नमः',
       mantra: 'Om Varadaya Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Varadaya)'
     },
     {
       number: 11,
@@ -96,7 +96,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Vanamaline',
       mantraSanskrit: 'ॐ वनमालिने नमः',
       mantra: 'Om Vanamaline Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Vanamaline'
     },
     {
       number: 12,
@@ -104,7 +104,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Surashreshthaya',
       mantraSanskrit: 'ॐ सुरश्रेष्ठाय नमः',
       mantra: 'Om Surashreshthaya Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Surashreshthaya)'
     },
     {
       number: 13,
@@ -112,7 +112,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Pitamahaya',
       mantraSanskrit: 'ॐ पितमहाय नमः',
       mantra: 'Om Pitamahaya Namah',
-      meaning: ''
+      meaning: 'The revered grandsire of all celestial and earthly beings'
     },
     {
       number: 14,
@@ -120,7 +120,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Vedagarbhaya',
       mantraSanskrit: 'ॐ वेदगर्भाय नमः',
       mantra: 'Om Vedagarbhaya Namah',
-      meaning: ''
+      meaning: 'Knower and revealer of eternal Vedic wisdom (Vedagarbhaya)'
     },
     {
       number: 15,
@@ -128,7 +128,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Chaturmukhaya',
       mantraSanskrit: 'ॐ चतुर्मुखाय नमः',
       mantra: 'Om Chaturmukhaya Namah',
-      meaning: ''
+      meaning: 'The four-faced Lord who beholds all four directions and Vedas'
     },
     {
       number: 16,
@@ -136,7 +136,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Srishtikartre',
       mantraSanskrit: 'ॐ सृष्टिकर्त्रे नमः',
       mantra: 'Om Srishtikartre Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Srishtikartre'
     },
     {
       number: 17,
@@ -144,7 +144,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Brihaspataye',
       mantraSanskrit: 'ॐ बृहस्पतये नमः',
       mantra: 'Om Brihaspataye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Brihaspataye'
     },
     {
       number: 18,
@@ -152,7 +152,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Balarupine',
       mantraSanskrit: 'ॐ बालरूपिणे नमः',
       mantra: 'Om Balarupine Namah',
-      meaning: ''
+      meaning: 'Possessor of invincible spiritual strength and valor (Balarupine)'
     },
     {
       number: 19,
@@ -160,7 +160,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Surapriyaya',
       mantraSanskrit: 'ॐ सुरप्रियाय नमः',
       mantra: 'Om Surapriyaya Namah',
-      meaning: ''
+      meaning: 'Beloved of the pure-hearted and enchanting in grace (Surapriyaya)'
     },
     {
       number: 20,
@@ -168,7 +168,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Chakradevaya',
       mantraSanskrit: 'ॐ चक्रदेवाय नमः',
       mantra: 'Om Chakradevaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Chakradevaya'
     },
     {
       number: 21,
@@ -176,7 +176,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Bhuvanadhipaya',
       mantraSanskrit: 'ॐ भुवनाधिपाय नमः',
       mantra: 'Om Bhuvanadhipaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Bhuvanadhipaya'
     },
     {
       number: 22,
@@ -184,7 +184,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Pundarikakshaya',
       mantraSanskrit: 'ॐ पुण्डरीकाक्षाय नमः',
       mantra: 'Om Pundarikakshaya Namah',
-      meaning: ''
+      meaning: 'The lotus-eyed Supreme Lord'
     },
     {
       number: 23,
@@ -192,7 +192,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Pitakshaya',
       mantraSanskrit: 'ॐ पीताक्षाय नमः',
       mantra: 'Om Pitakshaya Namah',
-      meaning: ''
+      meaning: 'Whose compassionate gaze watches over all creation (Pitakshaya)'
     },
     {
       number: 24,
@@ -200,7 +200,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Vijayaya',
       mantraSanskrit: 'ॐ विजयाय नमः',
       mantra: 'Om Vijayaya Namah',
-      meaning: ''
+      meaning: 'Ever-victorious bestower of triumph in righteous endeavors (Vijayaya)'
     },
     {
       number: 25,
@@ -208,7 +208,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Purushottamaya',
       mantraSanskrit: 'ॐ पुरुषोत्तमाय नमः',
       mantra: 'Om Purushottamaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Purushottamaya'
     },
     {
       number: 26,
@@ -216,7 +216,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Padmahastaya',
       mantraSanskrit: 'ॐ पद्महस्ताय नमः',
       mantra: 'Om Padmahastaya Namah',
-      meaning: ''
+      meaning: 'Pure and auspicious as a sacred blooming lotus (Padmahastaya)'
     },
     {
       number: 27,
@@ -224,7 +224,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Tamonude',
       mantraSanskrit: 'ॐ तमोनुदे नमः',
       mantra: 'Om Tamonude Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Tamonude'
     },
     {
       number: 28,
@@ -232,7 +232,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Jananandaya',
       mantraSanskrit: 'ॐ जनानन्दाय नमः',
       mantra: 'Om Jananandaya Namah',
-      meaning: ''
+      meaning: 'Of serene and radiant countenance (Jananandaya)'
     },
     {
       number: 29,
@@ -240,7 +240,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Janapriyaya',
       mantraSanskrit: 'ॐ जनप्रियाय नमः',
       mantra: 'Om Janapriyaya Namah',
-      meaning: ''
+      meaning: 'Beloved of the pure-hearted and enchanting in grace (Janapriyaya)'
     },
     {
       number: 30,
@@ -248,7 +248,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Brahmane',
       mantraSanskrit: 'ॐ ब्रह्मणे नमः',
       mantra: 'Om Brahmane Namah',
-      meaning: ''
+      meaning: 'Lord Brahma, the cosmic creator and knower of the Vedas'
     },
     {
       number: 31,
@@ -256,7 +256,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Munaye',
       mantraSanskrit: 'ॐ मुनये नमः',
       mantra: 'Om Munaye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Munaye'
     },
     {
       number: 32,
@@ -264,7 +264,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Shrinivasaya',
       mantraSanskrit: 'ॐ श्रीनिवासाय नमः',
       mantra: 'Om Shrinivasaya Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Shrinivasaya)'
     },
     {
       number: 33,
@@ -272,7 +272,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Shubhankaraya',
       mantraSanskrit: 'ॐ शुभङ्कराय नमः',
       mantra: 'Om Shubhankaraya Namah',
-      meaning: ''
+      meaning: 'Source of supreme auspiciousness and blessing (Shubhankaraya)'
     },
     {
       number: 34,
@@ -280,7 +280,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Devakartre',
       mantraSanskrit: 'ॐ देवकर्त्रे नमः',
       mantra: 'Om Devakartre Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Devakartre'
     },
     {
       number: 35,
@@ -288,7 +288,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Srashtre',
       mantraSanskrit: 'ॐ स्रष्ट्रे नमः',
       mantra: 'Om Srashtre Namah',
-      meaning: ''
+      meaning: 'Architect of cosmic creation and sacred order (Srashtre)'
     },
     {
       number: 36,
@@ -296,7 +296,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Vishnave',
       mantraSanskrit: 'ॐ विष्णवे नमः',
       mantra: 'Om Vishnave Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Vishnave'
     },
     {
       number: 37,
@@ -304,7 +304,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Bhargavaya',
       mantraSanskrit: 'ॐ भार्गवाय नमः',
       mantra: 'Om Bhargavaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Bhargavaya'
     },
     {
       number: 38,
@@ -312,7 +312,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Gonardaya',
       mantraSanskrit: 'ॐ गोनर्दाय नमः',
       mantra: 'Om Gonardaya Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Gonardaya)'
     },
     {
       number: 39,
@@ -320,7 +320,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Pitamahaya',
       mantraSanskrit: 'ॐ पितामहाय नमः',
       mantra: 'Om Pitamahaya Namah',
-      meaning: ''
+      meaning: 'The revered grandsire of all celestial and earthly beings'
     },
     {
       number: 40,
@@ -328,7 +328,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Mahadevaya',
       mantraSanskrit: 'ॐ महादेवाय नमः',
       mantra: 'Om Mahadevaya Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Mahadevaya)'
     },
     {
       number: 41,
@@ -336,7 +336,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Raghavaya',
       mantraSanskrit: 'ॐ राघवाय नमः',
       mantra: 'Om Raghavaya Namah',
-      meaning: ''
+      meaning: 'Purifier who dissolves sins and karmic obstacles (Raghavaya)'
     },
     {
       number: 42,
@@ -344,7 +344,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Virinchaye',
       mantraSanskrit: 'ॐ विरिञ्चये नमः',
       mantra: 'Om Virinchaye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Virinchaye'
     },
     {
       number: 43,
@@ -352,7 +352,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Varahaya',
       mantraSanskrit: 'ॐ वाराहाय नमः',
       mantra: 'Om Varahaya Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Varahaya)'
     },
     {
       number: 44,
@@ -360,7 +360,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Shankaraya',
       mantraSanskrit: 'ॐ शङ्कराय नमः',
       mantra: 'Om Shankaraya Namah',
-      meaning: ''
+      meaning: 'Bestower of auspiciousness, peace, and spiritual joy'
     },
     {
       number: 45,
@@ -368,7 +368,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Srikahastaya',
       mantraSanskrit: 'ॐ सृकाहस्ताय नमः',
       mantra: 'Om Srikahastaya Namah',
-      meaning: ''
+      meaning: 'Whose hands grant fearlessness (Abhaya) and boons (Varada) (Srikahastaya)'
     },
     {
       number: 46,
@@ -376,7 +376,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Padmanetraya',
       mantraSanskrit: 'ॐ पद्मनेत्राय नमः',
       mantra: 'Om Padmanetraya Namah',
-      meaning: ''
+      meaning: 'Pure and auspicious as a sacred blooming lotus (Padmanetraya)'
     },
     {
       number: 47,
@@ -384,7 +384,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Kushahastaya',
       mantraSanskrit: 'ॐ कुशहस्ताय नमः',
       mantra: 'Om Kushahastaya Namah',
-      meaning: ''
+      meaning: 'Whose hands grant fearlessness (Abhaya) and boons (Varada) (Kushahastaya)'
     },
     {
       number: 48,
@@ -392,7 +392,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Govindaya',
       mantraSanskrit: 'ॐ गोविन्दाय नमः',
       mantra: 'Om Govindaya Namah',
-      meaning: ''
+      meaning: 'Protector of the Vedas, cows, and the earth'
     },
     {
       number: 49,
@@ -400,7 +400,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Surendraya',
       mantraSanskrit: 'ॐ सुरेन्द्राय नमः',
       mantra: 'Om Surendraya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Surendraya'
     },
     {
       number: 50,
@@ -408,7 +408,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Padmatanave',
       mantraSanskrit: 'ॐ पद्मतनवे नमः',
       mantra: 'Om Padmatanave Namah',
-      meaning: ''
+      meaning: 'Pure and auspicious as a sacred blooming lotus (Padmatanave)'
     },
     {
       number: 51,
@@ -416,7 +416,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Madhvakshaya',
       mantraSanskrit: 'ॐ मध्वक्षाय नमः',
       mantra: 'Om Madhvakshaya Namah',
-      meaning: ''
+      meaning: 'Whose compassionate gaze watches over all creation (Madhvakshaya)'
     },
     {
       number: 52,
@@ -424,7 +424,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Kanakaprabhaya',
       mantraSanskrit: 'ॐ कनकप्रभाय नमः',
       mantra: 'Om Kanakaprabhaya Namah',
-      meaning: ''
+      meaning: 'Remover of fear, sorrow, and distress (Kanakaprabhaya)'
     },
     {
       number: 53,
@@ -432,7 +432,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Annadatre',
       mantraSanskrit: 'ॐ अन्नदात्रे नमः',
       mantra: 'Om Annadatre Namah',
-      meaning: ''
+      meaning: 'Praised through sacred hymns, mantras, and cosmic sound (Annadatre)'
     },
     {
       number: 54,
@@ -440,7 +440,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Shambhave',
       mantraSanskrit: 'ॐ शम्भवे नमः',
       mantra: 'Om Shambhave Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Shambhave'
     },
     {
       number: 55,
@@ -448,7 +448,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Paulastyaya',
       mantraSanskrit: 'ॐ पौलस्त्याय नमः',
       mantra: 'Om Paulastyaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Paulastyaya'
     },
     {
       number: 56,
@@ -456,7 +456,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Hamsavahanaya',
       mantraSanskrit: 'ॐ हंसवाहनाय नमः',
       mantra: 'Om Hamsavahanaya Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Hamsavahanaya)'
     },
     {
       number: 57,
@@ -464,7 +464,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Vasishthaya',
       mantraSanskrit: 'ॐ वसिष्ठाय नमः',
       mantra: 'Om Vasishthaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Vasishthaya'
     },
     {
       number: 58,
@@ -472,7 +472,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Naradaya',
       mantraSanskrit: 'ॐ नारदाय नमः',
       mantra: 'Om Naradaya Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Naradaya)'
     },
     {
       number: 59,
@@ -480,7 +480,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Shrutidatre',
       mantraSanskrit: 'ॐ श्रुतिदात्रे नमः',
       mantra: 'Om Shrutidatre Namah',
-      meaning: ''
+      meaning: 'Knower and revealer of eternal Vedic wisdom (Shrutidatre)'
     },
     {
       number: 60,
@@ -488,7 +488,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Yajusham Pataye',
       mantraSanskrit: 'ॐ यजुषां पतये नमः',
       mantra: 'Om Yajusham Pataye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Yajusham Pataye'
     },
     {
       number: 61,
@@ -496,7 +496,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Madhupriyaya',
       mantraSanskrit: 'ॐ मधुप्रियाय नमः',
       mantra: 'Om Madhupriyaya Namah',
-      meaning: ''
+      meaning: 'Beloved of the pure-hearted and enchanting in grace (Madhupriyaya)'
     },
     {
       number: 62,
@@ -504,7 +504,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Narayanaya',
       mantraSanskrit: 'ॐ नारायणाय नमः',
       mantra: 'Om Narayanaya Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Narayanaya)'
     },
     {
       number: 63,
@@ -512,7 +512,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Dvijapriyaya',
       mantraSanskrit: 'ॐ द्विजप्रियाय नमः',
       mantra: 'Om Dvijapriyaya Namah',
-      meaning: ''
+      meaning: 'Beloved of the pure-hearted and enchanting in grace (Dvijapriyaya)'
     },
     {
       number: 64,
@@ -520,7 +520,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Brahmagarbhaya',
       mantraSanskrit: 'ॐ ब्रह्मगर्भाय नमः',
       mantra: 'Om Brahmagarbhaya Namah',
-      meaning: ''
+      meaning: 'Remover of fear, sorrow, and distress (Brahmagarbhaya)'
     },
     {
       number: 65,
@@ -528,7 +528,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Sutapriyaya',
       mantraSanskrit: 'ॐ सुतप्रियाय नमः',
       mantra: 'Om Sutapriyaya Namah',
-      meaning: ''
+      meaning: 'Beloved of the pure-hearted and enchanting in grace (Sutapriyaya)'
     },
     {
       number: 66,
@@ -536,7 +536,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Maharupaya',
       mantraSanskrit: 'ॐ महारूपाय नमः',
       mantra: 'Om Maharupaya Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Maharupaya)'
     },
     {
       number: 67,
@@ -544,7 +544,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Surupaya',
       mantraSanskrit: 'ॐ सुरूपाय नमः',
       mantra: 'Om Surupaya Namah',
-      meaning: ''
+      meaning: 'Manifesting a sacred form of beauty and light (Surupaya)'
     },
     {
       number: 68,
@@ -552,7 +552,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Vishvakarmane',
       mantraSanskrit: 'ॐ विश्वकर्मणे नमः',
       mantra: 'Om Vishvakarmane Namah',
-      meaning: ''
+      meaning: 'Guardian and sustainer of the cosmic worlds (Vishvakarmane)'
     },
     {
       number: 69,
@@ -560,7 +560,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Janadhyakshaya',
       mantraSanskrit: 'ॐ जनाध्यक्षाय नमः',
       mantra: 'Om Janadhyakshaya Namah',
-      meaning: ''
+      meaning: 'Whose compassionate gaze watches over all creation (Janadhyakshaya)'
     },
     {
       number: 70,
@@ -568,7 +568,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Devadhyakshaya',
       mantraSanskrit: 'ॐ देवाध्यक्षाय नमः',
       mantra: 'Om Devadhyakshaya Namah',
-      meaning: ''
+      meaning: 'Whose compassionate gaze watches over all creation (Devadhyakshaya)'
     },
     {
       number: 71,
@@ -576,7 +576,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Gangadharaya',
       mantraSanskrit: 'ॐ गङ्गाधराय नमः',
       mantra: 'Om Gangadharaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Gangadharaya)'
     },
     {
       number: 72,
@@ -584,7 +584,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Jaladaya',
       mantraSanskrit: 'ॐ जलदाय नमः',
       mantra: 'Om Jaladaya Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Jaladaya)'
     },
     {
       number: 73,
@@ -592,7 +592,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Tripuraraye',
       mantraSanskrit: 'ॐ त्रिपुरारये नमः',
       mantra: 'Om Tripuraraye Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Tripuraraye)'
     },
     {
       number: 74,
@@ -600,7 +600,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Trilochanaya',
       mantraSanskrit: 'ॐ त्रिलोचनाय नमः',
       mantra: 'Om Trilochanaya Namah',
-      meaning: ''
+      meaning: 'Whose compassionate gaze watches over all creation (Trilochanaya)'
     },
     {
       number: 75,
@@ -608,7 +608,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Vadhanashanaya',
       mantraSanskrit: 'ॐ वधनाशनाय नमः',
       mantra: 'Om Vadhanashanaya Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Vadhanashanaya)'
     },
     {
       number: 76,
@@ -616,7 +616,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Shauraye',
       mantraSanskrit: 'ॐ शौरये नमः',
       mantra: 'Om Shauraye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Shauraye'
     },
     {
       number: 77,
@@ -624,7 +624,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Chakradharakaya',
       mantraSanskrit: 'ॐ चक्रधारकाय नमः',
       mantra: 'Om Chakradharakaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Chakradharakaya)'
     },
     {
       number: 78,
@@ -632,7 +632,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Virupakshaya',
       mantraSanskrit: 'ॐ विरूपाक्षाय नमः',
       mantra: 'Om Virupakshaya Namah',
-      meaning: ''
+      meaning: 'Lord with transcendent, all-seeing eyes'
     },
     {
       number: 79,
@@ -640,7 +640,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Gautamaya',
       mantraSanskrit: 'ॐ गौतमाय नमः',
       mantra: 'Om Gautamaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Gautamaya'
     },
     {
       number: 80,
@@ -648,7 +648,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Malyavate',
       mantraSanskrit: 'ॐ माल्यवते नमः',
       mantra: 'Om Malyavate Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Malyavate'
     },
     {
       number: 81,
@@ -656,7 +656,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Dvijendraya',
       mantraSanskrit: 'ॐ द्विजेन्द्राय नमः',
       mantra: 'Om Dvijendraya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Dvijendraya'
     },
     {
       number: 82,
@@ -664,7 +664,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Divanathaya',
       mantraSanskrit: 'ॐ दिवानाथाय नमः',
       mantra: 'Om Divanathaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Divanathaya'
     },
     {
       number: 83,
@@ -672,7 +672,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Purandaraya',
       mantraSanskrit: 'ॐ पुरन्दराय नमः',
       mantra: 'Om Purandaraya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Purandaraya'
     },
     {
       number: 84,
@@ -680,7 +680,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Hamsabahave',
       mantraSanskrit: 'ॐ हंसबाहवे नमः',
       mantra: 'Om Hamsabahave Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Hamsabahave'
     },
     {
       number: 85,
@@ -688,7 +688,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Garudapriyaya',
       mantraSanskrit: 'ॐ गरुडप्रियाय नमः',
       mantra: 'Om Garudapriyaya Namah',
-      meaning: ''
+      meaning: 'Beloved of the pure-hearted and enchanting in grace (Garudapriyaya)'
     },
     {
       number: 86,
@@ -696,7 +696,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Mahayakshaya',
       mantraSanskrit: 'ॐ महायक्षाय नमः',
       mantra: 'Om Mahayakshaya Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Mahayakshaya)'
     },
     {
       number: 87,
@@ -704,7 +704,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Suyajnaya',
       mantraSanskrit: 'ॐ सुयज्ञाय नमः',
       mantra: 'Om Suyajnaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Suyajnaya'
     },
     {
       number: 88,
@@ -712,7 +712,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Shuklavarnaya',
       mantraSanskrit: 'ॐ शुक्लवर्णाय नमः',
       mantra: 'Om Shuklavarnaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Shuklavarnaya'
     },
     {
       number: 89,
@@ -720,7 +720,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Padmabodhakaya',
       mantraSanskrit: 'ॐ पद्मबोधकाय नमः',
       mantra: 'Om Padmabodhakaya Namah',
-      meaning: ''
+      meaning: 'Pure and auspicious as a sacred blooming lotus (Padmabodhakaya)'
     },
     {
       number: 90,
@@ -728,7 +728,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Lingine',
       mantraSanskrit: 'ॐ लिङ्गिने नमः',
       mantra: 'Om Lingine Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Lingine'
     },
     {
       number: 91,
@@ -736,7 +736,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Umapataye',
       mantraSanskrit: 'ॐ उमापतये नमः',
       mantra: 'Om Umapataye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Umapataye'
     },
     {
       number: 92,
@@ -744,7 +744,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Vinayakaya',
       mantraSanskrit: 'ॐ विनायकाय नमः',
       mantra: 'Om Vinayakaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Vinayakaya'
     },
     {
       number: 93,
@@ -752,7 +752,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Dhanadhipaya',
       mantraSanskrit: 'ॐ धनाधिपाय नमः',
       mantra: 'Om Dhanadhipaya Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Dhanadhipaya)'
     },
     {
       number: 94,
@@ -760,7 +760,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Vasukaye',
       mantraSanskrit: 'ॐ वासुकये नमः',
       mantra: 'Om Vasukaye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Vasukaye'
     },
     {
       number: 95,
@@ -768,7 +768,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Yugadhyakshaya',
       mantraSanskrit: 'ॐ युगाध्यक्षाय नमः',
       mantra: 'Om Yugadhyakshaya Namah',
-      meaning: ''
+      meaning: 'Whose compassionate gaze watches over all creation (Yugadhyakshaya)'
     },
     {
       number: 96,
@@ -776,7 +776,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Strirajyaya',
       mantraSanskrit: 'ॐ स्त्रीराज्याय नमः',
       mantra: 'Om Strirajyaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Strirajyaya'
     },
     {
       number: 97,
@@ -784,7 +784,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Subhogaya',
       mantraSanskrit: 'ॐ सुभोगाय नमः',
       mantra: 'Om Subhogaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Subhogaya'
     },
     {
       number: 98,
@@ -792,7 +792,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Takshakaya',
       mantraSanskrit: 'ॐ तक्षकाय नमः',
       mantra: 'Om Takshakaya Namah',
-      meaning: ''
+      meaning: 'Whose compassionate gaze watches over all creation (Takshakaya)'
     },
     {
       number: 99,
@@ -800,7 +800,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Papahartre',
       mantraSanskrit: 'ॐ पापहर्त्रे नमः',
       mantra: 'Om Papahartre Namah',
-      meaning: ''
+      meaning: 'Purifier who dissolves sins and karmic obstacles (Papahartre)'
     },
     {
       number: 100,
@@ -808,7 +808,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Sudarshanaya',
       mantraSanskrit: 'ॐ सुदर्शनाय नमः',
       mantra: 'Om Sudarshanaya Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Sudarshanaya)'
     },
     {
       number: 101,
@@ -816,7 +816,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Mahaviraya',
       mantraSanskrit: 'ॐ महावीराय नमः',
       mantra: 'Om Mahaviraya Namah',
-      meaning: ''
+      meaning: 'Possessor of invincible spiritual strength and valor (Mahaviraya)'
     },
     {
       number: 102,
@@ -824,7 +824,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Durganashanaya',
       mantraSanskrit: 'ॐ दुर्गनाशनाय नमः',
       mantra: 'Om Durganashanaya Namah',
-      meaning: ''
+      meaning: 'Praised through sacred hymns, mantras, and cosmic sound (Durganashanaya)'
     },
     {
       number: 103,
@@ -832,7 +832,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Padmagrihaya',
       mantraSanskrit: 'ॐ पद्मगृहाय नमः',
       mantra: 'Om Padmagrihaya Namah',
-      meaning: ''
+      meaning: 'Pure and auspicious as a sacred blooming lotus (Padmagrihaya)'
     },
     {
       number: 104,
@@ -840,7 +840,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Mrigalanchhanaya',
       mantraSanskrit: 'ॐ मृगलाञ्छनाय नमः',
       mantra: 'Om Mrigalanchhanaya Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Mrigalanchhanaya)'
     },
     {
       number: 105,
@@ -848,7 +848,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Vedarupine',
       mantraSanskrit: 'ॐ वेदरूपिणे नमः',
       mantra: 'Om Vedarupine Namah',
-      meaning: ''
+      meaning: 'Knower and revealer of eternal Vedic wisdom (Vedarupine)'
     },
     {
       number: 106,
@@ -856,7 +856,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Akshamaladharaya',
       mantraSanskrit: 'ॐ अक्षमालाधराय नमः',
       mantra: 'Om Akshamaladharaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Akshamaladharaya)'
     },
     {
       number: 107,
@@ -864,7 +864,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Brahmanapriyaya',
       mantraSanskrit: 'ॐ ब्राह्मणप्रियाय नमः',
       mantra: 'Om Brahmanapriyaya Namah',
-      meaning: ''
+      meaning: 'Architect of cosmic creation and sacred order (Brahmanapriyaya)'
     },
     {
       number: 108,
@@ -872,7 +872,7 @@ export const brahmaAshtottaram = {
       transliteration: 'Vidhaye',
       mantraSanskrit: 'ॐ विधये नमः',
       mantra: 'Om Vidhaye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Brahma revered as Vidhaye'
     }
   ]
 };

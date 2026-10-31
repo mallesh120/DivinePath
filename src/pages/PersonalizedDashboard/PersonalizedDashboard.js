@@ -6,8 +6,8 @@ import useTextToSpeech from '../../hooks/useTextToSpeech';
 import MeditationTimer from '../../components/MeditationTimer/MeditationTimer';
 import StreakCalendar from '../../components/StreakCalendar/StreakCalendar';
 import { getDailyChallenge } from '../../data/dharmaChallenges';
-import { getLearningPathway } from '../../data/learningPathways';
-import { getWeeklyShloka } from '../../data/shlokaMastery';
+import { getLearningPathway, getAllLearningPathways } from '../../data/learningPathways';
+import { getWeeklyShloka, getAllWeeklyShlokas } from '../../data/shlokaMastery';
 import EditGoalsModal from '../../components/EditGoalsModal/EditGoalsModal';
 import ShlokaCardModal from '../../components/ShlokaCardModal/ShlokaCardModal';
 import './PersonalizedDashboard.css';
@@ -38,10 +38,26 @@ const PersonalizedDashboard = () => {
   } = useSadhana(false);
 
   // Content state
+  const [selectedPathwayId, setSelectedPathwayId] = useState(
+    () => localStorage.getItem('divine_path_active_pathway') || 'gita_basics'
+  );
+  const [selectedShlokaId, setSelectedShlokaId] = useState(() => getWeeklyShloka().id);
+
+  const allPathways = getAllLearningPathways();
+  const allShlokas = getAllWeeklyShlokas();
   const dailyChallenge = getDailyChallenge();
-  const currentPathway = getLearningPathway('gita_basics');
-  const currentLesson = currentPathway.lessons.find(l => l.day === pathwayProgress) || currentPathway.lessons[currentPathway.lessons.length - 1];
-  const weeklyShloka = getWeeklyShloka();
+  const currentPathway = getLearningPathway(selectedPathwayId);
+  const currentLesson =
+    currentPathway.lessons.find(l => l.day === pathwayProgress) ||
+    currentPathway.lessons[currentPathway.lessons.length - 1];
+  const weeklyShloka = getWeeklyShloka(selectedShlokaId);
+
+  const handlePathwayChange = (e) => {
+    e.stopPropagation();
+    const nextId = e.target.value;
+    setSelectedPathwayId(nextId);
+    localStorage.setItem('divine_path_active_pathway', nextId);
+  };
   
   // UI state
   const [isLessonModalOpen, setIsLessonModalOpen] = useState(false);
@@ -280,8 +296,21 @@ const PersonalizedDashboard = () => {
             {/* B. Learning Pathway */}
             <div className="journey-card learning-card glass-panel" onClick={() => setIsLessonModalOpen(true)}>
               <div className="journey-card-header">
-                <span className="journey-icon">📚</span>
-                <h3>{currentPathway.title}</h3>
+                <span className="journey-icon">{currentPathway.icon || '📚'}</span>
+                <select
+                  className="dashboard-city-select"
+                  value={selectedPathwayId}
+                  onChange={handlePathwayChange}
+                  onClick={(e) => e.stopPropagation()}
+                  aria-label="Select Learning Pathway"
+                  style={{ fontWeight: 700, fontSize: '1rem', flex: 1 }}
+                >
+                  {allPathways.map((p) => (
+                    <option key={p.id} value={p.id}>
+                      {p.title}
+                    </option>
+                  ))}
+                </select>
                 <span className="pathway-progress-badge">Day {pathwayProgress}/{currentPathway.totalDays}</span>
               </div>
               <div className="learning-preview">
@@ -298,7 +327,24 @@ const PersonalizedDashboard = () => {
                 <span className="shloka-progress-badge">{shlokaPracticeDays}/7 Days</span>
               </div>
               <div className="shloka-content">
-                <h4 className="shloka-title">{weeklyShloka.title}</h4>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '8px', marginBottom: '6px' }}>
+                  <select
+                    className="dashboard-city-select"
+                    value={selectedShlokaId}
+                    onChange={(e) => {
+                      stop();
+                      setSelectedShlokaId(e.target.value);
+                    }}
+                    aria-label="Select Weekly Mantra"
+                    style={{ fontWeight: 600, fontSize: '0.95rem', flex: 1 }}
+                  >
+                    {allShlokas.map((s) => (
+                      <option key={s.id} value={s.id}>
+                        {s.title}
+                      </option>
+                    ))}
+                  </select>
+                </div>
                 <p className="shloka-sanskrit">{weeklyShloka.sanskrit}</p>
                 <div className="shloka-actions">
                   <button

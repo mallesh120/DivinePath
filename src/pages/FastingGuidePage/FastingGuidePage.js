@@ -9,9 +9,12 @@ import {
 import './FastingGuidePage.css';
 
 function FastingGuidePage() {
+  const todayWeekday = new Date().toLocaleDateString('en-US', { weekday: 'long' });
   const [selectedTab, setSelectedTab] = useState('weekly'); // 'weekly', 'ekadashi', 'special'
-  const [selectedDay, setSelectedDay] = useState(null);
-  const [selectedSpecial, setSelectedSpecial] = useState(null);
+  const [selectedDay, setSelectedDay] = useState(() => todayWeekday || 'Monday');
+  const [selectedSpecial, setSelectedSpecial] = useState(
+    () => fastingDays.special?.[0]?.name || 'Maha Shivaratri'
+  );
 
   const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 

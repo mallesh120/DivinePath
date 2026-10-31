@@ -3,80 +3,120 @@ export const devotionalTracks = [
     id: 1,
     title: "Om Meditation (5 min)",
     type: "meditation",
-    description: "Deep meditation with Om chanting for inner peace",
+    description: "Deep meditation with 136.1 Hz Cosmic Om resonance for inner peace",
     duration: "5:00",
-    audioFile: "om-meditation.mp3"
+    durationSeconds: 300,
+    baseFreq: 136.1,
+    chimeFreq: 544.4,
+    audioFile: "",
+    chantText: "Om... Breathe in peace, breathe out tension. Rest your awareness in the eternal vibration of Om."
   },
   {
     id: 2,
     title: "Gayatri Mantra",
     type: "bhajan",
-    description: "Traditional chanting of the sacred Gayatri Mantra",
+    description: "Traditional chanting of the sacred Gayatri Mantra for illumination",
     duration: "3:30",
-    audioFile: "gayatri-mantra.mp3"
+    durationSeconds: 210,
+    baseFreq: 144.0,
+    chimeFreq: 576.0,
+    audioFile: "/audio/mantras/surya.mp3",
+    chantText: "Om Bhur Bhuvah Svah, Tat Savitur Varenyam, Bhargo Devasya Dhimahi, Dhiyo Yo Nah Prachodayat."
   },
   {
     id: 3,
     title: "Guided Morning Meditation",
     type: "meditation",
-    description: "Start your day with peace and positive energy",
+    description: "Start your day with Brahma Muhurta serenity and positive prana",
     duration: "10:00",
-    audioFile: "morning-meditation.mp3"
+    durationSeconds: 600,
+    baseFreq: 216.0,
+    chimeFreq: 432.0,
+    audioFile: "",
+    chantText: "Welcome the morning light. Inhale golden vitality, exhale gratitude for this sacred new day."
   },
   {
     id: 4,
     title: "Shiva Bhajan - Om Namah Shivaya",
     type: "bhajan",
-    description: "Devotional chanting dedicated to Lord Shiva",
+    description: "Devotional Panchakshara chanting dedicated to Lord Mahadeva",
     duration: "4:15",
-    audioFile: "om-namah-shivaya.mp3"
+    durationSeconds: 255,
+    baseFreq: 128.0,
+    chimeFreq: 512.0,
+    audioFile: "/audio/mantras/shiva.mp3",
+    chantText: "Om Namah Shivaya. Shivaya Namah Om. Har Har Mahadeva Shambho Shankara."
   },
   {
     id: 5,
     title: "Chakra Balancing Meditation",
     type: "meditation",
-    description: "Harmonize your energy centers through guided visualization",
+    description: "Harmonize your seven energy centers with 528 Hz Solfeggio resonance",
     duration: "15:00",
-    audioFile: "chakra-meditation.mp3"
+    durationSeconds: 900,
+    baseFreq: 264.0,
+    chimeFreq: 528.0,
+    audioFile: "",
+    chantText: "Visualize luminous lotus centers from root to crown aligning in radiant harmony. Lam, Vam, Ram, Yam, Ham, Om."
   },
   {
     id: 6,
-    title: "Hanuman Chalisa",
+    title: "Hanuman Chalisa & Dhyana",
     type: "bhajan",
-    description: "Powerful prayer to Lord Hanuman for strength and courage",
+    description: "Powerful invocation to Lord Hanuman for strength, courage, and devotion",
     duration: "8:00",
-    audioFile: "hanuman-chalisa.mp3"
+    durationSeconds: 480,
+    baseFreq: 147.85,
+    chimeFreq: 591.4,
+    audioFile: "/audio/mantras/hanuman.mp3",
+    chantText: "Om Hum Hanumate Namaha. Manojavam Marutatulyavegam, Jitendriyam Buddhimatam Varishtham, Vatatmajam Vanarayuthamukhyam, Shriramadutam Sharanam Prapadye."
   },
   {
     id: 7,
     title: "Evening Peace Meditation",
     type: "meditation",
-    description: "Relax and unwind with calming evening meditation",
+    description: "Relax and unwind at dusk with calming Sandhya temple resonance",
     duration: "8:30",
-    audioFile: "evening-meditation.mp3"
+    durationSeconds: 510,
+    baseFreq: 108.0,
+    chimeFreq: 432.0,
+    audioFile: "",
+    chantText: "As the sun sets, release all efforts of the day. Let your mind settle like a tranquil lake under the evening stars."
   },
   {
     id: 8,
-    title: "Lakshmi Stotra",
+    title: "Mahalakshmi Stotram",
     type: "bhajan",
-    description: "Invoke blessings of Goddess Lakshmi for prosperity",
+    description: "Invoke the grace of Goddess Lakshmi for spiritual and material abundance",
     duration: "5:45",
-    audioFile: "lakshmi-stotra.mp3"
+    durationSeconds: 345,
+    baseFreq: 194.18,
+    chimeFreq: 582.54,
+    audioFile: "/audio/mantras/lakshmi.mp3",
+    chantText: "Om Shreem Hreem Shreem Kamale Kamalalaye Praseeda Praseeda, Om Shreem Hreem Shreem Mahalakshmyai Namaha."
   },
   {
     id: 9,
-    title: "Breath Awareness Meditation",
+    title: "Pranayama Breath Awareness",
     type: "meditation",
-    description: "Simple yet powerful mindfulness practice",
+    description: "Rhythmic So-Hum mindfulness practice with gentle harmonic chimes",
     duration: "7:00",
-    audioFile: "breath-meditation.mp3"
+    durationSeconds: 420,
+    baseFreq: 174.0,
+    chimeFreq: 522.0,
+    audioFile: "",
+    chantText: "Inhale silently chanting So... Exhale silently chanting Hum... I am That eternal consciousness."
   },
   {
     id: 10,
-    title: "Vishnu Sahasranamam (Excerpt)",
+    title: "Vishnu Sahasranamam Dhyana",
     type: "bhajan",
-    description: "1000 names of Lord Vishnu - excerpt",
+    description: "Sacred meditation on Lord Narayana, the Supreme Preserver",
     duration: "6:30",
-    audioFile: "vishnu-sahasranamam.mp3"
+    durationSeconds: 390,
+    baseFreq: 162.0,
+    chimeFreq: 486.0,
+    audioFile: "/audio/mantras/vishnu.mp3",
+    chantText: "Om Namo Narayanaya. Om Namo Bhagavate Vasudevaya. Shantakaram Bhujagashayanam Padmanabham Suresham."
   }
 ];

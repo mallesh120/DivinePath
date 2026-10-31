@@ -21,46 +21,46 @@ export const hanumanSundaraKandaScenes = [
   },
   {
     text: "Lankini struck Hanuman, but he retaliated with a single, forceful punch that brought her to her knees. Realizing his divine power, Lankini remembered a prophecy: when a monkey defeated her, it would signal the end of Ravana and the demon empire. She bowed and allowed him to enter.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_sundara_6_defeating_lankini_1793403618695.jpg"
   },
   {
     text: "Hanuman searched every palace, mansion, and secret chamber in Lanka. He saw the opulence of Ravana's palace and countless sleeping demons, but he could not find Sita. Disheartened, he climbed a wall and looked out over a beautiful, dense grove called the Ashoka Vatika.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_sundara_7_ashoka_vatika_search_1793403634504.jpg"
   },
   {
     text: "Hiding among the leaves of a large Ashoka tree, Hanuman finally spotted her. Sita sat on the ground, surrounded by terrifying demon guards. She was pale, weeping, and constantly chanting Rama's name, refusing to yield to Ravana's threats and temptations.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_sundara_8_sita_in_ashoka_vatika_1793403680834.jpg"
   },
   {
     text: "Waiting for the guards to sleep, Hanuman began to softly sing the glory of Lord Rama from the branches above. Hearing her husband's name, Sita looked up in astonishment. Hanuman gently dropped Rama's signet ring into her lap.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_sundara_9_dropping_ring_1793403695157.jpg"
   },
   {
     text: "Seeing the ring, Sita burst into tears of joy. Hanuman climbed down, introduced himself as Rama's humble servant, and offered to carry her back on his shoulders. But Sita, bound by dharma, insisted that Rama himself must come, defeat Ravana, and rescue her honorably.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_sundara_10_hanuman_speaks_to_sita_1793403739968.jpg"
   },
   {
     text: "Before leaving, Hanuman asked for a token to prove he had met her. Sita gave him her Choodamani (a sacred hair jewel). Hanuman placed it reverently on his head. But before returning, Hanuman decided he needed to assess the enemy's strength and send a warning to Ravana.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_sundara_11_sita_gives_choodamani_1793403756699.jpg"
   },
   {
     text: "Hanuman began destroying the beautiful Ashoka grove, uprooting trees and smashing pavilions. Enraged, Ravana sent thousands of elite demon warriors to capture the lone monkey. Hanuman effortlessly defeated them all, using trees and boulders as his weapons, displaying the terrifying might of Rama's devotee.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_sundara_12_destroying_grove_1793403798916.jpg"
   },
   {
     text: "Finally, Ravana's son, Indrajit, used the ultimate Brahmastra weapon to bind Hanuman. Out of respect for Lord Brahma, Hanuman allowed himself to be captured and dragged into Ravana's grand court.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_sundara_13_bound_by_brahmastra_1793403830404.jpg"
   },
   {
     text: "Standing fearless before the ten-headed demon king, Hanuman delivered a stern warning. 'Return Sita with honor, or face the wrath of Lord Rama,' he proclaimed. Insulted by a mere monkey, Ravana ordered Hanuman's tail to be set on fire.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_sundara_14_ravana_court_1793403882147.jpg"
   },
   {
     text: "The demons wrapped miles of cloth soaked in oil around his tail and set it ablaze. But Sita, hearing of this, prayed to the Fire God to be cool for Hanuman. Using the fire on his tail, Hanuman shrank his size, escaped his bonds, and leaped from roof to roof, setting the golden city of Lanka on fire.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_sundara_15_burning_of_lanka_1793403898743.jpg"
   },
   {
     text: "Having turned Lanka to ashes and completing his mission, Hanuman extinguished his tail in the ocean. With a mighty leap, he flew back across the sea to deliver the joyous news to Lord Rama: 'Sita has been found!'",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_sundara_16_return_with_news_1793403963784.jpg"
   }
 ];

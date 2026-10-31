@@ -16,7 +16,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Shri Tulasyai',
       mantraSanskrit: 'ॐ श्री तुलस्यै नमः',
       mantra: 'Om Shri Tulasyai Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Shri Tulasyai)'
     },
     {
       number: 2,
@@ -24,7 +24,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Nandinyai',
       mantraSanskrit: 'ॐ नन्दिन्यै नमः',
       mantra: 'Om Nandinyai Namah',
-      meaning: ''
+      meaning: 'She who brings supreme delight to the Divine and devotees'
     },
     {
       number: 3,
@@ -32,7 +32,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Devyai',
       mantraSanskrit: 'ॐ देव्यै नमः',
       mantra: 'Om Devyai Namah',
-      meaning: ''
+      meaning: 'The effulgent Divine Mother'
     },
     {
       number: 4,
@@ -40,7 +40,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Shikhinyai',
       mantraSanskrit: 'ॐ शिखिन्यै नमः',
       mantra: 'Om Shikhinyai Namah',
-      meaning: ''
+      meaning: 'Crowned with the highest pinnacle of spiritual grace'
     },
     {
       number: 5,
@@ -48,7 +48,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Dharinyai',
       mantraSanskrit: 'ॐ धारिण्यै नमः',
       mantra: 'Om Dharinyai Namah',
-      meaning: ''
+      meaning: 'Sustainer of dharma and support of the earth'
     },
     {
       number: 6,
@@ -56,7 +56,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Dhatryai',
       mantraSanskrit: 'ॐ धात्र्यै नमः',
       mantra: 'Om Dhatryai Namah',
-      meaning: ''
+      meaning: 'Architect of cosmic creation and sacred order (Dhatryai)'
     },
     {
       number: 7,
@@ -64,7 +64,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Savitryai',
       mantraSanskrit: 'ॐ सावित्र्यै नमः',
       mantra: 'Om Savitryai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Savitryai'
     },
     {
       number: 8,
@@ -72,7 +72,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Satyasandhayai',
       mantraSanskrit: 'ॐ सत्यसन्धायै नमः',
       mantra: 'Om Satyasandhayai Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Satyasandhayai)'
     },
     {
       number: 9,
@@ -80,7 +80,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Kalaharinyai',
       mantraSanskrit: 'ॐ कालहारिण्यै नमः',
       mantra: 'Om Kalaharinyai Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Kalaharinyai)'
     },
     {
       number: 10,
@@ -88,7 +88,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Gauryai',
       mantraSanskrit: 'ॐ गौर्यै नमः',
       mantra: 'Om Gauryai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Gauryai'
     },
     {
       number: 11,
@@ -96,7 +96,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Devagitayai',
       mantraSanskrit: 'ॐ देवगीतायै नमः',
       mantra: 'Om Devagitayai Namah',
-      meaning: ''
+      meaning: 'Praised through sacred hymns, mantras, and cosmic sound (Devagitayai)'
     },
     {
       number: 12,
@@ -104,7 +104,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Draviyasyai',
       mantraSanskrit: 'ॐ द्रवीयस्यै नमः',
       mantra: 'Om Draviyasyai Namah',
-      meaning: ''
+      meaning: 'Radiant with the effulgence of a thousand suns (Draviyasyai)'
     },
     {
       number: 13,
@@ -112,7 +112,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Padminyai',
       mantraSanskrit: 'ॐ पद्मिन्यै नमः',
       mantra: 'Om Padminyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Padminyai'
     },
     {
       number: 14,
@@ -120,7 +120,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Sitayai',
       mantraSanskrit: 'ॐ सीतायै नमः',
       mantra: 'Om Sitayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Sitayai'
     },
     {
       number: 15,
@@ -128,7 +128,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Rukminyai',
       mantraSanskrit: 'ॐ रुक्मिण्यै नमः',
       mantra: 'Om Rukminyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Rukminyai'
     },
     {
       number: 16,
@@ -136,7 +136,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Priyabhushanayai',
       mantraSanskrit: 'ॐ प्रियभूषणायै नमः',
       mantra: 'Om Priyabhushanayai Namah',
-      meaning: ''
+      meaning: 'Beloved of the pure-hearted and enchanting in grace (Priyabhushanayai)'
     },
     {
       number: 17,
@@ -144,7 +144,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Shreyasyai',
       mantraSanskrit: 'ॐ श्रेयस्यै नमः',
       mantra: 'Om Shreyasyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Shreyasyai'
     },
     {
       number: 18,
@@ -152,7 +152,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Shrimatyai',
       mantraSanskrit: 'ॐ श्रीमत्यै नमः',
       mantra: 'Om Shrimatyai Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Shrimatyai)'
     },
     {
       number: 19,
@@ -160,7 +160,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Manyayai',
       mantraSanskrit: 'ॐ मान्यायै नमः',
       mantra: 'Om Manyayai Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Manyayai)'
     },
     {
       number: 20,
@@ -168,7 +168,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Gauryai',
       mantraSanskrit: 'ॐ गौर्यै नमः',
       mantra: 'Om Gauryai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Gauryai'
     },
     {
       number: 21,
@@ -176,7 +176,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Gautamarchitayai',
       mantraSanskrit: 'ॐ गौतमार्चितायै नमः',
       mantra: 'Om Gautamarchitayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Gautamarchitayai'
     },
     {
       number: 22,
@@ -184,7 +184,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Tretayai',
       mantraSanskrit: 'ॐ त्रेतायै नमः',
       mantra: 'Om Tretayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Tretayai'
     },
     {
       number: 23,
@@ -192,7 +192,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Tripathagayai',
       mantraSanskrit: 'ॐ त्रिपथगायै नमः',
       mantra: 'Om Tripathagayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Tripathagayai'
     },
     {
       number: 24,
@@ -200,7 +200,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Tripadayai',
       mantraSanskrit: 'ॐ त्रिपादायै नमः',
       mantra: 'Om Tripadayai Namah',
-      meaning: ''
+      meaning: 'Whose lotus feet are the ultimate sanctuary of seekers (Tripadayai)'
     },
     {
       number: 25,
@@ -208,7 +208,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Traimurtyai',
       mantraSanskrit: 'ॐ त्रैमूर्त्यै नमः',
       mantra: 'Om Traimurtyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Traimurtyai'
     },
     {
       number: 26,
@@ -216,7 +216,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Jagatrayayai',
       mantraSanskrit: 'ॐ जगत्रयायै नमः',
       mantra: 'Om Jagatrayayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Jagatrayayai'
     },
     {
       number: 27,
@@ -224,7 +224,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Trasinyai',
       mantraSanskrit: 'ॐ त्रासिन्यै नमः',
       mantra: 'Om Trasinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Trasinyai'
     },
     {
       number: 28,
@@ -232,7 +232,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Gatrayai',
       mantraSanskrit: 'ॐ गात्रायै नमः',
       mantra: 'Om Gatrayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Gatrayai'
     },
     {
       number: 29,
@@ -240,7 +240,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Gatriyayai',
       mantraSanskrit: 'ॐ गात्रियायै नमः',
       mantra: 'Om Gatriyayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Gatriyayai'
     },
     {
       number: 30,
@@ -248,7 +248,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Garbhavarinyai',
       mantraSanskrit: 'ॐ गर्भवारिण्यै नमः',
       mantra: 'Om Garbhavarinyai Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Garbhavarinyai)'
     },
     {
       number: 31,
@@ -256,7 +256,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Shobhanayai',
       mantraSanskrit: 'ॐ शोभनायै नमः',
       mantra: 'Om Shobhanayai Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Shobhanayai)'
     },
     {
       number: 32,
@@ -264,7 +264,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Samayai',
       mantraSanskrit: 'ॐ समायै नमः',
       mantra: 'Om Samayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Samayai'
     },
     {
       number: 33,
@@ -272,7 +272,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Dviradayai',
       mantraSanskrit: 'ॐ द्विरदायै नमः',
       mantra: 'Om Dviradayai Namah',
-      meaning: ''
+      meaning: 'Possessor of invincible spiritual strength and valor (Dviradayai)'
     },
     {
       number: 34,
@@ -280,7 +280,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Aradyai',
       mantraSanskrit: 'ॐ आराद्यै नमः',
       mantra: 'Om Aradyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Aradyai'
     },
     {
       number: 35,
@@ -288,7 +288,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Yajnavidyayai',
       mantraSanskrit: 'ॐ यज्ञविद्यायै नमः',
       mantra: 'Om Yajnavidyayai Namah',
-      meaning: ''
+      meaning: 'Bestower of supreme spiritual knowledge and discernment (Yajnavidyayai)'
     },
     {
       number: 36,
@@ -296,7 +296,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Mahavidyayai',
       mantraSanskrit: 'ॐ महाविद्यायै नमः',
       mantra: 'Om Mahavidyayai Namah',
-      meaning: ''
+      meaning: 'Bestower of supreme spiritual knowledge and discernment (Mahavidyayai)'
     },
     {
       number: 37,
@@ -304,7 +304,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Guhyavidyayai',
       mantraSanskrit: 'ॐ गुह्यविद्यायै नमः',
       mantra: 'Om Guhyavidyayai Namah',
-      meaning: ''
+      meaning: 'Bestower of supreme spiritual knowledge and discernment (Guhyavidyayai)'
     },
     {
       number: 38,
@@ -312,7 +312,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Kamakshyai',
       mantraSanskrit: 'ॐ कामाक्ष्यै नमः',
       mantra: 'Om Kamakshyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Kamakshyai'
     },
     {
       number: 39,
@@ -320,7 +320,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Kulayai',
       mantraSanskrit: 'ॐ कुलायै नमः',
       mantra: 'Om Kulayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Kulayai'
     },
     {
       number: 40,
@@ -328,7 +328,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Shriyai',
       mantraSanskrit: 'ॐ श्रीयै नमः',
       mantra: 'Om Shriyai Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Shriyai)'
     },
     {
       number: 41,
@@ -336,7 +336,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Bhumyai',
       mantraSanskrit: 'ॐ भूम्यै नमः',
       mantra: 'Om Bhumyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Bhumyai'
     },
     {
       number: 42,
@@ -344,7 +344,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Bhavitryai',
       mantraSanskrit: 'ॐ भवित्र्यै नमः',
       mantra: 'Om Bhavitryai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Bhavitryai'
     },
     {
       number: 43,
@@ -352,7 +352,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Savitryai',
       mantraSanskrit: 'ॐ सावित्र्यै नमः',
       mantra: 'Om Savitryai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Savitryai'
     },
     {
       number: 44,
@@ -360,7 +360,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Saravedavidamvarayai',
       mantraSanskrit: 'ॐ सरवेदविदाम्वरायै नमः',
       mantra: 'Om Saravedavidamvarayai Namah',
-      meaning: ''
+      meaning: 'Knower and revealer of eternal Vedic wisdom (Saravedavidamvarayai)'
     },
     {
       number: 45,
@@ -368,7 +368,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Shamkhinyai',
       mantraSanskrit: 'ॐ शंखिन्यै नमः',
       mantra: 'Om Shamkhinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Shamkhinyai'
     },
     {
       number: 46,
@@ -376,7 +376,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Chakrinyai',
       mantraSanskrit: 'ॐ चक्रिण्यै नमः',
       mantra: 'Om Chakrinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Chakrinyai'
     },
     {
       number: 47,
@@ -384,7 +384,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Charinyai',
       mantraSanskrit: 'ॐ चारिण्यै नमः',
       mantra: 'Om Charinyai Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Charinyai)'
     },
     {
       number: 48,
@@ -392,7 +392,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Chapalekshanayai',
       mantraSanskrit: 'ॐ चपलेक्षणायै नमः',
       mantra: 'Om Chapalekshanayai Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Chapalekshanayai)'
     },
     {
       number: 49,
@@ -400,7 +400,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Pitambarayai',
       mantraSanskrit: 'ॐ पीताम्बरायै नमः',
       mantra: 'Om Pitambarayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Pitambarayai'
     },
     {
       number: 50,
@@ -408,7 +408,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Prota Somayai',
       mantraSanskrit: 'ॐ प्रोत सोमायै नमः',
       mantra: 'Om Prota Somayai Namah',
-      meaning: ''
+      meaning: 'Cool, soothing, and luminous like the full moon (Prota Somayai)'
     },
     {
       number: 51,
@@ -416,7 +416,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Saurasayai',
       mantraSanskrit: 'ॐ सौरसायै नमः',
       mantra: 'Om Saurasayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Saurasayai'
     },
     {
       number: 52,
@@ -424,7 +424,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Akshinyai',
       mantraSanskrit: 'ॐ अक्षिण्यै नमः',
       mantra: 'Om Akshinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Akshinyai'
     },
     {
       number: 53,
@@ -432,7 +432,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Ambayai',
       mantraSanskrit: 'ॐ अम्बायै नमः',
       mantra: 'Om Ambayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Ambayai'
     },
     {
       number: 54,
@@ -440,7 +440,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Sarasvatyai',
       mantraSanskrit: 'ॐ सरस्वत्यै नमः',
       mantra: 'Om Sarasvatyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Sarasvatyai'
     },
     {
       number: 55,
@@ -448,7 +448,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Samshrayayai',
       mantraSanskrit: 'ॐ सम्श्रयायै नमः',
       mantra: 'Om Samshrayayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Samshrayayai'
     },
     {
       number: 56,
@@ -456,7 +456,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Sarva Devatyai',
       mantraSanskrit: 'ॐ सर्व देवत्यै नमः',
       mantra: 'Om Sarva Devatyai Namah',
-      meaning: ''
+      meaning: 'Omnipresent and all-encompassing divinity (Sarva Devatyai)'
     },
     {
       number: 57,
@@ -464,7 +464,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Vishvashrayayai',
       mantraSanskrit: 'ॐ विश्वाश्रयायै नमः',
       mantra: 'Om Vishvashrayayai Namah',
-      meaning: ''
+      meaning: 'Guardian and sustainer of the cosmic worlds (Vishvashrayayai)'
     },
     {
       number: 58,
@@ -472,7 +472,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Sugandhinyai',
       mantraSanskrit: 'ॐ सुगन्धिन्यै नमः',
       mantra: 'Om Sugandhinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Sugandhinyai'
     },
     {
       number: 59,
@@ -480,7 +480,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Suvasanayai',
       mantraSanskrit: 'ॐ सुवासनायै नमः',
       mantra: 'Om Suvasanayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Suvasanayai'
     },
     {
       number: 60,
@@ -488,7 +488,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Varadayai',
       mantraSanskrit: 'ॐ वरदायै नमः',
       mantra: 'Om Varadayai Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Varadayai)'
     },
     {
       number: 61,
@@ -496,7 +496,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Sushronyai',
       mantraSanskrit: 'ॐ सुश्रोण्यै नमः',
       mantra: 'Om Sushronyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Sushronyai'
     },
     {
       number: 62,
@@ -504,7 +504,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Chandrabhagayai',
       mantraSanskrit: 'ॐ चन्द्रभागायै नमः',
       mantra: 'Om Chandrabhagayai Namah',
-      meaning: ''
+      meaning: 'Cool, soothing, and luminous like the full moon (Chandrabhagayai)'
     },
     {
       number: 63,
@@ -512,7 +512,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Yamunapriyayai',
       mantraSanskrit: 'ॐ यमुनाप्रियायै नमः',
       mantra: 'Om Yamunapriyayai Namah',
-      meaning: ''
+      meaning: 'Beloved of the pure-hearted and enchanting in grace (Yamunapriyayai)'
     },
     {
       number: 64,
@@ -520,7 +520,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Kaveryai',
       mantraSanskrit: 'ॐ कावेर्यै नमः',
       mantra: 'Om Kaveryai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Kaveryai'
     },
     {
       number: 65,
@@ -528,7 +528,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Manikarnikayai',
       mantraSanskrit: 'ॐ मणिकर्णिकायै नमः',
       mantra: 'Om Manikarnikayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Manikarnikayai'
     },
     {
       number: 66,
@@ -536,7 +536,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Archinyai',
       mantraSanskrit: 'ॐ अर्चिन्यै नमः',
       mantra: 'Om Archinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Archinyai'
     },
     {
       number: 67,
@@ -544,7 +544,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Sthayinyai',
       mantraSanskrit: 'ॐ स्थायिन्यै नमः',
       mantra: 'Om Sthayinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Sthayinyai'
     },
     {
       number: 68,
@@ -552,7 +552,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Danapradayai',
       mantraSanskrit: 'ॐ दानप्रदायै नमः',
       mantra: 'Om Danapradayai Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Danapradayai)'
     },
     {
       number: 69,
@@ -560,7 +560,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Dhanavatyai',
       mantraSanskrit: 'ॐ धनवत्यै नमः',
       mantra: 'Om Dhanavatyai Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Dhanavatyai)'
     },
     {
       number: 70,
@@ -568,7 +568,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Sochyamanasayai',
       mantraSanskrit: 'ॐ सोच्यमानसायै नमः',
       mantra: 'Om Sochyamanasayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Sochyamanasayai'
     },
     {
       number: 71,
@@ -576,7 +576,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Shuchinyai',
       mantraSanskrit: 'ॐ शुचिन्यै नमः',
       mantra: 'Om Shuchinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Shuchinyai'
     },
     {
       number: 72,
@@ -584,7 +584,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Shreyasyai',
       mantraSanskrit: 'ॐ श्रेयस्यै नमः',
       mantra: 'Om Shreyasyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Shreyasyai'
     },
     {
       number: 73,
@@ -592,7 +592,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Pritichintekshanyai',
       mantraSanskrit: 'ॐ प्रीतिचिन्तेक्षण्यै नमः',
       mantra: 'Om Pritichintekshanyai Namah',
-      meaning: ''
+      meaning: 'Fountain of supreme spiritual bliss and joy (Pritichintekshanyai)'
     },
     {
       number: 74,
@@ -600,7 +600,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Vibhutyai',
       mantraSanskrit: 'ॐ विभूत्यै नमः',
       mantra: 'Om Vibhutyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Vibhutyai'
     },
     {
       number: 75,
@@ -608,7 +608,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Akrityai',
       mantraSanskrit: 'ॐ आकृत्यै नमः',
       mantra: 'Om Akrityai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Akrityai'
     },
     {
       number: 76,
@@ -616,7 +616,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Avirbhutyai',
       mantraSanskrit: 'ॐ आविर्भूत्यै नमः',
       mantra: 'Om Avirbhutyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Avirbhutyai'
     },
     {
       number: 77,
@@ -624,7 +624,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Prabhavinyai',
       mantraSanskrit: 'ॐ प्रभाविन्यै नमः',
       mantra: 'Om Prabhavinyai Namah',
-      meaning: ''
+      meaning: 'Radiant with the effulgence of a thousand suns (Prabhavinyai)'
     },
     {
       number: 78,
@@ -632,7 +632,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Gandhinyai',
       mantraSanskrit: 'ॐ गन्धिन्यै नमः',
       mantra: 'Om Gandhinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Gandhinyai'
     },
     {
       number: 79,
@@ -640,7 +640,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Svarginyai',
       mantraSanskrit: 'ॐ स्वर्गिन्यै नमः',
       mantra: 'Om Svarginyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Svarginyai'
     },
     {
       number: 80,
@@ -648,7 +648,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Gadayai',
       mantraSanskrit: 'ॐ गदायै नमः',
       mantra: 'Om Gadayai Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Gadayai)'
     },
     {
       number: 81,
@@ -656,7 +656,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Vedyayai',
       mantraSanskrit: 'ॐ वेद्यायै नमः',
       mantra: 'Om Vedyayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Vedyayai'
     },
     {
       number: 82,
@@ -664,7 +664,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Prabhayai',
       mantraSanskrit: 'ॐ प्रभायै नमः',
       mantra: 'Om Prabhayai Namah',
-      meaning: ''
+      meaning: 'Remover of fear, sorrow, and distress (Prabhayai)'
     },
     {
       number: 83,
@@ -672,7 +672,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Sarasyai',
       mantraSanskrit: 'ॐ सारस्यै नमः',
       mantra: 'Om Sarasyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Sarasyai'
     },
     {
       number: 84,
@@ -680,7 +680,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Sarasivasayai',
       mantraSanskrit: 'ॐ सरसिवासायै नमः',
       mantra: 'Om Sarasivasayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Sarasivasayai'
     },
     {
       number: 85,
@@ -688,7 +688,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Sarasvatyai',
       mantraSanskrit: 'ॐ सरस्वत्यै नमः',
       mantra: 'Om Sarasvatyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Sarasvatyai'
     },
     {
       number: 86,
@@ -696,7 +696,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Sharavatyai',
       mantraSanskrit: 'ॐ शरावत्यै नमः',
       mantra: 'Om Sharavatyai Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Sharavatyai)'
     },
     {
       number: 87,
@@ -704,7 +704,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Rasinyai',
       mantraSanskrit: 'ॐ रसिन्यै नमः',
       mantra: 'Om Rasinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Rasinyai'
     },
     {
       number: 88,
@@ -712,7 +712,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Kalinyai',
       mantraSanskrit: 'ॐ काळिन्यै नमः',
       mantra: 'Om Kalinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Kalinyai'
     },
     {
       number: 89,
@@ -720,7 +720,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Shreyovatyai',
       mantraSanskrit: 'ॐ श्रेयोवत्यै नमः',
       mantra: 'Om Shreyovatyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Shreyovatyai'
     },
     {
       number: 90,
@@ -728,7 +728,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Yamayai',
       mantraSanskrit: 'ॐ यामायै नमः',
       mantra: 'Om Yamayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Yamayai'
     },
     {
       number: 91,
@@ -736,7 +736,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Brahmapriyayai',
       mantraSanskrit: 'ॐ ब्रह्मप्रियायै नमः',
       mantra: 'Om Brahmapriyayai Namah',
-      meaning: ''
+      meaning: 'Architect of cosmic creation and sacred order (Brahmapriyayai)'
     },
     {
       number: 92,
@@ -744,7 +744,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Shyamasundarayai',
       mantraSanskrit: 'ॐ श्यामसुन्दरायै नमः',
       mantra: 'Om Shyamasundarayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Shyamasundarayai'
     },
     {
       number: 93,
@@ -752,7 +752,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Ratnarupinyai',
       mantraSanskrit: 'ॐ रत्नरूपिण्यै नमः',
       mantra: 'Om Ratnarupinyai Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Ratnarupinyai)'
     },
     {
       number: 94,
@@ -760,7 +760,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Shamanidhinyai',
       mantraSanskrit: 'ॐ शमनिधिन्यै नमः',
       mantra: 'Om Shamanidhinyai Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Shamanidhinyai)'
     },
     {
       number: 95,
@@ -768,7 +768,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Shatanandayai',
       mantraSanskrit: 'ॐ शतानन्दायै नमः',
       mantra: 'Om Shatanandayai Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Shatanandayai)'
     },
     {
       number: 96,
@@ -776,7 +776,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Shatadyutaye',
       mantraSanskrit: 'ॐ शतद्युतये नमः',
       mantra: 'Om Shatadyutaye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Shatadyutaye'
     },
     {
       number: 97,
@@ -784,7 +784,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Shitikanthayai',
       mantraSanskrit: 'ॐ शितिकण्ठायै नमः',
       mantra: 'Om Shitikanthayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Shitikanthayai'
     },
     {
       number: 98,
@@ -792,7 +792,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Prayayai',
       mantraSanskrit: 'ॐ प्रयायै नमः',
       mantra: 'Om Prayayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Prayayai'
     },
     {
       number: 99,
@@ -800,7 +800,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Dhatryai',
       mantraSanskrit: 'ॐ धात्र्यै नमः',
       mantra: 'Om Dhatryai Namah',
-      meaning: ''
+      meaning: 'Architect of cosmic creation and sacred order (Dhatryai)'
     },
     {
       number: 100,
@@ -808,7 +808,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Shri Vrindavanyai',
       mantraSanskrit: 'ॐ श्री वृन्दावन्यै नमः',
       mantra: 'Om Shri Vrindavanyai Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Shri Vrindavanyai)'
     },
     {
       number: 101,
@@ -816,7 +816,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Krishnayai',
       mantraSanskrit: 'ॐ कृष्णायै नमः',
       mantra: 'Om Krishnayai Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Krishnayai)'
     },
     {
       number: 102,
@@ -824,7 +824,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Bhaktavatsalayai',
       mantraSanskrit: 'ॐ भक्तवत्सलायै नमः',
       mantra: 'Om Bhaktavatsalayai Namah',
-      meaning: ''
+      meaning: 'Compassionate refuge and protector of devoted souls (Bhaktavatsalayai)'
     },
     {
       number: 103,
@@ -832,7 +832,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Gopikakridayai',
       mantraSanskrit: 'ॐ गोपिकाक्रीडायै नमः',
       mantra: 'Om Gopikakridayai Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Gopikakridayai)'
     },
     {
       number: 104,
@@ -840,7 +840,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Harayai',
       mantraSanskrit: 'ॐ हरायै नमः',
       mantra: 'Om Harayai Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Harayai)'
     },
     {
       number: 105,
@@ -848,7 +848,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Amritarupinyai',
       mantraSanskrit: 'ॐ अमृतरूपिण्यै नमः',
       mantra: 'Om Amritarupinyai Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Amritarupinyai)'
     },
     {
       number: 106,
@@ -856,7 +856,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Bhumyai',
       mantraSanskrit: 'ॐ भूम्यै नमः',
       mantra: 'Om Bhumyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Tulasi revered as Bhumyai'
     },
     {
       number: 107,
@@ -864,7 +864,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Shri Krishnakantayai',
       mantraSanskrit: 'ॐ श्री कृष्णकान्तायै नमः',
       mantra: 'Om Shri Krishnakantayai Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Shri Krishnakantayai)'
     },
     {
       number: 108,
@@ -872,7 +872,7 @@ export const tulasiAshtottaram = {
       transliteration: 'Shri Tulasyai',
       mantraSanskrit: 'ॐ श्री तुलस्यै नमः',
       mantra: 'Om Shri Tulasyai Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Shri Tulasyai)'
     }
   ]
 };

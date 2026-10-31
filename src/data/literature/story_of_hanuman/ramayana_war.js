@@ -1,11 +1,11 @@
 export const hanumanRamayanaWarScenes = [
   {
     text: "With the news of Sita's location, Rama's vast monkey and bear army marched to the southern shore. A miraculous bridge of floating stones, built by Nala and Nila with the help of every soldier, was constructed across the ocean. Hanuman carried Lord Rama on his shoulders across the bridge as they marched to war.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_war_1_rama_setu_march_1793403981980.jpg"
   },
   {
     text: "The great war of Lanka was fierce and terrible. Hanuman was at the forefront of every major battle, wielding massive trees and boulders, fighting with unmatched ferocity to protect Rama and Lakshmana. The demons trembled at the sight of the mighty golden monkey who had previously burned their city.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_war_2_battlefield_heroics_1793404034959.jpg"
   },
   {
     text: "During the war, Ravana's powerful son, Indrajit, unleashed a devastating weapon called the Shakti on Lakshmana. The weapon struck Lakshmana in the chest, and he fell to the ground, mortally wounded and unconscious. The entire monkey army was paralyzed with grief, and Lord Rama wept bitterly for his brother.",

@@ -16,7 +16,7 @@ export const radhaAshtottaram = {
       transliteration: 'Radhikayai',
       mantraSanskrit: 'ॐ राधिकायै नमः',
       mantra: 'Om Radhikayai Namah',
-      meaning: ''
+      meaning: 'Supreme Goddess Radhika, the purest embodiment of devotion'
     },
     {
       number: 2,
@@ -24,7 +24,7 @@ export const radhaAshtottaram = {
       transliteration: 'Sundaryai',
       mantraSanskrit: 'ॐ सुन्दर्यै नमः',
       mantra: 'Om Sundaryai Namah',
-      meaning: ''
+      meaning: 'She who is the perfection of divine beauty and grace'
     },
     {
       number: 3,
@@ -32,7 +32,7 @@ export const radhaAshtottaram = {
       transliteration: 'Gopyai',
       mantraSanskrit: 'ॐ गोप्यै नमः',
       mantra: 'Om Gopyai Namah',
-      meaning: ''
+      meaning: 'The foremost jewel among the sacred cowherd maidens of Vraja'
     },
     {
       number: 4,
@@ -40,7 +40,7 @@ export const radhaAshtottaram = {
       transliteration: 'Krishnasangamakarinyai',
       mantraSanskrit: 'ॐ कृष्णसङ्गमकारिण्यै नमः',
       mantra: 'Om Krishnasangamakarinyai Namah',
-      meaning: ''
+      meaning: 'She who unites the devoted soul with Lord Krishna'
     },
     {
       number: 5,
@@ -48,7 +48,7 @@ export const radhaAshtottaram = {
       transliteration: 'Chanchalakshyai',
       mantraSanskrit: 'ॐ चञ्चलाक्ष्यै नमः',
       mantra: 'Om Chanchalakshyai Namah',
-      meaning: ''
+      meaning: 'She whose playful, compassionate glance blesses all beings'
     },
     {
       number: 6,
@@ -56,7 +56,7 @@ export const radhaAshtottaram = {
       transliteration: 'Kurangakshyai',
       mantraSanskrit: 'ॐ कुरङ्गाक्ष्यै नमः',
       mantra: 'Om Kurangakshyai Namah',
-      meaning: ''
+      meaning: 'She who has gentle, doe-like eyes full of mercy'
     },
     {
       number: 7,
@@ -64,7 +64,7 @@ export const radhaAshtottaram = {
       transliteration: 'Gandharvyai',
       mantraSanskrit: 'ॐ गान्धर्व्यै नमः',
       mantra: 'Om Gandharvyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Gandharvyai'
     },
     {
       number: 8,
@@ -72,7 +72,7 @@ export const radhaAshtottaram = {
       transliteration: 'Vrishabhanujayai',
       mantraSanskrit: 'ॐ वृषभानुजायै नमः',
       mantra: 'Om Vrishabhanujayai Namah',
-      meaning: ''
+      meaning: 'Radiant with the effulgence of a thousand suns (Vrishabhanujayai)'
     },
     {
       number: 9,
@@ -80,7 +80,7 @@ export const radhaAshtottaram = {
       transliteration: 'Vinapanyai',
       mantraSanskrit: 'ॐ वीणापाण्यै नमः',
       mantra: 'Om Vinapanyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Vinapanyai'
     },
     {
       number: 10,
@@ -88,7 +88,7 @@ export const radhaAshtottaram = {
       transliteration: 'Smitamukhyai',
       mantraSanskrit: 'ॐ स्मितमुख्यै नमः',
       mantra: 'Om Smitamukhyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Smitamukhyai'
     },
     {
       number: 11,
@@ -96,7 +96,7 @@ export const radhaAshtottaram = {
       transliteration: 'Raktashokalatalayayai',
       mantraSanskrit: 'ॐ रक्ताशोकलतालयायै नमः',
       mantra: 'Om Raktashokalatalayayai Namah',
-      meaning: ''
+      meaning: 'Remover of fear, sorrow, and distress (Raktashokalatalayayai)'
     },
     {
       number: 12,
@@ -104,7 +104,7 @@ export const radhaAshtottaram = {
       transliteration: 'Govardhanacharyai',
       mantraSanskrit: 'ॐ गोवर्धनचर्यै नमः',
       mantra: 'Om Govardhanacharyai Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Govardhanacharyai)'
     },
     {
       number: 13,
@@ -112,7 +112,7 @@ export const radhaAshtottaram = {
       transliteration: 'Gopyai',
       mantraSanskrit: 'ॐ गोप्यै नमः',
       mantra: 'Om Gopyai Namah',
-      meaning: ''
+      meaning: 'The foremost jewel among the sacred cowherd maidens of Vraja'
     },
     {
       number: 14,
@@ -120,7 +120,7 @@ export const radhaAshtottaram = {
       transliteration: 'Gopiveshamanoharayai',
       mantraSanskrit: 'ॐ गोपीवेषमनोहरायै नमः',
       mantra: 'Om Gopiveshamanoharayai Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Gopiveshamanoharayai)'
     },
     {
       number: 15,
@@ -128,7 +128,7 @@ export const radhaAshtottaram = {
       transliteration: 'Chandravalisapatnyai',
       mantraSanskrit: 'ॐ चन्द्रावलीसपत्न्यै नमः',
       mantra: 'Om Chandravalisapatnyai Namah',
-      meaning: ''
+      meaning: 'Cool, soothing, and luminous like the full moon (Chandravalisapatnyai)'
     },
     {
       number: 16,
@@ -136,7 +136,7 @@ export const radhaAshtottaram = {
       transliteration: 'Darpanasyayai',
       mantraSanskrit: 'ॐ दर्पणास्यायै नमः',
       mantra: 'Om Darpanasyayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Darpanasyayai'
     },
     {
       number: 17,
@@ -144,7 +144,7 @@ export const radhaAshtottaram = {
       transliteration: 'Kalavatyai',
       mantraSanskrit: 'ॐ कलावत्यै नमः',
       mantra: 'Om Kalavatyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Kalavatyai'
     },
     {
       number: 18,
@@ -152,7 +152,7 @@ export const radhaAshtottaram = {
       transliteration: 'Kripavatyai',
       mantraSanskrit: 'ॐ कृपावत्यै नमः',
       mantra: 'Om Kripavatyai Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Kripavatyai)'
     },
     {
       number: 19,
@@ -160,7 +160,7 @@ export const radhaAshtottaram = {
       transliteration: 'Supratikayai',
       mantraSanskrit: 'ॐ सुप्रतीकायै नमः',
       mantra: 'Om Supratikayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Supratikayai'
     },
     {
       number: 20,
@@ -168,7 +168,7 @@ export const radhaAshtottaram = {
       transliteration: 'Tarunyai',
       mantraSanskrit: 'ॐ तरुण्यै नमः',
       mantra: 'Om Tarunyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Tarunyai'
     },
     {
       number: 21,
@@ -176,7 +176,7 @@ export const radhaAshtottaram = {
       transliteration: 'Hridayangamayai',
       mantraSanskrit: 'ॐ हृदयङ्गमायै नमः',
       mantra: 'Om Hridayangamayai Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Hridayangamayai)'
     },
     {
       number: 22,
@@ -184,7 +184,7 @@ export const radhaAshtottaram = {
       transliteration: 'Krishnapriyayai',
       mantraSanskrit: 'ॐ कृष्णप्रियायै नमः',
       mantra: 'Om Krishnapriyayai Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Krishnapriyayai)'
     },
     {
       number: 23,
@@ -192,7 +192,7 @@ export const radhaAshtottaram = {
       transliteration: 'Krishnasakhyai',
       mantraSanskrit: 'ॐ कृष्णसख्यै नमः',
       mantra: 'Om Krishnasakhyai Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Krishnasakhyai)'
     },
     {
       number: 24,
@@ -200,7 +200,7 @@ export const radhaAshtottaram = {
       transliteration: 'Viparitaratipriyayai',
       mantraSanskrit: 'ॐ विपरीतरतिप्रियायै नमः',
       mantra: 'Om Viparitaratipriyayai Namah',
-      meaning: ''
+      meaning: 'Beloved of the pure-hearted and enchanting in grace (Viparitaratipriyayai)'
     },
     {
       number: 25,
@@ -208,7 +208,7 @@ export const radhaAshtottaram = {
       transliteration: 'Pravinayai',
       mantraSanskrit: 'ॐ प्रवीणायै नमः',
       mantra: 'Om Pravinayai Namah',
-      meaning: ''
+      meaning: 'Radiant with the effulgence of a thousand suns (Pravinayai)'
     },
     {
       number: 26,
@@ -216,7 +216,7 @@ export const radhaAshtottaram = {
       transliteration: 'Suratapritayai',
       mantraSanskrit: 'ॐ सुरतप्रीतायै नमः',
       mantra: 'Om Suratapritayai Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Suratapritayai)'
     },
     {
       number: 27,
@@ -224,7 +224,7 @@ export const radhaAshtottaram = {
       transliteration: 'Chandrasyayai',
       mantraSanskrit: 'ॐ चन्द्रास्यायै नमः',
       mantra: 'Om Chandrasyayai Namah',
-      meaning: ''
+      meaning: 'Cool, soothing, and luminous like the full moon (Chandrasyayai)'
     },
     {
       number: 28,
@@ -232,7 +232,7 @@ export const radhaAshtottaram = {
       transliteration: 'Charuvigrahayai',
       mantraSanskrit: 'ॐ चारुविग्रहायै नमः',
       mantra: 'Om Charuvigrahayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Charuvigrahayai'
     },
     {
       number: 29,
@@ -240,7 +240,7 @@ export const radhaAshtottaram = {
       transliteration: 'Kekarakshyai',
       mantraSanskrit: 'ॐ केकराक्ष्यै नमः',
       mantra: 'Om Kekarakshyai Namah',
-      meaning: ''
+      meaning: 'Whose hands grant fearlessness (Abhaya) and boons (Varada) (Kekarakshyai)'
     },
     {
       number: 30,
@@ -248,7 +248,7 @@ export const radhaAshtottaram = {
       transliteration: 'Hareh Kantayai',
       mantraSanskrit: 'ॐ हरेः कान्तायै नमः',
       mantra: 'Om Hareh Kantayai Namah',
-      meaning: ''
+      meaning: 'Beloved of the pure-hearted and enchanting in grace (Hareh Kantayai)'
     },
     {
       number: 31,
@@ -256,7 +256,7 @@ export const radhaAshtottaram = {
       transliteration: 'Mahalakshmyai',
       mantraSanskrit: 'ॐ महालक्ष्म्यै नमः',
       mantra: 'Om Mahalakshmyai Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Mahalakshmyai)'
     },
     {
       number: 32,
@@ -264,7 +264,7 @@ export const radhaAshtottaram = {
       transliteration: 'Sukelinyai',
       mantraSanskrit: 'ॐ सुकेलिन्यै नमः',
       mantra: 'Om Sukelinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Sukelinyai'
     },
     {
       number: 33,
@@ -272,7 +272,7 @@ export const radhaAshtottaram = {
       transliteration: 'Sanketavatasamsthanayai',
       mantraSanskrit: 'ॐ सङ्केतवटसंस्थानायै नमः',
       mantra: 'Om Sanketavatasamsthanayai Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Sanketavatasamsthanayai)'
     },
     {
       number: 34,
@@ -280,7 +280,7 @@ export const radhaAshtottaram = {
       transliteration: 'Kamaniyayai',
       mantraSanskrit: 'ॐ कमनीयायै नमः',
       mantra: 'Om Kamaniyayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Kamaniyayai'
     },
     {
       number: 35,
@@ -288,7 +288,7 @@ export const radhaAshtottaram = {
       transliteration: 'Kaminyai',
       mantraSanskrit: 'ॐ कामिन्यै नमः',
       mantra: 'Om Kaminyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Kaminyai'
     },
     {
       number: 36,
@@ -296,7 +296,7 @@ export const radhaAshtottaram = {
       transliteration: 'Vrishabhanusutayai',
       mantraSanskrit: 'ॐ वृषभानुसुतायै नमः',
       mantra: 'Om Vrishabhanusutayai Namah',
-      meaning: ''
+      meaning: 'Radiant with the effulgence of a thousand suns (Vrishabhanusutayai)'
     },
     {
       number: 37,
@@ -304,7 +304,7 @@ export const radhaAshtottaram = {
       transliteration: 'Radhayai',
       mantraSanskrit: 'ॐ राधायै नमः',
       mantra: 'Om Radhayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Radhayai'
     },
     {
       number: 38,
@@ -312,7 +312,7 @@ export const radhaAshtottaram = {
       transliteration: 'Kishoryai',
       mantraSanskrit: 'ॐ किशोर्यै नमः',
       mantra: 'Om Kishoryai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Kishoryai'
     },
     {
       number: 39,
@@ -320,7 +320,7 @@ export const radhaAshtottaram = {
       transliteration: 'Lalitayai',
       mantraSanskrit: 'ॐ ललितायै नमः',
       mantra: 'Om Lalitayai Namah',
-      meaning: ''
+      meaning: 'Goddess Lalita Tripurasundari, transcendentally graceful and blissful'
     },
     {
       number: 40,
@@ -328,7 +328,7 @@ export const radhaAshtottaram = {
       transliteration: 'Latayai',
       mantraSanskrit: 'ॐ लतायै नमः',
       mantra: 'Om Latayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Latayai'
     },
     {
       number: 41,
@@ -336,7 +336,7 @@ export const radhaAshtottaram = {
       transliteration: 'Vighudvallyai',
       mantraSanskrit: 'ॐ विघुद्वल्ल्यै नमः',
       mantra: 'Om Vighudvallyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Vighudvallyai'
     },
     {
       number: 42,
@@ -344,7 +344,7 @@ export const radhaAshtottaram = {
       transliteration: 'Kanchanabhayai',
       mantraSanskrit: 'ॐ काञ्चनाभायै नमः',
       mantra: 'Om Kanchanabhayai Namah',
-      meaning: ''
+      meaning: 'Remover of fear, sorrow, and distress (Kanchanabhayai)'
     },
     {
       number: 43,
@@ -352,7 +352,7 @@ export const radhaAshtottaram = {
       transliteration: 'Kumaryai',
       mantraSanskrit: 'ॐ कुमार्यै नमः',
       mantra: 'Om Kumaryai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Kumaryai'
     },
     {
       number: 44,
@@ -360,7 +360,7 @@ export const radhaAshtottaram = {
       transliteration: 'Mugdhaveshinyai',
       mantraSanskrit: 'ॐ मुग्धवेशिन्यै नमः',
       mantra: 'Om Mugdhaveshinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Mugdhaveshinyai'
     },
     {
       number: 45,
@@ -368,7 +368,7 @@ export const radhaAshtottaram = {
       transliteration: 'Keshinyai',
       mantraSanskrit: 'ॐ केशिन्यै नमः',
       mantra: 'Om Keshinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Keshinyai'
     },
     {
       number: 46,
@@ -376,7 +376,7 @@ export const radhaAshtottaram = {
       transliteration: 'Keshavasakhyai',
       mantraSanskrit: 'ॐ केशवसख्यै नमः',
       mantra: 'Om Keshavasakhyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Keshavasakhyai'
     },
     {
       number: 47,
@@ -384,7 +384,7 @@ export const radhaAshtottaram = {
       transliteration: 'Navanitaikavikrayayai',
       mantraSanskrit: 'ॐ नवनीतैकविक्रयायै नमः',
       mantra: 'Om Navanitaikavikrayayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Navanitaikavikrayayai'
     },
     {
       number: 48,
@@ -392,7 +392,7 @@ export const radhaAshtottaram = {
       transliteration: 'Shodashabdayai',
       mantraSanskrit: 'ॐ षोडशाब्दायै नमः',
       mantra: 'Om Shodashabdayai Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Shodashabdayai)'
     },
     {
       number: 49,
@@ -400,7 +400,7 @@ export const radhaAshtottaram = {
       transliteration: 'Kalapurnayai',
       mantraSanskrit: 'ॐ कलापूर्णायै नमः',
       mantra: 'Om Kalapurnayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Kalapurnayai'
     },
     {
       number: 50,
@@ -408,7 +408,7 @@ export const radhaAshtottaram = {
       transliteration: 'Jarinyai',
       mantraSanskrit: 'ॐ जारिण्यै नमः',
       mantra: 'Om Jarinyai Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Jarinyai)'
     },
     {
       number: 51,
@@ -416,7 +416,7 @@ export const radhaAshtottaram = {
       transliteration: 'Jarasanginyai',
       mantraSanskrit: 'ॐ जारसङ्गिन्यै नमः',
       mantra: 'Om Jarasanginyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Jarasanginyai'
     },
     {
       number: 52,
@@ -424,7 +424,7 @@ export const radhaAshtottaram = {
       transliteration: 'Harshinyai',
       mantraSanskrit: 'ॐ हर्षिण्यै नमः',
       mantra: 'Om Harshinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Harshinyai'
     },
     {
       number: 53,
@@ -432,7 +432,7 @@ export const radhaAshtottaram = {
       transliteration: 'Varshinyai',
       mantraSanskrit: 'ॐ वर्षिण्यै नमः',
       mantra: 'Om Varshinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Varshinyai'
     },
     {
       number: 54,
@@ -440,7 +440,7 @@ export const radhaAshtottaram = {
       transliteration: 'Virayai',
       mantraSanskrit: 'ॐ वीरायै नमः',
       mantra: 'Om Virayai Namah',
-      meaning: ''
+      meaning: 'Possessor of invincible spiritual strength and valor (Virayai)'
     },
     {
       number: 55,
@@ -448,7 +448,7 @@ export const radhaAshtottaram = {
       transliteration: 'Dhirayai',
       mantraSanskrit: 'ॐ धीरायै नमः',
       mantra: 'Om Dhirayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Dhirayai'
     },
     {
       number: 56,
@@ -456,7 +456,7 @@ export const radhaAshtottaram = {
       transliteration: 'Dharayai',
       mantraSanskrit: 'ॐ धारायै नमः',
       mantra: 'Om Dharayai Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Dharayai)'
     },
     {
       number: 57,
@@ -464,7 +464,7 @@ export const radhaAshtottaram = {
       transliteration: 'Dharayai',
       mantraSanskrit: 'ॐ धरायै नमः',
       mantra: 'Om Dharayai Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Dharayai)'
     },
     {
       number: 58,
@@ -472,7 +472,7 @@ export const radhaAshtottaram = {
       transliteration: 'Dhrityai',
       mantraSanskrit: 'ॐ धृत्यै नमः',
       mantra: 'Om Dhrityai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Dhrityai'
     },
     {
       number: 59,
@@ -480,7 +480,7 @@ export const radhaAshtottaram = {
       transliteration: 'Yauvanasthayai',
       mantraSanskrit: 'ॐ यौवनस्थायै नमः',
       mantra: 'Om Yauvanasthayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Yauvanasthayai'
     },
     {
       number: 60,
@@ -488,7 +488,7 @@ export const radhaAshtottaram = {
       transliteration: 'Vanasthayai',
       mantraSanskrit: 'ॐ वनस्थायै नमः',
       mantra: 'Om Vanasthayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Vanasthayai'
     },
     {
       number: 61,
@@ -496,7 +496,7 @@ export const radhaAshtottaram = {
       transliteration: 'Madhurayai',
       mantraSanskrit: 'ॐ मधुरायै नमः',
       mantra: 'Om Madhurayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Madhurayai'
     },
     {
       number: 62,
@@ -504,7 +504,7 @@ export const radhaAshtottaram = {
       transliteration: 'Madhurakrityai',
       mantraSanskrit: 'ॐ मधुराकृत्यै नमः',
       mantra: 'Om Madhurakrityai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Madhurakrityai'
     },
     {
       number: 63,
@@ -512,7 +512,7 @@ export const radhaAshtottaram = {
       transliteration: 'Vrishabhanupuravasayai',
       mantraSanskrit: 'ॐ वृषभानुपुरावासायै नमः',
       mantra: 'Om Vrishabhanupuravasayai Namah',
-      meaning: ''
+      meaning: 'Radiant with the effulgence of a thousand suns (Vrishabhanupuravasayai)'
     },
     {
       number: 64,
@@ -520,7 +520,7 @@ export const radhaAshtottaram = {
       transliteration: 'Manalilavisharadayai',
       mantraSanskrit: 'ॐ मानलीलाविशारदायै नमः',
       mantra: 'Om Manalilavisharadayai Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Manalilavisharadayai)'
     },
     {
       number: 65,
@@ -528,7 +528,7 @@ export const radhaAshtottaram = {
       transliteration: 'Danalilayai',
       mantraSanskrit: 'ॐ दानलीलायै नमः',
       mantra: 'Om Danalilayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Danalilayai'
     },
     {
       number: 66,
@@ -536,7 +536,7 @@ export const radhaAshtottaram = {
       transliteration: 'Danadatryai',
       mantraSanskrit: 'ॐ दानदात्र्यै नमः',
       mantra: 'Om Danadatryai Namah',
-      meaning: ''
+      meaning: 'Praised through sacred hymns, mantras, and cosmic sound (Danadatryai)'
     },
     {
       number: 67,
@@ -544,7 +544,7 @@ export const radhaAshtottaram = {
       transliteration: 'Dandahastayai',
       mantraSanskrit: 'ॐ दण्डहस्तायै नमः',
       mantra: 'Om Dandahastayai Namah',
-      meaning: ''
+      meaning: 'Whose hands grant fearlessness (Abhaya) and boons (Varada) (Dandahastayai)'
     },
     {
       number: 68,
@@ -552,7 +552,7 @@ export const radhaAshtottaram = {
       transliteration: 'Bhruvonnatayai',
       mantraSanskrit: 'ॐ भ्रुवोन्नतायै नमः',
       mantra: 'Om Bhruvonnatayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Bhruvonnatayai'
     },
     {
       number: 69,
@@ -560,7 +560,7 @@ export const radhaAshtottaram = {
       transliteration: 'Sustanyai',
       mantraSanskrit: 'ॐ सुस्तन्यै नमः',
       mantra: 'Om Sustanyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Sustanyai'
     },
     {
       number: 70,
@@ -568,7 +568,7 @@ export const radhaAshtottaram = {
       transliteration: 'Madhurasyayai',
       mantraSanskrit: 'ॐ मधुरास्यायै नमः',
       mantra: 'Om Madhurasyayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Madhurasyayai'
     },
     {
       number: 71,
@@ -576,7 +576,7 @@ export const radhaAshtottaram = {
       transliteration: 'Bimboshthyai',
       mantraSanskrit: 'ॐ बिम्बोष्ठ्यै नमः',
       mantra: 'Om Bimboshthyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Bimboshthyai'
     },
     {
       number: 72,
@@ -584,7 +584,7 @@ export const radhaAshtottaram = {
       transliteration: 'Panchamasvarayai',
       mantraSanskrit: 'ॐ पञ्चमस्वरायै नमः',
       mantra: 'Om Panchamasvarayai Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Panchamasvarayai)'
     },
     {
       number: 73,
@@ -592,7 +592,7 @@ export const radhaAshtottaram = {
       transliteration: 'Sangitakushalayai',
       mantraSanskrit: 'ॐ सङ्गीतकुशलायै नमः',
       mantra: 'Om Sangitakushalayai Namah',
-      meaning: ''
+      meaning: 'Praised through sacred hymns, mantras, and cosmic sound (Sangitakushalayai)'
     },
     {
       number: 74,
@@ -600,7 +600,7 @@ export const radhaAshtottaram = {
       transliteration: 'Sevyayai',
       mantraSanskrit: 'ॐ सेव्यायै नमः',
       mantra: 'Om Sevyayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Sevyayai'
     },
     {
       number: 75,
@@ -608,7 +608,7 @@ export const radhaAshtottaram = {
       transliteration: 'Krishnavashyatvakarinyai',
       mantraSanskrit: 'ॐ कृष्णवश्यत्वकारिण्यै नमः',
       mantra: 'Om Krishnavashyatvakarinyai Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Krishnavashyatvakarinyai)'
     },
     {
       number: 76,
@@ -616,7 +616,7 @@ export const radhaAshtottaram = {
       transliteration: 'Tarinyai',
       mantraSanskrit: 'ॐ तारिण्यै नमः',
       mantra: 'Om Tarinyai Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Tarinyai)'
     },
     {
       number: 77,
@@ -624,7 +624,7 @@ export const radhaAshtottaram = {
       transliteration: 'Harinyai',
       mantraSanskrit: 'ॐ हारिण्यै नमः',
       mantra: 'Om Harinyai Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Harinyai)'
     },
     {
       number: 78,
@@ -632,7 +632,7 @@ export const radhaAshtottaram = {
       transliteration: 'Hrilayai',
       mantraSanskrit: 'ॐ ह्रीलायै नमः',
       mantra: 'Om Hrilayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Hrilayai'
     },
     {
       number: 79,
@@ -640,7 +640,7 @@ export const radhaAshtottaram = {
       transliteration: 'Shilayai',
       mantraSanskrit: 'ॐ शीलायै नमः',
       mantra: 'Om Shilayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Shilayai'
     },
     {
       number: 80,
@@ -648,7 +648,7 @@ export const radhaAshtottaram = {
       transliteration: 'Lilayai',
       mantraSanskrit: 'ॐ लीलायै नमः',
       mantra: 'Om Lilayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Lilayai'
     },
     {
       number: 81,
@@ -656,7 +656,7 @@ export const radhaAshtottaram = {
       transliteration: 'Lalamikayai',
       mantraSanskrit: 'ॐ ललामिकायै नमः',
       mantra: 'Om Lalamikayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Lalamikayai'
     },
     {
       number: 82,
@@ -664,7 +664,7 @@ export const radhaAshtottaram = {
       transliteration: 'Gopalyai',
       mantraSanskrit: 'ॐ गोपाल्यै नमः',
       mantra: 'Om Gopalyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Gopalyai'
     },
     {
       number: 83,
@@ -672,7 +672,7 @@ export const radhaAshtottaram = {
       transliteration: 'Dadhivikretryai',
       mantraSanskrit: 'ॐ दधिविक्रेत्र्यै नमः',
       mantra: 'Om Dadhivikretryai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Dadhivikretryai'
     },
     {
       number: 84,
@@ -680,7 +680,7 @@ export const radhaAshtottaram = {
       transliteration: 'Praudhayai',
       mantraSanskrit: 'ॐ प्रौढायै नमः',
       mantra: 'Om Praudhayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Praudhayai'
     },
     {
       number: 85,
@@ -688,7 +688,7 @@ export const radhaAshtottaram = {
       transliteration: 'Mugdhayai',
       mantraSanskrit: 'ॐ मुग्धायै नमः',
       mantra: 'Om Mugdhayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Mugdhayai'
     },
     {
       number: 86,
@@ -696,7 +696,7 @@ export const radhaAshtottaram = {
       transliteration: 'Madhyakayai',
       mantraSanskrit: 'ॐ मध्यकायै नमः',
       mantra: 'Om Madhyakayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Madhyakayai'
     },
     {
       number: 87,
@@ -704,7 +704,7 @@ export const radhaAshtottaram = {
       transliteration: 'Svadhinapatikayai',
       mantraSanskrit: 'ॐ स्वाधीनपतिकायै नमः',
       mantra: 'Om Svadhinapatikayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Svadhinapatikayai'
     },
     {
       number: 88,
@@ -712,7 +712,7 @@ export const radhaAshtottaram = {
       transliteration: 'Khanditayai',
       mantraSanskrit: 'ॐ खण्डितायै नमः',
       mantra: 'Om Khanditayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Khanditayai'
     },
     {
       number: 89,
@@ -720,7 +720,7 @@ export const radhaAshtottaram = {
       transliteration: 'Abhisarikayai',
       mantraSanskrit: 'ॐ अभिसारिकायै नमः',
       mantra: 'Om Abhisarikayai Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Abhisarikayai)'
     },
     {
       number: 90,
@@ -728,7 +728,7 @@ export const radhaAshtottaram = {
       transliteration: 'Rasikayai',
       mantraSanskrit: 'ॐ रसिकायै नमः',
       mantra: 'Om Rasikayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Rasikayai'
     },
     {
       number: 91,
@@ -736,7 +736,7 @@ export const radhaAshtottaram = {
       transliteration: 'Rasinayai',
       mantraSanskrit: 'ॐ रसिनायै नमः',
       mantra: 'Om Rasinayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Rasinayai'
     },
     {
       number: 92,
@@ -744,7 +744,7 @@ export const radhaAshtottaram = {
       transliteration: 'Rasyayai',
       mantraSanskrit: 'ॐ रस्यायै नमः',
       mantra: 'Om Rasyayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Rasyayai'
     },
     {
       number: 93,
@@ -752,7 +752,7 @@ export const radhaAshtottaram = {
       transliteration: 'Rasashastraikashevadhyai',
       mantraSanskrit: 'ॐ रसशास्त्रैकशेवध्यै नमः',
       mantra: 'Om Rasashastraikashevadhyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Rasashastraikashevadhyai'
     },
     {
       number: 94,
@@ -760,7 +760,7 @@ export const radhaAshtottaram = {
       transliteration: 'Palikayai',
       mantraSanskrit: 'ॐ पालिकायै नमः',
       mantra: 'Om Palikayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Palikayai'
     },
     {
       number: 95,
@@ -768,7 +768,7 @@ export const radhaAshtottaram = {
       transliteration: 'Lalikayai',
       mantraSanskrit: 'ॐ लालिकायै नमः',
       mantra: 'Om Lalikayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Lalikayai'
     },
     {
       number: 96,
@@ -776,7 +776,7 @@ export const radhaAshtottaram = {
       transliteration: 'Lajjayai',
       mantraSanskrit: 'ॐ लज्जायै नमः',
       mantra: 'Om Lajjayai Namah',
-      meaning: ''
+      meaning: 'Ever-victorious bestower of triumph in righteous endeavors (Lajjayai)'
     },
     {
       number: 97,
@@ -784,7 +784,7 @@ export const radhaAshtottaram = {
       transliteration: 'Lalasayai',
       mantraSanskrit: 'ॐ लालसायै नमः',
       mantra: 'Om Lalasayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Lalasayai'
     },
     {
       number: 98,
@@ -792,7 +792,7 @@ export const radhaAshtottaram = {
       transliteration: 'Lalanamanyai',
       mantraSanskrit: 'ॐ ललनामण्यै नमः',
       mantra: 'Om Lalanamanyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Lalanamanyai'
     },
     {
       number: 99,
@@ -800,7 +800,7 @@ export const radhaAshtottaram = {
       transliteration: 'Bahurupayai',
       mantraSanskrit: 'ॐ बहुरूपायै नमः',
       mantra: 'Om Bahurupayai Namah',
-      meaning: ''
+      meaning: 'Manifesting a sacred form of beauty and light (Bahurupayai)'
     },
     {
       number: 100,
@@ -808,7 +808,7 @@ export const radhaAshtottaram = {
       transliteration: 'Surupayai',
       mantraSanskrit: 'ॐ सुरूपायै नमः',
       mantra: 'Om Surupayai Namah',
-      meaning: ''
+      meaning: 'Manifesting a sacred form of beauty and light (Surupayai)'
     },
     {
       number: 101,
@@ -816,7 +816,7 @@ export const radhaAshtottaram = {
       transliteration: 'Suprasannayai',
       mantraSanskrit: 'ॐ सुप्रसन्नायै नमः',
       mantra: 'Om Suprasannayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Suprasannayai'
     },
     {
       number: 102,
@@ -824,7 +824,7 @@ export const radhaAshtottaram = {
       transliteration: 'Mahamatyai',
       mantraSanskrit: 'ॐ महामत्यै नमः',
       mantra: 'Om Mahamatyai Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Mahamatyai)'
     },
     {
       number: 103,
@@ -832,7 +832,7 @@ export const radhaAshtottaram = {
       transliteration: 'Maralagamanayai',
       mantraSanskrit: 'ॐ मरालगमनायै नमः',
       mantra: 'Om Maralagamanayai Namah',
-      meaning: ''
+      meaning: 'Knower and revealer of eternal Vedic wisdom (Maralagamanayai)'
     },
     {
       number: 104,
@@ -840,7 +840,7 @@ export const radhaAshtottaram = {
       transliteration: 'Mattayai',
       mantraSanskrit: 'ॐ मत्तायै नमः',
       mantra: 'Om Mattayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Mattayai'
     },
     {
       number: 105,
@@ -848,7 +848,7 @@ export const radhaAshtottaram = {
       transliteration: 'Mantrinyai',
       mantraSanskrit: 'ॐ मन्त्रिण्यै नमः',
       mantra: 'Om Mantrinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Radha revered as Mantrinyai'
     },
     {
       number: 106,
@@ -856,7 +856,7 @@ export const radhaAshtottaram = {
       transliteration: 'Mantranayikayai',
       mantraSanskrit: 'ॐ मन्त्रनायिकायै नमः',
       mantra: 'Om Mantranayikayai Namah',
-      meaning: ''
+      meaning: 'Praised through sacred hymns, mantras, and cosmic sound (Mantranayikayai)'
     },
     {
       number: 107,
@@ -864,7 +864,7 @@ export const radhaAshtottaram = {
       transliteration: 'Mantrarajaikasamsevyayai',
       mantraSanskrit: 'ॐ मन्त्रराजैकसंसेव्यायै नमः',
       mantra: 'Om Mantrarajaikasamsevyayai Namah',
-      meaning: ''
+      meaning: 'Praised through sacred hymns, mantras, and cosmic sound (Mantrarajaikasamsevyayai)'
     },
     {
       number: 108,
@@ -872,7 +872,7 @@ export const radhaAshtottaram = {
       transliteration: 'Mantrarajaikasiddhidayai',
       mantraSanskrit: 'ॐ मन्त्रराजैकसिद्धिदायै नमः',
       mantra: 'Om Mantrarajaikasiddhidayai Namah',
-      meaning: ''
+      meaning: 'Praised through sacred hymns, mantras, and cosmic sound (Mantrarajaikasiddhidayai)'
     },
     {
       number: 109,
@@ -880,7 +880,7 @@ export const radhaAshtottaram = {
       transliteration: 'Ashtadashaksharaphalayai',
       mantraSanskrit: 'ॐ अष्टादशाक्षरफलायै नमः',
       mantra: 'Om Ashtadashaksharaphalayai Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Ashtadashaksharaphalayai)'
     },
     {
       number: 110,
@@ -888,7 +888,7 @@ export const radhaAshtottaram = {
       transliteration: 'Ashtadashaksharanishevitayai',
       mantraSanskrit: 'ॐ अष्टादशाक्षरनिषेवितायै नमः',
       mantra: 'Om Ashtadashaksharanishevitayai Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Ashtadashaksharanishevitayai)'
     }
   ]
 };

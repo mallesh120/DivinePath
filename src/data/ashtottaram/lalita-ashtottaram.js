@@ -16,7 +16,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Rajatachalashringagramadhyasthayai Namo',
       mantraSanskrit: 'ॐ रजताचलश‍ृङ्गाग्रमध्यस्थायै नमो नमः',
       mantra: 'Om Rajatachalashringagramadhyasthayai Namo Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Rajatachalashringagramadhyasthayai Namo)'
     },
     {
       number: 2,
@@ -24,7 +24,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Himachalamahavamshapavanayai Namo',
       mantraSanskrit: 'ॐ हिमाचलमहावंशपावनायै नमो नमः',
       mantra: 'Om Himachalamahavamshapavanayai Namo Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Himachalamahavamshapavanayai Namo)'
     },
     {
       number: 3,
@@ -32,7 +32,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Shankarardhangasaundaryasharirayai Namo',
       mantraSanskrit: 'ॐ शङ्करार्धाङ्गसौन्दर्यशरीरायै नमो नमः',
       mantra: 'Om Shankarardhangasaundaryasharirayai Namo Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Shankarardhangasaundaryasharirayai Namo)'
     },
     {
       number: 4,
@@ -40,7 +40,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Lasanmarakatasvachchhavigrahayai Namo',
       mantraSanskrit: 'ॐ लसन्मरकतस्वच्छविग्रहायै नमो नमः',
       mantra: 'Om Lasanmarakatasvachchhavigrahayai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Lasanmarakatasvachchhavigrahayai Namo'
     },
     {
       number: 5,
@@ -48,7 +48,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Mahatishayasaundaryalavanyayai Namo',
       mantraSanskrit: 'ॐ महातिशयसौन्दर्यलावण्यायै नमो नमः',
       mantra: 'Om Mahatishayasaundaryalavanyayai Namo Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Mahatishayasaundaryalavanyayai Namo)'
     },
     {
       number: 6,
@@ -56,7 +56,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Shashankashekharapranavallabhayai Namo',
       mantraSanskrit: 'ॐ शशाङ्कशेखरप्राणवल्लभायै नमो नमः',
       mantra: 'Om Shashankashekharapranavallabhayai Namo Namah',
-      meaning: ''
+      meaning: 'Remover of fear, sorrow, and distress (Shashankashekharapranavallabhayai Namo)'
     },
     {
       number: 7,
@@ -64,7 +64,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Sadapanchadashatmaikyasvarupayai Namo',
       mantraSanskrit: 'ॐ सदापञ्चदशात्मैक्यस्वरूपायै नमो नमः',
       mantra: 'Om Sadapanchadashatmaikyasvarupayai Namo Namah',
-      meaning: ''
+      meaning: 'Manifesting a sacred form of beauty and light (Sadapanchadashatmaikyasvarupayai Namo)'
     },
     {
       number: 8,
@@ -72,7 +72,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Vajramanikyakatakakiritayai Namo',
       mantraSanskrit: 'ॐ वज्रमाणिक्यकटककिरीटायै नमो नमः',
       mantra: 'Om Vajramanikyakatakakiritayai Namo Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Vajramanikyakatakakiritayai Namo)'
     },
     {
       number: 9,
@@ -80,7 +80,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Kasturitilakollasanitilayai Namo',
       mantraSanskrit: 'ॐ कस्तूरीतिलकोल्लासनिटिलायै नमो नमः',
       mantra: 'Om Kasturitilakollasanitilayai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Kasturitilakollasanitilayai Namo'
     },
     {
       number: 10,
@@ -88,7 +88,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Bhasmarekhankitalasanmastakayai Namo',
       mantraSanskrit: 'ॐ भस्मरेखाङ्कितलसन्मस्तकायै नमो नमः',
       mantra: 'Om Bhasmarekhankitalasanmastakayai Namo Namah',
-      meaning: ''
+      meaning: 'Radiant with the effulgence of a thousand suns (Bhasmarekhankitalasanmastakayai Namo)'
     },
     {
       number: 11,
@@ -96,7 +96,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Vikachambhoruhadalalochanayai Namo',
       mantraSanskrit: 'ॐ विकचाम्भोरुहदललोचनायै नमो नमः',
       mantra: 'Om Vikachambhoruhadalalochanayai Namo Namah',
-      meaning: ''
+      meaning: 'Whose compassionate gaze watches over all creation (Vikachambhoruhadalalochanayai Namo)'
     },
     {
       number: 12,
@@ -104,7 +104,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Sharachchampeyapushpabhanasikayai Namo',
       mantraSanskrit: 'ॐ शरच्चाम्पेयपुष्पाभनासिकायै नमो नमः',
       mantra: 'Om Sharachchampeyapushpabhanasikayai Namo Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Sharachchampeyapushpabhanasikayai Namo)'
     },
     {
       number: 13,
@@ -112,7 +112,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Lasatkanchanatatankayugalayai Namo',
       mantraSanskrit: 'ॐ लसत्काञ्चनताटङ्कयुगलायै नमो नमः',
       mantra: 'Om Lasatkanchanatatankayugalayai Namo Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Lasatkanchanatatankayugalayai Namo)'
     },
     {
       number: 14,
@@ -120,7 +120,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Manidarpanasankashakapolayai Namo',
       mantraSanskrit: 'ॐ मणिदर्पणसङ्काशकपोलायै नमो नमः',
       mantra: 'Om Manidarpanasankashakapolayai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Manidarpanasankashakapolayai Namo'
     },
     {
       number: 15,
@@ -128,7 +128,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Tambulapuritasmeravadanayai Namo',
       mantraSanskrit: 'ॐ ताम्बूलपूरितस्मेरवदनायै नमो नमः',
       mantra: 'Om Tambulapuritasmeravadanayai Namo Namah',
-      meaning: ''
+      meaning: 'Of serene and radiant countenance (Tambulapuritasmeravadanayai Namo)'
     },
     {
       number: 16,
@@ -136,7 +136,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Supakvadadimibijaradanayai Namo',
       mantraSanskrit: 'ॐ सुपक्वदाडिमीबीजरदनायै नमो नमः',
       mantra: 'Om Supakvadadimibijaradanayai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Supakvadadimibijaradanayai Namo'
     },
     {
       number: 17,
@@ -144,7 +144,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Kambupugasamachchhayakandharayai Namo',
       mantraSanskrit: 'ॐ कम्बुपूगसमच्छायकन्धरायै नमो नमः',
       mantra: 'Om Kambupugasamachchhayakandharayai Namo Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Kambupugasamachchhayakandharayai Namo)'
     },
     {
       number: 18,
@@ -152,7 +152,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Sthulamuktaphalodarasuharayai Namo',
       mantraSanskrit: 'ॐ स्थूलमुक्ताफलोदारसुहारायै नमो नमः',
       mantra: 'Om Sthulamuktaphalodarasuharayai Namo Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Sthulamuktaphalodarasuharayai Namo)'
     },
     {
       number: 19,
@@ -160,7 +160,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Girishabaddhamangalyamangalayai Namo',
       mantraSanskrit: 'ॐ गिरीशबद्धमाङ्गल्यमङ्गलायै नमो नमः',
       mantra: 'Om Girishabaddhamangalyamangalayai Namo Namah',
-      meaning: ''
+      meaning: 'Source of supreme auspiciousness and blessing (Girishabaddhamangalyamangalayai Namo)'
     },
     {
       number: 20,
@@ -168,7 +168,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Padmapashankushalasatkarabjayai Namo',
       mantraSanskrit: 'ॐ पद्मपाशाङ्कुशलसत्कराब्जायै नमो नमः',
       mantra: 'Om Padmapashankushalasatkarabjayai Namo Namah',
-      meaning: ''
+      meaning: 'Pure and auspicious as a sacred blooming lotus (Padmapashankushalasatkarabjayai Namo)'
     },
     {
       number: 21,
@@ -176,7 +176,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Padmakairavamandarasumalinyai Namo',
       mantraSanskrit: 'ॐ पद्मकैरवमन्दारसुमालिन्यै नमो नमः',
       mantra: 'Om Padmakairavamandarasumalinyai Namo Namah',
-      meaning: ''
+      meaning: 'Pure and auspicious as a sacred blooming lotus (Padmakairavamandarasumalinyai Namo)'
     },
     {
       number: 22,
@@ -184,7 +184,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Suvarnakumbhayugmabhasukuchayai Namo',
       mantraSanskrit: 'ॐ सुवर्णकुम्भयुग्माभसुकुचायै नमो नमः',
       mantra: 'Om Suvarnakumbhayugmabhasukuchayai Namo Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Suvarnakumbhayugmabhasukuchayai Namo)'
     },
     {
       number: 23,
@@ -192,7 +192,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Ramaniyachaturbahusamyuktayai Namo',
       mantraSanskrit: 'ॐ रमणीयचतुर्बाहुसंयुक्तायै नमो नमः',
       mantra: 'Om Ramaniyachaturbahusamyuktayai Namo Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Ramaniyachaturbahusamyuktayai Namo)'
     },
     {
       number: 24,
@@ -200,7 +200,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Kanakangadakeyurabhushitayai Namo',
       mantraSanskrit: 'ॐ कनकाङ्गदकेयूरभूषितायै नमो नमः',
       mantra: 'Om Kanakangadakeyurabhushitayai Namo Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Kanakangadakeyurabhushitayai Namo)'
     },
     {
       number: 25,
@@ -208,7 +208,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Brihatsauvarnasaundaryavasanayai Namo',
       mantraSanskrit: 'ॐ बृहत्सौवर्णसौन्दर्यवसनायै नमो नमः',
       mantra: 'Om Brihatsauvarnasaundaryavasanayai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Brihatsauvarnasaundaryavasanayai Namo'
     },
     {
       number: 26,
@@ -216,7 +216,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Brihannitambavilasajjaghanayai Namo',
       mantraSanskrit: 'ॐ बृहन्नितम्बविलसज्जघनायै नमो नमः',
       mantra: 'Om Brihannitambavilasajjaghanayai Namo Namah',
-      meaning: ''
+      meaning: 'Purifier who dissolves sins and karmic obstacles (Brihannitambavilasajjaghanayai Namo)'
     },
     {
       number: 27,
@@ -224,7 +224,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Saubhagyajatashringaramadhyamayai Namo',
       mantraSanskrit: 'ॐ सौभाग्यजातश‍ृङ्गारमध्यमायै नमो नमः',
       mantra: 'Om Saubhagyajatashringaramadhyamayai Namo Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Saubhagyajatashringaramadhyamayai Namo)'
     },
     {
       number: 28,
@@ -232,7 +232,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Divyabhushanasandoharanjitayai Namo',
       mantraSanskrit: 'ॐ दिव्यभूषणसन्दोहरञ्जितायै नमो नमः',
       mantra: 'Om Divyabhushanasandoharanjitayai Namo Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Divyabhushanasandoharanjitayai Namo)'
     },
     {
       number: 29,
@@ -240,7 +240,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Parijatagunadhikyapadabjayai Namo',
       mantraSanskrit: 'ॐ पारिजातगुणाधिक्यपदाब्जायै नमो नमः',
       mantra: 'Om Parijatagunadhikyapadabjayai Namo Namah',
-      meaning: ''
+      meaning: 'Ever-victorious bestower of triumph in righteous endeavors (Parijatagunadhikyapadabjayai Namo)'
     },
     {
       number: 30,
@@ -248,7 +248,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Supadmaragasankashacharanayai Kantayai Namo',
       mantraSanskrit: 'ॐ सुपद्मरागसङ्काशचरणायै कान्तायै नमो नमः',
       mantra: 'Om Supadmaragasankashacharanayai Kantayai Namo Namah',
-      meaning: ''
+      meaning: 'Pure and auspicious as a sacred blooming lotus (Supadmaragasankashacharanayai Kantayai Namo)'
     },
     {
       number: 31,
@@ -256,7 +256,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Kamakotimahapadmapithasthayai Namo',
       mantraSanskrit: 'ॐ कामकोटिमहापद्मपीठस्थायै नमो नमः',
       mantra: 'Om Kamakotimahapadmapithasthayai Namo Namah',
-      meaning: ''
+      meaning: 'Pure and auspicious as a sacred blooming lotus (Kamakotimahapadmapithasthayai Namo)'
     },
     {
       number: 32,
@@ -264,7 +264,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Shrikanthanetrakumudachandrikayai Namo',
       mantraSanskrit: 'ॐ श्रीकण्ठनेत्रकुमुदचन्द्रिकायै नमो नमः',
       mantra: 'Om Shrikanthanetrakumudachandrikayai Namo Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Shrikanthanetrakumudachandrikayai Namo)'
     },
     {
       number: 33,
@@ -272,7 +272,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Sancharamararamavanivijitayai Namo',
       mantraSanskrit: 'ॐ सञ्चारमररमावाणीवीजितायै नमो नमः',
       mantra: 'Om Sancharamararamavanivijitayai Namo Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Sancharamararamavanivijitayai Namo)'
     },
     {
       number: 34,
@@ -280,7 +280,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Bhaktarakshanadakshinyakatakshayai Namo',
       mantraSanskrit: 'ॐ भक्तरक्षणदाक्षिण्यकटाक्षायै नमो नमः',
       mantra: 'Om Bhaktarakshanadakshinyakatakshayai Namo Namah',
-      meaning: ''
+      meaning: 'Compassionate refuge and protector of devoted souls (Bhaktarakshanadakshinyakatakshayai Namo)'
     },
     {
       number: 35,
@@ -288,7 +288,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Bhuteshalinganodbhutapulakangyai Namo',
       mantraSanskrit: 'ॐ भूतेशालिङ्गनोद्भूतपुलकाङ्ग्यै नमो नमः',
       mantra: 'Om Bhuteshalinganodbhutapulakangyai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Bhuteshalinganodbhutapulakangyai Namo'
     },
     {
       number: 36,
@@ -296,7 +296,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Anangajanakapangavikshanayai Namo',
       mantraSanskrit: 'ॐ अनङ्गजनकापाङ्गवीक्षणायै नमो नमः',
       mantra: 'Om Anangajanakapangavikshanayai Namo Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Anangajanakapangavikshanayai Namo)'
     },
     {
       number: 37,
@@ -304,7 +304,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Brahmopendrashiroratnaranjitayai Namo',
       mantraSanskrit: 'ॐ ब्रह्मोपेन्द्रशिरोरत्नरञ्जितायै नमो नमः',
       mantra: 'Om Brahmopendrashiroratnaranjitayai Namo Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Brahmopendrashiroratnaranjitayai Namo)'
     },
     {
       number: 38,
@@ -312,7 +312,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Shachimukhyamaravadhusevitayai Namo',
       mantraSanskrit: 'ॐ शचीमुख्यामरवधूसेवितायै नमो नमः',
       mantra: 'Om Shachimukhyamaravadhusevitayai Namo Namah',
-      meaning: ''
+      meaning: 'Eternal, imperishable, and beyond time (Shachimukhyamaravadhusevitayai Namo)'
     },
     {
       number: 39,
@@ -320,7 +320,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Lilakalpitabrahmandamandalayai Namo',
       mantraSanskrit: 'ॐ लीलाकल्पितब्रह्माण्डमण्डलायै नमो नमः',
       mantra: 'Om Lilakalpitabrahmandamandalayai Namo Namah',
-      meaning: ''
+      meaning: 'Architect of cosmic creation and sacred order (Lilakalpitabrahmandamandalayai Namo)'
     },
     {
       number: 40,
@@ -328,7 +328,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Amritadimahashaktisamvritayai Namo',
       mantraSanskrit: 'ॐ अमृतादिमहाशक्तिसंवृतायै नमो नमः',
       mantra: 'Om Amritadimahashaktisamvritayai Namo Namah',
-      meaning: ''
+      meaning: 'Possessor of invincible spiritual strength and valor (Amritadimahashaktisamvritayai Namo)'
     },
     {
       number: 41,
@@ -336,7 +336,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Ekatapatrasamrajyadayikayai Namo',
       mantraSanskrit: 'ॐ एकातपत्रसाम्राज्यदायिकायै नमो नमः',
       mantra: 'Om Ekatapatrasamrajyadayikayai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Ekatapatrasamrajyadayikayai Namo'
     },
     {
       number: 42,
@@ -344,7 +344,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Sanakadisamaradhyapadukayai Namo',
       mantraSanskrit: 'ॐ सनकादिसमाराध्यपादुकायै नमो नमः',
       mantra: 'Om Sanakadisamaradhyapadukayai Namo Namah',
-      meaning: ''
+      meaning: 'Eternal, imperishable, and beyond time (Sanakadisamaradhyapadukayai Namo)'
     },
     {
       number: 43,
@@ -352,7 +352,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Devarshibhisstuyamanavaibhavayai Namo',
       mantraSanskrit: 'ॐ देवर्षिभिस्स्तूयमानवैभवायै नमो नमः',
       mantra: 'Om Devarshibhisstuyamanavaibhavayai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Devarshibhisstuyamanavaibhavayai Namo'
     },
     {
       number: 44,
@@ -360,7 +360,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Kalashodbhavadurvasahpujitayai Namo',
       mantraSanskrit: 'ॐ कलशोद्भवदुर्वासःपूजितायै नमो नमः',
       mantra: 'Om Kalashodbhavadurvasahpujitayai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Kalashodbhavadurvasahpujitayai Namo'
     },
     {
       number: 45,
@@ -368,7 +368,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Mattebhavaktrashadvaktravatsalayai Namo',
       mantraSanskrit: 'ॐ मत्तेभवक्त्रषड्वक्त्रवत्सलायै नमो नमः',
       mantra: 'Om Mattebhavaktrashadvaktravatsalayai Namo Namah',
-      meaning: ''
+      meaning: 'Of serene and radiant countenance (Mattebhavaktrashadvaktravatsalayai Namo)'
     },
     {
       number: 46,
@@ -376,7 +376,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Chakrarajamahayantramadhyavartinyai Namo',
       mantraSanskrit: 'ॐ चक्रराजमहायन्त्रमध्यवर्तिन्यै नमो नमः',
       mantra: 'Om Chakrarajamahayantramadhyavartinyai Namo Namah',
-      meaning: ''
+      meaning: 'Remover of fear, sorrow, and distress (Chakrarajamahayantramadhyavartinyai Namo)'
     },
     {
       number: 47,
@@ -384,7 +384,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Chidagnikundasambhutasudehayai Namo',
       mantraSanskrit: 'ॐ चिदग्निकुण्डसम्भूतसुदेहायै नमो नमः',
       mantra: 'Om Chidagnikundasambhutasudehayai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Chidagnikundasambhutasudehayai Namo'
     },
     {
       number: 48,
@@ -392,7 +392,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Shashankakhandasamyuktamakutayai Namo',
       mantraSanskrit: 'ॐ शशाङ्कखण्डसंयुक्तमकुटायै नमो नमः',
       mantra: 'Om Shashankakhandasamyuktamakutayai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Shashankakhandasamyuktamakutayai Namo'
     },
     {
       number: 49,
@@ -400,7 +400,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Mattahamsavadhumandagamanayai Namo',
       mantraSanskrit: 'ॐ मत्तहंसवधूमन्दगमनायै नमो नमः',
       mantra: 'Om Mattahamsavadhumandagamanayai Namo Namah',
-      meaning: ''
+      meaning: 'Knower and revealer of eternal Vedic wisdom (Mattahamsavadhumandagamanayai Namo)'
     },
     {
       number: 50,
@@ -408,7 +408,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Vandarujanasandohavanditayai Namo',
       mantraSanskrit: 'ॐ वन्दारुजनसन्दोहवन्दितायै नमो नमः',
       mantra: 'Om Vandarujanasandohavanditayai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Vandarujanasandohavanditayai Namo'
     },
     {
       number: 51,
@@ -416,7 +416,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Antarmukhajananandaphaladayai Namo',
       mantraSanskrit: 'ॐ अन्तर्मुखजनानन्दफलदायै नमो नमः',
       mantra: 'Om Antarmukhajananandaphaladayai Namo Namah',
-      meaning: ''
+      meaning: 'Of serene and radiant countenance (Antarmukhajananandaphaladayai Namo)'
     },
     {
       number: 52,
@@ -424,7 +424,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Pativratanganabhishtaphaladayai Namo',
       mantraSanskrit: 'ॐ पतिव्रताङ्गनाभीष्टफलदायै नमो नमः',
       mantra: 'Om Pativratanganabhishtaphaladayai Namo Namah',
-      meaning: ''
+      meaning: 'Praised through sacred hymns, mantras, and cosmic sound (Pativratanganabhishtaphaladayai Namo)'
     },
     {
       number: 53,
@@ -432,7 +432,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Avyajakarunapurapuritayai Namo',
       mantraSanskrit: 'ॐ अव्याजकरुणापूरपूरितायै नमो नमः',
       mantra: 'Om Avyajakarunapurapuritayai Namo Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Avyajakarunapurapuritayai Namo)'
     },
     {
       number: 54,
@@ -440,7 +440,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Nitantasachchidanandasamyuktayai Namo',
       mantraSanskrit: 'ॐ नितान्तसच्चिदानन्दसंयुक्तायै नमो नमः',
       mantra: 'Om Nitantasachchidanandasamyuktayai Namo Namah',
-      meaning: ''
+      meaning: 'Fountain of supreme spiritual bliss and joy (Nitantasachchidanandasamyuktayai Namo)'
     },
     {
       number: 55,
@@ -448,7 +448,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Sahasrasuryasamyuktaprakashayai Namo',
       mantraSanskrit: 'ॐ सहस्रसूर्यसंयुक्तप्रकाशायै नमो नमः',
       mantra: 'Om Sahasrasuryasamyuktaprakashayai Namo Namah',
-      meaning: ''
+      meaning: 'Radiant with the effulgence of a thousand suns (Sahasrasuryasamyuktaprakashayai Namo)'
     },
     {
       number: 56,
@@ -456,7 +456,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Ratnachintamanigrihamadhyasthayai Namo',
       mantraSanskrit: 'ॐ रत्नचिन्तामणिगृहमध्यस्थायै नमो नमः',
       mantra: 'Om Ratnachintamanigrihamadhyasthayai Namo Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Ratnachintamanigrihamadhyasthayai Namo)'
     },
     {
       number: 57,
@@ -464,7 +464,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Hanivriddhigunadhikyarahitayai Namo',
       mantraSanskrit: 'ॐ हानिवृद्धिगुणाधिक्यरहितायै नमो नमः',
       mantra: 'Om Hanivriddhigunadhikyarahitayai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Hanivriddhigunadhikyarahitayai Namo'
     },
     {
       number: 58,
@@ -472,7 +472,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Mahapadmatavimadhyanivasayai Namo',
       mantraSanskrit: 'ॐ महापद्माटवीमध्यनिवासायै नमो नमः',
       mantra: 'Om Mahapadmatavimadhyanivasayai Namo Namah',
-      meaning: ''
+      meaning: 'Pure and auspicious as a sacred blooming lotus (Mahapadmatavimadhyanivasayai Namo)'
     },
     {
       number: 59,
@@ -480,7 +480,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Jagratsvapnasushuptinam Sakshibhutyai Namo',
       mantraSanskrit: 'ॐ जाग्रत्स्वप्नसुषुप्तीनां साक्षिभूत्यै नमो नमः',
       mantra: 'Om Jagratsvapnasushuptinam Sakshibhutyai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Jagratsvapnasushuptinam Sakshibhutyai Namo'
     },
     {
       number: 60,
@@ -488,7 +488,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Mahapapaughapapanam Vinashinyai Namo',
       mantraSanskrit: 'ॐ महापापौघपापानां विनाशिन्यै नमो नमः',
       mantra: 'Om Mahapapaughapapanam Vinashinyai Namo Namah',
-      meaning: ''
+      meaning: 'Purifier who dissolves sins and karmic obstacles (Mahapapaughapapanam Vinashinyai Namo)'
     },
     {
       number: 61,
@@ -496,7 +496,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Dushtabhitimahabhitibhanjanayai Namo',
       mantraSanskrit: 'ॐ दुष्टभीतिमहाभीतिभञ्जनायै नमो नमः',
       mantra: 'Om Dushtabhitimahabhitibhanjanayai Namo Namah',
-      meaning: ''
+      meaning: 'Remover of fear, sorrow, and distress (Dushtabhitimahabhitibhanjanayai Namo)'
     },
     {
       number: 62,
@@ -504,7 +504,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Samastadevadanujaprerakayai Namo',
       mantraSanskrit: 'ॐ समस्तदेवदनुजप्रेरकायै नमो नमः',
       mantra: 'Om Samastadevadanujaprerakayai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Samastadevadanujaprerakayai Namo'
     },
     {
       number: 63,
@@ -512,7 +512,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Samastahridayambhujanilayayai Namo',
       mantraSanskrit: 'ॐ समस्तहृदयाम्भूजनिलयायै नमो नमः',
       mantra: 'Om Samastahridayambhujanilayayai Namo Namah',
-      meaning: ''
+      meaning: 'Whose hands grant fearlessness (Abhaya) and boons (Varada) (Samastahridayambhujanilayayai Namo)'
     },
     {
       number: 64,
@@ -520,7 +520,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Anahatamahapadmamandirayai Namo',
       mantraSanskrit: 'ॐ अनाहतमहापद्ममन्दिरायै नमो नमः',
       mantra: 'Om Anahatamahapadmamandirayai Namo Namah',
-      meaning: ''
+      meaning: 'Pure and auspicious as a sacred blooming lotus (Anahatamahapadmamandirayai Namo)'
     },
     {
       number: 65,
@@ -528,7 +528,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Sahasrarasarojatavasitayai Namo',
       mantraSanskrit: 'ॐ सहस्रारसरोजातवासितायै नमो नमः',
       mantra: 'Om Sahasrarasarojatavasitayai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Sahasrarasarojatavasitayai Namo'
     },
     {
       number: 66,
@@ -536,7 +536,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Punaravrittirahitapurasthayai Namo',
       mantraSanskrit: 'ॐ पुनरावृत्तिरहितपुरस्थायै नमो नमः',
       mantra: 'Om Punaravrittirahitapurasthayai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Punaravrittirahitapurasthayai Namo'
     },
     {
       number: 67,
@@ -544,7 +544,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Vanigayatrisavitrisannutayai Namo',
       mantraSanskrit: 'ॐ वाणीगायत्रीसावित्रीसन्नुतायै नमो नमः',
       mantra: 'Om Vanigayatrisavitrisannutayai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Vanigayatrisavitrisannutayai Namo'
     },
     {
       number: 68,
@@ -552,7 +552,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Ramabhumisutaradhyapadabjayai Namo',
       mantraSanskrit: 'ॐ रमाभूमिसुताराध्यपदाब्जायै नमो नमः',
       mantra: 'Om Ramabhumisutaradhyapadabjayai Namo Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Ramabhumisutaradhyapadabjayai Namo)'
     },
     {
       number: 69,
@@ -560,7 +560,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Lopamudrarchitashrimachcharanayai Namo',
       mantraSanskrit: 'ॐ लोपामुद्रार्चितश्रीमच्चरणायै नमो नमः',
       mantra: 'Om Lopamudrarchitashrimachcharanayai Namo Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Lopamudrarchitashrimachcharanayai Namo)'
     },
     {
       number: 70,
@@ -568,7 +568,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Sahasraratisaundaryasharirayai Namo',
       mantraSanskrit: 'ॐ सहस्ररतिसौन्दर्यशरीरायै नमो नमः',
       mantra: 'Om Sahasraratisaundaryasharirayai Namo Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Sahasraratisaundaryasharirayai Namo)'
     },
     {
       number: 71,
@@ -576,7 +576,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Bhavanamatrasantushtahridayayai Namo',
       mantraSanskrit: 'ॐ भावनामात्रसन्तुष्टहृदयायै नमो नमः',
       mantra: 'Om Bhavanamatrasantushtahridayayai Namo Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Bhavanamatrasantushtahridayayai Namo)'
     },
     {
       number: 72,
@@ -584,7 +584,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Satyasampurnavijnanasiddhidayai Namo',
       mantraSanskrit: 'ॐ सत्यसम्पूर्णविज्ञानसिद्धिदायै नमो नमः',
       mantra: 'Om Satyasampurnavijnanasiddhidayai Namo Namah',
-      meaning: ''
+      meaning: 'Bestower of supreme spiritual knowledge and discernment (Satyasampurnavijnanasiddhidayai Namo)'
     },
     {
       number: 73,
@@ -592,7 +592,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Shrilochanakritollasaphaladayai Namo',
       mantraSanskrit: 'ॐ श्रीलोचनकृतोल्लासफलदायै नमो नमः',
       mantra: 'Om Shrilochanakritollasaphaladayai Namo Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Shrilochanakritollasaphaladayai Namo)'
     },
     {
       number: 74,
@@ -600,7 +600,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Shrisudhabdhimanidvipamadhyagayai Namo',
       mantraSanskrit: 'ॐ श्रीसुधाब्धिमणिद्वीपमध्यगायै नमो नमः',
       mantra: 'Om Shrisudhabdhimanidvipamadhyagayai Namo Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Shrisudhabdhimanidvipamadhyagayai Namo)'
     },
     {
       number: 75,
@@ -608,7 +608,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Dakshadhvaravinirbhedasadhanayai Namo',
       mantraSanskrit: 'ॐ दक्षाध्वरविनिर्भेदसाधनायै नमो नमः',
       mantra: 'Om Dakshadhvaravinirbhedasadhanayai Namo Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Dakshadhvaravinirbhedasadhanayai Namo)'
     },
     {
       number: 76,
@@ -616,7 +616,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Shrinathasodaribhutashobhitayai Namo',
       mantraSanskrit: 'ॐ श्रीनाथसोदरीभूतशोभितायै नमो नमः',
       mantra: 'Om Shrinathasodaribhutashobhitayai Namo Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Shrinathasodaribhutashobhitayai Namo)'
     },
     {
       number: 77,
@@ -624,7 +624,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Chandrashekharabhaktartibhanjanayai Namo',
       mantraSanskrit: 'ॐ चन्द्रशेखरभक्तार्तिभञ्जनायै नमो नमः',
       mantra: 'Om Chandrashekharabhaktartibhanjanayai Namo Namah',
-      meaning: ''
+      meaning: 'Compassionate refuge and protector of devoted souls (Chandrashekharabhaktartibhanjanayai Namo)'
     },
     {
       number: 78,
@@ -632,7 +632,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Sarvopadhivinirmuktachaitanyayai Namo',
       mantraSanskrit: 'ॐ सर्वोपाधिविनिर्मुक्तचैतन्यायै नमो नमः',
       mantra: 'Om Sarvopadhivinirmuktachaitanyayai Namo Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Sarvopadhivinirmuktachaitanyayai Namo)'
     },
     {
       number: 79,
@@ -640,7 +640,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Namaparayanabhishtaphaladayai Namo',
       mantraSanskrit: 'ॐ नामपारयणाभीष्टफलदायै नमो नमः',
       mantra: 'Om Namaparayanabhishtaphaladayai Namo Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Namaparayanabhishtaphaladayai Namo)'
     },
     {
       number: 80,
@@ -648,7 +648,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Srishtisthititirodhanasankalpayai Namo',
       mantraSanskrit: 'ॐ सृष्टिस्थितितिरोधानसङ्कल्पायै नमो नमः',
       mantra: 'Om Srishtisthititirodhanasankalpayai Namo Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Srishtisthititirodhanasankalpayai Namo)'
     },
     {
       number: 81,
@@ -656,7 +656,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Shrishodashaksharimantramadhyagayai Namo',
       mantraSanskrit: 'ॐ श्रीषोडशाक्षरीमन्त्रमध्यगायै नमो नमः',
       mantra: 'Om Shrishodashaksharimantramadhyagayai Namo Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Shrishodashaksharimantramadhyagayai Namo)'
     },
     {
       number: 82,
@@ -664,7 +664,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Anadyantasvayambhutadivyamurtyai Namo',
       mantraSanskrit: 'ॐ अनाद्यन्तस्वयम्भूतदिव्यमूर्त्यै नमो नमः',
       mantra: 'Om Anadyantasvayambhutadivyamurtyai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Anadyantasvayambhutadivyamurtyai Namo'
     },
     {
       number: 83,
@@ -672,7 +672,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Bhaktahamsaparimukhyaviyogayai Namo',
       mantraSanskrit: 'ॐ भक्तहंसपरिमुख्यवियोगायै नमो नमः',
       mantra: 'Om Bhaktahamsaparimukhyaviyogayai Namo Namah',
-      meaning: ''
+      meaning: 'Compassionate refuge and protector of devoted souls (Bhaktahamsaparimukhyaviyogayai Namo)'
     },
     {
       number: 84,
@@ -680,7 +680,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Matrimandalasamyuktalalitayai Namo',
       mantraSanskrit: 'ॐ मातृमण्डलसंयुक्तललितायै नमो नमः',
       mantra: 'Om Matrimandalasamyuktalalitayai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Matrimandalasamyuktalalitayai Namo'
     },
     {
       number: 85,
@@ -688,7 +688,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Bhandadaityamahasattvanashanayai Namo',
       mantraSanskrit: 'ॐ भण्डदैत्यमहासत्त्वनाशनायै नमो नमः',
       mantra: 'Om Bhandadaityamahasattvanashanayai Namo Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Bhandadaityamahasattvanashanayai Namo)'
     },
     {
       number: 86,
@@ -696,7 +696,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Krurabhandashirachchhedanipunayai Namo',
       mantraSanskrit: 'ॐ क्रूरभण्डशिरच्छेदनिपुणायै नमो नमः',
       mantra: 'Om Krurabhandashirachchhedanipunayai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Krurabhandashirachchhedanipunayai Namo'
     },
     {
       number: 87,
@@ -704,7 +704,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Dhatrachyutasuradhishasukhadayai Namo',
       mantraSanskrit: 'ॐ धात्रच्युतसुराधीशसुखदायै नमो नमः',
       mantra: 'Om Dhatrachyutasuradhishasukhadayai Namo Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Dhatrachyutasuradhishasukhadayai Namo)'
     },
     {
       number: 88,
@@ -712,7 +712,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Chandamundanishumbhadikhandanayai Namo',
       mantraSanskrit: 'ॐ चण्डमुण्डनिशुम्भादिखण्डनायै नमो नमः',
       mantra: 'Om Chandamundanishumbhadikhandanayai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Chandamundanishumbhadikhandanayai Namo'
     },
     {
       number: 89,
@@ -720,7 +720,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Raktaksharaktajihvadishikshanayai Namo',
       mantraSanskrit: 'ॐ रक्ताक्षरक्तजिह्वादिशिक्षणायै नमो नमः',
       mantra: 'Om Raktaksharaktajihvadishikshanayai Namo Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Raktaksharaktajihvadishikshanayai Namo)'
     },
     {
       number: 90,
@@ -728,7 +728,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Mahishasuradorviryanigrahayai Namo',
       mantraSanskrit: 'ॐ महिषासुरदोर्वीर्यनिग्रहायै नमो नमः',
       mantra: 'Om Mahishasuradorviryanigrahayai Namo Namah',
-      meaning: ''
+      meaning: 'Possessor of invincible spiritual strength and valor (Mahishasuradorviryanigrahayai Namo)'
     },
     {
       number: 91,
@@ -736,7 +736,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Abhrakeshamahotsahakaranayai Namo',
       mantraSanskrit: 'ॐ अभ्रकेशमहोत्साहकारणायै नमो नमः',
       mantra: 'Om Abhrakeshamahotsahakaranayai Namo Namah',
-      meaning: ''
+      meaning: 'Manifesting a sacred form of beauty and light (Abhrakeshamahotsahakaranayai Namo)'
     },
     {
       number: 92,
@@ -744,7 +744,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Maheshayuktanatanatatparayai Namo',
       mantraSanskrit: 'ॐ महेशयुक्तनटनतत्परायै नमो नमः',
       mantra: 'Om Maheshayuktanatanatatparayai Namo Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Maheshayuktanatanatatparayai Namo)'
     },
     {
       number: 93,
@@ -752,7 +752,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Nijabhartrimukhambhojachintanayai Namo',
       mantraSanskrit: 'ॐ निजभर्तृमुखाम्भोजचिन्तनायै नमो नमः',
       mantra: 'Om Nijabhartrimukhambhojachintanayai Namo Namah',
-      meaning: ''
+      meaning: 'Of serene and radiant countenance (Nijabhartrimukhambhojachintanayai Namo)'
     },
     {
       number: 94,
@@ -760,7 +760,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Vrishabhadhvajavijnanabhavanayai Namo',
       mantraSanskrit: 'ॐ वृषभध्वजविज्ञानभावनायै नमो नमः',
       mantra: 'Om Vrishabhadhvajavijnanabhavanayai Namo Namah',
-      meaning: ''
+      meaning: 'Bestower of supreme spiritual knowledge and discernment (Vrishabhadhvajavijnanabhavanayai Namo)'
     },
     {
       number: 95,
@@ -768,7 +768,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Janmamrityujararogabhanjanayai Namo',
       mantraSanskrit: 'ॐ जन्ममृत्युजरारोगभञ्जनायै नमो नमः',
       mantra: 'Om Janmamrityujararogabhanjanayai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Janmamrityujararogabhanjanayai Namo'
     },
     {
       number: 96,
@@ -776,7 +776,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Vidheyamuktavijnanasiddhidayai Namo',
       mantraSanskrit: 'ॐ विधेयमुक्तविज्ञनसिद्धिदायै नमो नमः',
       mantra: 'Om Vidheyamuktavijnanasiddhidayai Namo Namah',
-      meaning: ''
+      meaning: 'Bestower of supreme spiritual knowledge and discernment (Vidheyamuktavijnanasiddhidayai Namo)'
     },
     {
       number: 97,
@@ -784,7 +784,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Kamakrodhadishadvarganashanayai Namo',
       mantraSanskrit: 'ॐ कामक्रोधादिषड्वर्गनाशनायै नमो नमः',
       mantra: 'Om Kamakrodhadishadvarganashanayai Namo Namah',
-      meaning: ''
+      meaning: 'Praised through sacred hymns, mantras, and cosmic sound (Kamakrodhadishadvarganashanayai Namo)'
     },
     {
       number: 98,
@@ -792,7 +792,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Rajarajarchitapadasarojayai Namo',
       mantraSanskrit: 'ॐ राजराजार्चितपदसरोजायै नमो नमः',
       mantra: 'Om Rajarajarchitapadasarojayai Namo Namah',
-      meaning: ''
+      meaning: 'Ever-victorious bestower of triumph in righteous endeavors (Rajarajarchitapadasarojayai Namo)'
     },
     {
       number: 99,
@@ -800,7 +800,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Sarvavedantasamsiddhasutatvayai Namo',
       mantraSanskrit: 'ॐ सर्ववेदान्तसंसिद्धसुतत्वायै नमो नमः',
       mantra: 'Om Sarvavedantasamsiddhasutatvayai Namo Namah',
-      meaning: ''
+      meaning: 'Knower and revealer of eternal Vedic wisdom (Sarvavedantasamsiddhasutatvayai Namo)'
     },
     {
       number: 100,
@@ -808,7 +808,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Shrivirabhaktavijnanavidhanayai Namo',
       mantraSanskrit: 'ॐ श्रीवीरभक्तविज्ञानविधानायै नमो नमः',
       mantra: 'Om Shrivirabhaktavijnanavidhanayai Namo Namah',
-      meaning: ''
+      meaning: 'Bestower of supreme spiritual knowledge and discernment (Shrivirabhaktavijnanavidhanayai Namo)'
     },
     {
       number: 101,
@@ -816,7 +816,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Asheshadushtadanujasudanayai Namo',
       mantraSanskrit: 'ॐ अशेषदुष्टदनुजसूदनायै नमो नमः',
       mantra: 'Om Asheshadushtadanujasudanayai Namo Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Asheshadushtadanujasudanayai Namo)'
     },
     {
       number: 102,
@@ -824,7 +824,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Sakshachchhridakshinamurtimanojnayai Namo',
       mantraSanskrit: 'ॐ साक्षाच्छ्रीदक्षिणामूर्तिमनोज्ञायै नमो नमः',
       mantra: 'Om Sakshachchhridakshinamurtimanojnayai Namo Namah',
-      meaning: ''
+      meaning: 'Manifesting a sacred form of beauty and light (Sakshachchhridakshinamurtimanojnayai Namo)'
     },
     {
       number: 103,
@@ -832,7 +832,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Hayamedhagrasampujyamahimayai Namo',
       mantraSanskrit: 'ॐ हयमेधाग्रसम्पूज्यमहिमायै नमो नमः',
       mantra: 'Om Hayamedhagrasampujyamahimayai Namo Namah',
-      meaning: ''
+      meaning: 'Bestower of supreme spiritual knowledge and discernment (Hayamedhagrasampujyamahimayai Namo)'
     },
     {
       number: 104,
@@ -840,7 +840,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Dakshaprajapatisutaveshadhyayai Namo',
       mantraSanskrit: 'ॐ दक्षप्रजापतिसुतवेषाढ्यायै नमो नमः',
       mantra: 'Om Dakshaprajapatisutaveshadhyayai Namo Namah',
-      meaning: ''
+      meaning: 'Whose compassionate gaze watches over all creation (Dakshaprajapatisutaveshadhyayai Namo)'
     },
     {
       number: 105,
@@ -848,7 +848,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Sumabanekshukodandamanditayai Namo',
       mantraSanskrit: 'ॐ सुमबाणेक्षुकोदण्डमण्डितायै नमो नमः',
       mantra: 'Om Sumabanekshukodandamanditayai Namo Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Lalita revered as Sumabanekshukodandamanditayai Namo'
     },
     {
       number: 106,
@@ -856,7 +856,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Nityayauvanamangalyamangalayai Namo',
       mantraSanskrit: 'ॐ नित्ययौवनमाङ्गल्यमङ्गलायै नमो नमः',
       mantra: 'Om Nityayauvanamangalyamangalayai Namo Namah',
-      meaning: ''
+      meaning: 'Source of supreme auspiciousness and blessing (Nityayauvanamangalyamangalayai Namo)'
     },
     {
       number: 107,
@@ -864,7 +864,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Mahadevasamayuktasharirayai Namo',
       mantraSanskrit: 'ॐ महादेवसमायुक्तशरीरायै नमो नमः',
       mantra: 'Om Mahadevasamayuktasharirayai Namo Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Mahadevasamayuktasharirayai Namo)'
     },
     {
       number: 108,
@@ -872,7 +872,7 @@ export const lalitaAshtottaram = {
       transliteration: 'Mahadevaratautsukyamahadevyai Namo',
       mantraSanskrit: 'ॐ महादेवरतौत्सुक्यमहादेव्यै नमो नमः',
       mantra: 'Om Mahadevaratautsukyamahadevyai Namo Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Mahadevaratautsukyamahadevyai Namo)'
     }
   ]
 };
