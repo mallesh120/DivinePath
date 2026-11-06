@@ -206,7 +206,7 @@ const AshtottaramDetailPage = () => {
                     <span className="name-text mantra english-mantra">{name.mantra}</span>
                   </div>
                 )}
-                {filterView === 'all' && (
+                {filterView === 'all' && name.meaning && (
                   <div className="name-row meaning-row">
                     <span className="name-label">Meaning:</span>
                     <span className="name-text meaning">{name.meaning}</span>

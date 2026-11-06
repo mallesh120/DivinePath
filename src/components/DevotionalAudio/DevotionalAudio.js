@@ -151,11 +151,23 @@ const DevotionalAudio = () => {
     setElapsedSeconds(0);
   };
 
+  const handleFilterChange = (nextFilter) => {
+    setFilter(nextFilter);
+    setCurrentTrack(0);
+    setProgress(0);
+    setIsPlaying(false);
+    audioRef.current?.pause();
+  };
+
   const playPauseHandler = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
     if (isPlaying) {
-      pausePlayback();
+      audio.pause();
+      setIsPlaying(false);
     } else {
-      startPlayback(currentAudioTrack);
+      audio.play()?.catch(() => setIsPlaying(false));
+      setIsPlaying(true);
     }
   };
 
@@ -166,8 +178,8 @@ const DevotionalAudio = () => {
     setElapsedSeconds(0);
     const chosen = filteredTracks[index];
     setTimeout(() => {
-      startPlayback(chosen);
-    }, 60);
+      audioRef.current?.play()?.catch(() => setIsPlaying(false));
+    }, 100);
   };
 
   const previousTrack = () => {

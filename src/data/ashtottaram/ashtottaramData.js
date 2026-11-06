@@ -54,12 +54,21 @@ import lalitaImg from '../../assets/images/Goddesses/lalita.webp';
 const normalizeDeity = (deity, resolvedImage) => {
   const deityName = deity.name || deity.title;
   const subtitle = deity.name ? deity.title : 'Ashtottara Shatanamavali';
+  const normalizedNames = (deity.names || []).map((item, idx) => ({
+    ...item,
+    number: item.number || idx + 1,
+    meaning: item.meaning && item.meaning.trim()
+      ? item.meaning
+      : `Salutations to ${deityName} as ${item.transliteration || item.sanskrit}`
+  }));
+
   return {
     ...deity,
     name: deityName,
     deityName,
     title: subtitle,
-    image: resolvedImage || deity.image
+    image: resolvedImage || deity.image,
+    names: normalizedNames
   };
 };
 

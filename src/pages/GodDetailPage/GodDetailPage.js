@@ -9,14 +9,23 @@ import './GodDetailPage.css';
 const GodDetailPage = () => {
   const { godId } = useParams();
 
-  // Check if it's a Trinity god first
-  let god = trimurtiData.find((g) => g.id === godId);
-  const isTrinity = !!god;
+  // Find matching entries in both trimurtiData and godsData so Trinity deities
+  // always display their full profile (consort/family/avatars + festivals/stories/mantraAudio)
+  // whether accessed via /gods/shiva or /gods/2.
+  const numericId = parseInt(godId, 10);
+  const regularMatch = godsData.find(
+    (g) => g.id === numericId || g.name.toLowerCase() === String(godId).toLowerCase()
+  );
+  const trimurtiMatch = trimurtiData.find(
+    (g) =>
+      g.id === godId ||
+      (regularMatch && g.name.toLowerCase() === regularMatch.name.toLowerCase())
+  );
 
-  // If not Trinity, check regular gods
-  if (!god) {
-    god = godsData.find((g) => g.id === parseInt(godId));
-  }
+  const isTrinity = !!trimurtiMatch;
+  const god = trimurtiMatch
+    ? { ...regularMatch, ...trimurtiMatch }
+    : regularMatch;
 
   if (!god) {
     return (
@@ -27,8 +36,15 @@ const GodDetailPage = () => {
     );
   }
 
-  // Get ashtottaram data if available
-  const ashtottaram = ashtottaramData[godId] || ashtottaramData[god.id];
+  // Get ashtottaram data if available (resolve by ID or normalized deity name)
+  const normalizedDeityKey =
+    god.name?.toLowerCase() === 'kubera'
+      ? 'kuber'
+      : god.name?.toLowerCase();
+  const ashtottaram =
+    ashtottaramData[godId] ||
+    ashtottaramData[god.id] ||
+    (normalizedDeityKey && ashtottaramData[normalizedDeityKey]);
 
   const sectionVariants = {
     hidden: { opacity: 0, y: 30 },

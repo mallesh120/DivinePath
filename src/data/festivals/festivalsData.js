@@ -4,22 +4,6 @@ import { generateFestivalDatesForYear } from '../../utils/hinduCalendar';
 // This will be used as both static data and templates for calculation
 export const festivalsData = [
   {
-    id: "test-festival",
-    name: "Summer Solstice (Test)",
-    shortName: "Solstice",
-    category: "Festival",
-    date: "2026-06-02",
-    endDate: "2026-06-02",
-    month: "June",
-    duration: "1 day",
-    lunarDate: "Jyeshtha",
-    description: "A test festival added to demonstrate the bottom sheet.",
-    significance: "Testing the UI.",
-    rituals: ["Testing the bottom sheet", "Clicking the dot"],
-    deities: [],
-    colors: ["#FFD700"]
-  },
-  {
     id: 'diwali',
     pujaId: 'diwali-puja',
     name: 'Diwali',
@@ -823,13 +807,18 @@ export const getFestivalsByDeity = (deity) => {
 };
 
 export const getUpcomingFestivals = (limit = null) => {
-  const upcoming = festivalsData.filter(festival => {
-    const days = getDaysUntilFestival(festival.date);
-    return days >= 0;
+  const currentYear = new Date().getFullYear();
+  const pool = getAllFestivalsWithCalculated(currentYear, currentYear + 1);
+  const seenIds = new Set();
+  const upcoming = sortFestivalsByDate(
+    pool.filter(festival => getDaysUntilFestival(festival.date) >= 0)
+  ).filter(festival => {
+    if (seenIds.has(festival.id)) return false;
+    seenIds.add(festival.id);
+    return true;
   });
-  
-  const sorted = sortFestivalsByDate(upcoming);
-  return limit ? sorted.slice(0, limit) : sorted;
+
+  return limit ? upcoming.slice(0, limit) : upcoming;
 };
 
 export const getPastFestivals = () => {
@@ -837,13 +826,21 @@ export const getPastFestivals = () => {
 };
 
 export const getTodaysFestivals = () => {
-  return festivalsData.filter(festival => 
+  const currentYear = new Date().getFullYear();
+  const pool = getAllFestivalsWithCalculated(currentYear, currentYear);
+  return pool.filter(festival => 
     isFestivalToday(festival.date, festival.endDate)
   );
 };
 
 export const getFestivalById = (id) => {
-  return festivalsData.find(festival => festival.id === id);
+  const currentYear = new Date().getFullYear();
+  const pool = getAllFestivalsWithCalculated(currentYear, currentYear + 1);
+  const upcomingMatch = sortFestivalsByDate(
+    pool.filter(f => f.id === id && !hasPassed(f.endDate))
+  )[0];
+  if (upcomingMatch) return upcomingMatch;
+  return pool.find(festival => festival.id === id) || festivalsData.find(festival => festival.id === id);
 };
 
 /**
@@ -899,14 +896,17 @@ export const generateFestivalsForYear = (year, location = null) => {
 export const getAllFestivalsWithCalculated = (startYear = 2025, endYear = 2035, location = null) => {
   const allFestivals = [...festivalsData];
   
-  // Generate festivals for years not in the static data
+  // Generate festivals for any festival/year combination not already in static data
   for (let year = startYear; year <= endYear; year++) {
-    const yearExists = festivalsData.some(f => f.date && f.date.startsWith(year.toString()));
-    
-    if (!yearExists) {
-      const generatedForYear = generateFestivalsForYear(year, location);
-      allFestivals.push(...generatedForYear);
-    }
+    const generatedForYear = generateFestivalsForYear(year, location);
+    generatedForYear.forEach(genFestival => {
+      const alreadyExists = allFestivals.some(
+        f => f.id === genFestival.id && f.date && f.date.startsWith(year.toString())
+      );
+      if (!alreadyExists) {
+        allFestivals.push(genFestival);
+      }
+    });
   }
   
   return sortFestivalsByDate(allFestivals);

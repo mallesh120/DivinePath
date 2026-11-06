@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { usePanchangam } from '../../hooks/usePanchangam';
+import { usePanchangam, calculateBasicPanchang } from '../../hooks/usePanchangam';
 import { 
   muhurtaEventTypes, 
   getMuhurtaRecommendation 
@@ -8,9 +8,10 @@ import {
 import './MuhurtaFinderPage.css';
 
 function MuhurtaFinderPage() {
-  const { data: panchangamData, loading, error } = usePanchangam();
+  const { panchangamData, loading, error, location } = usePanchangam();
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [recommendation, setRecommendation] = useState(null);
+  const [calculatedPanchang, setCalculatedPanchang] = useState(null);
   const [showInfo, setShowInfo] = useState(true);
   const [selectedDate, setSelectedDate] = useState('');
   const [userDetails, setUserDetails] = useState({
@@ -34,15 +35,33 @@ function MuhurtaFinderPage() {
   const handleCalculateMuhurta = () => {
     if (selectedEvent && selectedDate) {
       setShowCalculations(true);
-      // Force re-calculation - use mock data if panchangamData is not available
-      const dataToUse = panchangamData || {
+      const [year, month, day] = selectedDate.split('-').map(Number);
+      const basicPanchang = calculateBasicPanchang(
+        year,
+        month - 1,
+        day,
+        location,
+        location?.timezone
+      );
+      const weekday =
+        basicPanchang.vara && basicPanchang.vara !== 'N/A'
+          ? basicPanchang.vara
+          : new Date(selectedDate + 'T00:00:00').toLocaleDateString('en-US', { weekday: 'long' });
+
+      const dataToUse = {
         almanac: {
-          Nakshatra: { name: 'Rohini' },
-          Tithi: { name: 'Panchami' },
-          Yoga: { name: 'Siddha' }
+          Nakshatra: { name: basicPanchang.nakshatra !== 'N/A' ? basicPanchang.nakshatra : (panchangamData?.almanac?.Nakshatra?.name || 'Rohini') },
+          Tithi: { name: basicPanchang.tithi !== 'N/A' ? basicPanchang.tithi : (panchangamData?.almanac?.Tithi?.name || 'Panchami') },
+          Yoga: { name: basicPanchang.yoga !== 'N/A' ? basicPanchang.yoga : (panchangamData?.almanac?.Yoga?.name || 'Siddha') }
         },
-        day: new Date(selectedDate + 'T00:00:00').toLocaleDateString('en-US', { weekday: 'long' })
+        day: weekday
       };
+      setCalculatedPanchang({
+        tithi: dataToUse.almanac.Tithi.name,
+        nakshatra: dataToUse.almanac.Nakshatra.name,
+        day: dataToUse.day,
+        yoga: dataToUse.yoga || dataToUse.almanac.Yoga.name
+      });
       const result = getMuhurtaRecommendation(dataToUse, selectedEvent, selectedDate, userDetails);
       setRecommendation(result);
     }
@@ -369,19 +388,19 @@ function MuhurtaFinderPage() {
                 <div className="panchangam-grid">
                   <div className="pancha-item">
                     <span className="pancha-label">Tithi:</span>
-                    <span className="pancha-value">{panchangamData?.tithi || 'N/A'}</span>
+                    <span className="pancha-value">{calculatedPanchang?.tithi || panchangamData?.almanac?.Tithi?.name || 'N/A'}</span>
                   </div>
                   <div className="pancha-item">
                     <span className="pancha-label">Nakshatra:</span>
-                    <span className="pancha-value">{panchangamData?.nakshatra || 'N/A'}</span>
+                    <span className="pancha-value">{calculatedPanchang?.nakshatra || panchangamData?.almanac?.Nakshatra?.name || 'N/A'}</span>
                   </div>
                   <div className="pancha-item">
                     <span className="pancha-label">Day:</span>
-                    <span className="pancha-value">{panchangamData?.day || 'N/A'}</span>
+                    <span className="pancha-value">{calculatedPanchang?.day || panchangamData?.meta?.day || 'N/A'}</span>
                   </div>
                   <div className="pancha-item">
                     <span className="pancha-label">Yoga:</span>
-                    <span className="pancha-value">{panchangamData?.yoga || 'N/A'}</span>
+                    <span className="pancha-value">{calculatedPanchang?.yoga || panchangamData?.almanac?.Yoga?.name || 'N/A'}</span>
                   </div>
                 </div>
               </div>

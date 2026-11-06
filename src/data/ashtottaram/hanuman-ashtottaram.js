@@ -12,14 +12,6 @@ export const hanumanAshtottaram = {
   names: [
     {
       number: 1,
-      sanskrit: 'आञ्जनेय1',
-      transliteration: '2',
-      mantraSanskrit: 'महावीर2',
-      mantra: '2',
-      meaning: 'हनूमान्3ॐ हनुमते नमः।Om Hanumate Namah।जो फूले हुये गालों वाले हैं'
-    },
-    {
-      number: 1,
       sanskrit: 'आञ्जनेय',
       transliteration: 'Anjaneyaya',
       mantraSanskrit: 'ॐ आञ्जनेयाय नमः',

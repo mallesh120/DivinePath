@@ -12,14 +12,6 @@ export const vishnuAshtottaram = {
   names: [
     {
       number: 1,
-      sanskrit: 'विष्णु1',
-      transliteration: '2',
-      mantraSanskrit: 'लक्ष्मीपति2',
-      mantra: '2',
-      meaning: 'कृष्ण3ॐ कृष्णाय नमः।Om Krishnaya Namah।जो श्याम वर्ण से युक्त हैं'
-    },
-    {
-      number: 1,
       sanskrit: 'विष्णु',
       transliteration: 'Vishnave',
       mantraSanskrit: 'ॐ विष्णवे नमः',

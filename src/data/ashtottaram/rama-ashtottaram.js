@@ -12,14 +12,6 @@ export const ramaAshtottaram = {
   names: [
     {
       number: 1,
-      sanskrit: 'श्रीराम1',
-      transliteration: '2',
-      mantraSanskrit: 'रामभद्र2',
-      mantra: '2',
-      meaning: 'रामचन्द्र3ॐ रामचन्द्राय नमः।Om Ramachandraya Namah।जो चन्द्रमा के समान सुन्दर हैं'
-    },
-    {
-      number: 1,
       sanskrit: 'श्रीराम',
       transliteration: 'Shriramaya',
       mantraSanskrit: 'ॐ श्रीरामाय नमः',

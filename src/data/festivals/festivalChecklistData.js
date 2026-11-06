@@ -213,18 +213,26 @@ export const majorFestivals = [
   }
 ];
 
-// Get festivals for next 90 days
+// Get upcoming major festivals (rolls past template dates forward to the next upcoming occurrence)
 export const getUpcomingFestivals = () => {
   const today = new Date();
-  
-  return majorFestivals
+  today.setHours(0, 0, 0, 0);
+
+  const upcomingList = majorFestivals
     .map(festival => {
-      const festivalDate = new Date(festival.date);
-      const daysToGo = Math.ceil((festivalDate - today) / (1000 * 60 * 60 * 24));
-      return { ...festival, daysToGo };
+      const baseDate = new Date(festival.date + 'T00:00:00');
+      let nextDate = new Date(baseDate);
+      while (nextDate < today) {
+        nextDate.setFullYear(nextDate.getFullYear() + 1);
+      }
+      const nextDateStr = nextDate.toISOString().split('T')[0];
+      const daysToGo = Math.ceil((nextDate - today) / (1000 * 60 * 60 * 24));
+      return { ...festival, date: nextDateStr, daysToGo };
     })
-    .filter(festival => festival.daysToGo >= 0 && festival.daysToGo <= 90)
     .sort((a, b) => a.daysToGo - b.daysToGo);
+
+  const within90Days = upcomingList.filter(f => f.daysToGo >= 0 && f.daysToGo <= 90);
+  return within90Days.length > 0 ? within90Days : upcomingList;
 };
 
 // Get current checklist based on days remaining
