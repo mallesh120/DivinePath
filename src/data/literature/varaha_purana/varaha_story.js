@@ -41,18 +41,18 @@ export const varahaStoryScenes = [
   },
   {
     text: "There, he found the Earth sinking in the dark mud. Very gently, the giant boar slipped his massive, curved white tusks underneath the Earth and carefully lifted her up. Just as he was swimming back to the surface, the demon Hiranyaksha appeared, wielding a giant mace.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_varaha_11_lifting_earth_on_tusks_1793941705376.jpg"
   },
   {
     text: "Hiranyaksha shouted insults at Varaha and attacked him fiercely. The Varaha Avatar ignored the demon at first, focusing entirely on carrying Mother Earth safely to the surface and placing her gently back into her proper orbit, restoring light and balance.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_varaha_12_placing_earth_in_orbit_1793941718855.jpg"
   },
   {
     text: "Once the Earth was safe, Varaha turned his terrifying, glowing eyes toward the demon. A massive, earth-shattering battle began between the giant boar and the invincible demon. They fought with maces, magic, and bare hands, causing the oceans to boil.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_varaha_13_epic_battle_varaha_hiranyaksha_1793941757178.jpg"
   },
   {
     text: "Finally, finding the loophole in Brahma's boon, Lord Vishnu in his Varaha form struck Hiranyaksha with a powerful blow, defeating the terrifying demon once and for all. The gods rained flowers from the sky, thanking the mighty Boar Avatar for rescuing the Earth.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_varaha_14_slaying_hiranyaksha_flower_rain_1793941773294.jpg"
   }
 ];
