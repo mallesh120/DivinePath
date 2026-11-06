@@ -1,50 +1,50 @@
 export const hanumanPostRamayanaScenes = [
   {
     text: "After the great war, Rama, Sita, and Lakshmana returned to Ayodhya in the magical Pushpaka Vimana (flying chariot), accompanied by Hanuman, Sugriva, and the monkey army. The city of Ayodhya celebrated with millions of oil lamps, marking the first Diwali. Rama was finally crowned as the King of Ayodhya.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_post_1_ayodhya_coronation_diwali_1793590231786.jpg"
   },
   {
     text: "During the coronation, Sita wanted to give Hanuman a special gift to show her gratitude. She took off a priceless, glowing pearl necklace and handed it to him. The entire court watched as Hanuman took the precious necklace, examined it closely, and to everyone's shock, began breaking the pearls one by one with his teeth!",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_post_2_sita_gifts_pearl_necklace_1793681462093.jpg"
   },
   {
     text: "He inspected each broken pearl and then threw it away. The courtiers murmured in disapproval, thinking the monkey didn't understand the value of pearls. Finally, someone asked him why he was destroying the queen's precious gift.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_post_3_inspecting_pearls_1793681485047.jpg"
   },
   {
     text: "Hanuman replied simply, 'I am looking for my Lord Rama and Mother Sita inside these pearls. A thing is only valuable to me if it contains them. Since I cannot find them in these pearls, the necklace is worthless to me.'",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_post_4_looking_for_rama_in_pearls_1793681556074.jpg"
   },
   {
     text: "A courtier, trying to mock him, asked, 'Does that mean Rama and Sita are inside your own body too?' Without hesitation, Hanuman dug his sharp claws into his own chest and tore it open. To the absolute amazement of everyone in the court, they saw an image of Rama and Sita seated perfectly within Hanuman's glowing, beating heart.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_post_5_tearing_chest_rama_in_heart_1793681583851.jpg"
   },
   {
     text: "Deeply moved by this ultimate display of devotion, Rama healed Hanuman's chest, embraced him, and blessed him. Hanuman spent many happy years in Ayodhya, serving his Lord with pure, selfless love.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_post_6_rama_embraces_hanuman_1793681650500.jpg"
   },
   {
     text: "Many years later, when Lord Rama's time on earth was coming to an end, he prepared to return to his heavenly abode, Vaikuntha. All his devotees, brothers, and the people of Ayodhya prepared to follow him. However, Rama turned to Hanuman and gave him a different command.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_post_7_rama_calls_hanuman_aside_1793681666544.jpg"
   },
   {
     text: "Rama said, 'My dearest Hanuman, as long as my name is spoken, sung, or remembered on this earth, you must remain here. You will be a Chiranjeevi—an immortal being. Stay on earth to protect the righteous, inspire the devoted, and listen to my stories until the end of time.'",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_post_8_blessing_of_chiranjeevi_1793681729894.jpg"
   },
   {
     text: "Hanuman joyfully accepted this blessing. He had no desire for heaven if it meant he couldn't hear the stories of Rama. As Rama and the others ascended to the heavens, Hanuman stayed behind, becoming a silent, immortal guardian of the earth.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_post_9_hanuman_remains_as_guardian_1793681756262.jpg"
   },
   {
     text: "It is believed that Hanuman resides on the sacred Gandhamadana mountain in the Himalayas, spending his days in deep meditation, chanting Rama's name. But he does not stay there all the time.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_post_10_meditation_gandhamadana_1793681831016.jpg"
   },
   {
     text: "Tradition says that wherever the Ramayana is read, wherever the holy name of Rama is chanted with true devotion, Hanuman is always present, listening quietly in an invisible form. He sits with his hands folded, tears of joy in his eyes, blessing the devotees.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_post_11_silent_presence_ramayana_recital_1793681852101.jpg"
   },
   {
     text: "Even today, Hanuman is worshipped by millions as the ultimate symbol of strength, courage, intellect, and pure devotion. He is the remover of fears, the healer of diseases, and the protector of the innocent—a living, breathing presence watching over the world.",
-    imageUrl: ""
+    imageUrl: "/images/literature/hanuman/scene_hanuman_post_12_eternal_worship_protector_1793681966041.jpg"
   }
 ];

@@ -5,12 +5,11 @@ import Navbar from './components/Navbar/Navbar';
 import SidebarLayout from './components/SidebarLayout/SidebarLayout';
 import PageTransition from './components/PageTransition/PageTransition';
 import LoadingSpinner from './components/ui/LoadingSpinner/LoadingSpinner';
-import KidsLayout from './components/KidsLayout/KidsLayout';
+import PersonalizedDashboard from './pages/PersonalizedDashboard/PersonalizedDashboard';
 import './App.css';
 
-
-
 // Lazy load Kids Zone components
+const KidsLayout = lazy(() => import('./components/KidsLayout/KidsLayout'));
 const KidsDashboard = lazy(() => import('./pages/Kids/KidsDashboard/KidsDashboard'));
 const StoryCatalog = lazy(() => import('./pages/Kids/Storybook/StoryCatalog'));
 const StorybookViewer = lazy(() => import('./pages/Kids/Storybook/StorybookViewer'));
@@ -23,7 +22,6 @@ const HanumanSkyJump = lazy(() => import('./pages/Kids/Games/HanumanSkyJump'));
 const KidsChanting = lazy(() => import('./pages/Kids/Chanting/KidsChanting'));
 
 // Lazy load Adults Zone components (Original Pages)
-const PersonalizedDashboard = lazy(() => import('./pages/PersonalizedDashboard/PersonalizedDashboard'));
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const GodsGalleryPage = lazy(() => import('./pages/GodsGalleryPage/GodsGalleryPage'));
 

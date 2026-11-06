@@ -16,7 +16,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Hayagrivaya',
       mantraSanskrit: 'ॐ हयग्रीवाय नमः',
       mantra: 'Om Hayagrivaya Namah',
-      meaning: ''
+      meaning: 'The horse-necked Lord who embodies sacred Vedic wisdom'
     },
     {
       number: 2,
@@ -24,7 +24,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Mahavishnave',
       mantraSanskrit: 'ॐ महाविष्णवे नमः',
       mantra: 'Om Mahavishnave Namah',
-      meaning: ''
+      meaning: 'The Supreme all-pervading Lord Vishnu'
     },
     {
       number: 3,
@@ -32,7 +32,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Keshavaya',
       mantraSanskrit: 'ॐ केशवाय नमः',
       mantra: 'Om Keshavaya Namah',
-      meaning: ''
+      meaning: 'Lord with radiant locks and slayer of the demon Keshi'
     },
     {
       number: 4,
@@ -40,7 +40,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Madhusudanaya',
       mantraSanskrit: 'ॐ मधुसूदनाय नमः',
       mantra: 'Om Madhusudanaya Namah',
-      meaning: ''
+      meaning: 'Slayer of the demon Madhu and dispeller of spiritual ignorance'
     },
     {
       number: 5,
@@ -48,7 +48,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Govindaya',
       mantraSanskrit: 'ॐ गोविन्दाय नमः',
       mantra: 'Om Govindaya Namah',
-      meaning: ''
+      meaning: 'Protector of the Vedas, cows, and the earth'
     },
     {
       number: 6,
@@ -56,7 +56,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Pundarikakshaya',
       mantraSanskrit: 'ॐ पुण्डरीकाक्षाय नमः',
       mantra: 'Om Pundarikakshaya Namah',
-      meaning: ''
+      meaning: 'The lotus-eyed Supreme Lord'
     },
     {
       number: 7,
@@ -64,7 +64,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Vishnave',
       mantraSanskrit: 'ॐ विष्णवे नमः',
       mantra: 'Om Vishnave Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Vishnave'
     },
     {
       number: 8,
@@ -72,7 +72,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Vishvambharaya',
       mantraSanskrit: 'ॐ विश्वम्भराय नमः',
       mantra: 'Om Vishvambharaya Namah',
-      meaning: ''
+      meaning: 'Sustainer and nourisher of the entire universe'
     },
     {
       number: 9,
@@ -80,7 +80,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Haraye',
       mantraSanskrit: 'ॐ हरये नमः',
       mantra: 'Om Haraye Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Haraye)'
     },
     {
       number: 10,
@@ -88,7 +88,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Adityaya',
       mantraSanskrit: 'ॐ आदित्याय नमः',
       mantra: 'Om Adityaya Namah',
-      meaning: ''
+      meaning: 'Radiant with the effulgence of a thousand suns (Adityaya)'
     },
     {
       number: 11,
@@ -96,7 +96,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Sarvavagishaya',
       mantraSanskrit: 'ॐ सर्ववागीशाय नमः',
       mantra: 'Om Sarvavagishaya Namah',
-      meaning: ''
+      meaning: 'Omnipresent and all-encompassing divinity (Sarvavagishaya)'
     },
     {
       number: 12,
@@ -104,7 +104,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Sarvadharaya',
       mantraSanskrit: 'ॐ सर्वाधाराय नमः',
       mantra: 'Om Sarvadharaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Sarvadharaya)'
     },
     {
       number: 13,
@@ -112,7 +112,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Sanatanaya',
       mantraSanskrit: 'ॐ सनातनाय नमः',
       mantra: 'Om Sanatanaya Namah',
-      meaning: ''
+      meaning: 'Eternal, imperishable, and beyond time (Sanatanaya)'
     },
     {
       number: 14,
@@ -120,7 +120,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Niradharaya',
       mantraSanskrit: 'ॐ निराधाराय नमः',
       mantra: 'Om Niradharaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Niradharaya)'
     },
     {
       number: 15,
@@ -128,7 +128,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Nirakaraya',
       mantraSanskrit: 'ॐ निराकाराय नमः',
       mantra: 'Om Nirakaraya Namah',
-      meaning: ''
+      meaning: 'Manifesting a sacred form of beauty and light (Nirakaraya)'
     },
     {
       number: 16,
@@ -136,7 +136,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Nirishaya',
       mantraSanskrit: 'ॐ निरीशाय नमः',
       mantra: 'Om Nirishaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Nirishaya'
     },
     {
       number: 17,
@@ -144,7 +144,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Nirupadravaya',
       mantraSanskrit: 'ॐ निरुपद्रवाय नमः',
       mantra: 'Om Nirupadravaya Namah',
-      meaning: ''
+      meaning: 'Manifesting a sacred form of beauty and light (Nirupadravaya)'
     },
     {
       number: 18,
@@ -152,7 +152,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Niranjanaya',
       mantraSanskrit: 'ॐ निरञ्जनाय नमः',
       mantra: 'Om Niranjanaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Niranjanaya'
     },
     {
       number: 19,
@@ -160,7 +160,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Nishkalankaya',
       mantraSanskrit: 'ॐ निष्कलङ्काय नमः',
       mantra: 'Om Nishkalankaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Nishkalankaya'
     },
     {
       number: 20,
@@ -168,7 +168,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Nityatriptaya',
       mantraSanskrit: 'ॐ नित्यतृप्ताय नमः',
       mantra: 'Om Nityatriptaya Namah',
-      meaning: ''
+      meaning: 'Eternal, imperishable, and beyond time (Nityatriptaya)'
     },
     {
       number: 21,
@@ -176,7 +176,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Niramayaya',
       mantraSanskrit: 'ॐ निरामयाय नमः',
       mantra: 'Om Niramayaya Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Niramayaya)'
     },
     {
       number: 22,
@@ -184,7 +184,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Chidanandamayaya',
       mantraSanskrit: 'ॐ चिदानन्दमयाय नमः',
       mantra: 'Om Chidanandamayaya Namah',
-      meaning: ''
+      meaning: 'Fountain of supreme spiritual bliss and joy (Chidanandamayaya)'
     },
     {
       number: 23,
@@ -192,7 +192,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Sakshine',
       mantraSanskrit: 'ॐ साक्षिणे नमः',
       mantra: 'Om Sakshine Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Sakshine'
     },
     {
       number: 24,
@@ -200,7 +200,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Sharanyaya',
       mantraSanskrit: 'ॐ शरण्याय नमः',
       mantra: 'Om Sharanyaya Namah',
-      meaning: ''
+      meaning: 'Compassionate refuge and protector of devoted souls (Sharanyaya)'
     },
     {
       number: 25,
@@ -208,7 +208,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Shubhadayakaya',
       mantraSanskrit: 'ॐ शुभदायकाय नमः',
       mantra: 'Om Shubhadayakaya Namah',
-      meaning: ''
+      meaning: 'Source of supreme auspiciousness and blessing (Shubhadayakaya)'
     },
     {
       number: 26,
@@ -216,7 +216,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Shrimate',
       mantraSanskrit: 'ॐ श्रीमते नमः',
       mantra: 'Om Shrimate Namah',
-      meaning: ''
+      meaning: 'He who is eternally endowed with divine fortune and grace'
     },
     {
       number: 27,
@@ -224,7 +224,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Lokatrayadhishaya',
       mantraSanskrit: 'ॐ लोकत्रयाधीशाय नमः',
       mantra: 'Om Lokatrayadhishaya Namah',
-      meaning: ''
+      meaning: 'Guardian and sustainer of the cosmic worlds (Lokatrayadhishaya)'
     },
     {
       number: 28,
@@ -232,7 +232,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Shivaya',
       mantraSanskrit: 'ॐ शिवाय नमः',
       mantra: 'Om Shivaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Shivaya)'
     },
     {
       number: 29,
@@ -240,7 +240,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Sarasvatipradaya',
       mantraSanskrit: 'ॐ सरस्वतीप्रदाय नमः',
       mantra: 'Om Sarasvatipradaya Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Sarasvatipradaya)'
     },
     {
       number: 30,
@@ -248,7 +248,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Vedoddhartre',
       mantraSanskrit: 'ॐ वेदोद्धर्त्रे नमः',
       mantra: 'Om Vedoddhartre Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Vedoddhartre'
     },
     {
       number: 31,
@@ -256,7 +256,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Vedanidhaye',
       mantraSanskrit: 'ॐ वेदनिधये नमः',
       mantra: 'Om Vedanidhaye Namah',
-      meaning: ''
+      meaning: 'Knower and revealer of eternal Vedic wisdom (Vedanidhaye)'
     },
     {
       number: 32,
@@ -264,7 +264,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Vedavedyaya',
       mantraSanskrit: 'ॐ वेदवेद्याय नमः',
       mantra: 'Om Vedavedyaya Namah',
-      meaning: ''
+      meaning: 'Knower and revealer of eternal Vedic wisdom (Vedavedyaya)'
     },
     {
       number: 33,
@@ -272,7 +272,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Puratanaya',
       mantraSanskrit: 'ॐ पुरातनाय नमः',
       mantra: 'Om Puratanaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Puratanaya'
     },
     {
       number: 34,
@@ -280,7 +280,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Purnaya',
       mantraSanskrit: 'ॐ पूर्णाय नमः',
       mantra: 'Om Purnaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Purnaya'
     },
     {
       number: 35,
@@ -288,7 +288,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Purayitre',
       mantraSanskrit: 'ॐ पूरयित्रे नमः',
       mantra: 'Om Purayitre Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Purayitre'
     },
     {
       number: 36,
@@ -296,7 +296,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Punyaya',
       mantraSanskrit: 'ॐ पुण्याय नमः',
       mantra: 'Om Punyaya Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Punyaya)'
     },
     {
       number: 37,
@@ -304,7 +304,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Punyakirtaye',
       mantraSanskrit: 'ॐ पुण्यकीर्तये नमः',
       mantra: 'Om Punyakirtaye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Punyakirtaye'
     },
     {
       number: 38,
@@ -312,7 +312,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Paratparaya',
       mantraSanskrit: 'ॐ परात्पराय नमः',
       mantra: 'Om Paratparaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Paratparaya'
     },
     {
       number: 39,
@@ -320,7 +320,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Paramatmane',
       mantraSanskrit: 'ॐ परमात्मने नमः',
       mantra: 'Om Paramatmane Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Paramatmane)'
     },
     {
       number: 40,
@@ -328,7 +328,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Parasmai Jyotishe',
       mantraSanskrit: 'ॐ परस्मै ज्योतिषे नमः',
       mantra: 'Om Parasmai Jyotishe Namah',
-      meaning: ''
+      meaning: 'Radiant with the effulgence of a thousand suns (Parasmai Jyotishe)'
     },
     {
       number: 41,
@@ -336,7 +336,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Pareshaya',
       mantraSanskrit: 'ॐ परेशाय नमः',
       mantra: 'Om Pareshaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Pareshaya'
     },
     {
       number: 42,
@@ -344,7 +344,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Paragaya',
       mantraSanskrit: 'ॐ पारगाय नमः',
       mantra: 'Om Paragaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Paragaya'
     },
     {
       number: 43,
@@ -352,7 +352,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Paraya',
       mantraSanskrit: 'ॐ पराय नमः',
       mantra: 'Om Paraya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Paraya'
     },
     {
       number: 44,
@@ -360,7 +360,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Sakalopanishadvedyaya',
       mantraSanskrit: 'ॐ सकलोपनिषद्वेद्याय नमः',
       mantra: 'Om Sakalopanishadvedyaya Namah',
-      meaning: ''
+      meaning: 'Whose hands grant fearlessness (Abhaya) and boons (Varada) (Sakalopanishadvedyaya)'
     },
     {
       number: 45,
@@ -368,7 +368,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Nishkalaya',
       mantraSanskrit: 'ॐ निष्कलाय नमः',
       mantra: 'Om Nishkalaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Nishkalaya'
     },
     {
       number: 46,
@@ -376,7 +376,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Sarvashastrakrite',
       mantraSanskrit: 'ॐ सर्वशास्त्रकृते नमः',
       mantra: 'Om Sarvashastrakrite Namah',
-      meaning: ''
+      meaning: 'Omnipresent and all-encompassing divinity (Sarvashastrakrite)'
     },
     {
       number: 47,
@@ -384,7 +384,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Akshamalajnanamudrayuktahastaya',
       mantraSanskrit: 'ॐ अक्षमालाज्ञानमुद्रायुक्तहस्ताय नमः',
       mantra: 'Om Akshamalajnanamudrayuktahastaya Namah',
-      meaning: ''
+      meaning: 'Bestower of supreme spiritual knowledge and discernment (Akshamalajnanamudrayuktahastaya)'
     },
     {
       number: 48,
@@ -392,7 +392,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Varapradaya',
       mantraSanskrit: 'ॐ वरप्रदाय नमः',
       mantra: 'Om Varapradaya Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Varapradaya)'
     },
     {
       number: 49,
@@ -400,7 +400,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Puranapurushaya',
       mantraSanskrit: 'ॐ पुराणपुरुषाय नमः',
       mantra: 'Om Puranapurushaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Puranapurushaya'
     },
     {
       number: 50,
@@ -408,7 +408,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Shreshthaya',
       mantraSanskrit: 'ॐ श्रेष्ठाय नमः',
       mantra: 'Om Shreshthaya Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Shreshthaya)'
     },
     {
       number: 51,
@@ -416,7 +416,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Sharanyaya',
       mantraSanskrit: 'ॐ शरण्याय नमः',
       mantra: 'Om Sharanyaya Namah',
-      meaning: ''
+      meaning: 'Compassionate refuge and protector of devoted souls (Sharanyaya)'
     },
     {
       number: 52,
@@ -424,7 +424,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Parameshvaraya',
       mantraSanskrit: 'ॐ परमेश्वराय नमः',
       mantra: 'Om Parameshvaraya Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Parameshvaraya)'
     },
     {
       number: 53,
@@ -432,7 +432,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Shantaya',
       mantraSanskrit: 'ॐ शान्ताय नमः',
       mantra: 'Om Shantaya Namah',
-      meaning: ''
+      meaning: 'Embodiment of serene peace and inner tranquility (Shantaya)'
     },
     {
       number: 54,
@@ -440,7 +440,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Dantaya',
       mantraSanskrit: 'ॐ दान्ताय नमः',
       mantra: 'Om Dantaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Dantaya'
     },
     {
       number: 55,
@@ -448,7 +448,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Jitakrodhaya',
       mantraSanskrit: 'ॐ जितक्रोधाय नमः',
       mantra: 'Om Jitakrodhaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Jitakrodhaya'
     },
     {
       number: 56,
@@ -456,7 +456,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Jitamitraya',
       mantraSanskrit: 'ॐ जितामित्राय नमः',
       mantra: 'Om Jitamitraya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Jitamitraya'
     },
     {
       number: 57,
@@ -464,7 +464,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Jaganmayaya',
       mantraSanskrit: 'ॐ जगन्मयाय नमः',
       mantra: 'Om Jaganmayaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Jaganmayaya'
     },
     {
       number: 58,
@@ -472,7 +472,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Jaramrityuharaya',
       mantraSanskrit: 'ॐ जरामृत्युहराय नमः',
       mantra: 'Om Jaramrityuharaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Jaramrityuharaya)'
     },
     {
       number: 59,
@@ -480,7 +480,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Jivaya',
       mantraSanskrit: 'ॐ जीवाय नमः',
       mantra: 'Om Jivaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Jivaya'
     },
     {
       number: 60,
@@ -488,7 +488,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Jayadaya',
       mantraSanskrit: 'ॐ जयदाय नमः',
       mantra: 'Om Jayadaya Namah',
-      meaning: ''
+      meaning: 'Ever-victorious bestower of triumph in righteous endeavors (Jayadaya)'
     },
     {
       number: 61,
@@ -496,7 +496,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Jadyanashanaya',
       mantraSanskrit: 'ॐ जाड्यनाशनाय नमः',
       mantra: 'Om Jadyanashanaya Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Jadyanashanaya)'
     },
     {
       number: 62,
@@ -504,7 +504,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Japapriyaya',
       mantraSanskrit: 'ॐ जपप्रियाय नमः',
       mantra: 'Om Japapriyaya Namah',
-      meaning: ''
+      meaning: 'Beloved of the pure-hearted and enchanting in grace (Japapriyaya)'
     },
     {
       number: 63,
@@ -512,7 +512,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Japastutyaya',
       mantraSanskrit: 'ॐ जपस्तुत्याय नमः',
       mantra: 'Om Japastutyaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Japastutyaya'
     },
     {
       number: 64,
@@ -520,7 +520,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Japakrite',
       mantraSanskrit: 'ॐ जपकृते नमः',
       mantra: 'Om Japakrite Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Japakrite'
     },
     {
       number: 65,
@@ -528,7 +528,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Priyakrite',
       mantraSanskrit: 'ॐ प्रियकृते नमः',
       mantra: 'Om Priyakrite Namah',
-      meaning: ''
+      meaning: 'Beloved of the pure-hearted and enchanting in grace (Priyakrite)'
     },
     {
       number: 66,
@@ -536,7 +536,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Vibhave',
       mantraSanskrit: 'ॐ विभवे नमः',
       mantra: 'Om Vibhave Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Vibhave'
     },
     {
       number: 67,
@@ -544,7 +544,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Vimalaya',
       mantraSanskrit: 'ॐ विमलाय नमः',
       mantra: 'Om Vimalaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Vimalaya'
     },
     {
       number: 68,
@@ -552,7 +552,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Vishvarupaya',
       mantraSanskrit: 'ॐ विश्वरूपाय नमः',
       mantra: 'Om Vishvarupaya Namah',
-      meaning: ''
+      meaning: 'He whose form is the entire cosmos'
     },
     {
       number: 69,
@@ -560,7 +560,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Vishvagoptre',
       mantraSanskrit: 'ॐ विश्वगोप्त्रे नमः',
       mantra: 'Om Vishvagoptre Namah',
-      meaning: ''
+      meaning: 'Guardian and sustainer of the cosmic worlds (Vishvagoptre)'
     },
     {
       number: 70,
@@ -568,7 +568,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Vidhistutaya',
       mantraSanskrit: 'ॐ विधिस्तुताय नमः',
       mantra: 'Om Vidhistutaya Namah',
-      meaning: ''
+      meaning: 'Architect of cosmic creation and sacred order (Vidhistutaya)'
     },
     {
       number: 71,
@@ -576,7 +576,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Vidhivishnushivastutyaya',
       mantraSanskrit: 'ॐ विधिविष्णुशिवस्तुत्याय नमः',
       mantra: 'Om Vidhivishnushivastutyaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Vidhivishnushivastutyaya)'
     },
     {
       number: 72,
@@ -584,7 +584,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Shantidaya',
       mantraSanskrit: 'ॐ शान्तिदाय नमः',
       mantra: 'Om Shantidaya Namah',
-      meaning: ''
+      meaning: 'Embodiment of serene peace and inner tranquility (Shantidaya)'
     },
     {
       number: 73,
@@ -592,7 +592,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Shantikarakaya',
       mantraSanskrit: 'ॐ शान्तिकारकाय नमः',
       mantra: 'Om Shantikarakaya Namah',
-      meaning: ''
+      meaning: 'Embodiment of serene peace and inner tranquility (Shantikarakaya)'
     },
     {
       number: 74,
@@ -600,7 +600,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Shreyahpradaya',
       mantraSanskrit: 'ॐ श्रेयःप्रदाय नमः',
       mantra: 'Om Shreyahpradaya Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Shreyahpradaya)'
     },
     {
       number: 75,
@@ -608,7 +608,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Shrutimayaya',
       mantraSanskrit: 'ॐ श्रुतिमयाय नमः',
       mantra: 'Om Shrutimayaya Namah',
-      meaning: ''
+      meaning: 'Knower and revealer of eternal Vedic wisdom (Shrutimayaya)'
     },
     {
       number: 76,
@@ -616,7 +616,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Shreyasam Pataye',
       mantraSanskrit: 'ॐ श्रेयसां पतये नमः',
       mantra: 'Om Shreyasam Pataye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Shreyasam Pataye'
     },
     {
       number: 77,
@@ -624,7 +624,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Ishvaraya',
       mantraSanskrit: 'ॐ ईश्वराय नमः',
       mantra: 'Om Ishvaraya Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Ishvaraya)'
     },
     {
       number: 78,
@@ -632,7 +632,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Achyutaya',
       mantraSanskrit: 'ॐ अच्युताय नमः',
       mantra: 'Om Achyutaya Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Achyutaya)'
     },
     {
       number: 79,
@@ -640,7 +640,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Anantarupaya',
       mantraSanskrit: 'ॐ अनन्तरूपाय नमः',
       mantra: 'Om Anantarupaya Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Anantarupaya)'
     },
     {
       number: 80,
@@ -648,7 +648,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Pranadaya',
       mantraSanskrit: 'ॐ प्राणदाय नमः',
       mantra: 'Om Pranadaya Namah',
-      meaning: ''
+      meaning: 'Praised through sacred hymns, mantras, and cosmic sound (Pranadaya)'
     },
     {
       number: 81,
@@ -656,7 +656,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Prithivipataye',
       mantraSanskrit: 'ॐ पृथिवीपतये नमः',
       mantra: 'Om Prithivipataye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Prithivipataye'
     },
     {
       number: 82,
@@ -664,7 +664,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Avyaktavyaktarupaya',
       mantraSanskrit: 'ॐ अव्यक्तव्यक्तरूपाय नमः',
       mantra: 'Om Avyaktavyaktarupaya Namah',
-      meaning: ''
+      meaning: 'Manifesting a sacred form of beauty and light (Avyaktavyaktarupaya)'
     },
     {
       number: 83,
@@ -672,7 +672,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Sarvasakshine',
       mantraSanskrit: 'ॐ सर्वसाक्षिणे नमः',
       mantra: 'Om Sarvasakshine Namah',
-      meaning: ''
+      meaning: 'Omnipresent and all-encompassing divinity (Sarvasakshine)'
     },
     {
       number: 84,
@@ -680,7 +680,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Tamopaghne',
       mantraSanskrit: 'ॐ तमोपघ्ने नमः',
       mantra: 'Om Tamopaghne Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Tamopaghne'
     },
     {
       number: 85,
@@ -688,7 +688,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Ajnananashakaya',
       mantraSanskrit: 'ॐ अज्ञाननाशकाय नमः',
       mantra: 'Om Ajnananashakaya Namah',
-      meaning: ''
+      meaning: 'Bestower of supreme spiritual knowledge and discernment (Ajnananashakaya)'
     },
     {
       number: 86,
@@ -696,7 +696,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Jnanine',
       mantraSanskrit: 'ॐ ज्ञानिने नमः',
       mantra: 'Om Jnanine Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Jnanine'
     },
     {
       number: 87,
@@ -704,7 +704,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Purnachandrasamaprabhaya',
       mantraSanskrit: 'ॐ पूर्णचन्द्रसमप्रभाय नमः',
       mantra: 'Om Purnachandrasamaprabhaya Namah',
-      meaning: ''
+      meaning: 'Remover of fear, sorrow, and distress (Purnachandrasamaprabhaya)'
     },
     {
       number: 88,
@@ -712,7 +712,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Jnanadaya',
       mantraSanskrit: 'ॐ ज्ञानदाय नमः',
       mantra: 'Om Jnanadaya Namah',
-      meaning: ''
+      meaning: 'Bestower of supreme spiritual knowledge and discernment (Jnanadaya)'
     },
     {
       number: 89,
@@ -720,7 +720,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Vakpataye',
       mantraSanskrit: 'ॐ वाक्पतये नमः',
       mantra: 'Om Vakpataye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Vakpataye'
     },
     {
       number: 90,
@@ -728,7 +728,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Yogine',
       mantraSanskrit: 'ॐ योगिने नमः',
       mantra: 'Om Yogine Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Yogine'
     },
     {
       number: 91,
@@ -736,7 +736,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Yogishaya',
       mantraSanskrit: 'ॐ योगीशाय नमः',
       mantra: 'Om Yogishaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Yogishaya'
     },
     {
       number: 92,
@@ -744,7 +744,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Sarvakamadaya',
       mantraSanskrit: 'ॐ सर्वकामदाय नमः',
       mantra: 'Om Sarvakamadaya Namah',
-      meaning: ''
+      meaning: 'Omnipresent and all-encompassing divinity (Sarvakamadaya)'
     },
     {
       number: 93,
@@ -752,7 +752,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Yogarudhaya',
       mantraSanskrit: 'ॐ योगारूढाय नमः',
       mantra: 'Om Yogarudhaya Namah',
-      meaning: ''
+      meaning: 'Master of yoga, meditation, and spiritual realization (Yogarudhaya)'
     },
     {
       number: 94,
@@ -760,7 +760,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Mahapunyaya',
       mantraSanskrit: 'ॐ महापुण्याय नमः',
       mantra: 'Om Mahapunyaya Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Mahapunyaya)'
     },
     {
       number: 95,
@@ -768,7 +768,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Punyakirtaye',
       mantraSanskrit: 'ॐ पुण्यकीर्तये नमः',
       mantra: 'Om Punyakirtaye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Punyakirtaye'
     },
     {
       number: 96,
@@ -776,7 +776,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Amitraghne',
       mantraSanskrit: 'ॐ अमित्रघ्ने नमः',
       mantra: 'Om Amitraghne Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Amitraghne'
     },
     {
       number: 97,
@@ -784,7 +784,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Vishvasakshine',
       mantraSanskrit: 'ॐ विश्वसाक्षिणे नमः',
       mantra: 'Om Vishvasakshine Namah',
-      meaning: ''
+      meaning: 'Guardian and sustainer of the cosmic worlds (Vishvasakshine)'
     },
     {
       number: 98,
@@ -792,7 +792,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Chidakaraya',
       mantraSanskrit: 'ॐ चिदाकाराय नमः',
       mantra: 'Om Chidakaraya Namah',
-      meaning: ''
+      meaning: 'Manifesting a sacred form of beauty and light (Chidakaraya)'
     },
     {
       number: 99,
@@ -800,7 +800,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Paramanandakarakaya',
       mantraSanskrit: 'ॐ परमानन्दकारकाय नमः',
       mantra: 'Om Paramanandakarakaya Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Paramanandakarakaya)'
     },
     {
       number: 100,
@@ -808,7 +808,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Mahayogine',
       mantraSanskrit: 'ॐ महायोगिने नमः',
       mantra: 'Om Mahayogine Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Mahayogine)'
     },
     {
       number: 101,
@@ -816,7 +816,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Mahamaunine',
       mantraSanskrit: 'ॐ महामौनिने नमः',
       mantra: 'Om Mahamaunine Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Mahamaunine)'
     },
     {
       number: 102,
@@ -824,7 +824,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Munishaya',
       mantraSanskrit: 'ॐ मुनीशाय नमः',
       mantra: 'Om Munishaya Namah',
-      meaning: ''
+      meaning: 'Master of yoga, meditation, and spiritual realization (Munishaya)'
     },
     {
       number: 103,
@@ -832,7 +832,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Shreyasam Nidhaye',
       mantraSanskrit: 'ॐ श्रेयसां निधये नमः',
       mantra: 'Om Shreyasam Nidhaye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Shreyasam Nidhaye'
     },
     {
       number: 104,
@@ -840,7 +840,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Hamsaya',
       mantraSanskrit: 'ॐ हंसाय नमः',
       mantra: 'Om Hamsaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Hamsaya'
     },
     {
       number: 105,
@@ -848,7 +848,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Paramahamsaya',
       mantraSanskrit: 'ॐ परमहंसाय नमः',
       mantra: 'Om Paramahamsaya Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Paramahamsaya)'
     },
     {
       number: 106,
@@ -856,7 +856,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Vishvagoptre',
       mantraSanskrit: 'ॐ विश्वगोप्त्रे नमः',
       mantra: 'Om Vishvagoptre Namah',
-      meaning: ''
+      meaning: 'Guardian and sustainer of the cosmic worlds (Vishvagoptre)'
     },
     {
       number: 107,
@@ -864,7 +864,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Viraje',
       mantraSanskrit: 'ॐ विराजे नमः',
       mantra: 'Om Viraje Namah',
-      meaning: ''
+      meaning: 'Possessor of invincible spiritual strength and valor (Viraje)'
     },
     {
       number: 108,
@@ -872,7 +872,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Svaraje',
       mantraSanskrit: 'ॐ स्वराजे नमः',
       mantra: 'Om Svaraje Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Svaraje)'
     },
     {
       number: 109,
@@ -880,7 +880,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Shuddhasphatikasankashaya',
       mantraSanskrit: 'ॐ शुद्धस्फटिकसङ्काशाय नमः',
       mantra: 'Om Shuddhasphatikasankashaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Shuddhasphatikasankashaya'
     },
     {
       number: 110,
@@ -888,7 +888,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Jatamandalasamyutaya',
       mantraSanskrit: 'ॐ जटामण्डलसंयुताय नमः',
       mantra: 'Om Jatamandalasamyutaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Jatamandalasamyutaya'
     },
     {
       number: 111,
@@ -896,7 +896,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Adimadhyantarahitaya',
       mantraSanskrit: 'ॐ आदिमध्यान्तरहिताय नमः',
       mantra: 'Om Adimadhyantarahitaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Hayagriva revered as Adimadhyantarahitaya'
     },
     {
       number: 112,
@@ -904,7 +904,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Sarvavagishvareshvaraya',
       mantraSanskrit: 'ॐ सर्ववागीश्वरेश्वराय नमः',
       mantra: 'Om Sarvavagishvareshvaraya Namah',
-      meaning: ''
+      meaning: 'Omnipresent and all-encompassing divinity (Sarvavagishvareshvaraya)'
     },
     {
       number: 113,
@@ -912,7 +912,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Pranavodgitharupaya',
       mantraSanskrit: 'ॐ प्रणवोद्गीथरूपाय नमः',
       mantra: 'Om Pranavodgitharupaya Namah',
-      meaning: ''
+      meaning: 'Manifesting a sacred form of beauty and light (Pranavodgitharupaya)'
     },
     {
       number: 114,
@@ -920,7 +920,7 @@ export const hayagrivaAshtottaram = {
       transliteration: 'Vedaharanakarmakrite',
       mantraSanskrit: 'ॐ वेदाहरणकर्मकृते नमः',
       mantra: 'Om Vedaharanakarmakrite Namah',
-      meaning: ''
+      meaning: 'Knower and revealer of eternal Vedic wisdom (Vedaharanakarmakrite)'
     }
   ]
 };

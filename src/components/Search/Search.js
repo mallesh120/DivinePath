@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { searchContent } from '../../utils/searchService';
 import './Search.css';
 
 const CATEGORIES = [
@@ -60,12 +59,20 @@ const Search = ({ isModal = false, onClose }) => {
 
   // Debounced search
   useEffect(() => {
-    const timer = setTimeout(() => {
+    let isCancelled = false;
+    const timer = setTimeout(async () => {
       if (query.trim().length >= 2) {
-        const searchResults = searchContent(query, activeCategory);
-        setResults(searchResults);
-        setSelectedIndex(0);
-        setIsOpen(true);
+        try {
+          const { searchContent } = await import('../../utils/searchService');
+          if (!isCancelled) {
+            const searchResults = searchContent(query, activeCategory);
+            setResults(searchResults);
+            setSelectedIndex(0);
+            setIsOpen(true);
+          }
+        } catch (err) {
+          console.error('Search error:', err);
+        }
       } else {
         setResults([]);
         setSelectedIndex(0);
@@ -73,7 +80,10 @@ const Search = ({ isModal = false, onClose }) => {
       }
     }, 200);
 
-    return () => clearTimeout(timer);
+    return () => {
+      isCancelled = true;
+      clearTimeout(timer);
+    };
   }, [query, activeCategory, isModal]);
 
   const handleSelectResult = (result) => {

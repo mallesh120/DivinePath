@@ -16,7 +16,7 @@ export const kuberAshtottaram = {
       transliteration: 'Kuberaya',
       mantraSanskrit: 'ॐ कुबेराय नमः',
       mantra: 'Om Kuberaya Namah',
-      meaning: ''
+      meaning: 'Lord Kubera, the celestial custodian of treasures'
     },
     {
       number: 2,
@@ -24,7 +24,7 @@ export const kuberAshtottaram = {
       transliteration: 'Dhanadaya',
       mantraSanskrit: 'ॐ धनदाय नमः',
       mantra: 'Om Dhanadaya Namah',
-      meaning: ''
+      meaning: 'The generous bestower of wealth and prosperity'
     },
     {
       number: 3,
@@ -32,7 +32,7 @@ export const kuberAshtottaram = {
       transliteration: 'Shrimate',
       mantraSanskrit: 'ॐ श्रीमाते नमः',
       mantra: 'Om Shrimate Namah',
-      meaning: ''
+      meaning: 'He who is eternally endowed with divine fortune and grace'
     },
     {
       number: 4,
@@ -40,7 +40,7 @@ export const kuberAshtottaram = {
       transliteration: 'Yaksheshaya',
       mantraSanskrit: 'ॐ यक्षेशाय नमः',
       mantra: 'Om Yaksheshaya Namah',
-      meaning: ''
+      meaning: 'Supreme ruler of the celestial Yakshas'
     },
     {
       number: 5,
@@ -48,7 +48,7 @@ export const kuberAshtottaram = {
       transliteration: 'Guhyakeshvaraya',
       mantraSanskrit: 'ॐ गुह्यकेश्वराय नमः',
       mantra: 'Om Guhyakeshvaraya Namah',
-      meaning: ''
+      meaning: 'Lord of the mystical Guhyaka guardians of hidden treasures'
     },
     {
       number: 6,
@@ -56,7 +56,7 @@ export const kuberAshtottaram = {
       transliteration: 'Nidhishaya',
       mantraSanskrit: 'ॐ निधीशाय नमः',
       mantra: 'Om Nidhishaya Namah',
-      meaning: ''
+      meaning: 'Master of the nine sacred cosmic treasures (Navanidhi)'
     },
     {
       number: 7,
@@ -64,7 +64,7 @@ export const kuberAshtottaram = {
       transliteration: 'Shankarasakhaya',
       mantraSanskrit: 'ॐ शङ्करसखाय नमः',
       mantra: 'Om Shankarasakhaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Shankarasakhaya)'
     },
     {
       number: 8,
@@ -72,7 +72,7 @@ export const kuberAshtottaram = {
       transliteration: 'Mahalakshminivasabhuvaye',
       mantraSanskrit: 'ॐ महालक्ष्मीनिवासभुवये नमः',
       mantra: 'Om Mahalakshminivasabhuvaye Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Mahalakshminivasabhuvaye)'
     },
     {
       number: 9,
@@ -80,7 +80,7 @@ export const kuberAshtottaram = {
       transliteration: 'Mahapadmanidhishaya',
       mantraSanskrit: 'ॐ महापद्मनिधीशाय नमः',
       mantra: 'Om Mahapadmanidhishaya Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Mahapadmanidhishaya)'
     },
     {
       number: 10,
@@ -88,7 +88,7 @@ export const kuberAshtottaram = {
       transliteration: 'Purnaya',
       mantraSanskrit: 'ॐ पूर्णाय नमः',
       mantra: 'Om Purnaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Purnaya'
     },
     {
       number: 11,
@@ -96,7 +96,7 @@ export const kuberAshtottaram = {
       transliteration: 'Padmanidhishvaraya',
       mantraSanskrit: 'ॐ पद्मनिधीश्वराय नमः',
       mantra: 'Om Padmanidhishvaraya Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Padmanidhishvaraya)'
     },
     {
       number: 12,
@@ -104,7 +104,7 @@ export const kuberAshtottaram = {
       transliteration: 'Shankhyanidhinathaya',
       mantraSanskrit: 'ॐ शङ्ख्यनिधिनाथाय नमः',
       mantra: 'Om Shankhyanidhinathaya Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Shankhyanidhinathaya)'
     },
     {
       number: 13,
@@ -112,7 +112,7 @@ export const kuberAshtottaram = {
       transliteration: 'Makarakhyanidhipriyaya',
       mantraSanskrit: 'ॐ मकराख्यनिधिप्रियाय नमः',
       mantra: 'Om Makarakhyanidhipriyaya Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Makarakhyanidhipriyaya)'
     },
     {
       number: 14,
@@ -120,7 +120,7 @@ export const kuberAshtottaram = {
       transliteration: 'Sukhasampatinidhishaya',
       mantraSanskrit: 'ॐ सुखसम्पतिनिधीशाय नमः',
       mantra: 'Om Sukhasampatinidhishaya Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Sukhasampatinidhishaya)'
     },
     {
       number: 15,
@@ -128,7 +128,7 @@ export const kuberAshtottaram = {
       transliteration: 'Mukundanidhinayakaya',
       mantraSanskrit: 'ॐ मुकुन्दनिधिनायकाय नमः',
       mantra: 'Om Mukundanidhinayakaya Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Mukundanidhinayakaya)'
     },
     {
       number: 16,
@@ -136,7 +136,7 @@ export const kuberAshtottaram = {
       transliteration: 'Kundakyanidhinathaya',
       mantraSanskrit: 'ॐ कुन्दाक्यनिधिनाथाय नमः',
       mantra: 'Om Kundakyanidhinathaya Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Kundakyanidhinathaya)'
     },
     {
       number: 17,
@@ -144,7 +144,7 @@ export const kuberAshtottaram = {
       transliteration: 'Nilanityadhipaya',
       mantraSanskrit: 'ॐ नीलनित्याधिपाय नमः',
       mantra: 'Om Nilanityadhipaya Namah',
-      meaning: ''
+      meaning: 'Eternal, imperishable, and beyond time (Nilanityadhipaya)'
     },
     {
       number: 18,
@@ -152,7 +152,7 @@ export const kuberAshtottaram = {
       transliteration: 'Mahate',
       mantraSanskrit: 'ॐ महते नमः',
       mantra: 'Om Mahate Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Mahate)'
     },
     {
       number: 19,
@@ -160,7 +160,7 @@ export const kuberAshtottaram = {
       transliteration: 'Varannityadhipaya',
       mantraSanskrit: 'ॐ वरन्नित्याधिपाय नमः',
       mantra: 'Om Varannityadhipaya Namah',
-      meaning: ''
+      meaning: 'Eternal, imperishable, and beyond time (Varannityadhipaya)'
     },
     {
       number: 20,
@@ -168,7 +168,7 @@ export const kuberAshtottaram = {
       transliteration: 'Pujyaya',
       mantraSanskrit: 'ॐ पूज्याय नमः',
       mantra: 'Om Pujyaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Pujyaya'
     },
     {
       number: 21,
@@ -176,7 +176,7 @@ export const kuberAshtottaram = {
       transliteration: 'Lakshmisamrajyadayakaya',
       mantraSanskrit: 'ॐ लक्ष्मिसाम्राज्यदायकाय नमः',
       mantra: 'Om Lakshmisamrajyadayakaya Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Lakshmisamrajyadayakaya)'
     },
     {
       number: 22,
@@ -184,7 +184,7 @@ export const kuberAshtottaram = {
       transliteration: 'Ilapilapataye',
       mantraSanskrit: 'ॐ इलपिलापतये नमः',
       mantra: 'Om Ilapilapataye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Ilapilapataye'
     },
     {
       number: 23,
@@ -192,7 +192,7 @@ export const kuberAshtottaram = {
       transliteration: 'Koshadhishaya',
       mantraSanskrit: 'ॐ कोशाधीशाय नमः',
       mantra: 'Om Koshadhishaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Koshadhishaya'
     },
     {
       number: 24,
@@ -200,7 +200,7 @@ export const kuberAshtottaram = {
       transliteration: 'Kulochitaya',
       mantraSanskrit: 'ॐ कुलोचिताय नमः',
       mantra: 'Om Kulochitaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Kulochitaya'
     },
     {
       number: 25,
@@ -208,7 +208,7 @@ export const kuberAshtottaram = {
       transliteration: 'Ashvarudhaya',
       mantraSanskrit: 'ॐ अश्वारूढाय नमः',
       mantra: 'Om Ashvarudhaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Ashvarudhaya'
     },
     {
       number: 26,
@@ -216,7 +216,7 @@ export const kuberAshtottaram = {
       transliteration: 'Vishvavandyaya',
       mantraSanskrit: 'ॐ विश्ववन्द्याय नमः',
       mantra: 'Om Vishvavandyaya Namah',
-      meaning: ''
+      meaning: 'Guardian and sustainer of the cosmic worlds (Vishvavandyaya)'
     },
     {
       number: 27,
@@ -224,7 +224,7 @@ export const kuberAshtottaram = {
       transliteration: 'Visheshajnanaya',
       mantraSanskrit: 'ॐ विशेषज्ञानाय नमः',
       mantra: 'Om Visheshajnanaya Namah',
-      meaning: ''
+      meaning: 'Bestower of supreme spiritual knowledge and discernment (Visheshajnanaya)'
     },
     {
       number: 28,
@@ -232,7 +232,7 @@ export const kuberAshtottaram = {
       transliteration: 'Visharadaya',
       mantraSanskrit: 'ॐ विशारदाय नमः',
       mantra: 'Om Visharadaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Visharadaya)'
     },
     {
       number: 29,
@@ -240,7 +240,7 @@ export const kuberAshtottaram = {
       transliteration: 'Nalakubaranathaya',
       mantraSanskrit: 'ॐ नलकूबरनाथाय नमः',
       mantra: 'Om Nalakubaranathaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Nalakubaranathaya'
     },
     {
       number: 30,
@@ -248,7 +248,7 @@ export const kuberAshtottaram = {
       transliteration: 'Manigrivapitre',
       mantraSanskrit: 'ॐ मणिग्रीवपित्रे नमः',
       mantra: 'Om Manigrivapitre Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Manigrivapitre'
     },
     {
       number: 31,
@@ -256,7 +256,7 @@ export const kuberAshtottaram = {
       transliteration: 'Gudhamantraya',
       mantraSanskrit: 'ॐ गूढमन्त्राय नमः',
       mantra: 'Om Gudhamantraya Namah',
-      meaning: ''
+      meaning: 'Praised through sacred hymns, mantras, and cosmic sound (Gudhamantraya)'
     },
     {
       number: 32,
@@ -264,7 +264,7 @@ export const kuberAshtottaram = {
       transliteration: 'Vaishravanaya',
       mantraSanskrit: 'ॐ वैश्रवणाय नमः',
       mantra: 'Om Vaishravanaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Vaishravanaya'
     },
     {
       number: 33,
@@ -272,7 +272,7 @@ export const kuberAshtottaram = {
       transliteration: 'Chitralekhamanahpriyaya',
       mantraSanskrit: 'ॐ चित्रलेखामनःप्रियाय नमः',
       mantra: 'Om Chitralekhamanahpriyaya Namah',
-      meaning: ''
+      meaning: 'Beloved of the pure-hearted and enchanting in grace (Chitralekhamanahpriyaya)'
     },
     {
       number: 34,
@@ -280,7 +280,7 @@ export const kuberAshtottaram = {
       transliteration: 'Ekapinakaya',
       mantraSanskrit: 'ॐ एकपिनाकाय नमः',
       mantra: 'Om Ekapinakaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Ekapinakaya'
     },
     {
       number: 35,
@@ -288,7 +288,7 @@ export const kuberAshtottaram = {
       transliteration: 'Alakadhishaya',
       mantraSanskrit: 'ॐ अलकाधीशाय नमः',
       mantra: 'Om Alakadhishaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Alakadhishaya'
     },
     {
       number: 36,
@@ -296,7 +296,7 @@ export const kuberAshtottaram = {
       transliteration: 'Paulastyaya',
       mantraSanskrit: 'ॐ पौलस्त्याय नमः',
       mantra: 'Om Paulastyaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Paulastyaya'
     },
     {
       number: 37,
@@ -304,7 +304,7 @@ export const kuberAshtottaram = {
       transliteration: 'Naravahanaya',
       mantraSanskrit: 'ॐ नरवाहनाय नमः',
       mantra: 'Om Naravahanaya Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Naravahanaya)'
     },
     {
       number: 38,
@@ -312,7 +312,7 @@ export const kuberAshtottaram = {
       transliteration: 'Kailasashailanilayaya',
       mantraSanskrit: 'ॐ कैलासशैलनिलयाय नमः',
       mantra: 'Om Kailasashailanilayaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Kailasashailanilayaya'
     },
     {
       number: 39,
@@ -320,7 +320,7 @@ export const kuberAshtottaram = {
       transliteration: 'Rajyadaya',
       mantraSanskrit: 'ॐ राज्यदाय नमः',
       mantra: 'Om Rajyadaya Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Rajyadaya)'
     },
     {
       number: 40,
@@ -328,7 +328,7 @@ export const kuberAshtottaram = {
       transliteration: 'Ravanagrajaya',
       mantraSanskrit: 'ॐ रावणाग्रजाय नमः',
       mantra: 'Om Ravanagrajaya Namah',
-      meaning: ''
+      meaning: 'Ever-victorious bestower of triumph in righteous endeavors (Ravanagrajaya)'
     },
     {
       number: 41,
@@ -336,7 +336,7 @@ export const kuberAshtottaram = {
       transliteration: 'Chitrachaitrarathaya',
       mantraSanskrit: 'ॐ चित्रचैत्ररथाय नमः',
       mantra: 'Om Chitrachaitrarathaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Chitrachaitrarathaya'
     },
     {
       number: 42,
@@ -344,7 +344,7 @@ export const kuberAshtottaram = {
       transliteration: 'Udyanaviharaya',
       mantraSanskrit: 'ॐ उद्यानविहाराय नमः',
       mantra: 'Om Udyanaviharaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Udyanaviharaya)'
     },
     {
       number: 43,
@@ -352,7 +352,7 @@ export const kuberAshtottaram = {
       transliteration: 'Viharasukuthuhalaya',
       mantraSanskrit: 'ॐ विहरसुकुथूहलाय नमः',
       mantra: 'Om Viharasukuthuhalaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Viharasukuthuhalaya)'
     },
     {
       number: 44,
@@ -360,7 +360,7 @@ export const kuberAshtottaram = {
       transliteration: 'Mahotsahaya',
       mantraSanskrit: 'ॐ महोत्सहाय नमः',
       mantra: 'Om Mahotsahaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Mahotsahaya'
     },
     {
       number: 45,
@@ -368,7 +368,7 @@ export const kuberAshtottaram = {
       transliteration: 'Mahaprajnaya',
       mantraSanskrit: 'ॐ महाप्राज्ञाय नमः',
       mantra: 'Om Mahaprajnaya Namah',
-      meaning: ''
+      meaning: 'Bestower of supreme spiritual knowledge and discernment (Mahaprajnaya)'
     },
     {
       number: 46,
@@ -376,7 +376,7 @@ export const kuberAshtottaram = {
       transliteration: 'Sadapushpaka Vahanaya',
       mantraSanskrit: 'ॐ सदापुष्पक वाहनाय नमः',
       mantra: 'Om Sadapushpaka Vahanaya Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Sadapushpaka Vahanaya)'
     },
     {
       number: 47,
@@ -384,7 +384,7 @@ export const kuberAshtottaram = {
       transliteration: 'Sarvabhaumaya',
       mantraSanskrit: 'ॐ सार्वभौमाय नमः',
       mantra: 'Om Sarvabhaumaya Namah',
-      meaning: ''
+      meaning: 'Omnipresent and all-encompassing divinity (Sarvabhaumaya)'
     },
     {
       number: 48,
@@ -392,7 +392,7 @@ export const kuberAshtottaram = {
       transliteration: 'Anganathaya',
       mantraSanskrit: 'ॐ अङ्गनाथाय नमः',
       mantra: 'Om Anganathaya Namah',
-      meaning: ''
+      meaning: 'Praised through sacred hymns, mantras, and cosmic sound (Anganathaya)'
     },
     {
       number: 49,
@@ -400,7 +400,7 @@ export const kuberAshtottaram = {
       transliteration: 'Somaya',
       mantraSanskrit: 'ॐ सोमाय नमः',
       mantra: 'Om Somaya Namah',
-      meaning: ''
+      meaning: 'Cool, soothing, and luminous like the full moon (Somaya)'
     },
     {
       number: 50,
@@ -408,7 +408,7 @@ export const kuberAshtottaram = {
       transliteration: 'Saumyadikeshvaraya',
       mantraSanskrit: 'ॐ सौम्यादिकेश्वराय नमः',
       mantra: 'Om Saumyadikeshvaraya Namah',
-      meaning: ''
+      meaning: 'Embodiment of serene peace and inner tranquility (Saumyadikeshvaraya)'
     },
     {
       number: 51,
@@ -416,7 +416,7 @@ export const kuberAshtottaram = {
       transliteration: 'Punyatmane',
       mantraSanskrit: 'ॐ पुण्यात्मने नमः',
       mantra: 'Om Punyatmane Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Punyatmane'
     },
     {
       number: 52,
@@ -424,7 +424,7 @@ export const kuberAshtottaram = {
       transliteration: 'Puruhutashriyai',
       mantraSanskrit: 'ॐ पुरूहुतश्रियै नमः',
       mantra: 'Om Puruhutashriyai Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Puruhutashriyai)'
     },
     {
       number: 53,
@@ -432,7 +432,7 @@ export const kuberAshtottaram = {
       transliteration: 'Sarvapunyajaneshvaraya',
       mantraSanskrit: 'ॐ सर्वपुण्यजनेश्वराय नमः',
       mantra: 'Om Sarvapunyajaneshvaraya Namah',
-      meaning: ''
+      meaning: 'Omnipresent and all-encompassing divinity (Sarvapunyajaneshvaraya)'
     },
     {
       number: 54,
@@ -440,7 +440,7 @@ export const kuberAshtottaram = {
       transliteration: 'Nityakirtaye',
       mantraSanskrit: 'ॐ नित्यकीर्तये नमः',
       mantra: 'Om Nityakirtaye Namah',
-      meaning: ''
+      meaning: 'Eternal, imperishable, and beyond time (Nityakirtaye)'
     },
     {
       number: 55,
@@ -448,7 +448,7 @@ export const kuberAshtottaram = {
       transliteration: 'Nidhivetre',
       mantraSanskrit: 'ॐ निधिवेत्रे नमः',
       mantra: 'Om Nidhivetre Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Nidhivetre)'
     },
     {
       number: 56,
@@ -456,7 +456,7 @@ export const kuberAshtottaram = {
       transliteration: 'Lamkapraktana Nayakaya',
       mantraSanskrit: 'ॐ लंकाप्राक्तन नायकाय नमः',
       mantra: 'Om Lamkapraktana Nayakaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Lamkapraktana Nayakaya'
     },
     {
       number: 57,
@@ -464,7 +464,7 @@ export const kuberAshtottaram = {
       transliteration: 'Yakshinivritaya',
       mantraSanskrit: 'ॐ यक्षिनीवृताय नमः',
       mantra: 'Om Yakshinivritaya Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Yakshinivritaya)'
     },
     {
       number: 58,
@@ -472,7 +472,7 @@ export const kuberAshtottaram = {
       transliteration: 'Yakshaya',
       mantraSanskrit: 'ॐ यक्षाय नमः',
       mantra: 'Om Yakshaya Namah',
-      meaning: ''
+      meaning: 'Whose compassionate gaze watches over all creation (Yakshaya)'
     },
     {
       number: 59,
@@ -480,7 +480,7 @@ export const kuberAshtottaram = {
       transliteration: 'Paramashantatmane',
       mantraSanskrit: 'ॐ परमशान्तात्मने नमः',
       mantra: 'Om Paramashantatmane Namah',
-      meaning: ''
+      meaning: 'Embodiment of serene peace and inner tranquility (Paramashantatmane)'
     },
     {
       number: 60,
@@ -488,7 +488,7 @@ export const kuberAshtottaram = {
       transliteration: 'Yaksharaje',
       mantraSanskrit: 'ॐ यक्षराजे नमः',
       mantra: 'Om Yaksharaje Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Yaksharaje)'
     },
     {
       number: 61,
@@ -496,7 +496,7 @@ export const kuberAshtottaram = {
       transliteration: 'Yakshini Hridayaya',
       mantraSanskrit: 'ॐ यक्षिणि हृदयाय नमः',
       mantra: 'Om Yakshini Hridayaya Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Yakshini Hridayaya)'
     },
     {
       number: 62,
@@ -504,7 +504,7 @@ export const kuberAshtottaram = {
       transliteration: 'Kinnareshvaraya',
       mantraSanskrit: 'ॐ किन्नरेश्वराय नमः',
       mantra: 'Om Kinnareshvaraya Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Kinnareshvaraya)'
     },
     {
       number: 63,
@@ -512,7 +512,7 @@ export const kuberAshtottaram = {
       transliteration: 'Kimpurushanathaya',
       mantraSanskrit: 'ॐ किंपुरुशनाथाय नमः',
       mantra: 'Om Kimpurushanathaya Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Kimpurushanathaya)'
     },
     {
       number: 64,
@@ -520,7 +520,7 @@ export const kuberAshtottaram = {
       transliteration: 'Nathaya',
       mantraSanskrit: 'ॐ नाथाय नमः',
       mantra: 'Om Nathaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Nathaya'
     },
     {
       number: 65,
@@ -528,7 +528,7 @@ export const kuberAshtottaram = {
       transliteration: 'Khatkayudhaya',
       mantraSanskrit: 'ॐ खट्कायुधाय नमः',
       mantra: 'Om Khatkayudhaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Khatkayudhaya'
     },
     {
       number: 66,
@@ -536,7 +536,7 @@ export const kuberAshtottaram = {
       transliteration: 'Vashine',
       mantraSanskrit: 'ॐ वशिने नमः',
       mantra: 'Om Vashine Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Vashine'
     },
     {
       number: 67,
@@ -544,7 +544,7 @@ export const kuberAshtottaram = {
       transliteration: 'Ishanadaksha Parsvasthaya',
       mantraSanskrit: 'ॐ ईशानदक्ष पार्स्वस्थाय नमः',
       mantra: 'Om Ishanadaksha Parsvasthaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Ishanadaksha Parsvasthaya)'
     },
     {
       number: 68,
@@ -552,7 +552,7 @@ export const kuberAshtottaram = {
       transliteration: 'Vayuvaya Samasrayaya',
       mantraSanskrit: 'ॐ वायुवाय समास्रयाय नमः',
       mantra: 'Om Vayuvaya Samasrayaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Vayuvaya Samasrayaya'
     },
     {
       number: 69,
@@ -560,7 +560,7 @@ export const kuberAshtottaram = {
       transliteration: 'Dharmamargaisnirataya',
       mantraSanskrit: 'ॐ धर्ममार्गैस्निरताय नमः',
       mantra: 'Om Dharmamargaisnirataya Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Dharmamargaisnirataya)'
     },
     {
       number: 70,
@@ -568,7 +568,7 @@ export const kuberAshtottaram = {
       transliteration: 'Dharmasammukha Samsthitaya',
       mantraSanskrit: 'ॐ धर्मसम्मुख संस्थिताय नमः',
       mantra: 'Om Dharmasammukha Samsthitaya Namah',
-      meaning: ''
+      meaning: 'Of serene and radiant countenance (Dharmasammukha Samsthitaya)'
     },
     {
       number: 71,
@@ -576,7 +576,7 @@ export const kuberAshtottaram = {
       transliteration: 'Nityeshvaraya',
       mantraSanskrit: 'ॐ नित्येश्वराय नमः',
       mantra: 'Om Nityeshvaraya Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Nityeshvaraya)'
     },
     {
       number: 72,
@@ -584,7 +584,7 @@ export const kuberAshtottaram = {
       transliteration: 'Dhanadhayakshaya',
       mantraSanskrit: 'ॐ धनाधयक्षाय नमः',
       mantra: 'Om Dhanadhayakshaya Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Dhanadhayakshaya)'
     },
     {
       number: 73,
@@ -592,7 +592,7 @@ export const kuberAshtottaram = {
       transliteration: 'Ashtalakshmyashritalayaya',
       mantraSanskrit: 'ॐ अष्टलक्ष्म्याश्रितलयाय नमः',
       mantra: 'Om Ashtalakshmyashritalayaya Namah',
-      meaning: ''
+      meaning: 'Compassionate refuge and protector of devoted souls (Ashtalakshmyashritalayaya)'
     },
     {
       number: 74,
@@ -600,7 +600,7 @@ export const kuberAshtottaram = {
       transliteration: 'Manushya Dharmanyai',
       mantraSanskrit: 'ॐ मनुष्य धर्मण्यै नमः',
       mantra: 'Om Manushya Dharmanyai Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Manushya Dharmanyai)'
     },
     {
       number: 75,
@@ -608,7 +608,7 @@ export const kuberAshtottaram = {
       transliteration: 'Sakritaya',
       mantraSanskrit: 'ॐ सकृताय नमः',
       mantra: 'Om Sakritaya Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Sakritaya)'
     },
     {
       number: 76,
@@ -616,7 +616,7 @@ export const kuberAshtottaram = {
       transliteration: 'Kosha Lakshmi Samashritaya',
       mantraSanskrit: 'ॐ कोष लक्ष्मी समाश्रिताय नमः',
       mantra: 'Om Kosha Lakshmi Samashritaya Namah',
-      meaning: ''
+      meaning: 'Compassionate refuge and protector of devoted souls (Kosha Lakshmi Samashritaya)'
     },
     {
       number: 77,
@@ -624,7 +624,7 @@ export const kuberAshtottaram = {
       transliteration: 'Dhanalakshmi Nityavasaya',
       mantraSanskrit: 'ॐ धनलक्ष्मी नित्यवासाय नमः',
       mantra: 'Om Dhanalakshmi Nityavasaya Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Dhanalakshmi Nityavasaya)'
     },
     {
       number: 78,
@@ -632,7 +632,7 @@ export const kuberAshtottaram = {
       transliteration: 'Dhanyalakshminivasa Bhuvaye',
       mantraSanskrit: 'ॐ धान्यलक्ष्मीनिवास भुवये नमः',
       mantra: 'Om Dhanyalakshminivasa Bhuvaye Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Dhanyalakshminivasa Bhuvaye)'
     },
     {
       number: 79,
@@ -640,7 +640,7 @@ export const kuberAshtottaram = {
       transliteration: 'Ashtalakshmi Sadavasaya',
       mantraSanskrit: 'ॐ अश्तलक्ष्मी सदवासाय नमः',
       mantra: 'Om Ashtalakshmi Sadavasaya Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Ashtalakshmi Sadavasaya)'
     },
     {
       number: 80,
@@ -648,7 +648,7 @@ export const kuberAshtottaram = {
       transliteration: 'Gajalakshmi Sthiralayaya',
       mantraSanskrit: 'ॐ गजलक्ष्मी स्थिरालयाय नमः',
       mantra: 'Om Gajalakshmi Sthiralayaya Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Gajalakshmi Sthiralayaya)'
     },
     {
       number: 81,
@@ -656,7 +656,7 @@ export const kuberAshtottaram = {
       transliteration: 'Rajyalakshmijanmagehaya',
       mantraSanskrit: 'ॐ राज्यलक्ष्मीजन्मगेहाय नमः',
       mantra: 'Om Rajyalakshmijanmagehaya Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Rajyalakshmijanmagehaya)'
     },
     {
       number: 82,
@@ -664,7 +664,7 @@ export const kuberAshtottaram = {
       transliteration: 'Dhairyalakshmi-kripashrayaya',
       mantraSanskrit: 'ॐ धैर्यलक्ष्मी-कृपाश्रयाय नमः',
       mantra: 'Om Dhairyalakshmi-kripashrayaya Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Dhairyalakshmi-kripashrayaya)'
     },
     {
       number: 83,
@@ -672,7 +672,7 @@ export const kuberAshtottaram = {
       transliteration: 'Akhandaishvarya Samyuktaya',
       mantraSanskrit: 'ॐ अखण्डैश्वर्य संयुक्ताय नमः',
       mantra: 'Om Akhandaishvarya Samyuktaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Akhandaishvarya Samyuktaya'
     },
     {
       number: 84,
@@ -680,7 +680,7 @@ export const kuberAshtottaram = {
       transliteration: 'Nityanandaya',
       mantraSanskrit: 'ॐ नित्यानन्दाय नमः',
       mantra: 'Om Nityanandaya Namah',
-      meaning: ''
+      meaning: 'Eternal, imperishable, and beyond time (Nityanandaya)'
     },
     {
       number: 85,
@@ -688,7 +688,7 @@ export const kuberAshtottaram = {
       transliteration: 'Sukhashrayaya',
       mantraSanskrit: 'ॐ सुखाश्रयाय नमः',
       mantra: 'Om Sukhashrayaya Namah',
-      meaning: ''
+      meaning: 'Fountain of supreme spiritual bliss and joy (Sukhashrayaya)'
     },
     {
       number: 86,
@@ -696,7 +696,7 @@ export const kuberAshtottaram = {
       transliteration: 'Nityatriptaya',
       mantraSanskrit: 'ॐ नित्यतृप्ताय नमः',
       mantra: 'Om Nityatriptaya Namah',
-      meaning: ''
+      meaning: 'Eternal, imperishable, and beyond time (Nityatriptaya)'
     },
     {
       number: 87,
@@ -704,7 +704,7 @@ export const kuberAshtottaram = {
       transliteration: 'Nidhittarai',
       mantraSanskrit: 'ॐ निधित्तरै नमः',
       mantra: 'Om Nidhittarai Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Nidhittarai)'
     },
     {
       number: 88,
@@ -712,7 +712,7 @@ export const kuberAshtottaram = {
       transliteration: 'Nirashaya',
       mantraSanskrit: 'ॐ निराशाय नमः',
       mantra: 'Om Nirashaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Nirashaya'
     },
     {
       number: 89,
@@ -720,7 +720,7 @@ export const kuberAshtottaram = {
       transliteration: 'Nirupadravaya',
       mantraSanskrit: 'ॐ निरुपद्रवाय नमः',
       mantra: 'Om Nirupadravaya Namah',
-      meaning: ''
+      meaning: 'Manifesting a sacred form of beauty and light (Nirupadravaya)'
     },
     {
       number: 90,
@@ -728,7 +728,7 @@ export const kuberAshtottaram = {
       transliteration: 'Nityakamaya',
       mantraSanskrit: 'ॐ नित्यकामाय नमः',
       mantra: 'Om Nityakamaya Namah',
-      meaning: ''
+      meaning: 'Eternal, imperishable, and beyond time (Nityakamaya)'
     },
     {
       number: 91,
@@ -736,7 +736,7 @@ export const kuberAshtottaram = {
       transliteration: 'Nirakankshaya',
       mantraSanskrit: 'ॐ निराकाङ्क्षाय नमः',
       mantra: 'Om Nirakankshaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Nirakankshaya'
     },
     {
       number: 92,
@@ -744,7 +744,7 @@ export const kuberAshtottaram = {
       transliteration: 'Nirupadhikavasabhuvaye',
       mantraSanskrit: 'ॐ निरूपाधिकवासभुवये नमः',
       mantra: 'Om Nirupadhikavasabhuvaye Namah',
-      meaning: ''
+      meaning: 'Manifesting a sacred form of beauty and light (Nirupadhikavasabhuvaye)'
     },
     {
       number: 93,
@@ -752,7 +752,7 @@ export const kuberAshtottaram = {
       transliteration: 'Shantaya',
       mantraSanskrit: 'ॐ शान्ताय नमः',
       mantra: 'Om Shantaya Namah',
-      meaning: ''
+      meaning: 'Embodiment of serene peace and inner tranquility (Shantaya)'
     },
     {
       number: 94,
@@ -760,7 +760,7 @@ export const kuberAshtottaram = {
       transliteration: 'Sarvagunopetaya',
       mantraSanskrit: 'ॐ सर्वगुणोपेताय नमः',
       mantra: 'Om Sarvagunopetaya Namah',
-      meaning: ''
+      meaning: 'Omnipresent and all-encompassing divinity (Sarvagunopetaya)'
     },
     {
       number: 95,
@@ -768,7 +768,7 @@ export const kuberAshtottaram = {
       transliteration: 'Sarvajnaya',
       mantraSanskrit: 'ॐ सर्वज्ञाय नमः',
       mantra: 'Om Sarvajnaya Namah',
-      meaning: ''
+      meaning: 'Omnipresent and all-encompassing divinity (Sarvajnaya)'
     },
     {
       number: 96,
@@ -776,7 +776,7 @@ export const kuberAshtottaram = {
       transliteration: 'Sarvasammataya',
       mantraSanskrit: 'ॐ सर्वसम्मताय नमः',
       mantra: 'Om Sarvasammataya Namah',
-      meaning: ''
+      meaning: 'Omnipresent and all-encompassing divinity (Sarvasammataya)'
     },
     {
       number: 97,
@@ -784,7 +784,7 @@ export const kuberAshtottaram = {
       transliteration: 'Sarvanikarunapatraya',
       mantraSanskrit: 'ॐ सर्वाणिकरुणापात्राय नमः',
       mantra: 'Om Sarvanikarunapatraya Namah',
-      meaning: ''
+      meaning: 'Omnipresent and all-encompassing divinity (Sarvanikarunapatraya)'
     },
     {
       number: 98,
@@ -792,7 +792,7 @@ export const kuberAshtottaram = {
       transliteration: 'Sadanandakripalayaya',
       mantraSanskrit: 'ॐ सदानन्दक्रिपालयाय नमः',
       mantra: 'Om Sadanandakripalayaya Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Sadanandakripalayaya)'
     },
     {
       number: 99,
@@ -800,7 +800,7 @@ export const kuberAshtottaram = {
       transliteration: 'Gandharvakulasamsevyaya',
       mantraSanskrit: 'ॐ गन्धर्वकुलसंसेव्याय नमः',
       mantra: 'Om Gandharvakulasamsevyaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Gandharvakulasamsevyaya'
     },
     {
       number: 100,
@@ -808,7 +808,7 @@ export const kuberAshtottaram = {
       transliteration: 'Saugandhikakusumapriyaya',
       mantraSanskrit: 'ॐ सौगन्धिककुसुमप्रियाय नमः',
       mantra: 'Om Saugandhikakusumapriyaya Namah',
-      meaning: ''
+      meaning: 'Beloved of the pure-hearted and enchanting in grace (Saugandhikakusumapriyaya)'
     },
     {
       number: 101,
@@ -816,7 +816,7 @@ export const kuberAshtottaram = {
       transliteration: 'Svarnanagarivasaya',
       mantraSanskrit: 'ॐ स्वर्णनगरीवासाय नमः',
       mantra: 'Om Svarnanagarivasaya Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Svarnanagarivasaya)'
     },
     {
       number: 102,
@@ -824,7 +824,7 @@ export const kuberAshtottaram = {
       transliteration: 'Nidhipitha Samasthayai',
       mantraSanskrit: 'ॐ निधिपीठ समस्थायै नमः',
       mantra: 'Om Nidhipitha Samasthayai Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Nidhipitha Samasthayai)'
     },
     {
       number: 103,
@@ -832,7 +832,7 @@ export const kuberAshtottaram = {
       transliteration: 'Mahameruttarasthayai',
       mantraSanskrit: 'ॐ महामेरुत्तरस्थायै नमः',
       mantra: 'Om Mahameruttarasthayai Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Mahameruttarasthayai)'
     },
     {
       number: 104,
@@ -840,7 +840,7 @@ export const kuberAshtottaram = {
       transliteration: 'Maharshiganasamstutaya',
       mantraSanskrit: 'ॐ महर्षिगणसंस्तुताय नमः',
       mantra: 'Om Maharshiganasamstutaya Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Maharshiganasamstutaya)'
     },
     {
       number: 105,
@@ -848,7 +848,7 @@ export const kuberAshtottaram = {
       transliteration: 'Tushtaya',
       mantraSanskrit: 'ॐ तुष्टाय नमः',
       mantra: 'Om Tushtaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Tushtaya'
     },
     {
       number: 106,
@@ -856,7 +856,7 @@ export const kuberAshtottaram = {
       transliteration: 'Shurpanakajyeshthaya',
       mantraSanskrit: 'ॐ शूर्पणकज्येष्ठाय नमः',
       mantra: 'Om Shurpanakajyeshthaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kuber revered as Shurpanakajyeshthaya'
     },
     {
       number: 107,
@@ -864,7 +864,7 @@ export const kuberAshtottaram = {
       transliteration: 'Shivapujarataya',
       mantraSanskrit: 'ॐ शिवपूजारताय नमः',
       mantra: 'Om Shivapujarataya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Shivapujarataya)'
     },
     {
       number: 108,
@@ -872,7 +872,7 @@ export const kuberAshtottaram = {
       transliteration: 'Anaghaya',
       mantraSanskrit: 'ॐ अनघाय नमः',
       mantra: 'Om Anaghaya Namah',
-      meaning: ''
+      meaning: 'Purifier who dissolves sins and karmic obstacles (Anaghaya)'
     },
     {
       number: 109,
@@ -880,7 +880,7 @@ export const kuberAshtottaram = {
       transliteration: 'Rajayogasamayuktaya',
       mantraSanskrit: 'ॐ राजयोगसमायुक्ताय नमः',
       mantra: 'Om Rajayogasamayuktaya Namah',
-      meaning: ''
+      meaning: 'Master of yoga, meditation, and spiritual realization (Rajayogasamayuktaya)'
     },
     {
       number: 110,
@@ -888,7 +888,7 @@ export const kuberAshtottaram = {
       transliteration: 'Rajasekharapujyaya',
       mantraSanskrit: 'ॐ राजसेखरपूज्याय नमः',
       mantra: 'Om Rajasekharapujyaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Rajasekharapujyaya)'
     },
     {
       number: 111,
@@ -896,7 +896,7 @@ export const kuberAshtottaram = {
       transliteration: 'Rajarajaya',
       mantraSanskrit: 'ॐ राजराजाय नमः',
       mantra: 'Om Rajarajaya Namah',
-      meaning: ''
+      meaning: 'Ever-victorious bestower of triumph in righteous endeavors (Rajarajaya)'
     }
   ]
 };

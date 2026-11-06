@@ -16,7 +16,7 @@ export const gangaAshtottaram = {
       transliteration: 'Gangayai',
       mantraSanskrit: 'ॐ गङ्गायै नमः',
       mantra: 'Om Gangayai Namah',
-      meaning: ''
+      meaning: 'Sacred Goddess Ganga, purifier of the three worlds'
     },
     {
       number: 2,
@@ -24,7 +24,7 @@ export const gangaAshtottaram = {
       transliteration: 'Tripathagadevyai',
       mantraSanskrit: 'ॐ त्रिपथगादेव्यै नमः',
       mantra: 'Om Tripathagadevyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Tripathagadevyai'
     },
     {
       number: 3,
@@ -32,7 +32,7 @@ export const gangaAshtottaram = {
       transliteration: 'Shambhumauliviharinyai',
       mantraSanskrit: 'ॐ शम्भुमौलिविहारिण्यै नमः',
       mantra: 'Om Shambhumauliviharinyai Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Shambhumauliviharinyai)'
     },
     {
       number: 4,
@@ -40,7 +40,7 @@ export const gangaAshtottaram = {
       transliteration: 'Jahnavyai',
       mantraSanskrit: 'ॐ जाह्नव्यै नमः',
       mantra: 'Om Jahnavyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Jahnavyai'
     },
     {
       number: 5,
@@ -48,7 +48,7 @@ export const gangaAshtottaram = {
       transliteration: 'Papahantryai',
       mantraSanskrit: 'ॐ पापहन्त्र्यै नमः',
       mantra: 'Om Papahantryai Namah',
-      meaning: ''
+      meaning: 'Purifier who dissolves sins and karmic obstacles (Papahantryai)'
     },
     {
       number: 6,
@@ -56,7 +56,7 @@ export const gangaAshtottaram = {
       transliteration: 'Mahapatakanashinyai',
       mantraSanskrit: 'ॐ महापातकनाशिन्यै नमः',
       mantra: 'Om Mahapatakanashinyai Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Mahapatakanashinyai)'
     },
     {
       number: 7,
@@ -64,7 +64,7 @@ export const gangaAshtottaram = {
       transliteration: 'Patitoddharinyai',
       mantraSanskrit: 'ॐ पतितोद्धारिण्यै नमः',
       mantra: 'Om Patitoddharinyai Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Patitoddharinyai)'
     },
     {
       number: 8,
@@ -72,7 +72,7 @@ export const gangaAshtottaram = {
       transliteration: 'Srotasvatyai',
       mantraSanskrit: 'ॐ स्रोतस्वत्यै नमः',
       mantra: 'Om Srotasvatyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Srotasvatyai'
     },
     {
       number: 9,
@@ -80,7 +80,7 @@ export const gangaAshtottaram = {
       transliteration: 'Paramaveginyai',
       mantraSanskrit: 'ॐ परमवेगिन्यै नमः',
       mantra: 'Om Paramaveginyai Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Paramaveginyai)'
     },
     {
       number: 10,
@@ -88,7 +88,7 @@ export const gangaAshtottaram = {
       transliteration: 'Vishnupadabjasambhutayai',
       mantraSanskrit: 'ॐ विष्णुपादाब्जसम्भूतायै नमः',
       mantra: 'Om Vishnupadabjasambhutayai Namah',
-      meaning: ''
+      meaning: 'Born from the lotus feet of Lord Vishnu'
     },
     {
       number: 11,
@@ -96,7 +96,7 @@ export const gangaAshtottaram = {
       transliteration: 'Vishnudehakritalayayai',
       mantraSanskrit: 'ॐ विष्णुदेहकृतालयायै नमः',
       mantra: 'Om Vishnudehakritalayayai Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Vishnudehakritalayayai)'
     },
     {
       number: 12,
@@ -104,7 +104,7 @@ export const gangaAshtottaram = {
       transliteration: 'Svargabdhinilayayai',
       mantraSanskrit: 'ॐ स्वर्गाब्धिनिलयायै नमः',
       mantra: 'Om Svargabdhinilayayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Svargabdhinilayayai'
     },
     {
       number: 13,
@@ -112,7 +112,7 @@ export const gangaAshtottaram = {
       transliteration: 'Sadhvyai',
       mantraSanskrit: 'ॐ साध्व्यै नमः',
       mantra: 'Om Sadhvyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Sadhvyai'
     },
     {
       number: 14,
@@ -120,7 +120,7 @@ export const gangaAshtottaram = {
       transliteration: 'Svarnadyai',
       mantraSanskrit: 'ॐ स्वर्णद्यै नमः',
       mantra: 'Om Svarnadyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Svarnadyai'
     },
     {
       number: 15,
@@ -128,7 +128,7 @@ export const gangaAshtottaram = {
       transliteration: 'Suranimnagayai',
       mantraSanskrit: 'ॐ सुरनिम्नगायै नमः',
       mantra: 'Om Suranimnagayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Suranimnagayai'
     },
     {
       number: 16,
@@ -136,7 +136,7 @@ export const gangaAshtottaram = {
       transliteration: 'Mandakinyai',
       mantraSanskrit: 'ॐ मन्दाकिन्यै नमः',
       mantra: 'Om Mandakinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Mandakinyai'
     },
     {
       number: 17,
@@ -144,7 +144,7 @@ export const gangaAshtottaram = {
       transliteration: 'Mahavegayai',
       mantraSanskrit: 'ॐ महावेगायै नमः',
       mantra: 'Om Mahavegayai Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Mahavegayai)'
     },
     {
       number: 18,
@@ -152,7 +152,7 @@ export const gangaAshtottaram = {
       transliteration: 'Svarnashringaprabhedinyai',
       mantraSanskrit: 'ॐ स्वर्णशृङ्गप्रभेदिन्यै नमः',
       mantra: 'Om Svarnashringaprabhedinyai Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Svarnashringaprabhedinyai)'
     },
     {
       number: 19,
@@ -160,7 +160,7 @@ export const gangaAshtottaram = {
       transliteration: 'Devapujyatamayai',
       mantraSanskrit: 'ॐ देवपूज्यतमायै नमः',
       mantra: 'Om Devapujyatamayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Devapujyatamayai'
     },
     {
       number: 20,
@@ -168,7 +168,7 @@ export const gangaAshtottaram = {
       transliteration: 'Divyayai',
       mantraSanskrit: 'ॐ दिव्यायै नमः',
       mantra: 'Om Divyayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Divyayai'
     },
     {
       number: 21,
@@ -176,7 +176,7 @@ export const gangaAshtottaram = {
       transliteration: 'Divyasthananivasinyai',
       mantraSanskrit: 'ॐ दिव्यस्थाननिवासिन्यै नमः',
       mantra: 'Om Divyasthananivasinyai Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Divyasthananivasinyai)'
     },
     {
       number: 22,
@@ -184,7 +184,7 @@ export const gangaAshtottaram = {
       transliteration: 'Sucharuniraruchirayai',
       mantraSanskrit: 'ॐ सुचारुनीररुचिरायै नमः',
       mantra: 'Om Sucharuniraruchirayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Sucharuniraruchirayai'
     },
     {
       number: 23,
@@ -192,7 +192,7 @@ export const gangaAshtottaram = {
       transliteration: 'Mahaparvatabhedinyai',
       mantraSanskrit: 'ॐ महापर्वतभेदिन्यै नमः',
       mantra: 'Om Mahaparvatabhedinyai Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Mahaparvatabhedinyai)'
     },
     {
       number: 24,
@@ -200,7 +200,7 @@ export const gangaAshtottaram = {
       transliteration: 'Bhagirathyai',
       mantraSanskrit: 'ॐ भागीरथ्यै नमः',
       mantra: 'Om Bhagirathyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Bhagirathyai'
     },
     {
       number: 25,
@@ -208,7 +208,7 @@ export const gangaAshtottaram = {
       transliteration: 'Bhagavatyai',
       mantraSanskrit: 'ॐ भगवत्यै नमः',
       mantra: 'Om Bhagavatyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Bhagavatyai'
     },
     {
       number: 26,
@@ -216,7 +216,7 @@ export const gangaAshtottaram = {
       transliteration: 'Mahamokshapradayinyai',
       mantraSanskrit: 'ॐ महामोक्षप्रदायिन्यै नमः',
       mantra: 'Om Mahamokshapradayinyai Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Mahamokshapradayinyai)'
     },
     {
       number: 27,
@@ -224,7 +224,7 @@ export const gangaAshtottaram = {
       transliteration: 'Sindhusangagatayai',
       mantraSanskrit: 'ॐ सिन्धुसङ्गगतायै नमः',
       mantra: 'Om Sindhusangagatayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Sindhusangagatayai'
     },
     {
       number: 28,
@@ -232,7 +232,7 @@ export const gangaAshtottaram = {
       transliteration: 'Shuddhayai',
       mantraSanskrit: 'ॐ शुद्धायै नमः',
       mantra: 'Om Shuddhayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Shuddhayai'
     },
     {
       number: 29,
@@ -240,7 +240,7 @@ export const gangaAshtottaram = {
       transliteration: 'Rasatalanivasinyai',
       mantraSanskrit: 'ॐ रसातलनिवासिन्यै नमः',
       mantra: 'Om Rasatalanivasinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Rasatalanivasinyai'
     },
     {
       number: 30,
@@ -248,7 +248,7 @@ export const gangaAshtottaram = {
       transliteration: 'Mahabhogayai',
       mantraSanskrit: 'ॐ महाभोगायै नमः',
       mantra: 'Om Mahabhogayai Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Mahabhogayai)'
     },
     {
       number: 31,
@@ -256,7 +256,7 @@ export const gangaAshtottaram = {
       transliteration: 'Bhogavatyai',
       mantraSanskrit: 'ॐ भोगवत्यै नमः',
       mantra: 'Om Bhogavatyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Bhogavatyai'
     },
     {
       number: 32,
@@ -264,7 +264,7 @@ export const gangaAshtottaram = {
       transliteration: 'Subhaganandadayinyai',
       mantraSanskrit: 'ॐ सुभगानन्ददायिन्यै नमः',
       mantra: 'Om Subhaganandadayinyai Namah',
-      meaning: ''
+      meaning: 'Praised through sacred hymns, mantras, and cosmic sound (Subhaganandadayinyai)'
     },
     {
       number: 33,
@@ -272,7 +272,7 @@ export const gangaAshtottaram = {
       transliteration: 'Mahapapaharayai',
       mantraSanskrit: 'ॐ महापापहरायै नमः',
       mantra: 'Om Mahapapaharayai Namah',
-      meaning: ''
+      meaning: 'Purifier who dissolves sins and karmic obstacles (Mahapapaharayai)'
     },
     {
       number: 34,
@@ -280,7 +280,7 @@ export const gangaAshtottaram = {
       transliteration: 'Punyayai',
       mantraSanskrit: 'ॐ पुण्यायै नमः',
       mantra: 'Om Punyayai Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Punyayai)'
     },
     {
       number: 35,
@@ -288,7 +288,7 @@ export const gangaAshtottaram = {
       transliteration: 'Paramahladadayinyai',
       mantraSanskrit: 'ॐ परमाह्लाददायिन्यै नमः',
       mantra: 'Om Paramahladadayinyai Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Paramahladadayinyai)'
     },
     {
       number: 36,
@@ -296,7 +296,7 @@ export const gangaAshtottaram = {
       transliteration: 'Parvatyai',
       mantraSanskrit: 'ॐ पार्वत्यै नमः',
       mantra: 'Om Parvatyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Parvatyai'
     },
     {
       number: 37,
@@ -304,7 +304,7 @@ export const gangaAshtottaram = {
       transliteration: 'Shivapatnyai',
       mantraSanskrit: 'ॐ शिवपत्न्यै नमः',
       mantra: 'Om Shivapatnyai Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Shivapatnyai)'
     },
     {
       number: 38,
@@ -312,7 +312,7 @@ export const gangaAshtottaram = {
       transliteration: 'Shivashirshagatalayayai',
       mantraSanskrit: 'ॐ शिवशीर्षगतालयायै नमः',
       mantra: 'Om Shivashirshagatalayayai Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Shivashirshagatalayayai)'
     },
     {
       number: 39,
@@ -320,7 +320,7 @@ export const gangaAshtottaram = {
       transliteration: 'Shambhorjatamadhyagatayai',
       mantraSanskrit: 'ॐ शम्भोर्जटामध्यगतायै नमः',
       mantra: 'Om Shambhorjatamadhyagatayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Shambhorjatamadhyagatayai'
     },
     {
       number: 40,
@@ -328,7 +328,7 @@ export const gangaAshtottaram = {
       transliteration: 'Nirmalayai',
       mantraSanskrit: 'ॐ निर्मलायै नमः',
       mantra: 'Om Nirmalayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Nirmalayai'
     },
     {
       number: 41,
@@ -336,7 +336,7 @@ export const gangaAshtottaram = {
       transliteration: 'Nirmalananayai',
       mantraSanskrit: 'ॐ निर्मलाननायै नमः',
       mantra: 'Om Nirmalananayai Namah',
-      meaning: ''
+      meaning: 'Of serene and radiant countenance (Nirmalananayai)'
     },
     {
       number: 42,
@@ -344,7 +344,7 @@ export const gangaAshtottaram = {
       transliteration: 'Mahakalushahantryai',
       mantraSanskrit: 'ॐ महाकलुषहन्त्र्यै नमः',
       mantra: 'Om Mahakalushahantryai Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Mahakalushahantryai)'
     },
     {
       number: 43,
@@ -352,7 +352,7 @@ export const gangaAshtottaram = {
       transliteration: 'Jahnuputryai',
       mantraSanskrit: 'ॐ जह्नुपुत्र्यै नमः',
       mantra: 'Om Jahnuputryai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Jahnuputryai'
     },
     {
       number: 44,
@@ -360,7 +360,7 @@ export const gangaAshtottaram = {
       transliteration: 'Jagatpriyayai',
       mantraSanskrit: 'ॐ जगत्प्रियायै नमः',
       mantra: 'Om Jagatpriyayai Namah',
-      meaning: ''
+      meaning: 'Beloved of the pure-hearted and enchanting in grace (Jagatpriyayai)'
     },
     {
       number: 45,
@@ -368,7 +368,7 @@ export const gangaAshtottaram = {
       transliteration: 'Trailokyapavanyai',
       mantraSanskrit: 'ॐ त्रैलोक्यपावन्यै नमः',
       mantra: 'Om Trailokyapavanyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Trailokyapavanyai'
     },
     {
       number: 46,
@@ -376,7 +376,7 @@ export const gangaAshtottaram = {
       transliteration: 'Purnayai',
       mantraSanskrit: 'ॐ पूर्णायै नमः',
       mantra: 'Om Purnayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Purnayai'
     },
     {
       number: 47,
@@ -384,7 +384,7 @@ export const gangaAshtottaram = {
       transliteration: 'Purnabrahmasvarupinyai',
       mantraSanskrit: 'ॐ पूर्णब्रह्मस्वरूपिण्यै नमः',
       mantra: 'Om Purnabrahmasvarupinyai Namah',
-      meaning: ''
+      meaning: 'Architect of cosmic creation and sacred order (Purnabrahmasvarupinyai)'
     },
     {
       number: 48,
@@ -392,7 +392,7 @@ export const gangaAshtottaram = {
       transliteration: 'Jagatpujyatamayai',
       mantraSanskrit: 'ॐ जगत्पूज्यतमायै नमः',
       mantra: 'Om Jagatpujyatamayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Jagatpujyatamayai'
     },
     {
       number: 49,
@@ -400,7 +400,7 @@ export const gangaAshtottaram = {
       transliteration: 'Charurupinyai',
       mantraSanskrit: 'ॐ चारुरूपिण्यै नमः',
       mantra: 'Om Charurupinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Charurupinyai'
     },
     {
       number: 50,
@@ -408,7 +408,7 @@ export const gangaAshtottaram = {
       transliteration: 'Jagadambikayai',
       mantraSanskrit: 'ॐ जगदम्बिकायै नमः',
       mantra: 'Om Jagadambikayai Namah',
-      meaning: ''
+      meaning: 'Guardian and sustainer of the cosmic worlds (Jagadambikayai)'
     },
     {
       number: 51,
@@ -416,7 +416,7 @@ export const gangaAshtottaram = {
       transliteration: 'Lokanugrahakartryai',
       mantraSanskrit: 'ॐ लोकानुग्रहकर्त्र्यै नमः',
       mantra: 'Om Lokanugrahakartryai Namah',
-      meaning: ''
+      meaning: 'Guardian and sustainer of the cosmic worlds (Lokanugrahakartryai)'
     },
     {
       number: 52,
@@ -424,7 +424,7 @@ export const gangaAshtottaram = {
       transliteration: 'Sarvalokadayaparayai',
       mantraSanskrit: 'ॐ सर्वलोकदयापरायै नमः',
       mantra: 'Om Sarvalokadayaparayai Namah',
-      meaning: ''
+      meaning: 'Guardian and sustainer of the cosmic worlds (Sarvalokadayaparayai)'
     },
     {
       number: 53,
@@ -432,7 +432,7 @@ export const gangaAshtottaram = {
       transliteration: 'Yamyabhitiharayai',
       mantraSanskrit: 'ॐ याम्यभीतिहरायै नमः',
       mantra: 'Om Yamyabhitiharayai Namah',
-      meaning: ''
+      meaning: 'Remover of fear, sorrow, and distress (Yamyabhitiharayai)'
     },
     {
       number: 54,
@@ -440,7 +440,7 @@ export const gangaAshtottaram = {
       transliteration: 'Tarayai',
       mantraSanskrit: 'ॐ तारायै नमः',
       mantra: 'Om Tarayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Tarayai'
     },
     {
       number: 55,
@@ -448,7 +448,7 @@ export const gangaAshtottaram = {
       transliteration: 'Parayai',
       mantraSanskrit: 'ॐ पारायै नमः',
       mantra: 'Om Parayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Parayai'
     },
     {
       number: 56,
@@ -456,7 +456,7 @@ export const gangaAshtottaram = {
       transliteration: 'Samsaratarinyai',
       mantraSanskrit: 'ॐ संसारतारिण्यै नमः',
       mantra: 'Om Samsaratarinyai Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Samsaratarinyai)'
     },
     {
       number: 57,
@@ -464,7 +464,7 @@ export const gangaAshtottaram = {
       transliteration: 'Brahmandabhedinyai',
       mantraSanskrit: 'ॐ ब्रह्माण्डभेदिन्यै नमः',
       mantra: 'Om Brahmandabhedinyai Namah',
-      meaning: ''
+      meaning: 'Architect of cosmic creation and sacred order (Brahmandabhedinyai)'
     },
     {
       number: 58,
@@ -472,7 +472,7 @@ export const gangaAshtottaram = {
       transliteration: 'Brahmakamandalukritalayayai',
       mantraSanskrit: 'ॐ ब्रह्मकमण्डलुकृतालयायै नमः',
       mantra: 'Om Brahmakamandalukritalayayai Namah',
-      meaning: ''
+      meaning: 'Architect of cosmic creation and sacred order (Brahmakamandalukritalayayai)'
     },
     {
       number: 59,
@@ -480,7 +480,7 @@ export const gangaAshtottaram = {
       transliteration: 'Saubhagyadayinyai',
       mantraSanskrit: 'ॐ सौभाग्यदायिन्यै नमः',
       mantra: 'Om Saubhagyadayinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Saubhagyadayinyai'
     },
     {
       number: 60,
@@ -488,7 +488,7 @@ export const gangaAshtottaram = {
       transliteration: 'Pumsam Nirvanapadadayinyai',
       mantraSanskrit: 'ॐ पुंसां निर्वाणपददायिन्यै नमः',
       mantra: 'Om Pumsam Nirvanapadadayinyai Namah',
-      meaning: ''
+      meaning: 'Whose lotus feet are the ultimate sanctuary of seekers (Pumsam Nirvanapadadayinyai)'
     },
     {
       number: 61,
@@ -496,7 +496,7 @@ export const gangaAshtottaram = {
       transliteration: 'Achintyacharitayai',
       mantraSanskrit: 'ॐ अचिन्त्यचरितायै नमः',
       mantra: 'Om Achintyacharitayai Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Achintyacharitayai)'
     },
     {
       number: 62,
@@ -504,7 +504,7 @@ export const gangaAshtottaram = {
       transliteration: 'Charuruchiratimanoharayai',
       mantraSanskrit: 'ॐ चारुरुचिरातिमनोहरायै नमः',
       mantra: 'Om Charuruchiratimanoharayai Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Charuruchiratimanoharayai)'
     },
     {
       number: 63,
@@ -512,7 +512,7 @@ export const gangaAshtottaram = {
       transliteration: 'Martyasthayai',
       mantraSanskrit: 'ॐ मर्त्यस्थायै नमः',
       mantra: 'Om Martyasthayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Martyasthayai'
     },
     {
       number: 64,
@@ -520,7 +520,7 @@ export const gangaAshtottaram = {
       transliteration: 'Mrityubhayahayai',
       mantraSanskrit: 'ॐ मृत्युभयहायै नमः',
       mantra: 'Om Mrityubhayahayai Namah',
-      meaning: ''
+      meaning: 'Remover of fear, sorrow, and distress (Mrityubhayahayai)'
     },
     {
       number: 65,
@@ -528,7 +528,7 @@ export const gangaAshtottaram = {
       transliteration: 'Svargamokshapradayinyai',
       mantraSanskrit: 'ॐ स्वर्गमोक्षप्रदायिन्यै नमः',
       mantra: 'Om Svargamokshapradayinyai Namah',
-      meaning: ''
+      meaning: 'Bestower of ultimate spiritual liberation (Moksha) (Svargamokshapradayinyai)'
     },
     {
       number: 66,
@@ -536,7 +536,7 @@ export const gangaAshtottaram = {
       transliteration: 'Papapaharinyai',
       mantraSanskrit: 'ॐ पापापहारिण्यै नमः',
       mantra: 'Om Papapaharinyai Namah',
-      meaning: ''
+      meaning: 'Purifier who dissolves sins and karmic obstacles (Papapaharinyai)'
     },
     {
       number: 67,
@@ -544,7 +544,7 @@ export const gangaAshtottaram = {
       transliteration: 'Duracharinyai',
       mantraSanskrit: 'ॐ दूरचारिण्यै नमः',
       mantra: 'Om Duracharinyai Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Duracharinyai)'
     },
     {
       number: 68,
@@ -552,7 +552,7 @@ export const gangaAshtottaram = {
       transliteration: 'Vichidharinyai',
       mantraSanskrit: 'ॐ वीचिधारिण्यै नमः',
       mantra: 'Om Vichidharinyai Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Vichidharinyai)'
     },
     {
       number: 69,
@@ -560,7 +560,7 @@ export const gangaAshtottaram = {
       transliteration: 'Karunyapurnayai',
       mantraSanskrit: 'ॐ कारुण्यपूर्णायै नमः',
       mantra: 'Om Karunyapurnayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Karunyapurnayai'
     },
     {
       number: 70,
@@ -568,7 +568,7 @@ export const gangaAshtottaram = {
       transliteration: 'Karunamayyai',
       mantraSanskrit: 'ॐ करुणामय्यै नमः',
       mantra: 'Om Karunamayyai Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Karunamayyai)'
     },
     {
       number: 71,
@@ -576,7 +576,7 @@ export const gangaAshtottaram = {
       transliteration: 'Duritanashinyai',
       mantraSanskrit: 'ॐ दुरितनाशिन्यै नमः',
       mantra: 'Om Duritanashinyai Namah',
-      meaning: ''
+      meaning: 'Purifier who dissolves sins and karmic obstacles (Duritanashinyai)'
     },
     {
       number: 72,
@@ -584,7 +584,7 @@ export const gangaAshtottaram = {
       transliteration: 'Girirajasutayai',
       mantraSanskrit: 'ॐ गिरिराजसुतायै नमः',
       mantra: 'Om Girirajasutayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Girirajasutayai'
     },
     {
       number: 73,
@@ -592,7 +592,7 @@ export const gangaAshtottaram = {
       transliteration: 'Gauribhaginyai',
       mantraSanskrit: 'ॐ गौरीभगिन्यै नमः',
       mantra: 'Om Gauribhaginyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Gauribhaginyai'
     },
     {
       number: 74,
@@ -600,7 +600,7 @@ export const gangaAshtottaram = {
       transliteration: 'Girishapriyayai',
       mantraSanskrit: 'ॐ गिरिशप्रियायै नमः',
       mantra: 'Om Girishapriyayai Namah',
-      meaning: ''
+      meaning: 'Beloved of the pure-hearted and enchanting in grace (Girishapriyayai)'
     },
     {
       number: 75,
@@ -608,7 +608,7 @@ export const gangaAshtottaram = {
       transliteration: 'Menakagarbhasambhutayai',
       mantraSanskrit: 'ॐ मेनकागर्भसम्भूतायै नमः',
       mantra: 'Om Menakagarbhasambhutayai Namah',
-      meaning: ''
+      meaning: 'Radiant with the effulgence of a thousand suns (Menakagarbhasambhutayai)'
     },
     {
       number: 76,
@@ -616,7 +616,7 @@ export const gangaAshtottaram = {
       transliteration: 'Mainakabhaginipriyayai',
       mantraSanskrit: 'ॐ मैनाकभगिनीप्रियायै नमः',
       mantra: 'Om Mainakabhaginipriyayai Namah',
-      meaning: ''
+      meaning: 'Beloved of the pure-hearted and enchanting in grace (Mainakabhaginipriyayai)'
     },
     {
       number: 77,
@@ -624,7 +624,7 @@ export const gangaAshtottaram = {
       transliteration: 'Adyayai',
       mantraSanskrit: 'ॐ आद्यायै नमः',
       mantra: 'Om Adyayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Adyayai'
     },
     {
       number: 78,
@@ -632,7 +632,7 @@ export const gangaAshtottaram = {
       transliteration: 'Trilokajananyai',
       mantraSanskrit: 'ॐ त्रिलोकजनन्यै नमः',
       mantra: 'Om Trilokajananyai Namah',
-      meaning: ''
+      meaning: 'Guardian and sustainer of the cosmic worlds (Trilokajananyai)'
     },
     {
       number: 79,
@@ -640,7 +640,7 @@ export const gangaAshtottaram = {
       transliteration: 'Trailokyaparipalinyai',
       mantraSanskrit: 'ॐ त्रैलोक्यपरिपालिन्यै नमः',
       mantra: 'Om Trailokyaparipalinyai Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Trailokyaparipalinyai)'
     },
     {
       number: 80,
@@ -648,7 +648,7 @@ export const gangaAshtottaram = {
       transliteration: 'Tirthashreshthatamayai',
       mantraSanskrit: 'ॐ तीर्थश्रेष्ठतमायै नमः',
       mantra: 'Om Tirthashreshthatamayai Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Tirthashreshthatamayai)'
     },
     {
       number: 81,
@@ -656,7 +656,7 @@ export const gangaAshtottaram = {
       transliteration: 'Shreshthayai',
       mantraSanskrit: 'ॐ श्रेष्ठायै नमः',
       mantra: 'Om Shreshthayai Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Shreshthayai)'
     },
     {
       number: 82,
@@ -664,7 +664,7 @@ export const gangaAshtottaram = {
       transliteration: 'Sarvatirthamayyai',
       mantraSanskrit: 'ॐ सर्वतीर्थमय्यै नमः',
       mantra: 'Om Sarvatirthamayyai Namah',
-      meaning: ''
+      meaning: 'Omnipresent and all-encompassing divinity (Sarvatirthamayyai)'
     },
     {
       number: 83,
@@ -672,7 +672,7 @@ export const gangaAshtottaram = {
       transliteration: 'Shubhayai',
       mantraSanskrit: 'ॐ शुभायै नमः',
       mantra: 'Om Shubhayai Namah',
-      meaning: ''
+      meaning: 'Remover of fear, sorrow, and distress (Shubhayai)'
     },
     {
       number: 84,
@@ -680,7 +680,7 @@ export const gangaAshtottaram = {
       transliteration: 'Chaturvedamayyai',
       mantraSanskrit: 'ॐ चतुर्वेदमय्यै नमः',
       mantra: 'Om Chaturvedamayyai Namah',
-      meaning: ''
+      meaning: 'Knower and revealer of eternal Vedic wisdom (Chaturvedamayyai)'
     },
     {
       number: 85,
@@ -688,7 +688,7 @@ export const gangaAshtottaram = {
       transliteration: 'Sarvayai',
       mantraSanskrit: 'ॐ सर्वायै नमः',
       mantra: 'Om Sarvayai Namah',
-      meaning: ''
+      meaning: 'Omnipresent and all-encompassing divinity (Sarvayai)'
     },
     {
       number: 86,
@@ -696,7 +696,7 @@ export const gangaAshtottaram = {
       transliteration: 'Pitrisantriptidayinyai',
       mantraSanskrit: 'ॐ पितृसन्तृप्तिदायिन्यै नमः',
       mantra: 'Om Pitrisantriptidayinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Pitrisantriptidayinyai'
     },
     {
       number: 87,
@@ -704,7 +704,7 @@ export const gangaAshtottaram = {
       transliteration: 'Shivadayai',
       mantraSanskrit: 'ॐ शिवदायै नमः',
       mantra: 'Om Shivadayai Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Shivadayai)'
     },
     {
       number: 88,
@@ -712,7 +712,7 @@ export const gangaAshtottaram = {
       transliteration: 'Shivasayujyadayinyai',
       mantraSanskrit: 'ॐ शिवसायुज्यदायिन्यै नमः',
       mantra: 'Om Shivasayujyadayinyai Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Shivasayujyadayinyai)'
     },
     {
       number: 89,
@@ -720,7 +720,7 @@ export const gangaAshtottaram = {
       transliteration: 'Shivavallabhayai',
       mantraSanskrit: 'ॐ शिववल्लभायै नमः',
       mantra: 'Om Shivavallabhayai Namah',
-      meaning: ''
+      meaning: 'Remover of fear, sorrow, and distress (Shivavallabhayai)'
     },
     {
       number: 90,
@@ -728,7 +728,7 @@ export const gangaAshtottaram = {
       transliteration: 'Tejasvinyai',
       mantraSanskrit: 'ॐ तेजस्विन्यै नमः',
       mantra: 'Om Tejasvinyai Namah',
-      meaning: ''
+      meaning: 'Radiant with the effulgence of a thousand suns (Tejasvinyai)'
     },
     {
       number: 91,
@@ -736,7 +736,7 @@ export const gangaAshtottaram = {
       transliteration: 'Trinayanayai',
       mantraSanskrit: 'ॐ त्रिनयनायै नमः',
       mantra: 'Om Trinayanayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Trinayanayai'
     },
     {
       number: 92,
@@ -744,7 +744,7 @@ export const gangaAshtottaram = {
       transliteration: 'Trilochanamanoramayai',
       mantraSanskrit: 'ॐ त्रिलोचनमनोरमायै नमः',
       mantra: 'Om Trilochanamanoramayai Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Trilochanamanoramayai)'
     },
     {
       number: 93,
@@ -752,7 +752,7 @@ export const gangaAshtottaram = {
       transliteration: 'Saptadharayai',
       mantraSanskrit: 'ॐ सप्तधारायै नमः',
       mantra: 'Om Saptadharayai Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Saptadharayai)'
     },
     {
       number: 94,
@@ -760,7 +760,7 @@ export const gangaAshtottaram = {
       transliteration: 'Shatamukhyai',
       mantraSanskrit: 'ॐ शतमुख्यै नमः',
       mantra: 'Om Shatamukhyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Shatamukhyai'
     },
     {
       number: 95,
@@ -768,7 +768,7 @@ export const gangaAshtottaram = {
       transliteration: 'Sagaranvayatarinyai',
       mantraSanskrit: 'ॐ सगरान्वयतारिण्यै नमः',
       mantra: 'Om Sagaranvayatarinyai Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Sagaranvayatarinyai)'
     },
     {
       number: 96,
@@ -776,7 +776,7 @@ export const gangaAshtottaram = {
       transliteration: 'Munisevyayai',
       mantraSanskrit: 'ॐ मुनिसेव्यायै नमः',
       mantra: 'Om Munisevyayai Namah',
-      meaning: ''
+      meaning: 'Master of yoga, meditation, and spiritual realization (Munisevyayai)'
     },
     {
       number: 97,
@@ -784,7 +784,7 @@ export const gangaAshtottaram = {
       transliteration: 'Munisutayai',
       mantraSanskrit: 'ॐ मुनिसुतायै नमः',
       mantra: 'Om Munisutayai Namah',
-      meaning: ''
+      meaning: 'Master of yoga, meditation, and spiritual realization (Munisutayai)'
     },
     {
       number: 98,
@@ -792,7 +792,7 @@ export const gangaAshtottaram = {
       transliteration: 'Jahnujanuprabhedinyai',
       mantraSanskrit: 'ॐ जह्नुजानुप्रभेदिन्यै नमः',
       mantra: 'Om Jahnujanuprabhedinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Jahnujanuprabhedinyai'
     },
     {
       number: 99,
@@ -800,7 +800,7 @@ export const gangaAshtottaram = {
       transliteration: 'Makarasthayai',
       mantraSanskrit: 'ॐ मकरस्थायै नमः',
       mantra: 'Om Makarasthayai Namah',
-      meaning: ''
+      meaning: 'Manifesting a sacred form of beauty and light (Makarasthayai)'
     },
     {
       number: 100,
@@ -808,7 +808,7 @@ export const gangaAshtottaram = {
       transliteration: 'Sarvagatayai',
       mantraSanskrit: 'ॐ सर्वगतायै नमः',
       mantra: 'Om Sarvagatayai Namah',
-      meaning: ''
+      meaning: 'Omnipresent and all-encompassing divinity (Sarvagatayai)'
     },
     {
       number: 101,
@@ -816,7 +816,7 @@ export const gangaAshtottaram = {
       transliteration: 'Sarvashubhanivarinyai',
       mantraSanskrit: 'ॐ सर्वाशुभनिवारिण्यै नमः',
       mantra: 'Om Sarvashubhanivarinyai Namah',
-      meaning: ''
+      meaning: 'Source of supreme auspiciousness and blessing (Sarvashubhanivarinyai)'
     },
     {
       number: 102,
@@ -824,7 +824,7 @@ export const gangaAshtottaram = {
       transliteration: 'Sudrishyayai',
       mantraSanskrit: 'ॐ सुदृश्यायै नमः',
       mantra: 'Om Sudrishyayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Sudrishyayai'
     },
     {
       number: 103,
@@ -832,7 +832,7 @@ export const gangaAshtottaram = {
       transliteration: 'Chakshushitriptidayinyai',
       mantraSanskrit: 'ॐ चाक्षुषीतृप्तिदायिन्यै नमः',
       mantra: 'Om Chakshushitriptidayinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Chakshushitriptidayinyai'
     },
     {
       number: 104,
@@ -840,7 +840,7 @@ export const gangaAshtottaram = {
       transliteration: 'Makaralayayai',
       mantraSanskrit: 'ॐ मकरालयायै नमः',
       mantra: 'Om Makaralayayai Namah',
-      meaning: ''
+      meaning: 'Manifesting a sacred form of beauty and light (Makaralayayai)'
     },
     {
       number: 105,
@@ -848,7 +848,7 @@ export const gangaAshtottaram = {
       transliteration: 'Sadanandamayyai',
       mantraSanskrit: 'ॐ सदानन्दमय्यै नमः',
       mantra: 'Om Sadanandamayyai Namah',
-      meaning: ''
+      meaning: 'Fountain of supreme spiritual bliss and joy (Sadanandamayyai)'
     },
     {
       number: 106,
@@ -856,7 +856,7 @@ export const gangaAshtottaram = {
       transliteration: 'Nityanandadayai',
       mantraSanskrit: 'ॐ नित्यानन्ददायै नमः',
       mantra: 'Om Nityanandadayai Namah',
-      meaning: ''
+      meaning: 'Eternal, imperishable, and beyond time (Nityanandadayai)'
     },
     {
       number: 107,
@@ -864,7 +864,7 @@ export const gangaAshtottaram = {
       transliteration: 'Nagapujitayai',
       mantraSanskrit: 'ॐ नगपूजितायै नमः',
       mantra: 'Om Nagapujitayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Ganga revered as Nagapujitayai'
     },
     {
       number: 108,
@@ -872,7 +872,7 @@ export const gangaAshtottaram = {
       transliteration: 'Sarvadevadhidevaih Paripujyapadambujayai',
       mantraSanskrit: 'ॐ सर्वदेवाधिदेवैः परिपूज्यपदाम्बुजायै नमः',
       mantra: 'Om Sarvadevadhidevaih Paripujyapadambujayai Namah',
-      meaning: ''
+      meaning: 'Pure and auspicious as a sacred blooming lotus (Sarvadevadhidevaih Paripujyapadambujayai)'
     }
   ]
 };

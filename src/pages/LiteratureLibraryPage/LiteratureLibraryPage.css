@@ -8,8 +8,6 @@
 
 /* ===== LITERATURE LIBRARY PAGE - MODERN SPIRITUAL DESIGN ===== */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@400;500;700&display=swap');
-
 /* Page Background - Warm Parchment with Subtle Texture */
 .gallery-page {
   background: linear-gradient(180deg, var(--warm-cream) 0%, var(--parchment-light) 50%, var(--parchment-mid) 100%);

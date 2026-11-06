@@ -7,6 +7,7 @@ import KidsPageTransition from '../../../components/KidsLayout/KidsPageTransitio
 import {
   ARCADE_GAMES,
   getGameHighScore,
+  saveGameHighScore,
   incrementPlayCount,
 } from './arcadeCatalog';
 import './ArcadePlayerShell.css';
@@ -38,7 +39,11 @@ const ArcadePlayerShell = ({
 
   const reportScore = useCallback((val) => {
     setReportedScore(val);
-  }, []);
+    const numeric = typeof val === 'number' ? val : parseInt(String(val), 10);
+    if (!Number.isNaN(numeric) && numeric > 0) {
+      saveGameHighScore(gameId, numeric);
+    }
+  }, [gameId]);
 
   const displayLiveScore = liveScore !== null ? liveScore : reportedScore;
 

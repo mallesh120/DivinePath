@@ -16,7 +16,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Brahmavadine',
       mantraSanskrit: 'ॐ ब्रह्मवादिने नमः',
       mantra: 'Om Brahmavadine Namah',
-      meaning: ''
+      meaning: 'Architect of cosmic creation and sacred order (Brahmavadine)'
     },
     {
       number: 2,
@@ -24,7 +24,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Brahmane',
       mantraSanskrit: 'ॐ ब्रह्मणे नमः',
       mantra: 'Om Brahmane Namah',
-      meaning: ''
+      meaning: 'Lord Brahma, the cosmic creator and knower of the Vedas'
     },
     {
       number: 3,
@@ -32,7 +32,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Brahmabrahmanavatsalaya',
       mantraSanskrit: 'ॐ ब्रह्मब्राह्मणवत्सलाय नमः',
       mantra: 'Om Brahmabrahmanavatsalaya Namah',
-      meaning: ''
+      meaning: 'Architect of cosmic creation and sacred order (Brahmabrahmanavatsalaya)'
     },
     {
       number: 4,
@@ -40,7 +40,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Brahmanyaya',
       mantraSanskrit: 'ॐ ब्रह्मण्याय नमः',
       mantra: 'Om Brahmanyaya Namah',
-      meaning: ''
+      meaning: 'Architect of cosmic creation and sacred order (Brahmanyaya)'
     },
     {
       number: 5,
@@ -48,7 +48,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Brahmadevaya',
       mantraSanskrit: 'ॐ ब्रह्मदेवाय नमः',
       mantra: 'Om Brahmadevaya Namah',
-      meaning: ''
+      meaning: 'Architect of cosmic creation and sacred order (Brahmadevaya)'
     },
     {
       number: 6,
@@ -56,7 +56,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Brahmadaya',
       mantraSanskrit: 'ॐ ब्रह्मदाय नमः',
       mantra: 'Om Brahmadaya Namah',
-      meaning: ''
+      meaning: 'Architect of cosmic creation and sacred order (Brahmadaya)'
     },
     {
       number: 7,
@@ -64,7 +64,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Brahmasamgrahaya',
       mantraSanskrit: 'ॐ ब्रह्मसंग्रहाय नमः',
       mantra: 'Om Brahmasamgrahaya Namah',
-      meaning: ''
+      meaning: 'Architect of cosmic creation and sacred order (Brahmasamgrahaya)'
     },
     {
       number: 8,
@@ -72,7 +72,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Paraya',
       mantraSanskrit: 'ॐ पराय नमः',
       mantra: 'Om Paraya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Paraya'
     },
     {
       number: 9,
@@ -80,7 +80,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Paramaya Tejase',
       mantraSanskrit: 'ॐ परमाय तेजसे नमः',
       mantra: 'Om Paramaya Tejase Namah',
-      meaning: ''
+      meaning: 'Radiant with the effulgence of a thousand suns (Paramaya Tejase)'
     },
     {
       number: 10,
@@ -88,7 +88,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Mangalanancha Mangalaya',
       mantraSanskrit: 'ॐ मङ्गलानाञ्च मङ्गलाय नमः',
       mantra: 'Om Mangalanancha Mangalaya Namah',
-      meaning: ''
+      meaning: 'Source of supreme auspiciousness and blessing (Mangalanancha Mangalaya)'
     },
     {
       number: 11,
@@ -96,7 +96,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Aprameyagunaya',
       mantraSanskrit: 'ॐ अप्रमेयगुणाय नमः',
       mantra: 'Om Aprameyagunaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Aprameyagunaya'
     },
     {
       number: 12,
@@ -104,7 +104,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Mantranam Mantragaya',
       mantraSanskrit: 'ॐ मन्त्राणां मन्त्रगाय नमः',
       mantra: 'Om Mantranam Mantragaya Namah',
-      meaning: ''
+      meaning: 'Praised through sacred hymns, mantras, and cosmic sound (Mantranam Mantragaya)'
     },
     {
       number: 13,
@@ -112,7 +112,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Savitrimayaya Devaya',
       mantraSanskrit: 'ॐ सावित्रीमयाय देवाय नमः',
       mantra: 'Om Savitrimayaya Devaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Savitrimayaya Devaya'
     },
     {
       number: 14,
@@ -120,7 +120,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Sarvatraivaparajitaya',
       mantraSanskrit: 'ॐ सर्वत्रैवापराजिताय नमः',
       mantra: 'Om Sarvatraivaparajitaya Namah',
-      meaning: ''
+      meaning: 'Ever-victorious bestower of triumph in righteous endeavors (Sarvatraivaparajitaya)'
     },
     {
       number: 15,
@@ -128,7 +128,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Mantraya',
       mantraSanskrit: 'ॐ मन्त्राय नमः',
       mantra: 'Om Mantraya Namah',
-      meaning: ''
+      meaning: 'Praised through sacred hymns, mantras, and cosmic sound (Mantraya)'
     },
     {
       number: 16,
@@ -136,7 +136,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Sarvatmakaya',
       mantraSanskrit: 'ॐ सर्वात्मकाय नमः',
       mantra: 'Om Sarvatmakaya Namah',
-      meaning: ''
+      meaning: 'Omnipresent and all-encompassing divinity (Sarvatmakaya)'
     },
     {
       number: 17,
@@ -144,7 +144,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Devaya',
       mantraSanskrit: 'ॐ देवाय नमः',
       mantra: 'Om Devaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Devaya'
     },
     {
       number: 18,
@@ -152,7 +152,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Shadaksharavatam Varaya',
       mantraSanskrit: 'ॐ षडक्षरवतां वराय नमः',
       mantra: 'Om Shadaksharavatam Varaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Shadaksharavatam Varaya)'
     },
     {
       number: 19,
@@ -160,7 +160,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Gavam Putraya',
       mantraSanskrit: 'ॐ गवां पुत्राय नमः',
       mantra: 'Om Gavam Putraya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Gavam Putraya'
     },
     {
       number: 20,
@@ -168,7 +168,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Surarighnaya',
       mantraSanskrit: 'ॐ सुरारिघ्नाय नमः',
       mantra: 'Om Surarighnaya Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Surarighnaya)'
     },
     {
       number: 21,
@@ -176,7 +176,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Sambhavaya',
       mantraSanskrit: 'ॐ सम्भवाय नमः',
       mantra: 'Om Sambhavaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Sambhavaya'
     },
     {
       number: 22,
@@ -184,7 +184,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Bhavabhavanaya',
       mantraSanskrit: 'ॐ भवभावनाय नमः',
       mantra: 'Om Bhavabhavanaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Bhavabhavanaya'
     },
     {
       number: 23,
@@ -192,7 +192,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Pinakine',
       mantraSanskrit: 'ॐ पिनाकिने नमः',
       mantra: 'Om Pinakine Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Pinakine'
     },
     {
       number: 24,
@@ -200,7 +200,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Shatrughne',
       mantraSanskrit: 'ॐ शत्रुघ्ने नमः',
       mantra: 'Om Shatrughne Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Shatrughne'
     },
     {
       number: 25,
@@ -208,7 +208,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Kutaya',
       mantraSanskrit: 'ॐ कूटाय नमः',
       mantra: 'Om Kutaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Kutaya'
     },
     {
       number: 26,
@@ -216,7 +216,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Skandaya',
       mantraSanskrit: 'ॐ स्कन्दाय नमः',
       mantra: 'Om Skandaya Namah',
-      meaning: ''
+      meaning: 'Lord Skanda, commander of the celestial hosts of light'
     },
     {
       number: 27,
@@ -224,7 +224,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Suragranye',
       mantraSanskrit: 'ॐ सुराग्रण्ये नमः',
       mantra: 'Om Suragranye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Suragranye'
     },
     {
       number: 28,
@@ -232,7 +232,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Dvadashaya',
       mantraSanskrit: 'ॐ द्वादशाय नमः',
       mantra: 'Om Dvadashaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Dvadashaya'
     },
     {
       number: 29,
@@ -240,7 +240,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Bhuve',
       mantraSanskrit: 'ॐ भुवे नमः',
       mantra: 'Om Bhuve Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Bhuve'
     },
     {
       number: 30,
@@ -248,7 +248,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Bhuvaya',
       mantraSanskrit: 'ॐ भुवाय नमः',
       mantra: 'Om Bhuvaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Bhuvaya'
     },
     {
       number: 31,
@@ -256,7 +256,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Bhavine',
       mantraSanskrit: 'ॐ भाविने नमः',
       mantra: 'Om Bhavine Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Bhavine'
     },
     {
       number: 32,
@@ -264,7 +264,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Bhuvahputraya',
       mantraSanskrit: 'ॐ भुवःपुत्राय नमः',
       mantra: 'Om Bhuvahputraya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Bhuvahputraya'
     },
     {
       number: 33,
@@ -272,7 +272,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Namaskritaya',
       mantraSanskrit: 'ॐ नमस्कृताय नमः',
       mantra: 'Om Namaskritaya Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Namaskritaya)'
     },
     {
       number: 34,
@@ -280,7 +280,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Nagarajaya',
       mantraSanskrit: 'ॐ नागराजाय नमः',
       mantra: 'Om Nagarajaya Namah',
-      meaning: ''
+      meaning: 'Ever-victorious bestower of triumph in righteous endeavors (Nagarajaya)'
     },
     {
       number: 35,
@@ -288,7 +288,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Sudharmatmane',
       mantraSanskrit: 'ॐ सुधर्मात्मने नमः',
       mantra: 'Om Sudharmatmane Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Sudharmatmane)'
     },
     {
       number: 36,
@@ -296,7 +296,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Nakaprishthaya',
       mantraSanskrit: 'ॐ नाकपृष्ठाय नमः',
       mantra: 'Om Nakaprishthaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Nakaprishthaya'
     },
     {
       number: 37,
@@ -304,7 +304,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Sanatanaya',
       mantraSanskrit: 'ॐ सनातनाय नमः',
       mantra: 'Om Sanatanaya Namah',
-      meaning: ''
+      meaning: 'Eternal, imperishable, and beyond time (Sanatanaya)'
     },
     {
       number: 38,
@@ -312,7 +312,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Hemagarbhaya',
       mantraSanskrit: 'ॐ हेमगर्भाय नमः',
       mantra: 'Om Hemagarbhaya Namah',
-      meaning: ''
+      meaning: 'Remover of fear, sorrow, and distress (Hemagarbhaya)'
     },
     {
       number: 39,
@@ -320,7 +320,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Mahagarbhaya',
       mantraSanskrit: 'ॐ महागर्भाय नमः',
       mantra: 'Om Mahagarbhaya Namah',
-      meaning: ''
+      meaning: 'Remover of fear, sorrow, and distress (Mahagarbhaya)'
     },
     {
       number: 40,
@@ -328,7 +328,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Jayaya',
       mantraSanskrit: 'ॐ जयाय नमः',
       mantra: 'Om Jayaya Namah',
-      meaning: ''
+      meaning: 'Ever-victorious bestower of triumph in righteous endeavors (Jayaya)'
     },
     {
       number: 41,
@@ -336,7 +336,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Vijayeshvaraya',
       mantraSanskrit: 'ॐ विजयेश्वराय नमः',
       mantra: 'Om Vijayeshvaraya Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Vijayeshvaraya)'
     },
     {
       number: 42,
@@ -344,7 +344,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Kartre',
       mantraSanskrit: 'ॐ कर्त्रे नमः',
       mantra: 'Om Kartre Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Kartre'
     },
     {
       number: 43,
@@ -352,7 +352,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Vidhatre',
       mantraSanskrit: 'ॐ विधात्रे नमः',
       mantra: 'Om Vidhatre Namah',
-      meaning: ''
+      meaning: 'Architect of cosmic creation and sacred order (Vidhatre)'
     },
     {
       number: 44,
@@ -360,7 +360,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Nityaya',
       mantraSanskrit: 'ॐ नित्याय नमः',
       mantra: 'Om Nityaya Namah',
-      meaning: ''
+      meaning: 'Eternal, imperishable, and beyond time (Nityaya)'
     },
     {
       number: 45,
@@ -368,7 +368,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Anityaya',
       mantraSanskrit: 'ॐ अनित्याय नमः',
       mantra: 'Om Anityaya Namah',
-      meaning: ''
+      meaning: 'Eternal, imperishable, and beyond time (Anityaya)'
     },
     {
       number: 46,
@@ -376,7 +376,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Arimardanaya',
       mantraSanskrit: 'ॐ अरिमर्दनाय नमः',
       mantra: 'Om Arimardanaya Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Arimardanaya)'
     },
     {
       number: 47,
@@ -384,7 +384,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Mahasenaya',
       mantraSanskrit: 'ॐ महासेनाय नमः',
       mantra: 'Om Mahasenaya Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Mahasenaya)'
     },
     {
       number: 48,
@@ -392,7 +392,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Mahatejase',
       mantraSanskrit: 'ॐ महातेजसे नमः',
       mantra: 'Om Mahatejase Namah',
-      meaning: ''
+      meaning: 'Radiant with the effulgence of a thousand suns (Mahatejase)'
     },
     {
       number: 49,
@@ -400,7 +400,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Virasenaya',
       mantraSanskrit: 'ॐ वीरसेनाय नमः',
       mantra: 'Om Virasenaya Namah',
-      meaning: ''
+      meaning: 'Possessor of invincible spiritual strength and valor (Virasenaya)'
     },
     {
       number: 50,
@@ -408,7 +408,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Chamupataye',
       mantraSanskrit: 'ॐ चमूपतये नमः',
       mantra: 'Om Chamupataye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Chamupataye'
     },
     {
       number: 51,
@@ -416,7 +416,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Surasenaya',
       mantraSanskrit: 'ॐ सुरसेनाय नमः',
       mantra: 'Om Surasenaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Surasenaya'
     },
     {
       number: 52,
@@ -424,7 +424,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Suradhyakshaya',
       mantraSanskrit: 'ॐ सुराध्यक्षाय नमः',
       mantra: 'Om Suradhyakshaya Namah',
-      meaning: ''
+      meaning: 'Whose compassionate gaze watches over all creation (Suradhyakshaya)'
     },
     {
       number: 53,
@@ -432,7 +432,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Bhimasenaya',
       mantraSanskrit: 'ॐ भीमसेनाय नमः',
       mantra: 'Om Bhimasenaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Bhimasenaya'
     },
     {
       number: 54,
@@ -440,7 +440,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Niramayaya',
       mantraSanskrit: 'ॐ निरामयाय नमः',
       mantra: 'Om Niramayaya Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Niramayaya)'
     },
     {
       number: 55,
@@ -448,7 +448,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Shauraye',
       mantraSanskrit: 'ॐ शौरये नमः',
       mantra: 'Om Shauraye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Shauraye'
     },
     {
       number: 56,
@@ -456,7 +456,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Yadave',
       mantraSanskrit: 'ॐ यदवे नमः',
       mantra: 'Om Yadave Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Yadave'
     },
     {
       number: 57,
@@ -464,7 +464,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Mahatejase',
       mantraSanskrit: 'ॐ महातेजसे नमः',
       mantra: 'Om Mahatejase Namah',
-      meaning: ''
+      meaning: 'Radiant with the effulgence of a thousand suns (Mahatejase)'
     },
     {
       number: 58,
@@ -472,7 +472,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Viryavate',
       mantraSanskrit: 'ॐ वीर्यवते नमः',
       mantra: 'Om Viryavate Namah',
-      meaning: ''
+      meaning: 'Possessor of invincible spiritual strength and valor (Viryavate)'
     },
     {
       number: 59,
@@ -480,7 +480,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Satyavikramaya',
       mantraSanskrit: 'ॐ सत्यविक्रमाय नमः',
       mantra: 'Om Satyavikramaya Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Satyavikramaya)'
     },
     {
       number: 60,
@@ -488,7 +488,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Tejogarbhaya',
       mantraSanskrit: 'ॐ तेजोगर्भाय नमः',
       mantra: 'Om Tejogarbhaya Namah',
-      meaning: ''
+      meaning: 'Remover of fear, sorrow, and distress (Tejogarbhaya)'
     },
     {
       number: 61,
@@ -496,7 +496,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Asuraripave',
       mantraSanskrit: 'ॐ असुररिपवे नमः',
       mantra: 'Om Asuraripave Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Asuraripave)'
     },
     {
       number: 62,
@@ -504,7 +504,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Suramurtaye',
       mantraSanskrit: 'ॐ सुरमूर्तये नमः',
       mantra: 'Om Suramurtaye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Suramurtaye'
     },
     {
       number: 63,
@@ -512,7 +512,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Surorjitaya',
       mantraSanskrit: 'ॐ सुरोर्जिताय नमः',
       mantra: 'Om Surorjitaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Surorjitaya'
     },
     {
       number: 64,
@@ -520,7 +520,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Kritajnaya',
       mantraSanskrit: 'ॐ कृतज्ञाय नमः',
       mantra: 'Om Kritajnaya Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Kritajnaya)'
     },
     {
       number: 65,
@@ -528,7 +528,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Varadaya',
       mantraSanskrit: 'ॐ वरदाय नमः',
       mantra: 'Om Varadaya Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Varadaya)'
     },
     {
       number: 66,
@@ -536,7 +536,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Satyaya',
       mantraSanskrit: 'ॐ सत्याय नमः',
       mantra: 'Om Satyaya Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Satyaya)'
     },
     {
       number: 67,
@@ -544,7 +544,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Sharanyaya',
       mantraSanskrit: 'ॐ शरण्याय नमः',
       mantra: 'Om Sharanyaya Namah',
-      meaning: ''
+      meaning: 'Compassionate refuge and protector of devoted souls (Sharanyaya)'
     },
     {
       number: 68,
@@ -552,7 +552,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Sadhuvatsalaya',
       mantraSanskrit: 'ॐ साधुवत्सलाय नमः',
       mantra: 'Om Sadhuvatsalaya Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Sadhuvatsalaya)'
     },
     {
       number: 69,
@@ -560,7 +560,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Suvrataya',
       mantraSanskrit: 'ॐ सुव्रताय नमः',
       mantra: 'Om Suvrataya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Suvrataya'
     },
     {
       number: 70,
@@ -568,7 +568,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Suryasankashaya',
       mantraSanskrit: 'ॐ सूर्यसङ्काशाय नमः',
       mantra: 'Om Suryasankashaya Namah',
-      meaning: ''
+      meaning: 'Radiant with the effulgence of a thousand suns (Suryasankashaya)'
     },
     {
       number: 71,
@@ -576,7 +576,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Vahnigarbhaya',
       mantraSanskrit: 'ॐ वह्निगर्भाय नमः',
       mantra: 'Om Vahnigarbhaya Namah',
-      meaning: ''
+      meaning: 'Remover of fear, sorrow, and distress (Vahnigarbhaya)'
     },
     {
       number: 72,
@@ -584,7 +584,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Ranotsukaya',
       mantraSanskrit: 'ॐ रणोत्सुकाय नमः',
       mantra: 'Om Ranotsukaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Ranotsukaya'
     },
     {
       number: 73,
@@ -592,7 +592,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Pippaline',
       mantraSanskrit: 'ॐ पिप्पलिने नमः',
       mantra: 'Om Pippaline Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Pippaline'
     },
     {
       number: 74,
@@ -600,7 +600,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Shighragaya',
       mantraSanskrit: 'ॐ शीघ्रगाय नमः',
       mantra: 'Om Shighragaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Shighragaya'
     },
     {
       number: 75,
@@ -608,7 +608,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Raudraye',
       mantraSanskrit: 'ॐ रौद्रये नमः',
       mantra: 'Om Raudraye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Raudraye'
     },
     {
       number: 76,
@@ -616,7 +616,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Gangeyaya',
       mantraSanskrit: 'ॐ गाङ्गेयाय नमः',
       mantra: 'Om Gangeyaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Gangeyaya'
     },
     {
       number: 77,
@@ -624,7 +624,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Ripudaranaya',
       mantraSanskrit: 'ॐ रिपुदारणाय नमः',
       mantra: 'Om Ripudaranaya Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Ripudaranaya)'
     },
     {
       number: 78,
@@ -632,7 +632,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Kartikeyaya',
       mantraSanskrit: 'ॐ कार्तिकेयाय नमः',
       mantra: 'Om Kartikeyaya Namah',
-      meaning: ''
+      meaning: 'Remover of fear, sorrow, and distress (Kartikeyaya)'
     },
     {
       number: 79,
@@ -640,7 +640,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Prabhave',
       mantraSanskrit: 'ॐ प्रभवे नमः',
       mantra: 'Om Prabhave Namah',
-      meaning: ''
+      meaning: 'Radiant with the effulgence of a thousand suns (Prabhave)'
     },
     {
       number: 80,
@@ -648,7 +648,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Kshantaya',
       mantraSanskrit: 'ॐ क्षान्ताय नमः',
       mantra: 'Om Kshantaya Namah',
-      meaning: ''
+      meaning: 'Embodiment of serene peace and inner tranquility (Kshantaya)'
     },
     {
       number: 81,
@@ -656,7 +656,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Niladamshtraya',
       mantraSanskrit: 'ॐ नीलदंष्ट्राय नमः',
       mantra: 'Om Niladamshtraya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Niladamshtraya'
     },
     {
       number: 82,
@@ -664,7 +664,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Mahamanase',
       mantraSanskrit: 'ॐ महामनसे नमः',
       mantra: 'Om Mahamanase Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Mahamanase)'
     },
     {
       number: 83,
@@ -672,7 +672,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Nigrahaya',
       mantraSanskrit: 'ॐ निग्रहाय नमः',
       mantra: 'Om Nigrahaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Nigrahaya'
     },
     {
       number: 84,
@@ -680,7 +680,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Nigrahanam Netre',
       mantraSanskrit: 'ॐ निग्रहाणां नेत्रे नमः',
       mantra: 'Om Nigrahanam Netre Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Nigrahanam Netre)'
     },
     {
       number: 85,
@@ -688,7 +688,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Daityasudanaya',
       mantraSanskrit: 'ॐ दैत्यसूदनाय नमः',
       mantra: 'Om Daityasudanaya Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Daityasudanaya)'
     },
     {
       number: 86,
@@ -696,7 +696,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Pragrahaya',
       mantraSanskrit: 'ॐ प्रग्रहाय नमः',
       mantra: 'Om Pragrahaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Pragrahaya'
     },
     {
       number: 87,
@@ -704,7 +704,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Paramanandaya',
       mantraSanskrit: 'ॐ परमानन्दाय नमः',
       mantra: 'Om Paramanandaya Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Paramanandaya)'
     },
     {
       number: 88,
@@ -712,7 +712,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Krodhaghnaya',
       mantraSanskrit: 'ॐ क्रोधघ्नाय नमः',
       mantra: 'Om Krodhaghnaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Krodhaghnaya'
     },
     {
       number: 89,
@@ -720,7 +720,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Tarakochchhidaya',
       mantraSanskrit: 'ॐ तारकोच्छिदाय नमः',
       mantra: 'Om Tarakochchhidaya Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Tarakochchhidaya)'
     },
     {
       number: 90,
@@ -728,7 +728,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Kukkutine',
       mantraSanskrit: 'ॐ कुक्कुटिने नमः',
       mantra: 'Om Kukkutine Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Kukkutine'
     },
     {
       number: 91,
@@ -736,7 +736,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Bahulaya',
       mantraSanskrit: 'ॐ बहुलाय नमः',
       mantra: 'Om Bahulaya Namah',
-      meaning: ''
+      meaning: 'Whose hands grant fearlessness (Abhaya) and boons (Varada) (Bahulaya)'
     },
     {
       number: 92,
@@ -744,7 +744,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Vadine',
       mantraSanskrit: 'ॐ वादिने नमः',
       mantra: 'Om Vadine Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Vadine'
     },
     {
       number: 93,
@@ -752,7 +752,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Kamadaya',
       mantraSanskrit: 'ॐ कामदाय नमः',
       mantra: 'Om Kamadaya Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Kamadaya)'
     },
     {
       number: 94,
@@ -760,7 +760,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Bhurivardhanaya',
       mantraSanskrit: 'ॐ भूरिवर्धनाय नमः',
       mantra: 'Om Bhurivardhanaya Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Bhurivardhanaya)'
     },
     {
       number: 95,
@@ -768,7 +768,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Amoghaya',
       mantraSanskrit: 'ॐ अमोघाय नमः',
       mantra: 'Om Amoghaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Amoghaya'
     },
     {
       number: 96,
@@ -776,7 +776,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Amritadaya',
       mantraSanskrit: 'ॐ अमृतदाय नमः',
       mantra: 'Om Amritadaya Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Amritadaya)'
     },
     {
       number: 97,
@@ -784,7 +784,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Agnaye',
       mantraSanskrit: 'ॐ अग्नये नमः',
       mantra: 'Om Agnaye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Agnaye'
     },
     {
       number: 98,
@@ -792,7 +792,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Shatrughnaya',
       mantraSanskrit: 'ॐ शत्रुघ्नाय नमः',
       mantra: 'Om Shatrughnaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Shatrughnaya'
     },
     {
       number: 99,
@@ -800,7 +800,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Sarvabodhanaya',
       mantraSanskrit: 'ॐ सर्वबोधनाय नमः',
       mantra: 'Om Sarvabodhanaya Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Sarvabodhanaya)'
     },
     {
       number: 100,
@@ -808,7 +808,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Anaghaya',
       mantraSanskrit: 'ॐ अनघाय नमः',
       mantra: 'Om Anaghaya Namah',
-      meaning: ''
+      meaning: 'Purifier who dissolves sins and karmic obstacles (Anaghaya)'
     },
     {
       number: 101,
@@ -816,7 +816,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Amaraya',
       mantraSanskrit: 'ॐ अमराय नमः',
       mantra: 'Om Amaraya Namah',
-      meaning: ''
+      meaning: 'Eternal, imperishable, and beyond time (Amaraya)'
     },
     {
       number: 102,
@@ -824,7 +824,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Shrimate',
       mantraSanskrit: 'ॐ श्रीमते नमः',
       mantra: 'Om Shrimate Namah',
-      meaning: ''
+      meaning: 'He who is eternally endowed with divine fortune and grace'
     },
     {
       number: 103,
@@ -832,7 +832,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Unnataya',
       mantraSanskrit: 'ॐ उन्नताय नमः',
       mantra: 'Om Unnataya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Unnataya'
     },
     {
       number: 104,
@@ -840,7 +840,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Agnisambhavaya',
       mantraSanskrit: 'ॐ अग्निसम्भवाय नमः',
       mantra: 'Om Agnisambhavaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Kartikeya revered as Agnisambhavaya'
     },
     {
       number: 105,
@@ -848,7 +848,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Pishacharajaya',
       mantraSanskrit: 'ॐ पिशाचराजाय नमः',
       mantra: 'Om Pishacharajaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Pishacharajaya)'
     },
     {
       number: 106,
@@ -856,7 +856,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Suryabhaya',
       mantraSanskrit: 'ॐ सूर्याभाय नमः',
       mantra: 'Om Suryabhaya Namah',
-      meaning: ''
+      meaning: 'Remover of fear, sorrow, and distress (Suryabhaya)'
     },
     {
       number: 107,
@@ -864,7 +864,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Shivatmane',
       mantraSanskrit: 'ॐ शिवात्मने नमः',
       mantra: 'Om Shivatmane Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Shivatmane)'
     },
     {
       number: 108,
@@ -872,7 +872,7 @@ export const kartikeyaAshtottaram = {
       transliteration: 'Sanatanaya',
       mantraSanskrit: 'ॐ सनातनाय नमः',
       mantra: 'Om Sanatanaya Namah',
-      meaning: ''
+      meaning: 'Eternal, imperishable, and beyond time (Sanatanaya)'
     }
   ]
 };

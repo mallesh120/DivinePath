@@ -16,7 +16,7 @@ export const sitaAshtottaram = {
       transliteration: 'Janakanandinyai',
       mantraSanskrit: 'ॐ जनकनन्दिन्यै नमः',
       mantra: 'Om Janakanandinyai Namah',
-      meaning: ''
+      meaning: 'Beloved daughter of King Janaka, bringing joy to Mithila'
     },
     {
       number: 2,
@@ -24,7 +24,7 @@ export const sitaAshtottaram = {
       transliteration: 'Lokajananyai',
       mantraSanskrit: 'ॐ लोकजनन्यै नमः',
       mantra: 'Om Lokajananyai Namah',
-      meaning: ''
+      meaning: 'Compassionate Mother of all worlds and living beings'
     },
     {
       number: 3,
@@ -32,7 +32,7 @@ export const sitaAshtottaram = {
       transliteration: 'Jayavriddhidayai',
       mantraSanskrit: 'ॐ जयवृद्धिदायै नमः',
       mantra: 'Om Jayavriddhidayai Namah',
-      meaning: ''
+      meaning: 'Bestower of victory, spiritual growth, and abundance'
     },
     {
       number: 4,
@@ -40,7 +40,7 @@ export const sitaAshtottaram = {
       transliteration: 'Jayodvahapriyayai',
       mantraSanskrit: 'ॐ जयोद्वाहप्रियायै नमः',
       mantra: 'Om Jayodvahapriyayai Namah',
-      meaning: ''
+      meaning: 'Beloved of the pure-hearted and enchanting in grace (Jayodvahapriyayai)'
     },
     {
       number: 5,
@@ -48,7 +48,7 @@ export const sitaAshtottaram = {
       transliteration: 'Ramayai',
       mantraSanskrit: 'ॐ रामायै नमः',
       mantra: 'Om Ramayai Namah',
-      meaning: ''
+      meaning: 'She who delights the heart of Lord Rama and all devotees'
     },
     {
       number: 6,
@@ -56,7 +56,7 @@ export const sitaAshtottaram = {
       transliteration: 'Lakshmyai',
       mantraSanskrit: 'ॐ लक्ष्म्यै नमः',
       mantra: 'Om Lakshmyai Namah',
-      meaning: ''
+      meaning: 'Goddess of auspiciousness, grace, and divine fortune'
     },
     {
       number: 7,
@@ -64,7 +64,7 @@ export const sitaAshtottaram = {
       transliteration: 'Janakakanyakayai',
       mantraSanskrit: 'ॐ जनककन्यकायै नमः',
       mantra: 'Om Janakakanyakayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Janakakanyakayai'
     },
     {
       number: 8,
@@ -72,7 +72,7 @@ export const sitaAshtottaram = {
       transliteration: 'Rajivasarvasvaharipadadvayanchitayai',
       mantraSanskrit: 'ॐ राजीवसर्वस्वहारिपादद्वयाञ्चितायै नमः',
       mantra: 'Om Rajivasarvasvaharipadadvayanchitayai Namah',
-      meaning: ''
+      meaning: 'Pure and auspicious as a sacred blooming lotus (Rajivasarvasvaharipadadvayanchitayai)'
     },
     {
       number: 9,
@@ -80,7 +80,7 @@ export const sitaAshtottaram = {
       transliteration: 'Rajatkanakamanikyatulakotivirajitayai',
       mantraSanskrit: 'ॐ राजत्कनकमाणिक्यतुलाकोटिविराजितायै नमः',
       mantra: 'Om Rajatkanakamanikyatulakotivirajitayai Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Rajatkanakamanikyatulakotivirajitayai)'
     },
     {
       number: 10,
@@ -88,7 +88,7 @@ export const sitaAshtottaram = {
       transliteration: 'Manihemavichitrodyatruskarotbhasibhushanayai',
       mantraSanskrit: 'ॐ मणिहेमविचित्रोद्यत्रुस्करोत्भासिभूषणायै नमः',
       mantra: 'Om Manihemavichitrodyatruskarotbhasibhushanayai Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Manihemavichitrodyatruskarotbhasibhushanayai)'
     },
     {
       number: 11,
@@ -96,7 +96,7 @@ export const sitaAshtottaram = {
       transliteration: 'Nanaratnajitamitrakanchishobhinitambinyai',
       mantraSanskrit: 'ॐ नानारत्नजितामित्रकाञ्चिशोभिनितम्बिन्यै नमः',
       mantra: 'Om Nanaratnajitamitrakanchishobhinitambinyai Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Nanaratnajitamitrakanchishobhinitambinyai)'
     },
     {
       number: 12,
@@ -104,7 +104,7 @@ export const sitaAshtottaram = {
       transliteration: 'Devadanavagandharvayaksharakshasasevitayai',
       mantraSanskrit: 'ॐ देवदानवगन्धर्वयक्षराक्षससेवितायै नमः',
       mantra: 'Om Devadanavagandharvayaksharakshasasevitayai Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Devadanavagandharvayaksharakshasasevitayai)'
     },
     {
       number: 13,
@@ -112,7 +112,7 @@ export const sitaAshtottaram = {
       transliteration: 'Sakritprapannajanatasamrakshanakritatvarayai',
       mantraSanskrit: 'ॐ सकृत्प्रपन्नजनतासंरक्षणकृतत्वरायै नमः',
       mantra: 'Om Sakritprapannajanatasamrakshanakritatvarayai Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Sakritprapannajanatasamrakshanakritatvarayai)'
     },
     {
       number: 14,
@@ -120,7 +120,7 @@ export const sitaAshtottaram = {
       transliteration: 'Ekakaloditanekachandrabhaskarabhasurayai',
       mantraSanskrit: 'ॐ एककालोदितानेकचन्द्रभास्करभासुरायै नमः',
       mantra: 'Om Ekakaloditanekachandrabhaskarabhasurayai Namah',
-      meaning: ''
+      meaning: 'Radiant with the effulgence of a thousand suns (Ekakaloditanekachandrabhaskarabhasurayai)'
     },
     {
       number: 15,
@@ -128,7 +128,7 @@ export const sitaAshtottaram = {
       transliteration: 'Dvitiyatatidullasidivyapitambarayai',
       mantraSanskrit: 'ॐ द्वितीयतटिदुल्लासिदिव्यपीताम्बरायै नमः',
       mantra: 'Om Dvitiyatatidullasidivyapitambarayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Dvitiyatatidullasidivyapitambarayai'
     },
     {
       number: 16,
@@ -136,7 +136,7 @@ export const sitaAshtottaram = {
       transliteration: 'Trivargadiphalabhishtadayikarunyavikshanayai',
       mantraSanskrit: 'ॐ त्रिवर्गादिफलाभीष्टदायिकारुण्यवीक्षणायै नमः',
       mantra: 'Om Trivargadiphalabhishtadayikarunyavikshanayai Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Trivargadiphalabhishtadayikarunyavikshanayai)'
     },
     {
       number: 17,
@@ -144,7 +144,7 @@ export const sitaAshtottaram = {
       transliteration: 'Chaturvargapradanodyatkarapanjashobhitayai',
       mantraSanskrit: 'ॐ चतुर्वर्गप्रदानोद्यत्करपङ्जशोभितायै नमः',
       mantra: 'Om Chaturvargapradanodyatkarapanjashobhitayai Namah',
-      meaning: ''
+      meaning: 'Whose hands grant fearlessness (Abhaya) and boons (Varada) (Chaturvargapradanodyatkarapanjashobhitayai)'
     },
     {
       number: 18,
@@ -152,7 +152,7 @@ export const sitaAshtottaram = {
       transliteration: 'Panchayajnaparanekayogimanasarajitayai',
       mantraSanskrit: 'ॐ पञ्चयज्ञपरानेकयोगिमानसराजितायै नमः',
       mantra: 'Om Panchayajnaparanekayogimanasarajitayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Panchayajnaparanekayogimanasarajitayai'
     },
     {
       number: 19,
@@ -160,7 +160,7 @@ export const sitaAshtottaram = {
       transliteration: 'Shadgunyapurnavibhavayai',
       mantraSanskrit: 'ॐ षाड्गुण्यपूर्णविभवायै नमः',
       mantra: 'Om Shadgunyapurnavibhavayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Shadgunyapurnavibhavayai'
     },
     {
       number: 20,
@@ -168,7 +168,7 @@ export const sitaAshtottaram = {
       transliteration: 'Saptatatvadidevatayai',
       mantraSanskrit: 'ॐ सप्ततत्वादिदेवतायै नमः',
       mantra: 'Om Saptatatvadidevatayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Saptatatvadidevatayai'
     },
     {
       number: 21,
@@ -176,7 +176,7 @@ export const sitaAshtottaram = {
       transliteration: 'Ashtamichandrarekhabhachitrakotbhasinasikayai',
       mantraSanskrit: 'ॐ अष्टमीचन्द्ररेखाभचित्रकोत्भासिनासिकायै नमः',
       mantra: 'Om Ashtamichandrarekhabhachitrakotbhasinasikayai Namah',
-      meaning: ''
+      meaning: 'Radiant with the effulgence of a thousand suns (Ashtamichandrarekhabhachitrakotbhasinasikayai)'
     },
     {
       number: 22,
@@ -184,7 +184,7 @@ export const sitaAshtottaram = {
       transliteration: 'Navavaranapujitayai',
       mantraSanskrit: 'ॐ नवावरणपूजितायै नमः',
       mantra: 'Om Navavaranapujitayai Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Navavaranapujitayai)'
     },
     {
       number: 23,
@@ -192,7 +192,7 @@ export const sitaAshtottaram = {
       transliteration: 'Ramanandakarayai',
       mantraSanskrit: 'ॐ रामानन्दकरायै नमः',
       mantra: 'Om Ramanandakarayai Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Ramanandakarayai)'
     },
     {
       number: 24,
@@ -200,7 +200,7 @@ export const sitaAshtottaram = {
       transliteration: 'Ramanathayai',
       mantraSanskrit: 'ॐ रामनाथायै नमः',
       mantra: 'Om Ramanathayai Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Ramanathayai)'
     },
     {
       number: 25,
@@ -208,7 +208,7 @@ export const sitaAshtottaram = {
       transliteration: 'Raghavananditayai',
       mantraSanskrit: 'ॐ राघवनन्दितायै नमः',
       mantra: 'Om Raghavananditayai Namah',
-      meaning: ''
+      meaning: 'Purifier who dissolves sins and karmic obstacles (Raghavananditayai)'
     },
     {
       number: 26,
@@ -216,7 +216,7 @@ export const sitaAshtottaram = {
       transliteration: 'Ramaveshitabhavayai',
       mantraSanskrit: 'ॐ रामावेशितभावायै नमः',
       mantra: 'Om Ramaveshitabhavayai Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Ramaveshitabhavayai)'
     },
     {
       number: 27,
@@ -224,7 +224,7 @@ export const sitaAshtottaram = {
       transliteration: 'Ramayattatmavaibhavayai',
       mantraSanskrit: 'ॐ रामायत्तात्मवैभवायै नमः',
       mantra: 'Om Ramayattatmavaibhavayai Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Ramayattatmavaibhavayai)'
     },
     {
       number: 28,
@@ -232,7 +232,7 @@ export const sitaAshtottaram = {
       transliteration: 'Ramottamayai',
       mantraSanskrit: 'ॐ रामोत्तमायै नमः',
       mantra: 'Om Ramottamayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Ramottamayai'
     },
     {
       number: 29,
@@ -240,7 +240,7 @@ export const sitaAshtottaram = {
       transliteration: 'Rajamukhyai',
       mantraSanskrit: 'ॐ राजमुख्यै नमः',
       mantra: 'Om Rajamukhyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Rajamukhyai'
     },
     {
       number: 30,
@@ -248,7 +248,7 @@ export const sitaAshtottaram = {
       transliteration: 'Ranjitamodakuntalayai',
       mantraSanskrit: 'ॐ रञ्जितामोदकुन्तलायै नमः',
       mantra: 'Om Ranjitamodakuntalayai Namah',
-      meaning: ''
+      meaning: 'Fountain of supreme spiritual bliss and joy (Ranjitamodakuntalayai)'
     },
     {
       number: 31,
@@ -256,7 +256,7 @@ export const sitaAshtottaram = {
       transliteration: 'Divyasaketanilayayai',
       mantraSanskrit: 'ॐ दिव्यसाकेतनिलयायै नमः',
       mantra: 'Om Divyasaketanilayayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Divyasaketanilayayai'
     },
     {
       number: 32,
@@ -264,7 +264,7 @@ export const sitaAshtottaram = {
       transliteration: 'Divyavaditrasevitayai',
       mantraSanskrit: 'ॐ दिव्यवादित्रसेवितायै नमः',
       mantra: 'Om Divyavaditrasevitayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Divyavaditrasevitayai'
     },
     {
       number: 33,
@@ -272,7 +272,7 @@ export const sitaAshtottaram = {
       transliteration: 'Ramanuvrittimuditayai',
       mantraSanskrit: 'ॐ रामानुवृत्तिमुदितायै नमः',
       mantra: 'Om Ramanuvrittimuditayai Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Ramanuvrittimuditayai)'
     },
     {
       number: 34,
@@ -280,7 +280,7 @@ export const sitaAshtottaram = {
       transliteration: 'Chitrakutakritalayayai',
       mantraSanskrit: 'ॐ चित्रकूटकृतालयायै नमः',
       mantra: 'Om Chitrakutakritalayayai Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Chitrakutakritalayayai)'
     },
     {
       number: 35,
@@ -288,7 +288,7 @@ export const sitaAshtottaram = {
       transliteration: 'Anusuyakritakalpayai',
       mantraSanskrit: 'ॐ अनुसूयाकृताकल्पायै नमः',
       mantra: 'Om Anusuyakritakalpayai Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Anusuyakritakalpayai)'
     },
     {
       number: 36,
@@ -296,7 +296,7 @@ export const sitaAshtottaram = {
       transliteration: 'Analpasvantasamshritayai',
       mantraSanskrit: 'ॐ अनल्पस्वान्तसंश्रितायै नमः',
       mantra: 'Om Analpasvantasamshritayai Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Analpasvantasamshritayai)'
     },
     {
       number: 37,
@@ -304,7 +304,7 @@ export const sitaAshtottaram = {
       transliteration: 'Vichitramalyabharanayai',
       mantraSanskrit: 'ॐ विचित्रमाल्याभरणायै नमः',
       mantra: 'Om Vichitramalyabharanayai Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Vichitramalyabharanayai)'
     },
     {
       number: 38,
@@ -312,7 +312,7 @@ export const sitaAshtottaram = {
       transliteration: 'Virathamathanodyatayai',
       mantraSanskrit: 'ॐ विराथमथनोद्यतायै नमः',
       mantra: 'Om Virathamathanodyatayai Namah',
-      meaning: ''
+      meaning: 'Possessor of invincible spiritual strength and valor (Virathamathanodyatayai)'
     },
     {
       number: 39,
@@ -320,7 +320,7 @@ export const sitaAshtottaram = {
       transliteration: 'Shritapanchavatitirayai',
       mantraSanskrit: 'ॐ श्रितपञ्चवटीतीरायै नमः',
       mantra: 'Om Shritapanchavatitirayai Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Shritapanchavatitirayai)'
     },
     {
       number: 40,
@@ -328,7 +328,7 @@ export const sitaAshtottaram = {
       transliteration: 'Khadyotanakulanandayai',
       mantraSanskrit: 'ॐ खद्योतनकुलानन्दायै नमः',
       mantra: 'Om Khadyotanakulanandayai Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Khadyotanakulanandayai)'
     },
     {
       number: 41,
@@ -336,7 +336,7 @@ export const sitaAshtottaram = {
       transliteration: 'Kharadivadhananditayai',
       mantraSanskrit: 'ॐ खरादिवधनन्दितायै नमः',
       mantra: 'Om Kharadivadhananditayai Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Kharadivadhananditayai)'
     },
     {
       number: 42,
@@ -344,7 +344,7 @@ export const sitaAshtottaram = {
       transliteration: 'Mayamarichamathanayai',
       mantraSanskrit: 'ॐ मायामारीचमथनायै नमः',
       mantra: 'Om Mayamarichamathanayai Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Mayamarichamathanayai)'
     },
     {
       number: 43,
@@ -352,7 +352,7 @@ export const sitaAshtottaram = {
       transliteration: 'Mayamanushavigrahayai',
       mantraSanskrit: 'ॐ मायामानुषविग्रहायै नमः',
       mantra: 'Om Mayamanushavigrahayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Mayamanushavigrahayai'
     },
     {
       number: 44,
@@ -360,7 +360,7 @@ export const sitaAshtottaram = {
       transliteration: 'Chhalatyajitasaumitryai',
       mantraSanskrit: 'ॐ छलत्याजितसौमित्र्यै नमः',
       mantra: 'Om Chhalatyajitasaumitryai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Chhalatyajitasaumitryai'
     },
     {
       number: 45,
@@ -368,7 +368,7 @@ export const sitaAshtottaram = {
       transliteration: 'Chhavinirjitapankajayai',
       mantraSanskrit: 'ॐ छविनिर्जितपङ्कजायै नमः',
       mantra: 'Om Chhavinirjitapankajayai Namah',
-      meaning: ''
+      meaning: 'Pure and auspicious as a sacred blooming lotus (Chhavinirjitapankajayai)'
     },
     {
       number: 46,
@@ -376,7 +376,7 @@ export const sitaAshtottaram = {
       transliteration: 'Trinikritadashagrivayai',
       mantraSanskrit: 'ॐ तृणीकृतदशग्रीवायै नमः',
       mantra: 'Om Trinikritadashagrivayai Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Trinikritadashagrivayai)'
     },
     {
       number: 47,
@@ -384,7 +384,7 @@ export const sitaAshtottaram = {
       transliteration: 'Tranayodyatamanasayai',
       mantraSanskrit: 'ॐ त्राणायोद्यतमानसायै नमः',
       mantra: 'Om Tranayodyatamanasayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Tranayodyatamanasayai'
     },
     {
       number: 48,
@@ -392,7 +392,7 @@ export const sitaAshtottaram = {
       transliteration: 'Hanumaddarshanapritayai',
       mantraSanskrit: 'ॐ हनुमद्दर्शनप्रीतायै नमः',
       mantra: 'Om Hanumaddarshanapritayai Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Hanumaddarshanapritayai)'
     },
     {
       number: 49,
@@ -400,7 +400,7 @@ export const sitaAshtottaram = {
       transliteration: 'Hasyalilavisharadayai',
       mantraSanskrit: 'ॐ हास्यलीलाविशारदायै नमः',
       mantra: 'Om Hasyalilavisharadayai Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Hasyalilavisharadayai)'
     },
     {
       number: 50,
@@ -408,7 +408,7 @@ export const sitaAshtottaram = {
       transliteration: 'Mudradarshanasantushtayai',
       mantraSanskrit: 'ॐ मुद्रादर्शनसन्तुष्टायै नमः',
       mantra: 'Om Mudradarshanasantushtayai Namah',
-      meaning: ''
+      meaning: 'Fountain of supreme spiritual bliss and joy (Mudradarshanasantushtayai)'
     },
     {
       number: 51,
@@ -416,7 +416,7 @@ export const sitaAshtottaram = {
       transliteration: 'Mudramudritajivitayai',
       mantraSanskrit: 'ॐ मुद्रामुद्रितजीवितायै नमः',
       mantra: 'Om Mudramudritajivitayai Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Mudramudritajivitayai)'
     },
     {
       number: 52,
@@ -424,7 +424,7 @@ export const sitaAshtottaram = {
       transliteration: 'Ashokavanikavasayai',
       mantraSanskrit: 'ॐ अशोकवनिकावासायै नमः',
       mantra: 'Om Ashokavanikavasayai Namah',
-      meaning: ''
+      meaning: 'Remover of fear, sorrow, and distress (Ashokavanikavasayai)'
     },
     {
       number: 53,
@@ -432,7 +432,7 @@ export const sitaAshtottaram = {
       transliteration: 'Nishshokikritanirjarayai',
       mantraSanskrit: 'ॐ निश्शोकीकृतनिर्जरायै नमः',
       mantra: 'Om Nishshokikritanirjarayai Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Nishshokikritanirjarayai)'
     },
     {
       number: 54,
@@ -440,7 +440,7 @@ export const sitaAshtottaram = {
       transliteration: 'Lankadahakasankalpayai',
       mantraSanskrit: 'ॐ लङ्कादाहकसङ्कल्पायै नमः',
       mantra: 'Om Lankadahakasankalpayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Lankadahakasankalpayai'
     },
     {
       number: 55,
@@ -448,7 +448,7 @@ export const sitaAshtottaram = {
       transliteration: 'Lankavalayarodhinyai',
       mantraSanskrit: 'ॐ लङ्कावलयरोधिन्यै नमः',
       mantra: 'Om Lankavalayarodhinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Lankavalayarodhinyai'
     },
     {
       number: 56,
@@ -456,7 +456,7 @@ export const sitaAshtottaram = {
       transliteration: 'Shuddhikritasantushtayai',
       mantraSanskrit: 'ॐ शुद्धिकृतासन्तुष्टायै नमः',
       mantra: 'Om Shuddhikritasantushtayai Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Shuddhikritasantushtayai)'
     },
     {
       number: 57,
@@ -464,7 +464,7 @@ export const sitaAshtottaram = {
       transliteration: 'Shumalyambaravritayai',
       mantraSanskrit: 'ॐ शुमाल्याम्बरावृतायै नमः',
       mantra: 'Om Shumalyambaravritayai Namah',
-      meaning: ''
+      meaning: 'Upholder of eternal truth and cosmic righteousness (Shumalyambaravritayai)'
     },
     {
       number: 58,
@@ -472,7 +472,7 @@ export const sitaAshtottaram = {
       transliteration: 'Santushtapatisamstutayai',
       mantraSanskrit: 'ॐ सन्तुष्टपतिसंस्तुतायै नमः',
       mantra: 'Om Santushtapatisamstutayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Santushtapatisamstutayai'
     },
     {
       number: 59,
@@ -480,7 +480,7 @@ export const sitaAshtottaram = {
       transliteration: 'Santushtahridayalayayai',
       mantraSanskrit: 'ॐ सन्तुष्टहृदयालयायै नमः',
       mantra: 'Om Santushtahridayalayayai Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Santushtahridayalayayai)'
     },
     {
       number: 60,
@@ -488,7 +488,7 @@ export const sitaAshtottaram = {
       transliteration: 'Shvashurastanupujyayai',
       mantraSanskrit: 'ॐ श्वशुरस्तानुपूज्यायै नमः',
       mantra: 'Om Shvashurastanupujyayai Namah',
-      meaning: ''
+      meaning: 'Possessor of invincible spiritual strength and valor (Shvashurastanupujyayai)'
     },
     {
       number: 61,
@@ -496,7 +496,7 @@ export const sitaAshtottaram = {
       transliteration: 'Kamalasanavanditayai',
       mantraSanskrit: 'ॐ कमलासनवन्दितायै नमः',
       mantra: 'Om Kamalasanavanditayai Namah',
-      meaning: ''
+      meaning: 'Pure and auspicious as a sacred blooming lotus (Kamalasanavanditayai)'
     },
     {
       number: 62,
@@ -504,7 +504,7 @@ export const sitaAshtottaram = {
       transliteration: 'Animadyashtasamsiddha',
       mantraSanskrit: 'ॐ अणिमाद्यष्टसंसिद्ध नमः',
       mantra: 'Om Animadyashtasamsiddha Namah',
-      meaning: ''
+      meaning: 'Master of yoga, meditation, and spiritual realization (Animadyashtasamsiddha)'
     },
     {
       number: 63,
@@ -512,7 +512,7 @@ export const sitaAshtottaram = {
       transliteration: 'Kripavaptavibhishanayai',
       mantraSanskrit: 'ॐ कृपावाप्तविभीषणायै नमः',
       mantra: 'Om Kripavaptavibhishanayai Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Kripavaptavibhishanayai)'
     },
     {
       number: 64,
@@ -520,7 +520,7 @@ export const sitaAshtottaram = {
       transliteration: 'Divyapushpakasamrudhayai',
       mantraSanskrit: 'ॐ दिव्यपुष्पकसंरूढायै नमः',
       mantra: 'Om Divyapushpakasamrudhayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Divyapushpakasamrudhayai'
     },
     {
       number: 65,
@@ -528,7 +528,7 @@ export const sitaAshtottaram = {
       transliteration: 'Divishadganavanditayai',
       mantraSanskrit: 'ॐ दिविषद्गणवन्दितायै नमः',
       mantra: 'Om Divishadganavanditayai Namah',
-      meaning: ''
+      meaning: 'Praised through sacred hymns, mantras, and cosmic sound (Divishadganavanditayai)'
     },
     {
       number: 66,
@@ -536,7 +536,7 @@ export const sitaAshtottaram = {
       transliteration: 'Japakusumasankashayai',
       mantraSanskrit: 'ॐ जपाकुसुमसङ्काशायै नमः',
       mantra: 'Om Japakusumasankashayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Japakusumasankashayai'
     },
     {
       number: 67,
@@ -544,7 +544,7 @@ export const sitaAshtottaram = {
       transliteration: 'Divyakshaumambaravritayai',
       mantraSanskrit: 'ॐ दिव्यक्षौमाम्बरावृतायै नमः',
       mantra: 'Om Divyakshaumambaravritayai Namah',
-      meaning: ''
+      meaning: 'Whose compassionate gaze watches over all creation (Divyakshaumambaravritayai)'
     },
     {
       number: 68,
@@ -552,7 +552,7 @@ export const sitaAshtottaram = {
       transliteration: 'Divyasimhasanarudhayai',
       mantraSanskrit: 'ॐ दिव्यसिंहासनारूढायै नमः',
       mantra: 'Om Divyasimhasanarudhayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Divyasimhasanarudhayai'
     },
     {
       number: 69,
@@ -560,7 +560,7 @@ export const sitaAshtottaram = {
       transliteration: 'Divyakalpavibhushanayai',
       mantraSanskrit: 'ॐ दिव्याकल्पविभूषणायै नमः',
       mantra: 'Om Divyakalpavibhushanayai Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Divyakalpavibhushanayai)'
     },
     {
       number: 70,
@@ -568,7 +568,7 @@ export const sitaAshtottaram = {
       transliteration: 'Rajyabhishiktadayitayai',
       mantraSanskrit: 'ॐ राज्याभिषिक्तदयितायै नमः',
       mantra: 'Om Rajyabhishiktadayitayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Rajyabhishiktadayitayai'
     },
     {
       number: 71,
@@ -576,7 +576,7 @@ export const sitaAshtottaram = {
       transliteration: 'Divyayodhyadhidevatayai',
       mantraSanskrit: 'ॐ दिव्यायोध्याधिदेवतायै नमः',
       mantra: 'Om Divyayodhyadhidevatayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Divyayodhyadhidevatayai'
     },
     {
       number: 72,
@@ -584,7 +584,7 @@ export const sitaAshtottaram = {
       transliteration: 'Divyagandhaviliptangyai',
       mantraSanskrit: 'ॐ दिव्यगन्धविलिप्ताङ्ग्यै नमः',
       mantra: 'Om Divyagandhaviliptangyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Divyagandhaviliptangyai'
     },
     {
       number: 73,
@@ -592,7 +592,7 @@ export const sitaAshtottaram = {
       transliteration: 'Divyavayavasundaryai',
       mantraSanskrit: 'ॐ दिव्यावयवसुन्दर्यै नमः',
       mantra: 'Om Divyavayavasundaryai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Divyavayavasundaryai'
     },
     {
       number: 74,
@@ -600,7 +600,7 @@ export const sitaAshtottaram = {
       transliteration: 'Hayyangavinahridayayai',
       mantraSanskrit: 'ॐ हय्यङ्गवीनहृदयायै नमः',
       mantra: 'Om Hayyangavinahridayayai Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Hayyangavinahridayayai)'
     },
     {
       number: 75,
@@ -608,7 +608,7 @@ export const sitaAshtottaram = {
       transliteration: 'Haryakshaganapujitayai',
       mantraSanskrit: 'ॐ हर्यक्षगणपूजितायै नमः',
       mantra: 'Om Haryakshaganapujitayai Namah',
-      meaning: ''
+      meaning: 'Whose compassionate gaze watches over all creation (Haryakshaganapujitayai)'
     },
     {
       number: 76,
@@ -616,7 +616,7 @@ export const sitaAshtottaram = {
       transliteration: 'Ghanasarasugandhadhyayai',
       mantraSanskrit: 'ॐ घनसारसुगन्धाढ्यायै नमः',
       mantra: 'Om Ghanasarasugandhadhyayai Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Ghanasarasugandhadhyayai)'
     },
     {
       number: 77,
@@ -624,7 +624,7 @@ export const sitaAshtottaram = {
       transliteration: 'Ghanakunchitamurdhajayai',
       mantraSanskrit: 'ॐ घनकुञ्चितमूर्धजायै नमः',
       mantra: 'Om Ghanakunchitamurdhajayai Namah',
-      meaning: ''
+      meaning: 'Ever-victorious bestower of triumph in righteous endeavors (Ghanakunchitamurdhajayai)'
     },
     {
       number: 78,
@@ -632,7 +632,7 @@ export const sitaAshtottaram = {
       transliteration: 'Chandrikasmitasampurnayai',
       mantraSanskrit: 'ॐ चन्द्रिकास्मितसम्पूर्णायै नमः',
       mantra: 'Om Chandrikasmitasampurnayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Chandrikasmitasampurnayai'
     },
     {
       number: 79,
@@ -640,7 +640,7 @@ export const sitaAshtottaram = {
       transliteration: 'Charuchamikarambarayai',
       mantraSanskrit: 'ॐ चारुचामीकराम्बरायै नमः',
       mantra: 'Om Charuchamikarambarayai Namah',
-      meaning: ''
+      meaning: 'Whose hands grant fearlessness (Abhaya) and boons (Varada) (Charuchamikarambarayai)'
     },
     {
       number: 80,
@@ -648,7 +648,7 @@ export const sitaAshtottaram = {
       transliteration: 'Yoginyai',
       mantraSanskrit: 'ॐ योगिन्यै नमः',
       mantra: 'Om Yoginyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Yoginyai'
     },
     {
       number: 81,
@@ -656,7 +656,7 @@ export const sitaAshtottaram = {
       transliteration: 'Mohinyai',
       mantraSanskrit: 'ॐ मोहिन्यै नमः',
       mantra: 'Om Mohinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Mohinyai'
     },
     {
       number: 82,
@@ -664,7 +664,7 @@ export const sitaAshtottaram = {
       transliteration: 'Stambhinyai',
       mantraSanskrit: 'ॐ स्तम्भिन्यै नमः',
       mantra: 'Om Stambhinyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Stambhinyai'
     },
     {
       number: 83,
@@ -672,7 +672,7 @@ export const sitaAshtottaram = {
       transliteration: 'Akhilandeshvaryai',
       mantraSanskrit: 'ॐ अखिलाण्डेश्वर्यै नमः',
       mantra: 'Om Akhilandeshvaryai Namah',
-      meaning: ''
+      meaning: 'Omnipresent and all-encompassing divinity (Akhilandeshvaryai)'
     },
     {
       number: 84,
@@ -680,7 +680,7 @@ export const sitaAshtottaram = {
       transliteration: 'Shubhayai',
       mantraSanskrit: 'ॐ शुभायै नमः',
       mantra: 'Om Shubhayai Namah',
-      meaning: ''
+      meaning: 'Remover of fear, sorrow, and distress (Shubhayai)'
     },
     {
       number: 85,
@@ -688,7 +688,7 @@ export const sitaAshtottaram = {
       transliteration: 'Gauryai',
       mantraSanskrit: 'ॐ गौर्यै नमः',
       mantra: 'Om Gauryai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Gauryai'
     },
     {
       number: 86,
@@ -696,7 +696,7 @@ export const sitaAshtottaram = {
       transliteration: 'Narayanyai',
       mantraSanskrit: 'ॐ नारायण्यै नमः',
       mantra: 'Om Narayanyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Narayanyai'
     },
     {
       number: 87,
@@ -704,7 +704,7 @@ export const sitaAshtottaram = {
       transliteration: 'Prityai',
       mantraSanskrit: 'ॐ प्रीत्यै नमः',
       mantra: 'Om Prityai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Prityai'
     },
     {
       number: 88,
@@ -712,7 +712,7 @@ export const sitaAshtottaram = {
       transliteration: 'Svahayai',
       mantraSanskrit: 'ॐ स्वाहायै नमः',
       mantra: 'Om Svahayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Svahayai'
     },
     {
       number: 89,
@@ -720,7 +720,7 @@ export const sitaAshtottaram = {
       transliteration: 'Svadhayai',
       mantraSanskrit: 'ॐ स्वधायै नमः',
       mantra: 'Om Svadhayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Svadhayai'
     },
     {
       number: 90,
@@ -728,7 +728,7 @@ export const sitaAshtottaram = {
       transliteration: 'Shivayai',
       mantraSanskrit: 'ॐ शिवायै नमः',
       mantra: 'Om Shivayai Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Shivayai)'
     },
     {
       number: 91,
@@ -736,7 +736,7 @@ export const sitaAshtottaram = {
       transliteration: 'Ashritanandajananyai',
       mantraSanskrit: 'ॐ आश्रितानन्दजनन्यै नमः',
       mantra: 'Om Ashritanandajananyai Namah',
-      meaning: ''
+      meaning: 'Compassionate refuge and protector of devoted souls (Ashritanandajananyai)'
     },
     {
       number: 92,
@@ -744,7 +744,7 @@ export const sitaAshtottaram = {
       transliteration: 'Bharatyai',
       mantraSanskrit: 'ॐ भारत्यै नमः',
       mantra: 'Om Bharatyai Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Bharatyai)'
     },
     {
       number: 93,
@@ -752,7 +752,7 @@ export const sitaAshtottaram = {
       transliteration: 'Varahyaih',
       mantraSanskrit: 'ॐ वाराह्यैः नमः',
       mantra: 'Om Varahyaih Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Varahyaih)'
     },
     {
       number: 94,
@@ -760,7 +760,7 @@ export const sitaAshtottaram = {
       transliteration: 'Vaishnavyai',
       mantraSanskrit: 'ॐ वैष्णव्यै नमः',
       mantra: 'Om Vaishnavyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Vaishnavyai'
     },
     {
       number: 95,
@@ -768,7 +768,7 @@ export const sitaAshtottaram = {
       transliteration: 'Brahmyaih',
       mantraSanskrit: 'ॐ ब्राह्म्यैः नमः',
       mantra: 'Om Brahmyaih Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Brahmyaih'
     },
     {
       number: 96,
@@ -776,7 +776,7 @@ export const sitaAshtottaram = {
       transliteration: 'Siddhavanditayai',
       mantraSanskrit: 'ॐ सिद्धवन्दितायै नमः',
       mantra: 'Om Siddhavanditayai Namah',
-      meaning: ''
+      meaning: 'Master of yoga, meditation, and spiritual realization (Siddhavanditayai)'
     },
     {
       number: 97,
@@ -784,7 +784,7 @@ export const sitaAshtottaram = {
       transliteration: 'Shadhadharanivasinyai',
       mantraSanskrit: 'ॐ षढाधारनिवासिन्यै नमः',
       mantra: 'Om Shadhadharanivasinyai Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Shadhadharanivasinyai)'
     },
     {
       number: 98,
@@ -792,7 +792,7 @@ export const sitaAshtottaram = {
       transliteration: 'Kalakokilasallapayai',
       mantraSanskrit: 'ॐ कलकोकिलसल्लापायै नमः',
       mantra: 'Om Kalakokilasallapayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Kalakokilasallapayai'
     },
     {
       number: 99,
@@ -800,7 +800,7 @@ export const sitaAshtottaram = {
       transliteration: 'Kalahamsakanupurayai',
       mantraSanskrit: 'ॐ कलहंसकनूपुरायै नमः',
       mantra: 'Om Kalahamsakanupurayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Kalahamsakanupurayai'
     },
     {
       number: 100,
@@ -808,7 +808,7 @@ export const sitaAshtottaram = {
       transliteration: 'Kshantishantyadigunashalinyai',
       mantraSanskrit: 'ॐ क्षान्तिशान्त्यादिगुणशालिन्यै नमः',
       mantra: 'Om Kshantishantyadigunashalinyai Namah',
-      meaning: ''
+      meaning: 'Embodiment of serene peace and inner tranquility (Kshantishantyadigunashalinyai)'
     },
     {
       number: 101,
@@ -816,7 +816,7 @@ export const sitaAshtottaram = {
       transliteration: 'Kandarpajananyai',
       mantraSanskrit: 'ॐ कन्दर्पजनन्यै नमः',
       mantra: 'Om Kandarpajananyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Kandarpajananyai'
     },
     {
       number: 102,
@@ -824,7 +824,7 @@ export const sitaAshtottaram = {
       transliteration: 'Sarvalokasamaradhyayai',
       mantraSanskrit: 'ॐ सर्वलोकसमारध्यायै नमः',
       mantra: 'Om Sarvalokasamaradhyayai Namah',
-      meaning: ''
+      meaning: 'Guardian and sustainer of the cosmic worlds (Sarvalokasamaradhyayai)'
     },
     {
       number: 103,
@@ -832,7 +832,7 @@ export const sitaAshtottaram = {
       transliteration: 'Saugandhasumanapriyayai',
       mantraSanskrit: 'ॐ सौगन्धसुमनप्रियायै नमः',
       mantra: 'Om Saugandhasumanapriyayai Namah',
-      meaning: ''
+      meaning: 'Beloved of the pure-hearted and enchanting in grace (Saugandhasumanapriyayai)'
     },
     {
       number: 104,
@@ -840,7 +840,7 @@ export const sitaAshtottaram = {
       transliteration: 'Shyamalayai',
       mantraSanskrit: 'ॐ श्यामलायै नमः',
       mantra: 'Om Shyamalayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Shyamalayai'
     },
     {
       number: 105,
@@ -848,7 +848,7 @@ export const sitaAshtottaram = {
       transliteration: 'Sarvajanamangaladevatayai',
       mantraSanskrit: 'ॐ सर्वजनमङ्गलदेवतायै नमः',
       mantra: 'Om Sarvajanamangaladevatayai Namah',
-      meaning: ''
+      meaning: 'Source of supreme auspiciousness and blessing (Sarvajanamangaladevatayai)'
     },
     {
       number: 106,
@@ -856,7 +856,7 @@ export const sitaAshtottaram = {
       transliteration: 'Vasudhaputryai',
       mantraSanskrit: 'ॐ वसुधापुत्र्यै नमः',
       mantra: 'Om Vasudhaputryai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Vasudhaputryai'
     },
     {
       number: 107,
@@ -864,7 +864,7 @@ export const sitaAshtottaram = {
       transliteration: 'Matangyai',
       mantraSanskrit: 'ॐ मातङ्ग्यै नमः',
       mantra: 'Om Matangyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Matangyai'
     },
     {
       number: 108,
@@ -872,7 +872,7 @@ export const sitaAshtottaram = {
       transliteration: 'Sitayai',
       mantraSanskrit: 'ॐ सीतायै नमः',
       mantra: 'Om Sitayai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Sitayai'
     },
     {
       number: 109,
@@ -880,7 +880,7 @@ export const sitaAshtottaram = {
       transliteration: 'Hemanjanayikayai',
       mantraSanskrit: 'ॐ हेमाञ्जनायिकायै नमः',
       mantra: 'Om Hemanjanayikayai Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Hemanjanayikayai)'
     },
     {
       number: 110,
@@ -888,7 +888,7 @@ export const sitaAshtottaram = {
       transliteration: 'Sitadevimahalakshmyai',
       mantraSanskrit: 'ॐ सीतादेवीमहालक्ष्म्यै नमः',
       mantra: 'Om Sitadevimahalakshmyai Namah',
-      meaning: ''
+      meaning: 'Transcendent, supreme, and most exalted in glory (Sitadevimahalakshmyai)'
     },
     {
       number: 111,
@@ -896,7 +896,7 @@ export const sitaAshtottaram = {
       transliteration: 'Sakalasamrajyalakshmyai',
       mantraSanskrit: 'ॐ सकलसांराज्यलक्ष्म्यै नमः',
       mantra: 'Om Sakalasamrajyalakshmyai Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Goddess Sita revered as Sakalasamrajyalakshmyai'
     },
     {
       number: 112,
@@ -904,7 +904,7 @@ export const sitaAshtottaram = {
       transliteration: 'Bhaktabhishtaphalapradayai',
       mantraSanskrit: 'ॐ भक्तभीष्टफलप्रदायै नमः',
       mantra: 'Om Bhaktabhishtaphalapradayai Namah',
-      meaning: ''
+      meaning: 'Compassionate refuge and protector of devoted souls (Bhaktabhishtaphalapradayai)'
     }
   ]
 };

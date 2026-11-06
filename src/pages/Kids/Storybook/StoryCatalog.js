@@ -10,6 +10,13 @@ const CATEGORIES = ['All Stories', 'Gods & Heroes', 'Festivals', 'Moral Fables']
 
 const StoryCatalog = () => {
   const [selectedCategory, setSelectedCategory] = useState('All Stories');
+  const [completedStories] = useState(() => {
+    try {
+      return JSON.parse(localStorage.getItem('divinepath_kids_completed_stories') || '[]');
+    } catch (e) {
+      return [];
+    }
+  });
   const { playClick } = useSoundEffects();
 
   const filteredStories = selectedCategory === 'All Stories'
@@ -32,7 +39,9 @@ const StoryCatalog = () => {
             <p>Pick a story to read, listen, and tap playful animations!</p>
           </div>
           <div className="star-reward-pill">
-            <span>⭐ Earn +1 Star per story!</span>
+            <span>
+              ⭐ {completedStories.length}/{kidsStories.length} Read • +1 Star per story!
+            </span>
           </div>
         </div>
 
@@ -84,7 +93,10 @@ const StoryCatalog = () => {
                 <p className="story-card-desc">{story.description}</p>
 
                 <div className="story-card-footer">
-                  <span className="story-pages-count">📄 {story.pages.length} Pages</span>
+                  <span className="story-pages-count">
+                    📄 {story.pages.length} Pages
+                    {completedStories.includes(story.id) && ' • ✓ Read'}
+                  </span>
                   <Link 
                     to={`/kids/stories/${story.id}`} 
                     className="read-story-btn"
@@ -92,7 +104,7 @@ const StoryCatalog = () => {
                       try { playClick(); } catch (e) {}
                     }}
                   >
-                    Read Story ▶
+                    {completedStories.includes(story.id) ? 'Read Again ▶' : 'Read Story ▶'}
                   </Link>
                 </div>
               </div>

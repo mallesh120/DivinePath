@@ -1,39 +1,39 @@
 export const vamanaStoryScenes = [
   {
     text: "Many years after the terrifying Narasimha avatar, Prahlada grew up to be a wise and just king. He had a grandson named King Bali (Mahabali). Bali was a very good and generous king, but he was also very ambitious. He belonged to the Asura (demon) family and wanted to conquer all the three worlds.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_vamana_1_king_mahabali_ambition_1793941828568.jpg"
   },
   {
     text: "With the help of his guru, Shukracharya, King Bali performed powerful fire rituals and became invincible. He attacked heaven, defeated Indra and the gods, and took over the entire universe. Though he was a demon king, he ruled fairly and was famous for his extreme generosity—he promised to give anything that anyone asked of him.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_vamana_2_shukracharya_ritual_heaven_conquered_1793941844827.jpg"
   },
   {
     text: "The gods, having lost their home in heaven, were miserable. They went to Lord Vishnu for help. Vishnu smiled and promised to restore balance without fighting a war, using King Bali's own pride and generosity against him.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_vamana_3_gods_plead_vishnu_ksheerasagara_1793941886676.jpg"
   },
   {
     text: "Soon after, to celebrate his victories, King Bali organized a massive Yajna (fire sacrifice). During this event, he announced that he would grant any wish to anyone who asked. Thousands of priests, kings, and common people lined up to receive gifts of gold, cows, and land.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_vamana_4_mahabali_grand_yajna_charity_1793941902133.jpg"
   },
   {
     text: "Suddenly, a very unusual guest entered the grand pavilion. It was a young, glowing Brahmin boy holding an umbrella made of leaves in one hand and a wooden water pot in the other. He was extremely short, almost like a dwarf. This was Vamana, the fifth avatar of Lord Vishnu.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_vamana_5_young_brahmin_boy_vamana_arrives_1793941946469.jpg"
   },
   {
     text: "King Bali was enchanted by the divine radiance of the little boy. He welcomed him respectfully, washed his feet, and said, 'O young Brahmin, please ask me for anything. I can give you entire kingdoms, mountains of gold, or herds of elephants. What is your wish?'",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_vamana_6_bali_welcomes_vamana_washes_feet_1793941967081.jpg"
   },
   {
     text: "The little boy smiled sweetly and replied, 'O great King, I do not need kingdoms or gold. I am a simple student. I only ask for as much land as I can measure with three steps of my small feet, so I can sit and meditate.'",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_vamana_7_vamana_asking_three_steps_land_1793942010391.jpg"
   },
   {
     text: "King Bali laughed. 'You are so small, and your feet are tiny! Three steps won't even give you enough room to sleep! Ask for something bigger!' But the boy insisted, 'Three steps of my feet are all I need.'",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_vamana_8_bali_laughs_insists_on_three_steps_1793942029604.jpg"
   },
   {
     text: "Bali agreed and was about to pour sacred water from a pot to seal the promise. However, his wise guru, Shukracharya, realized this boy was actually Lord Vishnu in disguise. The guru quickly shrank himself, entered the spout of the water pot, and blocked the water from pouring out.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_vamana_9_shukracharya_blocks_water_spout_1793942082497.jpg"
   },
   {
     text: "The clever Vamana took a sharp blade of Darbha grass and poked it into the spout to clear the blockage. It poked Shukracharya right in the eye! The guru yelled in pain and tumbled out, allowing the water to flow and the promise to be sealed.",

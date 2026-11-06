@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@400;500;700&family=Cinzel:wght@700&display=swap');
-
 :root {
   /* Color Palette - Strict Spiritual Palette (Saffron, Red, White, Blue) */
   --primary-color: #EA580C; /* Saffron (Orange 600) */
@@ -188,7 +186,7 @@ html {
 .theme-night {
   --bg-gradient: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
   --text-color: #FFFFFF;
-  --text-muted: #A0A0B0;
+  --text-muted: #CBD5E1;
   --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
   --glass-shadow: rgba(0, 0, 0, 0.3);
@@ -200,12 +198,12 @@ html {
 
 .theme-dawn {
   --bg-gradient: linear-gradient(135deg, #FF9A9E 0%, #FECFEF 100%);
-  --text-color: #2C3E50;
-  --text-muted: #5D6D7E;
-  --glass-bg: rgba(255, 255, 255, 0.4);
-  --glass-border: rgba(255, 255, 255, 0.5);
+  --text-color: #1E293B;
+  --text-muted: #334155;
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.6);
   --glass-shadow: rgba(0, 0, 0, 0.1);
-  --hero-title: #E67E22;
+  --hero-title: #9A3412;
   --hero-bg: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.2) 100%);
   --nav-bg: rgba(255, 255, 255, 0.95);
   --timeline-line: linear-gradient(90deg, #E74C3C 0%, #F39C12 100%);
@@ -213,12 +211,12 @@ html {
 
 .theme-day {
   --bg-gradient: linear-gradient(135deg, #85C1E9 0%, #D4E6F1 100%);
-  --text-color: #154360;
-  --text-muted: #2980B9;
-  --glass-bg: rgba(255, 255, 255, 0.5);
-  --glass-border: rgba(255, 255, 255, 0.6);
+  --text-color: #0F172A;
+  --text-muted: #1E3A5F;
+  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.7);
   --glass-shadow: rgba(0, 0, 0, 0.05);
-  --hero-title: #D35400;
+  --hero-title: #9A3412;
   --hero-bg: linear-gradient(180deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.3) 100%);
   --nav-bg: rgba(255, 255, 255, 0.95);
   --timeline-line: linear-gradient(90deg, #F39C12 0%, #E74C3C 100%);
@@ -228,10 +226,10 @@ html {
   --bg-gradient: linear-gradient(135deg, #E67E22 0%, #8E44AD 100%);
   --text-color: #FDEDEC;
   --text-muted: #FADBD8;
-  --glass-bg: rgba(0, 0, 0, 0.15);
+  --glass-bg: rgba(0, 0, 0, 0.25);
   --glass-border: rgba(255, 255, 255, 0.2);
   --glass-shadow: rgba(0, 0, 0, 0.2);
-  --hero-title: #F1C40F;
+  --hero-title: #FDE047;
   --hero-bg: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
   --nav-bg: rgba(142, 68, 173, 0.95);
   --timeline-line: linear-gradient(90deg, #F1C40F 0%, #FF9A9E 100%);
@@ -254,7 +252,7 @@ html {
   --text-color: #FFFFFF !important;
   --text-primary: #F8FAFC !important;
   --text-secondary: #CBD5E1 !important;
-  --text-muted: #94A3B8 !important;
+  --text-muted: #CBD5E1 !important;
   --glass-bg: rgba(255, 255, 255, 0.06) !important;
   --glass-border: rgba(255, 255, 255, 0.12) !important;
   --glass-shadow: rgba(0, 0, 0, 0.5) !important;
@@ -278,19 +276,19 @@ html {
   --bg-secondary: #FDFBF7 !important;
   --bg-tertiary: #F8FAFC !important;
   --bg-gradient: linear-gradient(135deg, #85C1E9 0%, #D4E6F1 100%) !important;
-  --text-color: #154360 !important;
+  --text-color: #0F172A !important;
   --text-primary: #0F172A !important;
-  --text-secondary: #475569 !important;
-  --text-muted: #2980B9 !important;
-  --glass-bg: rgba(255, 255, 255, 0.6) !important;
-  --glass-border: rgba(255, 255, 255, 0.65) !important;
+  --text-secondary: #334155 !important;
+  --text-muted: #1E3A5F !important;
+  --glass-bg: rgba(255, 255, 255, 0.65) !important;
+  --glass-border: rgba(255, 255, 255, 0.7) !important;
   --glass-shadow: rgba(0, 0, 0, 0.06) !important;
-  --hero-title: #D35400 !important;
+  --hero-title: #9A3412 !important;
   --hero-bg: linear-gradient(180deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.3) 100%) !important;
   --nav-bg: rgba(255, 255, 255, 0.95) !important;
   --card-bg: #FFFFFF !important;
   --border-color: #E2E8F0 !important;
   --border-subtle: #F1F5F9 !important;
-  --primary-color: #EA580C !important;
+  --primary-color: #C2410C !important;
 }
 

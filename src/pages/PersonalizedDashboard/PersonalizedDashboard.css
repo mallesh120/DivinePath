@@ -313,7 +313,7 @@
 
 .challenge-title {
   font-weight: bold;
-  color: #f39c12;
+  color: var(--hero-title);
   margin: 0 0 0.4rem 0;
 }
 
@@ -342,6 +342,7 @@
   color: var(--text-muted);
 }
 
+.learning-preview h3,
 .learning-preview h4 {
   margin: 0 0 0.3rem 0;
   font-size: 1rem;
@@ -350,16 +351,24 @@
 .learning-preview p {
   margin: 0;
   font-size: 0.85rem;
-  color: #3498db;
+  color: var(--primary-color, #c2410c);
+  font-weight: 500;
 }
 
 /* Shloka Mastery */
 .shloka-progress-badge {
   font-size: 0.75rem;
-  background: rgba(46, 204, 113, 0.1);
-  color: #2ecc71;
+  background: rgba(22, 163, 74, 0.14);
+  color: #15803d;
   padding: 0.2rem 0.6rem;
   border-radius: 12px;
+  font-weight: 600;
+}
+
+[data-theme='dark'] .shloka-progress-badge,
+.theme-night .shloka-progress-badge {
+  background: rgba(46, 204, 113, 0.15);
+  color: #4ade80;
 }
 
 .shloka-content {
@@ -408,9 +417,16 @@
 }
 
 .shloka-practice-btn {
+  background: rgba(22, 163, 74, 0.16);
+  color: #15803d;
+  border: 1px solid rgba(22, 163, 74, 0.35);
+}
+
+[data-theme='dark'] .shloka-practice-btn,
+.theme-night .shloka-practice-btn {
   background: rgba(46, 204, 113, 0.2);
-  color: #2ecc71;
-  border: 1px solid rgba(46, 204, 113, 0.3);
+  color: #4ade80;
+  border: 1px solid rgba(74, 222, 128, 0.35);
 }
 
 .shloka-practice-btn:hover {
@@ -418,7 +434,7 @@
 }
 
 .shloka-practice-btn.practiced {
-  background: #2ecc71;
+  background: #15803d;
   color: white;
 }
 
@@ -720,7 +736,9 @@
 .panchang-mini-link {
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: flex;
+  align-items: center;
+  min-height: 68px;
 }
 
 /* --- Continue Reading Shelf --- */
@@ -824,7 +842,8 @@
   filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
 }
 
-.gateway-details h4 {
+.gateway-details h4,
+.gateway-details .gateway-title {
   margin: 0 0 0.2rem 0;
   font-size: 1rem;
   font-weight: 600;
@@ -834,7 +853,7 @@
 .gateway-details p {
   margin: 0;
   font-size: 0.75rem;
-  opacity: 0.7;
+  color: var(--text-muted);
 }
 
 /* --- Shloka Card Button --- */

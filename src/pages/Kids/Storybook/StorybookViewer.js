@@ -76,6 +76,13 @@ const StorybookViewer = () => {
   const handleFinishStory = () => {
     stop();
     try { playSuccess(); } catch (e) {}
+    try {
+      const saved = JSON.parse(localStorage.getItem('divinepath_kids_completed_stories') || '[]');
+      if (story?.id && !saved.includes(story.id)) {
+        const updated = [...saved, story.id];
+        localStorage.setItem('divinepath_kids_completed_stories', JSON.stringify(updated));
+      }
+    } catch (e) {}
     awardStars(1);
     if (!goals.story) {
       toggleGoal('story');

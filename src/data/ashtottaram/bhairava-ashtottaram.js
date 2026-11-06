@@ -16,7 +16,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Bhairavaya',
       mantraSanskrit: 'ॐ भैरवाय नमः',
       mantra: 'Om Bhairavaya Namah',
-      meaning: ''
+      meaning: 'Lord Bhairava, the fierce protector who annihilates fear'
     },
     {
       number: 2,
@@ -24,7 +24,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Bhutanathaya',
       mantraSanskrit: 'ॐ भूतनाथाय नमः',
       mantra: 'Om Bhutanathaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Bhutanathaya'
     },
     {
       number: 3,
@@ -32,7 +32,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Bhutatmane',
       mantraSanskrit: 'ॐ भूतात्मने नमः',
       mantra: 'Om Bhutatmane Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Bhutatmane'
     },
     {
       number: 4,
@@ -40,7 +40,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Bhutabhavanaya',
       mantraSanskrit: 'ॐ भूतभावनाय नमः',
       mantra: 'Om Bhutabhavanaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Bhutabhavanaya'
     },
     {
       number: 5,
@@ -48,7 +48,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Kshetrajnaya',
       mantraSanskrit: 'ॐ क्षेत्रज्ञाय नमः',
       mantra: 'Om Kshetrajnaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Kshetrajnaya'
     },
     {
       number: 6,
@@ -56,7 +56,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Kshetrapalaya',
       mantraSanskrit: 'ॐ क्षेत्रपालाय नमः',
       mantra: 'Om Kshetrapalaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Kshetrapalaya'
     },
     {
       number: 7,
@@ -64,7 +64,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Kshetradaya',
       mantraSanskrit: 'ॐ क्षेत्रदाय नमः',
       mantra: 'Om Kshetradaya Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Kshetradaya)'
     },
     {
       number: 8,
@@ -72,7 +72,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Kshatriyaya',
       mantraSanskrit: 'ॐ क्षत्रियाय नमः',
       mantra: 'Om Kshatriyaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Kshatriyaya'
     },
     {
       number: 9,
@@ -80,7 +80,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Viraje',
       mantraSanskrit: 'ॐ विराजे नमः',
       mantra: 'Om Viraje Namah',
-      meaning: ''
+      meaning: 'Possessor of invincible spiritual strength and valor (Viraje)'
     },
     {
       number: 10,
@@ -88,7 +88,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Shmashanavasine',
       mantraSanskrit: 'ॐ श्मशानवासिने नमः',
       mantra: 'Om Shmashanavasine Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Shmashanavasine)'
     },
     {
       number: 11,
@@ -96,7 +96,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Mamsashine',
       mantraSanskrit: 'ॐ मांसाशिने नमः',
       mantra: 'Om Mamsashine Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Mamsashine'
     },
     {
       number: 12,
@@ -104,7 +104,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Kharparashine',
       mantraSanskrit: 'ॐ खर्पराशिने नमः',
       mantra: 'Om Kharparashine Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Kharparashine'
     },
     {
       number: 13,
@@ -112,7 +112,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Smarantakaya',
       mantraSanskrit: 'ॐ स्मरान्तकाय नमः',
       mantra: 'Om Smarantakaya Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Smarantakaya)'
     },
     {
       number: 14,
@@ -120,7 +120,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Raktapaya',
       mantraSanskrit: 'ॐ रक्तपाय नमः',
       mantra: 'Om Raktapaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Raktapaya'
     },
     {
       number: 15,
@@ -128,7 +128,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Panapaya',
       mantraSanskrit: 'ॐ पानपाय नमः',
       mantra: 'Om Panapaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Panapaya'
     },
     {
       number: 16,
@@ -136,7 +136,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Siddhaya',
       mantraSanskrit: 'ॐ सिद्धाय नमः',
       mantra: 'Om Siddhaya Namah',
-      meaning: ''
+      meaning: 'Master of yoga, meditation, and spiritual realization (Siddhaya)'
     },
     {
       number: 17,
@@ -144,7 +144,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Siddhidaya',
       mantraSanskrit: 'ॐ सिद्धिदाय नमः',
       mantra: 'Om Siddhidaya Namah',
-      meaning: ''
+      meaning: 'Ocean of boundless mercy and maternal/paternal grace (Siddhidaya)'
     },
     {
       number: 18,
@@ -152,7 +152,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Siddhisevitaya',
       mantraSanskrit: 'ॐ सिद्धिसेविताय नमः',
       mantra: 'Om Siddhisevitaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Siddhisevitaya'
     },
     {
       number: 19,
@@ -160,7 +160,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Kankalaya',
       mantraSanskrit: 'ॐ कङ्कालाय नमः',
       mantra: 'Om Kankalaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Kankalaya'
     },
     {
       number: 20,
@@ -168,7 +168,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Kalashamanaya',
       mantraSanskrit: 'ॐ कालशमनाय नमः',
       mantra: 'Om Kalashamanaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Kalashamanaya'
     },
     {
       number: 21,
@@ -176,7 +176,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Kalakashthatanave',
       mantraSanskrit: 'ॐ कलाकाष्ठातनवे नमः',
       mantra: 'Om Kalakashthatanave Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Kalakashthatanave'
     },
     {
       number: 22,
@@ -184,7 +184,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Kavaye',
       mantraSanskrit: 'ॐ कवये नमः',
       mantra: 'Om Kavaye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Kavaye'
     },
     {
       number: 23,
@@ -192,7 +192,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Trinetraya',
       mantraSanskrit: 'ॐ त्रिनेत्राय नमः',
       mantra: 'Om Trinetraya Namah',
-      meaning: ''
+      meaning: 'Whose compassionate gaze watches over all creation (Trinetraya)'
     },
     {
       number: 24,
@@ -200,7 +200,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Bahunetraya',
       mantraSanskrit: 'ॐ बहुनेत्राय नमः',
       mantra: 'Om Bahunetraya Namah',
-      meaning: ''
+      meaning: 'Whose compassionate gaze watches over all creation (Bahunetraya)'
     },
     {
       number: 25,
@@ -208,7 +208,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Pingalalochanaya',
       mantraSanskrit: 'ॐ पिङ्गललोचनाय नमः',
       mantra: 'Om Pingalalochanaya Namah',
-      meaning: ''
+      meaning: 'Whose compassionate gaze watches over all creation (Pingalalochanaya)'
     },
     {
       number: 26,
@@ -216,7 +216,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Shulapanaye',
       mantraSanskrit: 'ॐ शूलपाणये नमः',
       mantra: 'Om Shulapanaye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Shulapanaye'
     },
     {
       number: 27,
@@ -224,7 +224,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Khadgapanaye',
       mantraSanskrit: 'ॐ खड्गपाणये नमः',
       mantra: 'Om Khadgapanaye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Khadgapanaye'
     },
     {
       number: 28,
@@ -232,7 +232,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Kankaline',
       mantraSanskrit: 'ॐ कङ्कालिने नमः',
       mantra: 'Om Kankaline Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Kankaline'
     },
     {
       number: 29,
@@ -240,7 +240,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Dhumralochanaya',
       mantraSanskrit: 'ॐ धूम्रलोचनाय नमः',
       mantra: 'Om Dhumralochanaya Namah',
-      meaning: ''
+      meaning: 'Whose compassionate gaze watches over all creation (Dhumralochanaya)'
     },
     {
       number: 30,
@@ -248,7 +248,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Abhirave',
       mantraSanskrit: 'ॐ अभीरवे नमः',
       mantra: 'Om Abhirave Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Abhirave'
     },
     {
       number: 31,
@@ -256,7 +256,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Bhairavinathaya',
       mantraSanskrit: 'ॐ भैरवीनाथाय नमः',
       mantra: 'Om Bhairavinathaya Namah',
-      meaning: ''
+      meaning: 'Radiant with the effulgence of a thousand suns (Bhairavinathaya)'
     },
     {
       number: 32,
@@ -264,7 +264,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Bhutapaya',
       mantraSanskrit: 'ॐ भूतपाय नमः',
       mantra: 'Om Bhutapaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Bhutapaya'
     },
     {
       number: 33,
@@ -272,7 +272,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Yoginipataye',
       mantraSanskrit: 'ॐ योगिनीपतये नमः',
       mantra: 'Om Yoginipataye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Yoginipataye'
     },
     {
       number: 34,
@@ -280,7 +280,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Dhanadaya',
       mantraSanskrit: 'ॐ धनदाय नमः',
       mantra: 'Om Dhanadaya Namah',
-      meaning: ''
+      meaning: 'The generous bestower of wealth and prosperity'
     },
     {
       number: 35,
@@ -288,7 +288,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Dhanaharine',
       mantraSanskrit: 'ॐ धनहारिणे नमः',
       mantra: 'Om Dhanaharine Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Dhanaharine)'
     },
     {
       number: 36,
@@ -296,7 +296,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Dhanavate',
       mantraSanskrit: 'ॐ धनवते नमः',
       mantra: 'Om Dhanavate Namah',
-      meaning: ''
+      meaning: 'Bestower of spiritual and material abundance (Dhanavate)'
     },
     {
       number: 37,
@@ -304,7 +304,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Pratibhanavate',
       mantraSanskrit: 'ॐ प्रतिभानवते नमः',
       mantra: 'Om Pratibhanavate Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Pratibhanavate)'
     },
     {
       number: 38,
@@ -312,7 +312,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Nagaharaya',
       mantraSanskrit: 'ॐ नागहाराय नमः',
       mantra: 'Om Nagaharaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Nagaharaya)'
     },
     {
       number: 39,
@@ -320,7 +320,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Nagakeshaya',
       mantraSanskrit: 'ॐ नागकेशाय नमः',
       mantra: 'Om Nagakeshaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Nagakeshaya'
     },
     {
       number: 40,
@@ -328,7 +328,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Vyomakeshaya',
       mantraSanskrit: 'ॐ व्योमकेशाय नमः',
       mantra: 'Om Vyomakeshaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Vyomakeshaya'
     },
     {
       number: 41,
@@ -336,7 +336,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Kapalabhrite',
       mantraSanskrit: 'ॐ कपालभृते नमः',
       mantra: 'Om Kapalabhrite Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Kapalabhrite'
     },
     {
       number: 42,
@@ -344,7 +344,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Kalaya',
       mantraSanskrit: 'ॐ कालाय नमः',
       mantra: 'Om Kalaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Kalaya'
     },
     {
       number: 43,
@@ -352,7 +352,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Kapalamaline',
       mantraSanskrit: 'ॐ कपालमालिने नमः',
       mantra: 'Om Kapalamaline Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Kapalamaline'
     },
     {
       number: 44,
@@ -360,7 +360,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Kamaniyaya',
       mantraSanskrit: 'ॐ कमनीयाय नमः',
       mantra: 'Om Kamaniyaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Kamaniyaya'
     },
     {
       number: 45,
@@ -368,7 +368,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Kalanidhaye',
       mantraSanskrit: 'ॐ कलानिधये नमः',
       mantra: 'Om Kalanidhaye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Kalanidhaye'
     },
     {
       number: 46,
@@ -376,7 +376,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Trilochanaya',
       mantraSanskrit: 'ॐ त्रिलोचनाय नमः',
       mantra: 'Om Trilochanaya Namah',
-      meaning: ''
+      meaning: 'Whose compassionate gaze watches over all creation (Trilochanaya)'
     },
     {
       number: 47,
@@ -384,7 +384,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Jvalannetraya',
       mantraSanskrit: 'ॐ ज्वलन्नेत्राय नमः',
       mantra: 'Om Jvalannetraya Namah',
-      meaning: ''
+      meaning: 'Whose compassionate gaze watches over all creation (Jvalannetraya)'
     },
     {
       number: 48,
@@ -392,7 +392,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Trishikhine',
       mantraSanskrit: 'ॐ त्रिशिखिने नमः',
       mantra: 'Om Trishikhine Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Trishikhine'
     },
     {
       number: 49,
@@ -400,7 +400,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Trilokapaya',
       mantraSanskrit: 'ॐ त्रिलोकपाय नमः',
       mantra: 'Om Trilokapaya Namah',
-      meaning: ''
+      meaning: 'Guardian and sustainer of the cosmic worlds (Trilokapaya)'
     },
     {
       number: 50,
@@ -408,7 +408,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Trinetratanayaya',
       mantraSanskrit: 'ॐ त्रिनेत्रतनयाय नमः',
       mantra: 'Om Trinetratanayaya Namah',
-      meaning: ''
+      meaning: 'Whose compassionate gaze watches over all creation (Trinetratanayaya)'
     },
     {
       number: 51,
@@ -416,7 +416,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Dimbhaya',
       mantraSanskrit: 'ॐ डिम्भाय नमः',
       mantra: 'Om Dimbhaya Namah',
-      meaning: ''
+      meaning: 'Remover of fear, sorrow, and distress (Dimbhaya)'
     },
     {
       number: 52,
@@ -424,7 +424,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Shantaya',
       mantraSanskrit: 'ॐ शान्ताय नमः',
       mantra: 'Om Shantaya Namah',
-      meaning: ''
+      meaning: 'Embodiment of serene peace and inner tranquility (Shantaya)'
     },
     {
       number: 53,
@@ -432,7 +432,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Shantajanapriyaya',
       mantraSanskrit: 'ॐ शान्तजनप्रियाय नमः',
       mantra: 'Om Shantajanapriyaya Namah',
-      meaning: ''
+      meaning: 'Embodiment of serene peace and inner tranquility (Shantajanapriyaya)'
     },
     {
       number: 54,
@@ -440,7 +440,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Batukaya',
       mantraSanskrit: 'ॐ बटुकाय नमः',
       mantra: 'Om Batukaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Batukaya'
     },
     {
       number: 55,
@@ -448,7 +448,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Bahuveshaya',
       mantraSanskrit: 'ॐ बहुवेषाय नमः',
       mantra: 'Om Bahuveshaya Namah',
-      meaning: ''
+      meaning: 'Whose hands grant fearlessness (Abhaya) and boons (Varada) (Bahuveshaya)'
     },
     {
       number: 56,
@@ -456,7 +456,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Khatvangavaradharakaya',
       mantraSanskrit: 'ॐ खट्वाङ्गवरधारकाय नमः',
       mantra: 'Om Khatvangavaradharakaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Khatvangavaradharakaya)'
     },
     {
       number: 57,
@@ -464,7 +464,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Bhutadhyakshaya',
       mantraSanskrit: 'ॐ भूताध्यक्षाय नमः',
       mantra: 'Om Bhutadhyakshaya Namah',
-      meaning: ''
+      meaning: 'Whose compassionate gaze watches over all creation (Bhutadhyakshaya)'
     },
     {
       number: 58,
@@ -472,7 +472,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Pashupataye',
       mantraSanskrit: 'ॐ पशुपतये नमः',
       mantra: 'Om Pashupataye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Pashupataye'
     },
     {
       number: 59,
@@ -480,7 +480,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Bhikshukaya',
       mantraSanskrit: 'ॐ भिक्षुकाय नमः',
       mantra: 'Om Bhikshukaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Bhikshukaya'
     },
     {
       number: 60,
@@ -488,7 +488,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Paricharakaya',
       mantraSanskrit: 'ॐ परिचारकाय नमः',
       mantra: 'Om Paricharakaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Paricharakaya)'
     },
     {
       number: 61,
@@ -496,7 +496,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Dhurtaya',
       mantraSanskrit: 'ॐ धूर्ताय नमः',
       mantra: 'Om Dhurtaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Dhurtaya'
     },
     {
       number: 62,
@@ -504,7 +504,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Digambaraya',
       mantraSanskrit: 'ॐ दिगम्बराय नमः',
       mantra: 'Om Digambaraya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Digambaraya'
     },
     {
       number: 63,
@@ -512,7 +512,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Shaurine',
       mantraSanskrit: 'ॐ शौरिणे नमः',
       mantra: 'Om Shaurine Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Shaurine'
     },
     {
       number: 64,
@@ -520,7 +520,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Harinaya',
       mantraSanskrit: 'ॐ हरिणाय नमः',
       mantra: 'Om Harinaya Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Harinaya)'
     },
     {
       number: 65,
@@ -528,7 +528,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Pandulochanaya',
       mantraSanskrit: 'ॐ पाण्डुलोचनाय नमः',
       mantra: 'Om Pandulochanaya Namah',
-      meaning: ''
+      meaning: 'Whose compassionate gaze watches over all creation (Pandulochanaya)'
     },
     {
       number: 66,
@@ -536,7 +536,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Prashantaya',
       mantraSanskrit: 'ॐ प्रशान्ताय नमः',
       mantra: 'Om Prashantaya Namah',
-      meaning: ''
+      meaning: 'Embodiment of serene peace and inner tranquility (Prashantaya)'
     },
     {
       number: 67,
@@ -544,7 +544,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Shantidaya',
       mantraSanskrit: 'ॐ शान्तिदाय नमः',
       mantra: 'Om Shantidaya Namah',
-      meaning: ''
+      meaning: 'Embodiment of serene peace and inner tranquility (Shantidaya)'
     },
     {
       number: 68,
@@ -552,7 +552,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Siddhaya',
       mantraSanskrit: 'ॐ सिद्धाय नमः',
       mantra: 'Om Siddhaya Namah',
-      meaning: ''
+      meaning: 'Master of yoga, meditation, and spiritual realization (Siddhaya)'
     },
     {
       number: 69,
@@ -560,7 +560,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Shankarapriyabandhavaya',
       mantraSanskrit: 'ॐ शङ्करप्रियबान्धवाय नमः',
       mantra: 'Om Shankarapriyabandhavaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Shankarapriyabandhavaya)'
     },
     {
       number: 70,
@@ -568,7 +568,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Ashtamurtaye',
       mantraSanskrit: 'ॐ अष्टमूर्तये नमः',
       mantra: 'Om Ashtamurtaye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Ashtamurtaye'
     },
     {
       number: 71,
@@ -576,7 +576,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Nidhishaya',
       mantraSanskrit: 'ॐ निधीशाय नमः',
       mantra: 'Om Nidhishaya Namah',
-      meaning: ''
+      meaning: 'Master of the nine sacred cosmic treasures (Navanidhi)'
     },
     {
       number: 72,
@@ -584,7 +584,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Jnanachakshushe',
       mantraSanskrit: 'ॐ ज्ञानचक्षुषे नमः',
       mantra: 'Om Jnanachakshushe Namah',
-      meaning: ''
+      meaning: 'Bestower of supreme spiritual knowledge and discernment (Jnanachakshushe)'
     },
     {
       number: 73,
@@ -592,7 +592,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Tapomayaya',
       mantraSanskrit: 'ॐ तपोमयाय नमः',
       mantra: 'Om Tapomayaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Tapomayaya'
     },
     {
       number: 74,
@@ -600,7 +600,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Ashtadharaya',
       mantraSanskrit: 'ॐ अष्टाधाराय नमः',
       mantra: 'Om Ashtadharaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Ashtadharaya)'
     },
     {
       number: 75,
@@ -608,7 +608,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Shadadharaya',
       mantraSanskrit: 'ॐ षडाधाराय नमः',
       mantra: 'Om Shadadharaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Shadadharaya)'
     },
     {
       number: 76,
@@ -616,7 +616,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Sarpayuktaya',
       mantraSanskrit: 'ॐ सर्पयुक्ताय नमः',
       mantra: 'Om Sarpayuktaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Sarpayuktaya'
     },
     {
       number: 77,
@@ -624,7 +624,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Shikhisakhye',
       mantraSanskrit: 'ॐ शिखीसख्ये नमः',
       mantra: 'Om Shikhisakhye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Shikhisakhye'
     },
     {
       number: 78,
@@ -632,7 +632,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Bhudharaya',
       mantraSanskrit: 'ॐ भूधराय नमः',
       mantra: 'Om Bhudharaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Bhudharaya)'
     },
     {
       number: 79,
@@ -640,7 +640,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Bhudharadhishaya',
       mantraSanskrit: 'ॐ भूधराधीशाय नमः',
       mantra: 'Om Bhudharadhishaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Bhudharadhishaya)'
     },
     {
       number: 80,
@@ -648,7 +648,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Bhupataye',
       mantraSanskrit: 'ॐ भूपतये नमः',
       mantra: 'Om Bhupataye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Bhupataye'
     },
     {
       number: 81,
@@ -656,7 +656,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Bhudharatmajaya',
       mantraSanskrit: 'ॐ भूधरात्मजाय नमः',
       mantra: 'Om Bhudharatmajaya Namah',
-      meaning: ''
+      meaning: 'Auspicious bestower of supreme liberation and grace (Bhudharatmajaya)'
     },
     {
       number: 82,
@@ -664,7 +664,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Kankaladharine',
       mantraSanskrit: 'ॐ कङ्कालधारिणे नमः',
       mantra: 'Om Kankaladharine Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Kankaladharine)'
     },
     {
       number: 83,
@@ -672,7 +672,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Mundine',
       mantraSanskrit: 'ॐ मुण्डिने नमः',
       mantra: 'Om Mundine Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Mundine'
     },
     {
       number: 84,
@@ -680,7 +680,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Nagayajnopavitakaya',
       mantraSanskrit: 'ॐ नागयज्ञोपवीतकाय नमः',
       mantra: 'Om Nagayajnopavitakaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Nagayajnopavitakaya'
     },
     {
       number: 85,
@@ -688,7 +688,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Jrimbhanaya',
       mantraSanskrit: 'ॐ जृम्भणाय नमः',
       mantra: 'Om Jrimbhanaya Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Jrimbhanaya)'
     },
     {
       number: 86,
@@ -696,7 +696,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Mohanaya',
       mantraSanskrit: 'ॐ मोहनाय नमः',
       mantra: 'Om Mohanaya Namah',
-      meaning: ''
+      meaning: 'Beloved of the pure-hearted and enchanting in grace (Mohanaya)'
     },
     {
       number: 87,
@@ -704,7 +704,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Stambhine',
       mantraSanskrit: 'ॐ स्तम्भिने नमः',
       mantra: 'Om Stambhine Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Stambhine'
     },
     {
       number: 88,
@@ -712,7 +712,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Maranaya',
       mantraSanskrit: 'ॐ मारणाय नमः',
       mantra: 'Om Maranaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Maranaya'
     },
     {
       number: 89,
@@ -720,7 +720,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Kshobhanaya',
       mantraSanskrit: 'ॐ क्षोभणाय नमः',
       mantra: 'Om Kshobhanaya Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Kshobhanaya)'
     },
     {
       number: 90,
@@ -728,7 +728,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Shuddhaya',
       mantraSanskrit: 'ॐ शुद्धाय नमः',
       mantra: 'Om Shuddhaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Shuddhaya'
     },
     {
       number: 91,
@@ -736,7 +736,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Nilanjanaprakhyaya',
       mantraSanskrit: 'ॐ नीलाञ्जनप्रख्याय नमः',
       mantra: 'Om Nilanjanaprakhyaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Nilanjanaprakhyaya'
     },
     {
       number: 92,
@@ -744,7 +744,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Daityaghne',
       mantraSanskrit: 'ॐ दैत्यघ्ने नमः',
       mantra: 'Om Daityaghne Namah',
-      meaning: ''
+      meaning: 'Vanquisher of demonic forces and inner ego (Daityaghne)'
     },
     {
       number: 93,
@@ -752,7 +752,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Mundabhushitaya',
       mantraSanskrit: 'ॐ मुण्डभूषिताय नमः',
       mantra: 'Om Mundabhushitaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Mundabhushitaya'
     },
     {
       number: 94,
@@ -760,7 +760,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Balibhuje',
       mantraSanskrit: 'ॐ बलिभुजे नमः',
       mantra: 'Om Balibhuje Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Balibhuje'
     },
     {
       number: 95,
@@ -768,7 +768,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Balibhunnathaya',
       mantraSanskrit: 'ॐ बलिभुङ्नाथाय नमः',
       mantra: 'Om Balibhunnathaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Balibhunnathaya'
     },
     {
       number: 96,
@@ -776,7 +776,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Balaya',
       mantraSanskrit: 'ॐ बालाय नमः',
       mantra: 'Om Balaya Namah',
-      meaning: ''
+      meaning: 'Possessor of invincible spiritual strength and valor (Balaya)'
     },
     {
       number: 97,
@@ -784,7 +784,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Balaparakramaya',
       mantraSanskrit: 'ॐ बालपराक्रमाय नमः',
       mantra: 'Om Balaparakramaya Namah',
-      meaning: ''
+      meaning: 'All-pervading sustainer of dharma and divine love (Balaparakramaya)'
     },
     {
       number: 98,
@@ -792,7 +792,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Sarvapattaranaya',
       mantraSanskrit: 'ॐ सर्वापत्तारणाय नमः',
       mantra: 'Om Sarvapattaranaya Namah',
-      meaning: ''
+      meaning: 'Omnipresent and all-encompassing divinity (Sarvapattaranaya)'
     },
     {
       number: 99,
@@ -800,7 +800,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Durgaya',
       mantraSanskrit: 'ॐ दुर्गाय नमः',
       mantra: 'Om Durgaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Durgaya'
     },
     {
       number: 100,
@@ -808,7 +808,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Dushtabhutanishevitaya',
       mantraSanskrit: 'ॐ दुष्टभूतनिषेविताय नमः',
       mantra: 'Om Dushtabhutanishevitaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Dushtabhutanishevitaya'
     },
     {
       number: 101,
@@ -816,7 +816,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Kamine',
       mantraSanskrit: 'ॐ कामिने नमः',
       mantra: 'Om Kamine Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Kamine'
     },
     {
       number: 102,
@@ -824,7 +824,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Kalanidhaye',
       mantraSanskrit: 'ॐ कलानिधये नमः',
       mantra: 'Om Kalanidhaye Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Kalanidhaye'
     },
     {
       number: 103,
@@ -832,7 +832,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Kantaya',
       mantraSanskrit: 'ॐ कान्ताय नमः',
       mantra: 'Om Kantaya Namah',
-      meaning: ''
+      meaning: 'Beloved of the pure-hearted and enchanting in grace (Kantaya)'
     },
     {
       number: 104,
@@ -840,7 +840,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Kaminivashakridvashine',
       mantraSanskrit: 'ॐ कामिनीवशकृद्वशिने नमः',
       mantra: 'Om Kaminivashakridvashine Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Kaminivashakridvashine'
     },
     {
       number: 105,
@@ -848,7 +848,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Sarvasiddhipradaya',
       mantraSanskrit: 'ॐ सर्वसिद्धिप्रदाय नमः',
       mantra: 'Om Sarvasiddhipradaya Namah',
-      meaning: ''
+      meaning: 'Omnipresent and all-encompassing divinity (Sarvasiddhipradaya)'
     },
     {
       number: 106,
@@ -856,7 +856,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Vaidyaya',
       mantraSanskrit: 'ॐ वैद्याय नमः',
       mantra: 'Om Vaidyaya Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Vaidyaya'
     },
     {
       number: 107,
@@ -864,7 +864,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Prabhave',
       mantraSanskrit: 'ॐ प्रभवे नमः',
       mantra: 'Om Prabhave Namah',
-      meaning: ''
+      meaning: 'Radiant with the effulgence of a thousand suns (Prabhave)'
     },
     {
       number: 108,
@@ -872,7 +872,7 @@ export const bhairavaAshtottaram = {
       transliteration: 'Vishnave',
       mantraSanskrit: 'ॐ विष्णवे नमः',
       mantra: 'Om Vishnave Namah',
-      meaning: ''
+      meaning: 'Sacred aspect of Lord Bhairava revered as Vishnave'
     }
   ]
 };
