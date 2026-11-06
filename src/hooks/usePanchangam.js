@@ -1,5 +1,17 @@
 import { useState, useEffect, useCallback } from 'react';
-import { getPanchangam, Observer, yogaNames, tithiNames, nakshatraNames } from '@ishubhamx/panchangam-js';
+
+let cachedPanchangLib = null;
+
+export const registerPanchangLib = (lib) => {
+  if (lib) cachedPanchangLib = lib;
+};
+
+const loadPanchangLib = async () => {
+  if (!cachedPanchangLib) {
+    cachedPanchangLib = await import('@ishubhamx/panchangam-js');
+  }
+  return cachedPanchangLib;
+};
 
 export const SACRED_CITIES = [
   { id: 'auto', name: 'Current Location', lat: null, lon: null, timezone: null },
@@ -153,7 +165,19 @@ export const getInitialLocation = () => {
 /**
  * Calculate accurate Hindu calendar information for any date
  */
-export const calculateBasicPanchang = (year, month, day, observer, timeZone) => {
+export const calculateBasicPanchang = (year, month, day, observer, timeZone, libOverride) => {
+  const lib = libOverride || cachedPanchangLib;
+  if (!lib) {
+    return {
+      auspiciousness: 3, isEkadashi: false, isPurnima: false, isAmavasya: false,
+      isPradosham: false, isChaturthi: false, isAshtami: false,
+      moonPhase: 'N/A', moonIllumination: 0, hinduMonth: 'N/A', paksha: 'N/A',
+      rashi: 'N/A', moonRashi: 'N/A', sunRashi: 'N/A', tithi: 'N/A', tithiIndex: 1, nakshatra: 'N/A', yoga: 'N/A',
+      karana: 'N/A', vara: 'N/A', sunrise: 'N/A', sunset: 'N/A',
+      auspicious: {}, inauspicious: {}, bestFor: []
+    };
+  }
+  const { getPanchangam, Observer, yogaNames, tithiNames, nakshatraNames } = lib;
   const dateMid = new Date(year, month, day, 12, 0, 0, 0); // Midday for tithi/nakshatra
   const dateStart = new Date(year, month, day, 12, 0, 0, 0); // Midday for reliable day solar timings
   const tz = timeZone || Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -265,13 +289,14 @@ export const usePanchangam = () => {
   }));
   const [placeName, setPlaceName] = useState(() => initialLoc.name);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [panchangamData, setPanchangamData] = useState(null);
 
-  const applyCity = useCallback((cityId) => {
+  const applyCity = useCallback((cityId, isUserAction = false) => {
     const browserTz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'America/Detroit';
     if (cityId === 'auto') {
-      if ('geolocation' in navigator) {
+      const requestGeo = () => {
+        if (!('geolocation' in navigator)) return;
         navigator.geolocation.getCurrentPosition(
           async (position) => {
             const { latitude, longitude } = position.coords;
@@ -297,10 +322,20 @@ export const usePanchangam = () => {
           },
           { timeout: 8000, maximumAge: 3600000 }
         );
-      } else {
-        setLocation({ latitude: initialLoc.latitude, longitude: initialLoc.longitude, elevation: initialLoc.elevation || 0.2, timezone: initialLoc.timezone || browserTz });
-        setPlaceName(initialLoc.name);
-        setLoading(false);
+      };
+
+      setLocation({ latitude: initialLoc.latitude, longitude: initialLoc.longitude, elevation: initialLoc.elevation || 0.2, timezone: initialLoc.timezone || browserTz });
+      setPlaceName(initialLoc.name);
+      setLoading(false);
+
+      if (isUserAction) {
+        requestGeo();
+      } else if (navigator.permissions && navigator.permissions.query) {
+        navigator.permissions.query({ name: 'geolocation' }).then((result) => {
+          if (result.state === 'granted') {
+            requestGeo();
+          }
+        }).catch(() => {});
       }
     } else {
       const city = SACRED_CITIES.find(c => c.id === cityId);
@@ -316,134 +351,144 @@ export const usePanchangam = () => {
     setSelectedCityId(cityId);
     localStorage.setItem('divine_path_selected_city', cityId);
     setLoading(true);
-    applyCity(cityId);
+    applyCity(cityId, true);
   };
 
   useEffect(() => {
-    applyCity(selectedCityId);
+    applyCity(selectedCityId, false);
   }, [selectedCityId, applyCity]);
 
   useEffect(() => {
     if (loading || !location) return;
+    let isMounted = true;
 
-    try {
-      const now = new Date();
-      const todayMid = new Date(now);
-      todayMid.setHours(12, 0, 0, 0);
+    loadPanchangLib().then(({ getPanchangam, Observer, yogaNames, tithiNames, nakshatraNames }) => {
+      if (!isMounted) return;
+      try {
+        const now = new Date();
+        const todayMid = new Date(now);
+        todayMid.setHours(12, 0, 0, 0);
 
-      const observer = new Observer(
-        location.latitude,
-        location.longitude,
-        location.elevation || 0
-      );
+        const observer = new Observer(
+          location.latitude,
+          location.longitude,
+          location.elevation || 0
+        );
 
-      const panchangamDay = getPanchangam(todayMid, observer);
-      const panchangamNow = getPanchangam(now, observer);
+        const panchangamDay = getPanchangam(todayMid, observer);
+        const panchangamNow = getPanchangam(now, observer);
 
-      const selectedCityObj = SACRED_CITIES.find(c => c.id === selectedCityId);
-      const targetTz = selectedCityObj?.timezone || location?.timezone || Intl.DateTimeFormat().resolvedOptions().timeZone || 'America/Detroit';
+        const selectedCityObj = SACRED_CITIES.find(c => c.id === selectedCityId);
+        const targetTz = selectedCityObj?.timezone || location?.timezone || Intl.DateTimeFormat().resolvedOptions().timeZone || 'America/Detroit';
 
-      const moonRashiDisplay = getRashiDisplay(panchangamNow.moonRashi);
-      const sunRashiDisplay = getRashiDisplay(panchangamNow.sunRashi);
-      const pakshaDisplay = `${panchangamNow.paksha || ''} Paksha`;
-      const hinduMonthDisplay = panchangamNow.masa?.name ? `${panchangamNow.masa.name} Masa` : (panchangamNow.masa || 'N/A');
-      const sunriseFormatted = formatTime(panchangamDay.sunrise || panchangamNow.sunrise, targetTz);
-      const sunsetFormatted = formatTime(panchangamDay.sunset || panchangamNow.sunset, targetTz);
-      const moonriseFormatted = formatTime(panchangamDay.moonrise || panchangamNow.moonrise, targetTz);
-      const moonsetFormatted = formatTime(panchangamDay.moonset || panchangamNow.moonset, targetTz);
+        const moonRashiDisplay = getRashiDisplay(panchangamNow.moonRashi);
+        const sunRashiDisplay = getRashiDisplay(panchangamNow.sunRashi);
+        const pakshaDisplay = `${panchangamNow.paksha || ''} Paksha`;
+        const hinduMonthDisplay = panchangamNow.masa?.name ? `${panchangamNow.masa.name} Masa` : (panchangamNow.masa || 'N/A');
+        const sunriseFormatted = formatTime(panchangamDay.sunrise || panchangamNow.sunrise, targetTz);
+        const sunsetFormatted = formatTime(panchangamDay.sunset || panchangamNow.sunset, targetTz);
+        const moonriseFormatted = formatTime(panchangamDay.moonrise || panchangamNow.moonrise, targetTz);
+        const moonsetFormatted = formatTime(panchangamDay.moonset || panchangamNow.moonset, targetTz);
 
-      const formattedData = {
-        meta: {
-          location: placeName,
-          cityId: selectedCityId,
-          timezone: targetTz,
-          day: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][panchangamDay.vara !== undefined ? panchangamDay.vara : panchangamNow.vara] || 'N/A',
-        },
-        almanac: {
-          Tithi: {
-            name: tithiNames[panchangamNow.tithi - 1] || 'N/A',
-            tithiIndex: ((panchangamNow.tithi - 1) % 15) + 1,
-            paksha: panchangamNow.paksha,
-            startTime: panchangamNow.tithiStartTime ? formatTime(panchangamNow.tithiStartTime, targetTz) : null,
-            endTime: panchangamNow.tithiEndTime ? formatTime(panchangamNow.tithiEndTime, targetTz) : null,
-            nextTithi: tithiNames[panchangamNow.tithi % 30] || null
+        const formattedData = {
+          meta: {
+            location: placeName,
+            cityId: selectedCityId,
+            timezone: targetTz,
+            day: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][panchangamDay.vara !== undefined ? panchangamDay.vara : panchangamNow.vara] || 'N/A',
           },
-          Nakshatra: {
-            name: nakshatraNames[panchangamNow.nakshatra - 1] || 'N/A',
-            pada: panchangamNow.nakshatraPada || null,
-            startTime: panchangamNow.nakshatraStartTime ? formatTime(panchangamNow.nakshatraStartTime, targetTz) : null,
-            endTime: panchangamNow.nakshatraEndTime ? formatTime(panchangamNow.nakshatraEndTime, targetTz) : null
+          almanac: {
+            Tithi: {
+              name: tithiNames[panchangamNow.tithi - 1] || 'N/A',
+              tithiIndex: ((panchangamNow.tithi - 1) % 15) + 1,
+              paksha: panchangamNow.paksha,
+              startTime: panchangamNow.tithiStartTime ? formatTime(panchangamNow.tithiStartTime, targetTz) : null,
+              endTime: panchangamNow.tithiEndTime ? formatTime(panchangamNow.tithiEndTime, targetTz) : null,
+              nextTithi: tithiNames[panchangamNow.tithi % 30] || null
+            },
+            Nakshatra: {
+              name: nakshatraNames[panchangamNow.nakshatra - 1] || 'N/A',
+              pada: panchangamNow.nakshatraPada || null,
+              startTime: panchangamNow.nakshatraStartTime ? formatTime(panchangamNow.nakshatraStartTime, targetTz) : null,
+              endTime: panchangamNow.nakshatraEndTime ? formatTime(panchangamNow.nakshatraEndTime, targetTz) : null
+            },
+            Yoga: {
+              name: yogaNames[panchangamNow.yoga - 1] || 'N/A',
+              endTime: panchangamNow.yogaEndTime ? formatTime(panchangamNow.yogaEndTime, targetTz) : null
+            },
+            Karana: {
+              name: panchangamNow.karana || 'N/A'
+            },
+            Sunrise: sunriseFormatted,
+            Sunset: sunsetFormatted,
+            Moonrise: moonriseFormatted,
+            Moonset: moonsetFormatted
           },
-          Yoga: {
-            name: yogaNames[panchangamNow.yoga - 1] || 'N/A',
-            endTime: panchangamNow.yogaEndTime ? formatTime(panchangamNow.yogaEndTime, targetTz) : null
+          solarLunar: {
+            Sunrise: sunriseFormatted,
+            Sunset: sunsetFormatted,
+            Moonrise: moonriseFormatted,
+            Moonset: moonsetFormatted,
+            Paksha: pakshaDisplay,
+            Hindu_Month: hinduMonthDisplay,
+            Rashi: moonRashiDisplay,
+            MoonRashi: moonRashiDisplay,
+            SunRashi: sunRashiDisplay,
+            Ritu: typeof panchangamNow.ritu === 'string' ? panchangamNow.ritu : (panchangamNow.ritu?.name || 'Sharad'),
+            Ayana: typeof panchangamNow.ayana === 'string' ? panchangamNow.ayana : (panchangamNow.ayana?.name || 'Dakshinayana'),
+            Samvat: panchangamNow.samvat
+              ? (typeof panchangamNow.samvat === 'string'
+                  ? panchangamNow.samvat
+                  : `Vikram Samvat ${panchangamNow.samvat.vikram || 2083}${panchangamNow.samvat.samvatsara ? ` (${panchangamNow.samvat.samvatsara})` : ''}`)
+              : 'Vikram Samvat 2083'
           },
-          Karana: {
-            name: panchangamNow.karana || 'N/A'
+          auspicious: {
+            "Brahma Muhurta": formatRange(panchangamDay.brahmaMuhurta, targetTz),
+            "Abhijit Muhurta": formatRange(panchangamDay.abhijitMuhurta, targetTz),
+            "Amrit Kalam": formatRange(panchangamDay.amritKalam, targetTz),
           },
-          Sunrise: sunriseFormatted,
-          Sunset: sunsetFormatted,
-          Moonrise: moonriseFormatted,
-          Moonset: moonsetFormatted
-        },
-        solarLunar: {
-          Sunrise: sunriseFormatted,
-          Sunset: sunsetFormatted,
-          Moonrise: moonriseFormatted,
-          Moonset: moonsetFormatted,
-          Paksha: pakshaDisplay,
-          Hindu_Month: hinduMonthDisplay,
-          Rashi: moonRashiDisplay,
-          MoonRashi: moonRashiDisplay,
-          SunRashi: sunRashiDisplay,
-          Ritu: typeof panchangamNow.ritu === 'string' ? panchangamNow.ritu : (panchangamNow.ritu?.name || 'Sharad'),
-          Ayana: typeof panchangamNow.ayana === 'string' ? panchangamNow.ayana : (panchangamNow.ayana?.name || 'Dakshinayana'),
-          Samvat: panchangamNow.samvat
-            ? (typeof panchangamNow.samvat === 'string'
-                ? panchangamNow.samvat
-                : `Vikram Samvat ${panchangamNow.samvat.vikram || 2083}${panchangamNow.samvat.samvatsara ? ` (${panchangamNow.samvat.samvatsara})` : ''}`)
-            : 'Vikram Samvat 2083'
-        },
-        auspicious: {
-          "Brahma Muhurta": formatRange(panchangamDay.brahmaMuhurta, targetTz),
-          "Abhijit Muhurta": formatRange(panchangamDay.abhijitMuhurta, targetTz),
-          "Amrit Kalam": formatRange(panchangamDay.amritKalam, targetTz),
-        },
-        inauspicious: {
-          "Rahu Kalam": (panchangamDay.rahuKalamStart && panchangamDay.rahuKalamEnd)
-            ? `${formatTime(panchangamDay.rahuKalamStart, targetTz)} - ${formatTime(panchangamDay.rahuKalamEnd, targetTz)}`
-            : 'N/A',
-          "Yamagandam": formatRange(panchangamDay.yamagandaKalam, targetTz),
-          "Gulikai Kalam": formatRange(panchangamDay.gulikaKalam, targetTz),
-          "Varjyam": formatRange(panchangamDay.varjyam, targetTz),
-          "Dur Muhurtam": formatRange(panchangamDay.durMuhurta, targetTz),
-        },
-        // Raw timing timestamps for real-time comparison
-        rawTimings: {
-          sunriseEpoch: panchangamDay.sunrise ? new Date(panchangamDay.sunrise).getTime() : (panchangamNow.sunrise ? new Date(panchangamNow.sunrise).getTime() : null),
-          sunsetEpoch: panchangamDay.sunset ? new Date(panchangamDay.sunset).getTime() : (panchangamNow.sunset ? new Date(panchangamNow.sunset).getTime() : null),
-          rahuStart: panchangamDay.rahuKalamStart ? new Date(panchangamDay.rahuKalamStart).getTime() : null,
-          rahuEnd: panchangamDay.rahuKalamEnd ? new Date(panchangamDay.rahuKalamEnd).getTime() : null,
-          abhijitStart: panchangamDay.abhijitMuhurta?.start ? new Date(panchangamDay.abhijitMuhurta.start).getTime() : null,
-          abhijitEnd: panchangamDay.abhijitMuhurta?.end ? new Date(panchangamDay.abhijitMuhurta.end).getTime() : null,
-          yamagandaStart: panchangamDay.yamagandaKalam?.start ? new Date(panchangamDay.yamagandaKalam.start).getTime() : null,
-          yamagandaEnd: panchangamDay.yamagandaKalam?.end ? new Date(panchangamDay.yamagandaKalam.end).getTime() : null,
-          gulikaiStart: panchangamDay.gulikaKalam?.start ? new Date(panchangamDay.gulikaKalam.start).getTime() : null,
-          gulikaiEnd: panchangamDay.gulikaKalam?.end ? new Date(panchangamDay.gulikaKalam.end).getTime() : null,
-          brahmaStart: panchangamDay.brahmaMuhurta?.start ? new Date(panchangamDay.brahmaMuhurta.start).getTime() : null,
-          brahmaEnd: panchangamDay.brahmaMuhurta?.end ? new Date(panchangamDay.brahmaMuhurta.end).getTime() : null,
-          amritStart: panchangamDay.amritKalam?.start ? new Date(panchangamDay.amritKalam.start).getTime() : null,
-          amritEnd: panchangamDay.amritKalam?.end ? new Date(panchangamDay.amritKalam.end).getTime() : null,
-          varjyamStart: panchangamDay.varjyam?.start ? new Date(panchangamDay.varjyam.start).getTime() : null,
-          varjyamEnd: panchangamDay.varjyam?.end ? new Date(panchangamDay.varjyam.end).getTime() : null
-        }
-      };
+          inauspicious: {
+            "Rahu Kalam": (panchangamDay.rahuKalamStart && panchangamDay.rahuKalamEnd)
+              ? `${formatTime(panchangamDay.rahuKalamStart, targetTz)} - ${formatTime(panchangamDay.rahuKalamEnd, targetTz)}`
+              : 'N/A',
+            "Yamagandam": formatRange(panchangamDay.yamagandaKalam, targetTz),
+            "Gulikai Kalam": formatRange(panchangamDay.gulikaKalam, targetTz),
+            "Varjyam": formatRange(panchangamDay.varjyam, targetTz),
+            "Dur Muhurtam": formatRange(panchangamDay.durMuhurta, targetTz),
+          },
+          // Raw timing timestamps for real-time comparison
+          rawTimings: {
+            sunriseEpoch: panchangamDay.sunrise ? new Date(panchangamDay.sunrise).getTime() : (panchangamNow.sunrise ? new Date(panchangamNow.sunrise).getTime() : null),
+            sunsetEpoch: panchangamDay.sunset ? new Date(panchangamDay.sunset).getTime() : (panchangamNow.sunset ? new Date(panchangamNow.sunset).getTime() : null),
+            rahuStart: panchangamDay.rahuKalamStart ? new Date(panchangamDay.rahuKalamStart).getTime() : null,
+            rahuEnd: panchangamDay.rahuKalamEnd ? new Date(panchangamDay.rahuKalamEnd).getTime() : null,
+            abhijitStart: panchangamDay.abhijitMuhurta?.start ? new Date(panchangamDay.abhijitMuhurta.start).getTime() : null,
+            abhijitEnd: panchangamDay.abhijitMuhurta?.end ? new Date(panchangamDay.abhijitMuhurta.end).getTime() : null,
+            yamagandaStart: panchangamDay.yamagandaKalam?.start ? new Date(panchangamDay.yamagandaKalam.start).getTime() : null,
+            yamagandaEnd: panchangamDay.yamagandaKalam?.end ? new Date(panchangamDay.yamagandaKalam.end).getTime() : null,
+            gulikaiStart: panchangamDay.gulikaKalam?.start ? new Date(panchangamDay.gulikaKalam.start).getTime() : null,
+            gulikaiEnd: panchangamDay.gulikaKalam?.end ? new Date(panchangamDay.gulikaKalam.end).getTime() : null,
+            brahmaStart: panchangamDay.brahmaMuhurta?.start ? new Date(panchangamDay.brahmaMuhurta.start).getTime() : null,
+            brahmaEnd: panchangamDay.brahmaMuhurta?.end ? new Date(panchangamDay.brahmaMuhurta.end).getTime() : null,
+            amritStart: panchangamDay.amritKalam?.start ? new Date(panchangamDay.amritKalam.start).getTime() : null,
+            amritEnd: panchangamDay.amritKalam?.end ? new Date(panchangamDay.amritKalam.end).getTime() : null,
+            varjyamStart: panchangamDay.varjyam?.start ? new Date(panchangamDay.varjyam.start).getTime() : null,
+            varjyamEnd: panchangamDay.varjyam?.end ? new Date(panchangamDay.varjyam.end).getTime() : null
+          }
+        };
 
-      setPanchangamData(formattedData);
-    } catch (err) {
-      console.error('Error calculating panchangam:', err);
-      setError('Error calculating panchangam data');
-    }
+        setPanchangamData(formattedData);
+      } catch (err) {
+        console.error('Error calculating panchangam:', err);
+        setError('Error calculating panchangam data');
+      }
+    }).catch((err) => {
+      console.error('Failed to load panchangam library:', err);
+    });
+
+    return () => {
+      isMounted = false;
+    };
   }, [loading, location, placeName, selectedCityId]);
 
   const dynamicCities = SACRED_CITIES.map(c => {

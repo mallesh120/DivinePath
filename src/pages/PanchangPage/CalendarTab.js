@@ -1,9 +1,12 @@
 import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { Observer } from '@ishubhamx/panchangam-js';
+import * as panchangamLib from '@ishubhamx/panchangam-js';
 import { getAllFestivalsWithCalculated } from '../../data/festivals/festivalsData';
-import { calculateBasicPanchang, usePanchangam } from '../../hooks/usePanchangam';
+import { calculateBasicPanchang, usePanchangam, registerPanchangLib } from '../../hooks/usePanchangam';
 import './PanchangPage.css';
+
+const { Observer } = panchangamLib;
+registerPanchangLib(panchangamLib);
 
 const MONTH_NAMES = [
   "January", "February", "March", "April", "May", "June",

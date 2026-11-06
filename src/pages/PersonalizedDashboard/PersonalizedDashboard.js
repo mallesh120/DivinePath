@@ -1,24 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { Link } from 'react-router-dom';
 import { usePanchangam } from '../../hooks/usePanchangam';
 import { useSadhana } from '../../hooks/useSadhana';
 import useTextToSpeech from '../../hooks/useTextToSpeech';
-import MeditationTimer from '../../components/MeditationTimer/MeditationTimer';
 import StreakCalendar from '../../components/StreakCalendar/StreakCalendar';
 import { getDailyChallenge } from '../../data/dharmaChallenges';
 import { getLearningPathway, getAllLearningPathways } from '../../data/learningPathways';
 import { getWeeklyShloka, getAllWeeklyShlokas } from '../../data/shlokaMastery';
-import EditGoalsModal from '../../components/EditGoalsModal/EditGoalsModal';
-import ShlokaCardModal from '../../components/ShlokaCardModal/ShlokaCardModal';
 import './PersonalizedDashboard.css';
+
+const MeditationTimer = lazy(() => import('../../components/MeditationTimer/MeditationTimer'));
+const EditGoalsModal = lazy(() => import('../../components/EditGoalsModal/EditGoalsModal'));
+const ShlokaCardModal = lazy(() => import('../../components/ShlokaCardModal/ShlokaCardModal'));
+
+const getGreetingForHour = () => {
+  const hour = new Date().getHours();
+  if (hour < 12) return 'Good Morning';
+  if (hour < 18) return 'Good Afternoon';
+  return 'Good Evening';
+};
 
 const PersonalizedDashboard = () => {
   
   const [isMeditationTimerOpen, setIsMeditationTimerOpen] = useState(false);
   
-  // User state
-  const [userName, setUserName] = useState('');
-  const [greeting, setGreeting] = useState('');
+  // User state (initialized synchronously for instant LCP)
+  const [userName, setUserName] = useState(() => localStorage.getItem('userName') || '');
+  const [greeting, setGreeting] = useState(getGreetingForHour);
   const [isEditingName, setIsEditingName] = useState(false);
   
   const [isEditGoalsOpen, setIsEditGoalsOpen] = useState(false);
@@ -67,7 +75,14 @@ const PersonalizedDashboard = () => {
   const { speak, stop, isPlaying } = useTextToSpeech();
   
   // Continue reading state
-  const [lastRead, setLastRead] = useState(null);
+  const [lastRead] = useState(() => {
+    try {
+      const savedReading = localStorage.getItem('divine_path_last_read');
+      return savedReading ? JSON.parse(savedReading) : null;
+    } catch (e) {
+      return null;
+    }
+  });
 
   const { panchangamData, loading: panchangamLoading, currentCity, setCity, cities, placeName } = usePanchangam();
   
@@ -78,28 +93,11 @@ const PersonalizedDashboard = () => {
     day: 'numeric'
   });
 
-  // Load user preferences & reading history
+  // Keep greeting updated across time boundaries
   useEffect(() => {
-    const savedName = localStorage.getItem('userName') || '';
-    setUserName(savedName);
-
-    try {
-      const savedReading = localStorage.getItem('divine_path_last_read');
-      if (savedReading) {
-        setLastRead(JSON.parse(savedReading));
-      }
-    } catch (e) {
-      console.warn('Failed to parse last read record', e);
-    }
-    
     const updateGreeting = () => {
-      const hour = new Date().getHours();
-      if (hour < 12) setGreeting('Good Morning');
-      else if (hour < 18) setGreeting('Good Afternoon');
-      else setGreeting('Good Evening');
+      setGreeting(getGreetingForHour());
     };
-    
-    updateGreeting();
     const interval = setInterval(updateGreeting, 60000);
     return () => clearInterval(interval);
   }, []);
@@ -150,7 +148,7 @@ const PersonalizedDashboard = () => {
               <h1 className="hero-greeting">
                 {greeting}{userName ? `, ${userName}` : ''}!
                 {userName && !isEditingName && (
-                  <button className="edit-name-btn" onClick={() => setIsEditingName(true)}>✏️</button>
+                  <button className="edit-name-btn" onClick={() => setIsEditingName(true)} aria-label="Edit your name">✏️</button>
                 )}
               </h1>
               {(!userName || isEditingName) && (
@@ -163,6 +161,7 @@ const PersonalizedDashboard = () => {
                   className="name-input"
                   autoFocus={isEditingName}
                   onBlur={() => setIsEditingName(false)}
+                  aria-label="Your name"
                 />
               )}
               <p className="hero-date">{currentDate}</p>
@@ -208,9 +207,7 @@ const PersonalizedDashboard = () => {
              </div>
 
              <Link to="/calendar" className="panchang-mini-link">
-               {panchangamLoading ? (
-                 <div className="mini-status-loading">Consulting the celestial positions...</div>
-               ) : panchangamData ? (
+               {panchangamData && !panchangamLoading ? (
                  <div className="mini-status-content">
                    <div className={`mini-status-indicator indicator-${trafficStatus?.color || 'yellow'}`}>
                      {trafficStatus?.icon || '🕉️'}
@@ -226,7 +223,18 @@ const PersonalizedDashboard = () => {
                    </div>
                  </div>
                ) : (
-                 <div className="mini-status-loading">Panchang data unavailable</div>
+                 <div className="mini-status-content">
+                   <div className="mini-status-indicator indicator-yellow">🕉️</div>
+                   <div className="mini-status-text">
+                      <div className="mini-status-primary">
+                        <strong>Daily Vedic Panchangam</strong>
+                      </div>
+                      <div className="mini-status-traffic">
+                        <span className="traffic-msg">Consulting the celestial positions...</span>
+                      </div>
+                      <span className="mini-status-sub">Tap for Rahu Kalam, Choghadiya & full timings →</span>
+                   </div>
+                 </div>
                )}
              </Link>
           </div>
@@ -258,14 +266,14 @@ const PersonalizedDashboard = () => {
             <Link to="/virtual-shrine" className="sadhana-gateway-card glass-panel gateway-mandir">
               <span className="gateway-icon">🪔</span>
               <div className="gateway-details">
-                <h4>Virtual Mandir</h4>
+                <h2 className="gateway-title">Virtual Mandir</h2>
                 <p>Darshan & Aarti Altar</p>
               </div>
             </Link>
             <Link to="/japa-mala" className="sadhana-gateway-card glass-panel gateway-mala">
               <span className="gateway-icon">📿</span>
               <div className="gateway-details">
-                <h4>108 Japa Mala</h4>
+                <h2 className="gateway-title">108 Japa Mala</h2>
                 <p>Mantra Chanting Beads</p>
               </div>
             </Link>
@@ -314,7 +322,7 @@ const PersonalizedDashboard = () => {
                 <span className="pathway-progress-badge">Day {pathwayProgress}/{currentPathway.totalDays}</span>
               </div>
               <div className="learning-preview">
-                <h4>{currentLesson.title}</h4>
+                <h3>{currentLesson.title}</h3>
                 <p>Tap to read today's 2-minute lesson →</p>
               </div>
             </div>
@@ -458,7 +466,7 @@ const PersonalizedDashboard = () => {
       {isLessonModalOpen && (
         <div className="meditation-overlay">
           <div className="meditation-modal glass-panel lesson-modal">
-            <button className="close-btn" onClick={() => setIsLessonModalOpen(false)}>×</button>
+            <button className="close-btn" onClick={() => setIsLessonModalOpen(false)} aria-label="Close lesson modal">×</button>
             <h2 className="meditation-title">{currentPathway.title}</h2>
             <h3 className="meditation-subtitle">Day {pathwayProgress}: {currentLesson.title}</h3>
             
@@ -479,35 +487,41 @@ const PersonalizedDashboard = () => {
         </div>
       )}
 
-      {isMeditationTimerOpen && (
-        <MeditationTimer 
-          onClose={() => setIsMeditationTimerOpen(false)} 
-          onComplete={() => {
-            if (!userGoals.meditation) toggleGoal('meditation');
-          }}
-          initialMinutes={5} 
-        />
-      )}
+      <Suspense fallback={null}>
+        {isMeditationTimerOpen && (
+          <MeditationTimer 
+            onClose={() => setIsMeditationTimerOpen(false)} 
+            onComplete={() => {
+              if (!userGoals.meditation) toggleGoal('meditation');
+            }}
+            initialMinutes={5} 
+          />
+        )}
 
-      <EditGoalsModal 
-        isOpen={isEditGoalsOpen}
-        onClose={() => setIsEditGoalsOpen(false)}
-        customGoals={customGoals}
-        addCustomGoal={addCustomGoal}
-        removeCustomGoal={removeCustomGoal}
-      />
+        {isEditGoalsOpen && (
+          <EditGoalsModal 
+            isOpen={isEditGoalsOpen}
+            onClose={() => setIsEditGoalsOpen(false)}
+            customGoals={customGoals}
+            addCustomGoal={addCustomGoal}
+            removeCustomGoal={removeCustomGoal}
+          />
+        )}
 
-      <ShlokaCardModal
-        isOpen={isShlokaModalOpen}
-        onClose={() => setIsShlokaModalOpen(false)}
-        shloka={{
-          title: weeklyShloka.title,
-          sanskrit: weeklyShloka.sanskrit,
-          transliteration: weeklyShloka.transliteration,
-          english: weeklyShloka.meaning,
-          source: 'Weekly Mantra Sadhana'
-        }}
-      />
+        {isShlokaModalOpen && (
+          <ShlokaCardModal
+            isOpen={isShlokaModalOpen}
+            onClose={() => setIsShlokaModalOpen(false)}
+            shloka={{
+              title: weeklyShloka.title,
+              sanskrit: weeklyShloka.sanskrit,
+              transliteration: weeklyShloka.transliteration,
+              english: weeklyShloka.meaning,
+              source: 'Weekly Mantra Sadhana'
+            }}
+          />
+        )}
+      </Suspense>
     </div>
   );
 };
