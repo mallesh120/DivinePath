@@ -46,21 +46,21 @@ export const shivaPuranaObject = {
           title: "Daksha's Sacrifice and Sati's Sacrifice",
           summary: "Sati attends her father Daksha's sacrifice despite Shiva not being invited. Unable to bear the insult to Shiva, she immolates herself.",
           hasIllustration: true,
-          illustrationUrl: "https://placehold.co/400x300/EA580C/ffffff?text=Story+Illustration",
+          illustrationUrl: "/images/literature/scenes/scene_shiva_purana_daksha_sati_1794419264814.jpg",
           keyMessage: "Devotion to one's chosen deity above all else"
         },
         {
           title: "Shiva's Marriage to Parvati",
           summary: "After Sati's death, she is reborn as Parvati and performs severe penance to win Shiva as her husband.",
           hasIllustration: true,
-          illustrationUrl: "https://placehold.co/400x300/EA580C/ffffff?text=Story+Illustration",
+          illustrationUrl: "/images/literature/scenes/scene_shiva_purana_shiva_parvati_marriage_1794419282068.jpg",
           keyMessage: "The power of devotion and determination"
         },
         {
           title: "Birth of Ganesha",
           summary: "Parvati creates Ganesha from sandalwood paste. Shiva unknowingly beheads him and later restores him with an elephant's head.",
           hasIllustration: true,
-          illustrationUrl: "https://placehold.co/400x300/EA580C/ffffff?text=Story+Illustration",
+          illustrationUrl: "/images/literature/scenes/ganesha_birth_14_1788702366241.jpg",
           keyMessage: "Obedience and the blessings of misfortune"
         }
       ]
@@ -84,7 +84,7 @@ export const shivaPuranaObject = {
           title: "The Cosmic Dance (Tandava)",
           summary: "Shiva performs the Tandava, the cosmic dance of creation, preservation, and destruction.",
           hasIllustration: true,
-          illustrationUrl: "https://placehold.co/400x300/EA580C/ffffff?text=Story+Illustration",
+          illustrationUrl: "/images/literature/scenes/scene_shiva_purana_tandava_1794419327583.jpg",
           keyMessage: "The rhythm of the universe"
         }
       ]
@@ -167,7 +167,7 @@ export const shivaPuranaObject = {
           title: "Markandeya's Devotion",
           summary: "Young Markandeya, destined to die at sixteen, defeats death through his unwavering devotion to Shiva.",
           hasIllustration: true,
-          illustrationUrl: "https://placehold.co/400x300/EA580C/ffffff?text=Story+Illustration",
+          illustrationUrl: "/images/literature/scenes/scene_shiva_purana_markandeya_devotion_1794419344700.jpg",
           keyMessage: "Devotion can conquer even death"
         }
       ]

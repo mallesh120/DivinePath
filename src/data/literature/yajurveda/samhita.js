@@ -1,7 +1,7 @@
 export const samhita1Scenes = [
   {
     text: "The Yajurveda, also known as the Yajus Veda, is unique among the four Vedas for its focus on the proper performance of rituals and sacrifices. The first samhita contains the foundational mantras and instructions for conducting sacred ceremonies.",
-    imageUrl: "https://placehold.co/600x400/EA580C/ffffff?text=Yajurveda+Scene"
+    imageUrl: "/images/literature/scenes/scene_yajurveda_s1_1_foundational_yajna_ritual_1794419394635.jpg"
   },
   {
     text: "Detailed instructions describe how to prepare the ritual space, invoke the deities, and perform offerings with precision and proper intention. The Yajurveda teaches that the effectiveness of rituals depends on both external performance and internal consciousness.",
