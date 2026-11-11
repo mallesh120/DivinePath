@@ -29,34 +29,34 @@ export const nachiketaStoryScenes = [
   },
   {
     text: "For his first boon, the kind-hearted Nachiketa asked, 'Please let my father's anger cool down. Let him be happy and welcome me with love when I return to the living world.' Yama smiled and instantly granted the wish.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_nachiketa_8_first_boon_father_reconciliation_1794418290753.jpg"
   },
   {
     text: "For his second boon, Nachiketa asked, 'Please teach me the secret of the heavenly fire sacrifice that leads to immortality in heaven, where there is no fear or old age.' Yama, pleased by the boy's intelligence, taught him the complex ritual, and even named the sacred fire after him—the Nachiketa Fire.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_nachiketa_9_second_boon_nachiketa_fire_1794418312775.jpg"
   },
   {
     text: "Then came the third boon. Nachiketa asked the ultimate question: 'Lord Yama, some people say that when a person dies, they continue to exist in a different form. Others say that death is the absolute end. You are the Lord of Death. Please, tell me the absolute truth about what happens after death.'",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_nachiketa_10_third_boon_secret_of_death_1794418370534.jpg"
   },
   {
     text: "Yama was stunned. This was a secret that even the gods struggled to understand. He tried to distract the boy. 'This is too difficult!' Yama said. 'Ask for something else! I will give you endless wealth, flying chariots, long life, and kingdoms. Just do not ask me about death!'",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_nachiketa_11_yama_tempts_with_worldly_wealth_1794418401434.jpg"
   },
   {
     text: "But the young boy was completely unshakeable. 'Keep your chariots and wealth, Lord Yama,' Nachiketa replied. 'Wealth does not last forever, and all physical things eventually end. I only want the supreme knowledge of the soul.'",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_nachiketa_12_unshakeable_rejection_of_wealth_1794418448613.jpg"
   },
   {
     text: "Seeing that the boy could not be tempted by worldly desires, Yama was deeply impressed. He finally revealed the greatest secret of the universe to Nachiketa: the knowledge of the Atman (the inner soul).",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_nachiketa_13_yama_reveals_secret_of_atman_1794418465897.jpg"
   },
   {
     text: "Yama taught him that the true Self is never born and never dies. It cannot be burned by fire or cut by swords. The body is just like a chariot, the mind is the reins, and the soul is the master riding inside. Once a person realizes this truth through meditation, they overcome all fear, even the fear of death.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_nachiketa_14_chariot_parable_immortal_soul_1794418508204.jpg"
   },
   {
     text: "Having received the highest spiritual enlightenment directly from the Lord of Death, the fearless young boy returned to the living world. The story of Nachiketa remains one of the most powerful teachings in the Upanishads, showing that true wisdom is greater than any earthly wealth.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_nachiketa_15_enlightened_return_to_living_world_1794418558596.jpg"
   }
 ];
