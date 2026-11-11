@@ -1,31 +1,31 @@
 export const nachiketaStoryScenes = [
   {
     text: "Thousands of years ago, a wealthy sage named Vajasravas decided to perform a grand fire sacrifice (Yajna). To gain a place in heaven, the rules of this sacrifice required him to give away all of his most valuable possessions to the priests and the poor.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_nachiketa_1_vajasravas_sarvamedha_yajna_1794200565446.jpg"
   },
   {
     text: "Vajasravas had a young son named Nachiketa. Nachiketa was a brilliant and deeply spiritual boy who watched his father give away the gifts. But the boy noticed something wrong. Instead of giving away his best cows, his father was only giving away the old, sick, and blind cows that could no longer give milk.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_nachiketa_2_young_nachiketa_observes_flawed_charity_1794200581881.jpg"
   },
   {
     text: "Knowing that giving useless gifts would bring bad karma to his father, Nachiketa approached him. Wanting to remind his father of true charity, the boy asked innocently, 'Father, I am also your possession. To whom will you give me?'",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_nachiketa_3_to_whom_will_you_give_me_1794200624926.jpg"
   },
   {
     text: "His father ignored him, busy with the ritual. But Nachiketa asked again, and then a third time. Annoyed and angry at the boy's persistence, the father yelled without thinking, 'I give you to Yama, the Lord of Death!'",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_nachiketa_4_father_angrily_curses_to_yama_1794200643191.jpg"
   },
   {
     text: "The father instantly regretted his angry words, but a promise made during a holy sacrifice could not be broken. Showing incredible courage, the young boy accepted his father's words and willingly traveled to the dark underworld, the kingdom of Yama, the God of Death.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_nachiketa_5_fearless_journey_to_yamaloka_1794200684752.jpg"
   },
   {
     text: "When Nachiketa arrived at the gates of the underworld, Lord Yama was not at home. The boy sat patiently at the door without eating or drinking for three days and three nights, waiting for Death to return.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_nachiketa_6_three_days_waiting_at_yamas_gates_1794200698884.jpg"
   },
   {
     text: "When Lord Yama finally returned, he was shocked to see a living boy sitting at his gate. In ancient culture, a guest must be treated like a god. Realizing he had made a holy guest wait hungry for three days, Yama felt terrible. To make up for it, Yama offered the boy three boons (wishes).",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_nachiketa_7_yama_returns_offers_three_boons_1794200740178.jpg"
   },
   {
     text: "For his first boon, the kind-hearted Nachiketa asked, 'Please let my father's anger cool down. Let him be happy and welcome me with love when I return to the living world.' Yama smiled and instantly granted the wish.",
