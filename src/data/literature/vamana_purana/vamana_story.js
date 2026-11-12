@@ -37,26 +37,26 @@ export const vamanaStoryScenes = [
   },
   {
     text: "The clever Vamana took a sharp blade of Darbha grass and poked it into the spout to clear the blockage. It poked Shukracharya right in the eye! The guru yelled in pain and tumbled out, allowing the water to flow and the promise to be sealed.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_vamana_10_darbha_grass_pokes_spout_promise_sealed_1794200373721.jpg"
   },
   {
     text: "As soon as the promise was made, an incredible miracle happened. The tiny dwarf boy began to grow. He grew taller than the king, taller than the palace, taller than the mountains! He grew so massive that his body covered the entire earth and sky.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_vamana_11_vamana_manifests_trivikrama_1794200389987.jpg"
   },
   {
     text: "With his first colossal step, Lord Vamana covered the entire Earth (Bhumi). With his second massive step, he covered the entire heavens and the universe above. He had measured all of King Bali's kingdom in just two steps!",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_vamana_12_two_steps_covering_earth_and_heavens_1794200433566.jpg"
   },
   {
     text: "Lord Vamana then looked down at the shocked king. 'O Bali, I have taken everything you own in two steps. But you promised me three. Where should I place my third step?'",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_vamana_13_where_to_place_third_step_1794200450603.jpg"
   },
   {
     text: "King Bali, realizing his pride was broken but keeping his word, bowed deeply in pure devotion. 'O Lord,' he said, 'I have lost my kingdom, but I have not lost myself. Please place your third step on my head.'",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_vamana_14_bali_bows_head_in_surrender_1794200495753.jpg"
   },
   {
     text: "Pleased by his surrender and devotion, Lord Vishnu placed his giant foot on King Bali's head, gently pushing him down to rule the beautiful underworld (Patala). Vishnu also promised to personally guard Bali's palace. Thus, without a single weapon, the Vamana Avatar restored heaven to the gods and taught the world that pride must always bow to devotion.",
-    imageUrl: ""
+    imageUrl: "/images/literature/scenes/scene_vamana_15_blessing_patala_protector_restored_1794200510606.jpg"
   }
 ];

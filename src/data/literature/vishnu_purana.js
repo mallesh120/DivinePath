@@ -30,13 +30,13 @@ export const vishnuPuranaObject = {
           title: "Dhruva's Devotion",
           summary: "The story of young prince Dhruva who through intense devotion to Vishnu attained the Pole Star position.",
           hasIllustration: true,
-          illustrationUrl: "https://placehold.co/400x300/EA580C/ffffff?text=Story+Illustration"
+          illustrationUrl: "/images/literature/scenes/scene_batch7_3_1788521894536.jpg"
         },
         {
           title: "Prahlada and Hiranyakashipu",
           summary: "The demon king Hiranyakashipu's conflict with his devotee son Prahlada, leading to Vishnu's Narasimha avatar.",
           hasIllustration: true,
-          illustrationUrl: "https://placehold.co/400x300/EA580C/ffffff?text=Story+Illustration"
+          illustrationUrl: "/images/literature/scenes/narasimha_emerges_1789848096506.jpg"
         }
       ]
     },
@@ -89,7 +89,7 @@ export const vishnuPuranaObject = {
           title: "Krishna's Birth and Childhood",
           summary: "The miraculous birth of Krishna in prison, his childhood in Gokul, and his divine pastimes.",
           hasIllustration: true,
-          illustrationUrl: "https://placehold.co/400x300/EA580C/ffffff?text=Story+Illustration"
+          illustrationUrl: "/images/literature/scenes/krishna_scene_4_1789220528934.jpg"
         }
       ]
     },
@@ -112,13 +112,13 @@ export const vishnuPuranaObject = {
           title: "Krishna and the Gopis",
           summary: "The divine love between Krishna and the Gopis, exemplifying the highest devotion.",
           hasIllustration: true,
-          illustrationUrl: "https://placehold.co/400x300/EA580C/ffffff?text=Story+Illustration"
+          illustrationUrl: "/images/literature/scenes/krishna_scene_6_1789220810013.jpg"
         },
         {
           title: "Lifting Govardhan Hill",
           summary: "Krishna lifts the Govardhan mountain to protect the villagers from Indra's wrath.",
           hasIllustration: true,
-          illustrationUrl: "https://placehold.co/400x300/EA580C/ffffff?text=Story+Illustration"
+          illustrationUrl: "/images/literature/scenes/krishna_scene_5_1789220725342.jpg"
         }
       ]
     },

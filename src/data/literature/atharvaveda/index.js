@@ -42,7 +42,7 @@ export const atharvavedaObject = {
   id: 'atharvaveda',
   title: 'Atharvaveda',
   summary: 'The fourth Veda focusing on practical spiritual wisdom, healing practices, and the integration of material and spiritual life.',
-  imageUrl: 'https://placehold.co/600x800/EA580C/ffffff?text=Atharvaveda',
+  imageUrl: '/images/literature/cover_atharvaveda_1787361461854.jpg',
   introduction: 'The Atharvaveda is the fourth Veda and stands apart from the Rigveda, Yajurveda, and Samaveda in its unique focus on practical applications of Vedic wisdom to daily life. Containing approximately 6,000 hymns organized in 20 kaandas (books), the Atharvaveda addresses healing, protection, prosperity, relationships, and both spiritual and material well-being. Unlike the other Vedas which focus primarily on ritual and philosophy, the Atharvaveda provides practical mantras and guidance for navigating life\'s challenges. It recognizes both material and spiritual dimensions of human experience and offers comprehensive guidance for achieving success, health, longevity, and ultimately, spiritual liberation.',
   author: 'Ancient Vedic Seers (Rishis)',
   language: 'Vedic Sanskrit',
