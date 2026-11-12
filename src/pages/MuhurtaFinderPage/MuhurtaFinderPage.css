@@ -613,7 +613,7 @@
 
 .time-windows-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 1.5rem;
 }
 
@@ -1037,6 +1037,26 @@
 
   .score-number {
     font-size: 3rem;
+  }
+
+  .muhurta-info-card,
+  .event-selection,
+  .event-details-section,
+  .muhurta-calculator-form,
+  .mode-toggle-section,
+  .score-display-section,
+  .muhurta-footer {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .muhurta-finder-page {
+    padding: 0.65rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
   }
 }
 

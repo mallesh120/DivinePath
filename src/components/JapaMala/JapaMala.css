@@ -1,7 +1,7 @@
 .japa-mala-container {
-  max-width: 720px;
+  max-width: 780px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: clamp(0.75rem, 2.5vw, 1.5rem);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -10,7 +10,7 @@
 
 /* Header Card */
 .japa-header-card {
-  padding: 1.5rem 2rem;
+  padding: clamp(1.1rem, 2.5vw, 1.5rem) clamp(1.1rem, 3vw, 2rem);
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -337,4 +337,66 @@
 
 .japa-sound-toggle:hover, .japa-reset-btn:hover {
   background: rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 600px) {
+  .japa-rosary-canvas {
+    padding: 1.75rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .mantra-sanskrit {
+    font-size: 1.15rem;
+  }
+
+  .mala-count-orb {
+    width: 145px;
+    height: 145px;
+  }
+
+  .bead-large-number {
+    font-size: 2.8rem;
+  }
+
+  .beads-visual-ribbon {
+    gap: 0.35rem;
+  }
+
+  .bead-node {
+    width: 21px;
+    height: 21px;
+  }
+
+  .japa-footer-controls {
+    padding: 1rem 1.1rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .japa-chant-main-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .japa-secondary-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .japa-sound-toggle,
+  .japa-reset-btn {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .bead-node {
+    width: 17px;
+    height: 17px;
+  }
+
+  .beads-visual-ribbon {
+    gap: 0.25rem;
+  }
 }

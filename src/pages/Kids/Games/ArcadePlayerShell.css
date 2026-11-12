@@ -828,10 +828,27 @@
   }
   .arcade-viewport-screen,
   .arcade-stage-mount {
-    min-height: 440px;
+    min-height: 420px;
   }
   .preloader-game-title {
     font-size: 1.65rem;
+  }
+  .arcade-top-bar {
+    padding: 0.65rem 0.85rem;
+  }
+  .arcade-footer-strip {
+    padding: 0.65rem 0.85rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .arcade-viewport-screen,
+  .arcade-stage-mount {
+    min-height: 380px;
+  }
+  .arcade-back-hub-btn {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.78rem;
   }
 }
 

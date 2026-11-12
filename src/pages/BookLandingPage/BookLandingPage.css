@@ -1,5 +1,5 @@
 .book-landing-page {
-  padding: 2rem;
+  padding: clamp(1rem, 2.5vw, 2rem);
   max-width: 1200px;
   margin: 0 auto;
   min-height: 80vh;
@@ -99,8 +99,8 @@
 
 .toc-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: clamp(1rem, 2.5vw, 2rem);
   margin-bottom: 4rem;
 }
 
@@ -144,17 +144,45 @@
   .book-landing-hero {
     flex-direction: column;
     text-align: center;
+    padding: 1.5rem;
+    gap: 1.75rem;
+    margin-bottom: 2.5rem;
   }
   
   .book-hero-image-container {
     flex: none;
     width: 100%;
-    max-width: 400px;
+    max-width: 340px;
     margin: 0 auto;
+  }
+
+  .book-hero-image {
+    height: auto;
+    max-height: 360px;
   }
   
   .book-features {
     justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-landing-page {
+    padding: 0.75rem;
+  }
+
+  .book-landing-hero {
+    padding: 1.15rem;
+    margin-top: -1rem;
+  }
+
+  .book-hero-details h2,
+  .book-table-of-contents h2 {
+    font-size: 1.6rem;
+  }
+
+  .toc-card-link {
+    padding: 1.15rem;
   }
 }
 

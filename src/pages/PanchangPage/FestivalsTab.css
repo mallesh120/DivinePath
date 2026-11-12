@@ -283,7 +283,7 @@
 
 .festivals-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr));
   gap: 25px;
 }
 
@@ -291,13 +291,13 @@
 .puja-vidhanam-section {
   background: rgba(255, 140, 0, 0.05);
   border-radius: 16px;
-  padding: 25px;
+  padding: clamp(16px, 2.5vw, 25px);
   border: 1px solid rgba(255, 140, 0, 0.1);
 }
 
 .puja-vidhanam-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
   gap: 20px;
 }
 
@@ -605,8 +605,8 @@
 
 .calendar-weekdays {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: clamp(3px, 1vw, 10px);
   margin-bottom: 10px;
 }
 
@@ -614,15 +614,18 @@
   text-align: center;
   font-weight: 700;
   color: var(--secondary-dark);
-  padding: 10px;
+  padding: 10px 4px;
   background: linear-gradient(135deg, var(--neutral-300) 0%, var(--secondary-light) 100%);
   border-radius: 8px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .calendar-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: clamp(3px, 1vw, 10px);
 }
 
 .calendar-day {
@@ -639,6 +642,7 @@
   background: white;
   position: relative;
   overflow: hidden;
+  min-width: 0;
 }
 
 .calendar-day.empty {

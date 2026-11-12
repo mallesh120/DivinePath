@@ -591,4 +591,17 @@
   .test-btn {
     margin-left: 0;
   }
+
+  .today-puja-card,
+  .puja-types-section,
+  .reminder-settings-section,
+  .puja-footer {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .calendar-grid {
+    grid-template-columns: 1fr;
+  }
 }

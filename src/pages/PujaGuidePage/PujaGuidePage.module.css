@@ -802,3 +802,27 @@
     font-size: 1rem;
   }
 }
+
+@media (max-width: 480px) {
+  .puja-guide-header {
+    padding: 20px 14px 28px 14px;
+  }
+
+  .puja-guide-container {
+    padding: 18px 12px;
+    gap: 18px;
+  }
+
+  .current-step-content {
+    padding: 18px 14px;
+  }
+
+  .mantra-section {
+    padding: 16px 14px;
+    margin: 20px 0;
+  }
+
+  .all-mantras-section {
+    padding: 18px 14px;
+  }
+}

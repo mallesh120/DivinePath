@@ -165,24 +165,25 @@
 
 .kids-main-content {
   flex: 1;
-  padding: 1.5rem;
-  max-width: 1000px;
+  padding: clamp(0.85rem, 2.5vw, 1.75rem);
+  max-width: 1200px;
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   .kids-header {
-    padding: 0.8rem 1.1rem;
+    padding: 0.75rem 1rem;
   }
   
   .kids-top-nav {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 280px;
+    width: min(280px, 85vw);
     height: 100vh;
+    height: 100dvh;
     background: var(--card-bg, #ffffff);
     flex-direction: column;
     justify-content: flex-start;
@@ -191,6 +192,7 @@
     transition: right 0.3s ease-in-out;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    box-sizing: border-box;
   }
   
   .kids-top-nav.open {
@@ -222,11 +224,39 @@
   }
   
   .kids-logo {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
   
   .switch-zone-btn {
     font-size: 0.8rem;
     padding: 0.35rem 0.75rem;
+    white-space: nowrap;
+  }
+
+  .kids-header-actions {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .kids-header {
+    padding: 0.6rem 0.65rem;
+  }
+
+  .kids-logo {
+    font-size: 1.05rem;
+  }
+
+  .switch-zone-btn {
+    font-size: 0.72rem;
+    padding: 0.3rem 0.55rem;
+  }
+
+  .kids-header-actions {
+    gap: 0.35rem;
+  }
+
+  .kids-main-content {
+    padding: 0.65rem;
   }
 }

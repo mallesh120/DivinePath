@@ -501,23 +501,23 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .detail-hero,
   .detail-container {
     flex-direction: column;
-    padding: 30px 25px;
-    gap: 30px;
+    padding: 32px 24px;
+    gap: 28px;
   }
 
   .detail-image-container {
     flex: 0 0 auto;
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
     margin: 0 auto;
   }
 
   .detail-title {
-    font-size: 2.8rem;
+    font-size: clamp(2.1rem, 6vw, 3rem);
     text-align: center;
   }
 
@@ -547,7 +547,7 @@
   .consort-image-container {
     flex: 0 0 auto;
     width: 100%;
-    max-width: 250px;
+    max-width: 260px;
     margin: 0 auto;
   }
 
@@ -563,6 +563,25 @@
 
   .consort-description {
     text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .god-detail-page,
+  .detail-page {
+    padding: 12px;
+  }
+
+  .detail-hero,
+  .detail-container,
+  .ashtottaram-preview {
+    padding: 20px 16px;
+    gap: 20px;
+  }
+
+  .ashtottaram-section {
+    padding: 0 8px;
+    margin: 30px auto;
   }
 
   .related-deities-grid {
@@ -624,7 +643,7 @@
 
 .festivals-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
   gap: 25px;
 }
 
@@ -696,7 +715,7 @@
 
 .stories-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
   gap: 25px;
 }
 

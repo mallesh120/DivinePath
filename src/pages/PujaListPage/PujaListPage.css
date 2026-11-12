@@ -159,7 +159,7 @@
   margin: 0 auto;
   padding: 0 20px 40px 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 310px), 1fr));
   gap: 25px;
 }
 
@@ -239,24 +239,49 @@
 }
 
 @media (max-width: 768px) {
+  .puja-hero {
+    padding: 36px 16px;
+  }
+
   .puja-page-title {
-    font-size: 2rem;
+    font-size: clamp(1.75rem, 6vw, 2.2rem);
   }
 
   .puja-page-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+  }
+
+  .puja-controls,
+  .puja-results-info,
+  .pujas-grid {
+    padding-left: 14px;
+    padding-right: 14px;
   }
 
   .puja-filters {
     flex-direction: column;
+    gap: 12px;
   }
 
   .filter-group {
     min-width: 100%;
+    flex-wrap: wrap;
   }
 
   .pujas-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+    gap: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pujas-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+  }
+
+  .filter-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
   }
 }

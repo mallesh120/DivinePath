@@ -140,7 +140,7 @@
   box-shadow: 0 8px 24px var(--shadow-sm, rgba(0, 0, 0, 0.05));
   border: 3px solid var(--border-color, #E2E8F0);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
   gap: 1rem;
 }
 
@@ -336,7 +336,7 @@
 
 .grid-links {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
   gap: 1.25rem;
 }
 
@@ -411,9 +411,18 @@
 }
 
 @media (max-width: 600px) {
-  .welcome-title { font-size: 1.8rem; }
+  .welcome-title { font-size: 1.75rem; }
   .grid-links { grid-template-columns: 1fr; }
   .sanskrit-text { font-size: 1.2rem; }
   .shloka-card { padding: 1.25rem; }
+  .kids-sadhana-card { padding: 1rem; }
+}
+
+@media (max-width: 380px) {
+  .welcome-title { font-size: 1.5rem; }
+  .dharma-stars-card { padding: 0.5rem 0.9rem; width: 100%; justify-content: center; }
+  .kids-goal-item { padding: 0.85rem 0.95rem; }
+  .kids-goal-icon { font-size: 1.65rem; margin-right: 0.65rem; }
+  .shloka-card { padding: 1rem; }
 }
 

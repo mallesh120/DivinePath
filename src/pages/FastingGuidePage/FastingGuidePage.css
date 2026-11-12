@@ -462,4 +462,15 @@
   .food-grid {
     grid-template-columns: 1fr;
   }
+
+  .content-area,
+  .fasting-footer {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .days-grid {
+    grid-template-columns: 1fr;
+  }
 }

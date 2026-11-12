@@ -319,10 +319,28 @@
   }
   .chant-card {
     padding: 1.5rem 1.1rem;
+    border-radius: 24px;
   }
   .listen-btn {
     font-size: 0.92rem;
     padding: 0.65rem 1.1rem;
+  }
+  .chant-controls {
+    flex-wrap: wrap;
+    gap: 0.65rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .chant-card {
+    padding: 1.2rem 0.85rem;
+  }
+  .chant-sanskrit {
+    font-size: 1.2rem;
+  }
+  .offer-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.88rem;
   }
 }
 

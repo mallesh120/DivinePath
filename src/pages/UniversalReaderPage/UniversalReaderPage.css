@@ -1,6 +1,6 @@
 .universal-reader-page {
-  padding: 2rem;
-  max-width: 900px;
+  padding: clamp(0.85rem, 2.5vw, 2rem);
+  max-width: 960px;
   margin: 0 auto;
   min-height: 100vh;
   animation: fadeIn 0.5s ease-out;
@@ -737,5 +737,71 @@
 .exit-zen-btn:hover {
   background: #e74c3c;
   transform: scale(1.05);
+}
+
+/* Responsive Reader Overrides for Tablet, Mobile & Foldable Devices */
+@media (max-width: 768px) {
+  .reader-article,
+  .universal-reader-page.zen-mode .reader-article {
+    padding: 1.75rem 1.35rem;
+    margin-top: -1rem;
+  }
+
+  .prose-content p {
+    text-align: left;
+  }
+
+  .scene-text,
+  .verse-card,
+  .spiritual-essence-box,
+  .kids-learning-box {
+    padding: 1.25rem;
+  }
+
+  .reader-pagination {
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-top: 2.5rem;
+  }
+
+  .pagination-btn {
+    padding: 0.8rem 1.4rem;
+    font-size: 0.95rem;
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .reader-nav-top {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .universal-reader-page,
+  .universal-reader-page.zen-mode {
+    padding: 0.5rem;
+  }
+
+  .reader-article,
+  .universal-reader-page.zen-mode .reader-article {
+    padding: 1.25rem 0.95rem;
+    border-radius: 1rem;
+  }
+
+  .reader-controls-cluster {
+    gap: 0.5rem;
+  }
+
+  .verse-sanskrit {
+    font-size: 1.2rem;
+  }
+
+  .exit-zen-btn {
+    top: 0.75rem;
+    right: 0.75rem;
+    padding: 0.45rem 0.9rem;
+    font-size: 0.78rem;
+  }
 }
 

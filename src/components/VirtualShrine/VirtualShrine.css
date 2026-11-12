@@ -1,7 +1,7 @@
 .virtual-shrine-container {
-  max-width: 780px;
+  max-width: 840px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: clamp(0.75rem, 2.5vw, 1.5rem);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -251,8 +251,8 @@
 
 .sacred-aureole-halo {
   position: absolute;
-  width: 320px;
-  height: 320px;
+  width: clamp(180px, 52vw, 320px);
+  height: clamp(180px, 52vw, 320px);
   border-radius: 50%;
   background: radial-gradient(circle, rgba(255, 204, 0, 0.35) 0%, rgba(255, 102, 0, 0.12) 50%, transparent 70%);
   animation: haloPulse 4s infinite alternate ease-in-out;
@@ -265,8 +265,8 @@
 }
 
 .deity-murti-img {
-  width: 260px;
-  height: 320px;
+  width: clamp(145px, 44vw, 260px);
+  height: clamp(185px, 54vw, 320px);
   max-width: 80vw;
   object-fit: contain;
   z-index: 2;
@@ -430,4 +430,34 @@
   font-style: italic;
   line-height: 1.6;
   opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .sanctum-sanctorum {
+    padding: 1.5rem 0.85rem 1.25rem;
+    gap: 1.1rem;
+  }
+
+  .altar-murti-chamber {
+    gap: 0.4rem;
+  }
+
+  .altar-actions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 0.9rem;
+  }
+
+  .deity-blessing-card {
+    padding: 1.15rem 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .diya-stand {
+    font-size: 1.5rem;
+  }
+
+  .diya-flame {
+    font-size: 1.1rem;
+  }
 }

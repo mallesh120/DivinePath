@@ -230,3 +230,38 @@
   filter: brightness(1.1);
   transform: translateY(-2px);
 }
+
+@media (max-width: 480px) {
+  .shloka-modal-backdrop {
+    padding: 0.75rem;
+  }
+
+  .shloka-modal-container {
+    padding: 1.15rem;
+    gap: 1rem;
+    max-height: 92dvh;
+    overflow-y: auto;
+  }
+
+  .shloka-theme-picker {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .shloka-card-canvas {
+    padding: 1rem;
+  }
+
+  .card-ornament-border {
+    padding: 1.25rem 0.9rem;
+  }
+
+  .card-shloka-sanskrit {
+    font-size: 1.1rem;
+  }
+
+  .shloka-card-actions {
+    flex-direction: column;
+  }
+}
