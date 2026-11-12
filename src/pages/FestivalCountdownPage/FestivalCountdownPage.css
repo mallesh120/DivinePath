@@ -398,4 +398,16 @@
   .puja-grid {
     grid-template-columns: 1fr;
   }
+
+  .festivals-overview,
+  .festival-info-card,
+  .checklist-section,
+  .festival-footer {
+    padding: 1.25rem;
+  }
+
+  .meta-item {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
 }

@@ -112,7 +112,7 @@
 
 .search-bar {
   flex: 1;
-  min-width: 300px;
+  min-width: min(100%, 260px);
   position: relative;
   display: flex;
   align-items: center;
@@ -490,6 +490,14 @@
   .view-filters {
     width: 100%;
     justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .view-btn {
+    padding: 8px 16px;
+    font-size: 0.88rem;
+    flex: 1 1 auto;
+    text-align: center;
   }
 
   .names-header {

@@ -185,19 +185,20 @@
   z-index: 90;
 }
 
-/* Mobile Responsive Styles */
-@media (max-width: 900px) {
+/* Tablet, Unfolded Foldable & Mobile Navigation Drawer */
+@media (max-width: 1080px) {
   .navbar {
-    padding: 0 var(--spacing-md);
-    height: 70px;
+    padding: 0 max(var(--spacing-md), var(--safe-left)) 0 max(var(--spacing-md), var(--safe-right));
+    height: 68px;
   }
 
   .navbar-brand a {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
   }
 
   .navbar-hamburger {
     display: flex;
+    flex-shrink: 0;
   }
 
   .navbar-overlay {
@@ -208,20 +209,22 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 280px;
+    width: 300px;
     max-width: 85vw;
     height: 100vh;
     height: 100dvh; /* Dynamic viewport height for mobile browsers */
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
     background: var(--bg-gradient, linear-gradient(180deg, var(--warm-cream) 0%, var(--parchment-light) 100%));
-    padding: 80px var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
+    padding: 76px var(--spacing-lg) calc(var(--spacing-lg) + var(--safe-bottom)) var(--spacing-lg);
     gap: 0;
     transform: translateX(100%);
     visibility: hidden;
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
     z-index: 100;
-    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.2);
     overflow-y: auto;
     overflow-x: hidden;
     box-sizing: border-box;
@@ -245,8 +248,8 @@
   .navbar-links a {
     display: block;
     width: 100%;
-    padding: 18px var(--spacing-lg);
-    font-size: 1.1rem;
+    padding: 15px var(--spacing-md);
+    font-size: 1.05rem;
     text-align: left;
     white-space: nowrap;
     box-sizing: border-box;
@@ -258,36 +261,89 @@
 
   .navbar-links a:hover,
   .navbar-links a.active-link {
-    background: linear-gradient(90deg, rgba(234, 88, 12, 0.1) 0%, transparent 100%);
+    background: linear-gradient(90deg, rgba(234, 88, 12, 0.12) 0%, transparent 100%);
     color: var(--saffron-primary);
   }
 
   .navbar-links a.active-link {
     border-left: 4px solid var(--saffron-primary);
-    padding-left: calc(var(--spacing-lg) - 4px);
+    padding-left: calc(var(--spacing-md) - 4px);
   }
 }
 
-/* Small Mobile Devices */
-@media (max-width: 480px) {
+/* Standard Mobile Devices */
+@media (max-width: 640px) {
   .navbar {
-    padding: 0 var(--spacing-sm);
-    height: 60px;
+    padding: 0 0.75rem;
+    height: 62px;
+    gap: 0.45rem;
   }
 
   .navbar-brand a {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+  }
+
+  .navbar-actions {
+    gap: 6px;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .switch-zone-nav-btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.78rem;
+    height: 32px;
+  }
+
+  .theme-toggle {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
   }
 
   .navbar-links {
-    width: 100%;
-    right: -100%;
-    padding-left: var(--spacing-lg);
-    padding-right: var(--spacing-lg);
+    width: min(300px, 85vw);
+    right: 0;
+  }
+}
+
+/* Ultra-Narrow & Foldable Cover Screens (e.g. Galaxy Z Fold cover 280px-380px) */
+@media (max-width: 380px) {
+  .navbar {
+    padding: 0 0.5rem;
+    height: 56px;
+    gap: 0.3rem;
   }
 
-  .navbar-links.open {
-    right: 0;
+  .navbar-brand a {
+    font-size: 1.08rem;
+  }
+
+  .navbar-actions {
+    gap: 4px;
+  }
+
+  .switch-zone-nav-btn {
+    padding: 0.25rem 0.45rem;
+    font-size: 0.72rem;
+    height: 28px;
+  }
+
+  .theme-toggle {
+    width: 28px;
+    height: 28px;
+    font-size: 1.05rem;
+  }
+
+  .navbar-hamburger {
+    width: 24px;
+    height: 20px;
+  }
+
+  .navbar-links {
+    width: 100vw;
+    max-width: 100vw;
+    padding: 68px 1rem 1.5rem;
   }
 }
 
@@ -330,19 +386,19 @@
   transform: scale(1.05);
 }
 
-@media (max-width: 1320px) and (min-width: 901px) {
+@media (max-width: 1360px) and (min-width: 1081px) {
   .navbar {
     padding: 0 1rem;
     gap: 0.5rem;
   }
   .navbar-brand a {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
   }
   .navbar-links {
-    gap: 4px;
+    gap: 2px;
   }
   .navbar-links a {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     padding: 5px 6px;
   }
 }

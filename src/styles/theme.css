@@ -73,6 +73,15 @@
   /* Font */
   --font-sans: 'Lato', 'Open Sans', sans-serif;
   --font-display: 'Playfair Display', 'Cinzel', serif;
+
+  /* Safe-area & Fluid Layout Tokens */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+  --page-padding-x: clamp(0.75rem, 3vw, 2.5rem);
+  --page-padding-y: clamp(1rem, 2.5vw, 2.25rem);
+  --container-max-width: 1440px;
 }
 
 /* Secondary palette tokens (Mapped strictly to Saffron and Green) */

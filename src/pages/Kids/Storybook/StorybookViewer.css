@@ -331,7 +331,13 @@
   .story-text { font-size: 1.05rem; }
   .story-emoji { font-size: 4rem; }
   .illustration-wrapper { height: 150px; }
-  .storybook-controls { padding: 0.7rem 0.9rem; }
+  .storybook-controls { padding: 0.7rem 0.9rem; flex-wrap: wrap; justify-content: center; }
   .nav-btn { padding: 0.45rem 0.8rem; font-size: 0.82rem; }
   .read-aloud-btn { padding: 0.55rem 0.9rem; font-size: 0.85rem; }
+}
+
+@media (max-width: 380px) {
+  .storybook-header { padding: 0.6rem 0.85rem; flex-wrap: wrap; }
+  .storybook-content { padding: 0.95rem; }
+  .story-text-container { padding: 0.85rem 1rem; }
 }
