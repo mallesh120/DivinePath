@@ -1,7 +1,7 @@
-# DivinePath AI Agent Instructions
+# ManyaVerse AI Agent Instructions
 
 ## Project Overview
-DivinePath is a React-based web application for Hindu spiritual content (Literature, Panchang, Mantras). It uses Netlify Functions for backend logic and a custom data pipeline for content generation.
+ManyaVerse is a React-based web application for Hindu spiritual content (Literature, Panchang, Mantras). It uses Netlify Functions for backend logic and a custom data pipeline for content generation.
 
 ## Tech Stack
 - **Frontend**: React 19, React Router 6, Create React App

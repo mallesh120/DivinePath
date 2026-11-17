@@ -1,6 +1,6 @@
 import { useCallback, useRef, useEffect, useState } from 'react';
 
-const MUTE_STORAGE_KEY = 'divinepath_arcade_muted';
+const MUTE_STORAGE_KEY = 'manyaverse_arcade_muted';
 
 const useSoundEffects = () => {
   const audioCtxRef = useRef(null);

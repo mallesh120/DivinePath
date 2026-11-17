@@ -1,5 +1,5 @@
-const HIGHSCORE_STORAGE_KEY = 'divinepath_arcade_highscores';
-const PLAYCOUNT_STORAGE_KEY = 'divinepath_arcade_plays';
+const HIGHSCORE_STORAGE_KEY = 'manyaverse_arcade_highscores';
+const PLAYCOUNT_STORAGE_KEY = 'manyaverse_arcade_plays';
 
 export const ARCADE_GAMES = [
   {

@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 
-const SADHANA_STORAGE_KEY = 'divinepath_sadhana_state';
+const SADHANA_STORAGE_KEY = 'manyaverse_sadhana_state';
 
 const defaultGoals = {
   prayer: false,
@@ -15,7 +15,7 @@ const defaultKidsGoals = {
 };
 
 export const useSadhana = (isKidsZone = false) => {
-  const storageKey = isKidsZone ? 'divinepath_kids_sadhana_state' : SADHANA_STORAGE_KEY;
+  const storageKey = isKidsZone ? 'manyaverse_kids_sadhana_state' : SADHANA_STORAGE_KEY;
 
   const [goals, setGoals] = useState(() => isKidsZone ? { ...defaultKidsGoals } : { ...defaultGoals });
   const [customGoals, setCustomGoals] = useState([]); // Array of strings e.g. ['Read Gita', 'Yoga']

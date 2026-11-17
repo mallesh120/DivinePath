@@ -2,7 +2,7 @@
  * Manual Ashtottaram Data Entry Helper
  * 
  * This script helps you quickly format manually copied Ashtottaram data
- * into the DivinePath JSON format.
+ * into the ManyaVerse JSON format.
  * 
  * Usage:
  *   node scripts/format-ashtottaram.js <input-file> <deity-id> <deity-name> <category>

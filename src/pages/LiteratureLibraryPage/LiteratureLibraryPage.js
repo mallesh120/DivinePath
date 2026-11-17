@@ -19,7 +19,7 @@ const LiteratureLibraryPage = () => {
 
   // Load bookmarks from localStorage on mount
   useEffect(() => {
-    const saved = localStorage.getItem('divinePath_literature_bookmarks');
+    const saved = localStorage.getItem('manyaVerse_literature_bookmarks');
     if (saved) {
       try {
         setBookmarkedIds(JSON.parse(saved));
@@ -35,7 +35,7 @@ const LiteratureLibraryPage = () => {
         ? prev.filter(bId => bId !== id)
         : [...prev, id];
       
-      localStorage.setItem('divinePath_literature_bookmarks', JSON.stringify(newBookmarks));
+      localStorage.setItem('manyaVerse_literature_bookmarks', JSON.stringify(newBookmarks));
       return newBookmarks;
     });
   };

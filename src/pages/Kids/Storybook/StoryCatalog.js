@@ -12,7 +12,7 @@ const StoryCatalog = () => {
   const [selectedCategory, setSelectedCategory] = useState('All Stories');
   const [completedStories] = useState(() => {
     try {
-      return JSON.parse(localStorage.getItem('divinepath_kids_completed_stories') || '[]');
+      return JSON.parse(localStorage.getItem('manyaverse_kids_completed_stories') || '[]');
     } catch (e) {
       return [];
     }

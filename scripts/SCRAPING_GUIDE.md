@@ -2,7 +2,7 @@
 
 ## ✅ Working Solution Created!
 
-I've created a **Manual Data Entry Formatter** that converts manually copied Ashtottaram data into the DivinePath JSON format. This is the most reliable approach.
+I've created a **Manual Data Entry Formatter** that converts manually copied Ashtottaram data into the ManyaVerse JSON format. This is the most reliable approach.
 
 ---
 
@@ -245,6 +245,6 @@ Create a checklist to track which deities you've added:
 
 ---
 
-**Made with 🕉️ for DivinePath**
+**Made with 🕉️ for ManyaVerse**
 
 Happy Ashtottaram adding! 🙏
