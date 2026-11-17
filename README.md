@@ -75,14 +75,14 @@ graph TD
 ### A. Hindu Calendar (Panchangam) & Muhurtas
 The Panchang system operates on a hybrid model that balances API-driven accuracy with instant local mathematical fallbacks.
 
-*   **Panchangam Hook ([usePanchangam.js](file:///Users/mallesh/DivinePath/src/hooks/usePanchangam.js))**: Detects browser geolocation. If denied/unsupported, it defaults to Bangalore coordinates. It calls the open-source library `@ishubhamx/panchangam-js`'s [Observer](file:///Users/mallesh/DivinePath/src/hooks/usePanchangam.js#L2) class to calculate accurate celestial alignments.
-*   **Local Calculation Engine ([hinduCalendar.js](file:///Users/mallesh/DivinePath/src/utils/hinduCalendar.js))**: Functions as a zero-dependency local math engine.
+*   **Panchangam Hook ([usePanchangam.js](src/hooks/usePanchangam.js))**: Detects browser geolocation. If denied/unsupported, it defaults to Bangalore coordinates. It calls the open-source library `@ishubhamx/panchangam-js`'s [Observer](src/hooks/usePanchangam.js#L2) class to calculate accurate celestial alignments.
+*   **Local Calculation Engine ([hinduCalendar.js](src/utils/hinduCalendar.js))**: Functions as a zero-dependency local math engine.
     *   **Tithi**: Lunar day estimated based on day-of-year calculations.
     *   **Nakshatra**: Lunar mansion approximated mathematically.
     *   **Vara**: Weekday parsed from standard JS `Date`.
     *   **Paksha**: Shukla/Krishna division.
     *   **Muhurtas**: Auspicious (Brahma, Abhijit, Godhuli) and Inauspicious (Rahu Kalam, Yamagandam, Gulika Kaal) timings computed relative to calculated Sunrise/Sunset.
-*   **Panchang API ([panchangam-for-date.js](file:///Users/mallesh/DivinePath/netlify/functions/panchangam-for-date.js))**: Serverless function serving precise astronomical parameters from the Prokerala API when credentials are provided.
+*   **Panchang API ([panchangam-for-date.js](netlify/functions/panchangam-for-date.js))**: Serverless function serving precise astronomical parameters from the Prokerala API when credentials are provided.
 
 ```mermaid
 flowchart TD
@@ -107,37 +107,37 @@ flowchart TD
 ```
 
 ### B. Personalized Astrology & Reminders
-*   **Astrology Engine ([birthAstrology.js](file:///Users/mallesh/DivinePath/src/utils/birthAstrology.js))**:
-    *   [calculateBirthNakshatra](file:///Users/mallesh/DivinePath/src/utils/birthAstrology.js#L194-L220): Evaluates a user's date of birth and calculates their birth Nakshatra, ruling deity, planetary influence, and element.
-    *   [getPersonalizedGuidance](file:///Users/mallesh/DivinePath/src/utils/birthAstrology.js#L222-L276): Maps birth charts against the current day's alignments, highlighting favorable weekdays or planetary alignments.
-*   **Personalization View ([PersonalizedDashboard.js](file:///Users/mallesh/DivinePath/src/pages/PersonalizedDashboard/PersonalizedDashboard.js))**: Merges personal charts, daily tasks, color of the day, and customized morning, daytime, and evening practice check-ins.
+*   **Astrology Engine ([birthAstrology.js](src/utils/birthAstrology.js))**:
+    *   [calculateBirthNakshatra](src/utils/birthAstrology.js#L194-L220): Evaluates a user's date of birth and calculates their birth Nakshatra, ruling deity, planetary influence, and element.
+    *   [getPersonalizedGuidance](src/utils/birthAstrology.js#L222-L276): Maps birth charts against the current day's alignments, highlighting favorable weekdays or planetary alignments.
+*   **Personalization View ([PersonalizedDashboard.js](src/pages/PersonalizedDashboard/PersonalizedDashboard.js))**: Merges personal charts, daily tasks, color of the day, and customized morning, daytime, and evening practice check-ins.
 
 ### C. Literature Library
 The Literature system contains an offline-first repository of Hindu scriptures.
-*   **Data Aggregation ([src/data/literature/](file:///Users/mallesh/DivinePath/src/data/literature/))**: Modules like [bhagavad_gita.js](file:///Users/mallesh/DivinePath/src/data/literature/bhagavad_gita.js) and [shiva_purana.js](file:///Users/mallesh/DivinePath/src/data/literature/shiva_purana.js) house the scriptural data.
+*   **Data Aggregation ([src/data/literature/](src/data/literature/))**: Modules like [bhagavad_gita.js](src/data/literature/bhagavad_gita.js) and [shiva_purana.js](src/data/literature/shiva_purana.js) house the scriptural data.
 *   **Structure**: Follows a strict recursive structure: `Text -> Section (Kanda / Parva / Mandala) -> Scene/Chapter`.
 *   **Reading Experience**: 
-    *   [BookLandingPage.js](file:///Users/mallesh/DivinePath/src/pages/BookLandingPage/BookLandingPage.js): Renders the interactive Table of Contents.
-    *   [UniversalReaderPage.js](file:///Users/mallesh/DivinePath/src/pages/UniversalReaderPage/UniversalReaderPage.js): Features reader enhancements (font size modifications, theme presets like Sepia/Dark mode).
+    *   [BookLandingPage.js](src/pages/BookLandingPage/BookLandingPage.js): Renders the interactive Table of Contents.
+    *   [UniversalReaderPage.js](src/pages/UniversalReaderPage/UniversalReaderPage.js): Features reader enhancements (font size modifications, theme presets like Sepia/Dark mode).
 
 ### D. Deities & Ashtottaram Chanting
 Provides interactive tools for deity worship and chanting.
-*   **Gods Directory ([GodsGalleryPage.js](file:///Users/mallesh/DivinePath/src/pages/GodsGalleryPage/GodsGalleryPage.js))**: Directory highlighting deity profiles, attributes, and lore.
-*   **Interactive Chanting ([AshtottaramDetailPage.js](file:///Users/mallesh/DivinePath/src/pages/AshtottaramDetailPage/AshtottaramDetailPage.js))**: Houses a tap-to-chant digital tracker for the 108 names of deities. Includes:
+*   **Gods Directory ([GodsGalleryPage.js](src/pages/GodsGalleryPage/GodsGalleryPage.js))**: Directory highlighting deity profiles, attributes, and lore.
+*   **Interactive Chanting ([AshtottaramDetailPage.js](src/pages/AshtottaramDetailPage/AshtottaramDetailPage.js))**: Houses a tap-to-chant digital tracker for the 108 names of deities. Includes:
     *   Sanskrit text, English transliteration, and English meanings.
     *   Visual progress tracker, sound cues, and a cumulative counter capping at 108.
 
 ### E. Multilingual Stotram Library
 Offers an extensive collection of Hindu Stotrams scraped dynamically in multiple languages.
-*   **Stotram Categories ([StotramCategoryPage.js](file:///Users/mallesh/DivinePath/src/pages/StotramCategoryPage/StotramCategoryPage.js))**: Organized navigation for various stotrams.
-*   **Multilingual Reader ([StotramReaderPage.js](file:///Users/mallesh/DivinePath/src/pages/StotramReaderPage/StotramReaderPage.js))**: A dedicated reading interface allowing users to dynamically switch between 10+ languages (English, Sanskrit, Telugu, Tamil, Kannada, Malayalam, Gujarati, Odia, Bengali, Hindi) with `localStorage` persistence. It seamlessly falls back to English if the specific language text is unavailable.
+*   **Stotram Categories ([StotramCategoryPage.js](src/pages/StotramCategoryPage/StotramCategoryPage.js))**: Organized navigation for various stotrams.
+*   **Multilingual Reader ([StotramReaderPage.js](src/pages/StotramReaderPage/StotramReaderPage.js))**: A dedicated reading interface allowing users to dynamically switch between 10+ languages (English, Sanskrit, Telugu, Tamil, Kannada, Malayalam, Gujarati, Odia, Bengali, Hindi) with `localStorage` persistence. It seamlessly falls back to English if the specific language text is unavailable.
 
 ### F. AI Spiritual Assistant (Gemini Integration)
 The application includes AI features powered by Google's `gemini-2.5-flash` model. Queries are routed through a serverless function with a hybrid rate-limiting configuration.
 
 #### Hybrid Rate Limiting Architecture
 1.  **Client-Side Check**: Users are limited to **15 requests per minute** monitored locally via `localStorage` timestamp histories.
-2.  **Server-Side Global Check**: Implemented in [ai-chat.js](file:///Users/mallesh/DivinePath/netlify/functions/ai-chat.js). It connects to **Netlify Blobs** to track global daily volume. The application caps calls to a hard budget of **500 requests per day** across all users.
+2.  **Server-Side Global Check**: Implemented in [ai-chat.js](netlify/functions/ai-chat.js). It connects to **Netlify Blobs** to track global daily volume. The application caps calls to a hard budget of **500 requests per day** across all users.
 3.  **Context Injection (System Prompts)**: The handler parses a `featureType` parameter and injects dedicated system context:
     *   `ask-guru`: Hindu scriptural guidance style.
     *   `dream-interpretation`: Symbolism interpreted via *Swapna Shastra*.

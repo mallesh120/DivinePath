@@ -70,8 +70,9 @@ def update_code_references(src_directory, filename_mappings):
     return count
 
 def main():
-    assets_dir = "/Users/mallesh/DivinePath/src/assets/images"
-    src_dir = "/Users/mallesh/DivinePath/src"
+    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    assets_dir = os.path.join(repo_root, "src", "assets", "images")
+    src_dir = os.path.join(repo_root, "src")
     
     if not os.path.exists(assets_dir):
         print(f"Error: Assets directory {assets_dir} does not exist.")
