@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hanumanya-divinepath.netlify.app/sitemap.xml
+Sitemap: https://manya-verse.netlify.app/sitemap.xml
 

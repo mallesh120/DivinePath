@@ -3,7 +3,7 @@
 # Test script for rate limiting
 # Usage: ./test-rate-limit.sh
 
-echo "🧪 Testing DivinePath Rate Limiting System"
+echo "🧪 Testing ManyaVerse Rate Limiting System"
 echo "=========================================="
 echo ""
 

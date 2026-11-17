@@ -24,7 +24,7 @@ export const shivaPuranaObject = {
         "The power of the sacred syllable 'Om Namah Shivaya'"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
+      illustration: "/images/literature/scenes/scene_shiva_purana_samhita1_vidyeshvara_1794887651080.jpg"
     },
     {
       number: 2,
@@ -40,7 +40,7 @@ export const shivaPuranaObject = {
         "Stories of devoted followers"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration",
+      illustration: "/images/literature/scenes/scene_shiva_purana_samhita2_rudra_1794887661825.jpg",
       stories: [
         {
           title: "Daksha's Sacrifice and Sati's Sacrifice",
@@ -78,7 +78,7 @@ export const shivaPuranaObject = {
         "Shiva's role in the cosmic cycles"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration",
+      illustration: "/images/literature/scenes/scene_shiva_purana_samhita3_shatrudra_1794887681270.jpg",
       stories: [
         {
           title: "The Cosmic Dance (Tandava)",
@@ -102,7 +102,7 @@ export const shivaPuranaObject = {
         "Rituals for different occasions"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
+      illustration: "/images/literature/scenes/scene_shiva_purana_samhita4_kotirudra_1794887691499.jpg"
     },
     {
       number: 5,
@@ -117,7 +117,7 @@ export const shivaPuranaObject = {
         "Yoga and meditation practices"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
+      illustration: "/images/literature/scenes/scene_shiva_purana_shiva_parvati_marriage_1794419282068.jpg"
     },
     {
       number: 6,
@@ -132,7 +132,7 @@ export const shivaPuranaObject = {
         "Pilgrimage to Shiva's sacred places"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration",
+      illustration: "/images/literature/cover_shiva_purana_1787361516444.jpg",
       sacredPlaces: [
         { name: "Somnath", location: "Gujarat", significance: "First Jyotirlinga" },
         { name: "Mallikarjuna", location: "Andhra Pradesh", significance: "Second Jyotirlinga" },
@@ -161,7 +161,7 @@ export const shivaPuranaObject = {
         "Stories of great Shiva devotees"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration",
+      illustration: "/images/literature/scenes/scene_shiva_purana_markandeya_devotion_1794419344700.jpg",
       stories: [
         {
           title: "Markandeya's Devotion",

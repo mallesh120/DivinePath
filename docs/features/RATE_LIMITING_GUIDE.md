@@ -1,7 +1,7 @@
 # AI Rate Limiting Implementation Guide
 
 ## Overview
-DivinePath implements a **hybrid rate limiting system** to manage AI API costs:
+ManyaVerse implements a **hybrid rate limiting system** to manage AI API costs:
 - **Client-side**: 15 calls per minute per user
 - **Server-side**: 500 calls per day across ALL users (global limit)
 
