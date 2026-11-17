@@ -138,7 +138,7 @@ const Search = ({ isModal = false, onClose }) => {
             if (query.length >= 2) setIsOpen(true);
           }}
           onKeyDown={handleKeyDown}
-          aria-label="Search Divine Path"
+          aria-label="Search ManyaVerse"
         />
 
         {query ? (

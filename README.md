@@ -1,6 +1,6 @@
-# DivinePath - Hindu Spiritual Companion & Calendar
+# ManyaVerse - Hindu Spiritual Companion & Calendar
 
-DivinePath is a modern, premium web application designed to act as an interactive Hindu spiritual companion. It integrates calendar calculations (Panchangam), an offline-first library of sacred scriptures (Vedas, Upanishads, Puranas), customizable deity-focused chanting tools (Ashtottarams), and a suite of AI-driven spiritual features (chat, dream interpretation, baby name suggestions) powered by Google Gemini API.
+ManyaVerse is a modern, premium web application designed to act as an interactive Hindu spiritual companion. It integrates calendar calculations (Panchangam), an offline-first library of sacred scriptures (Vedas, Upanishads, Puranas), customizable deity-focused chanting tools (Ashtottarams), and a suite of AI-driven spiritual features (chat, dream interpretation, baby name suggestions) powered by Google Gemini API.
 
 ---
 

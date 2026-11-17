@@ -78,7 +78,7 @@ const reverseGeocode = async (latitude, longitude) => {
       `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`,
       {
         headers: {
-          'User-Agent': 'DivinePath-App'
+          'User-Agent': 'ManyaVerse-App'
         }
       }
     );

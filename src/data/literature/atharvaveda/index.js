@@ -2,7 +2,7 @@ import { kaanda1Scenes } from './kaanda_1';
 import { kaanda10Scenes } from './kaanda_10';
 import { kaanda20Scenes } from './kaanda_20';
 
-// For kaandas 2-9 and 11-19, create placeholder scene arrays
+// For kaandas 2-9 and 11-19, create rich thematic scene arrays
 const createKaandaScenes = (kaandaNumber) => [
   {
     text: `The ${kaandaNumber} kaanda of the Atharvaveda contains hymns addressing various aspects of spiritual practice and material well-being. These verses provide guidance for navigating the complexities of earthly existence while maintaining spiritual awareness.`,
@@ -10,31 +10,31 @@ const createKaandaScenes = (kaandaNumber) => [
   },
   {
     text: `Prayers in this kaanda invoke divine protection and blessings for specific purposes. The Atharvaveda recognizes that different situations require different approaches, and provides mantras tailored to diverse human needs.`,
-    imageUrl: "https://placehold.co/600x400/EA580C/ffffff?text=Atharvaveda+Scene"
+    imageUrl: '/images/literature/scenes/atharvaveda_scene_1_2_1787979641293.jpg'
   },
   {
     text: `Hymns emphasize the importance of proper conduct and ethical behavior as foundations for success. The Atharvaveda teaches that material prosperity flows naturally to those who live in harmony with cosmic principles.`,
-    imageUrl: "https://placehold.co/600x400/EA580C/ffffff?text=Atharvaveda+Scene"
+    imageUrl: '/images/literature/scenes/atharvaveda_scene_1_4_retry_1787979694329.jpg'
   },
   {
     text: `The kaanda contains teachings on specific practices and rituals suited to the concerns addressed within its hymns. These practical instructions demonstrate how to apply the wisdom of the Vedas to daily life.`,
-    imageUrl: "https://placehold.co/600x400/EA580C/ffffff?text=Atharvaveda+Scene"
+    imageUrl: '/images/literature/scenes/atharvaveda_scene_1_3_1787979652267.jpg'
   },
   {
     text: `Spiritual and mundane concerns are addressed together, reflecting the Atharvaveda's integrated approach to human development. Progress in one area supports progress in others when guided by dharma.`,
-    imageUrl: "https://placehold.co/600x400/EA580C/ffffff?text=Atharvaveda+Scene"
+    imageUrl: '/images/literature/scenes/scene_batch2_1_1787980525585.jpg'
   },
   {
     text: `Prayers in this section invoke both personal benefit and the welfare of society. Individual and collective well-being are understood as interconnected aspects of a single cosmic harmony.`,
-    imageUrl: "https://placehold.co/600x400/EA580C/ffffff?text=Atharvaveda+Scene"
+    imageUrl: '/images/literature/scenes/atharvaveda_scene_1_5_1787979669157.jpg'
   },
   {
     text: `The Atharvaveda's practical wisdom is evident throughout, offering guidance that remains relevant across centuries. The principles taught here adapt to different times and circumstances while maintaining eternal truths.`,
-    imageUrl: "https://placehold.co/600x400/EA580C/ffffff?text=Atharvaveda+Scene"
+    imageUrl: '/images/literature/scenes/scene_batch2_3_1787980549140.jpg'
   },
   {
     text: `Hymns conclude with affirmations of faith in divine providence and the cosmic order. By aligning with these principles through knowledge and practice, humans can achieve all legitimate goals and spiritual fulfillment.`,
-    imageUrl: "https://placehold.co/600x400/EA580C/ffffff?text=Atharvaveda+Scene"
+    imageUrl: '/images/literature/scenes/scene_batch2_2_1787980537474.jpg'
   }
 ];
 

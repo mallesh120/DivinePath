@@ -1,7 +1,7 @@
 # Ashtottaram Integration Complete ✅
 
 ## Summary
-Successfully integrated **22 Hindu deities** with their complete 108 names (Ashtottara Shatanamavali) into the DivinePath app.
+Successfully integrated **22 Hindu deities** with their complete 108 names (Ashtottara Shatanamavali) into the ManyaVerse app.
 
 ---
 

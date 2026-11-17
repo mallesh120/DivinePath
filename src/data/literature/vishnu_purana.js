@@ -24,7 +24,7 @@ export const vishnuPuranaObject = {
         "Cosmic time cycles (yugas)"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration",
+      illustration: "/images/literature/scenes/scene_vishnu_purana_book1_creation_1794887180226.jpg",
       stories: [
         {
           title: "Dhruva's Devotion",
@@ -53,7 +53,7 @@ export const vishnuPuranaObject = {
         "Duties of different life stages (ashramas)"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
+      illustration: "/images/literature/scenes/scene_vishnu_purana_book2_earth_divisions_1794887271005.jpg"
     },
     {
       number: 3,
@@ -68,7 +68,7 @@ export const vishnuPuranaObject = {
         "The path to liberation"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
+      illustration: "/images/literature/scenes/scene_vishnu_purana_book3_cosmic_time_dharma_1794887200955.jpg"
     },
     {
       number: 4,
@@ -83,7 +83,7 @@ export const vishnuPuranaObject = {
         "Future kings and the Kali Yuga"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration",
+      illustration: "/images/literature/scenes/scene_vishnu_purana_book4_royal_dynasties_1794887208249.jpg",
       stories: [
         {
           title: "Krishna's Birth and Childhood",
@@ -106,7 +106,7 @@ export const vishnuPuranaObject = {
         "Krishna's teachings and divine play"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration",
+      illustration: "/images/literature/scenes/scene_vishnu_purana_book5_krishna_leela_1794887216895.jpg",
       stories: [
         {
           title: "Krishna and the Gopis",
@@ -135,7 +135,7 @@ export const vishnuPuranaObject = {
         "The ultimate dissolution of the universe"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
+      illustration: "/images/literature/scenes/scene_vishnu_purana_book6_dissolution_liberation_1794887286410.jpg"
     }
   ]
 };

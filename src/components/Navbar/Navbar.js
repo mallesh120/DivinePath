@@ -83,7 +83,7 @@ const Navbar = () => {
   return (
     <nav className="navbar" role="navigation" aria-label="Main Navigation">
       <div className="navbar-brand">
-        <NavLink to="/">Divine Path</NavLink>
+        <NavLink to="/">ManyaVerse</NavLink>
       </div>
 
       <ul className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>

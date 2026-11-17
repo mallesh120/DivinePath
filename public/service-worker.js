@@ -1,7 +1,7 @@
 /* eslint-disable no-restricted-globals */
 
 // Workbox service worker for PWA caching
-const CACHE_NAME = 'divinepath-v1';
+const CACHE_NAME = 'manyaverse-v1';
 const urlsToCache = [
   '/',
   '/static/css/main.css',

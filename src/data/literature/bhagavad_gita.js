@@ -22,7 +22,7 @@ export const bhagavadGitaObject = {
         "The nature of duty and righteousness"
       ],
       audioUrl: null, // To be added when audio files are available
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration", // To be added when illustrations are available
+      illustration: "/images/literature/mahabharata/kurukshetra_armies_gather_1781992263563.png",
       sampleVerses: [
         {
           number: 1,
@@ -44,7 +44,7 @@ export const bhagavadGitaObject = {
         "The nature of the self-realized person"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration",
+      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png",
       sampleVerses: [
         {
           number: 47,
@@ -66,7 +66,7 @@ export const bhagavadGitaObject = {
         "The role of sacrifice (yajna)"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
+      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
     },
     {
       number: 4,
@@ -80,7 +80,7 @@ export const bhagavadGitaObject = {
         "The nature of action and inaction"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
+      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
     },
     {
       number: 5,
@@ -94,7 +94,7 @@ export const bhagavadGitaObject = {
         "Seeing the divine in all beings"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
+      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
     },
     {
       number: 6,
@@ -108,7 +108,7 @@ export const bhagavadGitaObject = {
         "Gradual progress on the spiritual path"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
+      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
     },
     {
       number: 7,
@@ -122,7 +122,7 @@ export const bhagavadGitaObject = {
         "The rare soul who truly knows Krishna"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
+      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
     },
     {
       number: 8,
@@ -136,7 +136,7 @@ export const bhagavadGitaObject = {
         "Unwavering devotion"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
+      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
     },
     {
       number: 9,
@@ -150,7 +150,7 @@ export const bhagavadGitaObject = {
         "God's equal love for all"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
+      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
     },
     {
       number: 10,
@@ -164,7 +164,7 @@ export const bhagavadGitaObject = {
         "Krishna as the source of all"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
+      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
     },
     {
       number: 11,
@@ -178,7 +178,7 @@ export const bhagavadGitaObject = {
         "Return to the personal form"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration",
+      illustration: "/images/literature/cover_bhagavad_gita_1787361499699.jpg",
       isIconic: true // This is the most famous chapter with Vishvarupa
     },
     {
@@ -193,7 +193,7 @@ export const bhagavadGitaObject = {
         "The path most dear to Krishna"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
+      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
     },
     {
       number: 13,
@@ -207,7 +207,7 @@ export const bhagavadGitaObject = {
         "The Supreme Soul in all beings"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
+      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
     },
     {
       number: 14,
@@ -221,7 +221,7 @@ export const bhagavadGitaObject = {
         "Symptoms of one who has transcended"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
+      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
     },
     {
       number: 15,
@@ -235,7 +235,7 @@ export const bhagavadGitaObject = {
         "Knowledge that leads to liberation"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
+      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
     },
     {
       number: 16,
@@ -249,7 +249,7 @@ export const bhagavadGitaObject = {
         "The importance of scripture"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
+      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
     },
     {
       number: 17,
@@ -263,7 +263,7 @@ export const bhagavadGitaObject = {
         "Charity, austerity, and sacrifice in three modes"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration"
+      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
     },
     {
       number: 18,
@@ -278,7 +278,7 @@ export const bhagavadGitaObject = {
         "The ultimate instruction: abandon all dharmas and surrender"
       ],
       audioUrl: null,
-      illustration: "https://placehold.co/400x300/EA580C/ffffff?text=Illustration",
+      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png",
       isConclusion: true
     }
   ]

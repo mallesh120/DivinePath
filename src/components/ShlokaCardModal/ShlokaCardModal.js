@@ -15,7 +15,7 @@ const ShlokaCardModal = ({ isOpen, onClose, shloka }) => {
   if (!isOpen || !shloka) return null;
 
   const handleCopyText = async () => {
-    const textToCopy = `🕉️ ${shloka.title || 'Sacred Shloka'}\n\n"${shloka.sanskrit || ''}"\n\n${shloka.transliteration ? `(${shloka.transliteration})\n\n` : ''}${shloka.english || shloka.meaning || ''}\n\n— Shared from DivinePath (divinepath.app)`;
+    const textToCopy = `🕉️ ${shloka.title || 'Sacred Shloka'}\n\n"${shloka.sanskrit || ''}"\n\n${shloka.transliteration ? `(${shloka.transliteration})\n\n` : ''}${shloka.english || shloka.meaning || ''}\n\n— Shared from ManyaVerse (manya-verse.netlify.app)`;
     
     try {
       if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -36,7 +36,7 @@ const ShlokaCardModal = ({ isOpen, onClose, shloka }) => {
   };
 
   const handleNativeShare = async () => {
-    const textToShare = `🕉️ ${shloka.title}\n\n"${shloka.sanskrit}"\n\n${shloka.english || shloka.meaning || ''}\n\n— DivinePath`;
+    const textToShare = `🕉️ ${shloka.title}\n\n"${shloka.sanskrit}"\n\n${shloka.english || shloka.meaning || ''}\n\n— ManyaVerse`;
     if (navigator.share) {
       try {
         await navigator.share({
@@ -106,7 +106,7 @@ const ShlokaCardModal = ({ isOpen, onClose, shloka }) => {
 
             <div className="card-footer">
               <span className="card-source">{shloka.source || 'Sanatana Dharma'}</span>
-              <span className="card-watermark">DivinePath</span>
+              <span className="card-watermark">ManyaVerse</span>
             </div>
           </div>
         </div>
