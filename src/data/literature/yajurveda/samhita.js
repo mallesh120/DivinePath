@@ -60,10 +60,10 @@ export const samhita2Scenes = [
   },
   {
     text: "The Yajurveda teaches that through proper ritual practice, humans can access divine knowledge and power. The sacrifice becomes the means through which limited human consciousness can touch the infinite divine.",
-    imageUrl: "https://placehold.co/600x400/EA580C/ffffff?text=Yajurveda+Scene"
+    imageUrl: "/images/literature/scenes/scene_yajurveda_s2_7_touching_infinite_divine_1794630866143.jpg"
   },
   {
     text: "Concluding teachings affirm that while external rituals are important, the ultimate purpose is the transformation of human consciousness. Through sincere practice over time, the performer gradually transcends limitations and achieves spiritual realization.",
-    imageUrl: "https://placehold.co/600x400/EA580C/ffffff?text=Yajurveda+Scene"
+    imageUrl: "/images/literature/scenes/scene_yajurveda_s2_8_spiritual_realization_transcendence_1794630905809.jpg"
   }
 ];
