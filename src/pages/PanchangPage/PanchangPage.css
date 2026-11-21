@@ -407,14 +407,15 @@
 }
 
 .cal-cell.today .cal-date {
-  background: var(--hero-title);
-  color: var(--bg-color, #1a1a24);
+  background: var(--primary-color, #ea580c);
+  color: #ffffff;
   border-radius: 50%;
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 700;
 }
 
 .cal-panchang-info {
@@ -427,8 +428,8 @@
 }
 
 .cal-tithi, .cal-nakshatra {
-  font-size: 0.5rem;
-  line-height: 1.1;
+  font-size: 0.68rem;
+  line-height: 1.15;
   color: var(--text-muted);
   white-space: nowrap;
   overflow: hidden;
@@ -438,8 +439,8 @@
 }
 
 .cal-nakshatra {
-  font-size: 0.45rem;
-  opacity: 0.7;
+  font-size: 0.62rem;
+  opacity: 0.82;
 }
 
 .cal-dot {
@@ -743,9 +744,9 @@
 }
 
 .panchang-nav-pill.active {
-  background: var(--hero-title, #f59e0b);
-  color: #1a1a24;
-  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+  background: linear-gradient(135deg, #ea580c, #d97706);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(234, 88, 12, 0.32);
 }
 
 @media (max-width: 768px) {
@@ -781,8 +782,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background: rgba(0, 0, 0, 0.25);
-  border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.12));
+  background: var(--card-bg, rgba(255, 255, 255, 0.8));
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.18));
   border-radius: 9999px;
   padding: 0.35rem 0.8rem;
   font-size: 0.85rem;
@@ -795,17 +796,16 @@
 .today-city-select {
   background: transparent;
   border: none;
-  color: var(--text-color, #f8fafc);
+  color: var(--text-primary, var(--text-color));
   font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
-  outline: none;
   padding-right: 0.5rem;
 }
 
 .today-city-select option {
-  background: #1e1e2e;
-  color: #ffffff;
+  background: var(--card-bg, #ffffff);
+  color: var(--text-primary, #0f172a);
 }
 
 .date-display-badge {
@@ -824,10 +824,11 @@
   gap: 1.2rem;
   margin-bottom: 1.5rem;
   padding: 1.2rem 1.5rem;
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.18) 0%, rgba(217, 119, 6, 0.28) 100%);
-  border: 1px solid rgba(245, 158, 11, 0.45);
-  box-shadow: 0 8px 30px rgba(245, 158, 11, 0.15);
+  background: linear-gradient(135deg, #b45309 0%, #c2410c 55%, #9a3412 100%);
+  border: 1px solid rgba(251, 191, 36, 0.45);
+  box-shadow: 0 8px 28px rgba(194, 65, 12, 0.26);
   border-radius: 20px;
+  color: #ffffff;
 }
 
 .festival-banner-icon {
@@ -843,7 +844,7 @@
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: #fbbf24;
+  color: #fef08a;
   font-weight: 700;
   display: block;
   margin-bottom: 0.2rem;
@@ -859,7 +860,7 @@
 .festival-banner-desc {
   margin: 0;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.92);
   line-height: 1.4;
 }
 
@@ -1194,15 +1195,15 @@
 }
 
 .cal-month-select option, .cal-year-select option {
-  background: #1e1e2e;
-  color: #ffffff;
+  background: var(--card-bg, #ffffff);
+  color: var(--text-primary, #0f172a);
 }
 
 .cal-today-btn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: var(--text-color, #ffffff);
-  padding: 0.35rem 0.8rem;
+  background: var(--card-bg, rgba(255, 255, 255, 0.78));
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.2));
+  color: var(--text-primary, var(--text-color));
+  padding: 0.35rem 0.85rem;
   border-radius: 9999px;
   font-size: 0.8rem;
   font-weight: 600;
@@ -1211,8 +1212,9 @@
 }
 
 .cal-today-btn:hover {
-  background: var(--hero-title, #f59e0b);
-  color: #1a1a24;
+  background: var(--primary-color, #ea580c);
+  border-color: var(--primary-color, #ea580c);
+  color: #ffffff;
 }
 
 .cal-legend {
@@ -1249,9 +1251,9 @@
 }
 
 .sheet-day-tag {
-  background: var(--hero-title, #f59e0b);
-  color: #1a1a24;
-  padding: 0.2rem 0.6rem;
+  background: var(--primary-color, #ea580c);
+  color: #ffffff;
+  padding: 0.2rem 0.65rem;
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 800;

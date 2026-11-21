@@ -1,41 +1,35 @@
 .puja-reminder-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-rose) 100%);
-  padding: 2rem;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 2rem);
 }
 
 .puja-header {
   text-align: center;
-  color: white;
+  color: var(--hero-title, var(--text-primary));
   margin-bottom: 2rem;
 }
 
 .puja-header h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4.5vw, 3rem);
   margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .puja-subtitle {
-  font-size: 1.2rem;
-  opacity: 0.95;
+  font-size: 1.15rem;
+  color: var(--text-secondary);
 }
 
 .today-puja-card {
-  background: white;
-  border-radius: 15px;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
   padding: 2rem;
   margin-bottom: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-md);
   position: relative;
-}
-
-@import '../../styles/theme.css';
-
-.puja-reminder-page {
-  min-height: 100vh;
-  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-rose) 100%);
-  padding: 2rem;
 }
 .card-header {
   display: flex;
@@ -108,7 +102,7 @@
   font-weight: 500;
   font-style: italic;
   padding: 1rem;
-  background: var(--card-bg)5f7;
+  background: var(--accent-light);
   border-left: 4px solid var(--accent-rose);
   border-radius: 8px;
 }
@@ -158,7 +152,7 @@
   gap: 0.5rem;
   margin-top: 1.5rem;
   padding: 1rem;
-  background: linear-gradient(135deg, var(--card-bg)5f7 0%, var(--accent-color) 100%);
+  background: linear-gradient(135deg, var(--accent-light) 0%, var(--accent-color) 100%);
   border-radius: 10px;
 }
 
@@ -178,7 +172,9 @@
 }
 
 .puja-types-section {
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 15px;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -290,7 +286,9 @@
 }
 
 .reminder-settings-section {
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 15px;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -397,7 +395,9 @@
   gap: 1rem;
   margin: 1rem 0;
   padding: 1rem;
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
 }
 
@@ -417,7 +417,9 @@
 .days-selector {
   margin: 1rem 0;
   padding: 1rem;
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
 }
 
@@ -457,7 +459,9 @@
 .next-reminder-info {
   margin-top: 1rem;
   padding: 1rem;
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   color: var(--text-tertiary);
   font-size: 0.95rem;
@@ -468,7 +472,9 @@
   gap: 0.8rem;
   margin-top: 1rem;
   padding: 1rem;
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
 }
 
@@ -489,7 +495,9 @@
 }
 
 .puja-footer {
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 15px;
   padding: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);

@@ -588,9 +588,9 @@
 }
 
 .zen-toggle-btn:hover, .zen-toggle-btn.active {
-  background: rgba(138, 43, 226, 0.25);
-  border-color: rgba(138, 43, 226, 0.5);
-  color: #d1b3ff;
+  background: rgba(234, 88, 12, 0.16);
+  border-color: var(--primary-color, #ea580c);
+  color: var(--primary-color, #ea580c);
 }
 
 /* Master Narration Bar */
@@ -629,8 +629,15 @@
 }
 
 .narration-action-btn.stop {
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
+  background: rgba(220, 38, 38, 0.14);
+  color: #b91c1c;
+  border: 1px solid rgba(220, 38, 38, 0.3);
+}
+
+[data-theme='dark'] .narration-action-btn.stop {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+  border-color: rgba(248, 113, 113, 0.35);
 }
 
 .narration-progress-tag {
@@ -700,10 +707,38 @@
 }
 
 .universal-reader-page.zen-mode .reader-article {
-  background: rgba(14, 14, 18, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(14, 14, 18, 0.94);
+  color: #f8fafc;
+  --text-color: #f8fafc;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
-  padding: 3.5rem 5rem;
+  padding: clamp(1.75rem, 4vw, 3.5rem) clamp(1.25rem, 5vw, 5rem);
+}
+
+.reader-not-found {
+  max-width: 560px;
+  margin: 3rem auto;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+}
+
+.reader-not-found .back-btn {
+  margin-top: 1.25rem;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f97316, #c2410c);
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .universal-reader-page.zen-mode .reader-toolbar {
