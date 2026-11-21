@@ -1,10 +1,13 @@
 .japa-mala-page {
   min-height: 100vh;
-  padding-bottom: 80px;
+  padding: clamp(0.75rem, 2.5vw, 1.5rem) var(--page-padding-x, 1rem) calc(80px + var(--safe-bottom, 0px));
+}
+
+.japa-mala-page-inner {
+  max-width: 860px;
+  margin: 0 auto;
 }
 
 .japa-mala-page-content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1rem;
+  width: 100%;
 }

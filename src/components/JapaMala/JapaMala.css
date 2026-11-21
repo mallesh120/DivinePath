@@ -1,312 +1,663 @@
 .japa-mala-container {
-  max-width: 780px;
+  max-width: 820px;
   margin: 0 auto;
-  padding: clamp(0.75rem, 2.5vw, 1.5rem);
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  animation: fadeIn 0.4s ease-out;
-}
-
-/* Header Card */
-.japa-header-card {
-  padding: clamp(1.1rem, 2.5vw, 1.5rem) clamp(1.1rem, 3vw, 2rem);
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  animation: japaFadeIn 0.35s ease-out;
 }
 
-.japa-title-row {
+.japa-mala-container.focus-mode {
+  max-width: 680px;
+}
+
+@keyframes japaFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Self-contained glass panel (independent of other lazy-loaded pages) */
+.japa-panel {
+  background: var(--glass-bg, rgba(255, 255, 255, 0.78));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border, rgba(234, 88, 12, 0.22));
+  border-radius: 22px;
+  box-shadow: 0 10px 32px var(--glass-shadow, rgba(15, 23, 42, 0.08));
+  color: var(--text-color, var(--text-primary, #0f172a));
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Top Controls & Stats Card */
+.japa-controls-card {
+  padding: clamp(1rem, 2.5vw, 1.5rem) clamp(1rem, 3vw, 1.75rem);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 1rem;
 }
 
-.japa-title-left {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.japa-stats-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(108px, 1fr));
+  gap: 0.65rem;
 }
 
-.japa-sacred-icon {
-  font-size: 2.4rem;
-  filter: drop-shadow(0 2px 8px rgba(255, 153, 51, 0.4));
-}
-
-.japa-main-title {
-  margin: 0 0 0.2rem 0;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-color);
-  font-family: 'Cinzel', serif, sans-serif;
-}
-
-.japa-subtitle {
-  margin: 0;
-  font-size: 0.85rem;
-  opacity: 0.7;
-}
-
-.japa-stats-badges {
-  display: flex;
-  gap: 0.75rem;
-}
-
-.mala-badge, .streak-badge {
-  background: rgba(255, 153, 51, 0.12);
-  border: 1px solid rgba(255, 153, 51, 0.35);
-  border-radius: 12px;
-  padding: 0.4rem 0.8rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.badge-number {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #ff9933;
-}
-
-.badge-label {
-  font-size: 0.7rem;
-  opacity: 0.75;
-  text-transform: uppercase;
-}
-
-/* Mantra Selector */
-.japa-mantra-selector {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.mantra-label {
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--primary-color, #ff9933);
-}
-
-.mantra-dropdown {
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  padding: 0.6rem 1rem;
-  color: var(--text-color);
-  font-size: 0.95rem;
-  outline: none;
-  font-family: inherit;
-  cursor: pointer;
-}
-
-.mantra-dropdown option {
-  background: #1a1a24;
-  color: #fff;
-}
-
-/* Rosary Canvas */
-.japa-rosary-canvas {
-  padding: 2.5rem 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
-  border: 1px solid rgba(255, 153, 51, 0.25);
-  position: relative;
-  overflow: hidden;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 153, 51, 0.08), transparent 70%);
-}
-
-.active-mantra-banner {
-  max-width: 580px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.mantra-deity-tag {
-  font-size: 0.85rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--primary-color, #ff9933);
-  margin: 0;
-}
-
-.mantra-sanskrit {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #fca311;
-  margin: 0;
-  line-height: 1.5;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-}
-
-.mantra-translation {
-  font-size: 0.9rem;
-  font-style: italic;
-  opacity: 0.85;
-  margin: 0;
-  line-height: 1.4;
-}
-
-/* Center Orb */
-.mala-center-hub {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.8rem;
-  transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.mala-center-hub.pulsing {
-  transform: scale(0.97);
-}
-
-.mala-guru-meru {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.8rem;
-  color: #ff9933;
-  font-weight: 600;
-}
-
-.meru-symbol {
-  font-size: 1.2rem;
-}
-
-.mala-count-orb {
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, rgba(255, 153, 51, 0.25), rgba(20, 20, 30, 0.8));
-  border: 2px solid rgba(255, 153, 51, 0.4);
-  box-shadow: 0 0 30px rgba(255, 153, 51, 0.3), inset 0 0 20px rgba(255, 153, 51, 0.15);
+.japa-stat-pill {
+  background: rgba(234, 88, 12, 0.08);
+  border: 1px solid rgba(234, 88, 12, 0.22);
+  border-radius: 14px;
+  padding: 0.55rem 0.75rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.2rem;
+  text-align: center;
+  gap: 0.15rem;
+}
+
+.japa-stat-pill.streak-pill {
+  background: rgba(245, 158, 11, 0.14);
+  border-color: rgba(245, 158, 11, 0.35);
+}
+
+.stat-value {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary-color, #ea580c);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-muted, var(--text-secondary, #475569));
+}
+
+.japa-goal-bar-wrap {
+  width: 100%;
+}
+
+.japa-goal-bar-track {
+  width: 100%;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(234, 88, 12, 0.14);
+  overflow: hidden;
+}
+
+.japa-goal-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f59e0b, #ea580c);
+  transition: width 0.35s ease;
+}
+
+/* Selectors Row */
+.japa-selectors-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0.85rem;
+}
+
+.japa-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.japa-field-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--primary-color, #ea580c);
+}
+
+.japa-select,
+.japa-text-input {
+  width: 100%;
+  background: var(--card-bg, #ffffff);
+  color: var(--text-primary, #0f172a);
+  border: 1px solid var(--border-color, #cbd5e1);
+  border-radius: 12px;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.94rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.japa-select {
+  cursor: pointer;
+}
+
+.japa-select:hover,
+.japa-text-input:hover {
+  border-color: var(--primary-color, #ea580c);
+}
+
+.japa-select:focus,
+.japa-text-input:focus {
+  outline: none;
+  border-color: var(--primary-color, #ea580c);
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.2);
+}
+
+.japa-custom-mantra-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  padding-top: 0.25rem;
+}
+
+.japa-field-full {
+  grid-column: 1 / -1;
+}
+
+/* Main Rosary Canvas */
+.japa-rosary-canvas {
+  padding: clamp(1.25rem, 3vw, 2.25rem) clamp(1rem, 3vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.35rem;
+  text-align: center;
   position: relative;
+  overflow: hidden;
+  border-color: rgba(234, 88, 12, 0.28);
+  background:
+    radial-gradient(circle at 50% 55%, rgba(249, 115, 22, 0.12), transparent 68%),
+    var(--glass-bg, rgba(255, 255, 255, 0.78));
+}
+
+.japa-canvas-topbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.japa-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.japa-script-toggle {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(234, 88, 12, 0.08);
+  border: 1px solid rgba(234, 88, 12, 0.22);
+  border-radius: 999px;
+  padding: 2px;
+}
+
+.japa-script-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted, var(--text-secondary, #475569));
+  padding: 0.28rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.japa-script-btn.active {
+  background: var(--primary-color, #ea580c);
+  color: #ffffff;
+}
+
+.japa-script-btn:hover:not(.active) {
+  color: var(--primary-color, #ea580c);
+}
+
+.japa-quarter-pill {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(234, 88, 12, 0.1);
+  color: var(--primary-color, #ea580c);
+  border: 1px solid rgba(234, 88, 12, 0.24);
+  font-variant-numeric: tabular-nums;
+}
+
+.japa-focus-toggle {
+  background: transparent;
+  border: 1px solid var(--border-color, rgba(234, 88, 12, 0.3));
+  color: var(--text-color, var(--text-primary, #0f172a));
+  padding: 0.38rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.japa-focus-toggle:hover,
+.japa-focus-toggle.active {
+  background: rgba(234, 88, 12, 0.14);
+  border-color: var(--primary-color, #ea580c);
+  color: var(--primary-color, #ea580c);
+}
+
+/* Active Mantra Banner */
+.active-mantra-banner {
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.mantra-deity-tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary-color, #ea580c);
+  margin: 0;
+}
+
+.mantra-sanskrit {
+  font-size: clamp(1.25rem, 3vw, 1.65rem);
+  font-weight: 700;
+  color: var(--hero-title, #9a3412);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.mantra-english {
+  font-size: clamp(0.95rem, 2.2vw, 1.08rem);
+  font-weight: 600;
+  color: var(--text-color, var(--text-primary, #0f172a));
+  opacity: 0.92;
+  margin: 0;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+
+.mantra-english.is-primary-script {
+  font-size: clamp(1.15rem, 2.8vw, 1.45rem);
+  font-weight: 700;
+  color: var(--hero-title, #9a3412);
+  opacity: 1;
+}
+
+.mantra-translation {
+  font-size: 0.86rem;
+  font-style: italic;
+  color: var(--text-muted, var(--text-secondary, #475569));
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Mala Completion Toast */
+.mala-live-region {
+  min-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mala-complete-toast {
+  background: linear-gradient(135deg, #ea580c, #d97706);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.45rem 1.15rem;
+  border-radius: 999px;
+  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.35);
+  animation: japaToastPop 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes japaToastPop {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Circular 108-Bead SVG Mala & Orb */
+.mala-wheel-wrapper {
+  position: relative;
+  width: min(340px, 82vw);
+  height: min(340px, 82vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 50%;
+  transition: transform 0.14s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.mala-wheel-wrapper:hover .mala-count-orb {
+  box-shadow:
+    0 0 36px rgba(249, 115, 22, 0.42),
+    inset 0 0 24px rgba(254, 240, 138, 0.18);
+}
+
+.mala-wheel-wrapper.pulsing {
+  transform: scale(0.975);
+}
+
+.mala-ring-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.mala-thread-circle {
+  fill: none;
+  stroke: rgba(180, 83, 9, 0.25);
+  stroke-width: 1.5;
+  stroke-dasharray: 2 3;
+}
+
+.mala-svg-bead {
+  transition: r 0.18s ease, opacity 0.2s ease;
+}
+
+.mala-svg-bead.is-remaining {
+  fill: rgba(139, 58, 15, 0.32);
+}
+
+.mala-svg-bead.is-remaining.is-quarter {
+  fill: rgba(217, 119, 6, 0.58);
+}
+
+.mala-svg-bead.is-completed {
+  filter: drop-shadow(0 0 3px rgba(249, 115, 22, 0.45));
+}
+
+.mala-svg-bead.is-current {
+  filter: drop-shadow(0 0 6px rgba(253, 224, 71, 0.9));
+}
+
+.mala-bead-halo {
+  fill: rgba(249, 115, 22, 0.25);
+  animation: japaBeadHalo 1.6s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes japaBeadHalo {
+  0%, 100% {
+    opacity: 0.7;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 0.2;
+    transform: scale(1.25);
+  }
+}
+
+.mala-sumeru-bead {
+  filter: drop-shadow(0 2px 6px rgba(217, 119, 6, 0.55));
+}
+
+.mala-fixed-pointer {
+  pointer-events: none;
+}
+
+.mala-pointer-ring {
+  fill: none;
+  stroke: rgba(245, 158, 11, 0.65);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 3;
+}
+
+/* Close-Up Sliding & Rolling Rudraksha Bead Strand */
+.rudraksha-strand-viewport {
+  position: relative;
+  width: min(440px, 100%);
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 14%, #000 86%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 14%, #000 86%, transparent 100%);
+}
+
+.rudraksha-strand-thread {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 3px;
+  transform: translateY(-50%);
+  background: linear-gradient(
+    90deg,
+    rgba(180, 83, 9, 0.15) 0%,
+    rgba(234, 88, 12, 0.55) 50%,
+    rgba(180, 83, 9, 0.15) 100%
+  );
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.rudraksha-active-frame {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(245, 158, 11, 0.75);
+  box-shadow: 0 0 18px rgba(249, 115, 22, 0.25);
+  pointer-events: none;
+}
+
+.rudraksha-strand-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rudraksha-bead-item {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-color: #7c2d12;
+  box-shadow:
+    inset -3px -3px 6px rgba(0, 0, 0, 0.55),
+    inset 2px 2px 5px rgba(255, 237, 213, 0.25),
+    0 4px 10px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform, opacity;
+}
+
+.rudraksha-bead-item.is-chanted {
+  box-shadow:
+    inset -2px -2px 5px rgba(0, 0, 0, 0.4),
+    0 0 8px rgba(249, 115, 22, 0.45),
+    0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.rudraksha-bead-item.is-quarter {
+  border: 1.5px solid #fbbf24;
+}
+
+.rudraksha-bead-item.is-center {
+  border: 2px solid #fde047;
+  box-shadow:
+    0 0 18px rgba(249, 115, 22, 0.7),
+    0 4px 12px rgba(0, 0, 0, 0.45);
+  z-index: 2;
+}
+
+.rudraksha-bead-item.is-sumeru {
+  background: radial-gradient(circle at 35% 30%, #fef08a 0%, #f59e0b 55%, #b45309 100%);
+  border: 2px solid #fef08a;
+  box-shadow:
+    0 0 16px rgba(245, 158, 11, 0.75),
+    0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.strand-sumeru-om {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #451a03;
+  line-height: 1;
+}
+
+/* Central Count Orb */
+.mala-count-orb {
+  width: 56%;
+  height: 56%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, #5c240a 0%, #2a120a 58%, #150b14 100%);
+  border: 2px solid rgba(251, 146, 60, 0.55);
+  box-shadow:
+    0 12px 32px rgba(234, 88, 12, 0.28),
+    inset 0 0 22px rgba(251, 191, 36, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.orb-ripple {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(253, 224, 71, 0.75);
+  animation: japaOrbRipple 0.55s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes japaOrbRipple {
+  from {
+    transform: scale(0.65);
+    opacity: 0.85;
+  }
+  to {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+}
+
+.meru-symbol {
+  font-size: 1.15rem;
+  line-height: 1;
+  margin-bottom: 0.1rem;
 }
 
 .bead-large-number {
-  font-size: 3.5rem;
+  font-size: clamp(2.4rem, 7vw, 3.4rem);
   font-weight: 800;
   color: #ffffff;
-  font-family: 'Cinzel', serif, sans-serif;
+  font-family: 'Cinzel', 'Playfair Display', serif;
+  font-variant-numeric: tabular-nums;
   line-height: 1;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
 }
 
 .bead-max-label {
-  font-size: 0.8rem;
-  opacity: 0.75;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255, 237, 213, 0.82);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
 }
 
 .round-progress-bar {
-  width: 90px;
+  width: 58%;
   height: 4px;
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
-  margin-top: 0.4rem;
+  border-radius: 999px;
+  margin-top: 0.35rem;
   overflow: hidden;
 }
 
 .round-progress-fill {
   height: 100%;
-  background: #ff9933;
+  background: linear-gradient(90deg, #fde047, #f97316);
   transition: width 0.2s ease;
 }
 
 .chant-tap-hint {
-  font-size: 0.8rem;
-  opacity: 0.6;
+  font-size: 0.82rem;
+  color: var(--text-muted, var(--text-secondary, #475569));
   margin: 0;
-  animation: pulseHint 2s infinite;
 }
 
-@keyframes pulseHint {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 0.9; }
-}
-
-/* Beads ribbon */
-.beads-visual-ribbon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  width: 100%;
-  padding-top: 0.5rem;
-}
-
-.bead-node {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background-size: cover;
-  background-position: center;
-  background-color: #8b3a0f;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
-  position: relative;
-  transition: transform 0.2s ease;
-}
-
-.bead-node.current-bead {
-  transform: scale(1.35);
-  box-shadow: 0 0 15px #ff9933, 0 3px 10px rgba(0,0,0,0.6);
-  border: 1px solid #ffcc66;
-}
-
-.bead-ring-glow {
-  position: absolute;
-  inset: -3px;
-  border-radius: 50%;
-  border: 1px dashed #ff9933;
-  animation: rotateRing 8s linear infinite;
-}
-
-@keyframes rotateRing {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.chant-tap-hint kbd {
+  display: inline-block;
+  padding: 0.1rem 0.42rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+  font-family: inherit;
+  border-radius: 6px;
+  background: rgba(234, 88, 12, 0.12);
+  border: 1px solid rgba(234, 88, 12, 0.3);
+  color: var(--primary-color, #ea580c);
 }
 
 /* Footer Controls */
 .japa-footer-controls {
-  padding: 1.25rem 2rem;
+  padding: 1.1rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.85rem;
 }
 
 .japa-chant-main-btn {
-  background: linear-gradient(135deg, #ff9933, #e65100);
-  color: #fff;
+  background: linear-gradient(135deg, #f97316, #c2410c);
+  color: #ffffff;
   border: none;
-  padding: 0.9rem 2rem;
-  border-radius: 30px;
-  font-size: 1.1rem;
+  padding: 0.85rem 1.85rem;
+  border-radius: 999px;
+  font-size: 1.05rem;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 5px 20px rgba(255, 153, 51, 0.4);
-  transition: transform 0.15s ease, filter 0.15s ease;
+  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.35);
+  transition: transform 0.15s ease, filter 0.15s ease, box-shadow 0.15s ease;
+  font-variant-numeric: tabular-nums;
 }
 
 .japa-chant-main-btn:hover {
-  filter: brightness(1.1);
-  transform: translateY(-2px);
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(234, 88, 12, 0.42);
 }
 
 .japa-chant-main-btn:active {
@@ -315,56 +666,107 @@
 
 .japa-secondary-actions {
   display: flex;
-  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.55rem;
 }
 
-.japa-sound-toggle, .japa-reset-btn {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: var(--text-color);
-  padding: 0.6rem 1rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
+.japa-action-btn {
+  background: var(--card-bg, rgba(255, 255, 255, 0.8));
+  border: 1px solid var(--border-color, #cbd5e1);
+  color: var(--text-primary, #0f172a);
+  padding: 0.58rem 0.95rem;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
+}
+
+.japa-action-btn:hover:not(:disabled) {
+  border-color: var(--primary-color, #ea580c);
+  color: var(--primary-color, #ea580c);
+}
+
+.japa-action-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
 .japa-sound-toggle.active {
-  background: rgba(255, 153, 51, 0.2);
-  border-color: #ff9933;
-  color: #ff9933;
+  background: rgba(234, 88, 12, 0.14);
+  border-color: var(--primary-color, #ea580c);
+  color: var(--primary-color, #ea580c);
 }
 
-.japa-sound-toggle:hover, .japa-reset-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
+.japa-reset-confirm-group {
+  display: inline-flex;
+  gap: 0.4rem;
 }
 
-@media (max-width: 600px) {
-  .japa-rosary-canvas {
-    padding: 1.75rem 1rem;
-    gap: 1.5rem;
-  }
+.japa-reset-confirm {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: #ffffff;
+}
 
-  .mantra-sanskrit {
-    font-size: 1.15rem;
-  }
+.japa-reset-confirm:hover:not(:disabled) {
+  background: #b91c1c;
+  border-color: #b91c1c;
+  color: #ffffff;
+}
 
-  .mala-count-orb {
-    width: 145px;
-    height: 145px;
-  }
+/* Dark / Night / Dusk Theme Refinements */
+[data-theme='dark'] .japa-select,
+[data-theme='dark'] .japa-text-input,
+.theme-night .japa-select,
+.theme-night .japa-text-input,
+.theme-dusk .japa-select,
+.theme-dusk .japa-text-input {
+  background: rgba(15, 23, 42, 0.82);
+  color: #f8fafc;
+  border-color: rgba(255, 255, 255, 0.2);
+}
 
-  .bead-large-number {
-    font-size: 2.8rem;
-  }
+[data-theme='dark'] .japa-select option,
+.theme-night .japa-select option,
+.theme-dusk .japa-select option {
+  background: #0f172a;
+  color: #f8fafc;
+}
 
-  .beads-visual-ribbon {
-    gap: 0.35rem;
-  }
+[data-theme='dark'] .japa-action-btn,
+.theme-night .japa-action-btn,
+.theme-dusk .japa-action-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #f8fafc;
+}
 
-  .bead-node {
-    width: 21px;
-    height: 21px;
+[data-theme='dark'] .japa-svg-bead.is-remaining,
+[data-theme='dark'] .mala-svg-bead.is-remaining,
+.theme-night .mala-svg-bead.is-remaining,
+.theme-dusk .mala-svg-bead.is-remaining {
+  fill: rgba(251, 191, 36, 0.22);
+}
+
+[data-theme='dark'] .mala-svg-bead.is-remaining.is-quarter,
+.theme-night .mala-svg-bead.is-remaining.is-quarter,
+.theme-dusk .mala-svg-bead.is-remaining.is-quarter {
+  fill: rgba(251, 191, 36, 0.52);
+}
+
+[data-theme='dark'] .mala-thread-circle,
+.theme-night .mala-thread-circle,
+.theme-dusk .mala-thread-circle {
+  stroke: rgba(251, 191, 36, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .japa-selectors-row,
+  .japa-custom-mantra-inputs {
+    grid-template-columns: 1fr;
   }
 
   .japa-footer-controls {
@@ -383,20 +785,24 @@
     justify-content: center;
   }
 
-  .japa-sound-toggle,
-  .japa-reset-btn {
-    flex: 1;
+  .japa-action-btn {
+    flex: 1 1 auto;
     text-align: center;
   }
 }
 
-@media (max-width: 360px) {
-  .bead-node {
-    width: 17px;
-    height: 17px;
+/* Respect Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  .japa-mala-container,
+  .mala-complete-toast,
+  .mala-bead-halo,
+  .orb-ripple {
+    animation: none;
   }
 
-  .beads-visual-ribbon {
-    gap: 0.25rem;
+  .mala-wheel-wrapper,
+  .round-progress-fill,
+  .japa-goal-bar-fill {
+    transition: none;
   }
 }
