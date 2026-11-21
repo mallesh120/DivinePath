@@ -464,17 +464,36 @@ const PersonalizedDashboard = () => {
 
       {/* Modals */}
       {isLessonModalOpen && (
-        <div className="meditation-overlay">
-          <div className="meditation-modal glass-panel lesson-modal">
-            <button className="close-btn" onClick={() => setIsLessonModalOpen(false)} aria-label="Close lesson modal">×</button>
-            <h2 className="meditation-title">{currentPathway.title}</h2>
-            <h3 className="meditation-subtitle">Day {pathwayProgress}: {currentLesson.title}</h3>
+        <div
+          className="lesson-modal-overlay"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="lesson-modal-title"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setIsLessonModalOpen(false);
+          }}
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') setIsLessonModalOpen(false);
+          }}
+        >
+          <div className="lesson-modal">
+            <button
+              type="button"
+              className="lesson-close-btn"
+              onClick={() => setIsLessonModalOpen(false)}
+              aria-label="Close lesson modal"
+            >
+              ×
+            </button>
+            <h2 id="lesson-modal-title" className="lesson-modal-title">{currentPathway.title}</h2>
+            <h3 className="lesson-modal-subtitle">Day {pathwayProgress}: {currentLesson.title}</h3>
             
             <div className="lesson-content-body">
               <p>{currentLesson.content}</p>
             </div>
 
-            <button 
+            <button
+              type="button"
               className="start-session-btn" 
               onClick={() => {
                 incrementPathwayProgress(currentPathway.totalDays);

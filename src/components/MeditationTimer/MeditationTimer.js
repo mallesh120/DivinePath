@@ -204,11 +204,29 @@ const MeditationTimer = ({ onClose, onComplete, initialMinutes = 5 }) => {
   };
 
   return (
-    <div className="meditation-overlay">
+    <div
+      className="meditation-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="meditation-modal-title"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) handleClose();
+      }}
+      onKeyDown={(e) => {
+        if (e.key === 'Escape') handleClose();
+      }}
+    >
       <div className="meditation-modal glass-panel">
-        <button className="close-btn" onClick={handleClose}>×</button>
+        <button
+          type="button"
+          className="close-btn"
+          onClick={handleClose}
+          aria-label="Close meditation timer"
+        >
+          ×
+        </button>
         
-        <h2 className="meditation-title">Daily Meditation</h2>
+        <h2 id="meditation-modal-title" className="meditation-title">Daily Meditation</h2>
         <p className="meditation-subtitle">Find your center and breathe.</p>
         
         {/* Breathing Animation Circle */}

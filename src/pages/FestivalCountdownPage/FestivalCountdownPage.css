@@ -1,30 +1,30 @@
-@import '../../styles/theme.css';
-
 .festival-countdown-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-color) 100%);
-  padding: 2rem;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 2rem);
 }
 
 .festival-header {
   text-align: center;
-  color: white;
+  color: var(--hero-title, var(--text-primary));
   margin-bottom: 2rem;
 }
 
 .festival-header h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4.5vw, 3rem);
   margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .festival-subtitle {
-  font-size: 1.2rem;
-  opacity: 0.95;
+  font-size: 1.15rem;
+  color: var(--text-secondary);
 }
 
 .empty-state {
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 15px;
   padding: 3rem;
   text-align: center;
@@ -38,7 +38,9 @@
 }
 
 .festivals-overview {
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 15px;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -58,68 +60,71 @@
 }
 
 .festival-card {
-  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-color) 100%);
-  border-radius: 12px;
+  background: linear-gradient(135deg, #c2410c 0%, #ea580c 55%, #d97706 100%);
+  color: #ffffff;
+  border-radius: 14px;
   padding: 1.5rem;
   text-align: center;
   cursor: pointer;
-  transition: all 0.3s;
-  border: 3px solid transparent;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border: 2px solid transparent;
+  box-shadow: var(--shadow-sm);
 }
 
 .festival-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 28px rgba(194, 65, 12, 0.28);
 }
 
 .festival-card.selected {
-  border-color: var(--accent-red);
-  box-shadow: 0 10px 25px rgba(214, 52, 71, 0.3);
+  border-color: #fde047;
+  box-shadow: 0 12px 28px rgba(234, 88, 12, 0.38);
 }
 
 .festival-name {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: var(--accent-red);
-  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.85rem;
 }
 
 .countdown {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.75rem;
 }
 
 .countdown .days {
-  font-size: 3rem;
-  font-weight: bold;
-  color: var(--accent-red);
+  font-size: 2.85rem;
+  font-weight: 800;
+  color: #fef08a;
   line-height: 1;
 }
 
 .countdown .label {
-  font-size: 0.9rem;
-  color: var(--text-tertiary);
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.88);
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin-top: 0.25rem;
 }
 
 .countdown .today {
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--accent-color);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #fef08a;
   animation: pulse 1.5s infinite;
 }
 
 @keyframes pulse {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
+  50% { transform: scale(1.08); }
 }
 
 .festival-date {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .festival-details-section {
@@ -128,7 +133,9 @@
 }
 
 .festival-info-card {
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 15px;
   padding: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -149,12 +156,12 @@
 }
 
 .countdown-badge {
-  padding: 0.8rem 1.5rem;
-  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-color) 100%);
-  color: var(--accent-red);
-  border-radius: 25px;
-  font-weight: bold;
-  font-size: 1.2rem;
+  padding: 0.65rem 1.35rem;
+  background: linear-gradient(135deg, #c2410c 0%, #ea580c 100%);
+  color: #ffffff;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1.05rem;
 }
 
 .festival-meta {
@@ -234,7 +241,9 @@
 }
 
 .checklist-section {
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 15px;
   padding: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -302,7 +311,9 @@
 }
 
 .task-item {
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 1rem;
   border: 1px solid var(--neutral-200);
@@ -349,7 +360,9 @@
 }
 
 .festival-footer {
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 15px;
   padding: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);

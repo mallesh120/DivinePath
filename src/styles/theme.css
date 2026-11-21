@@ -51,6 +51,16 @@
   --neutral-200: #F1F5F9;
   --neutral-300: #E2E8F0;
 
+  /* Compatibility & Semantic Aliases */
+  --accent-gold: #D97706;
+  --primary-color-rgb: 234, 88, 12;
+  --bg-color: var(--bg-primary);
+  --background-dark: var(--bg-secondary);
+  --font-primary: var(--font-display);
+  --font-secondary: var(--font-sans);
+  --font-body: var(--font-sans);
+  --font-family: var(--font-sans);
+
   /* Modern Design Tokens */
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -133,6 +143,15 @@
   /* Borders */
   --border-color: #334155; 
   --border-subtle: #1E293B; 
+
+  /* Dark Neutral & Semantic Aliases */
+  --neutral-100: #0F172A;
+  --neutral-200: #1E293B;
+  --neutral-300: #334155;
+  --accent-gold: #FBBF24;
+  --primary-color-rgb: 249, 115, 22;
+  --bg-color: #0A0F1C;
+  --background-dark: #0A0F1C;
   
   /* Adjust Core Colors for Dark Mode Contrast */
   --primary-color: #F97316; /* Brighter Saffron */
@@ -272,6 +291,13 @@ html {
   --border-color: #334155 !important;
   --border-subtle: #1E293B !important;
   --primary-color: #F97316 !important;
+  --neutral-100: #0F172A !important;
+  --neutral-200: #1E293B !important;
+  --neutral-300: #334155 !important;
+  --accent-gold: #FBBF24 !important;
+  --primary-color-rgb: 249, 115, 22 !important;
+  --bg-color: #0A0F1C !important;
+  --background-dark: #0A0F1C !important;
 }
 
 [data-theme='light'],
@@ -299,5 +325,59 @@ html {
   --border-color: #E2E8F0 !important;
   --border-subtle: #F1F5F9 !important;
   --primary-color: #C2410C !important;
+  --neutral-100: #F8FAFC !important;
+  --neutral-200: #F1F5F9 !important;
+  --neutral-300: #E2E8F0 !important;
+  --accent-gold: #D97706 !important;
+  --primary-color-rgb: 194, 65, 12 !important;
+  --bg-color: #FFFFFF !important;
+  --background-dark: #FDFBF7 !important;
+}
+
+/* ==================================================== */
+/* GLOBAL DESIGN SYSTEM UTILITIES & KEYFRAMES           */
+/* ==================================================== */
+.glass-panel {
+  background: var(--glass-bg, rgba(255, 255, 255, 0.72));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border, var(--border-color));
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 var(--glass-shadow, var(--shadow-md));
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-pop {
+  animation: manyaPop 0.28s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes manyaPop {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
 }
 

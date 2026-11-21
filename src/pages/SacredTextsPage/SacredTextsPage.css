@@ -5,10 +5,11 @@
 }
 
 .sacred-hero {
-  background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(30, 30, 36, 0.8) 100%);
-  padding: 60px 20px 40px;
+  background: linear-gradient(135deg, #b45309 0%, #ea580c 52%, #9a3412 100%);
+  padding: clamp(36px, 5vw, 56px) 20px clamp(28px, 4vw, 40px);
   text-align: center;
-  border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
 }
 
 .sacred-hero-content {
@@ -18,17 +19,17 @@
 
 .sacred-hero h1 {
   font-family: var(--font-primary);
-  font-size: 3rem;
-  color: var(--accent-gold);
-  margin-bottom: 15px;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  color: #ffffff;
+  margin-bottom: 12px;
   letter-spacing: 0.5px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
 }
 
 .sacred-subtitle {
   font-family: var(--font-secondary);
-  color: var(--text-secondary);
-  font-size: 1.2rem;
-  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
 }
 
 .library-main {
@@ -46,27 +47,28 @@
 }
 
 .tab-btn {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 215, 0, 0.2);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
   color: var(--text-primary);
-  padding: 12px 30px;
-  border-radius: 30px;
-  font-size: 1.1rem;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-size: 1.05rem;
   font-family: var(--font-primary);
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
+  box-shadow: var(--shadow-sm);
 }
 
 .tab-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 215, 0, 0.5);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .tab-btn.active {
-  background: var(--accent-gold);
-  color: var(--background-dark);
-  border-color: var(--accent-gold);
+  background: linear-gradient(135deg, #f97316, #c2410c);
+  color: #ffffff;
+  border-color: transparent;
 }
 
 /* Stotrams */
@@ -99,17 +101,18 @@
 }
 
 .category-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 215, 0, 0.1);
-  border-radius: 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
   padding: 24px;
   display: flex;
   align-items: flex-start;
   gap: 16px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
 }
 
 .category-card::before {

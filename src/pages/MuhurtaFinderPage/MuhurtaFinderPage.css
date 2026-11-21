@@ -1,30 +1,30 @@
-@import '../../styles/theme.css';
-
 .muhurta-finder-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--accent-blue) 0%, var(--secondary-dark) 100%);
-  padding: 2rem;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 2rem);
 }
 
 .muhurta-header {
   text-align: center;
-  color: white;
+  color: var(--hero-title, var(--text-primary));
   margin-bottom: 2rem;
 }
 
 .muhurta-header h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4.5vw, 3rem);
   margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .muhurta-subtitle {
-  font-size: 1.2rem;
-  opacity: 0.95;
+  font-size: 1.15rem;
+  color: var(--text-secondary);
 }
 
 .muhurta-info-card {
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 15px;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -96,7 +96,9 @@
 }
 
 .event-selection {
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 15px;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -152,7 +154,9 @@
 }
 
 .event-details-section {
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 15px;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -285,7 +289,9 @@
   display: flex;
   justify-content: space-between;
   padding: 0.8rem;
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
 }
 
@@ -310,7 +316,7 @@
 }
 
 .factors-section.unfavorable {
-  background: var(--card-bg)3e0;
+  background: var(--accent-light);
   border-left: 4px solid var(--primary-color);
 }
 
@@ -425,14 +431,16 @@
 }
 
 .muhurta-footer {
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 15px;
   padding: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .disclaimer {
-  background: var(--card-bg)3cd;
+  background: var(--accent-light);
   border-left: 4px solid var(--primary-color);
   border-radius: 8px;
   padding: 1.5rem;
@@ -502,7 +510,9 @@
 
 /* User Details Form */
 .muhurta-calculator-form {
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 15px;
   padding: 2rem;
   margin: 2rem 0;
@@ -618,7 +628,9 @@
 }
 
 .time-window {
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   padding: 1.5rem;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -674,7 +686,7 @@
 }
 
 .window-badge.good {
-  background: var(--card-bg)3e0;
+  background: var(--accent-light);
   color: var(--primary-dark);
 }
 
@@ -725,7 +737,7 @@
 
 /* Avoid Periods Section */
 .avoid-periods-section {
-  background: var(--card-bg)3f3;
+  background: var(--accent-light);
   border-radius: 12px;
   padding: 1.5rem;
   margin: 2rem 0;
@@ -745,7 +757,9 @@
 }
 
 .avoid-period {
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 1rem;
   display: flex;
@@ -776,7 +790,9 @@
 
 /* Mode Toggle Section */
 .mode-toggle-section {
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 15px;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -845,7 +861,9 @@
 
 /* Score Display Section */
 .score-display-section {
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 15px;
   padding: 2.5rem;
   margin-bottom: 2rem;

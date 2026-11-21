@@ -1,4 +1,5 @@
 /* Base Page Styles & Themes (Matching Panchang) */
+.dashboard-container,
 .dashboard-page-container {
   min-height: 100vh;
   color: var(--text-color);
@@ -6,8 +7,8 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 80px;
-  font-family: 'Inter', sans-serif;
-  transition: background 1s ease-in-out, color 0.5s ease-in-out;
+  font-family: var(--font-sans, 'Lato', sans-serif);
+  transition: background 0.5s ease-in-out, color 0.35s ease-in-out;
 }
 
 .dashboard-content-area {
@@ -21,17 +22,6 @@
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
-}
-
-/* Glassmorphism Panel */
-.glass-panel {
-  background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid var(--glass-border);
-  border-radius: 20px;
-  box-shadow: 0 8px 32px 0 var(--glass-shadow);
-  transition: all 0.3s ease-in-out;
 }
 
 /* Common Zone Styles */
@@ -51,19 +41,20 @@
 }
 
 .edit-goals-btn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: var(--text-muted);
+  background: var(--card-bg, rgba(255, 255, 255, 0.72));
+  border: 1px solid var(--border-color, rgba(234, 88, 12, 0.25));
+  color: var(--text-primary, var(--text-color));
   border-radius: 12px;
-  padding: 0.3rem 0.6rem;
+  padding: 0.35rem 0.75rem;
   font-size: 0.8rem;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .edit-goals-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 /* --- Zone 1: Welcome --- */
@@ -93,13 +84,13 @@
 }
 
 .name-input {
-  background: rgba(0,0,0,0.2);
-  border: 1px solid var(--glass-border);
-  color: var(--text-color);
-  padding: 0.5rem;
-  border-radius: 8px;
-  font-size: 1.5rem;
-  width: 200px;
+  background: var(--card-bg, rgba(255, 255, 255, 0.85));
+  border: 1px solid var(--border-color, var(--glass-border));
+  color: var(--text-primary, var(--text-color));
+  padding: 0.45rem 0.65rem;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  width: 220px;
   margin-bottom: 0.5rem;
 }
 
@@ -281,9 +272,9 @@
 .journey-card {
   padding: 1.2rem;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.2s, background 0.2s;
+  background: var(--glass-bg, rgba(255, 255, 255, 0.65));
+  border: 1px solid var(--border-color, rgba(234, 88, 12, 0.18));
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .journey-card-header {
@@ -372,9 +363,15 @@
 }
 
 .shloka-content {
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--bg-secondary, rgba(255, 255, 255, 0.6));
+  border: 1px solid var(--border-color, rgba(234, 88, 12, 0.18));
   border-radius: 12px;
   padding: 1rem;
+}
+
+[data-theme='dark'] .shloka-content {
+  background: rgba(0, 0, 0, 0.25);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .shloka-title {
@@ -408,12 +405,14 @@
 }
 
 .shloka-play-btn {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--text-color);
+  background: var(--card-bg, rgba(255, 255, 255, 0.8));
+  border: 1px solid var(--border-color, #cbd5e1);
+  color: var(--text-primary, var(--text-color));
 }
 
 .shloka-play-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .shloka-practice-btn {
@@ -700,10 +699,10 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: var(--card-bg, rgba(255, 255, 255, 0.78));
+  border: 1px solid var(--border-color, rgba(234, 88, 12, 0.22));
   border-radius: 20px;
-  padding: 0.2rem 0.6rem;
+  padding: 0.25rem 0.65rem;
 }
 
 .city-icon {
@@ -713,11 +712,10 @@
 .dashboard-city-select {
   background: transparent;
   border: none;
-  color: var(--text-color);
+  color: var(--text-primary, var(--text-color));
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
-  outline: none;
   font-family: inherit;
   max-width: 170px;
   white-space: nowrap;
@@ -726,8 +724,108 @@
 }
 
 .dashboard-city-select option {
-  background: #1e1e24;
-  color: #fff;
+  background: var(--card-bg, #ffffff);
+  color: var(--text-primary, #0f172a);
+}
+
+/* Learning Pathway Lesson Modal (Self-contained, independent of MeditationTimer chunk) */
+.lesson-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 15, 28, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.lesson-modal {
+  width: 100%;
+  max-width: 520px;
+  background: var(--card-bg, #ffffff);
+  color: var(--text-primary, #0f172a);
+  border: 1px solid var(--border-color, rgba(234, 88, 12, 0.28));
+  border-radius: 24px;
+  padding: clamp(1.5rem, 3.5vw, 2.25rem);
+  position: relative;
+  text-align: left;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.lesson-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.lesson-close-btn:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.lesson-modal-title {
+  margin: 0 2.25rem 0.35rem 0;
+  font-size: 1.4rem;
+  font-family: var(--font-display);
+  color: var(--hero-title, var(--primary-color));
+}
+
+.lesson-modal-subtitle {
+  margin: 0 0 1.25rem 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.lesson-content-body {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle, var(--border-color));
+  border-radius: 14px;
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.lesson-content-body p {
+  margin: 0;
+}
+
+.start-session-btn {
+  width: 100%;
+  padding: 0.85rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f97316, #c2410c);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(234, 88, 12, 0.3);
+  transition: transform 0.18s ease, filter 0.18s ease;
+}
+
+.start-session-btn:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
 }
 
 .timing-status-pill {

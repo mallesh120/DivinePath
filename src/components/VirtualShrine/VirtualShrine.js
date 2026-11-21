@@ -323,9 +323,18 @@ const VirtualShrine = () => {
         {/* Temple Arch & Brass Bell */}
         <div className="temple-arch-top">
           <div className="temple-kalash">🪷</div>
-          <div 
+          <div
             className={`hanging-brass-bell ${isBellRinging ? 'ringing' : ''}`}
             onClick={handleRingBell}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                handleRingBell();
+              }
+            }}
+            role="button"
+            tabIndex={0}
+            aria-label="Ring temple bell"
             title="Click to ring temple bell"
           >
             <div className="bell-chain"></div>
@@ -336,7 +345,20 @@ const VirtualShrine = () => {
         {/* Altar Murti Chamber */}
         <div className="altar-murti-chamber">
           {/* Left Diya */}
-          <div className="altar-diya left-diya" onClick={handleToggleDiya} title="Click to toggle Deepam">
+          <div
+            className="altar-diya left-diya"
+            onClick={handleToggleDiya}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                handleToggleDiya();
+              }
+            }}
+            role="button"
+            tabIndex={0}
+            aria-label={isDiyasLit ? 'Extinguish temple lamp' : 'Light temple lamp'}
+            title="Click to toggle Deepam"
+          >
             <div className={`diya-flame ${isDiyasLit ? 'lit' : 'unlit'}`}>🔥</div>
             <div className="diya-stand">🪔</div>
           </div>
@@ -362,7 +384,20 @@ const VirtualShrine = () => {
           </div>
 
           {/* Right Diya */}
-          <div className="altar-diya right-diya" onClick={handleToggleDiya} title="Click to toggle Deepam">
+          <div
+            className="altar-diya right-diya"
+            onClick={handleToggleDiya}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                handleToggleDiya();
+              }
+            }}
+            role="button"
+            tabIndex={0}
+            aria-label={isDiyasLit ? 'Extinguish temple lamp' : 'Light temple lamp'}
+            title="Click to toggle Deepam"
+          >
             <div className={`diya-flame ${isDiyasLit ? 'lit' : 'unlit'}`}>🔥</div>
             <div className="diya-stand">🪔</div>
           </div>
