@@ -44,7 +44,7 @@ export const bhagavadGitaObject = {
         "The nature of the self-realized person"
       ],
       audioUrl: null,
-      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png",
+      illustration: "/images/literature/scenes/gita_ch2.jpg",
       sampleVerses: [
         {
           number: 47,
@@ -66,7 +66,7 @@ export const bhagavadGitaObject = {
         "The role of sacrifice (yajna)"
       ],
       audioUrl: null,
-      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
+      illustration: "/images/literature/scenes/gita_ch3.jpg"
     },
     {
       number: 4,
@@ -80,7 +80,7 @@ export const bhagavadGitaObject = {
         "The nature of action and inaction"
       ],
       audioUrl: null,
-      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
+      illustration: "/images/literature/scenes/gita_ch4.jpg"
     },
     {
       number: 5,
@@ -94,7 +94,7 @@ export const bhagavadGitaObject = {
         "Seeing the divine in all beings"
       ],
       audioUrl: null,
-      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
+      illustration: "/images/literature/scenes/gita_ch5.jpg"
     },
     {
       number: 6,
@@ -108,7 +108,7 @@ export const bhagavadGitaObject = {
         "Gradual progress on the spiritual path"
       ],
       audioUrl: null,
-      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
+      illustration: "/images/literature/scenes/gita_ch6.jpg"
     },
     {
       number: 7,
@@ -122,7 +122,7 @@ export const bhagavadGitaObject = {
         "The rare soul who truly knows Krishna"
       ],
       audioUrl: null,
-      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
+      illustration: "/images/literature/scenes/gita_ch7.jpg"
     },
     {
       number: 8,
@@ -136,7 +136,7 @@ export const bhagavadGitaObject = {
         "Unwavering devotion"
       ],
       audioUrl: null,
-      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
+      illustration: "/images/literature/scenes/gita_ch8.jpg"
     },
     {
       number: 9,
@@ -164,7 +164,7 @@ export const bhagavadGitaObject = {
         "Krishna as the source of all"
       ],
       audioUrl: null,
-      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
+      illustration: "/images/literature/scenes/gita_ch10.jpg"
     },
     {
       number: 11,
@@ -178,7 +178,7 @@ export const bhagavadGitaObject = {
         "Return to the personal form"
       ],
       audioUrl: null,
-      illustration: "/images/literature/cover_bhagavad_gita_1787361499699.jpg",
+      illustration: "/images/literature/scenes/gita_ch11.jpg",
       isIconic: true // This is the most famous chapter with Vishvarupa
     },
     {
@@ -193,7 +193,7 @@ export const bhagavadGitaObject = {
         "The path most dear to Krishna"
       ],
       audioUrl: null,
-      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
+      illustration: "/images/literature/scenes/gita_ch12.jpg"
     },
     {
       number: 13,
@@ -235,7 +235,7 @@ export const bhagavadGitaObject = {
         "Knowledge that leads to liberation"
       ],
       audioUrl: null,
-      illustration: "/images/literature/mahabharata/arjuna_krishna_bhagavad_gita_1782006300220.png"
+      illustration: "/images/literature/scenes/gita_ch15.jpg"
     },
     {
       number: 16,
